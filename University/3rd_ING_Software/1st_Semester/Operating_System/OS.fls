@@ -1,0 +1,17 @@
+PWD /home/rabah/Desktop/Documentations/University/3rd_ING_Software/1st_Semester/Operating_System
+INPUT /usr/share/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT OS.tex
+OUTPUT OS.log
+INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/share/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/share/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/share/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT ./OS.aux
+INPUT ./OS.aux
+INPUT OS.aux
+OUTPUT OS.aux
+INPUT OS.aux

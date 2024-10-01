@@ -1,0 +1,14 @@
+# Fdb version 4
+["pdflatex"] 1727747988.7264 "SE.tex" "SE.pdf" "SE" 1727747988.8419 1
+  "/usr/share/texmf-dist/tex/latex/base/article.cls" 1727349926 20144 147463a6a579f4597269ef9565205cfe ""
+  "/usr/share/texmf-dist/tex/latex/base/size10.clo" 1727349926 8448 dbc0dbf4156c0bb9ba01a1c685d3bad0 ""
+  "/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1727349926 30006 3d512c0edd558928ddea1690180ef77e ""
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1727349926 41588 b43d3e860a4f94167ee1e725ff526a72 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1727481818 7113001 65a54764fc8c1ec7bcf7b72bf293312c ""
+  "SE.aux" 1727747988.83132 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "SE.tex" 1727747986.37799 57 ff17579fcce3d080d31bba2835e79352 ""
+  (generated)
+  "SE.aux"
+  "SE.log"
+  "SE.pdf"
+  (rewritten before read)
