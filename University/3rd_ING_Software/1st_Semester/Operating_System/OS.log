@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  1 OCT 2024 21:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  2 OCT 2024 19:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -57,9 +57,6 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  (./Chapters/Introduction.tex) [2
 
-] [3
-
-
 ] (./OS.aux (./Chapters/Introduction.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -67,18 +64,18 @@ L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 490 strings out of 476076
- 9511 string characters out of 5793775
- 1928187 words of memory out of 5000000
- 22659 multiletter control sequences out of 15000+600000
+ 489 strings out of 476076
+ 9503 string characters out of 5793775
+ 1929187 words of memory out of 5000000
+ 22658 multiletter control sequences out of 15000+600000
  562659 words of font info for 51 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  35i,6n,50p,204b,197s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/rabah/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on OS.pdf (3 pages, 69809 bytes).
+Output written on OS.pdf (2 pages, 72592 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 41 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
