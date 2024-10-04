@@ -1,6 +1,5 @@
-\section{Introduction}
-\subsection{Operation System}
-\subsubsection{What's An Operating System ?}
+\section{Introduction Operating System}
+\subsection{What's An Operating System ?}
 An operating system (OS) is a software program designed to manage and optimize the use of a machine's resources. 
 It provides an easy to use \textbf{VM} virtual Machine to interact with the hardware and efficiently execute tasks. 
 A typical machine consists of three main components:
@@ -11,6 +10,55 @@ A typical machine consists of three main components:
         the Control Unit (CU), which process and execute instructions.
     \item \textbf{Peripherals:} External devices such as keyboards, mice, displays, printers, and storage media.
 \end{itemize}
-\subsubsection{Types Of Operating Systems}
-\subsubsection{Core Functions Of An Operating System}
-\subsubsection{History And Evolution Of Operating System}
+\subsection{Types Of Operating Systems}
+\subsubsection{Batch Operating System}
+In a batch operating system, the user does not directly interact with the machine. Instead, the user prepares a stack 
+of punch cards, referred to as \textbf{jobs}, which represent the user's programs. The operating system collects these jobs and \textbf{sorts 
+them into batches} based on certain criteria, such as similar I/O requirements or resource needs. These batches are then processed 
+sequentially, one after the other.
+
+The main limitation of this system is that \textbf{it can only execute one job at a time} , since the CPU only loads one programe in the memory 
+then execute it free the space and loads the next one and so on. If a job is waiting for an I/O operation (e.g., reading from a disk), the CPU enters an 
+\textbf{idle state}, leaving its full potential and resources underutilized.
+\subsubsection{Multi-Programmed Operating System}
+Similar to a batch operating system, the user still submits jobs to the machine for execution. However, the key difference is that in a multi-programmed 
+operating system, the CPU \textbf{loads multiple programs into memory at the same time}.
+
+When the CPU encounters an I/O operation in Job 1, instead of going idle, it can\textbf{switch to Job 2 and continue executing instructions}. 
+This allows the CPU to be \textbf{fully utilized}, as it can work on other jobs while waiting for I/O operations to complete. 
+By handling multiple jobs concurrently, the system improves overall efficiency and reduces CPU idle time.
+\subsubsection{Multi-Processing Operating System}
+Similar to batch and multi-programmed operating systems, users still provide jobs for the machine to execute. However, unlike the previous systems, a 
+multi-processing operating system has multiple CPUs connected to the same system, allowing for the parallel execution of programs. In some cases, 
+the execution of a single program can be split across multiple CPUs.
+Like the multi-programmed operating system, this system also benefits from minimizing idle time since multiple CPUs can work on different tasks simultaneously. 
+Additionally, having multiple CPUs provides fault tolerance—if one CPU fails, the system can continue functioning with the remaining CPUs, ensuring greater reliability.
+\subsubsection{Distributed Operating System}
+In this setup, a set of machines is connected to each other through a local area network (LAN). The parts of the operating system and tasks are spread among the machines 
+rather than being centralized. If one of the machines fails, the others will detect it and finish any incomplete tasks. The role of the failed machine will then be assigned to 
+another machine, ensuring that the OS is always running. The crucial data is available on all machines to prevent loss and provide even more robust fault tolerance, ensuring high 
+availability and reliability for users and applications.
+\subsubsection{Multi-tasking Operating System}
+Unlike Batch, Multi-programmed, and Multi-processing operating systems that rely on jobs and don't allow direct interaction between the user and the machine, Multi-tasking OS allows 
+users to interact with the machine in real-time. It can be seen as an extension of the Multi-programmed OS. In a multi-tasking system, the CPU loads all programs into memory at once and 
+switches between them rapidly, creating the illusion of parallel execution. However, in reality, the CPU is handling only one program at a time, switching between tasks so fast that it appears 
+as if they are running simultaneously. The operating system ensures that the CPU is fully utilized and doesn’t remain idle.
+\subsubsection{Time Sharing Operating System}
+In a Time Sharing Operating System, the CPU allocates a specific time slice to each program or task. Once the allocated time expires, the CPU switches to the next program in a cyclic manner,
+allowing multiple programs to share the CPU effectively. This process continues until all programs have completed their execution.
+The main goals of a time-sharing system are to provide interactive user experiences, ensure that all programs receive fair access to CPU resources, and minimize the time users spend waiting 
+for responses from the system.
+\subsubsection{Real Time Operating System}
+A Real-Time Operating System (RTOS) is designed to prioritize and execute tasks within strict time constraints, known as deadlines. It loads multiple tasks into memory and manages their execution
+on the CPU(s). RTOS allows direct interaction with external inputs, including users or devices, ensuring that critical tasks are completed on time.
+
+RTOS can either:
+\begin{itemize}
+    \item Multi-task :  by using a single CPU that rapidly switches between tasks (similar to a Multi-Tasking OS) .
+    \item Multi-process : by using multiple CPUs to run tasks in parallel (similar to a Multi-Processing OS).
+\end{itemize}
+
+The key feature of an RTOS is that it guarantees timely execution, making it suitable for systems where meeting deadlines is crucial, such as in embedded systems, medical devices, or automotive 
+control systems.
+\subsection{Core Functions Of An Operating System}
+\subsection{History And Evolution Of Operating System}
