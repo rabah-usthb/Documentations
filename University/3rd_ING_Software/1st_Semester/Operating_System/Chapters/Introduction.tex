@@ -24,19 +24,19 @@ then execute it free the space and loads the next one and so on. If a job is wai
 Similar to a batch operating system, the user still submits jobs to the machine for execution. However, the key difference is that in a multi-programmed 
 operating system, the CPU \textbf{loads multiple programs into memory at the same time}.
 
-When the CPU encounters an I/O operation in Job 1, instead of going idle, it can\textbf{switch to Job 2 and continue executing instructions}. 
+When the CPU encounters an I/O operation in Job 1, instead of going idle, it can \textbf{switch to Job 2 and continue executing instructions}. 
 This allows the CPU to be \textbf{fully utilized}, as it can work on other jobs while waiting for I/O operations to complete. 
 By handling multiple jobs concurrently, the system improves overall efficiency and reduces CPU idle time.
 \subsubsection{Multi-Processing Operating System}
 Similar to batch and multi-programmed operating systems, users still provide jobs for the machine to execute. However, unlike the previous systems, a 
-multi-processing operating system has multiple CPUs connected to the same system, allowing for the parallel execution of programs. In some cases, 
-the execution of a single program can be split across multiple CPUs.
-Like the multi-programmed operating system, this system also benefits from minimizing idle time since multiple CPUs can work on different tasks simultaneously. 
-Additionally, having multiple CPUs provides fault tolerance—if one CPU fails, the system can continue functioning with the remaining CPUs, ensuring greater reliability.
+multi-processing operating system has \textbf{multiple CPUs connected to the same system}, allowing for the \textbf{parallel execution} of programs. In some cases, 
+the execution of a  \textbf{single program can be split across multiple CPUs} .
+Like the multi-programmed operating system, this system also benefits from minimizing idle time since multiple CPUs can work on \textbf{different tasks simultaneously}. 
+Additionally, having multiple CPUs provides  \textbf{fault tolerance} if one CPU fails, the system can continue functioning with the remaining CPUs, ensuring greater reliability.
 \subsubsection{Distributed Operating System}
-In this setup, a set of machines is connected to each other through a local area network (LAN). The parts of the operating system and tasks are spread among the machines 
+In this setup, a set of machines is connected to each other through a local area network (\textbf{LAN}). The  \textbf{parts of the operating system and tasks are spread among the machines }
 rather than being centralized. If one of the machines fails, the others will detect it and finish any incomplete tasks. The role of the failed machine will then be assigned to 
-another machine, ensuring that the OS is always running. The crucial data is available on all machines to prevent loss and provide even more robust fault tolerance, ensuring high 
+another machine, ensuring that the OS is always running. The crucial data is  \textbf{available on all machines to prevent loss} and provide even more  \textbf{robust fault tolerance}, ensuring high 
 availability and reliability for users and applications.
 \subsubsection{Multi-tasking Operating System}
 Unlike Batch, Multi-programmed, and Multi-processing operating systems that rely on jobs and don't allow direct interaction between the user and the machine, Multi-tasking OS allows 
@@ -44,7 +44,8 @@ users to interact with the machine in real-time. It can be seen as an extension 
 switches between them rapidly, creating the illusion of parallel execution. However, in reality, the CPU is handling only one program at a time, switching between tasks so fast that it appears 
 as if they are running simultaneously. The operating system ensures that the CPU is fully utilized and doesn’t remain idle.
 \subsubsection{Time Sharing Operating System}
-In a Time Sharing Operating System, the CPU allocates a specific time slice to each program or task. Once the allocated time expires, the CPU switches to the next program in a cyclic manner,
+In a Time Sharing Operating System, much like Multi-tasking OS the user directly interact with the machine . the CPU allocates a specific time slice to each program or task. Once the allocated 
+time expires, the CPU switches to the next program in a cyclic manner,
 allowing multiple programs to share the CPU effectively. This process continues until all programs have completed their execution.
 The main goals of a time-sharing system are to provide interactive user experiences, ensure that all programs receive fair access to CPU resources, and minimize the time users spend waiting 
 for responses from the system.
@@ -58,7 +59,7 @@ RTOS can either:
     \item Multi-process : by using multiple CPUs to run tasks in parallel (similar to a Multi-Processing OS).
 \end{itemize}
 
-The key feature of an RTOS is that it guarantees timely execution, making it suitable for systems where meeting deadlines is crucial, such as in embedded systems, medical devices, or automotive 
+The key feature of an RTOS is that it guarantees timely execution, making it suitable for systems where  \textbf{meeting deadlines is crucial} , such as in embedded systems, medical devices, or automotive 
 control systems.
 \subsection{Core Functions Of An Operating System}
 \subsection{History And Evolution Of Operating System}
