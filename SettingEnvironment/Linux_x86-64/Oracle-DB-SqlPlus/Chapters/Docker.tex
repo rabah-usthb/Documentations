@@ -1,0 +1,19 @@
+\section{Download And Setup Docker}
+\subsection{Installing Docker}
+\begin{tcolorbox}[title = Docker]
+    \begin{itemize}
+        \item \textbf{\underline{Arch Based }: }\hspace{1cm}\textcolor{Sudo}{sudo} \textcolor{greenCommand}{pacman} \textcolor{red}{-S} docker
+        \item \textbf{\underline{Debian Based }: }\hspace{0.6cm}\textcolor{Sudo}{sudo} \textcolor{greenCommand}{apt install} docker-ce
+        \item \textbf{\underline{Fedora Based }: }\hspace{0.5cm} \textcolor{Sudo}{sudo} \textcolor{greenCommand}{dfn install} docker-ce
+    \end{itemize}
+\end{tcolorbox}
+\subsection{Starting Docker}
+\begin{tcolorbox}
+    \textcolor{Sudo}{sudo} \textcolor{greenCommand}{systemctl start} docker
+   
+    \textcolor{Sudo}{sudo} \textcolor{greenCommand}{systemctl enable} docker
+\end{tcolorbox}
+\subsection{Downloading Oracle Container}
+\begin{tcolorbox}[title = Pulling Oracle-xe]
+    \textcolor{Sudo}{sudo} \textcolor{greenCommand}{docker pull} \textcolor{blue}{gvenzl/oracle-xe}
+\end{tcolorbox}
