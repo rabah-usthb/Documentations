@@ -1,7 +1,69 @@
 \section{Life Cycle Of Software}
 \subsection{Whats's Life Cycle Of Software?}
-As the name suggest it's the life cycle of software from start to finish , life cycle is a methodology
+As the name suggest it's the life cycle of a software from start to finish , life cycle also known as model is a methodology
 that serves to help developers in building their product , each life cycle has steps and a chronology to follow
 \subsection{WaterFall Life Cycle}
+\subsubsection{First Version}
+\vspace{0.5cm}
+\begin{tikzpicture}
+    \draw (-1,0) rectangle (3.5,1.5);
+    \node at (1.25,0.75) {Definition \& Needs Analysis};
+
+   \draw[->] (3.5,0.75) -- (5,0.75) -- (5,0);
+
+    \draw (4,-1.5) rectangle (6,0);
+    \node at (5,-0.75) {Conception};
+
+    \draw[->] (6,-0.75) -- (7.5,-0.75) -- (7.5,-1.5);
+
+    \draw (6.5,-3) rectangle (8.5,-1.5);
+    \node at (7.5,-2.25) {Coding};
+
+    \draw[->] (8.5,-2.25) -- (10,-2.25) -- (10,-3);
+
+    \draw (9,-4.5) rectangle (11,-3);
+    \node at (10,-3.75) {Testing};
+
+    \draw[->] (11,-3.75) -- (13.75,-3.75) -- (13.75,-4.5);
+
+    \draw (11.5,-6) rectangle (16,-4.5);
+    \node at (13.75,-5.25) {Deployment \& Maintenance};
+\end{tikzpicture}
+\subsubsection{Improved Version}
+\vspace{0.5cm}
+\begin{tikzpicture}
+    \draw (-1,0) rectangle (3.5,1.5);
+    \node at (1.25,0.75) {Definition \& Needs Analysis};
+
+   \draw[->] (3.5,0.75) -- (5,0.75) -- (5,0);
+
+    \draw (4,-1.5) rectangle (6,0);
+    \node at (5,-0.5) {Achitectural};
+    \node at (5,-1){Design};
+    \draw (4,-3) rectangle (6,-1.5);
+    \node at (5,-2) {Detailed};
+    \node at (5,-2.5) {Design};
+
+    \draw[->] (6,-1.5) -- (7.5,-1.5) -- (7.5,-2);
+
+    \draw (6.5,-3.5) rectangle (8.5,-2);
+    \node at (7.5,-2.75) {Coding};
+
+    \draw[->] (8.5,-2.25) -- (10,-2.25) -- (10,-3);
+
+    \draw (9,-4.5) rectangle (11,-3);
+    \node at (10,-3.75) {Unit Test};
+    \draw (9,-6) rectangle (11,-4.5);
+    \node at (10,-5) {Integration};
+    \node at (10,-5.5) {Test};
+
+    \draw[->] (11,-4.5) -- (13.75,-4.5) -- (13.75,-5);
+
+    \draw (11.5,-6.5) rectangle (16,-5);
+    \node at (13.75,-5.75) {Deployment \& Maintenance};
+\end{tikzpicture}
 \subsection{V Life Cycle}
+\subsection{Prototyping Life Cycle}
 \subsection{Incremental Life Cycle}
+\subsection{Spiral Life Cycle}
+\subsection{Hybrid Life Cycle}
