@@ -19,9 +19,23 @@ A microprocessor is a single-chip CPU (Central Processing Unit) that performs th
 \end{itemize}
 
 \vspace{0.5cm}
-
-\begin{tikzpicture} \begin{axis}[ axis lines = left, xlabel=$Time$, ylabel=$Price$, domain=0.01:5, xtick=\empty, ytick=\empty, xmin=0, ymin=0, ] \addplot[ultra thick, color = blue, no marks, samples = 80] {5 + ln(0.5*x)}; \addlegendentry{Software} \addplot[ultra thick, color = red, no marks, samples = 80] {10 / (x + 1)}; \addlegendentry{Hardware} \end{axis} \end{tikzpicture}
-
+\begin{center}
+\begin{tikzpicture} 
+\begin{axis}[ axis lines = left,
+              xlabel=$Time$, 
+              ylabel=$Price$, 
+              domain=0.01:5, 
+              xtick=\empty, 
+              ytick=\empty, 
+              xmin=0,
+              ymin=0] 
+\addplot[ultra thick, color = blue, no marks, samples = 80] {5 + ln(0.5*x)}; 
+\addlegendentry{Software} 
+\addplot[ultra thick, color = red, no marks, samples = 80] {10 / (x + 1)}; 
+\addlegendentry{Hardware} 
+\end{axis} 
+\end{tikzpicture}
+\end{center}
 \vspace{1.5cm}
 
 As shown in the graph above, there is an inverse relationship between hardware and software prices. As hardware becomes more affordable and advanced, software prices tend to increase, a phenomenon often referred to as the "Software Crisis." This was primarily caused by a lack of development methodology and reflection on part of the developers. Software projects frequently went over budget, were late to release, and were often filled with bugs.
@@ -77,7 +91,18 @@ High-quality software adheres to industry standards and regulations, ensuring th
 \end{itemize}
 
 \vspace{0.5cm}
-
-\begin{tikzpicture} \begin{axis}[ axis lines = left, xlabel=$Quality$, ylabel=$Price$, domain=0.01:5, xtick=\empty, ytick=\empty, xmin=0, ymin=0, ] \addplot[ultra thick, color = blue, no marks, samples = 80] {exp(x)}; \end{axis} \end{tikzpicture}
-
+\begin{center}
+\begin{tikzpicture} 
+\begin{axis}[ axis lines = left,
+              xlabel=$Quality$,
+              ylabel=$Price$,
+              domain=0.01:5,
+              xtick=\empty,
+              ytick=\empty,
+              xmin=0, 
+              ymin=0] 
+\addplot[ultra thick, color = blue, no marks, samples = 80] {exp(x)}; 
+\end{axis} 
+\end{tikzpicture}
+\end{center}
 This graph illustrates the positive correlation between software quality and price. As the quality of the software improves, its price tends to increase exponentially.

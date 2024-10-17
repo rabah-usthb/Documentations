@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.10.7)  16 OCT 2024 22:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.10.7)  17 OCT 2024 23:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -326,19 +326,19 @@ LaTeX Font Info:    ... okay on input line 5.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: a4paper
+* paper: custom
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
-* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=418.25368pt
-* \textheight=591.5302pt
-* \oddsidemargin=17.3571pt
-* \evensidemargin=17.3571pt
-* \topmargin=-7.86334pt
+* h-part:(L,W,R)=(42.67912pt, 625.96065pt, 42.67912pt)
+* v-part:(T,H,B)=(56.9055pt, 569.05513pt, 56.9055pt)
+* \paperwidth=711.3189pt
+* \paperheight=682.86613pt
+* \textwidth=625.96065pt
+* \textheight=569.05513pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -404,39 +404,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--12
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [3]) [4]
 \openout2 = `Chapters/LifeCycle.aux'.
 
- (./Chapters/LifeCycle.tex
-Overfull \hbox (67.0718pt too wide) in paragraph at lines 31--32
+ (./Chapters/LifeCycle.tex [5
+
+
+
+] [6] [7])
+Overfull \hbox (0.3997pt too wide) in paragraph at lines 192--8
 [] 
  []
 
-
-Overfull \hbox (67.0718pt too wide) in paragraph at lines 64--65
-[] 
- []
-
-[5
-
-
-
-]) [6] (./SE.aux (./Chapters/Introduction.aux) (./Chapters/SoftWareCrisis.aux) (./Chapters/LifeCycle.aux))
+[8] [9] (./SE.aux (./Chapters/Introduction.aux) (./Chapters/SoftWareCrisis.aux) (./Chapters/LifeCycle.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 22841 strings out of 476076
- 607333 string characters out of 5793775
- 1937187 words of memory out of 5000000
- 44610 multiletter control sequences out of 15000+600000
+ 24436 strings out of 476076
+ 642601 string characters out of 5793775
+ 1938187 words of memory out of 5000000
+ 46205 multiletter control sequences out of 15000+600000
  559922 words of font info for 42 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 99i,17n,107p,715b,2114s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on SE.pdf (6 pages, 99602 bytes).
+ 99i,17n,107p,715b,2171s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on SE.pdf (9 pages, 132639 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 78 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
