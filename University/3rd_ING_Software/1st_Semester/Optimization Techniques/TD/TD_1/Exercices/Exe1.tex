@@ -1,0 +1,38 @@
+\section{Exercise 1: Part-Time Work}
+Adem works two part-time jobs, E1 and E2, and wants to limit his total working hours to no more than 12 per week. For each hour worked
+at E1, he requires 2 hours of preparation, and for each hour worked at E2, he requires 1 hour of preparation. Adem cannot spend
+more than 16 hours preparing each week. Given that he earns 40 MU per hour at E1 and 30 MU per hour at E2, how many hours should
+he work at each job to maximize his total income?\\
+MU = Monetary Unit
+
+\vspace{1.5cm}
+\textbf{\underline{\Large Solution:}}
+\begin{multicols}{2}
+\textbf{\underline{Variables Definition:}}
+
+Let \(x_1\) be the number of hours worked in E$_{1}$.
+
+Let \(x_2\) be the number of hours worked in E$_{2}$.
+\columnbreak
+
+\textbf{\underline{Constraint:}} 
+
+\[
+\left\{
+    \begin{array}{l}
+       \forall x_1, x_2 \geq 0 \quad \text{(Non-negative work hours)}\\\\
+        x_1 + x_2 \leq 12 \quad \text{(Work limit of 12 hours per week)}\\\\
+        2x_1 + x_2 \leq 16 \quad \text{(Preparation time limit of 16 hours)}
+   \end{array}
+   \right.
+\] 
+\end{multicols}
+\vspace{0.5cm}
+\begin{tcolorbox}[title = Objectif Function]
+\[
+f(x) = 40x_1 + 30x_2 
+\]
+\begin{center}
+The goal is to maximize Adem's income by maximizing \(f(x)\), while adhering to the work and preparation time constraints.
+\end{center}
+\end{tcolorbox}
