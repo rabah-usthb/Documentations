@@ -1,9 +1,15 @@
-\documentclass{book}
+\documentclass{article}
 \usepackage{tikz,tcolorbox}
-
+\usepackage{array} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
 \usepackage[a4paper, paperwidth=25cm, paperheight=24cm, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{pgfplots}
 \begin{document}
-
-\chapter{Introduction}
+\renewcommand{\arrayrulewidth}{0.75mm} % Set line thickness
+\setlength{\tabcolsep}{12pt} % Set horizontal padding
+\renewcommand{\arraystretch}{1.5} % Set vertical padding (1.0 is default)
 \input{Chapters/Operations research.tex}
+\input{Chapters/Linear Programming.tex}
 \end{document}
