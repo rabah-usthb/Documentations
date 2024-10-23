@@ -1,5 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1729356280.86019 "Td_1.tex" "Td_1.pdf" "Td_1" 1729356281.33042 0
+["pdflatex"] 1729646010.55601 "Td_1.tex" "Td_1.pdf" "Td_1" 1729646011.08485 0
+  "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1727349926 2900 1537cc8184ad1792082cd229ecc269f4 ""
+  "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1727349926 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1727349926 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1727349926 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1727349926 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -11,6 +13,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1727349926 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1727349926 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1727349926 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1727349926 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1727349926 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/iftex/iftex.sty" 1727349926 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
   "/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty" 1727349926 1057 525c2192b5febbd8c1f662c9468335bb ""
@@ -105,9 +108,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1727349926 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1728313617.6976 5307366 7c8b2c5f25a30f46e808245b8e6cf269 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1728313602 7112993 aa4b09384de557dce7967fbcadc10898 ""
-  "Exercices/Exe1.tex" 1729356279.33124 1338 616e2ed11554994c9b303fef1ffbdd38 ""
-  "Td_1.aux" 1729356281.27457 146 37432eb9dda57a73cd90747af201d201 "pdflatex"
-  "Td_1.tex" 1729356012.7979 266 8fc20e727ca5e6320d80d9cc56227d19 ""
+  "Exercices/Exe1.tex" 1729644440.21402 1350 68a5a9658794d5492eae502522e50482 ""
+  "Exercices/Exe2.tex" 1729646010.48068 1834 753fdb847bac92f5dc3da709b2bf641c ""
+  "Td_1.aux" 1729646011.02734 146 9f624eefbe5245156b6da0b73658e965 "pdflatex"
+  "Td_1.tex" 1729643427.30403 294 744e36b74d976628f384f3496b4d184c ""
   (generated)
   "Td_1.aux"
   "Td_1.log"

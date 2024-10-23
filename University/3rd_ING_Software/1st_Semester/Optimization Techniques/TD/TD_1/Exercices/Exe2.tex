@@ -1,0 +1,46 @@
+
+\section*{Exercise 2: Optimal Production}
+
+A food company has 1000 kilos of African coffee, 2000 kilos of Brazilian coffee, and 500 kilos of Colombian coffee. The company produces two types of coffee:
+
+\begin{itemize}
+    \item \textbf{Type 1}: A blend of three parts African coffee for one part of each of the two others (Brazilian and Colombian), sold at 10 UM per kilo.
+    \item \textbf{Type 2}: A blend of three parts Brazilian coffee for one part Colombian coffee, sold at 8 UM per kilo.
+\end{itemize}
+
+The problem is to determine how much coffee of each type the company should produce in order to maximize its profit. Model this problem.
+
+\vspace{1.5cm}
+\textbf{\underline{\Large Solution:}}
+
+\vspace{0.5cm}
+\begin{minipage}[t]{0.45\textwidth}
+    \textbf{\underline{Variables Definition:}} \\[1em] % Adjust vertical space here
+
+    Let \(x_1\) be Type 1 coffee. \\
+   
+    Let \(x_2\) be Type 2 coffee.
+\end{minipage}%
+\hfill % This adds space between the two minipages
+\begin{minipage}[t]{0.45\textwidth}
+    \textbf{\underline{Constraint:}} \\[1em]
+    \[
+    \left\{
+        \begin{array}{l}
+            \forall x_1, x_2 \geq 0 \quad \text{(Non-negative number of type of coffee)}\\\\
+            \frac{3}{5} x_1  \leq 1000 \quad \text{(Total number of African coffee)}\\\\
+            \frac{1}{5}x_1 + \frac{3}{4}x_2 \leq 2000 \quad \text{(Total number of Brazilian coffee)}\\\\
+            \frac{1}{5}x_1 + \frac{1}{4}x_2 \leq 500 \quad \text{(Total number of Colombian coffee)}\\\\
+        \end{array}
+    \right.
+    \]
+\end{minipage}
+\vspace{0.5cm}
+\begin{tcolorbox}[title = Objectif Function]
+\[
+f(x_1,x_2) = 10x_1 + 8x_2 
+\]
+\begin{center}
+The goal is to maximize The Company income by maximizing \(f(x_1,x_2)\), while adhering to the limit of each coffe type constraints (Af,Col,Br).
+\end{center}
+\end{tcolorbox}
