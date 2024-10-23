@@ -3,8 +3,18 @@
 \usepackage{multicol}
 \usepackage{amsmath}
 \usepackage{tikz,tcolorbox}
+
+\usepackage{array} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+
 \begin{document}
+
+\renewcommand{\arrayrulewidth}{0.75mm} % Set line thickness
+\setlength{\tabcolsep}{12pt} % Set horizontal padding
+\renewcommand{\arraystretch}{1.5} % Set vertical padding (1.0 is default)
+
 \input{Exercices/Exe1.tex}
 \input{Exercices/Exe2.tex}
+\input{Exercices/Exe3.tex}
 \end{document}
 

@@ -1,0 +1,110 @@
+
+\section*{Exercise 3: Transportation Problem}
+
+A company needs to transport goods from two warehouses (E1, E2) to three destinations (D1, D2, D3). The transportation costs
+to move one unit of product between the warehouses and the destinations are as follows:
+
+\vspace{0.75cm}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    & D1 & D2 & D3 \\
+    \hline
+    E1 & 4 & 6 & 8\\
+    \hline
+    E2 & 5 & 3 & 7\\
+    \hline
+\end{tabular}
+\end{center}
+\vspace{0.75cm}
+The capacities of the warehouses and the demands of the destinations are as follows:
+
+\begin{itemize}
+    \item Capacity of E1: 100 units
+    \item Capacity of E2: 120 units
+    \item Demand of D1: 90 units
+    \item Demand of D2: 80 units
+    \item Demand of D3: 50 units
+\end{itemize}
+
+Formulate a linear program to establish an optimal distribution plan.
+
+\textbf{\underline{\Large Solution:}}
+
+\textbf{\underline{Method 1:}}
+
+\vspace{0.5cm}
+\begin{minipage}[t]{0.45\textwidth}
+    \textbf{\underline{Variables Definition:}} \\[1em] % Adjust vertical space here
+
+    Let \(x_1\) be number of goods transported from E$_{1}$ -\textgreater D$_{1}$. \\
+   
+    Let \(x_2\) be number of goods transported from E$_{1}$ -\textgreater D$_{2}$. \\
+   
+    Let \(x_3\) be number of goods transported from E$_{1}$ -\textgreater D$_{3}$. \\
+    
+    Let \(x_4\) be number of goods transported from E$_{2}$ -\textgreater D$_{1}$. \\
+    
+    Let \(x_5\) be number of goods transported from E$_{2}$ -\textgreater D$_{2}$. \\
+    
+    Let \(x_6\) be number of goods transported from E$_{2}$ -\textgreater D$_{3}$. \\
+    
+\end{minipage}%
+\hfill % This adds space between the two minipages
+\begin{minipage}[t]{0.45\textwidth}
+    \textbf{\underline{Constraint:}} \\[1em]
+    \[
+    \left\{
+        \begin{array}{l}
+            \forall x_i \geq 0 \quad \text{(Non-negative number of type of goods)}\\
+            x_1 + x_2 + x_3   \leq 100 \quad \text{(Capacity of E$_{1}$)}\\
+            x_4 + x_5 + x_6 \leq 120 \quad \text{(Capacity of E$_{2}$)}\\
+            x_1 + x_4 \leq 90 \quad \text{(Demand of D$_{1}$)}\\
+            x_2 + x_5 \leq 80 \quad \text{(Demand of D$_{2}$)}\\
+            x_3 + x_6 \leq 50 \quad \text{(Demand of D$_{3}$)}
+        \end{array}
+    \right.
+    \]
+\end{minipage}
+\vspace{0.5cm}
+
+
+\textbf{\underline{Method 2:}}
+
+\vspace{0.5cm}
+\begin{minipage}[t]{0.45\textwidth}
+    \textbf{\underline{Variables Definition:}} \\[1em] % Adjust vertical space here
+
+   
+Let \(x_{ij}\) be a matrix of [2,3] where each cell \(x_{ij}\) represent number of goods transported from E$_{i}$
+-\textgreater D$_{j}$. \\
+    
+\end{minipage}%
+\hfill % This adds space between the two minipages
+\begin{minipage}[t]{0.45\textwidth}
+    \textbf{\underline{Constraint:}} \\[1em]
+    \[
+    \left\{
+        \begin{array}{l}
+            \forall x_{ij} \geq 0 \quad \text{(Non-negative number of type of goods)}\\
+            x_{11} + x_{12} + x_{13}   \leq 100 \quad \text{(Capacity of E1)}\\
+            x_{21} + x_{22} + x_{23} \leq 120 \quad \text{(Capacity of E2)}\\
+            x_{11} + x_{21} \leq 90 \quad \text{(Demand of D1)}\\
+            x_{12} + x_{22} \leq 80 \quad \text{(Demand of D2)}\\
+            x_{13} + x_{23} \leq 50 \quad \text{(Demand of D3)}
+        \end{array}
+    \right.
+    \]
+\end{minipage}
+\vspace{0.5cm}
+
+\begin{tcolorbox}[title = Objective Function]
+\[
+    f(x_{ij}) = 4x_{11} + 6x_{12} + 8x_{13} + 5x_{21} + 3x_{22} + 7x_{23} 
+\]
+\begin{center}
+    The goal is to minimize the transportation cost by minimizing \(f(x_{ij})\), while respecting the capacity constraints of
+each warehouse and the demand at each destination.
+\end{center}
+\end{tcolorbox}
+
