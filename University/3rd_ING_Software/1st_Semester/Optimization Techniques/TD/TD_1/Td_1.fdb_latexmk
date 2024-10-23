@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1729650061.14812 "Td_1.tex" "Td_1.pdf" "Td_1" 1729650061.65467 0
+["pdflatex"] 1729653101.21696 "Td_1.tex" "Td_1.pdf" "Td_1" 1729653101.7324 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1727349926 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1727349926 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1727349926 1004 54797486969f23fa377b128694d548df ""
@@ -115,8 +115,9 @@
   "Exercices/Exe1.tex" 1729644440.21402 1350 68a5a9658794d5492eae502522e50482 ""
   "Exercices/Exe2.tex" 1729646010.48068 1834 753fdb847bac92f5dc3da709b2bf641c ""
   "Exercices/Exe3.tex" 1729650060.50732 3642 8387ca6ec99c3c97a53bc3f28c752988 ""
-  "Td_1.aux" 1729650061.59398 146 cd7acea94287601f9e13f35adf92f13f "pdflatex"
-  "Td_1.tex" 1729647430.04067 609 aac6cedcd296fd5ca2a2b4740df3bad5 ""
+  "Exercices/Exe4.tex" 1729653100.15063 1628 c5a35522bcc72d9afaa47a197a13df3e ""
+  "Td_1.aux" 1729653101.67063 146 8c23f8d80c9cc3bc372242922abbbc1f "pdflatex"
+  "Td_1.tex" 1729650870.69065 636 205127f499a0204620578cd2963be680 ""
   (generated)
   "Td_1.aux"
   "Td_1.log"

@@ -1,0 +1,42 @@
+\section*{Exercise 4: Stock Optimization}
+
+A company must decide how many tons of two raw materials (M1 \& M2) to purchase in order to manufacture a product. 
+Each ton of M1 costs 200 UM, and each ton of M2 costs 300 UM. For each finished product, the company needs 3 tons of M1 
+and 2 tons of M2. The company has a budget of 30 000 UM and must produce at least 50 tons of the product.\\
+Formulate this problem as a linear program to optimize expenses while respecting production constraints.
+
+\vspace{1.5cm}
+\textbf{\underline{\Large Solution:}}
+
+\vspace{0.5cm}
+\begin{minipage}[t]{0.45\textwidth}
+    \textbf{\underline{Variables Definition:}} \\[1em] % Adjust vertical space here
+
+    Let \(x_1\) be number of tons of M1. \\
+   
+    Let \(x_2\) be number of tons of M2.
+\end{minipage}%
+\hfill % This adds space between the two minipages
+\begin{minipage}[t]{0.45\textwidth}
+    \textbf{\underline{Constraint:}} \\[1em]
+    \[
+    \left\{
+        \begin{array}{l}
+            \forall x_1, x_2 \geq 0 \quad \text{(Non-negative number of tons of materials)}\\
+            200x_1 + 300x_2  \leq 30 000 \quad \text{(Budget Contraint)}\\
+            x_1 \geq 150 \quad \text{(At least 50 products from M1)}\\
+            x_2 \geq 100 \quad \text{(At least 50 products from M2)}
+        \end{array}
+    \right.
+    \]
+\end{minipage}
+\vspace{0.5cm}
+\begin{tcolorbox}[title = Objectif Function]
+\[
+f(x_1,x_2) = 200x_1 + 300x_2 
+\]
+\begin{center}
+The goal is to minimize The Company cost of production by minimizing \(f(x_1,x_2)\), while adhering to the limit of the budget and the min number of products.
+\end{center}
+\end{tcolorbox}
+
