@@ -5,58 +5,64 @@
 \definecolor{Sudo}{RGB}{35, 172, 140}
 \definecolor{violetOption}{RGB}{150, 70, 185}
 \definecolor{lightBlue}{RGB}{0,246,255}
-\usepackage[a4paper, paperwidth=25cm, paperheight=24cm, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage[a4paper, paperwidth=25.5cm, paperheight=24cm, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 \usepackage{tikz,tcolorbox}
 
 \begin{document}
 \section{Introduction : }
-This documentation has for purpose to guide people to easily download oracle data base using
-docker in linux  
+This guide aims to help users easily download and set up Oracle Database using Docker on Linux.
 \section{Requirements : }
 \begin{tcolorbox}[title = Installing Docker]
     \textbf{Arch Based : }
 
-         sudo pacman -S docker\\
+    \begin{verbatim}
+sudo pacman -S docker
+   \end{verbatim}
 
     \textbf{Debian and Ubuntu Based :}
-
-sudo apt install apt-transport-https ca-certificates curl software-properties-common\\
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -\\
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu \$(lsb\_release -cs) stable"\\
-sudo apt update\\
-sudo apt install docker-ce\\
-
+    \begin{verbatim}
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu \$(lsb\_release -cs) stable"
+sudo apt update
+sudo apt install docker-ce
+ \end{verbatim}
 \end{tcolorbox}
 \section{Docker : }
 \subsection{Start Docker :}
 \begin{tcolorbox}[title = starting docker]
     \textbf{Systemctl Distro (arch,ububtu,debian based) :}
-
-    sudo systemctl start docker\\
-    sudo systemctl enable docker\\
-
+\begin{verbatim}
+sudo systemctl start docker
+sudo systemctl enable docker
+\end{verbatim}
 \end{tcolorbox}
 \subsection{Pulling Oracle Image :}
 \begin{tcolorbox}[title = Pulling oracle-xe]
-
-    sudo docker pull gvenzl/oracle-xe\\
+\begin{verbatim}
+sudo docker pull gvenzl/oracle-xe
+\end{verbatim}
 
 \end{tcolorbox}
 \subsection{Enable Root Right}
 \begin{tcolorbox}
-
-   sudo usermod -aG docker \$USER\\
- 
-    
-   
+\begin{verbatim}
+sudo usermod -aG docker $USER
+\end{verbatim}   
 \end{tcolorbox}
+
 \subsection{Starting Oracle Container And Executing It :}
 \begin{tcolorbox}
-    sudo docker run -d -privileged -p 1521:1521 -e ORACLE\_PASSWORD=\textless password\textgreater gvenzl/oracle-xe\\
-    sudo docker ps\\
-    sudo docker exec -it \textless container\_id\textgreater bash\\
 
-    \textbf{\underline{Exemple :}}\\
+\textbf{\underline{Commands :}}
+
+\begin{verbatim}
+sudo docker run -d -privileged -p 1521:1521 -e ORACLE_PASSWORD=<password> gvenzl/oracle-xe
+sudo docker ps
+sudo docker exec -it <container_id> bash
+\end{verbatim}
+
+\textbf{\underline{Exemple :}}
 
 \begin{verbatim}
 [rabah@chadArch oracle]$ sudo docker run -d --privileged -p 1521:1521 -e ORACLE_PASSWORD=1234 gvenzl/oracle-xe
@@ -76,32 +82,41 @@ bash-4.4$
 \end{tcolorbox}
 \subsection{Setting Up Plugged Data Base (PDB) : }
 \begin{tcolorbox}
-\textbf{Finding SeedPath}
 
-sqlplus sys/1234@localhost/XE as sysdba
+\textbf{\underline{Commands :}}
+\begin{itemize}
+    \item  \textbf{\underline{Finding SeedPath : }}
+\begin{verbatim}
+sqlplus sys/<container_password>@localhost/XE as sysdba
 
-SELECT file\_name FROM dba\_data\_files WHERE tablespace\_name = 'SYSTEM';
+SELECT file_name FROM dba_data_files WHERE tablespace_name = 'SYSTEM';
 
 expected output : /opt/oracle/oradata/XE/system01.dbf
 
 exit;
+\end{verbatim}
+\item  \textbf{Creating Folder For New PDB}
 
-\textbf{Creating Folder For New PDB}
-
+\begin{verbatim}
 cd /opt/oracle/oradata/XE
 
 mkdir /opt/oracle/oradata/XE/TP\_3BDD
 
 sqlplus sys/1234@localhost/XE as sysdba
 
-\textbf{Creating And Altering To New PDB}
+\end{verbatim}
+\item \textbf{Creating And Altering To New PDB}
+\begin{verbatim}
 
-CREATE PLUGGABLE DATABASE TP\_3BDD ADMIN USER RABAH IDENTIFIED BY 1234 FILE\_NAME\_CONVERT('/opt/oracle/oradata/XE/XEPDB1/' , '/opt/oracle/oradata/XE/TP\_3BDD');
+CREATE PLUGGABLE DATABASE TP_3BDD ADMIN USER RABAH IDENTIFIED BY 1234 FILE_NAME_CONVERT('/opt/oracle/oradata/XE/XEPDB1/' , '/opt/oracle/oradata/XE/TP_3BDD');
 
-ALTER PLUGGABLE DATABASE TP\_3BDD OPEN;
+ALTER PLUGGABLE DATABASE TP_3BDD OPEN;
 
 exit;
 
-sqlplus sys/1234@localhost/TP\_3BDD as sysdba
+sqlplus sys/1234@localhost/TP_3BDD as sysdba
+
+\end{verbatim}
+\end{itemize}
 \end{tcolorbox}
 \end{document}
