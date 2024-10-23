@@ -1,0 +1,67 @@
+
+\section*{Exercise 5: Work Schedule Planning}
+
+A company must plan the work schedules of its employees over 7 days. It needs a minimum number of employees each day to ensure
+its activities: 20 on Monday, 15 on Tuesday, 25 on Wednesday, 30 on Thursday, 35 on Friday, 40 on Saturday, and 45 on Sunday. Each
+employee must work 5 consecutive days and be on leave for 2 days. How many employees must the company hire to optimize daily 
+staffing while respecting functional requirements?
+
+\vspace{1cm}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+     Mon & Tue & Wed & Thu & Fri & Sat & Sun\\
+     \hline
+     X & X & X & X & X & &\\
+     \hline
+     & X & X & X & X & X & \\
+     \hline
+     & & X & X & X & X & X \\
+     \hline
+     X & & & X & X & X & X\\
+     \hline
+     X & X & & & X & X & X\\
+     \hline
+     X & X & X & & & X & X\\
+     \hline
+     X & X & X & X & & & X\\
+     \hline
+ \end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}[t]{0.45\textwidth}
+    \textbf{\underline{Variables Definition:}} \\[1em] % Adjust vertical space here
+
+    Let \(x_i\) be number of employes that start i day where i : 1-\textgreater 6 (starting from Monday till Sunday)   \\
+    
+\end{minipage}%
+\hfill % This adds space between the two minipages
+\begin{minipage}[t]{0.45\textwidth}
+    \textbf{\underline{Constraint:}} \\[1em]
+    \[
+    \left\{
+        \begin{array}{l}
+            \forall x_i \geq 0 \quad \text{(Non-negative number of employees)}\\
+            x_1 + x_4 + x_5 + x_6 + x_7 = 20 \quad \text{(Number Of Employees In Monday)}\\
+            x_1 + x_2 + x_5 + x_6 + x_7 = 15 \quad \text{(Number Of Employees In Tuesday)}\\
+            x_1 + x_2 + x_3 + x_6 + x_7 = 25 \quad \text{(Number Of Employees In Wednesday)}\\
+            x_1 + x_2 + x_3 + x_4 + x_7 = 30 \quad \text{(Number Of Employees In Thursday)}\\
+            x_1 + x_2 + x_3 + x_4 + x_5 = 35 \quad \text{(Number Of Employees In Friday)}\\
+            x_2 + x_3 + x_4 + x_5 + x_6 = 40 \quad \text{(Number Of Employees In Saturday)}\\
+            x_3 + x_4 + x_5 + x_6 + x_7 = 45 \quad \text{(Number Of Employees In Sunday)}\\
+        \end{array}
+    \right.
+    \]
+\end{minipage}
+\vspace{0.5cm}
+
+\begin{tcolorbox}[title = Objectif Function]
+\[
+f(x_i) = x_1 + x_2 + x_3 + x_4 + x_5 + x_6 + x_7
+\]
+\begin{center}
+The goal is to minimize The number of employees by minimizing \(f(x_i)\).
+\end{center}
+\end{tcolorbox}
+

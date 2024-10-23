@@ -196,6 +196,9 @@ INPUT /usr/share/texmf-dist/tex/latex/base/omlcmr.fd
 INPUT ./Exercices/Exe4.tex
 INPUT ./Exercices/Exe4.tex
 INPUT Exercices/Exe4.tex
+INPUT ./Exercices/Exe5.tex
+INPUT ./Exercices/Exe5.tex
+INPUT Exercices/Exe5.tex
 INPUT Td_1.aux
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
