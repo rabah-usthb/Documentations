@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1729341444.15644 "SE.tex" "SE.pdf" "SE" 1729341445.57346 0
+["pdflatex"] 1729824672.52046 "SE.tex" "SE.pdf" "SE" 1729824673.92557 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1727349926 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1727349926 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1727349926 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -144,17 +144,20 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1727349926 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1728313617.6976 5307366 7c8b2c5f25a30f46e808245b8e6cf269 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1728313602 7112993 aa4b09384de557dce7967fbcadc10898 ""
-  "Chapters/Introduction.aux" 1729341444.708 904 f2e45ff09946eb5325bfab79da20836d "pdflatex"
+  "Chapters/Introduction.aux" 1729824673.06578 904 f2e45ff09946eb5325bfab79da20836d "pdflatex"
   "Chapters/Introduction.tex" 1729178959.13487 1612 e0c2c7b160f093db4d054c1479ade73f ""
-  "Chapters/LifeCycle.aux" 1729341445.41467 2883 3db3bdc2160d1c0b913fb64624c61ee1 "pdflatex"
+  "Chapters/LifeCycle.aux" 1729824673.76911 2883 3db3bdc2160d1c0b913fb64624c61ee1 "pdflatex"
   "Chapters/LifeCycle.tex" 1729341442.53133 19789 9d83b82952c8062f029661c02b7c0a4f ""
-  "Chapters/SoftWareCrisis.aux" 1729341444.878 913 1447a473819cbfa5012377d274fd4cba "pdflatex"
+  "Chapters/Needs Analysis.aux" 1729824673.85911 870 0efbc554f076972cf873470e0660fbeb "pdflatex"
+  "Chapters/Needs Analysis.tex" 1729824669.21578 8662 01ea5da9a71f3b6c70d24d525b881011 ""
+  "Chapters/SoftWareCrisis.aux" 1729824673.23578 913 1447a473819cbfa5012377d274fd4cba "pdflatex"
   "Chapters/SoftWareCrisis.tex" 1729178911.62153 7120 8812d7e0f908ed6fd39b3e5cac1fa08e ""
-  "SE.aux" 1729341445.44133 137 9cb27631ca5df96abe75f296c8ddc7a1 "pdflatex"
-  "SE.tex" 1729270690.67212 325 e31b8f934ea017c06f47cbff2c1a52d8 ""
+  "SE.aux" 1729824673.85911 174 df5846842142ceb33f28388546594652 "pdflatex"
+  "SE.tex" 1729799803.08506 363 347088fce200737b4ba883bfb952a885 ""
   (generated)
   "Chapters/Introduction.aux"
   "Chapters/LifeCycle.aux"
+  "Chapters/Needs Analysis.aux"
   "Chapters/SoftWareCrisis.aux"
   "SE.aux"
   "SE.log"

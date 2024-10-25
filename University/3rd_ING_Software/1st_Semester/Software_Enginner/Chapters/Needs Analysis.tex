@@ -1,0 +1,167 @@
+\section{Needs Analysis}
+A thorough needs analysis is critical in software development. Any ambiguity, contradiction, or missing information found in the
+requirements document can lead to significant setbacks, potentially requiring a restart of the project. In this section, we will
+take a detailed look at how the requirements document is structured.
+\begin{tcolorbox}[title = Note] 
+\textbf{Difference Between Goals \& Needs ?}\\
+
+It is crucial to understand that the requirements document holds the client's needs and not their goals . A goal is subjective and
+open to interpretation, while a need is objective—measurable or verifiable.\\
+
+\textbf{\underline{Example :}}\\
+
+The client might request a "pleasant user interface" , This can be interpreted in many ways:
+\begin{itemize}
+    \item a visually appealing UI with lots of colors and animations   
+    \item an easy-to-use interface
+    \item a minimalistic design
+\end{itemize} 
+
+and so on. To turn this into a clear need, we must clarify what the client means. For instance, they might want the UI to be 
+organized with all features accessible through a dropdown menu.
+
+\end{tcolorbox}\subsection{Requirments Document Structure}
+\begin{itemize}
+   \item \textbf{Introduction : }This section provides an overview of the document by outlining its key components :
+      \begin{itemize} 
+          \item Purpose: The reason for creating this document, which is primarily to align the development team and facilitate
+           communication with the client.
+           \vspace{0.15cm}
+          \item Scope: A high-level summary of the software’s main functionality, without going into too much detail. 
+           \vspace{0.15cm}
+          \item Context: The reason for creating the software, which could be to sell it to a client or company, to develop an
+          open-source project, or other similar motivations.\\
+      \end{itemize}    
+    \item \textbf{Hardware : }This section states whether the software requires any special hardware components like : GPU,
+sensors, or a camera ...etc . It also outlines the minimum hardware requirements needed to run the software, as well as the optimal hardware configuration for the best and smoothest experience.
+    \item \textbf{Conceptual Model : }This section describes the overall software architecture through a high-level graphical
+        representation, highlighting key components and their relationships.\hspace{0.1cm}It provides an overview of how the system is structured and
+operates, making it easier for stakeholders to understand.
+
+\textbf{\underline{Example :}}
+
+A desktop system composed of an email service, a spreadsheet, a document processing service, and an information retrieval service.
+\end{itemize}
+\begin{center}
+\begin{tikzpicture}
+    \draw (0,0) rectangle (2,1);
+    \node at (1,0.5){User};
+    \draw[->] (1,1) -- (1,2) -- (10.5 ,2) -- (10.5,-2);
+    \draw[->] (2,0.5) -- (6.25,0.5) -- (6.25,0);
+    \draw[->] (0,0.5) -- (-1.5,0.5) -- (-1.5,-8) -- (1.75,-8) -- (1.75,-7);
+    \draw[->] (1.625,0) -- (1.625,-1);
+
+    \draw (0.5,-3) rectangle (2.75,-1);
+    \node at (1.625,-1.75) {Email};
+    \node at (1.625 ,-2.25){Management};
+    \draw[->] (1.625,-3) -- (1.625,-4);
+    \draw[->] (0.5,-2) -- (-0.5,-2) -- (-0.5,-6.5) -- (0.75,-6.5);
+    \draw[->] (2.75,-2) -- (4.125,-2) -- (4.125,-1) -- (5.25,-1);
+
+    \draw (0.75,-5) rectangle (2.75,-4);
+    \node at (1.75,-4.5) {Network};
+
+    \draw (0.75,-7) rectangle (2.75,-6);
+    \node at (1.75,-6.5) {Spreadsheet};
+    \draw[->] (2.75,-6.5) -- (5.25,-6.5);
+      
+    \draw (5.25,-7) rectangle (7.25,-6);
+    \node at (6.25,-6.5) {DB};
+
+    \draw(5.25,-2) rectangle (7.25,0);
+    \node at (6.25,-0.75) {Document};
+    \node at (6.25,-1.25) {Processing};
+    \draw[->] (6.25,-2) -- (6.25,-6); 
+  
+    \draw (9.5,-4) rectangle (11.5,-2);
+    \node at (10.5,-2.75) {Information};
+    \node at (10.5,-3.25) {Retrieval};
+    \draw[->] (10.5 , -4) -- (10.5,-6.5) -- (7.25,-6.5); 
+
+ \end{tikzpicture}
+\end{center}
+
+\vspace{0.75cm}
+The next step consist into creating a new conceptual model for each complexe fonction
+\vspace{0.25cm}
+\begin{center}
+\begin{tikzpicture}
+    \draw (-3,0) rectangle (-1,1);
+    \node at (-2,0.5){User};
+    \draw[->] (-2,0) -- (-2,-2.625) -- (0.75,-2.625);
+    \draw[->] (-1.75,0) -- (-1.75,-0.625) -- (0.75,-0.625);
+    \draw[->] (-2.25,0) -- (-2.25,-4.625) -- (0.75,-4.625);
+    
+    \draw (0.75,-1.25) rectangle (2.75,0);
+    \node at (1.75,-0.475){Message};
+    \node at (1.75,-0.875){Creation};
+    \draw[->] (2.75,-0.625) -- (4,-0.625) -- (4,-6.75) -- (2.75,-6.75);
+    \draw[->] (2.25,0) -- (2.25,0.5) -- (6.25,0.5) -- (6.25,0);
+    \draw[->] (1.75,0) -- (1.75,1) -- (9.5,1) -- (9.5,-0.5);
+
+    \draw (0.75,-3.25) rectangle (2.75,-2);
+    \node at (1.75,-2.475){Message};
+    \node at (1.75,-2.875){Deletion};
+    \draw[->] (2.75,-2.625) -- (3.25 ,-2.625) -- (3.25,-6.5) -- (2.75,-6.5);
+
+    \draw (0.75,-5.25) rectangle (2.75,-4);
+    \node at (1.75,-4.475){Message};
+    \node at (1.75,-4.875){Transfer};
+    \draw[->] (1.75,-5.25) -- (1.75,-6);
+
+    \draw (0.75,-7) rectangle (2.75,-6);
+    \node at (1.75,-6.5) {Network};
+
+    \draw (8.5,-1.5) rectangle (10.5,-0.5);
+    \node at (9.5,-1) {Spreadsheet};
+    
+    \draw(5.25,-2) rectangle (7.25,0);
+    \node at (6.25,-0.75) {Document};
+    \node at (6.25,-1.25) {Processing};
+
+\end{tikzpicture}
+
+\end{center}
+\begin{itemize}
+\item \textbf{Functional Requirements:} These define what the system should do, focusing on the specific features and functions the
+software must deliver to meet user or business needs. They describe the expected behavior of the system in various situations.
+Functional requirements are concrete and measurable. They can be expressed using natural, semi-formal, or formal language,
+or a mix of these. 
+
+\begin{itemize} 
+\item \textbf{Natural Language:} Easy to implement and understand, but lacks structure and precision, which can lead to ambiguity.
+It makes automating analysis of the document harder, relying heavily on the writer’s linguistic experience. 
+\item \textbf{Structured (Semi-Formal) Language:} Limited use of natural language, more structured and precise than natural language
+, often accompanied by graphical notations. 
+\item \textbf{Formal Language:} Hard to master and time-consuming to implement. It is difficult for clients to understand but is based
+on mathematical theory, making it the most precise language and easier to automate verification. 
+\end{itemize}
+
+\item \textbf{Non-Functional Requirements:} Define the restrictions and constraints related to both hardware and software within
+the context of the ongoing project. Non-functional requirements are particularly influenced by changes in technologies 
+(both hardware and software) and are crucial for complex software systems. As the project develops, changes in hardware may occur.
+These changes can be anticipated by projecting the expected performance levels that will be required by the end of the project.
+\item \textbf{Maintenance Information:} Anticipates possible actions after the software's initial release, such as adding
+new features, improving performance, or addressing potential issues.
+   \item \textbf{Glossary:} Provides definitions of the terms and concepts used in the document to help readers. This ensures
+that the terminology is clear, as the requirements document is shared and read by the design team, developers, and stakeholders, 
+without assuming prior knowledge of these terms.
+  \item \textbf{Index:} Helps the reader find specific topics and sections of the document more efficiently by providing a
+detailed list of references to relevant sections, parts, and page numbers.
+\end{itemize}
+\begin{tcolorbox}[title = Note]
+ Functional and non-functional requirements are inherently connected, and their interplay can sometimes lead to conflicts. 
+ By understanding the potential for these conflicts and establishing a process for managing them, development teams can better
+ balance user needs and system performance, ultimately leading to a more successful product.
+\end{tcolorbox}
+
+\subsection{Requirements Validation}
+The requirements need to be coherent, realizable, and complete. Anticipation of hardware needs to be considered. 
+It is crucial for the requirements document to be validated in order to initiate the next steps of the software life cycle.
+
+\begin{itemize}
+    \item review Technique is an efficient way to monitor and update the requirements .
+    \item There are various analysis tools available that can facilitate the validation process of the requirements document,
+helping to ensure accuracy and completeness.
+\end{itemize}
+

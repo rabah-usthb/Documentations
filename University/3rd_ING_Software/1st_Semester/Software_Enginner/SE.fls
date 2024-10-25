@@ -214,6 +214,9 @@ INPUT Chapters/SoftWareCrisis.aux
 INPUT ./Chapters/LifeCycle.aux
 INPUT ./Chapters/LifeCycle.aux
 INPUT Chapters/LifeCycle.aux
+INPUT ./Chapters/Needs Analysis.aux
+INPUT ./Chapters/Needs Analysis.aux
+INPUT Chapters/Needs Analysis.aux
 OUTPUT SE.aux
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -247,6 +250,11 @@ OUTPUT Chapters/LifeCycle.aux
 INPUT ./Chapters/LifeCycle.tex
 INPUT ./Chapters/LifeCycle.tex
 INPUT Chapters/LifeCycle.tex
+INPUT ./Chapters/Needs Analysis.tex
+OUTPUT Chapters/Needs Analysis.aux
+INPUT ./Chapters/Needs Analysis.tex
+INPUT ./Chapters/Needs Analysis.tex
+INPUT Chapters/Needs Analysis.tex
 INPUT SE.aux
 INPUT ./Chapters/Introduction.aux
 INPUT ./Chapters/Introduction.aux
@@ -257,6 +265,9 @@ INPUT Chapters/SoftWareCrisis.aux
 INPUT ./Chapters/LifeCycle.aux
 INPUT ./Chapters/LifeCycle.aux
 INPUT Chapters/LifeCycle.aux
+INPUT ./Chapters/Needs Analysis.aux
+INPUT ./Chapters/Needs Analysis.aux
+INPUT Chapters/Needs Analysis.aux
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
