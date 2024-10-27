@@ -1,0 +1,62 @@
+\section*{\textit{\underline{Exercice 1 :} Study of the Failure Case of "Ariane 5" Due to a Coding Error}}
+
+The crash of Ariane 5 resulted from a series of technical and strategic errors. The computer in question was responsible for
+providing data during the flight control. It had been developed for Ariane 4 and had successfully completed several flights.\\
+
+The strategic errors stemmed from the fact that the computer was reused as is for Ariane 5, without any revision of the
+specifications or additional testing. Unfortunately, the input data for Ariane 5 was completely different from that of Ariane 4.
+This would lead to the bug that resulted in the destruction of the launcher.\\
+
+A second computer operated concurrently and in parallel with the first; however, since its design was identical to the first,
+the same causes produced the same effects.\\
+
+\textbf{\underline{\textit{Technical Errors:}}}
+\begin{enumerate}
+    \item The code simply contained an assignment from a 64-bit data variable to a 16-bit data variable. Since the input data for Ariane 5 was larger than expected, it sometimes happened that a value greater than 16 bits was assigned to the variable coded on 16 bits. An exception was then logically raised.
+    \item In Ada language, a mechanism exists to handle this type of exception. Here, no protective mechanism was provided. The exception was passed during flight control, which treated it like any other value provided by the computer. This led to its aberrant behavior, resulting in the loss of trajectory and then triggering self-destruction.\\
+\end{enumerate}
+
+\textbf{\underline{\textit{Questions:}}}
+\begin{enumerate}
+    \item What lessons can we draw from this case?
+    \item The development of industrial or advanced systems is often complex and requires significant time for success. What are
+the most suitable models for such projects, and why?
+\end{enumerate}
+
+\vspace{1.5cm}
+
+\textbf{\underline{\large{Solutions:}}}\\
+\begin{enumerate}
+    \item The lessons we can draw from this are:
+        \begin{itemize}
+            \item We need to adapt the software to the new hardware and system.
+            \vspace{0.15cm}
+            \item Review and update the requirements document to align with the new hardware specifications.
+            \vspace{0.15cm}
+            \item Never skip integration testing, even if it worked perfectly on another system.
+            \vspace{0.15cm}
+            \item It's important to manage exceptions and handle them appropriately. 
+            \vspace{0.15cm}
+            \item A risk of zero does not exist there is always a chance, no matter how small, that a serious
+bug might occur only during the execution of the software (Vicious Bug).
+        \end{itemize}
+\vspace{1cm}
+    \item The most suitable models for such projects are:
+        \begin{itemize}
+            \item \textbf{Spiral}: Suited for complex projects and focuses on risk management.
+           
+\vspace{0.15cm}
+            \item \textbf{Incremental}: Breaks complex projects into modules, making it easier to debug and test each module
+independently and integrate them minimizing errors and bugs.
+
+\vspace{0.15cm}
+            \item \textbf{Prototyping}: Suited for innovative projects that contain both hardware and software components.
+
+\vspace{0.15cm}
+           \item \textbf{Hybrid}: Breaks the project into different parts, each with its suitable life cycle, offering the best
+flexibility and benefits from each life cycle.
+        \end{itemize}
+\end{enumerate}
+
+\vspace{0.75cm}
+
