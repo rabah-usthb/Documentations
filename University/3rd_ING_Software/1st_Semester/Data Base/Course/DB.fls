@@ -206,6 +206,9 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt9.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT ./Chapters/DRL.tex
+INPUT ./Chapters/DRL.tex
+INPUT Chapters/DRL.tex
 INPUT DB.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb

@@ -1,0 +1,160 @@
+\section{DRL Commands}
+\subsection{Select}
+
+
+\begin{tcolorbox}[title = Definition]
+To display the contents of one or more tables at once, we use the \textcolor{blue}{SELECT} command. We can choose specific columns and tables to display, and if a table name is too long, we can assign it a shorter alias using the \textcolor{blue}{AS} keyword. When selecting from multiple tables without a join condition, a Cartesian product occurs, meaning each row from one table is paired with each row from the other.
+\end{tcolorbox}
+
+\subsubsection*{\underline{Syntax}}
+\begin{tcolorbox}[title = Table Selection]
+\textcolor{blue}{SELECT} * \textcolor{blue}{FROM} table$_{1}$;
+
+\textcolor{blue}{SELECT} column$_{1}$ ,..., column$_{n}$ \textcolor{blue}{FROM} table$_{1}$;
+
+\textcolor{blue}{SELECT} t$_{1}$.col$_{1}$,...,t$_{1}$.col$_{n}$, t$_{2}$.col$_{1}$,...,t$_{2}$.col$_{n}$ \textcolor{blue}{FROM} table$_{1}$ \textcolor{blue}{AS} t$_{1}$, table$_{2}$ \textcolor{blue}{AS} t$_{2}$;
+\end{tcolorbox}
+\subsection{Where}
+\begin{tcolorbox}[title = Definition]
+The \textcolor{blue}{WHERE} clause is used to filter rows in a table when displaying data with the
+\textcolor{blue}{SELECT} command. Only rows that meet the specified condition(s) are shown in the result.
+\end{tcolorbox}
+\subsubsection*{\underline{Syntax}}
+\begin{tcolorbox}[title = Where Clause]
+ \textcolor{blue}{SELECT} column$_{1}$, column$_{2}$, ... \textcolor{blue}{FROM} table \textcolor{blue}{WHERE} {[Conditions]};
+\end{tcolorbox}
+\subsection{Order By}
+\begin{tcolorbox}[title = Definition]
+We can sort the results of a query in either ascending or descending order using \textcolor{blue}{ORDER BY}. 
+This can be applied to one or multiple columns. The order of the columns specified is important; the database
+first sorts by the first column, and if there are rows with identical values in that column, it then sorts those
+rows by the next column, and so on. This allows for a prioritized sorting strategy.
+\end{tcolorbox}
+
+\subsubsection*{\underline{Syntax}}
+
+\begin{tcolorbox}[title = Order By Clause]
+\textcolor{blue}{SELECT} column$_{1}$, column$_{2}$, ... \textcolor{blue}{FROM} table \textcolor{blue}{WHERE}
+{[Conditions]} \textcolor{blue}{ORDER BY} column$_{1}$ \textcolor{blue}{DESC} ,..., column$_{n}$ \textcolor{blue}{ASC};
+\end{tcolorbox}
+
+\subsection{Group By} 
+\begin{tcolorbox}[title = Definition]
+To group rows that have the same value in a specified column, we use the \textcolor{blue}{GROUP BY} command.
+We can group by multiple columns; the order is important because it will first group by the first column. If there
+are rows that have the same value in the first column but differ in the second column, those rows will appear in
+separate groups in the output. This allows us to apply aggregate functions to summarize data for each group.
+\end{tcolorbox}
+\subsubsection*{\underline{Syntax}}
+\begin{tcolorbox}[title = Group By Clause]
+\textcolor{blue}{SELECT} column$_{1}$, column$_{2}$, ... \textcolor{blue}{FROM} table \textcolor{blue}{WHERE}
+{[Conditions]} \textcolor{blue}{GROUP BY} column$_{1}$ , ... ,column$_{n}$\\ 
+\textcolor{blue}{ORDER BY} column$_{1}$ \textcolor{blue}{DESC} ,..., column$_{n}$ \textcolor{blue}{ASC};
+
+\end{tcolorbox}
+\subsection{Joins}
+\begin{tcolorbox}[title = Definition]
+joins allow you to combine rows from two or more tables based on related columns (referenced key)
+
+\textbf{\underline{Inner Join}}
+An Inner Join returns only the common rows between tables
+\begin{center}
+\begin{tikzpicture}
+    \draw (-0.5,0) circle (1.5cm);
+    \draw[black] (-0.5,0) circle (1.5cm);
+    
+    \draw (1,0) circle (1.5cm);
+    \draw[black] (1,0) circle (1.5cm);
+   \begin{scope}
+        \clip (-0.5,0) circle (1.5cm);  
+        \fill[red] (1,0) circle (1.5cm);  
+    \end{scope} 
+\end{tikzpicture}
+\end{center}
+\textbf{\underline{Left Join}}
+A Left Join returns all rows from the left table and the matched rows from the right table. If there’s no match,
+NULL values are returned for columns from the right table.
+
+\begin{center}
+\begin{tikzpicture}
+    \fill[red] (-0.5,0) circle (1.5cm);
+    \draw[black] (-0.5,0) circle (1.5cm);
+
+    \draw (1,0) circle (1.5cm);
+    \draw[black] (1,0) circle (1.5cm);
+\end{tikzpicture}
+\end{center}
+\textbf{\underline{Right Join}}
+A Right Join returns all rows from the right table and the matched rows from the left table. If there’s no match,
+NULL values are returned for columns from the left table.
+\begin{center}
+\begin{tikzpicture}
+    \draw (-0.5,0) circle (1.5cm);
+
+    \fill[red] (1,0) circle (1.5cm);
+
+    \draw[black] (1,0) circle (1.5cm);
+    \draw[black] (-0.5,0) circle (1.5cm);
+\end{tikzpicture}
+\end{center}
+\textbf{\underline{Full Join}}
+A Full Join returns all rows when there is a match in either left or right table. If there is no match,
+NULL values are returned for unmatched columns.
+\begin{center}
+\begin{tikzpicture}
+    \fill[red] (-0.5,0) circle (1.5cm);
+
+    \fill[red] (1,0) circle (1.5cm);
+    \draw[black] (1,0) circle (1.5cm);
+
+    \draw[black] (-0.5,0) circle (1.5cm);
+\end{tikzpicture}
+\end{center}
+\end{tcolorbox}
+
+
+\subsection{Aggregation Functions}
+\begin{tcolorbox}[title = Definition]
+   Aggregation functions perform calculations on a set of values and return a single result. They are commonly used in conjunction with the \textcolor{blue}{GROUP BY} clause to summarize data.
+   \begin{itemize}
+    \item \textbf{Avg()} : Calculates the average (mean) of numeric values in a specified column.
+    \item \textbf{Min()} : Returns the smallest (minimum) value in a specified column.
+    \item \textbf{Max()} : Returns the largest (maximum) value in a specified column.
+    \item \textbf{Count()} : Counts the number of non-null entries in a specified column (or all rows if * is used).
+    \item \textbf{Sum()} : Adds up all values in a specified numeric column.
+   \end{itemize} 
+\end{tcolorbox}
+
+
+\subsection{Operators}
+\begin{tcolorbox}[title = Definition]
+Operators are symbols that specify operations to be performed on operands. They can be categorized as follows:
+\begin{itemize}
+    \item \textbf{Logical Operators}: Used to combine conditions.
+          \begin{itemize} 
+              \item Logical And : AND 
+              \item Logical Or : OR 
+              \item Logical Not : NOT 
+              \end{itemize} 
+    
+    \item \textbf{Comparison Operators}: Used to compare values.
+    \begin{itemize}
+             \item Equal : = 
+             \item Not Equal : != 
+             \item Greater : \textgreater
+             \item Greater Or Equal : \textgreater= 
+             \item Less : \textless
+             \item Less Or Equal : \textless= 
+             \item Between : BETWEEN value$_{1}$ AND value$_{2}$
+             \item In : IN (set of values)
+             \end{itemize} 
+
+    \item \textbf{Arithmetic Operators}: Used for mathematical calculations.
+    \begin{itemize} 
+           \item Multiplication : *
+           \item Division : / 
+           \item Sum : + 
+           \item Subtraction : -
+           \end{itemize}
+   \end{itemize}
+\end{tcolorbox}
