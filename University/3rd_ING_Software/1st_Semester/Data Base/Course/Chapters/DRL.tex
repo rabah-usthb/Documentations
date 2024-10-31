@@ -3,7 +3,9 @@
 
 
 \begin{tcolorbox}[title = Definition]
-To display the contents of one or more tables at once, we use the \textcolor{blue}{SELECT} command. We can choose specific columns and tables to display, and if a table name is too long, we can assign it a shorter alias using the \textcolor{blue}{AS} keyword. When selecting from multiple tables without a join condition, a Cartesian product occurs, meaning each row from one table is paired with each row from the other.
+To display the contents of one or more tables at once, we use the \textcolor{blue}{SELECT} command. We can choose
+specific columns and tables to display, and if a table name is too long, we can assign a shorter alias to columns and 
+tables name using the \textcolor{blue}{AS} keyword. When selecting from multiple tables without a join condition, a Cartesian product occurs, meaning each row from one table is paired with each row from the other.
 \end{tcolorbox}
 
 \subsubsection*{\underline{Syntax}}
@@ -112,8 +114,26 @@ NULL values are returned for unmatched columns.
 \end{center}
 \end{tcolorbox}
 
+\subsubsection*{ \textbf{Syntax}}
+\begin{tcolorbox}[title =Joins]
+ \textbf{Inner Join}\\
+\textcolor{blue}{SELECT} column$_{1}$,...,column$_{n}$ \textcolor{blue}{FROM} table1 \textcolor{blue}{INNER JOIN} 
+table2 \textcolor{blue}{ON} table1.common\_column = table2.common\_column;
 
-\subsection{Aggregation Functions}
+ \textbf{Left Join}\\
+\textcolor{blue}{SELECT} column$_{1}$,...,column$_{n}$ \textcolor{blue}{FROM} table1 \textcolor{blue}{LEFT JOIN} 
+table2 \textcolor{blue}{ON} table1.common\_column = table2.common\_column;
+
+\textbf{Right Join}\\
+\textcolor{blue}{SELECT} column$_{1}$,...,column$_{n}$ \textcolor{blue}{FROM} table1 \textcolor{blue}{RIGHT JOIN} 
+table2 \textcolor{blue}{ON} table1.common\_column = table2.common\_column;
+
+\textbf{Full Join}\\
+\textcolor{blue}{SELECT} column$_{1}$,...,column$_{n}$ \textcolor{blue}{FROM} table1 \textcolor{blue}{FULL OUTER JOIN} 
+table2 \textcolor{blue}{ON} table1.common\_column = table2.common\_column;
+\end{tcolorbox}
+
+ \subsection{Aggregation Functions}
 \begin{tcolorbox}[title = Definition]
    Aggregation functions perform calculations on a set of values and return a single result. They are commonly used in conjunction with the \textcolor{blue}{GROUP BY} clause to summarize data.
    \begin{itemize}
@@ -121,6 +141,11 @@ NULL values are returned for unmatched columns.
     \item \textbf{Min()} : Returns the smallest (minimum) value in a specified column.
     \item \textbf{Max()} : Returns the largest (maximum) value in a specified column.
     \item \textbf{Count()} : Counts the number of non-null entries in a specified column (or all rows if * is used).
+      \begin{itemize}
+        \item  \textbf{count(*)} : Counts All rows
+        \item  \textbf{count(column$_{i}$)} : counts number of rows where column$_{i}$ is not null
+        \item  \textbf{count(distinct column$_{i}$)} : counts number of rows where column$_{i}$ is not null without repetition
+    \end{itemize}
     \item \textbf{Sum()} : Adds up all values in a specified numeric column.
    \end{itemize} 
 \end{tcolorbox}
