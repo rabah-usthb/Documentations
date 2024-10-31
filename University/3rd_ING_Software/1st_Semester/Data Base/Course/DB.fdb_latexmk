@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1730365618.80681 "DB.tex" "DB.pdf" "DB" 1730365620.32871 0
+["pdflatex"] 1730370311.78006 "DB.tex" "DB.pdf" "DB" 1730370313.39576 0
   "/etc/texmf/web2c/texmf.cnf" 1729519629.14367 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -121,10 +121,13 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1729636444 8214445 9b12922370acf71d34fba59262adf24e ""
   "Chapters/Classification.tex" 1730115794.49815 622 e812e53b46cd9a3622e64003ce500625 ""
   "Chapters/DDL.tex" 1730209476.00923 11668 cf28f9d38085adb5ae952aae31066a6f ""
+  "Chapters/DML.tex" 1730370309.92603 2322 858122fcb8b51726916fff3a96442b13 ""
   "Chapters/DRL.tex" 1730365617.79757 8324 ff592243c782be2a6d8c1216dc921c45 ""
   "Chapters/DataType.tex" 1730068292.55101 2339 03d9b7aa31da4c14d6b9d2fb522a58f2 ""
-  "DB.aux" 1730365620.15856 2040 c6c3a0d55dfc48ecf0b345c4970d6176 "pdflatex"
-  "DB.tex" 1730210098.87281 1147 66220112b58a1f230cb1f704125af783 ""
+  "Chapters/PlSql.tex" 1730366848.60447 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "Chapters/TriggerFunction.tex" 1730366875.75031 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "DB.aux" 1730370313.19043 2441 85decc6b438fbef9931c6706c7c046d4 "pdflatex"
+  "DB.tex" 1730367018.17049 1236 57800238a6f74c43dbf59ec8bf62b748 ""
   (generated)
   "DB.aux"
   "DB.log"

@@ -209,6 +209,15 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
 INPUT ./Chapters/DRL.tex
 INPUT ./Chapters/DRL.tex
 INPUT Chapters/DRL.tex
+INPUT ./Chapters/DML.tex
+INPUT ./Chapters/DML.tex
+INPUT Chapters/DML.tex
+INPUT ./Chapters/TriggerFunction.tex
+INPUT ./Chapters/TriggerFunction.tex
+INPUT Chapters/TriggerFunction.tex
+INPUT ./Chapters/PlSql.tex
+INPUT ./Chapters/PlSql.tex
+INPUT Chapters/PlSql.tex
 INPUT DB.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
