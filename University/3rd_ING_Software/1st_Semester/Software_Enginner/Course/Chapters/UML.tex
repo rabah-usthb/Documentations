@@ -1,51 +1,521 @@
-def UML :
+\section{UML}
+\subsection{Introduction}
+As seen in the previous sections, the requirements document is very important, as any mistake, ambiguity,
+or misunderstanding of the client's needs can lead to a project restart. We've reviewed the high-level
+structure of a requirements document; one of the most important parts is the functional requirements, which can
+be expressed in natural language. This approach is easy to implement and understand but isn't very precise, doesn't
+automate verification, and relies solely on the linguistic experience of the writer. There is also a formal approach
+based on mathematical theory, which automates verification, is very precise, but is hard to master and 
+time-consuming. Finally, there is a semi-formal approach that benefits from the advantages of both natural and 
+formal language; an example of this is UML (Unified Modeling Language).
+\subsection{UML(Unified Modeling Language)}
+UML is a semi-formal language that is easy to understand and widely used by developers. It divides into two main categories of diagrams:
+\begin{itemize}
+    \item Structure Diagram : Represent the static aspects of a system, showing its classes, objects, and relationships. 
+    \item Behaviour Diagram :  Describes the dynamic aspects of a system, illustrating how actors interact with the system and how the system changes over time.
+\end{itemize}
+In this section we will focus on Use case diagram
+\begin{center}
+\begin{tikzpicture}
+    \draw(0,0) rectangle(2.5,1);
+    \node at(1.25,0.5) {Diagram};
+    
+    \coordinate (A) at (1.25,0);  
+    \coordinate (B) at (1.1,-0.25);  
+    \coordinate (C) at (1.4,-0.25);
+    \draw[line width=1pt] (A) -- (B) -- (C) -- cycle;
+    
+    \draw (1.25,-0.25) -- (1.25,-0.5);
+    \draw (-4.75,-1) -- (-4.75,-0.5) -- (5.25,-0.5) -- (5.25,-1);
 
-Type Of uml diagram
+    \draw(-6,-2) rectangle(-3.5,-1);
+    \node at (-4.75,-1.25){Structure};
+    \node at (-4.75,-1.75){Diagram};
+   
+    \coordinate (A) at (-4.75,-2);  
+    \coordinate (B) at (-4.9,-2.25);  
+    \coordinate (C) at (-4.6,-2.25);
+    \draw[line width=1pt] (A) -- (B) -- (C) -- cycle;
+   
+    \draw (-4.75,-2.25) -- (-4.75,-3);
+    \draw (-10.25,-5) -- (-10.25,-2.5) -- (0,-2.5) -- (0,-5);
+
+    \draw (-6,-4) rectangle(-3.5,-3);
+    \node at (-4.75,-3.25){Component};
+    \node at (-4.75,-3.75){Diagram};
+    \draw (-4.75,-3) -- (-4.75,-2.5);
+    
+    \draw (-9.5,-4) rectangle(-7,-3);
+    \node at (-8.25,-3.25){Class};
+    \node at (-8.25,-3.75){Diagram};
+    \draw (-8.25,-3) -- (-8.25,-2.5);
+ 
+    \draw (-2.75,-4) rectangle(-0.25,-3);
+    \node at (-1.5,-3.25){Object};
+    \node at (-1.5,-3.75){Diagram};
+    \draw (-1.5,-3) -- (-1.5,-2.5);
+    
+    \draw (-11.5,-6) rectangle(-9,-5);
+    \node at (-10.25,-5.25){Profile};
+    \node at (-10.25,-5.75){Diagram};
+    
+    \draw (-8.5,-6) rectangle(-5,-5);
+    \node at (-6.75,-5.25){Composite};
+    \node at (-6.75,-5.75){Structure Diagram};
+    \draw (-6.5,-5) -- (-6.5,-2.5);
+
+    \draw (-4.5,-6) rectangle(-2,-5);
+    \node at (-3.25,-5.25){Deployment};
+    \node at (-3.25,-5.75){Diagram};
+    \draw (-3.15,-5) -- (-3.15,-2.5);
+    
+    \draw (-1.25,-6) rectangle(1.25,-5);
+    \node at (0,-5.25){Package};
+    \node at (0,-5.75){Diagram};
+
+    \draw(4,-2) rectangle(6.5,-1);
+    \node at (5.25,-1.25){Behaviour};
+    \node at (5.25,-1.75){Diagram};
+
+    \coordinate (A) at (5.25,-2);  
+    \coordinate (B) at (5.1,-2.25);  
+    \coordinate (C) at (5.4,-2.25);
+    \draw[line width=1pt] (A) -- (B) -- (C) -- cycle;
+    
+    \draw (2.5,-4) rectangle(5,-3);
+    \node at (3.75,-3.25){Activity};
+    \node at (3.75,-3.75){Diagram};
+   
+    \draw  (3.75,-3)--(3.75,-2.5)--(9.25,-2.5)--(9.25,-5);
+
+    \draw (6,-4) rectangle(8.5,-3);
+    \node at (7.25,-3.25){Use Case};
+    \node at (7.25,-3.75){Diagram};
+    \draw  (7.25,-3)--(7.25,-2.5);
+
+    \draw (4,-6) rectangle(6.5,-5);
+    \node at (5.25,-5.25){Interaction};
+    \node at (5.25,-5.75){Diagram};
+    \draw  (5.25,-5)--(5.25,-2.25);
+    
+    \coordinate (A) at (5.25,-6);  
+    \coordinate (B) at (5.1,-6.25);  
+    \coordinate (C) at (5.4,-6.25);
+    \draw[line width=1pt] (A) -- (B) -- (C) -- cycle;
+    
+    \draw (7.5,-6) rectangle(11,-5);
+    \node at (9.25,-5.25){State Machine};
+    \node at (9.25,-5.75){Diagram};
+
+    \draw (3.75,-8.5) rectangle(7.25,-7.5);
+    \node at (5.5,-7.75){Interaction};
+    \node at (5.5,-8.25){Overview Diagram};
+    \draw  (5.25,-7.5)--(5.25,-6.25);
+    
+    \draw (7.75,-8.5) rectangle(10.25,-7.5);
+    \node at (9,-7.75){Timing};
+    \node at (9,-8.25){Diagram};
+
+    \draw (0.75,-8.5) rectangle(3.25,-7.5);
+    \node at (2,-7.75){Communication};
+    \node at (2,-8.25){On Diagram};
+    \draw  (2,-7.5)--(2,-6.85);
+    
+    \draw (-2.25,-8.5) rectangle(0.25,-7.5);
+    \node at (-1,-7.75){Sequence};
+    \node at (-1,-8.25){Diagram};
+
+    \draw (-1,-7.5)--(-1,-6.85)--(9,-6.85)--(9,-7.5);
+\end{tikzpicture}
+\end{center}
+\vspace{2cm}
 
 
-UML semi formel 
+\subsection{Use Case Diagram}
+A use case diagram is a graphical representation of a behavior diagram, composed of three elements:
 
-categorizes into two :
-structure : diagram de class solution OOP 
-Comportement :
+\begin{itemize} 
+    \item Actors: Actors interact with the software and can have one or multiple roles. They are represented as
+stick figures and may be: 
+        \begin{itemize} 
+            \item Human: 
+              \begin{itemize} 
+                \item Internal: People inside the company, such as employees, finance staff, and legal personnel.
+                \item External: People outside of the company, such as end-users or customers. 
+              \end{itemize} 
+            \item Non-Human: Hardware (e.g., sensors, cameras) or other software systems (e.g., APIs, DBMS) that 
+interact with the project’ssoftware. 
+      \end{itemize} 
+   \item Use Cases (Features): These represent features or functions of the software and are shown as ellipses.
+   \item Associations: Associations are the connections between actors and use cases, represented with lines. 
+\end{itemize}
 
-use case diagram :
+\vspace{0.5cm}
+\subsubsection*{\underline{Example:}}
 
-actor : user , hardware , other software 
+\vspace{0.5cm}
+\begin{center}
+    \begin{tikzpicture}
 
-note : 
-one person can play many rols 
+        \draw[->, red] (-6.25,-1.75) -- (-4.5,-1.75);
+        \node at (-7,-1.65){\textcolor{red}{Actor}};
+        \draw[->, red] (-5.75,-3.5) -- (-3.25,-3.5);
+        \node at (-6.75,-3.45){\textcolor{red}{Association}};
+        \draw[<-,red] (2.65,0) -- (5,0);
+        \node at (5.75,0.07){\textcolor{red}{Use Case}};
+        
+        \fill[MyBlue] (-4,-1.5) circle(0.15);
+        \draw (-4,-1.5) circle(0.15);
+        \draw (-4,-1.65)--(-4,-2);
+        \draw (-4.25,-1.795)--(-3.75,-1.795);
+        \draw (-4,-2) -- (-3.75,-2.25);
+        \draw (-4,-2) -- (-4.25,-2.25);
+        \node at (-3.995,-2.35){\tiny Customer};
 
-cas d'utilisation = features = elipse
-bonhome = actor
-mix of natural language , and graphical symbols
-associate actor with use case with line
+        \draw (-3.75,-1.35) -- (-2.5,0);
+        \fill[MyBlue] (0,0) ellipse (2.5 and 0.5);
+        \draw (0,0) ellipse (2.5 and 0.5);
+        \node at(0.08,0){View Billing Statements};
 
-use case : is a graphical representation of a behaviour diagram
-that is composed of actors that can be huaman (intern,externe) , or 
-non human hardware that interact with the software , or other softwares
-, each actors has one or many rols we create links called association between actors and use case 
-(softwares features)
 
-type of relation 
-association : actor ---> use case
+        \draw (-3.5,-2) -- (-2.5,-2);
+        \fill[MyBlue] (0,-2) ellipse (2.5 and 0.5);
+        \draw (0,-2) ellipse (2.5 and 0.5);
+        \node at(0.08,-2){Place Order};
 
-possible relation between use case and use case
-relation between softwares features
 
-generalisation <=> looks like extend relation
-remarque : relation can be applied on actors too
+        \draw (-3.75,-2.75) -- (-2.5,-4);
+        \fill[MyBlue] (0,-4) ellipse (2.5 and 0.5);
+        \draw (0,-4) ellipse (2.5 and 0.5);
+        \node at(0.08,-4){Cancel Order};
 
-                     extends
-extention : source ----------> detination
-if condition == true execute source use case 
-case extention
+        \fill[MyBlue] (-4,-5.5) circle(0.15);
+        \draw (-4,-5.5) circle(0.15);
+        \draw (-4,-5.65)--(-4,-6);
+        \draw (-4.25,-5.795)--(-3.75,-5.795);
+        \draw (-4,-6) -- (-3.75,-6.25);
+        \draw (-4,-6) -- (-4.25,-6.25);
+        \node at (-3.995,-6.35){\tiny Customer Service Assistant};
+        
+        \fill[MyBlue] (0.5,-6) ellipse (2.5 and 0.5);
+        \draw (0.5,-6) ellipse (2.5 and 0.5);
+        \draw (-3.5,-6) -- (-2,-6);
+        \node at(0.58,-6){Create Customer Order};
+ 
+        \fill[MyBlue] (11,-5.5) circle(0.15);
+        \draw (11,-5.5) circle(0.15);
+        \draw (11,-5.65)--(11,-6);
+        \draw (10.75,-5.795)--(11.25,-5.795);
+        \draw (11,-6) -- (11.25,-6.25);
+        \draw (11,-6) -- (10.75,-6.25);
+        \node at (10.995,-6.35){\tiny Regional Manager};
+       
 
-                     include
-inclusion : source ----------> detination
+        \draw (9,-6) -- (10.5,-6);
+        \fill[MyBlue] (6.5,-6) ellipse (2.5 and 0.5);
+        \draw (6.5,-6) ellipse (2.5 and 0.5);
+        \node at(6.58,-6){Generate Statistic Report};
 
-if actor want to do source use case he has to do destination use case first
-only applied between user case 
 
-note :
-difference between inclusion and extension
+        \draw (9,-4) -- (10.5,-4);
+        \fill[MyBlue] (6.5,-4) ellipse (2.5 and 0.5);
+        \draw (6.5,-4) ellipse (2.5 and 0.5);
+        \node at(6.58,-4){Arrange Delivery};
+
+
+        \draw (9,-2) -- (10.5,-3.25);
+        \fill[MyBlue] (6.5,-2) ellipse (2.5 and 0.5);
+        \draw (6.5,-2) ellipse (2.5 and 0.5);
+        \node at(6.58,-2){Print Logistic Report};
+
+        \fill[MyBlue] (11,-3.5) circle(0.15);
+        \draw (11,-3.5) circle(0.15);
+        \draw (11,-3.65)--(11,-4);
+        \draw (10.75,-3.795)--(11.25,-3.795);
+        \draw (11,-4) -- (11.25,-4.25);
+        \draw (11,-4) -- (10.75,-4.25);
+
+        \node at (10.995,-4.35){\tiny Logistic Departement Manager};
+
+    \end{tikzpicture}
+\end{center}
+
+\vspace{1.5cm}
+\newpage
+\subsubsection{Relations In User Case Diagram}
+\begin{itemize}
+    \item  \textbf{Generalization}:  Generalization establishes a hierarchical relationship that helps organize
+actors and use cases in UML diagrams. 
+        \begin{itemize}
+            \item  \textbf{Between Actors}: When a child actor is linked to a parent actor, it inherits all the roles and
+responsibilities of the parent actor,in addition to its own specific roles. This helps clarify who can perform
+what actions in the system.
+
+\vspace{0.35cm}
+\begin{center}
+       \begin{tikzpicture}
+        \fill[MyBlue] (-4,-1.5) circle(0.15);
+        \draw (-4,-1.5) circle(0.15);
+        \draw (-4,-1.65)--(-4,-2);
+        \draw (-4.25,-1.795)--(-3.75,-1.795);
+        \draw (-4,-2) -- (-3.75,-2.25);
+        \draw (-4,-2) -- (-4.25,-2.25);
+   
+
+        \coordinate (A) at (-4,-2.25);  
+        \coordinate (B) at (-4.15,-2.5);  
+        \coordinate (C) at (-3.85,-2.5);
+        \draw[line width=1pt] (A) -- (B) -- (C) -- cycle;
+
+        \fill[MyBlue] (-4,-3.15) circle(0.15);
+        \draw (-4,-3.15) circle(0.15);
+        \draw (-4,-3.3)--(-4,-3.65);
+        \draw (-4.25,-3.445)--(-3.75,-3.445);
+        \draw (-4,-3.65) -- (-3.75,-3.9);
+        \draw (-4,-3.65) -- (-4.25,-3.9); 
+
+        \fill[MyBlue] (-7,-3.15) circle(0.15);
+        \draw (-7,-3.15) circle(0.15);
+        \draw (-7,-3.3)--(-7,-3.65);
+        \draw (-7.25,-3.445)--(-6.75,-3.445);
+        \draw (-7,-3.65) -- (-6.75,-3.9);
+        \draw (-7,-3.65) -- (-7.25,-3.9);
+
+        \fill[MyBlue] (-1,-3.15) circle(0.15);
+        \draw (-1,-3.15) circle(0.15);
+        \draw (-1,-3.3)--(-1,-3.65);
+        \draw (-1.25,-3.445)--(-0.75,-3.445);
+        \draw (-1,-3.65) -- (-0.75,-3.9);
+        \draw (-1,-3.65) -- (-1.25,-3.9);
+
+        \draw (-7,-2.85)--(-7,-2.65) -- (-1,-2.65) -- (-1,-2.85);
+        \draw (-4,-2.5)--(-4,-2.85);
+
+    \end{tikzpicture} 
+\end{center}
+
+
+\vspace{0.35cm}
+
+            \item  \textbf{Between Use Cases}: Allows a feature to be divided into multiple, more specific
+versions. These child use cases represent the same general feature but can differ in their implementation or method.
+This promotes reusability and clarity in how features are handled in different scenarios.
+        \end{itemize}
+
+\vspace{0.35cm}
+        \begin{center}
+            \begin{tikzpicture}
+            \fill[MyBlue] (0,0) ellipse (2.5 and 0.5);
+            \draw (0,0) ellipse (2.5 and 0.5);
+            \node at (0.08,0) {Parent User Case};
+        
+        \coordinate (A) at (0,-0.5);  
+        \coordinate (B) at (-0.15,-0.75);  
+        \coordinate (C) at (0.15,-0.75);
+        \draw[line width=1pt] (A) -- (B) -- (C) -- cycle;
+        
+           \fill[MyBlue] (0,-2) ellipse (2.5 and 0.5);
+            \draw (0,-2) ellipse (2.5 and 0.5);
+            \node at (0.08,-2) {child User Case 2};
+            
+            \fill[MyBlue] (7,-2) ellipse (2.5 and 0.5);
+            \draw (7,-2) ellipse (2.5 and 0.5);
+            \node at (7.08,-2) {child User Case 3};
+
+            \fill[MyBlue] (-7,-2) ellipse (2.5 and 0.5);
+            \draw (-7,-2) ellipse (2.5 and 0.5);
+            \node at (-6.92,-2) {child User Case 1};
+
+            \draw (-7,-1.5) -- (-7,-1) -- (7,-1) -- (7,-1.5);
+            \draw (0,-1.5) -- (0,-0.75);
+            \end{tikzpicture}
+        \end{center}
+          
+
+\vspace{0.35cm}
+
+    \item  \textbf{Inclusion}: This relationship applies only between use cases. The destination use case 
+must execute before  the source use case whenever the source use case is invoked. 
+ 
+\vspace{0.35cm}
+        \begin{center}
+            \begin{tikzpicture}
+                
+            \fill[MyBlue] (-2,0) ellipse (2.5 and 0.5);
+            \draw (-2,0) ellipse (2.5 and 0.5);
+            \node at (-1.92,0){Source};
+            
+            \draw[->] (0.5,0)--(4,0);
+            \node at (2.25,0.25){"include"};
+
+            \fill[MyBlue] (6.5,0) ellipse (2.5 and 0.5);
+            \draw (6.5,0) ellipse (2.5 and 0.5);
+            \node at (6.58,0){Destination};
+            \end{tikzpicture}
+    \end{center}
+    
+
+\vspace{0.35cm}
+\item  \textbf{Extension}: This relationship applies only between use cases. Before executing the destination use case, 
+a specific condition is checked. If the condition is met, the source use case will execute
+before the destination use case.
+ 
+\vspace{0.35cm}
+\begin{center}
+            \begin{tikzpicture}
+                
+            \fill[MyBlue] (-2,0) ellipse (2.5 and 0.5);
+            \draw (-2,0) ellipse (2.5 and 0.5);
+            \node at (-1.92,0){Source};
+            
+            \draw[->] (0.5,0)--(4,0);
+            \node at (2.25,0.25){"extend"};
+
+            \fill[MyBlue] (6.5,0) ellipse (2.5 and 0.5);
+            \draw (6.5,0) ellipse (2.5 and 0.5);
+            \node at (6.58,0){Destination};
+            \end{tikzpicture}
+    \end{center}
+
+\end{itemize}
+
+
+\subsubsection*{\underline{Example:}}
+Let's Take the example of a bank application\\\\ 
+\textbf{\underline{Generalisation Between Use Cases:}}
+
+\vspace{0.25cm}
+the diagram below shows a generalisation relationship between use case 
+where the main feature is transfert that is divided into specific method and way of achieving the transfert (ATM,Manual,Online)
+\vspace{0.5cm}
+\begin{center}
+            \begin{tikzpicture}
+            \fill[MyBlue] (0,0) ellipse (2.5 and 0.5);
+            \draw (0,0) ellipse (2.5 and 0.5);
+            \node at (0.08,0) {Transfer};
+        
+        \coordinate (A) at (0,-0.5);  
+        \coordinate (B) at (-0.15,-0.75);  
+        \coordinate (C) at (0.15,-0.75);
+        \draw[line width=1pt] (A) -- (B) -- (C) -- cycle;
+        
+           \fill[MyBlue] (0,-2) ellipse (2.5 and 0.5);
+            \draw (0,-2) ellipse (2.5 and 0.5);
+            \node at (0.08,-2) {Online transfer};
+            
+            \fill[MyBlue] (7,-2) ellipse (2.5 and 0.5);
+            \draw (7,-2) ellipse (2.5 and 0.5);
+            \node at (7.08,-2) {ATM transfer};
+
+            \fill[MyBlue] (-7,-2) ellipse (2.5 and 0.5);
+            \draw (-7,-2) ellipse (2.5 and 0.5);
+            \node at (-6.92,-2) {Manual transfer};
+
+            \draw (-7,-1.5) -- (-7,-1) -- (7,-1) -- (7,-1.5);
+            \draw (0,-1.5) -- (0,-0.75);
+            \end{tikzpicture}
+        \end{center}
+
+
+        \vspace{1cm}
+
+\textbf{\underline{Generalisation Between Actors:}}
+
+\vspace{0.25cm}
+the diagram below shows a generalisation relationship between Actors where the child actor Service Manager 
+is inheriting all roles of the parent actor teller + his own roles
+
+\vspace{0.15cm}
+
+\begin{center}
+       \begin{tikzpicture}
+        \fill[MyBlue] (-4,-1.5) circle(0.15);
+        \draw (-4,-1.5) circle(0.15);
+        \draw (-4,-1.65)--(-4,-2);
+        \draw (-4.25,-1.795)--(-3.75,-1.795);
+        \draw (-4,-2) -- (-3.75,-2.25);
+        \draw (-4,-2) -- (-4.25,-2.25);
+        \node at (-3,-2){Teller};
+
+
+        \coordinate (A) at (-4,-2.25);  
+        \coordinate (B) at (-4.15,-2.5);  
+        \coordinate (C) at (-3.85,-2.5);
+        \draw[line width=1pt] (A) -- (B) -- (C) -- cycle;
+
+        \fill[MyBlue] (-4,-3.15) circle(0.15);
+        \draw (-4,-3.15) circle(0.15);
+        \draw (-4,-3.3)--(-4,-3.65);
+        \draw (-4.25,-3.445)--(-3.75,-3.445);
+        \draw (-4,-3.65) -- (-3.75,-3.9);
+        \draw (-4,-3.65) -- (-4.25,-3.9); 
+        \node at (-2.25,-3.65){Service Manager};
+        
+        \draw (-4,-2.5)--(-4,-2.85);
+    \end{tikzpicture}
+\end{center}
+
+        \vspace{1cm}
+\textbf{\underline{inclusion Between Use Cases:}}
+
+\vspace{0.25cm}
+the diagram below shows an inclusion relationship between use cases where each time the transfert case is invoked
+the identification case must execute first 
+
+\vspace{0.15cm}
+
+        \begin{center}
+            \begin{tikzpicture}
+                
+            \fill[MyBlue] (-2,0) ellipse (2.5 and 0.5);
+            \draw (-2,0) ellipse (2.5 and 0.5);
+            \node at (-1.92,0){Transfert};
+            
+            \draw[->] (0.5,0)--(4,0);
+            \node at (2.25,0.25){"include"};
+
+            \fill[MyBlue] (6.5,0) ellipse (2.5 and 0.5);
+            \draw (6.5,0) ellipse (2.5 and 0.5);
+            \node at (6.58,0){Identification};
+            \end{tikzpicture}
+    \end{center}
+
+        \vspace{1cm}
+        \newpage
+\textbf{\underline{Extension Between Use Cases:}}
+
+\vspace{0.25cm}
+the diagram below shows an extension relationship between use cases where each time the transfert case is invoked
+the balance check case will be executed if the value is \textgreater= 10000 DA
+
+\vspace{0.15cm}
+
+
+        \begin{center}
+            \begin{tikzpicture}
+                
+            \fill[MyBlue] (-2,0) ellipse (2.5 and 0.5);
+            \draw (-2,0) ellipse (2.5 and 0.5);
+            \node at (-1.92,0){Balance Check};
+            
+            \draw[->] (0.5,0)--(4,0);
+            \node at (2.25,0.25){"extend"};
+
+            \fill[MyBlue] (6.5,0) ellipse (2.5 and 0.5);
+            \draw (6.5,0) ellipse (2.5 and 0.5);
+            \node at (6.58,0){Transfert};
+
+            \draw (0.5,-2.25) rectangle (3.95,-1);
+            \node at (2.225,-1.625){If value \textgreater=10000DA};
+            \draw (2.225,-1) -- (2.225,-0.15);
+            \end{tikzpicture}
+    \end{center}
+
+        \vspace{1cm}
+\begin{tcolorbox}[title = Note]
+ \textbf{Difference Between Inclusion \& Extension :}\\
+In The inclusion relationship the Destination case will always execute before source case in all cases , whereas
+in the extension relationship the source case will execute before destination source only if certain conditions
+are met
+
+\end{tcolorbox}
