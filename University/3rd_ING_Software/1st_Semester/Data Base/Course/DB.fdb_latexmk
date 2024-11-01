@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1730370311.78006 "DB.tex" "DB.pdf" "DB" 1730370313.39576 0
+["pdflatex"] 1730418309.14625 "DB.tex" "DB.pdf" "DB" 1730418311.30449 0
   "/etc/texmf/web2c/texmf.cnf" 1729519629.14367 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -17,6 +17,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1248133631 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb" 1248133631 29078 718ea4567ceff944262b0f5b0800e1d9 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty" 1644112042 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
@@ -124,10 +125,9 @@
   "Chapters/DML.tex" 1730370309.92603 2322 858122fcb8b51726916fff3a96442b13 ""
   "Chapters/DRL.tex" 1730365617.79757 8324 ff592243c782be2a6d8c1216dc921c45 ""
   "Chapters/DataType.tex" 1730068292.55101 2339 03d9b7aa31da4c14d6b9d2fb522a58f2 ""
-  "Chapters/PlSql.tex" 1730366848.60447 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "Chapters/TriggerFunction.tex" 1730366875.75031 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "DB.aux" 1730370313.19043 2441 85decc6b438fbef9931c6706c7c046d4 "pdflatex"
-  "DB.tex" 1730367018.17049 1236 57800238a6f74c43dbf59ec8bf62b748 ""
+  "Chapters/PlSql.tex" 1730418305.23306 10482 d371c9a6ab7a8383402248fe5cc93ca9 ""
+  "DB.aux" 1730418311.0772 4070 7dd053adf52e3a8ad61cf5985ccac8cd "pdflatex"
+  "DB.tex" 1730399871.79312 1281 5a10357d13c0eef4a7c92dcbbfeb09e1 ""
   (generated)
   "DB.aux"
   "DB.log"
