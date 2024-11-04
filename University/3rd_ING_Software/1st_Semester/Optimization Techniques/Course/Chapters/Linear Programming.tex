@@ -1,7 +1,8 @@
 \section{Linear Programming}
 \subsection{What's Linear Programming ?}
 \begin{tcolorbox}[title = Definition] 
-    tcolorbox
+Linear programming is a sub-branch of optimization techniques. It involves modeling real-life problems as
+linear equations and inequalities and using specialized methods to find optimal solution(s), if they exist.
 \end{tcolorbox}
 \vspace{1cm}
 \begin{center}
@@ -57,10 +58,10 @@ Let \(x_2\) be the number of Daily Unit Banana.\\
 \[
 \left\{
     \begin{array}{l}
-        \forall x_1 , x_2 \geq 0 \quad \text{(Non-negative number of food item) ...C1}\\\\
-        0.4x_1 + 1.2x_2  \geq 70 \quad \text{(Minimum Protein Daily) ...C2}\\\\ 
-        6x_1 + 10x_2  \geq 50 \quad \text{(Minimum Vitamine c Daily) ...C3}\\\\
-        0.4x_1 + 0.6x_2  \geq 12 \quad \text{(Minimum Iron Daily) ...C4}
+        \forall x_1 , x_2 \geq 0 \quad \text{(Non-negative number of food item) ...C1}\\
+        0.4x_1 + 1.2x_2  \geq 70 \quad \text{(Minimum Protein Daily) ...\textcolor{greenPlot}{C2}}\\ 
+        6x_1 + 10x_2  \geq 50 \quad \text{(Minimum Vitamine c Daily) ...\textcolor{purplePlot}{C3}}\\
+        0.4x_1 + 0.6x_2  \geq 12 \quad \text{(Minimum Iron Daily) ...\textcolor{orangePlot}{C4}}
    \end{array}
    \right.
 \] 
@@ -68,24 +69,56 @@ Let \(x_2\) be the number of Daily Unit Banana.\\
 \vspace{0.5cm}
 \begin{tcolorbox}[title = Objectif Function]
 \[
-f(x) = 8x_1 + 10x_2  
+f(x_i) = Z = 8x_1 + 10x_2  
 \]
 \begin{center}
-The goal is to minimize food cost by maximizing \(f(x)\), while meeting the minimum daily nutrition .
+The goal is to minimize food cost by minmizing \(f(x_i)\), while meeting the minimum daily nutrition .
 \end{center}
 \end{tcolorbox}
 \vspace{1cm} 
-\textbf{\underline{Problem :}} Find the minimum of \(f(x_1,x_2) \) subject to the contraints\\
+\textbf{\underline{Problem :}} Find the minimum of \(f(x_i)\) subject to the contraints\\
+
 \subsection{Graph Model}
-This model is used when the objective fucntion has 2 variables consist into turning all the constraint into 
-lines and then finding the feasible region and then to search for min or max of the objective function 
+This model is used when the objective function has two variables. It consists of converting all inequalities
+into equalities, drawing them as lines, and then identifying the feasible area where all conditions are met.
+We then sweep the objective function \(Z\) across the plot until we find the optimal solution(s).
+
+\begin{tcolorbox}[title=Note]
+ \textbf{\underline{Solutions : }}
+When solving a linear program, the solution can be:
+\begin{itemize}
+    \item \textbf{One or Multiple Optimal Solutions}: The feasible area is a polygon, and the points are solutions.
+    \item \textbf{Infinitely Many Solutions}: If the feasible area is unbounded and the direction of increase or decrease 
+for the objective function is towards \(\pm \infty\), then it will increase or decrease infinitely as we sweep the line.
+    \item \textbf{No Solution}: If the feasible area does not exist (meaning \(\emptyset\)), it indicates that the
+system has contradictions.
+\end{itemize}
+
+
+\textbf{\underline{Direction of Increase/Decrease:}}
+
+\begin{itemize}
+    \item \textbf{Both Positive} \((a > 0\) , \(b > 0)\): Since both coefficients are positive, \( Z \) increases as
+\( x_1 \) and \( x_2 \) increase, and decreases as they decrease. The direction of increase is towards the right,
+and the direction of decrease is towards the left.
+
+    \item \textbf{Both Negative} \((a < 0\) , \(b < 0)\): The opposite of the positive case. Here, \( Z \) increases
+as \( x_1 \) and \( x_2 \) decrease, and decreases as they increase. The direction of increase is towards the left,
+while the direction of decrease is towards the right.
+
+    \item \textbf{Different Signs} \((a\) and \(b\) have opposite signs): The direction is determined by 
+the coefficient with the larger absolute value, \(\max(|a|, |b|)\). If this coefficient is positive, the direction 
+of increase follows the same pattern as when both coefficients are positive. If this coefficient is negative, 
+the direction of increase follows the pattern for both negative coefficients.
+\end{itemize}
+\end{tcolorbox}
 
 \vspace{1cm}
-\textbf{Feasible Region :}
-
-\vspace{1cm}
+\begin{center}
 \begin{tikzpicture}
     \begin{axis}[
+        height = 9.5cm,
+        width = 10cm,
         axis lines = middle,           % Ensures axes cross at (0, 0)
         xlabel=$x_1$, 
         ylabel=$x_2$, 
@@ -94,10 +127,39 @@ lines and then finding the feasible region and then to search for min or max of 
        ytick={0,10,...,70},             % Y-tick values
         xtick={0,50,...,200},
     ]
-  \addplot [draw=none, fill=blue!20] coordinates {(175,0) (200,0) (200,60) (0,70/1.2)}; 
-  \addplot[thick, mark=*] coordinates {(175,0) (0,70/1.2)}; 
-  \addplot[thick, mark=*] coordinates {(50/6,0) (0,5)};
-  \addplot[thick, mark=*] coordinates {(30,0) (0,20)};
+  \addplot [draw=none, fill=blueArea!25] coordinates {(175,0) (200,0) (200,70/1.2) (0,70/1.2)}; 
+  \addplot[thick, mark=*,color = greenPlot] coordinates {(175,0) (0,70/1.2)};
+  %\addplot[color=red]coordinates{(150,8.5) (141,5)};
+  \addplot[thick, mark=*, color = purplePlot] coordinates {(50/6,0) (0,5)};
+  \addplot[thick, mark=*, color = orangePlot] coordinates {(30,0) (0,20)};
 \end{axis}
+\node at (7.5,-0.2){\small (175,0)};
+\node at (-0.55,7.5){\small \((0,\frac{70}{1.2})\)};
+
+\node at (1.35,1){\textcolor{orangePlot}{C4}};
+\node at (-0.35,0.35){\textcolor{purplePlot}{C3}};
+\node at (3.25,3.5){\textcolor{greenPlot}{C2}};
+\node at (5.75,4.75){\textcolor{blueArea}{Feasible Area}};
+
+\draw (11,2.35) rectangle (15.45,6);
+\node at (11.5,5.5){\textcolor{orangePlot}{C4 :}};
+\node at (13.65,5.5){\textcolor{orangePlot}{\(0.4x_1 + 0.6x_2  = 12 \)}};
+\node at (11.5,4.75){\textcolor{purplePlot}{C3 :}};
+\node at (13.5,4.75){\textcolor{purplePlot}{\(6x_1 + 10x_2 = 50\)}};
+\node at (11.5,4){\textcolor{greenPlot}{C2 :}};
+\node at (13.65,4){\textcolor{greenPlot}{\(0.4x_1 + 1.2x_2 = 70\)}};
+
+\draw[fill=blueArea!20] (11.18,2.75) rectangle (11.68,3.25);
+\node at (13.25,3){\textcolor{blueArea}{Feasible Area}};
 
 \end{tikzpicture}
+\end{center}
+
+\subsubsection*{\underline{Solution}}
+
+The blue area in the plot represents the feasible region, so the optimal solution(s) must be within this area. Since
+the objective function \( Z \) increases towards the right (due to both coefficients being positive) and we want to
+minimize \( Z \), we need to sweep the objective function line towards the leftmost boundary of the polygon. Thus,
+the optimal solution is located at the leftmost point of the polygon, which is at \((0, \frac{70}{1.2})\). Therefore,
+the optimal solution is \((0, \frac{70}{1.2})\) with \( Z = 8 \times 0 + 10 \times \frac{70}{1.2} = 583.33 \).
+
