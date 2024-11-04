@@ -25,8 +25,44 @@ linear equations and inequalities and using specialized methods to find optimal 
    \end{tikzpicture}
 \end{center}
 \vspace{1cm}
-\subsection{Modeling}
-\textbf{\large{\underline{Example :} Diet Problem}}\\
+\subsection{Models}
+\subsubsection{Graph Model}
+This model is used when the objective function has two variables. It consists of converting all inequalities
+into equalities, drawing them as lines, and then identifying the feasible area where all conditions are met.
+We then sweep the objective function \(Z\) across the plot until we find the optimal solution(s).
+
+\begin{tcolorbox}[title=Note]
+ \textbf{\underline{Solutions : }}
+When solving a linear program, the solution can be:
+\begin{itemize}
+    \item \textbf{One or Multiple Optimal Solutions}: The feasible area is a polygon, and its vertex points are the possible optimal solutions.
+    \item \textbf{Infinitely Many Solutions}: If the solution is unbounded, then the objective function will increase or decrease infinitely as we sweep the line.
+    \item \textbf{No Solution}: If the feasible area is empty (\{\(\emptyset\)\}), it indicates that the
+system has contradictions.
+\end{itemize}
+
+
+\textbf{\underline{Direction of Increase/Decrease:}}
+
+\begin{itemize}
+    \item \textbf{Both Positive} \((a > 0\) , \(b > 0)\): Since both coefficients are positive, \( Z \) increases as
+\( x_1 \) and \( x_2 \) increase, and decreases as they decrease. The direction of increase is towards the right,
+and the direction of decrease is towards the left.
+
+    \item \textbf{Both Negative} \((a < 0\) , \(b < 0)\): The opposite of the positive case. Here, \( Z \) increases
+as \( x_1 \) and \( x_2 \) decrease, and decreases as they increase. The direction of increase is towards the left,
+while the direction of decrease is towards the right.
+
+    \item \textbf{Different Signs} \((a\) and \(b\) have opposite signs): The direction is determined by 
+the coefficient with the larger absolute value, \(\max(|a|, |b|)\). If this coefficient is positive, the direction 
+of increase follows the same pattern as when both coefficients are positive. If this coefficient is negative, 
+the direction of increase follows the pattern for both negative coefficients.
+\end{itemize}
+\end{tcolorbox}
+
+
+
+\subsubsection*{{\underline{Example1 :} Diet Problem}}
 
 \vspace{0.25cm}
 The Goal is to minimize food cost but to meet the minimum daily nutrition requirement
@@ -67,7 +103,7 @@ Let \(x_2\) be the number of Daily Unit Banana.\\
 \] 
 \end{multicols}
 \vspace{0.5cm}
-\begin{tcolorbox}[title = Objectif Function]
+\begin{tcolorbox}[title = Objective Function]
 \[
 f(x_i) = Z = 8x_1 + 10x_2  
 \]
@@ -77,41 +113,6 @@ The goal is to minimize food cost by minmizing \(f(x_i)\), while meeting the min
 \end{tcolorbox}
 \vspace{1cm} 
 \textbf{\underline{Problem :}} Find the minimum of \(f(x_i)\) subject to the contraints\\
-
-\subsection{Graph Model}
-This model is used when the objective function has two variables. It consists of converting all inequalities
-into equalities, drawing them as lines, and then identifying the feasible area where all conditions are met.
-We then sweep the objective function \(Z\) across the plot until we find the optimal solution(s).
-
-\begin{tcolorbox}[title=Note]
- \textbf{\underline{Solutions : }}
-When solving a linear program, the solution can be:
-\begin{itemize}
-    \item \textbf{One or Multiple Optimal Solutions}: The feasible area is a polygon, and the points are solutions.
-    \item \textbf{Infinitely Many Solutions}: If the feasible area is unbounded and the direction of increase or decrease 
-for the objective function is towards \(\pm \infty\), then it will increase or decrease infinitely as we sweep the line.
-    \item \textbf{No Solution}: If the feasible area does not exist (meaning \(\emptyset\)), it indicates that the
-system has contradictions.
-\end{itemize}
-
-
-\textbf{\underline{Direction of Increase/Decrease:}}
-
-\begin{itemize}
-    \item \textbf{Both Positive} \((a > 0\) , \(b > 0)\): Since both coefficients are positive, \( Z \) increases as
-\( x_1 \) and \( x_2 \) increase, and decreases as they decrease. The direction of increase is towards the right,
-and the direction of decrease is towards the left.
-
-    \item \textbf{Both Negative} \((a < 0\) , \(b < 0)\): The opposite of the positive case. Here, \( Z \) increases
-as \( x_1 \) and \( x_2 \) decrease, and decreases as they increase. The direction of increase is towards the left,
-while the direction of decrease is towards the right.
-
-    \item \textbf{Different Signs} \((a\) and \(b\) have opposite signs): The direction is determined by 
-the coefficient with the larger absolute value, \(\max(|a|, |b|)\). If this coefficient is positive, the direction 
-of increase follows the same pattern as when both coefficients are positive. If this coefficient is negative, 
-the direction of increase follows the pattern for both negative coefficients.
-\end{itemize}
-\end{tcolorbox}
 
 \vspace{1cm}
 \begin{center}
@@ -127,11 +128,20 @@ the direction of increase follows the pattern for both negative coefficients.
        ytick={0,10,...,70},             % Y-tick values
         xtick={0,50,...,200},
     ]
-  \addplot [draw=none, fill=blueArea!25] coordinates {(175,0) (200,0) (200,70/1.2) (0,70/1.2)}; 
+  \addplot [draw=none, fill=blueArea!25] coordinates {(175,0) (200,0) (200,60)(0,60)  (0,70/1.2) }; 
   \addplot[thick, mark=*,color = greenPlot] coordinates {(175,0) (0,70/1.2)};
   %\addplot[color=red]coordinates{(150,8.5) (141,5)};
   \addplot[thick, mark=*, color = purplePlot] coordinates {(50/6,0) (0,5)};
   \addplot[thick, mark=*, color = orangePlot] coordinates {(30,0) (0,20)};
+
+  \addplot[thick,dashed,redPlot] coordinates {(0,100/10) (100/8,0)};
+  \addplot[thick,dashed,redPlot] coordinates {(0,250/10) (250/8,0)};
+
+  \addplot[thick,dashed,redPlot] coordinates {(0,400/10) (400/8,0)};
+
+  \addplot[thick,dashed,redPlot] coordinates {(0,{700/1.2/10}) ({700/1.2/8},0)};
+  \addplot[thick,dashed,redPlot] coordinates {(0,950/10) (950/8,0)};
+  \addplot[thick,dashed,redPlot] coordinates {(0,1400/10) (1400/8,0)};
 \end{axis}
 \node at (7.5,-0.2){\small (175,0)};
 \node at (-0.55,7.5){\small \((0,\frac{70}{1.2})\)};
@@ -139,18 +149,166 @@ the direction of increase follows the pattern for both negative coefficients.
 \node at (1.35,1){\textcolor{orangePlot}{C4}};
 \node at (-0.35,0.35){\textcolor{purplePlot}{C3}};
 \node at (3.25,3.5){\textcolor{greenPlot}{C2}};
-\node at (5.75,4.75){\textcolor{blueArea}{Feasible Area}};
+\node at (6.75,5.75){\textcolor{blueArea}{Feasible Area}};
 
-\draw (11,2.35) rectangle (15.45,6);
+\draw (11,1.5) rectangle (15.45,6);
 \node at (11.5,5.5){\textcolor{orangePlot}{C4 :}};
 \node at (13.65,5.5){\textcolor{orangePlot}{\(0.4x_1 + 0.6x_2  = 12 \)}};
 \node at (11.5,4.75){\textcolor{purplePlot}{C3 :}};
 \node at (13.5,4.75){\textcolor{purplePlot}{\(6x_1 + 10x_2 = 50\)}};
 \node at (11.5,4){\textcolor{greenPlot}{C2 :}};
 \node at (13.65,4){\textcolor{greenPlot}{\(0.4x_1 + 1.2x_2 = 70\)}};
+\node at (11.35,3.25){\textcolor{redPlot}{Z}};
+\node at (11.75,3.25){\textcolor{redPlot}{:}};
+\node at (13.08,3.25){\textcolor{redPlot}{\(8x_1 + 10x_2\)}};
 
-\draw[fill=blueArea!20] (11.18,2.75) rectangle (11.68,3.25);
-\node at (13.25,3){\textcolor{blueArea}{Feasible Area}};
+\draw[fill=blueArea!20] (11.2,2) rectangle (11.7,2.5);
+\node at (13.25,2.25){\textcolor{blueArea}{Feasible Area}};
+
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.75cm} 
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline 
+        Possible Solutions  & (0,\(\frac{70}{1.2})\) & (175,0)\\
+        \hline 
+        Objective Function & \(\frac{700}{1.2}\approx\) 583.33 & 1400\\
+        \hline 
+    \end{tabular}
+\end{center}
+
+\subsubsection*{\underline{Solution}}
+
+The blue area in the plot represents the feasible region, so the optimal solution(s) must be within this area. Since
+the objective function \( Z \) increases towards the right (due to both coefficients being positive) and we want to
+minimize \( Z \), we need to sweep the objective function line towards the feasible area , and the first intresection 
+between the objective function and one of the vertex points is the min the optimal solution . Therefore,the optimal 
+solution is \((0, \frac{70}{1.2})\) with \( Z = 8 \times 0 + 10 \times \frac{70}{1.2} \approx 583.33 \).
+
+
+\subsubsection*{\underline{Example2 :} Blending Model}
+
+\vspace{0.25cm}
+similar to the previous example , this time we have a farm that needs to feed their chicken , there are 2 feeds
+, we need to minimize cost of the feeds while meeting the minimum nutrient requirement
+
+\vspace{0.25cm}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+    \hline 
+    Feed & Nut$_{A}$ & Nut$_{B}$ & Nut$_{C}$ & Cost\\
+    \hline 
+    1 & 3 & 7 & 3 & 10\\
+    \hline 
+    2 & 2 & 2 & 6 & 4\\
+    \hline
+    Min Require & 60 & 84 & 72 &\\
+    \hline
+\end{tabular}
+\end{center}
+
+\vspace{1cm}
+
+\begin{multicols}{2}
+\textbf{\underline{Variables Definition:}}\\
+
+Let \(x_1\) be the number of Feed 1.\\
+
+Let \(x_2\) be the number of Feed 2.\\
+\columnbreak
+
+\textbf{\underline{Constraint:}} 
+
+\[
+\left\{
+    \begin{array}{l}
+        \forall x_1 , x_2 \geq 0 \quad \text{(Non-negative number of feeds) ...C1}\\
+        3x_1 + 2x_2  \geq 60 \quad \text{(Minimum Nut$_{A}$ Daily) ...\textcolor{greenPlot}{C2}}\\ 
+        7x_1 + 2x_2  \geq 84 \quad \text{(Minimum Nut$_{B}$ Daily) ...\textcolor{purplePlot}{C3}}\\
+        3x_1 + 6x_2  \geq 72 \quad \text{(Minimum Nut$_{C}$ Daily) ...\textcolor{orangePlot}{C4}}
+   \end{array}
+   \right.
+\] 
+\end{multicols}
+\vspace{0.5cm}
+\begin{tcolorbox}[title = Objective Function]
+\[
+f(x_i) = Z = 10x_1 + 4x_2  
+\]
+\begin{center}
+The goal is to minimize feeds cost by minmizing \(f(x_i)\), while meeting the minimum daily nutrition .
+\end{center}
+\end{tcolorbox}
+\vspace{1cm} 
+\textbf{\underline{Problem :}} Find the minimum of \(f(x_i)\) subject to the contraints\\
+\vspace{0.75cm} 
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline 
+        Possible Solutions  & (0,42) & (6,21) & (18,3) & (24,0)\\
+        \hline 
+        Objective Function & 168 & 144 & 192 & 240\\
+        \hline 
+    \end{tabular}
+\end{center}
+
+
+\vspace{1cm}
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        height = 9.5cm,
+        width = 10cm,
+        axis lines = middle,           % Ensures axes cross at (0, 0)
+        xlabel=$x_1$, 
+        ylabel=$x_2$, 
+        xmin = -1, xmax = 30,           % Set x-axis range
+        ymin = -1, ymax = 50,           % Set y-axis range
+    %   ytick={0,10,...,70},             % Y-tick values
+     %   xtick={0,50,...,200},
+    ]
+  \addplot [draw=none, fill=blueArea!25] coordinates {(0,50) (0,42) (6,21) (18,3) (24,0) (30,0) (30,50)}; 
+  \addplot[thick, mark=*,color = greenPlot] coordinates {(0,30) (20,0)};
+  %\addplot[color=red]coordinates{(150,8.5) (141,5)};
+  \addplot[thick, mark=*, color = purplePlot] coordinates {(0,42) (12,0)};
+  \addplot[thick, mark=*, color = orangePlot] coordinates {(24,0) (0,12)};
+
+  \addplot[thick,dashed,redPlot] coordinates {(0,50/4) (5,0)};
+  \addplot[thick,dashed,redPlot] coordinates {(0,90/4) (9,0)};
+  \addplot[thick,dashed,redPlot] coordinates {(0,144/4) (14.4,0)};
+  \addplot[thick,dashed,redPlot] coordinates {(0,168/4) (16.8,0)};
+
+  \addplot[thick,dashed,redPlot] coordinates {(0,200/4) (20,0)};
+  \addplot[thick,dashed,redPlot] coordinates {(0,240/4) (24,0)};
+\end{axis}
+%\node at (7.5,-0.2){\small (175,0)};
+%\node at (-0.55,7.5){\small \((0,\frac{70}{1.2})\)};
+
+\node at (-0.25,6.75){\small (0,42)};
+\node at (6.45,-0.2){\small (24,0)};
+\node at (1.5,3.25){\small (6,21)};
+\node at (4.95,0.35){\small (18,3)};
+
+\node at (1.45,1.25){\textcolor{orangePlot}{C4}};
+\node at (3.65,-0.15){\textcolor{purplePlot}{C3}};
+\node at (4,2){\textcolor{greenPlot}{C2}};
+\node at (5.75,4.75){\textcolor{blueArea}{Feasible Area}};
+
+\draw (11,1.5) rectangle (15.45,6);
+\node at (11.5,5.5){\textcolor{orangePlot}{C4 :}};
+\node at (13.65,5.5){\textcolor{orangePlot}{\(0.4x_1 + 0.6x_2  = 12 \)}};
+\node at (11.5,4.75){\textcolor{purplePlot}{C3 :}};
+\node at (13.5,4.75){\textcolor{purplePlot}{\(6x_1 + 10x_2 = 50\)}};
+\node at (11.5,4){\textcolor{greenPlot}{C2 :}};
+\node at (13.65,4){\textcolor{greenPlot}{\(0.4x_1 + 1.2x_2 = 70\)}};
+\node at (11.35,3.25){\textcolor{redPlot}{Z}};
+\node at (11.75,3.25){\textcolor{redPlot}{:}};
+\node at (13.08,3.25){\textcolor{redPlot}{\(10x_1 + 4x_2\)}};
+
+\draw[fill=blueArea!20] (11.2,2) rectangle (11.7,2.5);
+\node at (13.25,2.25){\textcolor{blueArea}{Feasible Area}};
 
 \end{tikzpicture}
 \end{center}
@@ -159,7 +317,115 @@ the direction of increase follows the pattern for both negative coefficients.
 
 The blue area in the plot represents the feasible region, so the optimal solution(s) must be within this area. Since
 the objective function \( Z \) increases towards the right (due to both coefficients being positive) and we want to
-minimize \( Z \), we need to sweep the objective function line towards the leftmost boundary of the polygon. Thus,
-the optimal solution is located at the leftmost point of the polygon, which is at \((0, \frac{70}{1.2})\). Therefore,
-the optimal solution is \((0, \frac{70}{1.2})\) with \( Z = 8 \times 0 + 10 \times \frac{70}{1.2} = 583.33 \).
+minimize \( Z \), we need to sweep the objective function line towards the feasible area , and the first intresection 
+between the objective function and one of the vertex points is the min the optimal solution . Therefore,the optimal 
+solution is \((6, 21)\) with \( Z = 10 \times 6 + 4 \times 21 = 144 \).
+
+\vspace{0.25cm}
+\subsubsection*{\underline{If The Prices Changed}}
+the price of feed1 is now 14 and feed2 remains the same 4 , the constraints don't change meaning the feasible region
+also stays the same and the possible solutions (coordinates of the vertex points of the polygon) only thing that
+changes is the objective function 
+
+\vspace{0.5cm}
+\begin{tcolorbox}[title = New Objective Function]
+\[
+f(x_i) = Z = 14x_1 + 4x_2  
+\]
+\begin{center}
+The goal is to minimize feeds cost by minmizing \(f(x_i)\), while meeting the minimum daily nutrition .
+\end{center}
+\end{tcolorbox}
+
+\vspace{0.75cm} 
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline 
+        Possible Solutions  & (0,42) & (6,21) & (18,3) & (24,0)\\
+        \hline 
+        Objective Function & 168 & 168 & 264 & 336\\
+        \hline 
+    \end{tabular}
+\end{center}
+
+
+\vspace{1cm}
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        height = 9.5cm,
+        width = 10cm,
+        axis lines = middle,           % Ensures axes cross at (0, 0)
+        xlabel=$x_1$, 
+        ylabel=$x_2$, 
+        xmin = -1, xmax = 30,           % Set x-axis range
+        ymin = -1, ymax = 50,           % Set y-axis range
+    %   ytick={0,10,...,70},             % Y-tick values
+     %   xtick={0,50,...,200},
+    ]
+  \addplot [draw=none, fill=blueArea!25] coordinates {(0,50) (0,42) (6,21) (18,3) (24,0) (30,0) (30,50)}; 
+  \addplot[thick, mark=*,color = greenPlot] coordinates {(0,30) (20,0)};
+  %\addplot[color=red]coordinates{(150,8.5) (141,5)};
+  \addplot[thick, mark=*, color = purplePlot] coordinates {(0,42) (12,0)};
+  \addplot[thick, mark=*, color = orangePlot] coordinates {(24,0) (0,12)};
+
+  \addplot[thick,dashed,redPlot] coordinates {(0,50/4) (50/14,0)};
+  \addplot[thick,dashed,redPlot] coordinates {(0,90/4) (90/14,0)};
+  \addplot[thick,dashed,redPlot] coordinates {(0,144/4) (144/14,0)};
+  \addplot[thick,dashed,redPlot] coordinates {(0,168/4) (168/14,0)};
+
+  \addplot[thick,dashed,redPlot] coordinates {(0,200/4) (200/14,0)};
+  \addplot[thick,dashed,redPlot] coordinates {(0,240/4) (240/14,0)};
+\end{axis}
+%\node at (7.5,-0.2){\small (175,0)};
+%\node at (-0.55,7.5){\small \((0,\frac{70}{1.2})\)};
+
+\node at (-0.25,6.75){\small (0,42)};
+\node at (6.45,-0.2){\small (24,0)};
+\node at (1.5,3.25){\small (6,21)};
+\node at (4.95,0.35){\small (18,3)};
+
+\node at (1.45,1.25){\textcolor{orangePlot}{C4}};
+\node at (3.65,-0.15){\textcolor{purplePlot}{C3}};
+\node at (4,2){\textcolor{greenPlot}{C2}};
+\node at (5.75,4.75){\textcolor{blueArea}{Feasible Area}};
+
+\draw (11,1.5) rectangle (15.45,6);
+\node at (11.5,5.5){\textcolor{orangePlot}{C4 :}};
+\node at (13.65,5.5){\textcolor{orangePlot}{\(0.4x_1 + 0.6x_2  = 12 \)}};
+\node at (11.5,4.75){\textcolor{purplePlot}{C3 :}};
+\node at (13.5,4.75){\textcolor{purplePlot}{\(6x_1 + 10x_2 = 50\)}};
+\node at (11.5,4){\textcolor{greenPlot}{C2 :}};
+\node at (13.65,4){\textcolor{greenPlot}{\(0.4x_1 + 1.2x_2 = 70\)}};
+\node at (11.35,3.25){\textcolor{redPlot}{Z}};
+\node at (11.75,3.25){\textcolor{redPlot}{:}};
+\node at (13.08,3.25){\textcolor{redPlot}{\(10x_1 + 4x_2\)}};
+
+\draw[fill=blueArea!20] (11.2,2) rectangle (11.7,2.5);
+\node at (13.25,2.25){\textcolor{blueArea}{Feasible Area}};
+
+\end{tikzpicture}
+\end{center}
+
+\vspace{1cm}
+
+
+\subsubsection*{\underline{Observation}}
+\begin{itemize}
+    \item The value of the minimum or maximum of the objective function is unique, but there can be multiple coordinate solutions.
+    \item The line through (0, 42) and (6, 21) represents a contour line, indicating that the value of \(Z\) is constant along this line.
+    \item If \(P_1\) and \(P_2\) are both optimal solutions, they must be adjacent boundary corners of the feasible region.
+    \item When there are multiple solutions, they form a segment of coordinates on the boundary (edge) of the feasible region, where each coordinate in that segment represents an optimal solution. In linear programming, we typically focus on the vertex points.
+\end{itemize}
+
+\vspace{0.5cm}
+\begin{tcolorbox}[title=Note]
+\textbf{\underline{Difference Between Multiple \& Infinite Solutions:}}
+
+\vspace{0.25cm}
+One might wonder about the difference between these two terms since even multiple solutions have an infinite
+number of solutions. The difference is that in infinite solutions, the solution is unbounded, unlike multiple
+solutions, which have their solutions on a finite segment. But as mentioned before, even though multiple solutions
+have infinite solutions, we focus only on the boundary corner points (vertex points).
+\end{tcolorbox}
 
