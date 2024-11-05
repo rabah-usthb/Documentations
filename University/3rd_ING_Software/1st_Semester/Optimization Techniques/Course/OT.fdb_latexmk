@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1730754798.04055 "OT.tex" "OT.pdf" "OT" 1730754800.22055 0
+["pdflatex"] 1730811585.55762 "OT.tex" "OT.pdf" "OT" 1730811588.09257 0
   "/etc/texmf/web2c/texmf.cnf" 1729519629.14367 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -148,6 +148,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty" 1654720880 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
   "/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1704491087 30006 57b07afb710ee2f649c65cfbafda39c1 ""
   "/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1279039959 678 4792914a8f45be57bb98413425e4c7af ""
+  "/usr/share/texlive/texmf-dist/tex/latex/makecell/makecell.sty" 1249334690 15773 2dd7dde1ec1c2a3d0c85bc3b273e04d8 ""
   "/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty" 1601326656 1090 bae35ef70b3168089ef166db3e66f5b2 ""
   "/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty" 1673816307 373 00b204b1d7d095b892ad31a7494b0373 ""
   "/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty" 1601326656 21013 f4ff83d25bb56552493b030f27c075ae ""
@@ -171,10 +172,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1729636218.96856 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1729636444 8214445 9b12922370acf71d34fba59262adf24e ""
-  "Chapters/Linear Programming.tex" 1730754796.89851 16984 73f4ecb659722c134aa432c1ec5ac06a ""
+  "Chapters/Linear Programming.tex" 1730811584.68585 26515 9ede5ce4a17ee5504a0af9a8660a1180 ""
   "Chapters/Operations research.tex" 1729632193.05369 3926 ae43672bfc451646d372133bbd8f6310 ""
-  "OT.aux" 1730754800.02156 1050 036f226bd30fda5a6a0c3b1bdda67efd "pdflatex"
-  "OT.tex" 1730730118.14166 867 61c32b633074f190c6e0865da1764b22 ""
+  "OT.aux" 1730811587.86785 1051 dbbfd4b1ef5660771db680398c9bc9fe "pdflatex"
+  "OT.tex" 1730758981.12358 952 cad76e1d012e9a967f8e4886ac1347cd ""
   (generated)
   "OT.aux"
   "OT.log"

@@ -79,7 +79,7 @@ The Goal is to minimize food cost but to meet the minimum daily nutrition requir
 \end{tabular}
 \end{center}
 
-\vspace{1cm}
+\newpage
 
 \begin{multicols}{2}
 \textbf{\underline{Variables Definition:}}\\
@@ -298,11 +298,11 @@ The goal is to minimize feeds cost by minmizing \(f(x_i)\), while meeting the mi
 
 \draw (11,1.5) rectangle (15.45,6);
 \node at (11.5,5.5){\textcolor{orangePlot}{C4 :}};
-\node at (13.65,5.5){\textcolor{orangePlot}{\(0.4x_1 + 0.6x_2  = 12 \)}};
+\node at (13.5,5.5){\textcolor{orangePlot}{\(3x_1 + 6x_2  = 72 \)}};
 \node at (11.5,4.75){\textcolor{purplePlot}{C3 :}};
-\node at (13.5,4.75){\textcolor{purplePlot}{\(6x_1 + 10x_2 = 50\)}};
+\node at (13.5,4.75){\textcolor{purplePlot}{\(7x_1 + 2x_2 = 84\)}};
 \node at (11.5,4){\textcolor{greenPlot}{C2 :}};
-\node at (13.65,4){\textcolor{greenPlot}{\(0.4x_1 + 1.2x_2 = 70\)}};
+\node at (13.5,4){\textcolor{greenPlot}{\(3x_1 + 2x_2 = 60\)}};
 \node at (11.35,3.25){\textcolor{redPlot}{Z}};
 \node at (11.75,3.25){\textcolor{redPlot}{:}};
 \node at (13.08,3.25){\textcolor{redPlot}{\(10x_1 + 4x_2\)}};
@@ -392,11 +392,11 @@ The goal is to minimize feeds cost by minmizing \(f(x_i)\), while meeting the mi
 
 \draw (11,1.5) rectangle (15.45,6);
 \node at (11.5,5.5){\textcolor{orangePlot}{C4 :}};
-\node at (13.65,5.5){\textcolor{orangePlot}{\(0.4x_1 + 0.6x_2  = 12 \)}};
+\node at (13.5,5.5){\textcolor{orangePlot}{\(3x_1 + 6x_2  = 72 \)}};
 \node at (11.5,4.75){\textcolor{purplePlot}{C3 :}};
-\node at (13.5,4.75){\textcolor{purplePlot}{\(6x_1 + 10x_2 = 50\)}};
+\node at (13.5,4.75){\textcolor{purplePlot}{\(7x_1 + 2x_2 = 84\)}};
 \node at (11.5,4){\textcolor{greenPlot}{C2 :}};
-\node at (13.65,4){\textcolor{greenPlot}{\(0.4x_1 + 1.2x_2 = 70\)}};
+\node at (13.5,4){\textcolor{greenPlot}{\(3x_1 + 2x_2 = 60\)}};
 \node at (11.35,3.25){\textcolor{redPlot}{Z}};
 \node at (11.75,3.25){\textcolor{redPlot}{:}};
 \node at (13.08,3.25){\textcolor{redPlot}{\(10x_1 + 4x_2\)}};
@@ -428,4 +428,294 @@ number of solutions. The difference is that in infinite solutions, the solution 
 solutions, which have their solutions on a finite segment. But as mentioned before, even though multiple solutions
 have infinite solutions, we focus only on the boundary corner points (vertex points).
 \end{tcolorbox}
+
+\newpage
+\subsubsection*{\underline{Example :}} Minimize \(f(x,y) = x + y\)
+
+\vspace{0.5cm}
+Subject To :
+\[
+    \hspace{-13cm}
+\left\{
+    \begin{array}{l}
+        x + y  \geq 10\\ 
+        x + y  \leq 9\\
+        x , y  \geq 0
+    \end{array}
+   \right.
+\]
+
+\subsubsection*{\underline{Solution :}}the system clearly contains a contradiction so there is no solution
+
+\vspace{0.5cm}
+\subsubsection*{\underline{Example :}} Maximize \(f(x,y) = x + y\)
+
+\vspace{0.5cm}
+Subject To :
+\[
+    \hspace{-13cm}
+\left\{
+    \begin{array}{l}
+        2x + y  \geq 9\\ 
+        x + 3y  \geq 10\\
+        x , y  \geq 0
+    \end{array}
+   \right.
+\]
+
+\subsubsection*{\underline{Solution :}}As \(x,y \to +\infty\) , \(f\to +\infty\) , solution unbounded
+
+\vspace{0.5cm}
+\subsubsection*{\underline{Example :}}There is an industry that creates two types of boats, A and B. We want
+to maximize the profit while adhering to the limitations of resources and labor.
+
+\vspace{0.5cm}
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        Boat & \makecell{Aluminum \\ (lb)} & \makecell{Machine Time\\ (min)} & \makecell{Labor \\ (hr)} & \makecell{Profit \\ (\$)} \\
+        \hline
+        A & 50 & 6 & 3 & 50\\
+        \hline
+        B & 30 & 5 & 5 & 60\\
+        \hline
+        max & 2000 & 300 & 200 &\\
+        \hline
+    \end{tabular}
+\end{center}
+\newpage
+\begin{multicols}{2}
+\textbf{\underline{Variables Definition:}}\\
+
+Let \(x_1\) be the number of boat A.\\
+
+Let \(x_2\) be the number of boat B.\\
+\columnbreak
+
+\textbf{\underline{Constraint:}} 
+
+\[
+\left\{
+    \begin{array}{l}
+        \forall x_1 , x_2 \geq 0 \hspace{1.65cm} \text{(Non-negative number of boats) ...C1}\\
+        50x_1 + 30x_2  \leq 2000 \quad \text{(Maximum Aluminium (lb)) ...\textcolor{greenPlot}{C2}}\\ 
+        6x_1 + 5x_2  \leq 300 \hspace{0.85cm} \text{(Maximum Machine Time(min)) ...\textcolor{purplePlot}{C3}}\\
+        3x_1 + 5x_2  \leq 200 \hspace{0.85cm} \text{(Maximum Labor(h)) ...\textcolor{orangePlot}{C4}}
+   \end{array}
+   \right.
+\] 
+\end{multicols}
+\vspace{0.5cm}
+\begin{tcolorbox}[title = Objective Function]
+\[
+f(x_i) = Z = 50x_1 + 60x_2  
+\]
+\begin{center}
+The goal is to maximize the profits by maximizing \(f(x_i)\), while adhering to the ressource limitations .
+\end{center}
+\end{tcolorbox}
+
+\vspace{1cm}
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        height = 9.5cm,
+        width = 10cm,
+        axis lines = middle,           % Ensures axes cross at (0, 0)
+        xlabel=$x_1$, 
+        ylabel=$x_2$, 
+        xmin = -1, xmax = 70,           % Set x-axis range
+        ymin = -1, ymax = 70,           % Set y-axis range
+    %   ytick={0,10,...,70},             % Y-tick values
+     %   xtick={0,50,...,200},
+    ]
+  \addplot [draw=none, fill=blueArea!25] coordinates {(0,40) (25,25) (40,0) (0,0) }; 
+  \addplot[thick, mark=*,color = greenPlot] coordinates {(0,200/3) (40,0)};
+  %\addplot[color=red]coordinates{(150,8.5) (141,5)};
+  \addplot[thick, mark=*, color = purplePlot] coordinates {(0,60) (50,0)};
+  \addplot[thick, mark=*, color = orangePlot] coordinates {(200/3,0) (0,40)};
+
+ \addplot[thick,dashed,redPlot] coordinates {(0,1000/60) (1000/50,0)};
+
+ \addplot[thick,dashed,redPlot] coordinates {(0,500/60) (500/50,0)};
+
+ \addplot[thick,dashed,redPlot] coordinates {(0,1600/60) (1600/50,0)};
+
+ \addplot[thick,dashed,redPlot] coordinates {(0,2400/60) (2400/50,0)};
+
+ \addplot[thick,dashed,redPlot] coordinates {(0,2000/60) (2000/50,0)};
+
+ \addplot[thick,dashed,redPlot] coordinates {(0,2750/60) (2750/50,0)};
+
+\end{axis}
+
+\node at (0.75,4.75){\small (0,40)};
+\node at (2.65,2.65){\small (25,25)};
+\node at (5.25,0.35){\small (40,0)};
+
+\node at (6.65,1.25){\textcolor{orangePlot}{C4}};
+\node at (5.75,0.85){\textcolor{purplePlot}{C3}};
+\node at (4,2){\textcolor{greenPlot}{C2}};
+\node at (2.25,1.5){\textcolor{blueArea}{Feasible Area}};
+
+\draw (11,1.5) rectangle (15.45,6);
+\node at (11.5,5.5){\textcolor{orangePlot}{C4 :}};
+\node at (13.5,5.5){\textcolor{orangePlot}{\(3x_1 + 5x_2  = 200 \)}};
+\node at (11.5,4.75){\textcolor{purplePlot}{C3 :}};
+\node at (13.5,4.75){\textcolor{purplePlot}{\(6x_1 + 5x_2 = 300 \)}};
+\node at (11.5,4){\textcolor{greenPlot}{C2 :}};
+\node at (13.75,4){\textcolor{greenPlot}{\(50x_1 + 30x_2 = 2000\)}};
+\node at (11.35,3.25){\textcolor{redPlot}{Z}};
+\node at (11.75,3.25){\textcolor{redPlot}{:}};
+\node at (13.2,3.25){\textcolor{redPlot}{\(50x_1 + 60x_2\)}};
+
+\draw[fill=blueArea!20] (11.2,2) rectangle (11.7,2.5);
+\node at (13.25,2.25){\textcolor{blueArea}{Feasible Area}};
+
+\end{tikzpicture}
+\end{center}
+
+
+\vspace{0.75cm} 
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline 
+        Possible Solutions  & (0,40) & (25,25) & (40,0) \\
+        \hline 
+        Objective Function & 2400 & 2750 & 2000 \\
+        \hline 
+    \end{tabular}
+\end{center}
+\newpage
+\subsubsection*{\underline{Solution}}
+
+The blue area in the plot represents the feasible region, so the optimal solution(s) must be within this area. Since
+the objective function \( Z \) increases towards the right (due to both coefficients being positive) and we want to
+maximize \( Z \), we need to sweep the objective function line towards the right , and the last intresection 
+between the objective function and one of the vertex points of the feasible region is the max the optimal solution . 
+Therefore,the optimal solution is \((25, 25)\) with \( Z = 50 \times 25 + 60 \times 25 = 2750 \).
+
+\vspace{0.5cm}
+\subsubsection*{\underline{Example :}}An Industry produce two products , P1 and P2 ,they want to minimize the costs
+of the ressources needed to create the product : raw material M$_{A}$(lb) \& M$_{B}$(lb) and the needed labour (hr)
+while adhering the constraint set upon the ressources and minimum production 
+
+\vspace{0.75cm} 
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline 
+        Process  & Labour(hr) & M$_{A}$(lb) & M$_{B}$(lb)& & P1 & P2 \\
+        \hline 
+        1 & 20 & 160 & 30 & &35 & 55 \\
+        \hline 
+        2 & 30 & 100 & 35 & &45 & 42 \\
+        \hline 
+        3 & 10 & 200 & 60 & &70 & 0 \\
+        \hline
+        4 & 25 & 75 & 80 & &0 & 90\\
+        \hline
+        max & 1000 & 8000 & 4000 & min & 2100 & 1800\\
+        \hline
+        price & fixed salary & 3\$/lb & 7\$/lb & & & \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+\begin{multicols}{2}
+\textbf{\underline{Variables Definition:}}\\
+
+Let \(x_1\) be the process 1.
+
+\vspace{0.15cm}
+Let \(x_2\) be the process 2.
+
+\vspace{0.15cm}
+
+Let \(x_3\) be the process 3.
+
+\vspace{0.15cm}
+Let \(x_4\) be the process 4.
+
+\columnbreak
+
+\hspace{0.5cm}\textbf{\underline{Constraint:}} 
+
+\[
+\left\{
+    \begin{array}{l}
+        \forall x_1 , x_2 , x_3 , x_4 \geq 0 \hspace{1.65cm} \text{(Non-negative number of processes) ...C1}\\
+        20x_1 + 30x_2 + 10x_3 + 4x_4  \leq 1000 \quad \text{(Maximum Labor(hr)) ...\textcolor{greenPlot}{C2}}\\ 
+        160x_1 + 100x_2 + 200x_3 + 75x_3   \leq 8000 \hspace{0.85cm} \text{(Maximum M$_{A}$(lb)) ...\textcolor{purplePlot}{C3}}\\
+        30x_1 + 35x_2 + 60x_3 + 80x_4  \leq 4000 \hspace{0.85cm} \text{(Maximum M$_{B}$(lb)) ...\textcolor{purplePlot}{C3}}\\
+        35x_1 + 45x_2 + 70x_3 \geq 2100 \hspace{0.85cm} \text{(Minimum P1) ...\textcolor{purplePlot}{C3}}\\
+        55x_1 + 42x_2 + 90x_4  \geq 1800 \hspace{0.85cm} \text{(Minimum P2) ...\textcolor{orangePlot}{C4}}
+   \end{array}
+   \right.
+\] 
+\end{multicols}
+\vspace{0.5cm}
+\begin{tcolorbox}[title = Objective Function]
+\[
+f(x_i) = Z = 3\times(160x_1 + 100x_2 + 200x_3 + 75x_3) + 4\times(30x_1 + 35x_2 + 60x_3 + 80x_4)\\
+           =690x_1 + 545x_2 + 1070x_3 + 785x_4
+\]
+\begin{center}
+The goal is to minimize the profits by minimizing \(f(x_i)\), while adhering to the ressource limitations and
+minimum production of P1 \& P2.
+\end{center}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+\subsubsection*{\underline{Example :}} Let's take the same problem as before but allow overtime max 200hr with
+additional salary \$30/hr what's the new LP problem ? 
+
+\vspace{0.5cm}
+\begin{multicols}{2}
+\textbf{\underline{Variables Definition:}}\\
+
+Let \(x_1\) be the process 1.
+
+\vspace{0.15cm}
+Let \(x_2\) be the process 2.
+
+\vspace{0.15cm}
+Let \(x_3\) be the process 3.
+
+\vspace{0.15cm}
+Let \(x_4\) be the process 4.
+
+\vspace{0.15cm}
+Let \(y\) be the number of overtime hour
+
+\columnbreak
+
+\hspace{0.5cm}\textbf{\underline{Constraint:}} 
+
+\[
+\left\{
+    \begin{array}{l}
+        \forall x_1 , x_2 , x_3 , x_4 \geq 0 \hspace{1.65cm} \text{(Non-negative number of processes) ...C1}\\
+        20x_1 + 30x_2 + 10x_3 + 4x_4  \leq 1000 \quad \text{(Maximum Labor(hr)) ...\textcolor{greenPlot}{C2}}\\ 
+         y \leq 200 \text{(Maximum Overtime(hr))}\\
+         y \geq 0 \text{(Overtime cant be negative)}\\
+        160x_1 + 100x_2 + 200x_3 + 75x_3   \leq 8000 \hspace{0.85cm} \text{(Maximum M$_{A}$(lb)) ...\textcolor{purplePlot}{C3}}\\
+        30x_1 + 35x_2 + 60x_3 + 80x_4  \leq 4000 \hspace{0.85cm} \text{(Maximum M$_{B}$(lb)) ...\textcolor{purplePlot}{C3}}\\
+        35x_1 + 45x_2 + 70x_3 \geq 2100 \hspace{0.85cm} \text{(Minimum P1) ...\textcolor{purplePlot}{C3}}\\
+        55x_1 + 42x_2 + 90x_4  \geq 1800 \hspace{0.85cm} \text{(Minimum P2) ...\textcolor{orangePlot}{C4}}
+   \end{array}
+   \right.
+\] 
+\end{multicols}
+\vspace{0.5cm}
+\begin{tcolorbox}[title = Objective Function]
+\[
+g(x_i) = Z = f(x_i) + 30y =  690x_1 + 545x_2 + 1070x_3 + 785x_4 + 30y
+\]
+\begin{center}
+The goal is to minimize the profits by minimizing \(f(x_i)\), while adhering to the ressource limitations and
+minimum production of P1 \& P2.
+\end{center}
+\end{tcolorbox}
+
 
