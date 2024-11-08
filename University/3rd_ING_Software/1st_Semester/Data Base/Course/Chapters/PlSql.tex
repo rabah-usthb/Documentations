@@ -140,20 +140,62 @@ and responsive to varying conditions. The main types of control structures in PL
 \end{tcolorbox}
 \subsubsection{Conditional Control}
 \begin{tcolorbox}[title = If] 
-    tcolorbox
+
+    \textcolor{blue}{IF} condition1 \textcolor{blue}{THEN}
+
+    \textcolor{commentgray}{- - statements to execute if condition1 is true}
+
+    \textcolor{blue}{ELSIF} condition2 \textcolor{blue}{THEN}
+
+    \textcolor{commentgray}{- - statements to execute if condition2 is true}
+
+    \textcolor{blue}{ELSE}
+
+    \textcolor{commentgray}{- - statements to execute if none of the conditions are true}
+
+   \textcolor{blue}{END IF};
 \end{tcolorbox}
 \begin{tcolorbox}[title = Switch Case]
-    tcolorbox
+    
+\textcolor{blue}{CASE} \\
+\textcolor{blue}{WHEN} condition1 \textcolor{blue}{THEN}\\
+\textcolor{commentgray}{- - statements to execute if condition1 is true}\\
+\textcolor{blue}{WHEN} condition2 \textcolor{blue}{THEN}\\
+\textcolor{commentgray}{- - statements to execute if condition2 is true}\\
+        \textcolor{blue}{ELSE}\\
+        \textcolor{commentgray}{- - statements to execute if none of the conditions are true}\\
+\textcolor{blue}{END CASE};
+
 \end{tcolorbox}
 \subsubsection{Looping Control}
 \begin{tcolorbox}[title = Simple Loop] 
-    tcolorbox
+
+LOOP\\
+    \textcolor{commentgray}{- - statements to execute}\\
+    EXIT \textcolor{blue}{WHEN} condition; \textcolor{commentgray}{- - condition to exit the loop}\\
+\textcolor{blue}{END} LOOP;
 \end{tcolorbox}
 \begin{tcolorbox}[title = While Loop]
-    tcolorbox
+WHILE condition LOOP\\
+\textcolor{commentgray}{- - statements to execute while condition is true}\\
+\textcolor{blue}{END} LOOP;
 \end{tcolorbox}
 \begin{tcolorbox}[title = For Loop]
-    tcolorbox
+ \textbf{Ascending}
+
+\vspace{0.15cm}
+\textcolor{blue}{FOR} counter \textcolor{blue}{IN} start..end LOOP\\
+\textcolor {commentgray}{- - statements to execute for each value of counter}\\
+\textcolor{blue}{END} LOOP;
+
+\vspace{0.25cm}
+ \textbf{Descending}
+
+ \vspace{0.15cm} 
+\textcolor{blue}{FOR} counter \textcolor{blue}{IN} REVERSE end..start LOOP\\
+\textcolor {commentgray}{- - statements to execute for each value of counter}\\
+\textcolor{blue}{END} LOOP;
+
 \end{tcolorbox}
 \subsection{Raise Application Error}
 \begin{tcolorbox}[title = Raise Errors] 
@@ -282,6 +324,34 @@ direct and minimalistic approach.
 
 
 \subsection{Cursors}
+\begin{tcolorbox}[title = cursor]
+    \begin{verbatim}
+DECLARE
+    -- Declare a cursor that selects data
+    CURSOR cr IS
+        select query
+
+    -- Variables to hold fetched data
+    var1 table.col1%TYPE;
+    var2 table.col2%TYPE;
+    .....
+    varn table.coln%TYPE;
+BEGIN
+    -- Open the cursor
+    OPEN emp_cursor;
+    FETCH cr INTO var1,var2,...,varn
+    -- Loop through the result set
+    WHILE(cr%FOUND) LOOP
+        --traitements
+        FETCH cr INTO var1,var2,...,varn
+        
+    END LOOP;
+
+    -- Close the cursor
+    CLOSE emp_cursor;
+END;
+    \end{verbatim}
+\end{tcolorbox}
 \subsection{Triggers}
 \subsection{Functions}
 \subsection{Procedure}

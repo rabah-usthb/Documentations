@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1730811585.55762 "OT.tex" "OT.pdf" "OT" 1730811588.09257 0
+["pdflatex"] 1730891271.67795 "OT.tex" "OT.pdf" "OT" 1730891274.18845 0
   "/etc/texmf/web2c/texmf.cnf" 1729519629.14367 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -172,9 +172,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1729636218.96856 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1729636444 8214445 9b12922370acf71d34fba59262adf24e ""
-  "Chapters/Linear Programming.tex" 1730811584.68585 26515 9ede5ce4a17ee5504a0af9a8660a1180 ""
+  "Chapters/Linear Programming.tex" 1730891271.11167 28690 a78901a8fcfad7f8fb37f825d4b59d2f ""
   "Chapters/Operations research.tex" 1729632193.05369 3926 ae43672bfc451646d372133bbd8f6310 ""
-  "OT.aux" 1730811587.86785 1051 dbbfd4b1ef5660771db680398c9bc9fe "pdflatex"
+  "OT.aux" 1730891274.00967 1051 1f59dc1432862ccbba0f5f3866c80359 "pdflatex"
   "OT.tex" 1730758981.12358 952 cad76e1d012e9a967f8e4886ac1347cd ""
   (generated)
   "OT.aux"

@@ -696,7 +696,7 @@ Let \(y\) be the number of overtime hour
 \left\{
     \begin{array}{l}
         \forall x_1 , x_2 , x_3 , x_4 \geq 0 \hspace{1.65cm} \text{(Non-negative number of processes) ...C1}\\
-        20x_1 + 30x_2 + 10x_3 + 4x_4  \leq 1000 \quad \text{(Maximum Labor(hr)) ...\textcolor{greenPlot}{C2}}\\ 
+        20x_1 + 30x_2 + 10x_3 + 4x_4  \leq 1000 + y \quad \text{(Maximum Labor(hr)) ...\textcolor{greenPlot}{C2}}\\ 
          y \leq 200 \text{(Maximum Overtime(hr))}\\
          y \geq 0 \text{(Overtime cant be negative)}\\
         160x_1 + 100x_2 + 200x_3 + 75x_3   \leq 8000 \hspace{0.85cm} \text{(Maximum M$_{A}$(lb)) ...\textcolor{purplePlot}{C3}}\\
@@ -718,4 +718,67 @@ minimum production of P1 \& P2.
 \end{center}
 \end{tcolorbox}
 
+\vspace{0.5cm}
+\subsubsection*{\underline{Example :}}The transportation model setting , good at location A$_{i}$, transport 
+to B$_{j}$ cost from A$_{i}$ Tp B$_{j}$, the goal is to find a schedule to minimize the cost 
+At location A$_{1}$ we have 200 units , location A$_{2}$ we have 300 units , the will be distriuted to 
+B$_{1}$ ,B$_{2}$, B$_{3}$ :
 
+B$_{1}$ = 100units ,B$_{2}$ = 200units , B$_{3}$ = 200units
+
+\vspace{0.2cm}
+Transportation cost from A$_{i}$ to B$_{j}$ :
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        & B$_{1}$ & B$_{2}$ & B$_{3}$\\
+        \hline 
+        A$_{1}$ & 11 & 12 & 13 \\
+        \hline 
+        A$_{2}$ & 21 & 22 & 23\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\newpage
+\begin{multicols}{2}
+\textbf{\underline{Variables Definition:}}\\
+
+Let \(x_{ij}\) be the number of transported Units from A$_{i}$ to B$_{j}$.
+
+\columnbreak
+
+\hspace{0.5cm}\textbf{\underline{Constraint:}} 
+
+\[
+\left\{
+    \begin{array}{l}
+        \forall x_{ij} \geq 0 \hspace{1.65cm} \text{(Non-negative number of units) ...C1}\\
+    i = \{1,2\} \quad,\quad j = \{1,2,3\}\\
+         x_{11} + x_{12} + x_{13}  = 200 \quad \text{(Maximum Capacity of A$_{1}$) ...\textcolor{greenPlot}{C2}}\\ 
+         x_{21} + x_{22} + x_{23}  = 300 \quad \text{(Maximum Capacity of A$_{2}$)...\textcolor{greenPlot}{C2}}\\
+         x_{11} + x_{21} = 100 \quad \text{(Maximum Capacity of B$_{1}$)...\textcolor{greenPlot}{C2}}\\
+         x_{12} + x_{22} = 200 \quad \text{(Maximum Capacity of B$_{2}$)...\textcolor{greenPlot}{C2}}\\
+         x_{13} + x_{23} = 200 \quad \text{(Maximum Capacity of B$_{3}$)...\textcolor{greenPlot}{C2}}
+   \end{array}
+   \right.
+\] 
+\end{multicols}
+\vspace{0.5cm}
+\begin{tcolorbox}[title = Objective Function]
+\[
+    f(x_i) + 30y =  11x_{11} + 12x_{12} +13x_{13} +21x_{21} +22x_{22} +23x_{23} 
+\]
+\begin{center}
+The goal is to minimize the cost of transport by minimizing \(f(x_i)\), while adhering to the capacity limitation
+\end{center}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[title = Note] 
+Constraint can be  : \(= , \leq , \geq ,> ,<\)
+
+We can rewrite any constraint into a  \textbf{Standart Form}
+\end{tcolorbox}
