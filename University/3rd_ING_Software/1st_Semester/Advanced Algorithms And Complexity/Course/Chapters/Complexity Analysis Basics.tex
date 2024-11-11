@@ -1,0 +1,244 @@
+\section{Complexity Analysis Basics}
+
+\begin{tcolorbox}[enhanced, colback=white!90!greenPlot, colframe=greenPlot!60!black, coltitle=white, fonttitle=\bfseries\Large, title=Some Terminology, boxrule=1mm, arc=0.5mm, drop shadow=greenPlot!35!gray]
+\begin{itemize}
+    \item \textbf{Theoritical Complexity}: It's theoritical complexity calculated through \(f(n)\) and \(T(n)\) by supposing that each basic instruction has same execution time \(\Delta t\)
+    \item \textbf{Experimental Complexity}: It's real life complexity calculated by executing a program in a machine and using a clock to get the exact time
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{0.25cm}
+
+\begin{center}
+   \begin{tikzpicture}
+           \begin{axis}[
+        legend style={at={(1.5,0.75)}, anchor=north east}, % Position the legend   
+        height = 9.5cm,
+        width = 10cm,
+        axis lines = middle,           % Ensures axes cross at (0, 0)
+        xlabel=$n$, 
+        ylabel=$time$, 
+        xmin = 0, xmax = 12,           % Set x-axis range
+        ymin = 0, ymax = 30,           % Set y-axis range
+        ytick={0,5,...,30},             % Y-tick values
+        xtick={0,2,...,12},
+    xlabel style={align=center, xshift = 16pt,yshift=-10pt}
+    ]
+ \addplot[thick ,domain = 0:12,samples=200, blueArea] {x};
+ \addlegendentry{x}
+ \addplot[thick ,domain = 0:12,samples=200, orangePlot ,restrict y to domain=0:30] {x^2};
+ 
+ \addlegendentry{$x^2$}
+ \addplot[thick , domain = 0:80,samples=500, blue, restrict y to domain=0:32] {x^3};
+
+ \addlegendentry{$x^3$}
+ \addplot[thick ,domain = 0:12,samples=200, redPlot] {sqrt(x)};
+ 
+ \addlegendentry{$\sqrt x$}
+ \addplot[thick ,domain = 0.1:12,samples=200, purplePlot] {log10(x)};
+
+ \addlegendentry{$\log_{10}(x)$}
+ \addplot[thick ,domain = 0.1:12,samples=200, greenPlot] {log10(x)*x};
+
+ \addlegendentry{x $\log_{10}(x)$}
+ \addplot[thick ,domain = 0.01:80,samples=500, restrict y to domain=0:32,p] {2^x};
+ \addlegendentry{$2^x$}
+ \addplot[thick ,domain = 0.01:80,samples=500, restrict y to domain=0:36,color =y] {factorial(x)};
+ \addlegendentry{$factorial(x)$}
+
+\end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\subsection*{\underline{Example :}}
+suppose we have \(f(n) = 2 ^ n \quad, \quad \Delta t = 10^{-6} s \)
+\begin{align*}
+    T(n) &= f(n) \times \Delta t\\
+    T(60) &= 2^{60} \times 10^{-6}\\
+    &= \boxed{36559 years}
+\end{align*}
+
+\begin{tcolorbox}[enhanced, colback=white!90!greenPlot, colframe=greenPlot!60!black, coltitle=white, fonttitle=\bfseries\Large, title=Landau Notation, boxrule=1mm, arc=0.5mm, drop shadow=greenPlot!35!gray]
+\begin{itemize}
+    \item \textbf{Big O} : \(O\) upper bound
+    \item \textbf{Big Omega}: \(\Omega\) lower bound 
+    \item \textbf{Big Theta} : \(\Theta\) average
+\end{itemize}
+\end{tcolorbox}
+% 3 graphs
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[enhanced, colback=white!90!greenPlot, colframe=greenPlot!60!black, coltitle=white, fonttitle=\bfseries\Large, title=Landau Notation Mathematical Definition, boxrule=1mm, arc=0.5mm, drop shadow=greenPlot!35!gray]
+    \(f(n) = \Omega(g(n))\) \quad \( \exists c > 0\)\hspace{0.1cm},\quad \(c . g(n) \leq f(n)\) \quad ,\hspace{0.1cm}\(\forall n \geq n_0\)
+
+
+\vspace{0.15cm}
+\(f(n) = O(g(n))\) \quad \(\exists c > 0\)\hspace{0.1cm},\quad\(c . g(n) \geq f(n)\) \quad ,\hspace{0.1cm}\(\forall n \geq n_0\)
+
+\vspace{0.15cm}
+\(f(n) = \Theta(g(n))\) \quad \(\exists c_1 > 0\)\hspace{0.1cm},\hspace{0.1cm}\(\exists c_2 > 0\)\hspace{0.1cm},\quad \(c_1 . g(n) \leq f(n) \leq c_2. g(n)\)\quad  ,\hspace{0.1cm}\(\forall n \geq n_0\)
+
+\end{tcolorbox}
+\newpage
+\subsection*{\underline{Example :}}
+\(f(n) = 2n + 5 => O(n)\)
+ 
+\vspace{0.5cm} 
+\hspace{9cm}\(f(n) \leq c.g(n)\)
+
+\vspace{0.15cm}
+\hspace{9cm}\(2n+5 \leq c.n\)
+
+\vspace{0.15cm}
+\hspace{9cm}\(2 + \frac{5}{n} \leq c\) 
+
+\vspace{0.15cm}
+\hspace{7.75cm}\(\frac{5}{n} \leq 1\)\quad \quad \(\forall n \geq 5\) \quad \(\boxed{n_0 = 5}\)
+
+\vspace{0.15cm}
+\hspace{7.75cm}\(2 + \frac {5}{5} \leq c\)\quad \(3 \leq c\)\hspace{0.5cm} \(\boxed{c = 3}\)
+
+\vspace{1cm}
+
+\(f(n) = 2n + 5 => \Omega (n)\)
+
+\vspace{0.5cm} 
+\hspace{9cm}\(f(n) \geq c.g(n)\)
+
+\vspace{0.15cm}
+\hspace{9cm}\(2n+5 \geq c.n\)
+
+\vspace{0.15cm}
+\hspace{9cm}\(2 + \frac{5}{n} \geq c\) 
+
+\vspace{0.15cm}
+\hspace{7.75cm}\(\frac{5}{n} \leq 1\)\quad \quad \(\forall n \geq 5\) \quad \(\boxed{n_0 = 5}\)
+
+\vspace{0.15cm}
+\hspace{7.75cm}\(2 + \frac {5}{5} \geq c\)\quad \(3 \geq c\)\hspace{0.5cm} \(\boxed{c = 2}\)
+
+\vspace{1cm}
+
+\(f(n) = 2n + 5 => \Theta (n)\)
+
+\vspace{0.5cm} 
+\hspace{8.25cm}\( c_1.g(n) \leq f(n) \leq c_2.g(n)\)
+
+\vspace{0.15cm}
+\hspace{8.5cm}\( c_1.n \leq 2n+5 \leq c_2.n\)
+
+\vspace{0.15cm}
+\hspace{8.85cm}\( c_1 \leq 2 + \frac{5}{n} \leq c_2\) 
+
+\vspace{0.15cm}
+\hspace{7.75cm}\(\frac{5}{n} \leq 1\)\quad \quad \(\forall n \geq 5\) \quad \(\boxed{n_0 = 5}\)
+
+\vspace{0.15cm}
+\hspace{7.75cm}\(2 + \frac {5}{5} \geq c_1\)\quad \(3 \geq c_1\)\hspace{0.35cm} \(\boxed{c_1 = 2}\)
+
+\vspace{0.15cm}
+\hspace{7.75cm}\(2 + \frac {5}{5} \leq c_2\)\quad \(3 \leq c_2\)\hspace{0.35cm} \(\boxed{c_2 = 3}\)
+
+\vspace{0.75cm}
+\begin{tcolorbox}[enhanced, colback=white!90!greenPlot, colframe=greenPlot!60!black, coltitle=white, fonttitle=\bfseries\Large, title=Note, boxrule=1mm, arc=0.5mm, drop shadow=greenPlot!35!gray]
+\begin{itemize}
+    \item  \textbf{n is integer} : it represents the size of the inputed data
+    \item  \textbf{c is float} : it represents a coefficient
+    \item  \textbf{Why we didn't took \(c_1 = 3\) even though \(c_1 \leq 3\) when n = 5} : because the inequality \(2 + \frac {5}{n} \geq c_1\)
+must be verified \(\forall n \geq n_0 = 5\) if we take n = 6 , \(2+\frac{5}{6} \approx 2.8\) and \(c_1 = 3\) isn't \(\leq\) 2.8
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{0.75cm}
+\begin{tcolorbox}[enhanced, colback=white!90!greenPlot, colframe=greenPlot!60!black, coltitle=white, fonttitle=\bfseries\Large, title=Laudau Notation Limit Definition, boxrule=1mm, arc=0.5mm, drop shadow=greenPlot!35!gray]
+    if \quad\(\lim\limits_{n \to +\infty}\left| \frac{f(n)}{g(n)}\right| =\)\hspace{0.15cm}\(k\)\quad,\quad\( k > \)0  \quad \(=> \) \quad \(f(n) \in \Theta (g(n))\)
+
+    \vspace{0.25cm}
+    if \quad\(\lim\limits_{n \to +\infty}\left| \frac{f(n)}{g(n)}\right| =\)\hspace{0.15cm}\(0\) \hspace{1.45cm} \quad \(=> \) \quad \(f(n) \in O (g(n))\)
+    
+    \vspace{0.25cm}
+    if \quad\(\lim\limits_{n \to +\infty}\left| \frac{f(n)}{g(n)}\right| =\)\hspace{0.15cm}\(+\infty\) \hspace{1cm} \quad \(=> \) \quad \(f(n) \in \Omega (g(n))\)
+\end{tcolorbox}
+
+
+\subsection*{\underline{Exercice :}} show that
+\(f(n) = 5n^2 - 6n => \Theta(n^2)\)
+ 
+\vspace{0.5cm} 
+\hspace{8.25cm}\( c_1.g(n) \leq f(n) \leq c_2.g(n)\)
+
+\vspace{0.15cm}
+\hspace{8.5cm}\( c_1.n^2 \leq 5n^2-6n \leq c_2.n^2\)
+
+\vspace{0.15cm}
+\hspace{8.85cm}\( c_1 \leq 5 - \frac{6}{n} \leq c_2\) 
+
+\vspace{0.15cm}
+\hspace{7.75cm}\(\frac{6}{n} \leq 1\)\quad \quad \(\forall n \geq 6\) \quad \(\boxed{n_0 = 6}\)
+
+\vspace{0.15cm}
+\hspace{7.75cm}\(5 - \frac {6}{6} \geq c_1\)\quad \(4 \geq c_1\)\hspace{0.35cm} \(\boxed{c_1 = 4}\)
+
+\vspace{0.15cm}
+\hspace{7.75cm}\(5 - \frac {6}{6} \leq c_2\)\quad \(4 \leq c_2\)\hspace{0.35cm} \(\boxed{c_2 = 5}\)
+
+\vspace{1cm}
+\(f(n) = 6n^3 \neq \Theta(n^2)\)
+ 
+\vspace{0.5cm} 
+\hspace{8.25cm}\( c_1.g(n) \leq f(n) \leq c_2.g(n)\)
+
+\vspace{0.15cm}
+\hspace{8.5cm}\( c_1.n^2 \leq 6n^3 \leq c_2.n^2\)
+
+\vspace{0.15cm}
+\hspace{9cm}\(c_1 \leq 6n \leq c_2\) \hspace{3cm} \(c_1 \nexists , c_2 \nexists\)
+
+\vspace{1cm}
+\(f(n) = n^2 => O(10^{-5}n^3)\)
+ 
+\vspace{0.5cm} 
+\hspace{9cm}\(f(n) \leq c.g(n)\)
+
+\vspace{0.15cm}
+\hspace{9cm}\(n^2 \leq c.10^{-5}n^3\)
+
+\vspace{0.15cm}
+\hspace{9.25cm}\(\frac{10^{5}}{n} \leq c\) 
+
+\vspace{0.15cm}
+\hspace{7.75cm}\(\frac{10^{5}}{n} \leq 1\)\quad \quad \(\forall n \geq 10^{5}\) \quad \(\boxed{n_0 = 10^{5}}\)
+
+\vspace{0.15cm}
+\hspace{8.25cm}\(\frac {10^{5}}{10^{5}} \leq c\)\quad \(1 \leq c\)\hspace{0.5cm} \(\boxed{c = 1}\)
+
+\newpage
+\(f(n) = 10n^3 + 3n^2 + 5n + 1  => O(n^3)\)
+ 
+\vspace{0.5cm} 
+\hspace{9cm}\(f(n) \leq c.g(n)\)
+
+\vspace{0.15cm}
+\hspace{8cm}\(10n^3 + 3n^2 + 5n + 1 \leq c.n^3\)
+
+\vspace{0.15cm}
+\hspace{8.25cm}\( 10 + \frac{3}{n} + \frac{5}{n^2} + \frac{1}{n^3} \leq c\) 
+
+\vspace{0.15cm}
+\hspace{8.25cm}\(\frac{3}{n} \leq 1\)\quad \(\forall n \geq 3\)  
+
+\vspace{0.15cm}
+\hspace{7.75cm}\(\frac{5}{n^2} \leq 1\)\quad \(n^2 \leq 5\)\quad \(n \leq \sqrt{5}\)\quad \(\forall n \geq 3\)
+
+\vspace{0.15cm}
+\hspace{7.75cm}\(\frac{1}{n^3} \leq 1\)\quad \(\forall n \geq 1\) 
+
+\vspace{0.15cm}
+\hspace{8cm}\(\forall n \geq 1 \cap \forall n \geq 3\)\quad\(=>\)\quad\(\forall n \geq 3\)\quad \(\boxed{n_0 = 3}\)
+
+\vspace{0.15cm}
+\hspace{8.25cm}\(10 + \frac{3}{3} + \frac{5}{3^2} + \frac{1}{3^3} \approx 11.59\)\hspace{0.5cm} \(\boxed{c = 13}\)
+
+
+

@@ -6,6 +6,8 @@
 \usepackage{multicol}
 \usepackage{amsmath}
 \usepackage{pgfplots}
+
+\pgfplotsset{compat=1.18}
 \usepackage{makecell}
 \usetikzlibrary{patterns}
 \definecolor{greenPlot}{HTML}{14C877}
@@ -14,6 +16,9 @@
 \definecolor{blueArea}{HTML}{10D9EE}
 \definecolor{redPlot}{HTML}{ED014A}
 \definecolor{myblue}{HTML}{338AC7}
+\definecolor{p}{HTML}{D813E7}
+\definecolor{y}{HTML}{F5F806}
+\usepackage{amssymb}
 \setlength{\parindent}{0pt}
 \setcellgapes{3pt}  % Adjust padding as needed
 \makegapedcells
@@ -29,4 +34,5 @@
 \setlength{\tabcolsep}{12pt} % Set horizontal padding
 \renewcommand{\arraystretch}{1.5} % Set vertical padding (1.0 is default)
 \input{Chapters/Introduction.tex}
+\input{Chapters/Complexity Analysis Basics.tex}
 \end{document}
