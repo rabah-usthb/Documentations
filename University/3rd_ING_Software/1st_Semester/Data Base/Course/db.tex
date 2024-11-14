@@ -5,6 +5,7 @@
 \usepackage{xcolor}
 \usepackage{listings}
 \setlength{\parindent}{0pt}
+
 \lstset{
     language=SQL,                    % Set language to SQL
     basicstyle=\ttfamily\small,      % Font size and family for code
@@ -22,7 +23,28 @@
 
 \definecolor{commentgray}{HTML}{676160}
 \definecolor{messagegreen}{HTML}{17B867}
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
 \begin{document}
+
+% Use the prettyBox environment with mandatory title and color parameters
+\begin{prettyBox}{prettytitle}{green}
+    This is the content inside the pretty box.
+\end{prettyBox}
+
 \input{Chapters/DataType.tex}
 \input{Chapters/Classification.tex}
 \input{Chapters/DDL.tex}

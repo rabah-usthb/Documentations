@@ -1,5 +1,0 @@
-    create table student (
-    id number primary key,
-    firstname varchar2(50) not null,
-    lastname varchar2(50) not null
-    );

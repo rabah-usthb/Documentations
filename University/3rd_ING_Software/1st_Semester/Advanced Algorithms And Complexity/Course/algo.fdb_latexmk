@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1731283240.67871 "algo.tex" "algo.pdf" "algo" 1731283245.51315 0
-  "/etc/texmf/web2c/texmf.cnf" 1729519629.14367 475 c0e671620eb5563b2130f56340a5fde8 ""
+["pdflatex"] 1731526174.34148 "algo.tex" "algo.pdf" "algo" 1731526177.73483 0
+  "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -202,12 +202,12 @@
   "/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1636152094 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb" 1636152094 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1729636218.96856 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1729636444 8214445 9b12922370acf71d34fba59262adf24e ""
-  "Chapters/Complexity Analysis Basics.tex" 1731283240.07462 8682 7481a7251c37b43e37c6a3321e7a67f4 ""
-  "Chapters/Introduction.tex" 1731191117.24449 5977 fedace4c8adbd50a1c336ca640f4bffc ""
-  "algo.aux" 1731283245.29971 489 41965354a9a8b4e9f09c0734a0ebbd3b "pdflatex"
-  "algo.tex" 1731283080.53493 1277 6351335b220d856320f9855204dc7de9 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1731402170.33574 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1731402230 8212896 b2d3a67526ed46e54375dd7fb267ffaf ""
+  "Chapters/Complexity Analysis Basics.tex" 1731396714.6427 8682 7481a7251c37b43e37c6a3321e7a67f4 ""
+  "Chapters/Introduction.tex" 1731396714.6427 5977 fedace4c8adbd50a1c336ca640f4bffc ""
+  "algo.aux" 1731526177.6324 489 8b3f169fed5b921c43569eec256e450a "pdflatex"
+  "algo.tex" 1731526160.64891 1880 6267ffbaf590c5edae49ff520184aa02 ""
   (generated)
   "algo.aux"
   "algo.log"

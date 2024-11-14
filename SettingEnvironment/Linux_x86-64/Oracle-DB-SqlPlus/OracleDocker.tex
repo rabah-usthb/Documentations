@@ -8,6 +8,21 @@
 \usepackage[a4paper, paperwidth=25.5cm, paperheight=24cm, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 \usepackage{tikz,tcolorbox}
 
+\tcbuselibrary{skins, breakable, theorems}
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   
+  colframe=#2!60!black,  
+  coltitle=white,        
+  fonttitle=\bfseries\Large,
+  title=#1,              
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, 
+}
+
+
+
 \begin{document}
 \section{Introduction : }
 This guide aims to help users easily download and set up Oracle Database using Docker on Linux.
@@ -16,46 +31,47 @@ This guide aims to help users easily download and set up Oracle Database using D
 \subsection{Installing git}
 
 \vspace{0.25cm}
-\begin{tcolorbox}[title = Arch Based]
+\begin{prettyBox}{Arch Based}{blue}
     \begin{verbatim}
 sudo pacman -Sy git
     \end{verbatim}
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.5cm}
-\begin{tcolorbox}[title = Debian And Ubuntu Based]
+
+\begin{prettyBox}{Debian And Ubuntu Based}{blue}
     \begin{verbatim}
 sudo apt install git
     \end{verbatim}
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.25cm}
 \subsection{Installing Docker}
 
 \vspace{0.25cm}
-\begin{tcolorbox}[title = Arch Based]
+\begin{prettyBox}{Arch Based}{blue}
     \begin{verbatim}
 sudo pacman -S docker
    \end{verbatim}
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.5cm}
-\begin{tcolorbox}[title = Debian and Ubuntu Based]
+\begin{prettyBox}{Debian and Ubuntu Based}{blue}
     \begin{verbatim}
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu \$(lsb\_release -cs) stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt update
 sudo apt install docker-ce
  \end{verbatim}
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.25cm}
 \subsection{Installing SqlDeveloper}
 While installing sqldeveloper is optional , it allows for a better experience since sqlplus prompt terminal
 has issues with arrow keys not functionning
 
-\begin{tcolorbox}[title = Arch Based]
+\begin{prettyBox}{Arch Based}{blue}
 \textbf{\underline{Requirement:}} we need to install the yay package 
 
     \begin{verbatim}
@@ -64,10 +80,10 @@ cd yay/
 makepkg -si
 yay -S oracle-sqldeveloper
     \end{verbatim}
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.5cm}
-\begin{tcolorbox}[title = Debian and Ubuntu Based]
+\begin{prettyBox}{Debian and Ubuntu Based}{blue}
 
 
 \vspace{0.25cm}
@@ -93,32 +109,32 @@ sudo alien -k sqldeveloper-24.3.0-284.2209.noarch.rpm
 sudo dpkg -i sqldeveloper_24.3.0-284.2209_all.deb 
 \end{verbatim}
 
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.5cm}
-\begin{tcolorbox}[title = Running Sqldeveloper]
+\begin{prettyBox}{Running Sqldeveloper}{blue}
     \begin{verbatim}
 sqldeveloper
     \end{verbatim}
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.25cm}
 \section{Docker : }
 \subsection{Start Docker :}
 
 \vspace{0.25cm}
-\begin{tcolorbox}[title = starting docker]
+\begin{prettyBox}{starting docker}{blue}
 \begin{verbatim}
 sudo systemctl start docker
 sudo systemctl enable docker
 \end{verbatim}
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.25cm}
 \subsection{Building Oracle Container Image :}
 
 \vspace{0.25cm}
-\begin{tcolorbox}[title = Pulling oracle-xe]
+\begin{prettyBox}{Pulling oracle-xe}{blue}
 Clone the docker oracle images into your local folder then navigate to the docker-images/OracleDatabase/
 SingleInstance/dockerfiles/
 folder use ls to print all the available versions and run the shell script and give it the version as parameter
@@ -127,21 +143,22 @@ git clone https://github.com/oracle/docker-images.git
 cd docker-images/OracleDatabase/SingleInstance/dockerfiles/
 ls
 11.2.0.2  12.1.0.2  12.2.0.1  18.3.0  18.4.0  19.3.0  21.3.0  23.5.0  buildContainerImage.sh
-./buildContainerImage.sh -v <version> -x
-./buildContainerImage.sh -v 18.4.0 -x 
+sudo ./buildContainerImage.sh -v <version> -x
+sudo ./buildContainerImage.sh -v 18.4.0 -x 
 \end{verbatim}
 
-\end{tcolorbox}
+\end{prettyBox}
+
 
 \vspace{0.5cm}
-\begin{tcolorbox}[title = Note]
+\begin{prettyBox}{Note}{blue}
 When running the buildContainerImage.sh make sure no docker container is running as it can lead to the script
 not running 
 \begin{verbatim}
     sudo docker ps 
     sudo docker stop <container_id>
 \end{verbatim}
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.25cm}
 \subsection{Starting Oracle Container And Executing It :}
@@ -150,7 +167,7 @@ then we will fetch the sysdba password using the logs command after that we can 
 by running sqlplus inside the minimalistic docker terminal or use sqldeveloper for better experience 
 
 \vspace{0.25cm}
-\begin{tcolorbox}[title = Container Instance Creation]
+\begin{prettyBox}{Container Instance Creation}{blue}
 
 \begin{verbatim}
 sudo docker run -i -t -d --hostname <hostName> --name <containerName> -p 1521:1521
@@ -159,10 +176,14 @@ sudo docker run -i -t -d --hostname ora18xe --name ora18xe -p 1521:1521
 -v ~/Docker/shared/:/shared oracle/database:18.4.0-xe
 \end{verbatim}
 
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.5cm}
-\begin{tcolorbox}[title = Fetch Oracle Password]
+\begin{prettyBox}{Initialize Data Base And Fetch Logs}{blue}
+We have to initialize the oracle data base by running the logs command it will
+set up the data base and give the logs (password , username) , just make sure
+to let the command finish as it takes some time , you can stop the process
+with ctrl+c after you see "Completed: ALTER PLUGGABLE DATABASE XEPDB1 SAVE STATE"
 \begin{verbatim}
 sudo docker logs <containerName> -f
 sudo docker logs ora18xe -f
@@ -170,9 +191,10 @@ sudo docker logs ora18xe -f
 ORACLE PASSWORD FOR SYS AND SYSTEM: 22cc7d22227cdd38
 
 \end{verbatim}
-\end{tcolorbox}
+\end{prettyBox}
+
 \vspace{1cm}
-\begin{tcolorbox}[title= Connecting As SYSDBA and Creating PDB]
+\begin{prettyBox}{Connecting As SYSDBA and Creating PDB}{blue}
 We will first connect to XE as sysdba to be able to create and mount the PDB note that all of that can be done
 within sqldeveloper
 
@@ -202,10 +224,10 @@ exit;
 sqlplus rabah/1234@//ora18xe:1521/tp_3bdd
 
 \end{verbatim}
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.5cm}
-\begin{tcolorbox}[title = Note]
+\begin{prettyBox}{Note}{blue}
 We create the instance of the docker oracle image once then we can start and stop the instance as much as we want :
 \begin{verbatim}
 sudo docker start <containerName>
@@ -214,5 +236,5 @@ sudo docker stop <containerName>
 sudo docker start ora18xe
 sudo docker stop ora18xe
 \end{verbatim}
-\end{tcolorbox}
+\end{prettyBox}
 \end{document}
