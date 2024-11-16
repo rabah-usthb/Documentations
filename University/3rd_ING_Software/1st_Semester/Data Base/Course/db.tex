@@ -1,9 +1,12 @@
 \documentclass{article}
-\usepackage[a4paper, paperwidth=25cm, paperheight=25cm, left=1.5cm, right=1.5cm, top=1.5cm, bottom=2cm]{geometry}
+\usepackage[a4paper, paperwidth=25cm, paperheight=25.5cm, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
 \usepackage{tikz,tcolorbox}
 \usepackage{amsmath}
-\usepackage{xcolor}
+\usepackage[table,xcdraw]{xcolor}
 \usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
 \setlength{\parindent}{0pt}
 
 \lstset{
@@ -23,6 +26,8 @@
 
 \definecolor{commentgray}{HTML}{676160}
 \definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
 \tcbuselibrary{skins, breakable, theorems}
 
 
@@ -38,13 +43,15 @@
   drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
 }
 
+\setcellgapes{2pt}  % Adjust padding as needed
+\makegapedcells
+
+
 \begin{document}
-
-% Use the prettyBox environment with mandatory title and color parameters
-\begin{prettyBox}{prettytitle}{green}
-    This is the content inside the pretty box.
-\end{prettyBox}
-
+\renewcommand{\arrayrulewidth}{0.75mm} % Set line thickness
+\setlength{\tabcolsep}{10pt} % Set horizontal padding
+\renewcommand{\arraystretch}{1} % Set vertical padding (1.0 is default)
+\arrayrulecolor{myblue!70!black}
 \input{Chapters/DataType.tex}
 \input{Chapters/Classification.tex}
 \input{Chapters/DDL.tex}

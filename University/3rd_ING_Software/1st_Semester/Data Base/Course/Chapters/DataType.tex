@@ -1,99 +1,219 @@
 \section{Data Types}
+
+
+\begin{prettyBox}{Data Type}{myblue}
+Data types enforce integrity constraints on columns in a database. There are many data types
+available, but we will focus on the most commonly used ones.
+\end{prettyBox}
+
+\subsection{Number}
+
+\begin{prettyBox}{Number}{myblue}
+Number is a generic data type that allows for  numerical value : real and integer numbers 
+and we can decide the floating point and size :
 \begin{itemize}
-    \item Number  :
-    \item Char :
-        \begin{itemize}
-            \item Char 
-            \item Varchar
-            \item Varchar2
-            \item
-            \item
-        \end{itemize}
-    \item Date :
-    \item Long :
-    \item Raw : 
-        \begin{itemize}
-            \item Blob :
-            \item Clob : 
-            \item Nclob :
-        \end{itemize}
-    \item Row ID : 
+    \item Number : stores large values of integer and decimal numbers 
+    \item Number(p) : represent an integer number where p is max number of digits , p \(\in\)[1,38]
+    \item Number(p,s) : p represent number of total digit p \(\in\)[1,38] , s: represent scale
+number of digits after decimal point , s \(\in\)[0,p-1]
 \end{itemize}
 
+it has some sub types like Integer which is \(\Leftrightarrow\) Number(38)
+\end{prettyBox}
+\subsection*{\underline{Examples :}}
+
 \begin{center}
-\begin{tikzpicture}
-    \draw (0,0) rectangle (22,1.5);
-    \node at (11,0.75) {DATA TYPE};
-
-    \draw[->] (1.5,0) -- (1.5,-2);
-
-    \draw (0.5,-3) rectangle (2.5,-2);
-    \node at (1.5,-2.5) {Number};
-
-    \draw[->] (5.5,0) -- (5.5,-2);
-
-    \draw(4.5,-3) rectangle (6.5,-2);
-    \node at (5.5,-2.5) {CHAR};
-
-    \draw[->] (5.5,-3) -- (5.5,-4.25) -- (6,-4.25);
-    
-    \draw (6,-4.75) rectangle (8.5,-3.75);
-    \node at (7.25,-4.25) {Char};
-
-    \draw[->] (5.5,-4.25) -- (5.5,-6) -- (6,-6);
-    
-    \draw (6,-6.5) rectangle (8.5,-5.5);
-    \node at (7.25,-6) {Varchar2};
-
-    \draw[->] (5.5,-6) -- (5.5,-7.75) -- (6,-7.75);
-    
-    \draw (6,-8.25) rectangle (8.5,-7.25);
-    \node at (7.25,-7.75) {Varchar};
-
-    \draw[->] (5.5,-7.75) -- (5.5,-9.5) -- (6,-9.5);
-    
-    \draw (6,-10) rectangle (8.5,-9);
-    \node at (7.25,-9.5) {Ncharvarchar2};
-
-    \draw[->] (5.5,-9.5) -- (5.5,-11.25) -- (6,-11.25);
-    
-    \draw (6,-11.75) rectangle (8.5,-10.75);
-    \node at (7.25,-11.25) {NVarChar2};
-
-    \draw[->] (10,0) -- (10,-2);
-
-    \draw(9,-3) rectangle (11,-2);
-    \node at (10,-2.5){Long};
-
-    \draw[->] (13.5,0) -- (13.5,-2);
-
-    \draw(12.5,-3) rectangle (14.5,-2);
-    \node at (13.5,-2.5){Date};
-
-    \draw[->] (17,0) -- (17,-2);
-
-    \draw(16,-3) rectangle (18,-2);
-    \node at (17,-2.5){RAW};
-
-    \draw[->] (17,-3) -- (17,-5.25) -- (17.5,-5.25);
-    
-    \draw(17.5,-5.75) rectangle (20,-4.75);
-    \node at (18.75,-5.25){BLOB};
-
-    \draw[->] (17,-5.25) -- (17,-7.25) -- (17.5,-7.25);
-    
-    \draw(17.5,-7.75) rectangle (20,-6.75);
-    \node at (18.75,-7.25){CLOB};
-
-    \draw[->] (17,-7.25) -- (17,-9.25) -- (17.5,-9.25);
-    
-    \draw(17.5,-9.75) rectangle (20,-8.75);
-    \node at (18.75,-9.25){NCLOB};
-   
-    \draw[->] (20.25,0) -- (20.25,-2);
-
-    \draw(19.25,-3) rectangle (21.25,-2);
-    \node at (20.25,-2.5) {ROW ID};
-
-\end{tikzpicture}
+\begin{tabular}{|c|c|c|}
+    \hline
+    Definition & Input & Stored As \\
+    \hline
+    NUMBER  & \makecell{124.56\\-99999\\44343} & \makecell{12.56\\-99999\\44343} \\
+    \hline
+    NUMBER(5) & \makecell{17.5\\123456\\44300} & \makecell{18\\Error\\44300} \\
+    \hline
+    NUMBER(3) & \makecell{99.3\\-677.9\\5432} & \makecell{99\\678\\Error}\\
+    \hline
+    INTEGER  & \makecell{16.89\\-234532\\13.1} & \makecell{17\\-234532\\13} \\
+    \hline
+    INTEGER(2)  &   \makecell{234.9\\10.4\\-20} & \makecell{Error\\10\\-20}    \\
+    \hline
+    INTEGER(4)  &  \makecell{1240\\932.82\\-32330} & \makecell{1240\\933\\Error}  \\
+    \hline
+    NUMBER(6,2)  &  \makecell{34670.56\\-9890.98\\23.232} & \makecell{Error\\-9890.98\\23.23}  \\
+    \hline
+    NUMBER(5,3) &  \makecell{24.1562\\99\\343.77} & \makecell{24.156\\99.000\\Error} \\
+    \hline
+\end{tabular}
 \end{center}
+
+\begin{prettyBox}{Note}{red}
+s can be \(>\) p , i just didn't want to include that case as it can be confusing and is rarely used
+\end{prettyBox}
+
+
+
+\subsection{Date}
+
+\begin{prettyBox}{Date}{myblue}
+Date is a data type that stores both the date and the time it accept a wide range of format
+and has many function  
+\end{prettyBox}
+
+
+\subsubsection{Format}
+\begin{center}
+ \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|}
+        \hline
+        Format & Example\\
+        \hline
+        YYYY-MM-DD & 2024-12-01 \\
+        \hline
+        DD-MON-YYYY & 30-NOV-2022\\
+        \hline
+        YYYY/MM/DD & 2000/04/19\\
+        \hline
+        HH24:MI:SS & 14:34:21\\
+        \hline
+        HH12:MI:SS AM/PM & 07:45:15 AM\\
+        \hline
+        YYYY-MM-DD HH24:MI:SS & 2021-01-30 22:50:10\\
+        \hline 
+        YYYY-MM-DD HH12:MI:SS AM/PM & 2014-03-19 1:21:45 PM\\
+        \hline
+    \end{tabular}
+\end{center}
+
+
+\subsubsection{Function}
+
+\begin{center}
+
+ \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|l|}
+    \hline
+    Fonction & \makecell{Definition}\\
+    \hline
+    SYSDATE & \makecell[l]{returns the current date and time of the machine running the oracle date base(server)\\ in the format YYYY-MM-DD HH24:MI:SS} \\
+    \hline
+    CURRENT\_DATE & \makecell[l]{returns the current date and time of the user machine connecting to the oracle date base\\ in the format YYYY-MM-DD HH24:MI:SS} \\
+    \hline
+    TO\_DATE(string , format) & \makecell[l]{converts a string into date in the given format}\\
+    \hline
+    TO\_CHAR(date , format) & \makecell[l]{converts a date into a formatted (given format) string}\\
+    \hline
+    ADD\_MONTHS(date , n) & \makecell[l]{returns a date which it adds/substracts n months to the given date}\\
+    \hline
+    MONTHS\_BETWEEN (date1 , date2) & \makecell[l]{returns an integer number that represents number of months between date1 and date2}\\
+    \hline
+    NEXT\_DAY(date , day\_of\_week) & \makecell[l]{returns date of the next given day string ('SUNDAY', 'MONDAY'...etc) starting to\\ search from the given date}\\
+    \hline
+    EXTRACT(field FROM date) & \makecell[l]{returns an integer number that represents the given field (MONTH , YEAR, DAY ,\\ HOUR , MINUTE , SECOND , WEEK ...etc) from given date} \\
+    \hline
+\end{tabular}
+\end{center}
+
+\begin{prettyBox}{Note}{red}
+When inserting a date in a table using TO\_DATE it doesn't matter which format we use , we can use any format we
+want and the same thing is valid when needing to print a date usin TO\_CHAR , because oracle stores the data object not
+the format in insert
+\end{prettyBox}
+
+\subsection{Char}
+
+\begin{prettyBox}{Char}{myblue}
+Char(len) stores string of len size , if the inputed string is smaller than the definition
+oracle will pad it with space char , len \(\in\)[1,2000]
+\end{prettyBox}
+
+\subsection{VARCHAR2}
+
+\begin{prettyBox}{Varchar2}{myblue}
+Varchar2(len) stores string of len size , if the inputed string is smaller than the definition
+oracle will store it without any padding , in older version len \(\in\)[1,4000] but in more recent
+version len \(\in\)[1,32767] 
+\end{prettyBox}
+
+
+
+\subsubsection{Function}
+
+\begin{center}
+ 
+ \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|}
+        \hline
+        Fonction & Definition\\
+        \hline
+        LENGTH(string) & \makecell[l]{returns intger : length of given string}\\
+        \hline
+        TRIM(string) & \makecell[l]{returns string : removes all leading/trailling spaces}\\
+        \hline
+        TRIM(char FROM string) & \makecell[l]{returns string : removes all char that are in the beginning or end of given string}\\
+        \hline
+        UPPER(string) & \makecell[l]{returns string : convert all characters of the given string to upper case}\\
+        \hline
+        LOWER(string) & \makecell[l]{returns string : convert all characters of the given string to lower case}  \\
+        \hline
+        CONCAT(string1,string2) & \makecell[l]{returns string : concat string1 with string2}\\
+        \hline
+        SUBSTR(string,i,j) & \makecell[l]{returns string : extract substring from given string from index i to index j}\\
+        \hline
+        REPLACE(string,sub\_string,replace\_string) & \makecell[l]{returns string : replace all occurences of sub\_string in the given string with \\replace\_string , not case sensitive}\\
+        \hline
+        LPAD(string,nb,char) & \makecell[l]{returns string : pads the given string to the left Length(string)-nb times with given char}\\
+        \hline
+        RPAD(string,nb,char) & \makecell[l]{returns string : pads the given string to the right Length(string)-nb times with given char} \\
+        \hline
+       INSTR(string,sub\_string) & \makecell[l]{returns integer : find the index of the first occurence of sub\_string in the given string\\if sub string doesn't exist returns 0}\\
+        \hline 
+   \end{tabular}
+\end{center}
+
+\subsubsection*{\underline{Example :}}
+
+\begin{center}
+    
+\renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|}
+        \hline
+        Fonction Call & Output\\
+        \hline
+        LENGTH('Hello World') & 11 \\
+        \hline
+        TRIM('   Hello  World   ') & 'Hello  World'\\
+        \hline
+        TRIM('!' FROM '!!!! Hello  World  !!!!!!') & ' Hello  World  ' \\
+        \hline
+        UPPER('Hello World') &  'HELLO WORLD'\\
+        \hline
+        LOWER('HeLlO WorLd') & 'hello world'\\
+        \hline
+        CONCAT('hello ','world!') & 'hello world!'\\
+        \hline
+        SUBSTR('I Love Java',8,11) & 'Java'\\
+        \hline
+        REPLACE('Hello world , I missed you world','world','toto') & Hello toto , I missed you toto\\
+        \hline
+        LPAD('hello',10,'*') & '*****hello'\\
+        \hline
+        RPAD('world',11,'*') & 'world******' \\
+        \hline
+        LPAD('toto',4,'*') & 'toto'\\
+        \hline
+        INSTR('I Hate Javascript','Java') & 8\\
+        \hline
+        INSTR('I Hate Javascript','Python') & 0\\
+        \hline 
+   \end{tabular}
+
+\end{center}
+
+\begin{prettyBox}{Note}{red}
+  \textbf{\underline{Difference between CHAR and VARCHAR2}:} CHAR will take up the full specified size, even if not all space is used, and will pad the value with spaces until it reaches the full size. 
+In contrast, VARCHAR2 only stores the exact amount of space needed for the data, without padding with spaces.
+
+\vspace{0.25cm}
+\underline{\textbf{Strings are 1-based}(first index is 1)}
+\end{prettyBox}
+

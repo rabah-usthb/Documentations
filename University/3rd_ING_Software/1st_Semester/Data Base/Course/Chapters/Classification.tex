@@ -1,31 +1,104 @@
 \section{Classification Of SQL Statement}
-\begin{itemize}
-    \item DDL :
-    \begin{itemize}
-        \item Create :
-        \item Alter : 
-        \item Drop :
-        \item Truncate :
-        \item Rename : 
-    \end{itemize}
-    
-    \item DRL/SQL :
-    \item DML :
-      \begin{itemize}
-        \item Insert :
-        \item Update :
-        \item Delete :
-      \end{itemize}
-    \item DCL :
-    \begin{itemize}
-        \item Grant :
-        \item Revoke :
-    \end{itemize}
+\begin{center}
+\begin{tikzpicture}
+    \draw (0,0) rectangle (22,1.5);
+    \node at (11,0.75) {\large{Classification Of SQL Statement}};
 
-    \item TCL :
-    \begin{itemize}
-        \item Commit :
-        \item Rollback :
-        \item SavePoint :
-    \end{itemize}
-\end{itemize}
+    \draw[->] (1.5,0) -- (1.5,-2);
+
+    \draw (0.5,-3) rectangle (2.5,-2);
+    \node at (1.5,-2.5) {DRL};
+
+    \draw[->] (4.5,0) -- (4.5,-2);
+
+    \draw(3.5,-3) rectangle (5.5,-2);
+    \node at (4.5,-2.5) {DDL};
+
+    \draw[->] (4.5,-3) -- (4.5,-4.25) -- (5,-4.25);
+    
+    \draw (5,-4.75) rectangle (7.5,-3.75);
+    \node at (6.25,-4.25) {Create};
+
+    \draw[->] (4.5,-4.25) -- (4.5,-6) -- (5,-6);
+    
+    \draw (5,-6.5) rectangle (7.5,-5.5);
+    \node at (6.25,-6) {Alter};
+
+    \draw[->] (4.5,-6) -- (4.5,-7.75) -- (5,-7.75);
+    
+    \draw (5,-8.25) rectangle (7.5,-7.25);
+    \node at (6.25,-7.75) {Drop};
+
+    \draw[->] (4.5,-7.75) -- (4.5,-9.5) -- (5,-9.5);
+    
+    \draw (5,-10) rectangle (7.5,-9);
+    \node at (6.25,-9.5) {Truncate};
+
+    \draw[->] (4.5,-9.5) -- (4.5,-11.25) -- (5,-11.25);
+    
+    \draw (5,-11.75) rectangle (7.5,-10.75);
+    \node at (6.25,-11.25) {Rename};
+
+
+
+    \draw(8.5,-3) rectangle (10.5,-2);
+    \draw[->] (9.5,0) -- (9.5,-2);
+    \node at (9.5,-2.5) {DML};
+
+
+    \draw[->] (9.5,-3) -- (9.5,-4.25) -- (10,-4.25);
+
+    \draw (10,-4.75) rectangle (12.5,-3.75);
+    \node at (11.25,-4.25) {Insert};
+
+    \draw[->] (9.5,-4.25) -- (9.5,-6) -- (10,-6);
+    
+    \draw (10,-6.5) rectangle (12.5,-5.5);
+    \node at (11.25,-6) {Update};
+
+    \draw[->] (9.5,-6) -- (9.5,-7.75) -- (10,-7.75);
+    
+    \draw (10,-8.25) rectangle (12.5,-7.25);
+    \node at (11.25,-7.75) {Delete};
+
+
+
+    \draw[->] (14.5,0) -- (14.5,-2);
+
+    \draw(13.5,-3) rectangle (15.5,-2);
+    \node at (14.5,-2.5){DCL};
+
+
+    \draw[->] (14.5,-3) -- (14.5,-4.25) -- (15,-4.25);
+
+    \draw (15,-4.75) rectangle (17.5,-3.75);
+    \node at (16.25,-4.25) {Grant};
+
+    \draw[->] (14.5,-4.25) -- (14.5,-6) -- (15,-6);
+    
+    \draw (15,-6.5) rectangle (17.5,-5.5);
+    \node at (16.25,-6) {Revoke};
+
+
+    \draw[->] (19.25,0) -- (19.25,-2);
+    \draw(18.25,-3) rectangle (20.25,-2);
+    \node at (19.25,-2.5) {ROW ID};
+
+    \draw[->] (19.25,-3) -- (19.25,-4.25) -- (19.75,-4.25);
+
+    \draw (19.75,-4.75) rectangle (22.25,-3.75);
+    \node at (21,-4.25) {Commit};
+
+    \draw[->] (19.25,-4.25) -- (19.25,-6) -- (19.75,-6);
+    
+    \draw (19.75,-6.5) rectangle (22.25,-5.5);
+    \node at (21,-6) {RollBack};
+
+\draw[->] (19.25,-6) -- (19.25,-7.75) -- (19.75,-7.75);
+    
+    \draw (19.75,-8.25) rectangle (22.25,-7.25);
+    \node at (21,-7.75) {Save Point};
+
+
+\end{tikzpicture}
+\end{center}
