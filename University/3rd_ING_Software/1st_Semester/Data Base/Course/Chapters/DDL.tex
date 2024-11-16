@@ -1,47 +1,39 @@
 \section{DDL Commands}
 \subsection{Create Table}
-\begin{tcolorbox}[title = Definition]
+\begin{prettyBox}{Table Creation}{myblue}
 To create a table in oracle sql we just have to give the table a name and define each column known as attribut
 by giving each of them a name , a dataType and an optional constraint that can be added in same line of
 attribut definition or on its own line , we will see contraint in details in the next section
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.5cm}
 \subsubsection*{\underline{Syntax :}}
-\begin{tcolorbox}[title = Table Creation]
 
-\textcolor{blue}{create table} \textless table\_name\textgreater (\\
-\textless attribute$_{1}$\textgreater \quad \textless DataType$_{1}$\textgreater \quad {[Constraint$_{1}$]},\\
-\textless attribute$_{2}$\textgreater \quad \textless DataType$_{2}$\textgreater \quad {[Constraint$_{2}$]},\\
-....................................................................\\
-\textless attribute$_{n}$\textgreater \quad \textless DataType$_{n}$\textgreater \hspace{0.15cm} {[Constraint$_{n}$]},\\
-{[table contraints]}\\
-);
-\end{tcolorbox}
+\lstinputlisting{SQL/syntax/DDL/create.sql}
+
 
 \vspace{0.5cm}
 \subsubsection*{Example :} let's create student table 
-\begin{lstlisting}
-    create table student (
-    id number,
-    firstname varchar2(50),
-    lastname varchar2(50),
-    grade number(2,2)
-    );
-\end{lstlisting}
+
+\lstinputlisting{SQL/examples/DDL/createStudent.sql}
 
 \subsection{Table Constraints}
-\begin{tcolorbox}[title = Definition]
+
+\begin{prettyBox}{Constraints}{myblue}
 Constraints are conditions set on the columns (attributes) of a table to ensure data integrity and consistency. Constraints can be defined:
 \begin{itemize}
-    \item During table creation, either on the same line as the attribute definition or on a separate line
+    \item During table creation, either on the same line as the attribute definition(inline) or on a separate line(out-of-line)
     \item After table creation using the ALTER TABLE command
 \end{itemize}
 
 There are two types of constraints: static and dynamic.
-\subsubsection*{\underline{Static Constraints}} Static constraints are fixed conditions that do not change based on data input.
+\end{prettyBox}
 
+\subsubsection{\underline{Static Constraints}}
+\begin{prettyBox}{Static}{myblue}
+Static constraints are fixed conditions that do not change based on data input.
 \begin{itemize} 
+\item \textbf{Data Type} : Ensures Integrity of the column
 \item \textbf{NOT NULL}: Ensures that the attribute must have a value when inserting into the table.
 \item \textbf{UNIQUE}: Ensures that each value in the attribute is distinct. Unlike PRIMARY KEY, it allows null values.
 \item \textbf{PRIMARY KEY}: Combines UNIQUE and NOT NULL properties to ensure each value is unique and not null.
@@ -50,135 +42,105 @@ Used to identify rows uniquely.
 \item \textbf{DELETE ON CASCADE}: When deleting a row from the referenced (parent) table, all rows in the child table 
 that contain the matching foreign key are also deleted.
 \end{itemize}
-\subsubsection*{\underline{Dynamic Constraints}} Dynamic constraints apply conditions that can change based on specified criteria.
+\end{prettyBox}
 
+\subsubsection{\underline{Dynamic Constraints}}
+
+\begin{prettyBox}{Dynamic}{myblue}
+Dynamic constraints apply conditions that can change based on specified criteria.
 \begin{itemize} 
 \item \textbf{CHECK}: Validates a specified condition before allowing data to be inserted or updated. 
 \item \textbf{DEFAULT}: Sets a default value for the attribute if no value is provided during insertion. 
+\item \textbf{TRIGGER}: Acts like a call back function , a block of code that gets executed automatically when 
+defined event is triggered
 \end{itemize}
-\end{tcolorbox}
+\end{prettyBox}
+
 \subsubsection*{\underline{Syntax}}
-\begin{tcolorbox}[title = Inline Constraint]
-\textless attribute$_{i}$\textgreater \, \textless DataType$_{i}$\textgreater \, \textcolor{blue}{not null} \\
-\textless attribute$_{i}$\textgreater \, \textless DataType$_{i}$\textgreater \, \textcolor{blue}{unique} \\
-\textless attribute$_{i}$\textgreater \, \textless DataType$_{i}$\textgreater \, \textcolor{blue}{primary key} \\
-\textless attribute$_{i}$\textgreater \, \textless DataType$_{i}$\textgreater \, \textcolor{blue}{references} \, referenced\_table(references\_attribute) \\
-\textless attribute$_{i}$\textgreater \, \textless DataType$_{i}$\textgreater \, \textcolor{blue}{default} (value) \\
-\end{tcolorbox}
 
-\begin{tcolorbox}[title = Outline Constraint]
-\textcolor{blue}{constraint} \, \textless contraint\_name\textgreater \, \textless attribute$_{i}$\textgreater \, \textcolor{blue}{not null} \\
-\textless attribute$_{i}$\textgreater \, \textcolor{blue}{not null} \\
+\lstinputlisting{SQL/syntax/DDL/inline.sql}
 
-\textcolor{blue}{constraint} \, \textless contraint\_name\textgreater \, \textless attribute$_{i}$\textgreater \, \textcolor{blue}{unique} \\
-\textless attribute$_{i}$\textgreater \, \textcolor{blue}{unique} \\
+\lstinputlisting{SQL/syntax/DDL/outline.sql}
 
-\textcolor{blue}{constraint} \, \textless contraint\_name\textgreater \, \textless attribute$_{i}$\textgreater \, \textcolor{blue}{primary key} \\
-\textcolor{blue}{primary key} (attribute$_{1}$ ,..., attribute$_{n}$) \\
-
-\textcolor{blue}{constraint} \, \textless contraint\_name\textgreater \, \textcolor{blue}{foreign key} \, \textless attribute$_{i}$\textgreater \, \textcolor{blue}{references} \, referenced\_table(references\_attribute)\\
-\textcolor{blue}{foreign key} \, \textless attribute$_{i}$\textgreater \, \textcolor{blue}{references} \, referenced\_table(references\_attribute) \\
-
-\textcolor{blue}{constraint} \, \textless contraint\_name\textgreater \, \textless attribute$_{i}$\textgreater \, \textcolor{blue}{default} (value) \\
-\textless attribute$_{i}$\textgreater \, \textcolor{blue}{default} (value) \\
-
-\end{tcolorbox}
 \subsubsection*{\underline{Example :}}
 let's create a new table section and recreate the student table with constraints\\\\
 \textbf{Creating Section Table}\\\\
 \textbf{Inline Method}
-\begin{lstlisting}
-    create table section (
-    id_section number primary key,
-    name varchar2(5) not null
-    );
-\end{lstlisting}
+
+\lstinputlisting{SQL/examples/DDL/sectionInline.sql}
+
 \textbf{Outline Method}
-\begin{lstlisting}
-    create table section (
-    id_section number,
-    name varchar2(5),
-    name not null,
-    constraint pk_sec primary key (id_section)
-    );
-\end{lstlisting}
+
+\lstinputlisting{SQL/examples/DDL/sectionOutline.sql}
+
 
 \textbf{Create Student Table}\\
 \textbf{Inline Method}
-\begin{lstlisting}
-    create table student (
-    id number primary key,
-    lastname varchar2(50) not null,
-    firstname varchar2(50) not null,
-    id_section number references section(id_section) on delete cascade,
-    grade number(4,2) default 00.00 check (grade between 0 and 20),
-    dob date not null check (dob<= add_months(sysdate,-18*12))
-    );
-\end{lstlisting}
+
+\lstinputlisting{SQL/examples/DDL/studentInline.sql}
 
 \textbf{Outline Mehtod}
-\begin{lstlisting}
-    create table student (
-    id number,
-    constraint pk_student primary key(id),
-    lastname varchar2(50),
-    firstname varchar2(50),
-    constraint nn_student_lastname lastname not null,
-    constraint nn_student_firstname firstname not null,
-    id_section number,
-    constraint fr_student foreign key (id_section) references section(id_section) on delete cascade,
-    grade number(4,2),
-    grade default 00.00,
-    constraint chk_student_grade check (grade between 0 and 20),
-    dob date not null,
-    constraint chk_student_dob check (dob<= add_months(sysdate,-18*12))
-    );
-\end{lstlisting}
 
-\begin{tcolorbox}[title = Note]
-    \textbf{Name Convention Of Constraint}
-    \begin{itemize}
+\lstinputlisting{SQL/examples/DDL/studentOutline.sql}
+
+\begin{prettyBox}{Naming Convention Of Constraints}{myblue}
+  \begin{itemize}
         \item Primary Key : PK\_\textless tableName\textgreater  
         \item Foreign Key : FK\_\textless tableName\textgreater
         \item Unique : UQ\_\textless tableName\textgreater\_\textless columnName\textgreater
         \item Check : CHK\_\textless tableName\textgreater\_\textless columnName\textgreater
         \item Default : DF\_\textless tableName\textgreater\_\textless columnName\textgreater
         \item Not Null : NN\_\textless tableName\textgreater\_\textless columnName\textgreater
-    \end{itemize}
-    \textbf{Constraint Name Must Be Unique}\\
-    Tables inside the same PDB (pluggable data base) can't share the same constraints name\\
-    \textbf{Multiple Constraints}\\
- It is possible to define multiple constraints on a single attribute using the inline method. 
+    \end{itemize}   
+\end{prettyBox}
+
+\begin{prettyBox}{Note}{red}
+
+\textbf{Constraint Name Must Be Unique}
+
+\vspace{0.15cm}
+Tables inside the same PDB (pluggable data base) can't share the same constraints name
+
+\vspace{0.25cm}
+\textbf{Multiple Constraints}
+
+\vspace{0.15cm}
+It is possible to define multiple constraints on a single attribute using the inline method. 
 However, with the outline method, each constraint needs to be specified individually.
-\end{tcolorbox}
-\subsection{Delete Table}
-\begin{tcolorbox}[title = Definition]
-    We can delete table using the drop command
-\end{tcolorbox}
-\subsubsection{\underline{Syntax}}
-\begin{tcolorbox}[title = Table Deletion]
-    \textcolor{blue}{drop table}  \textless tableName\textgreater;
-\end{tcolorbox}
-\subsubsection{\underline{Example}}
-lets delete the section table we created 
-\begin{lstlisting}
-    drop table section;
-\end{lstlisting}
-\subsection{Rename Table}
-\begin{tcolorbox}[title = Definition]
-We can rename tables by using the rename command 
-\end{tcolorbox}
+
+\end{prettyBox}
+
+
+\subsection{Drop Table}
+\begin{prettyBox}{Drop}{myblue}
+    We can remove a table using the drop command
+\end{prettyBox}
+
 \subsubsection*{\underline{Syntax}}
-\begin{tcolorbox}[title = Renaming Table]
-   rename \textless old\_tableName\textgreater to \textless new\_tableName\textgreater;
-\end{tcolorbox}
+
+\lstinputlisting{SQL/syntax/DDL/drop.sql}
+
 \subsubsection*{\underline{Example}}
-\begin{lstlisting}
-    rename section to mama;
-\end{lstlisting}
+lets delete the section table we created 
+
+\lstinputlisting{SQL/examples/DDL/sectionDrop.sql}
+
+\subsection{Rename Table}
+
+\begin{prettyBox}{Rename}{myblue}
+We can rename tables by using the rename command 
+\end{prettyBox}
+
+\subsubsection*{\underline{Syntax}}
+
+\lstinputlisting{SQL/syntax/DDL/rename.sql}
+
+\subsubsection*{\underline{Example}}
+
+\lstinputlisting{SQL/examples/DDL/sectionRename.sql}
 
 \subsection{Alter Table}
-\begin{tcolorbox}[title = Definition]
+\begin{prettyBox}{Alter}{myblue}
 The `ALTER` command is a versatile command that allows us to change various aspects of a table:
 \begin{itemize}
     \item Columns
@@ -196,52 +158,31 @@ The `ALTER` command is a versatile command that allows us to change various aspe
             \item \textbf{Disable Constraint}: Disable an already existing constraint without deleting it.
         \end{itemize}
 \end{itemize}
-\end{tcolorbox}
+\end{prettyBox}
 
 \subsubsection*{\underline{Syntax}}
-\begin{tcolorbox}[title = Columns Modification]
-\textbf{\underline{Renaming Column}}\\
-\textcolor{blue}{alter table} \textless tableName\textgreater rename \textcolor{blue}{column} \textless old\_columnName\textgreater to \textless new\_columnName\textgreater;
 
-\textbf{\underline{Modify Column}}\\
-\textcolor{blue}{alter table} \textless tableName\textgreater modify (columnName [new column definition \& constraints]);
+\subsubsection*{Columns Modification}
 
-\textbf{\underline{Add Column}}\\
-\textcolor{blue}{alter table} \textless tableName\textgreater \textcolor{blue}{add} (columnName [column definition \& constraints]);
+\lstinputlisting{SQL/syntax/DDL/colModification.sql}
 
-\textbf{\underline{Remove Column}}\\
-\textcolor{blue}{alter table} \textless tableName\textgreater \textcolor{blue}{drop column} \textless columnName\textgreater;
-\end{tcolorbox}
+\subsubsection*{Constraints}
 
-\begin{tcolorbox}[title = Constraints]
-    \textbf{\underline{Rename Constraint}}\\
-    \textcolor{blue}{alter table} \textless tableName\textgreater rename \textcolor{blue}{constraint} \textless old\_constraintName\textgreater to \textless new\_constraintName\textgreater;
+\lstinputlisting{SQL/syntax/DDL/constraints.sql}
 
-    \textbf{\underline{Add Constraint}}\\
-    \textcolor{blue}{alter table} \textless tableName\textgreater \textcolor{blue}{add constraint} \textless constraintName\textgreater [Constraint];
-    
-    \textbf{\underline{Remove Constraint}}\\
-    \textcolor{blue}{alter table} \textless tableName\textgreater \textcolor{blue}{drop constraint} \textless constraintName\textgreater;
-
-    \textbf{\underline{Enable Constraint}}\\
-    \textcolor{blue}{alter table} \textless tableName\textgreater enable \textcolor{blue}{constraint} \textless constraintName\textgreater;
-    
-    \textbf{\underline{Disable Constraint}}\\
-    \textcolor{blue}{alter table} \textless tableName\textgreater disable \textcolor{blue}{constraint} \textless constraintName\textgreater;
-\end{tcolorbox}
 \subsubsection*{\underline{Example}}
 \subsection{Truncate Table}
-\begin{tcolorbox}[title = Definition]
+\begin{prettyBox}{Truncate}{myblue}
     To remove all rows from a table efficiently we use the truncate command
-\end{tcolorbox}
+\end{prettyBox}
 
 \subsubsection*{\underline{Syntax}}
-\begin{tcolorbox}[title = Truncing Table]
-\textcolor{blue}{truncate table} \textless tableName\textgreater;
-\end{tcolorbox}
+
+\lstinputlisting{SQL/syntax/DDL/truncate.sql}
+
 
 \subsubsection*{\underline{Example}}
 lets delete all records from student table
-\begin{lstlisting}
-    truncate table student;
-\end{lstlisting}
+
+\lstinputlisting{SQL/examples/DDL/studentTruncate.sql}
+
