@@ -3,46 +3,38 @@
 
 \subsection{Insert}
 
-\begin{tcolorbox}
+\begin{prettyBox}{Insert}{myblue}
 To insert rows into a table, we use the \textcolor{blue}{INSERT} command. We can insert one row at a time or multiple rows at once from the same or different tables using the \textcolor{blue}{ALL} keyword.
-\end{tcolorbox}
+\end{prettyBox}
 
 \subsubsection*{\underline{\textbf{Syntax}}}
-\begin{tcolorbox}[title = Insert]
-\textbf{Insert One Row At A Time}\\
-\textcolor{blue}{INSERT INTO} tableName (column$_{1}$,...,column$_{n}$) \textcolor{blue}{VALUES} (value$_{1}$,...,value$_{n}$);
 
-\textbf{Insert Multiple Rows}\\
-\textcolor{blue}{INSERT ALL}\\
-\textcolor{blue}{INTO} tableName$_{1}$ (column$_{1}$,...,column$_{n}$) \textcolor{blue}{VALUES} (value$_{1}$,...,value$_{n}$);\\
-\textcolor{blue}{INTO} tableName$_{2}$ (column$_{1}$,...,column$_{n}$) \textcolor{blue}{VALUES} (value$_{1}$,...,value$_{n}$);\\
-...........................................................................\\
-\textcolor{blue}{INTO} tableName$_{n}$ (column$_{1}$,...,column$_{n}$) \textcolor{blue}{VALUES} (value$_{1}$,...,value$_{n}$);\\
-\textcolor{blue}{SELECT} * \textcolor{blue}{FROM} dual;
-\end{tcolorbox}
+\subsubsection*{\textbf{Insert Once}}
+
+\lstinputlisting{SQL/syntax/DML/insert.sql}
+
+\subsubsection*{\textbf{Insert In Multiple Tables}}
+
+\lstinputlisting{SQL/syntax/DML/insertAll.sql}
+
+\begin{prettyBox}{Note}{red}
+We don't have to precise columns names when inserting , it's optional it just makes the code more readable
+\end{prettyBox}
 
 \subsection{Update}
-\begin{tcolorbox}[title = Definition]
+\begin{prettyBox}{Update}{myblue}
 To change the values of some rows in a table, we use the \textcolor{blue}{UPDATE} command, accompanied by the \textcolor{blue}{WHERE} clause to update only specific rows.
-\end{tcolorbox}
+\end{prettyBox}
 
 \subsubsection*{\underline{\textbf{Syntax}}}
-\begin{tcolorbox}[title = Update]
-\textcolor{blue}{UPDATE} tableName \textcolor{blue}{SET} column$_{1}$ = value$_{1}$,...,column$_{n}$ = value$_{n}$\\
-\textcolor{blue}{WHERE} {[condition]};
-\end{tcolorbox}
 
+\lstinputlisting{SQL/syntax/DML/update.sql}
 \subsection{Delete} 
-\begin{tcolorbox}[title = Definition]
+
+\begin{prettyBox}{Delete}{myblue}
 To delete rows from a table, we use the \textcolor{blue}{DELETE} command, accompanied by the \textcolor{blue}{WHERE} clause to delete specific rows. Although it is possible to delete all rows using \textcolor{blue}{DELETE}, it is better to use \textcolor{blue}{TRUNCATE} for that purpose due to performance considerations.
-\end{tcolorbox}
+\end{prettyBox}
 
 \subsubsection*{\underline{\textbf{Syntax}}}
-\begin{tcolorbox}[title = Delete]
-\textbf{DELETE SPECIFIC ROWS}\\
-\textcolor{blue}{DELETE FROM} tableName \textcolor{blue}{WHERE} {[condition]};
 
-\textbf{DELETE ALL ROWS}\\
-\textcolor{blue}{DELETE FROM} tableName;
-\end{tcolorbox}
-
+\lstinputlisting{SQL/syntax/DML/delete.sql}
