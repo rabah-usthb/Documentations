@@ -132,22 +132,20 @@ In this section we will focus on Use case diagram
 
 
 \subsection{Use Case Diagram}
-A use case diagram is a graphical representation of a behavior diagram, composed of three elements:
+A use case diagram is a graphical representation of a behavior diagram, composed of three main elements:
 
 \begin{itemize} 
-    \item Actors: Actors interact with the software and can have one or multiple roles. They are represented as
-stick figures and may be: 
-        \begin{itemize} 
-            \item Human: 
-              \begin{itemize} 
-                \item Internal: People inside the company, such as employees, finance staff, and legal personnel.
-                \item External: People outside of the company, such as end-users or customers. 
-              \end{itemize} 
-            \item Non-Human: Hardware (e.g., sensors, cameras) or other software systems (e.g., APIs, DBMS) that 
-interact with the project’ssoftware. 
-      \end{itemize} 
-   \item Use Cases (Features): These represent features or functions of the software and are shown as ellipses.
-   \item Associations: Associations are the connections between actors and use cases, represented with lines. 
+    \item Actors: Actors represent roles that interact with the system. Each actor performs a set of 
+actions called use cases, which represent features of the software they interact with. Actors are
+depicted as stick figures and can be either human or non-human.
+   \begin{itemize}
+    \item Human actors: Individuals using the system.
+    \item Non-human actors: Entities such as hardware (e.g., sensors, cameras) 
+     or software (e.g., APIs, dependencies). 
+   \end{itemize}
+   \item Use Cases (Features): These represent features or functions of the software and are shown as ellipses , they have to be programmable.
+   \item Associations: Associations are the connections between actors and use cases, depicted as lines. These lines 
+indicate what action (use case) each actor can perform. 
 \end{itemize}
 
 \vspace{0.5cm}
@@ -240,8 +238,36 @@ interact with the project’ssoftware.
     \end{tikzpicture}
 \end{center}
 
-\vspace{1.5cm}
-\newpage
+\vspace{1cm}
+\begin{prettyBox}{Note}{red}
+\textbf{\underline{Internal \& External Actors : }}
+
+In a use case diagram all actors have to be internal to the software and all use cases must be
+features from the software that are programmable
+\begin{itemize}
+    \item Internal Actor : must interact with the software 
+    \item External Actor : don't interact with the software
+\end{itemize}
+
+\end{prettyBox}
+
+\begin{prettyBox}{Note}{red}
+
+\textbf{\underline{The Ideal Level Of Decomposition Of Use Cases }:}
+
+\vspace{0.2cm}
+In a use case diagram, the level of decomposition for use cases should strike a balance. It shouldn’t
+be too specific, as this can make the diagram cluttered and difficult to read, nor too generic, which
+can make it hard to understand. A moderate level of detail is ideal.
+
+\vspace{0.15cm}
+It's acceptable to leave some use cases at a more generic level without decomposing them, especially
+since the diagram is accompanied by a document that provides detailed explanations. 
+This document defines and elaborates on all sub-use cases as needed.
+
+\end{prettyBox}
+
+\vspace{1cm}
 \subsubsection{Relations In Use Case Diagram}
 \begin{itemize}
     \item  \textbf{Generalization}:  Generalization establishes a hierarchical relationship that helps organize
@@ -512,10 +538,23 @@ the balance check case will be executed if the value is \textgreater= 10000 DA
     \end{center}
 
         \vspace{1cm}
-\begin{tcolorbox}[title = Note]
- \textbf{Difference Between Inclusion \& Extension :}\\
+
+\begin{prettyBox}{Note}{red}
+\textbf{\underline{Difference Between Inclusion \& Extension }:}
+
+\vspace{0.2cm}
 In The inclusion relation the Destination case will always execute before source case in all cases , whereas
 in the extension relation the source case will execute before destination source only if certain conditions
 are met
 
-\end{tcolorbox}
+\vspace{0.25cm}
+
+\textbf{\underline{Extends With No Conditions }:}
+
+\vspace{0.2cm}
+If an extend relation doesn't have an explicit condition it just means that it's an option and
+the actor can decide wether to trigger the extended use case or not (option)
+
+\end{prettyBox}
+
+

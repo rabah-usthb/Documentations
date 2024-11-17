@@ -118,7 +118,8 @@ The Waterfall model was slightly improved by dividing some steps into two:
 \end{center}
 
 \vspace{1cm}
-\begin{tcolorbox}[title=Note]
+
+\begin{prettyBox}{Note}{red}
     \textbf{Why Architectural Design before Detailed Design?} \\
  
     We first define the high-level structure of the modules and their interactions to provide an overall system architecture.
@@ -127,7 +128,8 @@ The Waterfall model was slightly improved by dividing some steps into two:
     \textbf{Why Unit Testing before Integration Testing?} \\
 
     It is important to test each module individually to ensure that they function correctly in isolation. This helps to simplify debugging, as any issues can be pinpointed within a module, rather than confusion over whether the problem lies in the module itself or in the interaction between modules.
-\end{tcolorbox}
+\end{prettyBox}
+
 \subsubsection{Pros}
 \begin{itemize}
     \item Helps organize the project by providing a clear structure and well-defined stages.
@@ -202,10 +204,10 @@ potential issues earlier.
 \end{center}
 
 \vspace{1cm}
-\begin{tcolorbox}[title = Note]
+\begin{prettyBox}{Note}{red}
  It's important to note that while there is parallelism in the preparation for testing, the development steps themselves are 
 still executed sequentially, with no overlap.  
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.5cm}
 \subsubsection{Pros}
@@ -233,7 +235,7 @@ Once finalized, the project proceeds through the remaining steps of the chosen l
 
 
 \vspace{0.5cm}
-\begin{tcolorbox}[title = Note]
+\begin{prettyBox}{Note}{red}
     \textbf{Should We Discard the Prototype or Build Upon It?}\\
 
     The decision depends on several factors. If the prototype was quickly assembled and lacks scalability or if adding 
@@ -242,7 +244,8 @@ Once finalized, the project proceeds through the remaining steps of the chosen l
 
     However, if the prototype was designed with a solid foundation and can easily accommodate additional features,
     continuing to build on it could save time and resources.
-\end{tcolorbox}
+\end{prettyBox}
+
 \vspace{1.5cm}
 \begin{center}
     \begin{tikzpicture}
@@ -291,10 +294,11 @@ Subsequent increments, each containing additional features, are built on top of 
 client for review. This process continues iteratively, with feedback shaping the development, until the project is fully completed.
 
 \vspace{0.5cm}
-\begin{tcolorbox}[title = Note]
+
+\begin{prettyBox}{Note}{red}
     It is crucial to carefully select the first set of features when implementing the core increment. If this initial set
     is not scalable, it will be difficult for developers to add new features and continue building upon it effectively.
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{2cm}
 \begin{center}
@@ -422,7 +426,8 @@ lifeCycle$_{i}$ .This model provides the greatest flexibility among all the meth
 \end{center}
 
 \vspace{1cm}
-\begin{tcolorbox}[title = Note]
+
+\begin{prettyBox}{Note}{red}
 \textbf{Difference Between Incremental \& Spiral \& Hybrid ?}
 \begin{itemize}
     \item Hybrid: This model divides the project into \( n \) parts, each with its own life cycle. One of these life cycles
@@ -432,7 +437,8 @@ increment on the core increment.
 \item Spiral: The Spiral model follows an iterative loop structure, where each loop consists of four steps: Planning,
 Risk Analysis, Development \& Testing, and Evaluation.
 \end{itemize}
-\end{tcolorbox}
+\end{prettyBox}
+
 \subsubsection{Pros}
 \begin{itemize} 
 \item Offers significant flexibility since each part can adopt a different life cycle model tailored to its specific needs
@@ -447,9 +453,9 @@ to inconsistencies in the overall project.
 \end{itemize}
 
 \vspace{1cm}
-\begin{tcolorbox}[title = Note] 
+\begin{prettyBox}{Note}{red}
     \textbf{Difference Between The Life Cycles ?}\\
-
 All the life cycles we've reviewed so far include similar steps (activities), the differences arise in the logical and
 chronological sequencing of these activities.
-\end{tcolorbox}
+\end{prettyBox}
+
