@@ -1,0 +1,123 @@
+\section{Conception}
+
+\subsection{Introduction}
+\begin{prettyBox}{Conception Introduction}{mypur}
+Conception represents the solution to a problem, expressed through structured diagrams such as UML.
+Creating a conception is an iterative process that requires significant time and creativity.
+Initially, a solution is developed, and subsequent iterations focus on optimizing it.
+
+\vspace{0.15cm}
+Each iteration refines and expands the conception until reaching a final result that is easy to
+maintain. This ensures better implementation, facilitates adding or removing features, and 
+simplifies bug fixes.
+
+\end{prettyBox}
+
+\vspace{0.5cm}
+\begin{prettyBox}{Difference Between Conception \& UML}{red} 
+    \begin{center} 
+        \textbf{Conception $\not\Leftrightarrow$ UML} 
+     \end{center}
+UML is merely a tool used to represent the conception, it is not the conception itself. 
+Conception encompasses more than just diagrams—it includes algorithms, explanations of 
+diagrams, and other documents.
+\end{prettyBox}
+
+
+\vspace{0.5cm}
+\begin{prettyBox}{Importance of Maintainability}{red} 
+Easy maintainability is one of the key qualities of a good conception and arguably the most
+important criteria. This is because we want the software to be long-lasting, and effective 
+maintenance is essential to achieving that.
+\end{prettyBox}
+
+\vspace{0.5cm}
+\subsection{Itterative Process Of Conception}
+
+\begin{prettyBox}{Global \& Detailed Conception}{mypur}
+    \begin{itemize}
+        \item \textbf{Globale Conception :} Modules must be identified (some modules can 
+be divided into sub-modules) , and interaction between modules must be defined
+        \item \textbf{Detailed Conception :} Each module must be defined independently in detail.
+    \end{itemize}
+The conception should have high ratio of cohesion and low ratio of coupling
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{Why Global Conception Then Detailed Conception}{red} 
+    We first define the high-level structure of the modules and their interactions to provide an overall system architecture.
+    This gives a clear overview of the software before delving into the detailed characteristics of each module.
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+
+\begin{prettyBox}{Why High Cohesion \& Low Coupling}{red}
+    \begin{itemize}
+        \item \textbf{Cohesion}: How related the responsibilities of a module are.
+            \begin{itemize}
+                \item \textbf{High Cohesion}: The module has a clear, well-defined responsibility, making it easier to understand, maintain, and modify.
+                \item \textbf{Low Cohesion}: The module handles multiple, unrelated responsibilities, making it harder to maintain and understand.
+            \end{itemize}
+        \item \textbf{Coupling}: How dependent the modules are on each other.
+            \begin{itemize}
+                \item \textbf{High Coupling}: Modules are highly dependent on each other. A failure in one critical module may cause the entire system to fail.
+                \item \textbf{Low Coupling}: Modules are loosely connected, and changes or failures in one module are less likely to impact the others.
+            \end{itemize}
+    \end{itemize}
+    
+    \textbf{Why We Want High Cohesion and Low Coupling}:
+    \begin{itemize}
+        \item \textbf{High Cohesion}: Ensures that each module has a clear, understandable purpose, making the system easier to maintain and extend.
+        \item \textbf{Low Coupling}: Reduces dependencies between modules, minimizing the risk of widespread system failure and increasing flexibility.
+    \end{itemize}
+\end{prettyBox}
+
+
+\vspace{0.5cm}
+
+\subsection{Classification Of Conception Method}
+
+\vspace{0.25cm}
+\subsubsection{Function Oriented Conception}
+
+\vspace{0.25cm}
+\begin{prettyBox}{Function-Oriented}{mypur}
+    The software is structured using a functional paradigm. It is divided into a set of functions 
+that interact with each other. The software is viewed as a complex main function that is 
+progressively decomposed into smaller, less complex sub-functions. This process continues until
+we reach a detailed conception.
+
+    \vspace{0.15cm}
+    Each function has its own local state (local variables), while the software has
+a global state (global variables) that is shared among all functions.
+\end{prettyBox}
+
+\vspace{0.5cm}
+\subsubsection{Object Oriented Conception}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Object-Oriented Design}{mypur}
+    The software is viewed as a collection of encapsulated and independent objects. 
+These objects communicate with each other by sending messages (method calls).
+
+    \vspace{0.15cm}
+    Each object is identified by its name and encapsulated attributes (variables and methods).
+\end{prettyBox}
+
+
+\vspace{0.5cm}
+
+\subsubsection{Data Oriented Conception}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Data-Oriented}{mypur}
+    The software's structure must reflect the structure of the data it traits .
+    Therefore the conception is influenced by the ouput input data.
+\end{prettyBox}
+
+
+\subsection*{\underline{Example :}}
