@@ -121,3 +121,106 @@ These objects communicate with each other by sending messages (method calls).
 
 
 \subsection*{\underline{Example :}}
+Compiler
+
+\vspace{1cm}
+
+\subsection{Conception's Principales}To make sure the conception ensures an easily maintainable
+software we must follow some printcipales :
+
+
+\begin{prettyBox}{Principles}{mypur}
+
+\begin{itemize}
+    \item \textbf{Abstraction:} Focuses on the essential characteristics while
+hiding unnecessary details.
+    \item \textbf{Modularity:} Divides the system into modules with well-defined interactions,
+adhering to the principle of high cohesion and low coupling.
+    \item \textbf{Encapsulation:} Hides internal details of a module from other modules.
+    \item \textbf{Structuring:} Ensures a structured conceptions (levels) , we can at least have general \& detailed conception.
+\end{itemize}
+
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\subsection{Notation For Fonctional Conception}
+
+
+\begin{prettyBox}{Notation}{mypur}
+\begin{itemize}
+    \item \textbf{Data Flow Diagram (DFD):} Shows how data is transformed and passed from one module to another.
+    \item \textbf{Structure Diagram (SD):} A hierarchical diagram that illustrates the structured relationships between the components of the software.
+\end{itemize}
+\end{prettyBox}
+
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{Relation Between DFD \& SD}{red}
+    DFD and SD are complementary to each other, working together to clearly describe the functional design of a software system.
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\subsubsection{DFD}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{DFD}{mypur}
+    A DFD diagram consists of four components:
+    \begin{itemize}
+        \item \textbf{Transformations}: Represented as circles.
+        \item \textbf{Data}: Represented as axis.
+        \item \textbf{Logical AND}: Represented by the symbol *.
+        \item \textbf{Logical OR}: Represented by the symbol +.
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[->] (0,0) -- (2,0);
+        \node at (1,0.25){D$_{1}$};
+        \draw (2.5,0) circle (0.5);
+        \node at (2.5,0) {T$_{1}$};
+        
+        \draw[->] (3,0) -- (5,0);
+        \node at (4,0.25){D$_{1.1}$};
+        \draw (5.5,0) circle (0.5);
+        \node at (5.5,0) {T$_{2}$};
+
+        \draw[->] (6,0) -- (8.25,-0.35);
+        \node at (7,0.15){D$_{1.2}$};
+        \draw (8.5,-0.75) circle (0.5);
+        \node at (8.5,-0.75) {T$_{3}$};
+        
+        \draw[->] (6,-0.85) -- (8,-0.85);
+        \draw[->] (9,-0.75) -- (11,-0.75);
+        \node at (7.5,-0.65) {*};
+        \node at (7,-1.25) {D$_{2}$};
+        \node at (10,-0.5) {D$_{3}$};
+        \draw (11.5,-0.75) circle (0.5);
+        \node at (11.55,-0.75) {T$_{4}$};
+        \draw[->] (11.25,-1.2) -- (10,-2);
+
+        \node at (11.5,-1.5) {+};
+        \draw[->] (11.75,-1.2) -- (13,-2);
+
+        \node at (13,-1.5) {D$_{3.2}$};
+
+        \node at (10,-1.5) {D$_{3.1}$};
+
+    \end{tikzpicture}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{Note}{red}
+    A DFD specifies the operations without detailing how they are performed. Each node in the diagram can be further described with another DFD, allowing for a hierarchical decomposition of processes.
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\subsection*{\underline{Example :}}
