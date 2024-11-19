@@ -4,6 +4,6 @@ create table student (
     firstname varchar2(50) not null,
     id_section number references section(id_section) on delete cascade,
     grade number(4,2) default 00.00 check (grade between 0 and 20),
-    dob date not null check (dob<= add_months(sysdate,-18*12))
+    dob date not null 
 );
 

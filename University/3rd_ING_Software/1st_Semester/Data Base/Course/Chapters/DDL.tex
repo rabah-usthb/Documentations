@@ -4,7 +4,7 @@
 \begin{prettyBox}{Table Creation}{myblue}
 To create a table in oracle sql we just have to give the table a name and define each column known as attribut
 by giving each of them a name , a dataType and an optional constraint that can be added in same line of
-attribut definition or on its own line , we will see contraint in details in the next section
+attribut definition(in-line method) or on its own line(out-of-line method) , we will see contraint in details in the next section
 \end{prettyBox}
 
 \vspace{0.5cm}
@@ -18,6 +18,7 @@ attribut definition or on its own line , we will see contraint in details in the
 
 \lstinputlisting{SQL/examples/DDL/createStudent.sql}
 
+\vspace{0.5cm}
 \subsection{Table Constraints}
 
 \begin{prettyBox}{Constraints}{myblue}
@@ -31,6 +32,8 @@ There are two types of constraints: static and dynamic.
 \end{prettyBox}
 
 \subsubsection{\underline{Static Constraints}}
+
+\vspace{0.25cm}
 \begin{prettyBox}{Static}{myblue}
 Static constraints are fixed conditions that do not change based on data input.
 \begin{itemize} 
@@ -39,71 +42,95 @@ Static constraints are fixed conditions that do not change based on data input.
 \item \textbf{UNIQUE}: Ensures that each value in the attribute is distinct. Unlike PRIMARY KEY, it allows null values.
 \item \textbf{PRIMARY KEY}: Combines UNIQUE and NOT NULL properties to ensure each value is unique and not null.
 Used to identify rows uniquely. 
-\item \textbf{FOREIGN KEY}: References a primary key from another table to establish a relationship between tables.
+\item \textbf{FOREIGN KEY}: References a primary key from another table to establish a relationship between tables , can be null.
 \item \textbf{DELETE ON CASCADE}: When deleting a row from the referenced (parent) table, all rows in the child table 
 that contain the matching foreign key are also deleted.
+\item \textbf{CHECK}: Validates a specified condition before allowing data to be inserted or updated. 
+\item \textbf{DEFAULT}: Sets a default value for the attribute if no value is provided during insertion. 
 \end{itemize}
 \end{prettyBox}
 
-\subsubsection{\underline{Dynamic Constraints}}
+\vspace{0.5cm}
+\subsubsection{\underline{Dynamic Constraints}} 
 
+\vspace{0.25cm}
 \begin{prettyBox}{Dynamic}{myblue}
 Dynamic constraints apply conditions that can change based on specified criteria.
 \begin{itemize} 
-\item \textbf{CHECK}: Validates a specified condition before allowing data to be inserted or updated. 
-\item \textbf{DEFAULT}: Sets a default value for the attribute if no value is provided during insertion. 
 \item \textbf{TRIGGER}: Acts like a call back function , a block of code that gets executed automatically when 
-defined event is triggered
+a defined event is triggered
 \end{itemize}
 \end{prettyBox}
 
+\vspace{0.5cm}
 \subsubsection*{\underline{Syntax}}
 
-\lstinputlisting{SQL/syntax/DDL/inline.sql}
+\vspace{0.25cm}
 
+\subsubsection*{\underline{In-Line Method}}
+
+\vspace{0.25cm}
+\lstinputlisting{SQL/syntax/DDL/inline.sql}
+\newpage
+
+\subsubsection*{\underline{Out-Of-Line Method}}
+
+\vspace{0.25cm}
 \lstinputlisting{SQL/syntax/DDL/outline.sql}
 
+\vspace{0.5cm}
 \subsubsection*{\underline{Example :}}
-let's create a new table section and recreate the student table with constraints\\\\
-\textbf{Creating Section Table}\\\\
-\textbf{Inline Method}
 
+\vspace{0.25cm}
+let's create a new table section and recreate the student table with constraints\\\\
+\textbf{\underline{Creating Section Table}}\\\\
+\textbf{\underline{In-Line Method}}
+
+\vspace{0.25cm}
 \lstinputlisting{SQL/examples/DDL/sectionInline.sql}
 
-\textbf{Outline Method}
+\vspace{0.5cm}
+\textbf{\underline{Out-Of-Line Method}}
 
+\vspace{0.25cm}
 \lstinputlisting{SQL/examples/DDL/sectionOutline.sql}
 
 
-\textbf{Create Student Table}\\
-\textbf{Inline Method}
+\vspace{1cm}
+\newpage
+\textbf{\underline{Create Student Table}}\\\\
+\textbf{\underline{In-Line Method}}
 
+\vspace{0.25cm}
 \lstinputlisting{SQL/examples/DDL/studentInline.sql}
 
-\textbf{Outline Mehtod}
+\vspace{0.5cm}
+\textbf{\underline{Out-Of-Line Mehtod}}
 
+\vspace{0.25cm}
 \lstinputlisting{SQL/examples/DDL/studentOutline.sql}
 
+\vspace{1cm}
 \begin{prettyBox}{Naming Convention Of Constraints}{myblue}
   \begin{itemize}
-        \item Primary Key : PK\_\textless tableName\textgreater  
-        \item Foreign Key : FK\_\textless tableName\textgreater
-        \item Unique : UQ\_\textless tableName\textgreater\_\textless columnName\textgreater
-        \item Check : CHK\_\textless tableName\textgreater\_\textless columnName\textgreater
-        \item Default : DF\_\textless tableName\textgreater\_\textless columnName\textgreater
-        \item Not Null : NN\_\textless tableName\textgreater\_\textless columnName\textgreater
+        \item  \textbf{Primary Key} : PK\_\textless tableName\textgreater  
+        \item  \textbf{Foreign Key} : FK\_\textless tableName\textgreater
+        \item  \textbf{Unique} : UQ\_\textless tableName\textgreater\_\textless columnName\textgreater
+        \item  \textbf{Check} : CHK\_\textless tableName\textgreater\_\textless columnName\textgreater
+        \item  \textbf{Default} : DF\_\textless tableName\textgreater\_\textless columnName\textgreater
+        \item  \textbf{Not Null} : NN\_\textless tableName\textgreater\_\textless columnName\textgreater
     \end{itemize}   
 \end{prettyBox}
 
 \begin{prettyBox}{Note}{red}
 
-\textbf{Constraint Name Must Be Unique}
+    \textbf{\underline{Constraint Name Must Be Unique}}
 
 \vspace{0.15cm}
 Tables inside the same PDB (pluggable data base) can't share the same constraints name
 
 \vspace{0.25cm}
-\textbf{Multiple Constraints}
+\textbf{\underline{Multiple Constraints}}
 
 \vspace{0.15cm}
 It is possible to define multiple constraints on a single attribute using the inline method. 
