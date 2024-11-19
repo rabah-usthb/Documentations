@@ -20,6 +20,7 @@ number of digits after decimal point , s \(\in\)[0,p-1]
 
 it has some sub types like Integer which is \(\Leftrightarrow\) Number(38)
 \end{prettyBox}
+
 \subsection*{\underline{Examples :}}
 
 \begin{center}
@@ -27,7 +28,7 @@ it has some sub types like Integer which is \(\Leftrightarrow\) Number(38)
     \hline
     Definition & Input & Stored As \\
     \hline
-    NUMBER  & \makecell{124.56\\-99999\\44343} & \makecell{12.56\\-99999\\44343} \\
+    NUMBER  & \makecell{124.56\\-99999\\44343} & \makecell{124.56\\-99999\\44343} \\
     \hline
     NUMBER(5) & \makecell{17.5\\123456\\44300} & \makecell{18\\Error\\44300} \\
     \hline
@@ -51,6 +52,7 @@ s can be \(>\) p , i just didn't want to include that case as it can be confusin
 \end{prettyBox}
 
 
+\vspace{0.5cm}
 
 \subsection{Date}
 
@@ -59,8 +61,11 @@ Date is a data type that stores both the date and the time it accept a wide rang
 and has many function  
 \end{prettyBox}
 
+\vspace{0.25cm}
 
 \subsubsection{Format}
+
+\vspace{0.25cm}
 \begin{center}
  \renewcommand{\arraystretch}{1.5}
     \begin{tabular}{|c|c|}
@@ -85,8 +90,10 @@ and has many function
 \end{center}
 
 
+\vspace{0.5cm}
 \subsubsection{Function}
 
+\vspace{0.25cm}
 \begin{center}
 
  \renewcommand{\arraystretch}{1.5}
@@ -119,6 +126,7 @@ want and the same thing is valid when needing to print a date usin TO\_CHAR , be
 the format in insert
 \end{prettyBox}
 
+\vspace{0.5cm}
 \subsection{Char}
 
 \begin{prettyBox}{Char}{myblue}
@@ -126,6 +134,7 @@ Char(len) stores string of len size , if the inputed string is smaller than the 
 oracle will pad it with space char , len \(\in\)[1,2000]
 \end{prettyBox}
 
+\vspace{0.25cm}
 \subsection{VARCHAR2}
 
 \begin{prettyBox}{Varchar2}{myblue}
@@ -136,8 +145,10 @@ version len \(\in\)[1,32767]
 
 
 
+\vspace{0.5cm}
 \subsubsection{Function}
 
+\vspace{0.25cm}
 \begin{center}
  
  \renewcommand{\arraystretch}{1.5}
@@ -172,6 +183,7 @@ version len \(\in\)[1,32767]
 
 \subsubsection*{\underline{Example :}}
 
+\vspace{0.25cm}
 \begin{center}
     
 \renewcommand{\arraystretch}{1.5}
@@ -193,7 +205,7 @@ version len \(\in\)[1,32767]
         \hline
         SUBSTR('I Love Java',8,11) & 'Java'\\
         \hline
-        REPLACE('Hello world , I missed you world','world','toto') & Hello toto , I missed you toto\\
+        REPLACE('Hello world , I missed you world','world','toto') & 'Hello toto , I missed you toto'\\
         \hline
         LPAD('hello',10,'*') & '*****hello'\\
         \hline
@@ -209,6 +221,7 @@ version len \(\in\)[1,32767]
 
 \end{center}
 
+\vspace{1cm}
 \begin{prettyBox}{Note}{red}
   \textbf{\underline{Difference between CHAR and VARCHAR2}:} CHAR will take up the full specified size, even if not all space is used, and will pad the value with spaces until it reaches the full size. 
 In contrast, VARCHAR2 only stores the exact amount of space needed for the data, without padding with spaces.

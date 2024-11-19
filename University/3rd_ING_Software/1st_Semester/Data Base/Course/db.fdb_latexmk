@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1731788929.80824 "db.tex" "db.pdf" "db" 1731788932.68221 0
+["pdflatex"] 1732001452.9297 "db.tex" "db.pdf" "db" 1732001455.13359 0
   "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -148,11 +148,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1731402170.33574 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1731402230 8212896 b2d3a67526ed46e54375dd7fb267ffaf ""
-  "Chapters/Classification.tex" 1731737933.1005 2562 62c26196a701e7cc9290a6812e2730de ""
-  "Chapters/DDL.tex" 1731744153.52254 6507 bc202e5a567448899939ac97bce6a703 ""
+  "Chapters/Classification.tex" 1732000830.39502 2585 26a2a7c34ccff19bb496555a8a184db3 ""
+  "Chapters/DDL.tex" 1732000861.45602 6516 aef10db530736a4556af9cc4c921411b ""
   "Chapters/DML.tex" 1731747875.41157 1505 1ab881aeac1ccffa4112326e9e812d70 ""
   "Chapters/DRL.tex" 1731788926.45202 7571 11f6caaa69a5ca3f4d6274720ab10fd7 ""
-  "Chapters/DataType.tex" 1731730917.56846 8233 3b0da85e3be562df251fe328fc660b08 ""
+  "Chapters/DataType.tex" 1732001451.03002 8407 cc6be055245e53ba9e39f7c22ef11884 ""
   "Chapters/PlSql.tex" 1731396714.6557 12666 ef9f03da8183a61124aa771cfe10dd86 ""
   "SQL/examples/DDL/createStudent.sql" 1731739080.71551 113 7b2ac01f3e0e0d7130875acb07987091 ""
   "SQL/examples/DDL/sectionDrop.sql" 1731742475.96253 20 bee890bad017700cd5e3a5d81b300668 ""
@@ -178,7 +178,7 @@
   "SQL/syntax/DRL/orderby.sql" 1731777584.42901 117 f79a36bd182e71a0df5edd7fcc5cc0da ""
   "SQL/syntax/DRL/select.sql" 1731777097.666 260 04fb1250ad7a88760a9b9b8b94046496 ""
   "SQL/syntax/DRL/where.sql" 1731777308.596 64 1628cf890c19880866b2cb335175f887 ""
-  "db.aux" 1731788932.58402 8126 b40494781c2824a9bea954176eec19e0 "pdflatex"
+  "db.aux" 1732001455.04402 8127 1924009457dc45fbe9df5732de1bb39c "pdflatex"
   "db.tex" 1731712338.36918 2237 7a3af9e98911d5d94233f623646ffc9f ""
   (generated)
   "db.aux"
