@@ -1,28 +1,35 @@
 
 \section{PL/SQL}
 \subsection{Introduction}
-\begin{tcolorbox}[title = Definition]
-PL/SQL, or Procedural Language/Structured Query Language, is an extension of SQL. While SQL (Structured Query Language) is primarily used for CRUD operations (querying, inserting, updating, and deleting data in relational databases), PL/SQL allows for full programmatic control with features such as control structures (loops and conditionals), variables, and error handling with exceptions. This enables the creation of scripts that can automate tasks with functions, procedures, and triggers, implement complex business logic, and manipulate data at a higher level than SQL alone.
-\end{tcolorbox}
 
-\begin{tcolorbox}[title = Differences Between PL/SQL and SQL]
+\begin{prettyBox}{What's PL/SQL ?}{myblue}
+PL/SQL, or Procedural Language/Structured Query Language, is an extension of SQL. While SQL (Structured Query Language) is primarily used for CRUD operations (querying, inserting, updating, and deleting data in relational databases), PL/SQL allows for full programmatic control with features such as control structures (loops and conditionals), variables, and error handling with exceptions. This enables the creation of scripts that can automate tasks with functions, procedures, and triggers, implement complex business logic, and manipulate data at a higher level than SQL alone.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Differences Between PL/SQL and SQL}{myblue}
 \begin{itemize}
     \item SQL is limited to CRUD operations; PL/SQL adds procedural programming capabilities.
     \item PL/SQL provides advanced error handling through exceptions.
     \item PL/SQL supports modular programming with functions, procedures, and triggers.
     \item PL/SQL is specific to Oracle databases, whereas SQL is standardized across various databases.
 \end{itemize} 
-\end{tcolorbox}
+\end{prettyBox}
+
+\vspace{0.5cm}
 
 \subsection{Overview Of Plsql's Structure}
-\begin{tcolorbox}[title = Programme Structure]
+
+\begin{prettyBox}{Programme Structure}{myblue}
 A PL/SQL has 3 blocks :
 \begin{itemize}
-    \item DECLARE(Optional Block) : contains all the declared variables , constants \& modules(functions,procedure) 
-    \item MAIN : contains the main executable code 
-    \item EXCEPTION(Optional Block) : handls erros with exceptions 
+    \item \textbf{DECLARE}(Optional Block) : contains all the declared variables , constants \& modules(functions,procedure) 
+    \item \textbf{MAIN} : contains the main executable code 
+    \item \textbf{EXCEPTION}(Optional Block) : handls erros with exceptions 
 \end{itemize}
-\end{tcolorbox}
+\end{prettyBox}
+
 \begin{center}
 \begin{tikzpicture}
     \draw (0,0) rectangle (15,12);
@@ -44,178 +51,197 @@ A PL/SQL has 3 blocks :
     \node at (1.525,1) {\textcolor{blue}{END};};
 \end{tikzpicture}
 \end{center}
+
+\vspace{0.5cm}
+
 \subsection{Comments}
-\begin{tcolorbox}[title  = Comments Syntax]
-\textbf{\underline{One Line Comment}:}
+
+
+\subsubsection*{\underline{Syntax}}
 
 \vspace{0.25cm}
-\textcolor{commentgray}{- - Comment here}
 
-\vspace{0.25cm}
-\textbf{\underline{Multiple Lines Comment}:}
+\subsubsection*{\underline{Single Comment}}
+\lstinputlisting{SQL/syntax/Pl_Sql/singleComment.sql}
 
-\vspace{0.25cm}
-\textcolor{commentgray}{/*\\
-This is a Mulitple\\
-Lines Comment\\
-*/}
-\end{tcolorbox}
+
+\subsubsection*{\underline{Multi-Line Comment}}
+\lstinputlisting{SQL/syntax/Pl_Sql/multiComment.sql}
+
+
+\vspace{0.5cm}
 
 
 \subsection{Printing}
-\begin{tcolorbox}[title = DBMS\_OUTPUT.PUT\_LINE]
+
+\begin{prettyBox}{DBMS\_OUTPUT.PUT\_LINE}{myblue}
 To print messages in the console, we use the \texttt{DBMS\_OUTPUT.PUT\_LINE} command. The message should be enclosed
-in single quotes ' ' and we use double pipes \texttt{||} to concatenate with variables:
+in single quotes ' ' and we use double pipes \texttt{||} to concatenate with variables.
+\end{prettyBox}
 
-\begin{center}
-DBMS\_OUTPUT.PUT\_LINE(\textcolor{messagegreen}{'Hello '} \texttt{||} name \texttt{||} \textcolor{messagegreen}{'!'} );
-\end{center}
-\end{tcolorbox}
+\subsubsection*{\underline{Syntax}}
 
-\begin{tcolorbox}[title = Note]
-To be able to see the printed messages in the console of SQL*Plus, SQL Developer, etc., we need to activate
+
+\lstinputlisting{SQL/syntax/Pl_Sql/print.sql}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Note}{red}
+To be able to see the printed messages in the console of SQL*Plus, SQL Developer, ...etc, we need to activate
 the buffer responsible for printing the messages by using the command: 
-\begin{center}
-    \textcolor{blue}{SET} SERVEROUTPUT \textcolor{blue}{ON};
-\end{center}
+
+\lstinputlisting{SQL/syntax/Pl_Sql/server.sql}
+
 Note that this is only needed once , and it will remain active unless you explicitly turn it off.
-\end{tcolorbox}
+\end{prettyBox}
+
+\vspace{0.5cm}
+
 \subsection{Variables Declaration \& Types}
-\begin{tcolorbox}[title = Variables \& Constants]
-All variables and constants must be declared in the \textcolor{blue}{DECLARE} scope the syntax is as follows
 
-\vspace{0.35cm}
+\begin{prettyBox}{Variables \& Constants}{myblue}
+All variables and constants must be declared in the \textcolor{blue}{DECLARE} scope , 
+we use := to affect values to variables 
+\end{prettyBox}
 
-\hspace{4cm}varName dataType := value\hspace{3.95cm}\textcolor{commentgray}{- - Variable Declaration}
+\subsubsection*{\underline{Syntax}}
 
-\vspace {0.15cm}
-\hspace{4cm}constName CONSTANT dataType := value\hspace{1.5cm}\textcolor{commentgray}{- - Constant Declaration}\\
+\lstinputlisting{SQL/syntax/Pl_Sql/varDeclaration.sql}
 
-\end{tcolorbox}
-
-\begin{tcolorbox}[title = Types]
-PL/SQL supports many standard data types, as seen previously. Here, we introduce two additional types:
+\vspace{0.25cm}
+\begin{prettyBox}{Types}{myblue}
+PL/SQL supports all data types normal sql has like those we've seen previously. Here, we introduce two additional types:
 
 \begin{itemize}
     \item \textbf{Type:} Used to define a variable with the same data type as a column in a table:
-        \begin{center}
-            varName tableName.columnName\%TYPE;
-        \end{center}
+    
+\lstinputlisting{SQL/syntax/Pl_Sql/type.sql}
+
     \item \textbf{RowType:} Used to define a variable as a record with the structure of a row in a table:
-        \begin{center}
-            varName tableName\%ROWTYPE;
-        \end{center}
+\lstinputlisting{SQL/syntax/Pl_Sql/rowType.sql}
 \end{itemize}
 
-\end{tcolorbox}
+\end{prettyBox}
 
 
 
-\begin{tcolorbox}[title = Store Select Output In Variables]
+\begin{prettyBox}{Store Select Output In Variables}{myblue}
 We can store the output of the \textcolor{blue}{SELECT} command in variables using the \textcolor{blue}{INTO} clause as follows:
+\end{prettyBox}
 
-\begin{center}
-\textcolor{blue}{SELECT} col$_{1}$, col$_{2}$, ..., col$_{n}$ 
-\textcolor{blue}{INTO} var$_{1}$, var$_{2}$, ..., var$_{n}$ 
-\textcolor{blue}{FROM} tableName 
-\textcolor{blue}{WHERE} [conditions];
-\end{center}
+\subsubsection*{\underline{Syntax}}
 
-\end{tcolorbox}
-\begin{tcolorbox}[title = Note]
+\lstinputlisting{SQL/syntax/Pl_Sql/select.sql}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Note}{red}
 \textbf{\underline{Order Of Variables Is Important}}
 
+\vspace{0.15cm}
 The order of the variables in the \textcolor{blue}{INTO} clause must match the order of the selected columns
 
+\vspace{0.25cm}
 \textbf{\underline{Select Should Ouput One Line Only}}
 
+\vspace{0.15cm}
 When Storing the output of \textcolor{blue}{SELECT} in variables , the ouput should be one line and not a table
 if not we will have to use cursor to navigate through the table we will cover that later on
-\end{tcolorbox}
+
+
+\vspace{0.25cm}
+
+\textbf{\underline{We Must Use Store Select Output}}
+
+\vspace{0.15cm}
+In PL/SQL we have to always store the output of a select if not we will have a complilation error
+\end{prettyBox}
+
+\vspace{0.5cm}
 \subsection{Control Structures}
-\begin{tcolorbox}[title = Definition]
+
+\begin{prettyBox}{Definition}{myblue}
 In PL/SQL, control structures are constructs that help control the flow of execution in a block of code.
 They determine the order and conditions under which statements are executed and help make the code dynamic
 and responsive to varying conditions. The main types of control structures in PL/SQL are:
-\end{tcolorbox}
-\subsubsection{Conditional Control}
-\begin{tcolorbox}[title = If] 
-
-    \textcolor{blue}{IF} condition1 \textcolor{blue}{THEN}
-
-    \textcolor{commentgray}{- - statements to execute if condition1 is true}
-
-    \textcolor{blue}{ELSIF} condition2 \textcolor{blue}{THEN}
-
-    \textcolor{commentgray}{- - statements to execute if condition2 is true}
-
-    \textcolor{blue}{ELSE}
-
-    \textcolor{commentgray}{- - statements to execute if none of the conditions are true}
-
-   \textcolor{blue}{END IF};
-\end{tcolorbox}
-\begin{tcolorbox}[title = Switch Case]
-    
-\textcolor{blue}{CASE} \\
-\textcolor{blue}{WHEN} condition1 \textcolor{blue}{THEN}\\
-\textcolor{commentgray}{- - statements to execute if condition1 is true}\\
-\textcolor{blue}{WHEN} condition2 \textcolor{blue}{THEN}\\
-\textcolor{commentgray}{- - statements to execute if condition2 is true}\\
-        \textcolor{blue}{ELSE}\\
-        \textcolor{commentgray}{- - statements to execute if none of the conditions are true}\\
-\textcolor{blue}{END CASE};
-
-\end{tcolorbox}
-\subsubsection{Looping Control}
-\begin{tcolorbox}[title = Simple Loop] 
-
-LOOP\\
-    \textcolor{commentgray}{- - statements to execute}\\
-    EXIT \textcolor{blue}{WHEN} condition; \textcolor{commentgray}{- - condition to exit the loop}\\
-\textcolor{blue}{END} LOOP;
-\end{tcolorbox}
-\begin{tcolorbox}[title = While Loop]
-WHILE condition LOOP\\
-\textcolor{commentgray}{- - statements to execute while condition is true}\\
-\textcolor{blue}{END} LOOP;
-\end{tcolorbox}
-\begin{tcolorbox}[title = For Loop]
- \textbf{Ascending}
-
-\vspace{0.15cm}
-\textcolor{blue}{FOR} counter \textcolor{blue}{IN} start..end LOOP\\
-\textcolor {commentgray}{- - statements to execute for each value of counter}\\
-\textcolor{blue}{END} LOOP;
+\end{prettyBox}
 
 \vspace{0.25cm}
- \textbf{Descending}
 
- \vspace{0.15cm} 
-\textcolor{blue}{FOR} counter \textcolor{blue}{IN} REVERSE end..start LOOP\\
-\textcolor {commentgray}{- - statements to execute for each value of counter}\\
-\textcolor{blue}{END} LOOP;
+\subsubsection{Conditional Control}
+\newpage
+\subsubsection*{\underline{If}} 
+\subsubsection*{\underline{Syntax}}
 
-\end{tcolorbox}
+\lstinputlisting{SQL/syntax/Pl_Sql/if.sql}
+
+
+\vspace{0.25cm}
+
+\subsubsection*{\underline{Switch Case}}
+
+\subsubsection*{\underline{Syntax}}
+
+\lstinputlisting{SQL/syntax/Pl_Sql/case.sql}
+
+\vspace{0.25cm}
+
+\subsubsection{Looping Control}
+
+\subsubsection*{\underline{Simple Loop}}
+
+
+\subsubsection*{\underline{Syntax}}
+
+
+\lstinputlisting{SQL/syntax/Pl_Sql/simpleLoop.sql}
+
+
+
+\subsubsection*{\underline{While Loop}}
+
+\subsubsection*{\underline{Syntax}}
+
+
+\lstinputlisting{SQL/syntax/Pl_Sql/whileLoop.sql}
+
+
+\vspace{0.25cm}
+
+
+
+\subsubsection*{\underline{For Loop}}
+
+\subsubsection*{\underline{Syntax}}
+
+
+\lstinputlisting{SQL/syntax/Pl_Sql/forLoop.sql}
+
+\vspace{0.5cm}
+
 \subsection{Raise Application Error}
-\begin{tcolorbox}[title = Raise Errors] 
+\begin{prettyBox}{Raise Errors}{myblue}
 RAISE\_APPLICATION\_ERROR is a procedure used to raise an error that halts code execution, with a custom error
 message. Each error\_code (between -20000 and -20999) is associated with an error message retrieved 
 by SQLERRM, while SQLCODE captures the error code itself.
 
-\begin{center}
-RAISE\_APPLICATION\_ERROR(error\_code, error\_message);
-\end{center}
+\vspace{0.25cm}
+
+
+\lstinputlisting{SQL/syntax/Pl_Sql/raise_application.sql}
+
+\vspace{0.25cm}
+
 
 Though commonly used to handle user-defined exceptions, RAISE\_APPLICATION\_ERROR can also be used internally
 by the system for predefined exceptions, supporting error control in both system and custom PL/SQL operations.
-\end{tcolorbox}
+\end{prettyBox}
 
 
 \subsection{Exceptions}
-\begin{tcolorbox}[title = Definition]
-Exceptions help manage errors and improve readability compared to directly using RAISE\_APPLICATION\_ERROR. Under
-the hood, exceptions are built on RAISE\_APPLICATION\_ERROR. There are two main types of exceptions:
+\begin{prettyBox}{Exception}{myblue}
+Exceptions help manage errors . Under
+the hood, exceptions are built on RAISE\_APPLICATION\_ERROR ,  only difference is that it's more readable. There are two main types of exceptions:
 \begin{itemize}
     \item \textbf{Predefined Exceptions}: These are system-defined exceptions, such as:
         \begin{itemize}
@@ -224,45 +250,15 @@ the hood, exceptions are built on RAISE\_APPLICATION\_ERROR. There are two main 
         \end{itemize}
     \item \textbf{User-defined Exceptions}: Defined by the user using the \textcolor{blue}{EXCEPTION} DataType.
 \end{itemize}
-\end{tcolorbox}
+\end{prettyBox}
 
-\begin{tcolorbox}[title = Syntax Exception]
-Exception management happens in the EXCEPTION block:
+\subsubsection*{\underline{Syntax}}
 
-\textcolor{blue}{DECLARE}
 
-User\_EXC \textcolor{blue}{EXCEPTION}; \textcolor{commentgray}{- - Declare a custom exception}
+\lstinputlisting{SQL/syntax/Pl_Sql/exc.sql}
 
-\textcolor{blue}{BEGIN}
 
-IF [Condition] \textcolor{blue}{THEN}
 
-RAISE User\_EXC; \textcolor{commentgray}{- - Raise the custom exception}
-
-\textcolor{blue}{END IF};
-
-\textcolor{commentgray}{- - Rest of code}
-
-\textcolor{blue}{EXCEPTION}
-
-\textcolor{blue}{WHEN NO\_DATA\_FOUND THEN}
-
-DBMS\_OUTPUT.PUT\_LINE(\textcolor{messagegreen}{'No data found.'});
-
-\textcolor{blue}{WHEN TOO\_MANY\_ROWS THEN}
-
-DBMS\_OUTPUT.PUT\_LINE(\textcolor{messagegreen}{'Too many rows returned.'});
-
-\textcolor{blue}{WHEN User\_EXC THEN}
-
-DBMS\_OUTPUT.PUT\_LINE(\textcolor{messagegreen}{'Custom error occurred.'});
-
-\textcolor{blue}{WHEN OTHERS THEN}
-
-DBMS\_OUTPUT.PUT\_LINE(\textcolor{messagegreen}{'An unexpected error occurred: '} \texttt{||} SQLERRM);
-
-\textcolor{blue}{END};
-\end{tcolorbox}
 
 \begin{tcolorbox}[title = Exceptions with SQLCODE]
     
@@ -309,7 +305,8 @@ DBMS\_OUTPUT.PUT\_LINE(\textcolor{messagegreen}{'Unexpected error: '} \texttt{||
 \textcolor{blue}{END};
 
 \end{tcolorbox}
-\begin{tcolorbox}[title = Note]
+
+\begin{prettyBox}{Note}{red}
 \textbf{What is OTHERS?}
 
 It’s best practice to add OTHERS as the last exception handler, as it catches any exceptions not explicitly
@@ -320,8 +317,9 @@ defined. This ensures any unexpected errors are managed gracefully.
 Although exceptions are built on RAISE\_APPLICATION\_ERROR, they offer better readability and manageability
 in complex code. Use exceptions for organized error handling, while RAISE\_APPLICATION\_ERROR provides a more
 direct and minimalistic approach.
-\end{tcolorbox}
+\end{prettyBox}
 
+\vspace{0.5cm}
 
 \subsection{Cursors}
 \begin{tcolorbox}[title = cursor]
