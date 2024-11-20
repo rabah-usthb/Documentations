@@ -1,4 +1,4 @@
-
+\vspace{0.5cm}
 \section{DML Commands}
 
 \subsection{Insert}
@@ -9,13 +9,153 @@ To insert rows into a table, we use the \textcolor{blue}{INSERT} command. We can
 
 \subsubsection*{\underline{\textbf{Syntax}}}
 
-\subsubsection*{\textbf{Insert Once}}
+\subsubsection*{\textbf{\underline{Insert Once}}}
 
 \lstinputlisting{SQL/syntax/DML/insert.sql}
 
-\subsubsection*{\textbf{Insert In Multiple Tables}}
+\subsubsection*{\textbf{\underline{Insert In Multiple Tables}}}
 
 \lstinputlisting{SQL/syntax/DML/insertAll.sql}
+
+
+\subsubsection*{\underline{\textbf{Example}}}
+
+\subsubsection*{\underline{\textbf{Tables Definition}}}
+
+\subsubsection*{\underline{\textbf{Student Table}}}
+\begin{center}
+
+ \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|c|}
+        \hline 
+        Column Name & Data Type & Constraints\\
+        \hline
+        id & number & primary key\\
+        \hline
+        lastname & varchar2(50) & not null\\
+        \hline
+        firstname & varchar2(50) & not null\\
+        \hline
+        id\_section & number & \makecell{foreign key section(id\_section)\\delete on cascade}\\
+        \hline
+        grade & number(4,2) & \makecell{default 0\\check between 0 and 20}\\
+        \hline
+        dob & date & not null\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsubsection*{\underline{\textbf{Section Table}}}
+
+\begin{center}
+
+ \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|c|}
+        \hline 
+        Column Name & Data Type & Constraints\\
+        \hline
+        id\_section & number & primary key\\
+        \hline
+        name & varchar2(5) & \makecell{not null\\check in ('A','B','C','D',1,2,3,4)}\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsubsection*{\textbf{\underline{Insert Once}}}
+
+\lstinputlisting{SQL/examples/DML/insertOnce.sql}
+
+\subsubsection*{\underline{\textbf{Tables After Insert}}}
+
+\subsubsection*{\underline{\textbf{Section Table}}}
+
+\begin{center}
+
+ \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|}
+        \hline 
+        id\_section & name \\
+        \hline
+        1 & 'A'\\
+        \hline
+        2 & 'B'\\
+        \hline
+    \end{tabular}
+\end{center}
+
+
+\subsubsection*{\underline{\textbf{Student Table}}}
+\begin{center}
+
+ \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        id & lastname & firstname & id\_section & grade & dob\\
+        \hline
+        1 & 'chabane' & 'rabah' & 2 & 11.80 & 2002-03-19 \\
+        \hline
+        2 & adem & lyna & 1 & 13.24 & 2004-07-19\\
+        \hline
+        3 & chaouche & mohamed & null & 12.13 & 2004-02-20 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+
+
+
+
+\subsubsection*{\textbf{\underline{Insert In Multiple Tables}}}
+
+\lstinputlisting{SQL/examples/DML/insertAll.sql}
+
+\subsubsection*{\underline{\textbf{Tables After Insert}}}
+
+\subsubsection*{\underline{\textbf{Section Table}}}
+
+\begin{center}
+
+ \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|}
+        \hline 
+        id\_section & name \\
+        \hline
+        1 & 'A'\\
+        \hline
+        2 & 'B'\\
+        \hline
+        3 & 'C'\\
+        \hline
+        4 & 'D'\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsubsection*{\underline{\textbf{Student Table}}}
+\begin{center}
+
+ \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        id & lastname & firstname & id\_section & grade & dob\\
+        \hline
+        1 & 'chabane' & 'rabah' & 2 & 11.80 & 2002-03-19 \\
+        \hline
+        2 & adem & lyna & 1 & 13.24 & 2004-07-19\\
+        \hline
+        3 & chaouche & mohamed & null & 12.13 & 2004-02-20 \\
+        \hline    
+        4 & bakhti & sohaib & 4 & 10.51 & 2000-10-01 \\
+        \hline    
+        5 & ibtissame & ahlem & 3 & 14.83 & 2001-08-21 \\
+        \hline 
+        6 & yacine & salem & null & 9.80 & 2000-11-06 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+
+
 
 \begin{prettyBox}{Note}{red}
 We don't have to precise columns names when inserting , it's optional it just makes the code more readable

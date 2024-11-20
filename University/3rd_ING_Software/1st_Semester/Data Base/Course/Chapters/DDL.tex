@@ -2,7 +2,7 @@
 \section{DDL Commands}
 \subsection{Create Table}
 \begin{prettyBox}{Table Creation}{myblue}
-To create a table in oracle sql we just have to give the table a name and define each column known as attribut
+    To create a table in oracle sql we use the \textcolor{blue}{CREATE} command , we just have to give the table a name and define each column known as attribut
 by giving each of them a name , a dataType and an optional constraint that can be added in same line of
 attribut definition(in-line method) or on its own line(out-of-line method) , we will see contraint in details in the next section
 \end{prettyBox}
@@ -35,7 +35,6 @@ There are two types of constraints: static and dynamic.
 
 \vspace{0.25cm}
 \begin{prettyBox}{Static}{myblue}
-Static constraints are fixed conditions that do not change based on data input.
 \begin{itemize} 
 \item \textbf{Data Type} : Ensures Integrity of the column
 \item \textbf{NOT NULL}: Ensures that the attribute must have a value when inserting into the table.
@@ -55,7 +54,6 @@ that contain the matching foreign key are also deleted.
 
 \vspace{0.25cm}
 \begin{prettyBox}{Dynamic}{myblue}
-Dynamic constraints apply conditions that can change based on specified criteria.
 \begin{itemize} 
 \item \textbf{TRIGGER}: Acts like a call back function , a block of code that gets executed automatically when 
 a defined event is triggered
@@ -141,7 +139,7 @@ However, with the outline method, each constraint needs to be specified individu
 
 \subsection{Drop Table}
 \begin{prettyBox}{Drop}{myblue}
-    We can remove a table using the drop command
+    We can remove a table using the \textcolor{blue}{DROP} command
 \end{prettyBox}
 
 \subsubsection*{\underline{Syntax}}
@@ -156,7 +154,7 @@ lets delete the section table we created
 \subsection{Rename Table}
 
 \begin{prettyBox}{Rename}{myblue}
-We can rename tables by using the rename command 
+    We can rename tables by using the \textcolor{blue}{RENAME} command 
 \end{prettyBox}
 
 \subsubsection*{\underline{Syntax}}
@@ -169,7 +167,7 @@ We can rename tables by using the rename command
 
 \subsection{Alter Table}
 \begin{prettyBox}{Alter}{myblue}
-The `ALTER` command is a versatile command that allows us to change various aspects of a table:
+    The \textcolor{blue}{ALTER} command is a versatile command that allows us to change various aspects of a table:
 \begin{itemize}
     \item Columns
         \begin{itemize}
@@ -201,7 +199,7 @@ The `ALTER` command is a versatile command that allows us to change various aspe
 \subsubsection*{\underline{Example}}
 \subsection{Truncate Table}
 \begin{prettyBox}{Truncate}{myblue}
-    To remove all rows from a table efficiently we use the truncate command
+    To remove all rows from a table efficiently we use the \textcolor{blue}{TRUNCATE} command
 \end{prettyBox}
 
 \subsubsection*{\underline{Syntax}}

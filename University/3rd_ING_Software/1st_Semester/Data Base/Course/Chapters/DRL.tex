@@ -4,8 +4,8 @@
 
 \begin{prettyBox}{Select}{myblue}
 To display the contents of one or more tables at once, we use the \textcolor{blue}{SELECT} command. We can choose
-specific columns and tables to display, and if a table name is too long, we can assign a shorter alias to columns and 
-tables name using the \textcolor{blue}{AS} keyword. When selecting from multiple tables without a join condition, a Cartesian product occurs, meaning each row from one table is paired with each row from the other.
+specific columns and tables to display, we can give aliases to tables and columns . When selecting from multiple tables of different size
+, a Cartesian product occurs, meaning each row from one table is paired with each row from the other.
 \end{prettyBox}
 
 \subsubsection*{\underline{Syntax}}
@@ -23,6 +23,64 @@ The \textcolor{blue}{WHERE} clause is used to filter rows in a table when displa
 
 \lstinputlisting{SQL/syntax/DRL/where.sql}
 
+\subsection{Aggregation Functions}
+ \begin{prettyBox}{Aggregation Functions}{myblue}
+   Aggregation functions perform calculations on a set of values and return a single result. They are commonly used in conjunction with the \textcolor{blue}{GROUP BY} clause to summarize data.
+   \begin{itemize}
+    \item \textbf{Avg(column$_{i}$)} : Calculates the average (mean) of numeric values in a specified column.
+    \item \textbf{Min(column$_{i}$)} : Returns the smallest (minimum) value in a specified column.
+    \item \textbf{Max(column$_{i}$)} : Returns the largest (maximum) value in a specified column.
+    \item \textbf{Count()} : Counts the number of non-null entries in a specified column (or all rows if * is used).
+      \begin{itemize}
+        \item  \textbf{count(*)} : Counts All rows
+        \item  \textbf{count(column$_{i}$)} : counts number of rows where column$_{i}$ is not null
+        \item  \textbf{count(distinct column$_{i}$)} : counts number of rows where column$_{i}$ is not null without repetition
+    \end{itemize}
+    \item \textbf{Sum(column$_{i}$)} : Adds up all values in a specified numeric column.
+   \end{itemize} 
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Note}{red}
+\begin{itemize}
+    \item We can do arithmethical operations inside parameters of some aggregation functions like avg,max,min,sum 
+    \item We must use \textcolor{blue}{GROUP BY} when using aggregation functions if not we will have an error
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.5cm}
+\subsection{Group By} 
+\begin{prettyBox}{Group By}{myblue}
+To group rows that have the same value in a specified column, we use the \textcolor{blue}{GROUP BY} command.
+We can group by multiple columns; the order is important because it will first group by the first column. If there
+are rows that have the same value in the first column but differ in the second column, those rows will appear in
+separate groups in the output. This allows us to apply aggregate functions to summarize data for each group.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsubsection*{\underline{Syntax}}
+
+\lstinputlisting{SQL/syntax/DRL/groupby.sql}
+
+
+\subsection{Having}
+\begin{prettyBox}{Having Clause}{myblue}
+
+    Similar to \textcolor{blue}{WHERE}, which filters rows based on conditions, 
+\textcolor{blue}{HAVING} is used to filter groups of data rather than individual rows. Unlike
+\textcolor{blue}{WHERE}, which applies conditions before grouping, \textcolor{blue}{HAVING} is
+applied after the \textcolor{blue}{GROUP BY} clause. This allows you to filter aggregated results.
+\end{prettyBox}
+
+
+\vspace{0.25cm}
+\subsubsection*{\underline{Syntax}}
+
+\lstinputlisting{SQL/syntax/DRL/having.sql}
+
+
+\vspace{0.5cm}
 \subsection{Order By}
 
 \begin{prettyBox}{Order By}{myblue}
@@ -32,46 +90,18 @@ first sorts by the first column, and if there are rows with identical values in 
 rows by the next column, and so on. This allows for a prioritized sorting strategy.
 \end{prettyBox}
 
+\vspace{0.25cm}
 \subsubsection*{\underline{Syntax}}
 
 \lstinputlisting{SQL/syntax/DRL/orderby.sql}
 
-\subsection{Group By} 
-\begin{prettyBox}{Group By}{myblue}
-To group rows that have the same value in a specified column, we use the \textcolor{blue}{GROUP BY} command.
-We can group by multiple columns; the order is important because it will first group by the first column. If there
-are rows that have the same value in the first column but differ in the second column, those rows will appear in
-separate groups in the output. This allows us to apply aggregate functions to summarize data for each group.
-\end{prettyBox}
-
-\subsubsection*{\underline{Syntax}}
-
-\lstinputlisting{SQL/syntax/DRL/groupby.sql}
-
- \subsection{Aggregation Functions}
- \begin{prettyBox}{Aggregation Functions}{myblue}
-   Aggregation functions perform calculations on a set of values and return a single result. They are commonly used in conjunction with the \textcolor{blue}{GROUP BY} clause to summarize data.
-   \begin{itemize}
-    \item \textbf{Avg()} : Calculates the average (mean) of numeric values in a specified column.
-    \item \textbf{Min()} : Returns the smallest (minimum) value in a specified column.
-    \item \textbf{Max()} : Returns the largest (maximum) value in a specified column.
-    \item \textbf{Count()} : Counts the number of non-null entries in a specified column (or all rows if * is used).
-      \begin{itemize}
-        \item  \textbf{count(*)} : Counts All rows
-        \item  \textbf{count(column$_{i}$)} : counts number of rows where column$_{i}$ is not null
-        \item  \textbf{count(distinct column$_{i}$)} : counts number of rows where column$_{i}$ is not null without repetition
-    \end{itemize}
-    \item \textbf{Sum()} : Adds up all values in a specified numeric column.
-   \end{itemize} 
-\end{prettyBox}
-
-
-
+\vspace{0.5cm}
 \subsection{Joins}
 \begin{prettyBox}{Joins}{myblue}
 joins allow you to combine rows from two or more tables based on related columns (referenced key)
 \end{prettyBox}
 
+\vspace{0.25cm}
 \subsubsection{Inner Joins}
 \begin{prettyBox}{Inner Joins}{myblue}
 An Inner Join returns only the common rows between tables
@@ -89,6 +119,8 @@ An Inner Join returns only the common rows between tables
 \end{tikzpicture}
 \end{center}
 \end{prettyBox}
+
+\vspace{0.25cm}
 \subsubsection{Left Join}
 
 \begin{prettyBox}{Left Join}{myblue}
@@ -106,6 +138,7 @@ NULL values are returned for columns from the right table.
 \end{center}
 \end{prettyBox}
 
+\vspace{0.25cm}
 \subsubsection{Right Join}
 \begin{prettyBox}{Right Join}{myblue}
 A Right Join returns all rows from the right table and the matched rows from the left table. If there’s no match,
@@ -122,6 +155,7 @@ NULL values are returned for columns from the left table.
 \end{center}
 \end{prettyBox}
 
+\vspace{0.25cm}
 \subsubsection{Full Join}
 
 \begin{prettyBox}{Full Join}{myblue}
@@ -139,32 +173,24 @@ NULL values are returned for unmatched columns.
 \end{center}
 \end{prettyBox}
 
+\vspace{0.25cm}
 \subsubsection*{ \textbf{Syntax}}
-\begin{tcolorbox}[title =Joins]
- \textbf{Inner Join}\\
-\textcolor{blue}{SELECT} column$_{1}$,...,column$_{n}$ \textcolor{blue}{FROM} table1 \textcolor{blue}{INNER JOIN} 
-table2 \textcolor{blue}{ON} table1.common\_column = table2.common\_column;
 
- \textbf{Left Join}\\
-\textcolor{blue}{SELECT} column$_{1}$,...,column$_{n}$ \textcolor{blue}{FROM} table1 \textcolor{blue}{LEFT JOIN} 
-table2 \textcolor{blue}{ON} table1.common\_column = table2.common\_column;
+\lstinputlisting{SQL/syntax/DRL/joins.sql}
 
-\textbf{Right Join}\\
-\textcolor{blue}{SELECT} column$_{1}$,...,column$_{n}$ \textcolor{blue}{FROM} table1 \textcolor{blue}{RIGHT JOIN} 
-table2 \textcolor{blue}{ON} table1.common\_column = table2.common\_column;
+\vspace{0.25cm}
+\begin{prettyBox}{Note}{red}
+We can have different types of joins in one select query
+\end{prettyBox}
 
-\textbf{Full Join}\\
-\textcolor{blue}{SELECT} column$_{1}$,...,column$_{n}$ \textcolor{blue}{FROM} table1 \textcolor{blue}{FULL OUTER JOIN} 
-table2 \textcolor{blue}{ON} table1.common\_column = table2.common\_column;
-\end{tcolorbox}
-
-
+\vspace{0.5cm}
 \subsection{Operators}
 \begin{prettyBox}{Operators}{myblue}
 Operators are symbols that specify operations to be performed on operands. They can be categorized as follows:
 \end{prettyBox}
 
-\subsubsection{Logical Operators}:
+\vspace{0.25cm}
+\subsubsection{Logical Operators}
 \begin{prettyBox}{Logical}{myblue}
 Used to combine conditions.
           \begin{itemize} 
@@ -174,6 +200,7 @@ Used to combine conditions.
               \end{itemize} 
 \end{prettyBox}
 
+\vspace{0.25cm}
 \subsubsection{Comparison Operators}
 \begin{prettyBox}{Comparison}{myblue}
 Used to compare values.
@@ -189,6 +216,7 @@ Used to compare values.
              \end{itemize} 
 \end{prettyBox}
 
+\vspace{0.25cm}
 \subsubsection{Arithmetic Operators}
 \begin{prettyBox}{Arithmetic}{myblue}
 Used for mathematical calculations.
