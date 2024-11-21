@@ -1,0 +1,48 @@
+\section{View}
+\subsection{What Are Views ?}
+
+\begin{prettyBox}{View}{myblue}
+Views are virtual tables that helps restricts what user can see and to tables , it also
+can also provide a boost in performance when it comes to joins there are 2 types of views
+external and marterial
+\end{prettyBox}
+
+\begin{prettyBox}{Note}{red}
+Any change that happens in a view will reflect on the source table
+\end{prettyBox}
+
+
+\subsubsection*{\underline{Syntax}}
+
+\lstinputlisting{SQL/syntax/Views/createView.sql}
+
+
+\subsection{External}
+
+\begin{prettyBox}{External View}{myblue}
+External view have same performance as normal table , they just make it easier
+so we don't have to retype the select query each time we want to get the information
+from a table , we can insert on an external view , for a view to be external it must include :
+\begin{itemize}
+    \item Primary Key of the table
+    \item not have any kind of joins
+    \item dont have any aggregation functions 
+    \item all not null attributes
+\end{itemize}
+\end{prettyBox}
+
+\subsection{Material}
+
+\begin{prettyBox}{Material View}{myblue}
+Material view have better performance , they server as read only tables , we can't insert
+into them , a view is material any of the condition are met :
+\begin{itemize}
+    \item doesn't include primary key
+    \item doesn't include all not null attributes
+    \item has joins
+    \item has aggregation functions
+\end{itemize}
+\end{prettyBox}
+
+\subsubsection*{\underline{Example}}
+

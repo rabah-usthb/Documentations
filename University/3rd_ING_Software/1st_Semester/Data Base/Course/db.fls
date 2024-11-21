@@ -382,6 +382,12 @@ INPUT SQL/syntax/Pl_Sql/raise_application.sql
 INPUT ./SQL/syntax/Pl_Sql/exc.sql
 INPUT ./SQL/syntax/Pl_Sql/exc.sql
 INPUT SQL/syntax/Pl_Sql/exc.sql
+INPUT ./Chapters/view.tex
+INPUT ./Chapters/view.tex
+INPUT Chapters/view.tex
+INPUT ./SQL/syntax/Views/createView.sql
+INPUT ./SQL/syntax/Views/createView.sql
+INPUT SQL/syntax/Views/createView.sql
 INPUT db.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
