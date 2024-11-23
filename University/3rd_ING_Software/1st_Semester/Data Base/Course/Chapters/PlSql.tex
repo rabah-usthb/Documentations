@@ -237,6 +237,14 @@ Though commonly used to handle user-defined exceptions, RAISE\_APPLICATION\_ERRO
 by the system for predefined exceptions, supporting error control in both system and custom PL/SQL operations.
 \end{prettyBox}
 
+\newpage
+\subsubsection*{\underline{Syntax}}
+
+
+\lstinputlisting{SQL/syntax/Pl_Sql/raise.sql}
+
+
+\vspace{0.5cm}
 
 \subsection{Exceptions}
 \begin{prettyBox}{Exception}{myblue}
@@ -252,6 +260,7 @@ the hood, exceptions are built on RAISE\_APPLICATION\_ERROR ,  only difference i
 \end{itemize}
 \end{prettyBox}
 
+\newpage
 \subsubsection*{\underline{Syntax}}
 
 
@@ -260,97 +269,241 @@ the hood, exceptions are built on RAISE\_APPLICATION\_ERROR ,  only difference i
 
 
 
-\begin{tcolorbox}[title = Exceptions with SQLCODE]
-    
-    \textcolor{blue}{DECLARE}
-
-     sqlcode\_1 := -20001;
-    
-     sqlcode\_2 := -20002;
-
-     \textcolor{blue}{BEGIN}
-    
-     \textcolor{commentgray}{- - Check for specific conditions and raise custom errors with codes}
-   
-    IF [Condition] \textcolor{blue}{THEN}
-    
-    RAISE\_APPLICATION\_ERROR(sqlcode\_1, \textcolor{messagegreen}{'error message1'});
-    
-    [Condition] \textcolor{blue}{THEN}
-    
-    RAISE\_APPLICATION\_ERROR(sqlcode\_2, \textcolor{messagegreen}{'error message2'});
-    
-    \textcolor{blue}{END} IF;
-
-EXCEPTION
-
-\textcolor{blue}{WHEN} OTHERS \textcolor{blue}{THEN}
-
-\textcolor{commentgray}{- - Use SQLCODE to check error codes directly}
-
-IF SQLCODE = sqlcode\_1 \textcolor{blue}{THEN}
-
-DBMS\_OUTPUT.PUT\_LINE(\textcolor{messagegreen}{'Error: '} \texttt{||} SQLERRM);
-
-ELSIF SQLCODE = sqlcode\_2 \textcolor{blue}{THEN}
-
-DBMS\_OUTPUT.PUT\_LINE(\textcolor{messagegreen}{'Error: '} \texttt{||} SQLERRM);
-
-\textcolor{blue}{ELSE}
-
-DBMS\_OUTPUT.PUT\_LINE(\textcolor{messagegreen}{'Unexpected error: '} \texttt{||} SQLERRM);
-
-\textcolor{blue}{END} IF;
-
-\textcolor{blue}{END};
-
-\end{tcolorbox}
-
+\vspace{0.5cm}
 \begin{prettyBox}{Note}{red}
-\textbf{What is OTHERS?}
+\textbf{\underline{What is OTHERS?}}
 
+\vspace{0.15cm}
 It’s best practice to add OTHERS as the last exception handler, as it catches any exceptions not explicitly
 defined. This ensures any unexpected errors are managed gracefully.
 
-\textbf{When to Use RAISE\_APPLICATION\_ERROR vs. Exceptions?}
+\vspace{0.25cm}
 
+\textbf{\underline{When to Use RAISE\_APPLICATION\_ERROR vs. Exceptions?}}
+
+\vspace{0.15cm}
 Although exceptions are built on RAISE\_APPLICATION\_ERROR, they offer better readability and manageability
 in complex code. Use exceptions for organized error handling, while RAISE\_APPLICATION\_ERROR provides a more
 direct and minimalistic approach.
 \end{prettyBox}
 
+\newpage
+
+
+\begin{prettyBox}{Cursor}{myblue}
+Cursors are used when a \textcolor{blue}{SELECT} query returns a table (more than one row).  
+To use a cursor, we first declare a variable of the \textcolor{blue}{CURSOR} data type and associate it with a \textcolor{blue}{SELECT} query.\\[0.15cm]
+Then, inside the BEGIN-END block, we perform the following steps:  
+
+\begin{itemize}
+    \item Open the cursor using the \textcolor{blue}{OPEN} keyword.  
+    \item Load the first row using the \textcolor{blue}{FETCH} keyword and store the output in variables.  
+    \item Loop through the table using the \textcolor{blue}{FOUND} function, which is a boolean function that returns \textbf{true} if a row is successfully loaded.  
+\end{itemize}
+
+Inside the WHILE loop: 
+\begin{itemize}
+    \item Process the current row.  
+    \item Load the next row using \textcolor{blue}{FETCH}.  
+\end{itemize}
+
+When \textcolor{blue}{FOUND} returns false, indicating no more rows, the loop exits. Finally, close the cursor using the \textcolor{blue}{CLOSE} keyword to free up memory.  
+\end{prettyBox}
+
+\subsubsection*{\underline{Syntax}}
+
+\vspace{0.25cm}
+\lstinputlisting{SQL/syntax/Pl_Sql/cursor.sql}
+\subsection{Trigger}
+
+\begin{prettyBox}{Trigger}{myblue}
+Triggers are standalone PL/SQL code blocks that execute automatically in response to a specified event.  
+
+\vspace{0.15cm}
+There are two types of triggers:  
+\begin{itemize}
+    \item Row-level triggers  
+    \item Table-level triggers  
+\end{itemize}
+
+Triggers can be associated with various events, such as \textcolor{blue}{INSERT}, \textcolor{blue}{UPDATE}, or \textcolor{blue}{DELETE}.  
+
+\vspace{0.15cm}
+They are useful for automating tasks, enforcing rules, or logging changes.  
+\end{prettyBox}
+
+\subsubsection*{\underline{Syntax}}
+
+\lstinputlisting{SQL/syntax/Pl_Sql/trigger.sql}
+
+
+
+\subsubsection{Row Level Trigger}
+
+\begin{prettyBox}{Row Level}{myblue}
+We use the \textcolor{blue}{FOR EACH ROW} keyword, which instructs the trigger
+to execute for every row that is deleted or updated.
+
+This also provides us with access to:
+\begin{itemize}
+    \item :\textcolor{blue}{NEW}.colName – This gives the value of a column for the newly inserted or updated row.
+    \item :\textcolor{blue}{OLD}.colName – This gives the value of a column for a deleted row or the value before an update.
+\end{itemize}
+
+We use row-level triggers when we need to access :\textcolor{blue}{NEW} and :\textcolor{blue}{OLD}, or when the event is row-specific, such as \textcolor{blue}{DELETE} or \textcolor{blue}{UPDATE}.
+\end{prettyBox}\newpage
+
+\subsubsection*{\underline{Syntax}}
+
+\lstinputlisting{SQL/syntax/Pl_Sql/rowLevel.sql}
+
+
+
+
+\subsubsection{Table Level Trigger}
+
+\begin{prettyBox}{Table Level}{myblue}
+A trigger is considered table-level if we omit the \textcolor{blue}{FOR EACH ROW} keyword. Unlike row-level triggers, table-level triggers do not have access to \textcolor{blue}{:NEW} and \textcolor{blue}{:OLD}.
+
+\vspace{0.15cm}
+We use table-level triggers when:
+\begin{itemize}
+    \item There is no need to access \textcolor{blue}{:NEW} or \textcolor{blue}{:OLD} values.
+    \item The event is not row-specific, such as when performing actions like \textcolor{blue}{DROP}, \textcolor{blue}{ALTER}, or other table-wide operations.
+    \item We want to override a command using \textcolor{blue}{INSTEAD OF}.
+\end{itemize}
+\end{prettyBox}
+
+\subsubsection*{\underline{Syntax}}
+
+\lstinputlisting{SQL/syntax/Pl_Sql/tableLevel.sql}
+
+
+
+
+\subsubsection{Trigger Events}
+
+\begin{prettyBox}{Events}{myblue}
+Triggers are defined for different types of events, which can be categorized as follows:
+
+\vspace{0.2cm}
+\textbf{\underline{Trigger Types}:}
+\begin{itemize}
+    \item \textcolor{blue}{BEFORE} : The trigger executes before an event.
+    \item \textcolor{blue}{AFTER} : The trigger executes after an event.
+    \item \textcolor{blue}{INSTEAD OF} : The trigger overrides the event entirely (typically used with views).
+\end{itemize}
+
+\textbf{\underline{Operations}:}
+\begin{itemize}
+    \item \textcolor{blue}{INSERT} on tableName : Trigger fires when a row is inserted into the table.
+    \item \textcolor{blue}{DELETE} on tableName : Trigger fires when a row is deleted from the table.
+    \item \textcolor{blue}{UPDATE} on tableName : Trigger fires when a row is updated in the table.
+    \item \textcolor{blue}{UPDATE} on tableName.columnName : Trigger fires when a specific column in the table is updated.
+    \item \textcolor{blue}{DROP} on tableName : Trigger fires when a table is dropped .
+\end{itemize}
+
+You can use the \textcolor{blue}{OR} keyword in a trigger definition to specify multiple events for the same table. This allows the trigger to fire on different types of events.
+\end{prettyBox}
+
+\subsubsection*{\underline{Syntax}}
+
+\lstinputlisting{SQL/syntax/Pl_Sql/event.sql}
+
+
+
+
+\begin{prettyBox}{Note}{red}
+\textbf{\underline{A Trigger Can Be Linked to Only One Table}}
+
+\vspace{0.15cm}
+A trigger can only be linked to a single table. Therefore, attempting something like 
+BEFORE \textcolor{blue}{UPDATE} ON table1 \textcolor{blue}{OR} AFTER \textcolor{blue}{INSERT} ON table2 is incorrect.
+
+\vspace{0.25cm}
+
+\textbf{\underline{Avoid Using Multiple Events in a Single Trigger}}
+
+\vspace{0.15cm}
+It is generally not considered a best practice to combine multiple events with the \textcolor{blue}{OR} keyword in a single trigger. This can make the trigger logic harder to maintain and understand.
+\end{prettyBox}
+
 \vspace{0.5cm}
+\subsection{Function}
 
-\subsection{Cursors}
-\begin{tcolorbox}[title = cursor]
-    \begin{verbatim}
-DECLARE
-    -- Declare a cursor that selects data
-    CURSOR cr IS
-        select query
 
-    -- Variables to hold fetched data
-    var1 table.col1%TYPE;
-    var2 table.col2%TYPE;
-    .....
-    varn table.coln%TYPE;
-BEGIN
-    -- Open the cursor
-    OPEN emp_cursor;
-    FETCH cr INTO var1,var2,...,varn
-    -- Loop through the result set
-    WHILE(cr%FOUND) LOOP
-        --traitements
-        FETCH cr INTO var1,var2,...,varn
-        
-    END LOOP;
+\subsubsection*{\underline{Syntax}}
 
-    -- Close the cursor
-    CLOSE emp_cursor;
-END;
-    \end{verbatim}
-\end{tcolorbox}
-\subsection{Triggers}
-\subsection{Functions}
+\subsubsection*{\underline{Function Definition}}
+
+\subsubsection*{\underline{Local Function}}
+
+
+\lstinputlisting{SQL/syntax/Pl_Sql/funcLocal.sql}
+
+\newpage
+
+\subsubsection*{\underline{Stand Alone Function}}
+
+\lstinputlisting{SQL/syntax/Pl_Sql/funcAlone.sql}
+
+\subsubsection*{\underline{Function Call}}
+
+\subsubsection*{\underline{Inside Begin End Block}}
+
+\lstinputlisting{SQL/syntax/Pl_Sql/funcCall.sql}
+
+\subsubsection*{\underline{Call Directly With Exec}}
+
+\lstinputlisting{SQL/syntax/Pl_Sql/exec.sql}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Note}{red}
+\textbf{\underline{Standalone vs. Local Functions and Procedures}}
+\begin{itemize}
+    \item \textbf{Standalone:} These are stored in the DBMS schema and can be called from anywhere.
+    \item \textbf{Local:} These are defined inside the `DECLARE` block and can only be accessed or called within the same PL/SQL code.
+\end{itemize}
+
+\vspace{0.25cm}
+
+\textbf{\underline{Common Errors in Parameters}}
+
+\begin{itemize}
+    \item You cannot use `TYPE` or `ROWTYPE` in parameter definitions.
+    \item You cannot specify a size for `CHAR` or `VARCHAR2` in parameters.
+\end{itemize}
+\end{prettyBox}
+
+
+
+\vspace{0.5cm}
 \subsection{Procedure}
+
+\subsubsection*{\underline{Syntax}}
+
+\subsubsection*{\underline{Procedure Definition}}
+
+\subsubsection*{\underline{Local Procedure}}
+
+
+\lstinputlisting{SQL/syntax/Pl_Sql/proLocal.sql}
+
+
+\subsubsection*{\underline{Stand Alone Procedure}}
+
+\lstinputlisting{SQL/syntax/Pl_Sql/proAlone.sql}
+
+\newpage
+\subsubsection*{\underline{Procedure Call}}
+
+\subsubsection*{\underline{Inside Begin End Block}}
+
+\lstinputlisting{SQL/syntax/Pl_Sql/proCall.sql}
+
+\subsubsection*{\underline{Call Directly With Exec}}
+
+\lstinputlisting{SQL/syntax/Pl_Sql/proExec.sql}
+
 
