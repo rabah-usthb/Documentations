@@ -1,0 +1,48 @@
+we have \(f(n) = \sum fr\) since \(f(n)\) is sum of frequency of execution (\(fr\)) we need to figure out the
+\(fr\) of each instruction and sum them : 
+
+\vspace{0.5cm}
+sum $\gets$ 0  \hspace{4.15cm} \(fr = 1\) (one affectation)
+
+\vspace{0.15cm}
+i $\gets$ 1  \hspace{4.65cm} \(fr = 1\) (one affectation)
+
+\vspace{0.15cm}
+\textcolor{purplePlot!80!black}{print}(\textcolor{blueArea!60!black}{'Input Integer N\(>=\)1 : '})  \hspace{1.5cm} \(fr = 1\) (one print)
+
+\vspace{0.15cm}
+\textcolor{purplePlot!80!black}{Read}(n)  \hspace{4.25cm} \(fr = 1\) (one read)
+
+\vspace{0.15cm}
+
+\textbf{while} i \textcolor{redPlot}{\textbf{\textless=}} n  \textbf{do} \hspace{2.75cm} \(fr = n+1\) (check the while condition n+1 times)
+
+\vspace{0.15cm}
+sum $\gets$ sum \textcolor{redPlot}{ \textbf{+}} i \hspace{3cm} \(fr = 2n\) (one affectation and one arithmetic operation + (2) inside a while that loops n times (2n))
+
+\vspace{0.15cm}
+i $\gets$ i \textcolor{redPlot}{ \textbf{+}} 1 \hspace{4cm} \(fr = 2n\) (one affectation and one arithmetic operation + (2) inside a while that loops n times (2n))
+
+\vspace{0.15cm}
+
+\textcolor{purplePlot!80!black}{print}(\textcolor{blueArea!60!black}{'Sum is ' },{sum}) \hspace{2.25cm} \(fr = 1\) (one print)
+
+\vspace{0.75cm}
+\begin{align*}
+f(n) &= \sum fr \\
+     &= 1 + 1 + 1 + 1 + (n+1) + 2n + 2n + 1 \\
+     &= 5n + 6 \\
+     &= \boxed{5n + 6}
+\end{align*}
+
+\vspace{0.5cm}
+now that we have the complexity function \(f(n)\) we need to find the \(T(n)\)  we have \(T(n) = f(n) \times \Delta t\)
+
+\begin{align*}
+T(n) &= f(n) \times \Delta t\\ 
+&= (5n + 6) \times \Delta t \\
+&= \underbrace{5 \Delta t}_{a} n + \underbrace{\Delta t 6}_{b} \\
+&= \boxed{an+b} 
+\end{align*}
+
+

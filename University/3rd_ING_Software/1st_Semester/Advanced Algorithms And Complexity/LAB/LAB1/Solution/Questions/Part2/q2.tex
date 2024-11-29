@@ -1,0 +1,44 @@
+\subsubsection*{\underline{Experimental}}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+    N & \(10^3\) & \(2.10^3\) & \(10^4\) & \(2.10^4\) & \(10^5\) & \(2.10^5\) & \(10^6\) & \(2.10^6\) & \(10^7\) & \(2.10^7\) & \(10^8\) & \(2.10^8\) & \(10^9\) & \(2.10^9\) \\
+    \hline
+    \makecell{Time\\\((10^{-5})\)} & 8 & 9.8 & 10.8 & 19.4 & 33.6 & 59.3 & 261.1 & 505.7 & 2458.4 & 5071.6 & 24458.7 & 48759.0 & 243312.2 & 487828.6 \\
+    \hline
+\end{tabular}
+
+
+
+\vspace{1cm}
+
+\newpage
+
+\subsubsection*{\underline{Theoritical}}
+We first need to find  \(\Delta t\) , for that we will take one runtime value from the experimental study and solve a simple equation 
+
+\vspace{0.15cm}
+
+for n = \(10^4\) and execution time T(n) = \(10.8\times10^{-5}\) :
+
+\vspace{0.75cm}
+\begin{align*}
+&f(n)\times\Delta t = T(n)\\[0.15cm]
+&\Delta t = \frac{T(n)}{f(n)} \\[0.15cm]
+&\Delta t = \frac{T(n)}{5n + 6}\\[0.15cm]
+&\Delta t = \frac{10.8\times10^{-5}}{5\times 10^4 + 6} \\[0.15cm]
+&\Delta t = 2.1597408311\times10^{-9} \\[0.25cm]
+&\boxed{\Delta t \approx 2.16\times10^{-9}}
+\end{align*}
+
+
+
+
+
+\vspace{2cm}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+    N & \(10^3\) & \(2.10^3\) & \(10^4\) & \(2.10^4\) & \(10^5\) & \(2.10^5\) & \(10^6\) & \(2.10^6\) & \(10^7\) & \(2.10^7\) & \(10^8\) & \(2.10^8\) & \(10^9\) & \(2.10^9\) & \(10^{10}\) & \(2.10^{10}\) \\
+    \hline
+    \makecell{Time\\\((10^{-5})\)} & 1.08 & 2.16 & 10.08 & 21.6 & 108 & 216 & 1080 & 2160 & 10800 & 21600 & \makecell{108\\\(\times10^3\)} & \makecell{216\\\(\times10^3\)} & \makecell{108\\\(\times10^4\)} & \makecell{216\\\(\times10^4\)} & \makecell{108\\\(\times10^5\)} & \makecell{216\\\(\times10^5\)}\\
+    \hline
+\end{tabular}
