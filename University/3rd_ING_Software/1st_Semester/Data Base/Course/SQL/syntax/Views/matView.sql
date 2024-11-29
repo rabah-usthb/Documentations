@@ -1,7 +1,7 @@
 
 -- create materialzed view
 
-create materialized view viewName
+create materialized view viewName (colName_1,...,colName_n)
 refresh on demand
 as
 [select query]
