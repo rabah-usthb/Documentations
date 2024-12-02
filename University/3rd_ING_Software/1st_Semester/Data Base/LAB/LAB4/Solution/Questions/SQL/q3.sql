@@ -11,7 +11,7 @@ begin
 messageError:='Error Can''t Update CodeClient In Commnade Table Because '||:new.codeclient||' Doesn''t exist in Client Table';
 
 
-select count(codeclient) into exist from client where codeclient = :new.codeclient group by codeclient;
+select count(codeclient) into exist from client where codeclient = :new.codeclient;
 
 exception
 when NO_DATA_FOUND then

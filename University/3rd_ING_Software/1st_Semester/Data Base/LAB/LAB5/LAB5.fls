@@ -53,6 +53,9 @@ INPUT ./Exo/ex01.tex
 INPUT ./Exo/ex01.tex
 INPUT Exo/ex01.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT ./Exo/ex02.tex
+INPUT ./Exo/ex02.tex
+INPUT Exo/ex02.tex
 OUTPUT LAB5.pdf
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT LAB5.aux

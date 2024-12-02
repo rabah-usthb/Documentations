@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1732925829.24445 "LAB5.tex" "LAB5.pdf" "LAB5" 1732925829.74554 0
+["pdflatex"] 1733140775.43595 "LAB5.tex" "LAB5.pdf" "LAB5" 1733140775.96549 2
   "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -35,8 +35,9 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1732594860.33734 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1731402230 8212896 b2d3a67526ed46e54375dd7fb267ffaf ""
   "Exo/ex01.tex" 1732925770.08088 1280 8deb828f7b9a5967d89b3a3cc6f7f61b ""
-  "LAB5.aux" 1732925829.70288 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "LAB5.tex" 1732925827.51888 490 79b432a1acd742b7e42ee0ecd5d53fbc ""
+  "Exo/ex02.tex" 1733140774.17261 695 392cc3db5993174fe9fec296d367eaeb ""
+  "LAB5.aux" 1733140775.91561 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "LAB5.tex" 1733124510.32513 510 8623b22e7b48f081c00403af439d7066 ""
   (generated)
   "LAB5.aux"
   "LAB5.log"

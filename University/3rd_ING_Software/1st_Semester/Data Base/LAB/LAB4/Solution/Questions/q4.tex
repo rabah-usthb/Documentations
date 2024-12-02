@@ -1,0 +1,82 @@
+\subsection*{4.Chiffre Affaire Of Product}
+\subsection*{4.a.Add Chiffre\_Affaire Column To Product Table}
+\lstinputlisting{Questions/SQL/q4.a.sql}
+
+\subsection*{4.b.Update Chiffre\_Affaire Automatically}
+\newpage
+\subsubsection*{After Insert On DetailCommande}
+\lstinputlisting{Questions/SQL/q4.b.sql}
+
+\begin{prettyBox}{insertProdDC}{myblue}
+We created a row level trigger after insert on detailcommande , we need to increment chiffre affaire of the new inserted product 
+we need to first calculate how much the product made 
+
+\begin{lstlisting}
+newca:=:new.qte*:new.prixunit-:new.remise;
+\end{lstlisting}
+
+Then we increment chiffre affaire of the newly inserted product with the calculated value
+
+\begin{lstlisting}
+update produit p set p.chiffre_affaire = p.chiffre_affaire + newca 
+where p.refprod = :new.refprod;
+\end{lstlisting}
+
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsubsection*{After Delete On DetailCommande}
+
+\lstinputlisting{Questions/SQL/q4.c.sql}
+
+\begin{prettyBox}{deleteProdDC}{myblue}
+We created a row level trigger after delete on detailcommande , we need to decrement chiffre affaire of the deleted product 
+we need to first calculate how much the deleted product made 
+
+\begin{lstlisting}
+oldca:=:old.qte*:old.prixunit-:old.remise;
+\end{lstlisting}
+
+Then we decrement chiffre affaire of the deleted product with the calculated value
+
+\begin{lstlisting}
+update produit p set p.chiffre_affaire = p.chiffre_affaire - oldca 
+where p.refprod = :new.refprod;
+\end{lstlisting}
+
+\end{prettyBox}
+
+\vspace{1cm}
+
+\begin{prettyBox}{Note}{red}
+\textbf{We can't use a select query to fetch the newca/oldca from detailcommand table}\\[0.15cm]
+Because it would result in a mutated table error since trigger would read from a table that is being modified
+\end{prettyBox}
+
+\newpage
+\subsubsection*{After Update On DetailCommande}
+
+\lstinputlisting{Questions/SQL/q4.d.sql}
+\begin{prettyBox}{modifProdDC}{myblue}
+We created a row level trigger before update on detailCommande , we can divide it into 2 cases : \\[0.15cm]
+\textbf{\underline{Product Got Replaced}}\\[0.15cm]
+If the product got replaced with another one (:old.refprod!=:new.refprod) then it means we need to substract from the deleted product (:old.refprod) 
+\begin{lstlisting}
+update produit p set p.chiffre_affaire = p.chiffre_affaire -oldca 
+where p.refprod = :old.refprod;
+\end{lstlisting}
+and increment the new product (:new.oldref)
+\begin{lstlisting}
+update produit p set p.chiffre_affaire = p.chiffre_affaire + newca 
+where p.refprod = :new.refprod;
+\end{lstlisting}
+
+\textbf{\underline{Same Product}}\\[0.15cm]
+Now if the product is the same and only other column changed like remise , price ...etc we remove from chiffre\_affaire the old
+money made from that row for the product and increment it with the new one 
+\begin{lstlisting}
+update produit p set p.chiffre_affaire = p.chiffre_affaire - oldca + newca 
+where p.refprod = :old.refprod;
+\end{lstlisting}
+\end{prettyBox}
