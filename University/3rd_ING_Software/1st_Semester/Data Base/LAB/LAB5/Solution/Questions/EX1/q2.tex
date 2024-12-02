@@ -1,0 +1,47 @@
+\subsection*{2.Client That Never Ranted For Longue Period}
+
+\lstinputlisting{Questions/SQL/EX1/q2.sql}
+
+\begin{prettyBox}{Nested Select Method}{myblue}
+    \textbf{\underline{Inner Query}}
+   \begin{lstlisting}
+select l.numcl from louertp5 l where l.typelocation='longue duree'
+   \end{lstlisting}
+This inner query fetches set of numcl that at least ranted a car for a 'longue duree' once
+
+    \vspace{0.25cm}
+    \textbf{\underline{Outer Query}}
+    \begin{lstlisting}
+select c.nom , c.prenom from clienttp5 c where c.numcl not in ( inner query );
+    \end{lstlisting}
+This outer query select first name and last name of the client that didn't do 'longue duree' at least once 
+\(\rightarrow\) meaning client that never ranted for 'longue duree' 
+\end{prettyBox}
+
+\begin{prettyBox}{Joing Method}{myblue}
+    \textbf{\underline{Join}}
+    \begin{lstlisting}
+    select  c.nom , c.prenom from clienttp5 c LEFT JOIN louertp5 l
+    \end{lstlisting}
+We are doing left join between client and louer , so all client from client table will be fetched
+and if the is no match with louer table it will return null
+   
+    \vspace{0.25cm}
+ 
+    \textbf{\underline{Join Condition}}
+\begin{lstlisting}
+    on c.numcl = l.numcl and l.typelocation='longue duree' 
+\end{lstlisting}
+This join condition macthes for client that exist on louer table and ranted for 'longue duree' , so it would 
+return null if client doesn't exist in louer table or didn't ranted for 'longue duree' (at least once instance)
+    \vspace{0.25cm}
+
+
+    \textbf{\underline{Where Clause}}
+  \begin{lstlisting}
+    where l.numcl is null;
+  \end{lstlisting} 
+Null Client mean client that didn't match \(\rightarrow\) don't exist in louer table or never ranted for 'longue duree'
+\end{prettyBox}
+
+\vspace{0.5cm}

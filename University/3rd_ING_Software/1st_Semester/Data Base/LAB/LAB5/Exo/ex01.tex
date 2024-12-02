@@ -1,0 +1,14 @@
+Soit le schema de BD suivant,relatif a la gestion d'agences de location de vehicules :\\[0.15cm]
+\textbf{Voiture}(\textbf{\underline{Matricule}}, Modele, Marque, Couleur, Description, IdAgence*)\\[0.1cm]
+\textbf{Client}(\textbf{\underline{NumCl}}, Nom, Prenom, Genere, Adresse, Tel)\\[0.1cm]
+\textbf{Agence}(\textbf{\underline{Agence}}, Adresse, Responsable)\\[0.1cm]
+\textbf{Louer}(\textbf{\underline{IdAgence, NumCl, Matricule, DateDebut}}, DateFin, Prix, TypeLocation)\\[0.1cm]
+
+\begin{enumerate}
+    \item Creer les tables.
+    \item Donnez la requet \textbf{SQL} qui permet d'afficher les client(nom et prenom) n'ayant jamais effectue une location de type = "longue duree".
+    \item Donnez la requet \textbf{SQL} qui premet d'afficher les agences d'alger(adresse = "Alger") qui offrent uniquement des voitures de marque "Volkswagen" ou "BMW".
+    \item Creer et utilise une vue V1 pour determiner les clients les plus fideles(qui effectuent le plus de locations par agence). V1 est-elle mettable a jour?
+    \item Ajouter, de fa\c{c}on permanente, l'information sur le nombere de locations par client (NBL).Que proposez-vous pour alimentez NBL de fa\c{c}on automatique a chaque
+insertion ou supression ? Donner le code \textbf{SQL} relatif a cette operation
+\end{enumerate}

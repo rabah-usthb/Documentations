@@ -1,0 +1,20 @@
+\subsection*{4.Most Loyal Client}
+\lstinputlisting{Questions/SQL/EX1/q4.sql}
+
+\begin{prettyBox}{Nested Select Method}{myblue}
+\textbf{\underline{Inner Query}}
+\begin{lstlisting}
+ select max(count(numcl)) from louertp5 l2 where l2.idagence = l.idagence group by l2.numcl
+\end{lstlisting}
+It fetches the max rants for each agency
+
+\vspace{0.25cm}
+\textbf{\underline{Outer Query}}
+\begin{lstlisting}
+create view v1TP5EX1(idagence,numcl,nblocation) as select l.idagence,l.numcl ,count(numcl) nblocation 
+from louertp5 l group by l.idagence,l.numcl
+having count(numcl) = inner query 
+\end{lstlisting}
+Creates external view v1 with idagence,numcl,nblocaton from tables louer and groups by idagence,numcl
+and we filter it with having by making sure each client from same igency must have max ranted count
+\end{prettyBox}

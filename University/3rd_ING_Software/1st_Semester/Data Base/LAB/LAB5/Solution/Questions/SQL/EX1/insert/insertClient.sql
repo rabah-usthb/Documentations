@@ -1,0 +1,15 @@
+INSERT INTO clientTp5 (numcl, nom, prenom, genere, adresse, tel) VALUES (1, 'Bernard', 'Pierre', 'homme', '123 Rue de Paris', '0102030405');
+INSERT INTO clientTp5 (numcl, nom, prenom, genere, adresse, tel) VALUES (2, 'Dubois', 'Marie', 'femme', '45 Avenue des Champs', '0203040506');
+INSERT INTO clientTp5 (numcl, nom, prenom, genere, adresse, tel) VALUES (3, 'Lemoine', 'Paul', 'homme', '67 Rue de Lyon', '0304050607');
+INSERT INTO clientTp5 (numcl, nom, prenom, genere, adresse, tel) VALUES (4, 'Petit', 'Sophie', 'femme', '89 Boulevard de Marseille', '0405060708');
+INSERT INTO clientTp5 (numcl, nom, prenom, genere, adresse, tel) VALUES (5, 'Gauthier', 'Luc', 'homme', '21 Rue de Toulouse', '0506070809');
+INSERT INTO clientTp5 (numcl, nom, prenom, genere, adresse, tel) VALUES (6, 'Leclerc', 'Emma', 'femme', '33 Avenue de Bordeaux', '0607080910');
+INSERT INTO clientTp5 (numcl, nom, prenom, genere, adresse, tel) VALUES (7, 'Meyer', 'Julien', 'homme', '15 Rue de Strasbourg', '0708091011');
+INSERT INTO clientTp5 (numcl, nom, prenom, genere, adresse, tel) VALUES (8, 'Durand', 'Céline', 'femme', '77 Rue de Nantes', '0809101112');
+INSERT INTO clientTp5 (numcl, nom, prenom, genere, adresse, tel) VALUES (9, 'Robert', 'Antoine', 'homme', '56 Boulevard de Lille', '0910111213');
+INSERT INTO clientTp5 (numcl, nom, prenom, genere, adresse, tel) VALUES (10, 'Dupont', 'Isabelle', 'femme', '18 Rue de Montpellier', '1011121314');
+INSERT INTO clientTp5 (numcl, nom, prenom, genere, adresse, tel) VALUES (11, 'Boucher', 'Louis', 'homme', '34 Rue de Rouen', '1112131415');
+INSERT INTO clientTp5 (numcl, nom, prenom, genere, adresse, tel) VALUES (12, 'Simon', 'Lucie', 'femme', '12 Rue de Paris', '1213141516');
+INSERT INTO clientTp5 (numcl, nom, prenom, genere, adresse, tel) VALUES (13, 'Lemoine', 'Marc', 'homme', '43 Boulevard de Lyon', '1314151617');
+INSERT INTO clientTp5 (numcl, nom, prenom, genere, adresse, tel) VALUES (14, 'Leclerc', 'Claire', 'femme', '89 Rue de Bordeaux', '1415161718');
+INSERT INTO clientTp5 (numcl, nom, prenom, genere, adresse, tel) VALUES (15, 'Dupont', 'Thierry', 'homme', '56 Rue de Toulouse', '1516171819');

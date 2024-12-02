@@ -1,0 +1,20 @@
+CREATE TABLE employe(
+   numemp  integer,
+   nom  varchar2(30),
+   prenom  varchar2(30),
+   fonction  varchar2(30),
+   titrecourtoisie  varchar2(30),
+   datenaissance  date,
+   dateembauche  date,
+   adresse  varchar2(30),
+   ville  varchar2(30),
+   region  varchar2(30),
+   codepostal  varchar2(30),
+   pays  varchar2(30),
+   teldom  varchar2(30),
+   extension  varchar2(30),
+   rendcomptea   integer,
+   constraint pk_employe PRIMARY KEY (numemp),
+   constraint ck_employe_date check (datenaissance<dateembauche), 
+   constraint fk_employe_employe foreign key(rendcomptea) references employe (numemp) on delete CASCADE
+);

@@ -1,0 +1,20 @@
+CREATE TABLE  commande (
+  numcom integer,
+  codeclient varchar2(4),
+  numemp integer,
+  datecom date,
+  alivavant date,
+  dateenv date,
+  nummess integer,
+  port varchar2(30),
+  destinataire varchar2(30),
+  adrliv varchar2(30),
+  villeliv varchar2(30),
+  regionliv varchar2(30),
+  codepostalliv varchar2(30) ,
+  paysliv varchar2(30),
+  constraint pk_commande PRIMARY KEY (numcom),
+  constraint fk_commande_client foreign key (codeclient) references client(codeclient) on delete cascade,
+  constraint fk_commande_employe foreign key (numemp) references employe(numemp) on delete cascade,
+  constraint fk_commande_messager foreign key (nummess) references messager(nummess) on delete cascade
+);

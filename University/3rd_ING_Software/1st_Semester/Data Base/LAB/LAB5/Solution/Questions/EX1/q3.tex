@@ -1,0 +1,48 @@
+\subsection*{3.Algeria Agency That Offer 'BMW' Or 'Volkswagen' Cars Only}
+\lstinputlisting{Questions/SQL/EX1/q3.sql}
+
+\begin{prettyBox}{Nested Select Method}{myblue}
+\textbf{\underline{Inner Query}}
+
+\begin{lstlisting}
+ select v.idagence from voituretp5 v where v.marque not in ('BMW','Volkswagen')
+\end{lstlisting}
+We are fetching idagence from voiture table that doesn't offer cars 'BMW' or 'Volkswagen' at least once
+\vspace{0.25cm}
+
+\textbf{\underline{Outer Query}}
+\begin{lstlisting}
+ select a.idagence from agencetp5 a where a.adresse='Alger'and a.idagence not in ( inner query );
+\end{lstlisting}
+We are fetching idagence from agence table of Algeria that !(doesn't offer cars 'BMW' or 'Volkswagen' at least once) \(\rightarrow\) agency that offers 'BMW' or
+'Volkswagen' Only
+
+\end{prettyBox}
+
+\newpage
+\begin{prettyBox}{Joins Method}{myblue}
+\textbf{\underline{Inner Join}}
+\begin{lstlisting}
+ select distinct a.idagence from  agencetp5 a inner join voituretp5 v 
+ on a.idagence = v.idagence and a.adresse='Alger'
+\end{lstlisting}
+This inner join fetches distinct idagence that exist on voiture table and are located in 'Algeria'
+, we used distinct because this inner join can match the same agency multiple time (agency that offers \texttt{>}1)
+
+\vspace{0.25cm}
+\textbf{\underline{Left Join}}
+\begin{lstlisting}
+inner_Join_Output left join voituretp5 v1 
+on v1.idagence = a.idagence and v1.marque not in ('BMW','Volkswagen') 
+\end{lstlisting}
+This left join matches the output of first inner join with voiture table , condition join : if agency exist on voiture table
+and if it doesn't offer 'BMW' or 'Volkswagen' cars at least once , it returns null if agency doesn't exist in voiture (but that is
+impossible due to first inner join) or the agency always offers 'BMW' or 'Volkswagen' cars
+
+\vspace{0.25cm}
+\textbf{\underline{Where Clause}}
+\begin{lstlisting}
+ where v1.idagence is null;
+\end{lstlisting}
+This makes sure only agency that aren't matched from the left join that are returned \(\rightarrow\) agency that offers only 'BMW' or 'Volkswagen' cars 
+\end{prettyBox}
