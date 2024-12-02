@@ -1,0 +1,37 @@
+\subsection*{5.NBL}
+\begin{prettyBox}{Add NBL column}{myblue}
+\lstinputlisting{Questions/SQL/EX1/q5.a.sql}
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsubsection*{Fill NBL For Already Existing Client}
+
+\lstinputlisting{Questions/SQL/EX1/q5.b.sql}
+
+\begin{prettyBox}{FillNBL procedure}{myblue}
+we are using cursor to loop through each client in client table and for each client we fetch their number of rants 
+and update the value of nbl with it
+\end{prettyBox}
+
+\newpage
+
+\subsubsection*{After Insert Trigger}
+
+\lstinputlisting{Questions/SQL/EX1/q5.c.sql}
+
+\begin{prettyBox}{Insert Trigger}{myblue}
+We are creating row level trigger (for each row) , because we need acces to :new to be able to increment nbl for each client that was inserted in louer table
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsubsection*{Before Insert Trigger}
+
+\lstinputlisting{Questions/SQL/EX1/q5.d.sql}
+
+\begin{prettyBox}{Delete Trigger}{myblue}
+We are creating row level trigger (for each row) , because we need acces to :new to be able to decrement nbl for each client that was deleted from louer table
+\end{prettyBox}
+
+

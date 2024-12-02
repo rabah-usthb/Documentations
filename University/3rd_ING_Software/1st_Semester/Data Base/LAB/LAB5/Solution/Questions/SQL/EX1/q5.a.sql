@@ -1,0 +1,1 @@
+alter table clienttp5 add nbl number default 0; 
