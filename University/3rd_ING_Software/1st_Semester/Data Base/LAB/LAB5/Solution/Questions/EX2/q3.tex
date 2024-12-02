@@ -1,0 +1,37 @@
+\subsection*{Chefs That Worked In Maximums Of Differents Restaurants}
+
+\lstinputlisting{Questions/SQL/EX2/q3.sql}
+
+\begin{prettyBox}{Nested Select}{myblue}
+\textbf{\underline{First Inner Query}}
+\begin{lstlisting}
+select count(distinct s.numr) from servicetp5 s where s.numc= c.numc
+\end{lstlisting}
+Calculate the number of distinct restaurant a chef (s.numc=c.numc) has worked in 
+
+\vspace{0.15cm}
+
+\textbf{\underline{Second Inner Query}}
+\begin{lstlisting}
+select max(count(distinct s.numr)) from servicetp5 s group by s.numc
+\end{lstlisting}
+Calculate the max number of distinct restaurant chefs have worked in , \textbf{note} the group by
+is curcial so we calculate number of distinct restaurant for each chef then pass it to max 
+
+\vspace{0.15cm}
+
+\textbf{\underline{Outer Query}}
+\begin{lstlisting}
+create view vmaxcheftp5 as select c.nomc , 
+( number of distinct restaurants a chef has worked in ) max from cheftp5 c 
+where ( number of distinct restaurants a chef has worked in ) = 
+(max number of distint restaurants chefs have worked in );
+\end{lstlisting}
+Creating a view that fetches name of chef that worked in maximum distinct restraurants , \textbf{note} we have to redo the query
+to be able to print the number because where can't acess aliases because they are executed before select
+\end{prettyBox}
+
+\vspace{0.25cm}
+\begin{prettyBox}{Can We Insert On VMaxChefTP5}{myblue}
+No we can't insert because the select has aggregation function count , max
+\end{prettyBox}

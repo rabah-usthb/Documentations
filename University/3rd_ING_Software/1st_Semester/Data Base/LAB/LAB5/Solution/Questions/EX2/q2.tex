@@ -1,0 +1,35 @@
+\subsection*{Chefs That Worked In All Oran Restaurant(And Maybe Others Too)}
+\lstinputlisting{Questions/SQL/EX2/q2.sql}
+
+\begin{prettyBox}{Nested Select Method}{myblue}
+\textbf{\underline{First Inner Query}}
+
+\begin{lstlisting}
+select count(s.numr) from servicetp5 s where s.numc = c.numc and
+s.numr in  (select r.numr from restauranttp5 r where r.adresse='Oran')
+\end{lstlisting}
+Calculate number of 'Oran' Restaurant for each chef (s.numc = c.numc) has worked in 
+by using count numrestaurant and filtering with where to count oran restaurant only
+\vspace{0.15cm}
+
+\textbf{\underline{Second Inner Query}}
+\begin{lstlisting}
+select count(r.numr) from restauranttp5 r where r.adresse='Oran'
+\end{lstlisting}
+Calculate number of 'Oran' restaurant that exist in restaurant table
+\vspace{0.15cm}
+
+\textbf{\underline{Outer Query}}
+
+\begin{lstlisting}
+create view vcheftp5 select c.nomc from cheftp5 c where 
+(number of 'Oran' restaurant a chef worked in) = 
+(Total number of 'Oran' restaurant);
+\end{lstlisting}
+We are creating a view that fetches chef name that worked in all 'Oran' Restaurant
+\end{prettyBox}
+
+\vspace{0.25cm}
+\begin{prettyBox}{Can We Insert On VChefTP5}{myblue}
+No we can't insert because the select has aggregation function count
+\end{prettyBox}
