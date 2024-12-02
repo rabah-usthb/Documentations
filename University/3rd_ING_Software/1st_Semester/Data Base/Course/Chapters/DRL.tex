@@ -45,7 +45,7 @@ The \textcolor{blue}{WHERE} clause is used to filter rows in a table when displa
 \begin{prettyBox}{Note}{red}
 \begin{itemize}
     \item We can do arithmethical operations inside parameters of some aggregation functions like avg,max,min,sum 
-    \item We must use \textcolor{blue}{GROUP BY} when using aggregation functions if not we will have an error
+    \item We can use nested aggregation function in some cases 
 \end{itemize}
 \end{prettyBox}
 
@@ -227,4 +227,36 @@ Used for mathematical calculations.
            \item Subtraction : -
            \end{itemize}
 \end{prettyBox}
+
+\subsection{Query Execution Order}
+
+\vspace{0.5cm}
+\begin{center}
+\begin{tikzpicture}
+    \draw[<-] (1,0) -- (20,0);
+    
+    \draw (2.75,-0.25) -- (2.75,0.25);
+    \node at (2.75,-0.45) {From};
+    
+    \draw (5.75,-0.25) -- (5.75,0.25);
+    \node at (5.75,-0.45) {Where};
+    
+    \draw (8.75,-0.25) -- (8.75,0.25);
+    \node at (8.75,-0.45) {Group By};
+
+    \draw (11.75,-0.25) -- (11.75,0.25);
+    \node at (11.75,-0.45) {Having};
+
+    \draw (14.75,-0.25) -- (14.75,0.25);
+    \node at (14.75,-0.45) {Select};
+
+    \draw (17.75,-0.25) -- (17.75,0.25);
+    \node at (17.75,-0.45) {Order By};
+
+    \node at (-0.25,0) {+};
+
+
+
+\end{tikzpicture}
+\end{center}
 

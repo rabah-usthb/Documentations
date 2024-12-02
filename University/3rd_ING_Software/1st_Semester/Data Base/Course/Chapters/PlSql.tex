@@ -425,10 +425,17 @@ BEFORE \textcolor{blue}{UPDATE} ON table1 \textcolor{blue}{OR} AFTER \textcolor{
 \textbf{\underline{Avoid Using Multiple Events in a Single Trigger}}
 
 \vspace{0.15cm}
-It is generally not considered a best practice to combine multiple events with the \textcolor{blue}{OR} keyword in a single trigger. This can make the trigger logic harder to maintain and understand.
+It is generally not considered a best practice to combine multiple events with the \textcolor{blue}{OR} keyword in a single trigger. This can make the trigger logic harder to maintain and understand.\\[0.15cm]
+\textbf{\underline{Mutated Table}}\\[0.15cm]
+If we have a trigger that executes after insert/delete/update on a table, trying to read or modify that same table will result in mutated table error because trigger is trying to read or modify a table while it is inserting,deleting,updating\\[0.25cm]
+\textbf{\underline{update on column}}\\[0.15cm]
+We can create trigger that executes when only a certain column is being updated by using of
+\begin{lstlisting}
+after/before of columnName on tableName
+\end{lstlisting}
 \end{prettyBox}
 
-\vspace{0.5cm}
+\newpage
 \subsection{Function}
 
 
