@@ -1,1 +1,0 @@
-alter table projet add nbemp number default 0;
