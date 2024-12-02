@@ -1,0 +1,10 @@
+INSERT INTO chefTP5 (numc, nomc, age, pays, specialiteCulinaire, etoilesc) VALUES (1, 'Jean Dupont', 45, 'France', 'Cuisine Française', 3);
+INSERT INTO chefTP5 (numc, nomc, age, pays, specialiteCulinaire, etoilesc) VALUES (2, 'Marie Lefevre', 38, 'France', 'Pâtisserie', 2);
+INSERT INTO chefTP5 (numc, nomc, age, pays, specialiteCulinaire, etoilesc) VALUES (3, 'Pierre Moreau', 50, 'Belgique', 'Cuisine Belge', 1);
+INSERT INTO chefTP5 (numc, nomc, age, pays, specialiteCulinaire, etoilesc) VALUES (4, 'Sophie Laurent', 42, 'France', 'Cuisine Méditerranéenne', 4);
+INSERT INTO chefTP5 (numc, nomc, age, pays, specialiteCulinaire, etoilesc) VALUES (5, 'Louis Bernard', 60, 'Suisse', 'Cuisine Traditionnelle', 5);
+INSERT INTO chefTP5 (numc, nomc, age, pays, specialiteCulinaire, etoilesc) VALUES (6, 'Nathalie Dubois', 30, 'France', 'Cuisine Végétarienne', 2);
+INSERT INTO chefTP5 (numc, nomc, age, pays, specialiteCulinaire, etoilesc) VALUES (7, 'Antoine Girard', 48, 'France', 'Cuisine de Saison', 3);
+INSERT INTO chefTP5 (numc, nomc, age, pays, specialiteCulinaire, etoilesc) VALUES (8, 'Clara Martin', 33, 'Espagne', 'Cuisine Espagnole', 1);
+INSERT INTO chefTP5 (numc, nomc, age, pays, specialiteCulinaire, etoilesc) VALUES (9, 'David Lefevre', 28, 'Canada', 'Cuisine Fusion', 2);
+INSERT INTO chefTP5 (numc, nomc, age, pays, specialiteCulinaire, etoilesc) VALUES (10, 'Élisabeth Vidal', 55, 'France', 'Cuisine du Terroir', 5);

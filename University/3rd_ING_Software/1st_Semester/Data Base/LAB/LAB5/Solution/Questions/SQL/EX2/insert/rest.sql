@@ -1,0 +1,15 @@
+INSERT INTO restaurantTP5 (numr, nomr, adresse, etoilesr) VALUES (1, 'Le Gourmet d''Oran', 'Oran', 4);
+INSERT INTO restaurantTP5 (numr, nomr, adresse, etoilesr) VALUES (2, 'La Table de Provence', 'Paris', 3);
+INSERT INTO restaurantTP5 (numr, nomr, adresse, etoilesr) VALUES (3, 'Les Saveurs d''Italie', 'Nice', 2);
+INSERT INTO restaurantTP5 (numr, nomr, adresse, etoilesr) VALUES (4, 'Le Palais Royal', 'Oran', 5);
+INSERT INTO restaurantTP5 (numr, nomr, adresse, etoilesr) VALUES (5, 'Chez Marcel', 'Lyon', 3);
+INSERT INTO restaurantTP5 (numr, nomr, adresse, etoilesr) VALUES (6, 'Le Petit Bistrot', 'Oran', 1);
+INSERT INTO restaurantTP5 (numr, nomr, adresse, etoilesr) VALUES (7, 'Au Coeur du Terroir', 'Strasbourg', 2);
+INSERT INTO restaurantTP5 (numr, nomr, adresse, etoilesr) VALUES (8, 'La Belle Époque', 'Bordeaux', 4);
+INSERT INTO restaurantTP5 (numr, nomr, adresse, etoilesr) VALUES (9, 'Les Trois Chefs', 'Oran', 3);
+INSERT INTO restaurantTP5 (numr, nomr, adresse, etoilesr) VALUES (10, 'L''Atelier du Chef', 'Marseille', 5);
+INSERT INTO restaurantTP5 (numr, nomr, adresse, etoilesr) VALUES (11, 'Le Jardin Secret', 'Toulouse', 2);
+INSERT INTO restaurantTP5 (numr, nomr, adresse, etoilesr) VALUES (12, 'La Maison des Délices', 'Lille', 3);
+INSERT INTO restaurantTP5 (numr, nomr, adresse, etoilesr) VALUES (13, 'La Cuisine des Saisons', 'Oran', 4);
+INSERT INTO restaurantTP5 (numr, nomr, adresse, etoilesr) VALUES (14, 'La Trattoria', 'Cannes', 1);
+INSERT INTO restaurantTP5 (numr, nomr, adresse, etoilesr) VALUES (15, 'Le Cinq Étoiles', 'Paris', 5);
