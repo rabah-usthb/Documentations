@@ -2,7 +2,7 @@
 \lstinputlisting{Questions/SQL/EX1/q3.sql}
 
 \begin{prettyBox}{Nested Select Method}{myblue}
-\textbf{\underline{Inner Query}}
+\textbf{\underline{First Inner Query}}
 
 \begin{lstlisting}
  select v.idagence from voituretp5 v where v.marque not in ('BMW','Volkswagen')
@@ -10,12 +10,33 @@
 We are fetching idagence from voiture table that doesn't offer cars 'BMW' or 'Volkswagen' at least once
 \vspace{0.25cm}
 
+\textbf{\underline{Second Inner Query}}
+\begin{lstlisting}
+a.idagence not in (select v.idagence from voituretp5 v where v.marque not in ('BMW'))
+\end{lstlisting}
+We are fetching idagence from voiture table that doesn't offer cars 'BMW' at least once
+\vspace{0.25cm}
+
+\textvf{\underline{Third Inner Query}}
+\begin{lstlisting}
+a.idagence not in (select v.idagence from voituretp5 v where v.marque not in ('Volkswagen')
+\end{lstlisting}
+We are fetching idagence from voiture table that doesn't offer cars 'Volkswagen' at least once
+\vspace{0.25cm}
+
 \textbf{\underline{Outer Query}}
 \begin{lstlisting}
- select a.idagence from agencetp5 a where a.adresse='Alger'and a.idagence not in ( inner query );
+ select a.idagence from agencetp5 a where a.adresse='Alger'and 
+ (a.idagence not in (first inner query) 
+ or a.idagence not in (second inner query) 
+ or a.idagence(third inner query));
 \end{lstlisting}
-We are fetching idagence from agence table of Algeria that !(doesn't offer cars 'BMW' or 'Volkswagen' at least once) \(\rightarrow\) agency that offers 'BMW' or
-'Volkswagen' Only
+We are fetching idagence from agence table of Algeria that
+!(doesn't offer cars 'BMW' or 'Volkswagen' at least once) OR 
+!(doesn't offer cars 'BMW' at least once) OR
+!(doesn't offer cars 'Volkswagen' at least once)
+\(\rightarrow\) agency that offers 'BMW' and 'Volkswagen' Only OR agency that offers 'BMW' OR agency that offers
+'Volkswagen' only \(\rightarrow\) agency that offers 'BMW' and 'Volkswagen' 
 
 \end{prettyBox}
 

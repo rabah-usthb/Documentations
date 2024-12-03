@@ -4,7 +4,7 @@ is
 
 begin 
 
-delete produit p where refprod NOT IN (select dc.refprod from detailcommande dc where dc.refprod = p.refprod); 
+delete produit p where refprod NOT IN (select distinct dc.refprod from detailcommande dc); 
 
 end;
 /
