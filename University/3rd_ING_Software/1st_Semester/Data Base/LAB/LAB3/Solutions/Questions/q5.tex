@@ -1,0 +1,16 @@
+\newpage
+\subsection*{5.Procedure To Insert On Commande Table}
+\lstinputlisting{Questions/SQL/q5.sql}
+
+\begin{prettyBox}{TP4Q5 Procedure}{myblue}
+We created a procedure that takes as parameter values of commande to be able to insert on commande table ,
+we declared exception for each case where insertion is impossible :
+\begin{itemize}
+    \item pk : primary key already exist 
+    \item fk\_client : client foreign key doesn't exist
+    \item fk\_mes : messager foreign key doesn't exist
+    \item fk\_emp : employee foreign key doesn't exist
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}

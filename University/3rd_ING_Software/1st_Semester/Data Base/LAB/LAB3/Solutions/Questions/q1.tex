@@ -1,0 +1,20 @@
+\subsection*{1.Print Number Of Product For Each Category}
+\lstinputlisting{Questions/SQL/q1.sql}
+
+\begin{prettyBox}{TP3Q1 Procedure}{myblue}
+We created a porcedure that takes no parameter since we will print number of product for each category so naturally we will have to 
+use the cursor to loop through the table , to fetch name of category and its number of products we used nested select :\\[0.15cm]
+\textbf{\underline{Inner Query}}
+\begin{lstlisting}
+select count(p.refprod) from produit p where p.codecateg = c.codecateg 
+\end{lstlisting}
+This inner query select number of product for each category (p.codecateg = c.codecateg)\\[0.15cm]
+
+\textbf{\underline{Outer Query}}
+\begin{lstlisting}
+select (inner query) nb , c.nomcateg from categorie c;
+\end{lstlisting}
+This outer query select number of products and name of category
+\end{prettyBox}
+
+\vspace{0.25cm}

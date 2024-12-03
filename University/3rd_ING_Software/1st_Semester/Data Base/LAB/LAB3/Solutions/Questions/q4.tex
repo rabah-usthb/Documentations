@@ -1,0 +1,18 @@
+\subsection*{4.Number Of Order Made By An Inputed Client}
+\subsubsection*{4.a.Stand Alone Function}
+\lstinputlisting{Questions/SQL/q4.a.sql}
+
+\begin{prettyBox}{TP3Q4 Function}{myblue}
+Simple Function that takes as parameter codeclient and then returns number of order made by that client using a simple select query
+\end{prettyBox}
+
+\newpage
+
+\subsubsection*{4.b.Pl/SQL Code That Calls The TP3Q4 Function}
+
+\lstinputlisting{Questions/SQL/q4.b.sql}
+\begin{prettyBox}{PL/SQL Code}{myblue}
+We made a pl/sql block that uses cursor to loop through all the clients , and inside the while loop
+for each iteration we will call the tp3q4 function so we can have number of order made by that client and be able
+to print it
+\end{prettyBox}

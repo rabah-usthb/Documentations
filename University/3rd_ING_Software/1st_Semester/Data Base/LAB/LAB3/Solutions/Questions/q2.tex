@@ -1,0 +1,17 @@
+\newpage
+\subsection*{2.Delete Product That Never Got Ordered}
+\lstinputlisting{Questions/SQL/q2.sql}
+
+\begin{prettyBox}{TP3Q2 Procedure}{myblue}
+We created a procedure that deletes all products that never got ordered using nested select :\\[0.15cm]
+\textbf{\underline{Inner Query}}
+\begin{lstlisting}
+select dc.refprod from detailcommande dc where dc.refprod = p.refprod
+\end{lstlisting}
+This fetch list of product that got ordered at least once\\[0.15cm]
+\textbf{\underline{Outer Query}}
+\begin{lstlisting}
+delete produit p where refprod NOT IN (inner query); 
+\end{lstlisting}
+Deletes products that !(got ordered at least once) \(\rightarrow\) products that never got ordered
+\end{prettyBox}

@@ -1,0 +1,23 @@
+\vspace{0.03cm}
+\subsection*{3.Print Employe Names And Their Revenue}
+\lstinputlisting{Questions/SQL/q3.sql}
+
+\begin{prettyBox}{TP4Q1 Trigger}{myblue}
+We created a procedure that prints all employes first name , last name and revenue , so we will have to use a cursor
+to loop through all employees , we used nested select :\\[0.15cm]
+\textbf{\underline{Inner Query}}
+\begin{lstlisting}
+select nvl(sum(dc.prixunit*dc.qte-dc.remise),0) from detailcommande dc where dc.numcom
+in (select c.numcom from commande c where c.numemp = e.numemp)
+\end{lstlisting}
+This nested inner query calculate the revenue of an employee if employee doesn't exist in commande table it will return 0 instead of null
+because of nvl , the secong query filters order made by an employe (c.numep = e.numemp)\\[0.15cm]
+\textbf{\underline{Outer Query}}
+\begin{lstlisting}
+select e.nom , e.prenom , (inner query) chiffre_affaire from employe e
+where (inner query) between 8000 and 10000;
+\end{lstlisting}
+It select first name , last name , and revenue for each employe then filter to employe that their revenue between 8000 and 10000
+\end{prettyBox}
+
+\vspace{0.25cm}

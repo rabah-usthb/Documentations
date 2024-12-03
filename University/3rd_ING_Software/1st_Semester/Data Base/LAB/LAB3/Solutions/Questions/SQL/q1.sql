@@ -6,7 +6,7 @@ nbproduit integer:=0;
 nom categorie.nomcateg%type;
 
 cursor cr is
-select count(p.refprod) , c.nomcateg from produit p inner join categorie c on p.codecateg = c.codecateg group by c.nomcateg;
+select (select count(p.refprod) from produit p where p.codecateg = c.codecateg ) nb , c.nomcateg from categorie c;
 
 begin
 open cr;
