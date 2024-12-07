@@ -804,6 +804,7 @@ In a dependency:
 In contrast, an \textbf{association} involves a permanent reference to another class that exists as long as the object itself exists.
 \end{prettyBox}
 
+\subsubsection*{\underline{Example}}
 
 \subsubsection*{\underline{Method Call}}
 
@@ -846,7 +847,10 @@ Inheritance occurs when a class \textbf{extends} (inherits from) another class. 
 \end{prettyBox}
 
 \begin{prettyBox}{Note}{red}
-Since child inherites all attributes and methods of parent class \textbf{we don't have to explicitly list them unless a method was ovveriden or changed visbility of an attribute}
+Since the child class inherits all attributes and methods from the parent
+class, \textbf{there's no need to explicitly list them unless a method is overridden
+or the visibility of an attribute is changed}. The constructor is mentioned in
+the subclass only\textbf{ if it takes more parameters than the parent class constructor or if its body contains more than just a call to the parent constructor}.
 \end{prettyBox}
 
 \subsubsection*{\underline{Example}}
