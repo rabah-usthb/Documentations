@@ -551,4 +551,422 @@ If an extend relation doesn't have an explicit condition it just means that it's
 the actor can decide wether to trigger the extended use case or not (option)
 \end{prettyBox}
 
+\subsection{Class Diagram}
 
+\begin{prettyBox}{What's a Class Diagram}{mypur}
+A Class Diagram is a graphical representation of a structure diagram that illustrates classes, their attributes, and the relationships between them. It consists of three main components:
+\begin{itemize}
+    \item \textbf{UML Elements}: Classes , enumeration , interfaces.
+    \item \textbf{Relations}: Connections that define how classes interact with each other.
+    \item \textbf{Cardinalities}: Numerical indicators of the relationships between classes.
+\end{itemize}
+
+Each component will be explained in detail.
+\end{prettyBox}
+
+\subsubsection{UML Elements}
+
+
+\begin{prettyBox}{Class}{mypur}
+Each class is represented as a rectangle containing the following components:
+\begin{itemize}
+    \item \textbf{Class Name}: Displayed at the top of the rectangle. It may have an access modifier and other modifiers:
+    \begin{itemize}
+        \item \texttt{+}: Public
+        \item \texttt{-}: Private
+        \item \texttt{\#}: Protected
+        \item (no symbol): Default (Package-private)
+        \item \texttt{static}: Inner class (indicating that the class can exist without an instance of the outer class)
+        \item \texttt{final}: The class cannot be subclassed (i.e., it is a non-extendable class)
+        \item \texttt{abstract}: The class cannot be instantiated directly (i.e., it is intended to be subclassed)
+    \end{itemize}
+    \item \textbf{Attributes}: Attributes include both methods and variables of the class. Each method or variable has can have an access modifier and other modifiers:
+        \begin{itemize}
+            \item \textbf{Variables}: 
+            \begin{itemize}
+                \item \texttt{+}: Public
+                \item \texttt{-}: Private
+                \item \texttt{\#}: Protected
+                \item (no symbol): Default (Package-private)
+                \item \texttt{static}: The variable belongs to the class, not to instances. It is shared by all instances and has the same value for every instance.
+                \item \texttt{final}: The variable can only be assigned a value once and cannot be modified afterward.
+            \end{itemize}
+            \item \textbf{Methods}: 
+            \begin{itemize}
+                \item \texttt{+}: Public
+                \item \texttt{-}: Private
+                \item \texttt{\#}: Protected
+                \item (no symbol): Default (Package-private)
+                \item \texttt{static}: The method can be accessed without creating an instance of the class.
+                \item \texttt{final}: The method cannot be overridden by subclasses.
+                \item \texttt{abstract}: The method has no implementation in the class and must be implemented by subclasses.
+            \end{itemize}
+        \end{itemize}
+\end{itemize}
+\end{prettyBox}
+\vspace{0.15cm}
+
+
+\begin{prettyBox}{Enumeration}{mypur}
+Enumerations are represented in a rectangle as well. The top displays \(\ll\text{Enumeration}\gg\)
+ enumName . Below that, the rectangle holds the possible values of the enum.
+it is placed next to the class that uses the enum
+\end{prettyBox}
+
+
+\vspace{0.15cm}
+\begin{prettyBox}{Interface}{mypur}
+Interfaces are represented in a rectangle as well. The top displays \(\ll\text{Interface}\gg\) interfaceName. Below that
+there are the constant and method prototypes of the interface
+it is linked to classes that implements it using the realization relation
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsubsection*{\underline{Example :}}
+
+\subsubsection*{\underline{UML :}}
+
+\includegraphics[width=\textwidth]{Chapters/Diagram/OOP/EX1/ex1.drawio.pdf}
+
+\begin{prettyBox}{Note}{red}
+When class implements an interface there is no need to list the implemented methods
+\end{prettyBox}
+
+
+\subsubsection*{\underline{Java Code :}}
+
+\subsubsection*{\underline{Vehicle Class :}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX1/Vehicle.java}
+
+\newpage
+\subsubsection*{\underline{VehicleType Enumeration :}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX1/VehicleType.java}
+\subsubsection*{\underline{Drivable Interface :}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX1/Drivable.java}
+
+
+\subsubsection{Cardinalities}
+
+\begin{prettyBox}{Cardinality}{mypur}
+Cardinality in UML defines the number of instances of one class that can or must be associated with an instance of another class. It helps indicate the number of objects involved in aggregation , association, compostion relation.\\[0.25cm]
+\textbf{How to Read Cardinality:}\\[0.15cm]
+Cardinality is represented by numbers near a class, The format is typically `min..max` , so if there is association
+between student and teacher , card near teacher would be how many instance of student for 1 teacher , and cardinality near
+student class would be how many instance of teacher for 1 student\\[0.25cm]  
+\textbf{Examples:}
+\begin{itemize}
+    \item `1` near the class means \textbf{exactly one instance}. 
+    \item `0..1` means \textbf{zero or one instance}.
+    \item `0..*` means \textbf{zero or more instances} (unlimited).
+    \item `1..*` means \textbf{one or more instances} (unlimited).
+\end{itemize}
+
+
+\end{prettyBox}
+
+\subsubsection{Relations Between Class}
+
+
+\subsubsection*{Simple Relation(Association)}
+\begin{prettyBox}{Association}{mypur}
+Association is represented as a solid line between classes. It indicates that one class references another. There are several types of associations:
+\begin{itemize}
+    \item \textbf{Reflexive Association}: A class references itself.
+    \item \textbf{Unidirectional Association}: One class references another class, but the reverse is not true.
+    \item \textbf{Bidirectional Association}: Two classes reference each other.
+    \item \textbf{N-ary Association}: An association involving more than two classes.
+    \item \textbf{Association Class}: The association between classes is created through separate class that references the participating classes and may include additional attributes or behaviors ,  it is represented by dashed line 
+connecting between association class and solid line association.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Note}{red}
+There is no need to explicitly list references of the other classes in the class association
+because it is implicitly implied
+\end{prettyBox}
+
+\subsubsection*{\underline{Example :}}
+
+\subsubsection*{\underline{Reflexive Association}}
+Employee class that references itself to have a supervisor or manager , so an employee is managed by one manager , and a manager manages many employees 
+
+\subsubsection*{\underline{UML}}
+
+\begin{center}
+\includegraphics[width=0.65\textwidth]{Chapters/Diagram/OOP/EX2/ex2.a.drawio.pdf}
+\end{center}
+
+
+\subsubsection*{\underline{Employee Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX2/A/Employee.java}
+
+
+\subsubsection*{\underline{Uni-direction Association}}
+\subsubsection*{\underline{UML}}
+
+\includegraphics[width=\textwidth]{Chapters/Diagram/OOP/EX2/ex2.b.drawio.pdf}
+
+\subsubsection*{\underline{Java Code}}
+
+\subsubsection*{\underline{Person Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX2/B/Person.java}
+
+\newpage
+\subsubsection*{\underline{Address Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX2/B/Address.java}
+
+\subsubsection*{\underline{Bi-direction Association}}
+\subsubsection*{\underline{UML}}
+
+\includegraphics[width=\textwidth]{Chapters/Diagram/OOP/EX2/ex2.c.drawio.pdf}
+
+\subsubsection*{\underline{Java Code}}
+
+\vspace{-0.2cm}
+\subsubsection*{\underline{Teacher Class}}
+
+\vspace{-0.2cm}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX2/C/Teacher.java}
+
+\subsubsection*{\underline{Article Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX2/C/Article.java}
+
+
+
+\subsubsection*{\underline{Association Class}}
+\subsubsection*{\underline{UML}}
+
+
+\includegraphics[width=\textwidth]{Chapters/Diagram/OOP/EX2/ex2.d.drawio.pdf}
+
+\subsubsection*{\underline{Person Class}}
+
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX2/D/Person.java}
+
+\subsubsection*{\underline{Organization Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX2/D/Organization.java}
+
+\newpage
+\subsubsection*{\underline{WorkFor Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX2/D/WorkFor.java}
+
+
+\subsubsection*{\underline{3-ary Association}}
+\subsubsection*{\underline{UML}}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{Chapters/Diagram/OOP/EX2/ex2.e.drawio.pdf}
+\end{center}
+
+
+\subsubsection*{\underline{Java Code}}
+
+\subsubsection*{\underline{Course Class}}
+
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX2/E/Course.java}
+
+\newpage
+\subsubsection*{\underline{Instructor Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX2/E/Instructor.java}
+
+\subsubsection*{\underline{Student Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX2/E/Student.java}
+
+
+\subsubsection*{\underline{Enrollment Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX2/E/Enrollment.java}
+
+\subsubsection*{Dependency}
+
+\begin{prettyBox}{Dependency}{mypur}
+A dependency is represented by a dashed line with an arrow pointing to the \textbf{provider class}. It indicates a \textbf{temporary relationship} between two classes, where one class relies on the other to perform a specific function or operation. The types of dependency include:
+\begin{itemize}
+    \item \textbf{Method Call:} One class calls a method of another class without retaining a permanent reference.
+    \item \textbf{Object Usage:} One class temporarily interacts with an object of another class, either as:
+    \begin{itemize}
+        \item \textbf{method parameter}.
+        \item \textbf{return type}.
+    \end{itemize}
+\end{itemize}
+\end{prettyBox}
+
+\begin{prettyBox}{Difference Between Association \& Dependency}{red}
+A dependency is a \textbf{weaker relationship} compared to an association. Unlike an association, which represents a \textbf{permanent structural relationship} (e.g., an instance variable), a dependency represents a \textbf{temporary interaction}. 
+
+In a dependency:
+\begin{itemize}
+    \item The referenced object is used only temporarily and is eligible for garbage collection once the interaction ends.
+    \item The classes are loosely coupled, meaning changes to one class have a lower impact on the other.
+\end{itemize}
+
+In contrast, an \textbf{association} involves a permanent reference to another class that exists as long as the object itself exists.
+\end{prettyBox}
+
+
+\subsubsection*{\underline{Method Call}}
+
+\subsubsection*{\underline{UML}}
+\includegraphics[width=\textwidth]{Chapters/Diagram/OOP/EX3/ex3.a.drawio.pdf}
+
+
+\subsubsection*{\underline{Printer Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX3/A/Printer.java}
+
+\subsubsection*{\underline{Document Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX3/A/Document.java}
+
+
+\subsubsection*{\underline{Object Parameter In Method}}
+\subsubsection*{\underline{UML}}
+\includegraphics[width=\textwidth]{Chapters/Diagram/OOP/EX3/ex3.b.drawio.pdf}
+
+\subsubsection*{\underline{Email Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX3/B/Email.java}
+
+\subsubsection*{\underline{EmailService Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX3/B/EmailService.java}
+
+
+\subsubsection*{\underline{Return Type Of A Method}}
+\subsubsection*{\underline{UML}}
+\includegraphics[width=\textwidth]{Chapters/Diagram/OOP/EX3/ex3.c.drawio.pdf}
+
+\subsubsection*{\underline{Report Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX3/C/Report.java}
+
+\subsubsection*{\underline{ReportGenerator Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX3/C/ReportGenerator.java}
+
+\subsubsection*{Inheritance}
+
+\begin{prettyBox}{Inheritance}{mypur}
+Inheritance occurs when a class \textbf{extends} (inherits from) another class. It is represented in UML by a \textbf{solid line with a hollow triangle} at the end, pointing to the \textbf{parent class}.
+\end{prettyBox}
+
+\begin{prettyBox}{Note}{red}
+Since child inherites all attributes and methods of parent class \textbf{we don't have to explicitly list them unless a method was ovveriden or changed visbility of an attribute}
+\end{prettyBox}
+
+\subsubsection*{\underline{Example}}
+
+\subsubsection*{\underline{UML}}
+
+\begin{center}
+\includegraphics[width=0.6\textwidth]{Chapters/Diagram/OOP/EX4/ex4.drawio.pdf}
+\end{center}
+
+
+\subsubsection*{\underline{Animal Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX4/Animal.java}
+
+\subsubsection*{\underline{Cat Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX4/Cat.java}
+
+\subsubsection*{\underline{Dog Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX4/Dog.java}
+
+\subsubsection*{Aggregation}
+
+\begin{prettyBox}{Aggregation}{mypur}
+Aggregation is a stronger relationship than association. It involves two classes: a whole class and a part class. The whole class references the part class, but the part class exists independently of the whole class. The part class is unaware of the whole class. Even if the whole class is destroyed by the garbage collector, the part class continues to exist.
+\end{prettyBox}
+
+\subsubsection*{\underline{Example}}
+
+\subsubsection*{\underline{UML}}
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{Chapters/Diagram/OOP/EX5/ex5.drawio.pdf}
+\end{center}
+
+
+\subsubsection*{\underline{Teacher Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX5/Teacher.java}
+
+\subsubsection*{\underline{Department Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX5/Department.java}
+
+\subsubsection*{Composition}
+
+\begin{prettyBox}{Composition}{mypur}
+Composition is a stronger relationship than aggregation. In composition, when the whole class is deleted, the part class is also deleted, as the part is tightly bound and dependent to the whole.
+\end{prettyBox}
+
+\subsubsection*{\underline{Example}}
+
+\subsubsection*{\underline{UML}}
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{Chapters/Diagram/OOP/EX6/ex6.drawio.pdf}
+\end{center}
+
+\subsubsection*{\underline{Version Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX6/Version.java}
+
+\subsubsection*{\underline{fileExtension Enumeration}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX6/FileExtension.java}
+
+\newpage
+\subsubsection*{\underline{Document Class}}
+\lstinputlisting[style=javaStyle]{Chapters/JAVA/EX6/Document.java}
+
+\subsection{Summary}
+
+\subsubsection*{\underline{Enumeration}}
+\begin{center}
+\includegraphics[width=0.6\textwidth]{Chapters/Diagram/OOP/Sum/Enum/enum.drawio.pdf}
+\end{center}
+
+\subsubsection*{\underline{Interface}}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Chapters/Diagram/OOP/Sum/Inter/inte.drawio.pdf}
+\end{center}
+
+\subsubsection*{\underline{Reflexive Association}}
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{Chapters/Diagram/OOP/Sum/reflexiveAssoc/selfassoc.drawio.pdf}
+\end{center}
+
+\subsubsection*{\underline{Simple Association}}
+
+\begin{center}
+   \includegraphics[width=0.75\textwidth]{Chapters/Diagram/OOP/Sum/SAssoc/simpleassoc.drawio.pdf}
+\end{center}
+
+\subsubsection*{\underline{N-ary Association}}
+
+\begin{center}
+\includegraphics[width=0.65\textwidth]{Chapters/Diagram/OOP/Sum/NaryAssoc/naryassoc.drawio.pdf}
+\end{center}
+
+\subsubsection*{\underline{Class Association}}
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{Chapters/Diagram/OOP/Sum/Class Association/classassoc.drawio.pdf}
+\end{center}
+
+\subsubsection*{\underline{Dependency}}
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{Chapters/Diagram/OOP/Sum/Depend/depend.drawio.pdf}
+\end{center}
+
+\subsubsection*{\underline{Inheritance}}
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{Chapters/Diagram/OOP/Sum/Inhe/inherit.drawio.pdf}
+\end{center}
+
+\subsubsection*{\underline{Aggregation}}
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{Chapters/Diagram/OOP/Sum/Aggrega/aggrega.drawio.pdf}
+\end{center}
+
+\subsubsection*{\underline{Composition}}
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{Chapters/Diagram/OOP/Sum/Composition/composition.drawio.pdf}
+\end{center}

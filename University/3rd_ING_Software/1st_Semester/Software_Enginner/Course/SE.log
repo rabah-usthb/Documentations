@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  17 NOV 2024 07:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  7 DEC 2024 00:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -331,7 +331,29 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \tcb@temp=\box69
 \tcb@temp=\box70
 \tcb@temp=\box71
-) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count296
+\lst@gtempboxa=\box72
+\lst@token=\toks41
+\lst@length=\count297
+\lst@currlwidth=\dimen272
+\lst@column=\count298
+\lst@pos=\count299
+\lst@lostspace=\dimen273
+\lst@width=\dimen274
+\lst@newlines=\count300
+\lst@lineno=\count301
+\lst@maxwidth=\dimen275
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count302
+\lst@skipnumbers=\count303
+\lst@framebox=\box73
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip50
 
@@ -340,59 +362,59 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2021/08/26 v2.01 AMS text
  (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks41
-\ex@=\dimen272
+\@emptytoks=\toks42
+\ex@=\dimen276
 )) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen273
+\pmbraise@=\dimen277
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count296
+\inf@bad=\count304
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count297
-\leftroot@=\count298
+\uproot@=\count305
+\leftroot@=\count306
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count299
-\DOTSCASE@=\count300
+\classnum@=\count307
+\DOTSCASE@=\count308
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box72
-\strutbox@=\box73
+\Mathstrutbox@=\box74
+\strutbox@=\box75
 LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
 LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen274
+\big@size=\dimen278
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count301
+\macc@depth=\count309
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count302
+\c@MaxMatrixCols=\count310
 \dotsspace@=\muskip16
-\c@parentequation=\count303
-\dspbrk@lvl=\count304
-\tag@help=\toks42
-\row@=\count305
-\column@=\count306
-\maxfields@=\count307
-\andhelp@=\toks43
-\eqnshift@=\dimen275
-\alignsep@=\dimen276
-\tagshift@=\dimen277
-\tagwidth@=\dimen278
-\totwidth@=\dimen279
-\lineht@=\dimen280
-\@envbody=\toks44
+\c@parentequation=\count311
+\dspbrk@lvl=\count312
+\tag@help=\toks43
+\row@=\count313
+\column@=\count314
+\maxfields@=\count315
+\andhelp@=\toks44
+\eqnshift@=\dimen279
+\alignsep@=\dimen280
+\tagshift@=\dimen281
+\tagwidth@=\dimen282
+\totwidth@=\dimen283
+\lineht@=\dimen284
+\@envbody=\toks45
 \multlinegap=\skip51
 \multlinetaggap=\skip52
-\mathdisplay@stack=\toks45
+\mathdisplay@stack=\toks46
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
@@ -403,7 +425,7 @@ Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
 Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
 ) (/usr/share/texlive/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
-\l__tikzfill_img_box=\box74
+\l__tikzfill_img_box=\box76
 )) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.2.0'
 )) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
@@ -416,32 +438,32 @@ Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 ))
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box75
-\tcb@totalupperbox=\box76
-\tcb@totallowerbox=\box77
+\tcb@testbox=\box77
+\tcb@totalupperbox=\box78
+\tcb@totallowerbox=\box79
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
 Library (tcolorbox): 'tcbtheorems.code.tex' version '6.2.0'
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count308
-\l__pdf_internal_box=\box78
+\l__color_backend_stack_int=\count316
+\l__pdf_internal_box=\box80
 ) (./SE.aux (./Chapters/Introduction.aux) (./Chapters/SoftWareCrisis.aux) (./Chapters/LifeCycle.aux) (./Chapters/Needs Analysis.aux) (./Chapters/UML.aux) (./Chapters/Conception.aux))
 \openout1 = `SE.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -479,17 +501,17 @@ LaTeX Font Info:    ... okay on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count309
-\scratchdimen=\dimen281
-\scratchbox=\box79
-\nofMPsegments=\count310
-\nofMParguments=\count311
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count312
-\MPscratchDim=\dimen282
-\MPnumerator=\count313
-\makeMPintoPDFobject=\count314
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count317
+\scratchdimen=\dimen285
+\scratchbox=\box81
+\nofMPsegments=\count318
+\nofMParguments=\count319
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count320
+\MPscratchDim=\dimen286
+\MPnumerator=\count321
+\makeMPintoPDFobject=\count322
+\everyMPtoPDFconversion=\toks48
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -498,8 +520,9 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 26.
+ on input line 50.
 
+\c@lstlisting=\count323
 \openout2 = `Chapters/Introduction.aux'.
 
 (./Chapters/Introduction.tex
@@ -595,32 +618,210 @@ File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 511.
-) [22]
+ [22] [23]
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX1/ex1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/EX1/ex1.drawio.pdf, id=88, 418.4433pt x 73.2336pt>
+File: Chapters/Diagram/OOP/EX1/ex1.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/EX1/ex1.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/EX1/ex1.drawio.pdf  used on input line 629.
+(pdftex.def)             Requested size: 625.96065pt x 109.55284pt.
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (./Chapters/JAVA/EX1/Vehicle.java) [24 <./Chapters/Diagram/OOP/EX1/ex1.drawio.pdf>] (./Chapters/JAVA/EX1/VehicleType.java) (./Chapters/JAVA/EX1/Drivable.java) [25]
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX2/ex2.a.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/EX2/ex2.a.drawio.pdf, id=116, 413.62529pt x 148.6353pt>
+File: Chapters/Diagram/OOP/EX2/ex2.a.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/EX2/ex2.a.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/EX2/ex2.a.drawio.pdf  used on input line 698.
+(pdftex.def)             Requested size: 406.87059pt x 146.21725pt.
+[26 <./Chapters/Diagram/OOP/EX2/ex2.a.drawio.pdf>] (./Chapters/JAVA/EX2/A/Employee.java)
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX2/ex2.b.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/EX2/ex2.b.drawio.pdf, id=133, 605.3817pt x 91.3011pt>
+File: Chapters/Diagram/OOP/EX2/ex2.b.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/EX2/ex2.b.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/EX2/ex2.b.drawio.pdf  used on input line 709.
+(pdftex.def)             Requested size: 625.96065pt x 94.40479pt.
+(./Chapters/JAVA/EX2/B/Person.java) [27 <./Chapters/Diagram/OOP/EX2/ex2.b.drawio.pdf>] (./Chapters/JAVA/EX2/B/Address.java)
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX2/ex2.c.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/EX2/ex2.c.drawio.pdf, id=150, 572.1375pt x 120.45pt>
+File: Chapters/Diagram/OOP/EX2/ex2.c.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/EX2/ex2.c.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/EX2/ex2.c.drawio.pdf  used on input line 723.
+(pdftex.def)             Requested size: 625.96065pt x 131.78227pt.
+(./Chapters/JAVA/EX2/C/Teacher.java) [28 <./Chapters/Diagram/OOP/EX2/ex2.c.drawio.pdf>] (./Chapters/JAVA/EX2/C/Article.java)
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX2/ex2.d.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/EX2/ex2.d.drawio.pdf, id=167, 606.34526pt x 217.77359pt>
+File: Chapters/Diagram/OOP/EX2/ex2.d.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/EX2/ex2.d.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/EX2/ex2.d.drawio.pdf  used on input line 742.
+(pdftex.def)             Requested size: 625.96065pt x 224.82767pt.
+[29] (./Chapters/JAVA/EX2/D/Person.java) [30 <./Chapters/Diagram/OOP/EX2/ex2.d.drawio.pdf>] (./Chapters/JAVA/EX2/D/Organization.java) [31] (./Chapters/JAVA/EX2/D/WorkFor.java)
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX2/ex2.e.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/EX2/ex2.e.drawio.pdf, id=192, 446.62859pt x 336.29637pt>
+File: Chapters/Diagram/OOP/EX2/ex2.e.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/EX2/ex2.e.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/EX2/ex2.e.drawio.pdf  used on input line 760.
+(pdftex.def)             Requested size: 438.17053pt x 329.9274pt.
+[32] (./Chapters/JAVA/EX2/E/Course.java) [33 <./Chapters/Diagram/OOP/EX2/ex2.e.drawio.pdf>] (./Chapters/JAVA/EX2/E/Instructor.java) (./Chapters/JAVA/EX2/E/Student.java) (./Chapters/JAVA/EX2/E/Enrollment.java) [34]
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX3/ex3.a.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/EX3/ex3.a.drawio.pdf, id=216, 305.22029pt x 41.1939pt>
+File: Chapters/Diagram/OOP/EX3/ex3.a.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/EX3/ex3.a.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/EX3/ex3.a.drawio.pdf  used on input line 811.
+(pdftex.def)             Requested size: 625.96065pt x 84.49072pt.
+(./Chapters/JAVA/EX3/A/Printer.java) (./Chapters/JAVA/EX3/A/Document.java [35 <./Chapters/Diagram/OOP/EX3/ex3.a.drawio.pdf>])
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX3/ex3.b.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/EX3/ex3.b.drawio.pdf, id=233, 319.1925pt x 66.2475pt>
+File: Chapters/Diagram/OOP/EX3/ex3.b.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/EX3/ex3.b.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/EX3/ex3.b.drawio.pdf  used on input line 823.
+(pdftex.def)             Requested size: 625.96065pt x 129.91798pt.
+(./Chapters/JAVA/EX3/B/Email.java) (./Chapters/JAVA/EX3/B/EmailService.java)
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX3/ex3.c.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/EX3/ex3.c.drawio.pdf, id=234, 435.54718pt x 66.2475pt>
+File: Chapters/Diagram/OOP/EX3/ex3.c.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/EX3/ex3.c.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/EX3/ex3.c.drawio.pdf  used on input line 834.
+(pdftex.def)             Requested size: 625.96065pt x 95.2194pt.
+[36 <./Chapters/Diagram/OOP/EX3/ex3.b.drawio.pdf>] (./Chapters/JAVA/EX3/C/Report.java) (./Chapters/JAVA/EX3/C/ReportGenerator.java)
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX4/ex4.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/EX4/ex4.drawio.pdf, id=251, 334.3692pt x 197.7789pt>
+File: Chapters/Diagram/OOP/EX4/ex4.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/EX4/ex4.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/EX4/ex4.drawio.pdf  used on input line 857.
+(pdftex.def)             Requested size: 375.5802pt x 222.16875pt.
+[37 <./Chapters/Diagram/OOP/EX3/ex3.c.drawio.pdf>] (./Chapters/JAVA/EX4/Animal.java) (./Chapters/JAVA/EX4/Cat.java) [38 <./Chapters/Diagram/OOP/EX4/ex4.drawio.pdf>] (./Chapters/JAVA/EX4/Dog.java)
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX5/ex5.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/EX5/ex5.drawio.pdf, id=290, 485.89528pt x 83.3514pt>
+File: Chapters/Diagram/OOP/EX5/ex5.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/EX5/ex5.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/EX5/ex5.drawio.pdf  used on input line 881.
+(pdftex.def)             Requested size: 563.36075pt x 96.64314pt.
+(./Chapters/JAVA/EX5/Teacher.java) [39 <./Chapters/Diagram/OOP/EX5/ex5.drawio.pdf>] (./Chapters/JAVA/EX5/Department.java)
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX6/ex6.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/EX6/ex6.drawio.pdf, id=307, 598.15468pt x 223.7961pt>
+File: Chapters/Diagram/OOP/EX6/ex6.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/EX6/ex6.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/EX6/ex6.drawio.pdf  used on input line 902.
+(pdftex.def)             Requested size: 563.36075pt x 210.78496pt.
+[40] (./Chapters/JAVA/EX6/Version.java) (./Chapters/JAVA/EX6/fileExtension.java) [41 <./Chapters/Diagram/OOP/EX6/ex6.drawio.pdf>] (./Chapters/JAVA/EX6/Document.java)
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/Enum/enum.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/Sum/Enum/enum.drawio.pdf, id=334, 222.8325pt x 67.2111pt>
+File: Chapters/Diagram/OOP/Sum/Enum/enum.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/Sum/Enum/enum.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Enum/enum.drawio.pdf  used on input line 919.
+(pdftex.def)             Requested size: 375.5802pt x 113.29231pt.
+[42]
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/Inter/inte.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/Sum/Inter/inte.drawio.pdf, id=338, 341.34772pt x 89.3701pt>
+File: Chapters/Diagram/OOP/Sum/Inter/inte.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/Sum/Inter/inte.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Inter/inte.drawio.pdf  used on input line 924.
+(pdftex.def)             Requested size: 500.77042pt x 131.10927pt.
+
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/reflexiveAssoc/selfassoc.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/Sum/reflexiveAssoc/selfassoc.drawio.pdf, id=339, 138.50803pt x 81.40334pt>
+File: Chapters/Diagram/OOP/Sum/reflexiveAssoc/selfassoc.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/Sum/reflexiveAssoc/selfassoc.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/reflexiveAssoc/selfassoc.drawio.pdf  used on input line 929.
+(pdftex.def)             Requested size: 250.38043pt x 147.16058pt.
+
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/SAssoc/simpleassoc.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/Sum/SAssoc/simpleassoc.drawio.pdf, id=340, 327.12132pt x 66.23802pt>
+File: Chapters/Diagram/OOP/Sum/SAssoc/simpleassoc.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/Sum/SAssoc/simpleassoc.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/SAssoc/simpleassoc.drawio.pdf  used on input line 935.
+(pdftex.def)             Requested size: 469.47047pt x 95.06932pt.
+[43 <./Chapters/Diagram/OOP/Sum/Enum/enum.drawio.pdf> <./Chapters/Diagram/OOP/Sum/Inter/inte.drawio.pdf> <./Chapters/Diagram/OOP/Sum/reflexiveAssoc/selfassoc.drawio.pdf>]
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/NaryAssoc/naryassoc.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/Sum/NaryAssoc/naryassoc.drawio.pdf, id=391, 298.21333pt x 210.77802pt>
+File: Chapters/Diagram/OOP/Sum/NaryAssoc/naryassoc.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/Sum/NaryAssoc/naryassoc.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/NaryAssoc/naryassoc.drawio.pdf  used on input line 941.
+(pdftex.def)             Requested size: 406.87059pt x 287.59987pt.
+
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/Class Association/classassoc.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/Sum/Class Association/classassoc.drawio.pdf, id=392, 391.453pt x 113.44115pt>
+File: Chapters/Diagram/OOP/Sum/Class Association/classassoc.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/Sum/Class Association/classassoc.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Class Association/classassoc.drawio.pdf  used on input line 947.
+(pdftex.def)             Requested size: 469.47047pt x 136.05424pt.
+[44 <./Chapters/Diagram/OOP/Sum/SAssoc/simpleassoc.drawio.pdf> <./Chapters/Diagram/OOP/Sum/NaryAssoc/naryassoc.drawio.pdf>]
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/Depend/depend.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/Sum/Depend/depend.drawio.pdf, id=418, 327.12132pt x 66.23802pt>
+File: Chapters/Diagram/OOP/Sum/Depend/depend.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/Sum/Depend/depend.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Depend/depend.drawio.pdf  used on input line 953.
+(pdftex.def)             Requested size: 469.47047pt x 95.06932pt.
+
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/Inhe/inherit.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/Sum/Inhe/inherit.drawio.pdf, id=419, 327.12132pt x 66.23802pt>
+File: Chapters/Diagram/OOP/Sum/Inhe/inherit.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/Sum/Inhe/inherit.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Inhe/inherit.drawio.pdf  used on input line 959.
+(pdftex.def)             Requested size: 469.47047pt x 95.06932pt.
+
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/Aggrega/aggrega.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/Sum/Aggrega/aggrega.drawio.pdf, id=420, 345.18883pt x 66.23802pt>
+File: Chapters/Diagram/OOP/Sum/Aggrega/aggrega.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/Sum/Aggrega/aggrega.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Aggrega/aggrega.drawio.pdf  used on input line 965.
+(pdftex.def)             Requested size: 469.47047pt x 90.08551pt.
+
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/Composition/composition.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/OOP/Sum/Composition/composition.drawio.pdf, id=421, 345.18883pt x 66.23802pt>
+File: Chapters/Diagram/OOP/Sum/Composition/composition.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/OOP/Sum/Composition/composition.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Composition/composition.drawio.pdf  used on input line 971.
+(pdftex.def)             Requested size: 469.47047pt x 90.08551pt.
+[45 <./Chapters/Diagram/OOP/Sum/Class Association/classassoc.drawio.pdf> <./Chapters/Diagram/OOP/Sum/Depend/depend.drawio.pdf> <./Chapters/Diagram/OOP/Sum/Inhe/inherit.drawio.pdf> <./Chapters/Diagram/OOP/Sum/Aggrega/aggrega.drawio.pdf>]) [46 <./Chapters/Diagram/OOP/Sum/Composition/composition.drawio.pdf>]
 \openout2 = `Chapters/Conception.aux'.
 
- (./Chapters/Conception.tex [23
+ (./Chapters/Conception.tex [47
 
 
 
-] [24] [25] [26]) [27] (./SE.aux (./Chapters/Introduction.aux) (./Chapters/SoftWareCrisis.aux) (./Chapters/LifeCycle.aux) (./Chapters/Needs Analysis.aux) (./Chapters/UML.aux) (./Chapters/Conception.aux))
+] [48] [49] [50]) [51] (./SE.aux (./Chapters/Introduction.aux) (./Chapters/SoftWareCrisis.aux) (./Chapters/LifeCycle.aux) (./Chapters/Needs Analysis.aux) (./Chapters/UML.aux) (./Chapters/Conception.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 29594 strings out of 474222
- 769259 string characters out of 5748732
- 1942975 words of memory out of 5000000
- 51408 multiletter control sequences out of 15000+600000
- 563488 words of font info for 55 fonts, out of 8000000 for 9000
+ 31784 strings out of 474222
+ 808499 string characters out of 5748732
+ 2035975 words of memory out of 5000000
+ 53486 multiletter control sequences out of 15000+600000
+ 563824 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,107p,725b,2169s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on SE.pdf (27 pages, 207549 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on SE.pdf (51 pages, 910454 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 550 PDF objects out of 1000 (max. 8388607)
+ 351 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 123 words of extra memory for PDF output out of 10000 (max. 10000000)
 
