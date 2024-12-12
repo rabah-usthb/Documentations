@@ -13,6 +13,26 @@
 \definecolor{purplePlot}{HTML}{4C12EA}
 \definecolor{blueArea}{HTML}{10D9EE}
 \definecolor{redPlot}{HTML}{ED014A}
+\definecolor{box}{HTML}{27C1A0}
+\definecolor{pur}{HTML}{A128E1}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+
 \setlength{\parindent}{0pt}
 \setcellgapes{3pt}  % Adjust padding as needed
 \makegapedcells

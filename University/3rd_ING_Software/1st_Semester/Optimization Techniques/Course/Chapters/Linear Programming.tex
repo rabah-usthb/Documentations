@@ -1,10 +1,10 @@
 \section{Linear Programming}
 \subsection{What's Linear Programming ?}
-\begin{tcolorbox}[title = Definition] 
+\begin{prettyBox}{Definition}{box} 
 Linear programming is a sub-branch of optimization techniques. It involves modeling real-life problems as
 linear equations and inequalities and using specialized methods to find optimal solution(s), if they exist.
-\end{tcolorbox}
-\vspace{1cm}
+\end{prettyBox}
+\vspace{0.25cm}
 \begin{center}
     \begin{tikzpicture}
        \draw (0,0) rectangle (5.5,1.5);
@@ -31,7 +31,7 @@ This model is used when the objective function has two variables. It consists of
 into equalities, drawing them as lines, and then identifying the feasible area where all conditions are met.
 We then sweep the objective function \(Z\) across the plot until we find the optimal solution(s).
 
-\begin{tcolorbox}[title=Note]
+\begin{prettyBox}{Note}{red}
  \textbf{\underline{Solutions : }}
 When solving a linear program, the solution can be:
 \begin{itemize}
@@ -58,7 +58,7 @@ the coefficient with the larger absolute value, \(\max(|a|, |b|)\). If this coef
 of increase follows the same pattern as when both coefficients are positive. If this coefficient is negative, 
 the direction of increase follows the pattern for both negative coefficients.
 \end{itemize}
-\end{tcolorbox}
+\end{prettyBox}
 
 
 
@@ -103,14 +103,14 @@ Let \(x_2\) be the number of Daily Unit Banana.\\
 \] 
 \end{multicols}
 \vspace{0.5cm}
-\begin{tcolorbox}[title = Objective Function]
+\begin{prettyBox}{Objective Function}{box}
 \[
 f(x_i) = Z = 8x_1 + 10x_2  
 \]
 \begin{center}
 The goal is to minimize food cost by minmizing \(f(x_i)\), while meeting the minimum daily nutrition .
 \end{center}
-\end{tcolorbox}
+\end{prettyBox}
 \vspace{1cm} 
 \textbf{\underline{Problem :}} Find the minimum of \(f(x_i)\) subject to the contraints\\
 
@@ -233,14 +233,14 @@ Let \(x_2\) be the number of Feed 2.\\
 \] 
 \end{multicols}
 \vspace{0.5cm}
-\begin{tcolorbox}[title = Objective Function]
+\begin{prettyBox}{Objective Function}{box}
 \[
 f(x_i) = Z = 10x_1 + 4x_2  
 \]
 \begin{center}
 The goal is to minimize feeds cost by minmizing \(f(x_i)\), while meeting the minimum daily nutrition .
 \end{center}
-\end{tcolorbox}
+\end{prettyBox}
 \vspace{1cm} 
 \textbf{\underline{Problem :}} Find the minimum of \(f(x_i)\) subject to the contraints\\
 \vspace{0.75cm} 
@@ -328,14 +328,14 @@ also stays the same and the possible solutions (coordinates of the vertex points
 changes is the objective function 
 
 \vspace{0.5cm}
-\begin{tcolorbox}[title = New Objective Function]
+\begin{prettyBox}{New Objective Function}{box}
 \[
 f(x_i) = Z = 14x_1 + 4x_2  
 \]
 \begin{center}
 The goal is to minimize feeds cost by minmizing \(f(x_i)\), while meeting the minimum daily nutrition .
 \end{center}
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.75cm} 
 \begin{center}
@@ -419,7 +419,7 @@ The goal is to minimize feeds cost by minmizing \(f(x_i)\), while meeting the mi
 \end{itemize}
 
 \vspace{0.5cm}
-\begin{tcolorbox}[title=Note]
+\begin{prettyBox}{Note}{red}
 \textbf{\underline{Difference Between Multiple \& Infinite Solutions:}}
 
 \vspace{0.25cm}
@@ -427,7 +427,7 @@ One might wonder about the difference between these two terms since even multipl
 number of solutions. The difference is that in infinite solutions, the solution is unbounded, unlike multiple
 solutions, which have their solutions on a finite segment. But as mentioned before, even though multiple solutions
 have infinite solutions, we focus only on the boundary corner points (vertex points).
-\end{tcolorbox}
+\end{prettyBox}
 
 \newpage
 \subsubsection*{\underline{Example :}} Minimize \(f(x,y) = x + y\)
@@ -506,14 +506,14 @@ Let \(x_2\) be the number of boat B.\\
 \] 
 \end{multicols}
 \vspace{0.5cm}
-\begin{tcolorbox}[title = Objective Function]
+\begin{prettyBox}{Objective Function}{box}
 \[
 f(x_i) = Z = 50x_1 + 60x_2  
 \]
 \begin{center}
 The goal is to maximize the profits by maximizing \(f(x_i)\), while adhering to the ressource limitations .
 \end{center}
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{1cm}
 \begin{center}
@@ -644,27 +644,27 @@ Let \(x_4\) be the process 4.
 \[
 \left\{
     \begin{array}{l}
-        \forall x_1 , x_2 , x_3 , x_4 \geq 0 \hspace{1.65cm} \text{(Non-negative number of processes) ...C1}\\
+        \forall x_1 , x_2 , x_3 , x_4 \geq 0 \hspace{1.65cm} \text{(Non-negative number of processes) ...\textcolor{redPlot}{C1}}\\
         20x_1 + 30x_2 + 10x_3 + 4x_4  \leq 1000 \quad \text{(Maximum Labor(hr)) ...\textcolor{greenPlot}{C2}}\\ 
         160x_1 + 100x_2 + 200x_3 + 75x_3   \leq 8000 \hspace{0.85cm} \text{(Maximum M$_{A}$(lb)) ...\textcolor{purplePlot}{C3}}\\
-        30x_1 + 35x_2 + 60x_3 + 80x_4  \leq 4000 \hspace{0.85cm} \text{(Maximum M$_{B}$(lb)) ...\textcolor{purplePlot}{C3}}\\
-        35x_1 + 45x_2 + 70x_3 \geq 2100 \hspace{0.85cm} \text{(Minimum P1) ...\textcolor{purplePlot}{C3}}\\
-        55x_1 + 42x_2 + 90x_4  \geq 1800 \hspace{0.85cm} \text{(Minimum P2) ...\textcolor{orangePlot}{C4}}
+        30x_1 + 35x_2 + 60x_3 + 80x_4  \leq 4000 \hspace{0.85cm} \text{(Maximum M$_{B}$(lb)) ...\textcolor{blueArea}{C4}}\\
+        35x_1 + 45x_2 + 70x_3 \geq 2100 \hspace{0.85cm} \text{(Minimum P1) ...\textcolor{pur}{C5}}\\
+        55x_1 + 42x_2 + 90x_4  \geq 1800 \hspace{0.85cm} \text{(Minimum P2) ...\textcolor{orangePlot}{C6}}
    \end{array}
    \right.
 \] 
 \end{multicols}
 \vspace{0.5cm}
-\begin{tcolorbox}[title = Objective Function]
+\begin{prettyBox}{Objective Function}{box}
 \[
 f(x_i) = Z = 3\times(160x_1 + 100x_2 + 200x_3 + 75x_3) + 4\times(30x_1 + 35x_2 + 60x_3 + 80x_4)\\
            =690x_1 + 545x_2 + 1070x_3 + 785x_4
 \]
 \begin{center}
-The goal is to minimize the profits by minimizing \(f(x_i)\), while adhering to the ressource limitations and
+The goal is to minimize the cost by minimizing \(f(x_i)\), while adhering to the ressource limitations and
 minimum production of P1 \& P2.
 \end{center}
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.5cm}
 \subsubsection*{\underline{Example :}} Let's take the same problem as before but allow overtime max 200hr with
@@ -695,28 +695,28 @@ Let \(y\) be the number of overtime hour
 \[
 \left\{
     \begin{array}{l}
-        \forall x_1 , x_2 , x_3 , x_4 \geq 0 \hspace{1.65cm} \text{(Non-negative number of processes) ...C1}\\
+        \forall x_1 , x_2 , x_3 , x_4 \geq 0 \hspace{1.65cm} \text{(Non-negative number of processes) ...\textcolor{redPlot}{C1}}\\
         20x_1 + 30x_2 + 10x_3 + 4x_4  \leq 1000 + y \quad \text{(Maximum Labor(hr)) ...\textcolor{greenPlot}{C2}}\\ 
-         y \leq 200 \text{(Maximum Overtime(hr))}\\
-         y \geq 0 \text{(Overtime cant be negative)}\\
-        160x_1 + 100x_2 + 200x_3 + 75x_3   \leq 8000 \hspace{0.85cm} \text{(Maximum M$_{A}$(lb)) ...\textcolor{purplePlot}{C3}}\\
-        30x_1 + 35x_2 + 60x_3 + 80x_4  \leq 4000 \hspace{0.85cm} \text{(Maximum M$_{B}$(lb)) ...\textcolor{purplePlot}{C3}}\\
-        35x_1 + 45x_2 + 70x_3 \geq 2100 \hspace{0.85cm} \text{(Minimum P1) ...\textcolor{purplePlot}{C3}}\\
-        55x_1 + 42x_2 + 90x_4  \geq 1800 \hspace{0.85cm} \text{(Minimum P2) ...\textcolor{orangePlot}{C4}}
+        y \leq 200 \quad \text{(Maximum Overtime(hr)) ...\textcolor{yellow}{C3}}\\
+        y \geq 0 \quad \text{(Overtime cant be negative) ...\textcolor{brown}{C4}}\\
+        160x_1 + 100x_2 + 200x_3 + 75x_3   \leq 8000 \hspace{0.85cm} \text{(Maximum M$_{A}$(lb)) ...\textcolor{purplePlot}{C5}}\\
+        30x_1 + 35x_2 + 60x_3 + 80x_4  \leq 4000 \hspace{0.85cm} \text{(Maximum M$_{B}$(lb)) ...\textcolor{pur}{C6}}\\
+        35x_1 + 45x_2 + 70x_3 \geq 2100 \hspace{0.85cm} \text{(Minimum P1) ...\textcolor{blueArea}{C7}}\\
+        55x_1 + 42x_2 + 90x_4  \geq 1800 \hspace{0.85cm} \text{(Minimum P2) ...\textcolor{orangePlot}{C8}}
    \end{array}
    \right.
 \] 
 \end{multicols}
 \vspace{0.5cm}
-\begin{tcolorbox}[title = Objective Function]
+\begin{prettyBox}{Objective Function}{box}
 \[
 g(x_i) = Z = f(x_i) + 30y =  690x_1 + 545x_2 + 1070x_3 + 785x_4 + 30y
 \]
 \begin{center}
-The goal is to minimize the profits by minimizing \(f(x_i)\), while adhering to the ressource limitations and
+The goal is to minimize the cost by minimizing \(g(x_i)\), while adhering to the ressource limitations and
 minimum production of P1 \& P2.
 \end{center}
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.5cm}
 \subsubsection*{\underline{Example :}}The transportation model setting , good at location A$_{i}$, transport 
@@ -743,8 +743,7 @@ Transportation cost from A$_{i}$ to B$_{j}$ :
 
 \newpage
 \begin{multicols}{2}
-\textbf{\underline{Variables Definition:}}\\
-
+\textbf{\underline{Variables Definition:}}\\[2.5cm]
 Let \(x_{ij}\) be the number of transported Units from A$_{i}$ to B$_{j}$.
 
 \columnbreak
@@ -754,31 +753,112 @@ Let \(x_{ij}\) be the number of transported Units from A$_{i}$ to B$_{j}$.
 \[
 \left\{
     \begin{array}{l}
-        \forall x_{ij} \geq 0 \hspace{1.65cm} \text{(Non-negative number of units) ...C1}\\
+        \forall x_{ij} \geq 0 \hspace{1.65cm} \text{(Non-negative number of units) ...\textcolor{redPlot}{C1}}\\
     i = \{1,2\} \quad,\quad j = \{1,2,3\}\\
          x_{11} + x_{12} + x_{13}  = 200 \quad \text{(Maximum Capacity of A$_{1}$) ...\textcolor{greenPlot}{C2}}\\ 
-         x_{21} + x_{22} + x_{23}  = 300 \quad \text{(Maximum Capacity of A$_{2}$)...\textcolor{greenPlot}{C2}}\\
-         x_{11} + x_{21} = 100 \quad \text{(Maximum Capacity of B$_{1}$)...\textcolor{greenPlot}{C2}}\\
-         x_{12} + x_{22} = 200 \quad \text{(Maximum Capacity of B$_{2}$)...\textcolor{greenPlot}{C2}}\\
-         x_{13} + x_{23} = 200 \quad \text{(Maximum Capacity of B$_{3}$)...\textcolor{greenPlot}{C2}}
+         x_{21} + x_{22} + x_{23}  = 300 \quad \text{(Maximum Capacity of A$_{2}$)...\textcolor{purplePlot}{C3}}\\
+         x_{11} + x_{21} = 100 \quad \text{(Maximum Capacity of B$_{1}$)...\textcolor{orangePlot}{C4}}\\
+         x_{12} + x_{22} = 200 \quad \text{(Maximum Capacity of B$_{2}$)...\textcolor{blueArea}{C5}}\\
+         x_{13} + x_{23} = 200 \quad \text{(Maximum Capacity of B$_{3}$)...\textcolor{pur}{C6}}
    \end{array}
    \right.
 \] 
 \end{multicols}
 \vspace{0.5cm}
-\begin{tcolorbox}[title = Objective Function]
+\begin{prettyBox}{Objective Function}{box}
 \[
     f(x_i) + 30y =  11x_{11} + 12x_{12} +13x_{13} +21x_{21} +22x_{22} +23x_{23} 
 \]
 \begin{center}
 The goal is to minimize the cost of transport by minimizing \(f(x_i)\), while adhering to the capacity limitation
 \end{center}
-\end{tcolorbox}
+\end{prettyBox}
 
 \vspace{0.5cm}
 
-\begin{tcolorbox}[title = Note] 
+\begin{prettyBox}{Note}{red}
 Constraint can be  : \(= , \leq , \geq ,> ,<\)
 
-We can rewrite any constraint into a  \textbf{Standart Form}
-\end{tcolorbox}
+We can rewrite any constraint into a  \textbf{Standard Form}
+\end{prettyBox}
+
+\subsection{Standard Form} 
+The standard form is a structured way of representing LP problems. It helps
+to standardize diverse problems, making them easier to analyze and solve using
+models like the Simplex Method and primal-dual relationships. Converting
+problems to standard form ensures uniformity, simplifying both theoretical 
+understanding and computational implementation.
+
+\begin{prettyBox}{}{box}
+\[
+    \text{Minimize } Z = c_1x_1 + c_2x_2 + \cdots + c_nx_n
+\]
+
+\vspace{0.25cm}
+\hspace{1cm}\text{Subject to:}
+\[
+\begin{aligned}
+    a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= b_1 \\
+    a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &= b_2 \\
+    &\hspace{-2cm}\vdots \\
+    a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &= b_m
+\end{aligned}
+\]
+
+\[
+x_1, x_2, \dots, x_n \geq 0 
+\]
+\end{prettyBox}
+
+\subsubsection{How To Transition To Standard Form}
+
+
+\begin{prettyBox}{Maximization Problem}{box}
+In the standard form, all linear programming problems must be expressed as minimization problems. If we are given a maximization problem, we can convert it by multiplying the objective function by \(-1\), effectively turning it into a minimization problem.
+\end{prettyBox}
+
+\subsubsection*{\underline{Example}}
+\[
+\text{Maximize } f(x_i) = 3x_1 + 2x_2
+\]
+is equivalent to:
+\[
+\text{Minimize } g(x_i) = -f(x_i) = -3x_1 - 2x_2
+\]
+
+\vspace{0.5cm}
+\begin{prettyBox}{Constraints}{box}
+In the standard form , all constraints are equalities , if a contraint is not an equality
+we have to add or substract new positive variables called slack variables\\[0.25cm]
+\boldsymbol{\leq} \textbf{Constraint}
+\begin{equation*}
+x \leq b \Leftrightarrow x + s_1 = b \quad \text{with} \quad s_1 \geq 0
+\end{equation*}
+\boldsymbol{\geq} \textbf{Constraint}
+\begin{equation*}
+    x\geq b \Leftrightarrow x-s_1=b \quad \text{with} \quad s_1\geq 0
+\end{equation*}
+\end{prettyBox}
+
+\subsubsection*{\underline{Example}}
+
+\[
+\begin{array}{ccc}
+\left\{
+    \begin{array}{l}
+         x_{1} + x_{2} + x_{3} \leq 100 \\
+         x_{1} - x_{2} \geq 5 \\
+         x_{1} , x_{2} , x_{3} \geq 0
+    \end{array}
+\right.
+& \quad \Longrightarrow \quad &
+\left\{
+    \begin{array}{l}
+         x_{1} + x_{2} + x_{3} + s_{1} = 100 \\
+         x_{1} - x_{2} - s_{2} = 5 \\
+         x_{1} , x_{2} , x_{3} , s_{1} , s_{2} \geq 0
+    \end{array}
+\right.
+\end{array}
+\]
+
