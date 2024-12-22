@@ -224,3 +224,166 @@ adhering to the principle of high cohesion and low coupling.
 \vspace{0.5cm}
 
 \subsection*{\underline{Example :}}
+A Software that processes a text document by splitting it into individual
+words. It then checks each word against a dictionary. If the word exists in
+the dictionary, it is marked as correct. Otherwise, the software notifies the
+user and allows them to decide whether the word is valid. If the user 
+identifies the word as incorrect, it is added to the list of misspelled words.
+If the user confirms the word is valid, it is added to the dictionary.
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{Chapters/Diagram/DFD/dfd2.drawio.pdf}
+\end{center}
+
+\subsubsection{SD}
+
+\begin{prettyBox}{SD}{mypur}
+A structure diagram is a hierarchical representation of a system in the
+form of a tree. It illustrates how the transformation elements of a Data Flow
+Diagram (DFD) can be implemented within the hierarchical units of software architecture.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Difference Between SD \& DFD}{red}
+They might seem similar but they serve different purposes and compliment each other ,
+SD shows how the data changes and flows with the transformation , and DFD focuses on the hiertachy
+of the software architecture
+\end{prettyBox}
+
+\subsubsection*{Symboles}
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{Chapters/Diagram/SD/smb.drawio.pdf}
+\end{center}
+
+\vspace{0.5cm}
+
+\subsubsection*{Tree Nodes}
+\begin{itemize}
+    \item \textbf{Synchronisation Unit} : The root node at the top represent the the global idea of the software 
+    \item \textbf{Transformation Unit} : The parent node has to point to at least one other units , represent a function of the software
+    \item \textbf{Input/Output Unit} : The leaf node same as parent node just never points to another unit
+\end{itemize}
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{Note}{red}
+\textbf{\underline{Synchronisation Unit's Role}}\\[0.15cm]
+The synchronisation unit (root node) never creates the data it only pass it to other units.\\[0.25cm]
+\textbf{\underline{No Link Between Unit Of Same Level}}\\[0.15cm]
+There can be link between units with simple arrow only with units of different level.\\[0.25cm]
+\textbf{\underline{SD Level}}\\[0.15cm]
+It's the number of levels beside the root node (don't count the synchronisation unit).
+\end{prettyBox}
+
+\begin{center}
+\includegraphics[width=0.85\textwidth]{Chapters/Diagram/SD/sd1.drawio.pdf}
+\end{center}
+
+\vspace{0.25cm}
+
+\subsection*{\underline{Example :}}
+We will take same example of word checker, we will make level 1 SD then level 2 SD
+
+\subsection*{\underline{Level 1 SD :}}
+\begin{center}
+\includegraphics[width=0.85\textwidth]{Chapters/Diagram/SD/sd2.drawio.pdf}
+\end{center}
+
+
+
+\subsection*{\underline{Level 2 SD :}}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Chapters/Diagram/SD/sd3.drawio.pdf}
+\end{center}
+
+\vspace{1cm}
+\subsubsection{Sequence Diagram}
+
+
+\begin{prettyBox}{Sequence Diagram}{mypur}
+A sequence diagram illustrates the dynamic behavior of a system over time (notion of time). 
+It visualizes the messages exchanged between objects/actors and is read from top to bottom.
+\end{prettyBox}
+
+\subsection*{\underline{Symboles :}}
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Chapters/Diagram/SQD/sym.drawio.pdf}
+\end{center}
+
+
+\subsection*{\underline{Example :}}
+
+\vspace{0.25cm}
+\begin{center}
+\includegraphics[width=0.95\textwidth]{Chapters/Diagram/SQD/sqd.drawio.pdf}
+\end{center}
+
+
+\vspace{1cm}
+\subsubsection{State-Transition Diagram}
+
+\begin{prettyBox}{State Diagram}{mypur}
+A state diagram illustrates how the state of an object changes in response to events.
+\end{prettyBox}
+
+\subsection*{\underline{Symboles :}}
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Chapters/Diagram/ST/sym.drawio.pdf}
+\end{center}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Note}{red}
+We can have only \textbf{one initial state} , but we can have \textbf{many final state}.
+\end{prettyBox}
+
+\subsection*{\underline{Example :}}
+
+\begin{center}
+\includegraphics[width=0.95\textwidth]{Chapters/Diagram/ST/state.drawio.pdf}
+\end{center}
+
+
+\vspace{1cm}
+\subsubsection{Activity Diagram}
+
+\begin{prettyBox}{Activity Diagram}{mypur}
+An activity diagram describes the progression of activities within the system and outlines the logical flow of processes.
+\end{prettyBox}
+
+\subsection*{\underline{Symboles :}}
+
+\begin{center}
+\includegraphics[width=0.85\textwidth,height=0.97\textheight]{Chapters/Diagram/AC/sym.drawio.pdf}
+\end{center}
+
+
+\subsection*{\underline{Example :}}
+
+
+\begin{center}
+\includegraphics[width=0.7\textwidth,height=0.8\textheight]{Chapters/Diagram/AC/ac1.drawio.pdf}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.9\textwidth,height=0.78\textheight]{Chapters/Diagram/AC/ac2.drawio.pdf}
+\end{center}
+
+
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Note}{red}
+\begin{itemize}
+    \item We can have only \textbf{one begin} , but we can have \textbf{end}.
+    \item Even though activity diagram has the notion of state it focuses more on the 
+    logical flow of activities of the system.
+\end{itemize}
+\end{prettyBox}
+
+
+
