@@ -360,7 +360,7 @@ An activity diagram describes the progression of activities within the system an
 
 \subsection*{\underline{Example :}}
 
-\vspace{0.25cm}
+\vspace{1cm}
 
 \begin{center}
 \includegraphics[width=0.55\textwidth,height=0.6\textheight]{Chapters/Diagram/AC/ac1.drawio.pdf}
@@ -475,7 +475,7 @@ Singleton is a creational design pattern that aims to limit the instanciation
 of the a class to only one object and give global acess to it.
 
 \begin{center}
-\includegraphics[width=0.6\textwidth,height=0.35\textheight]{Chapters/DesignPattern/Singleton/single.drawio.pdf}
+\includegraphics[width=0.55\textwidth,height=0.3\textheight]{Chapters/DesignPattern/Singleton/single.drawio.pdf}
 \end{center}
 
 \begin{prettyBox}{Explication}{mypur}
@@ -499,13 +499,14 @@ Instance Of Singleton
 
 \subsubsection*{\underline{Example:}}
 \begin{center}
-\includegraphics[width=0.4\textwidth,height=0.3\textheight]{Chapters/DesignPattern/Singleton/single2.drawio.pdf}
+\includegraphics[width=0.45\textwidth,height=0.35\textheight]{Chapters/DesignPattern/Singleton/single2.drawio.pdf}
 \end{center}
 
 
 \subsubsection*{\underline{Java Code:}}
 \lstinputlisting[style=javastyle]{Chapters/DesignPattern/Singleton/S2/Main.java}
 
+\newpage
 \lstinputlisting[style=javastyle,basicstyle=\scriptsize\ttfamily]{Chapters/DesignPattern/Singleton/S2/dataBaseManager.java}
 
 
@@ -597,11 +598,19 @@ Leaf
 
 \subsubsection*{\underline{Output:}}
 \begin{lstlisting}[style=cmd]
-Setting state to State 1
-Observer Alice New State : State 1
-Observer Bob New State : State 1
-Setting state to State 2
-Observer Bob New State : State 2
+Draw LINE
+Draw TRIANGLE
+Draw Complexe Form
+
+
+LINE
+TRIANGLE
+ Complex
+  SQUARE
+  CIRCLE
+   Complex
+    LINE
+    LINE
 \end{lstlisting}
 
 \vspace{0.5cm}
@@ -650,11 +659,11 @@ Subject and Observer can be an abstract class or an interface both implementatio
 
 \subsubsection*{\underline{Output:}}
 \begin{lstlisting}[style=cmd]
-Setting Activity To DW 2 EX1
-Student Zaki changed activity to DW 2 EX1
-Student Rabah changed activity to DW 2 EX1
-Setting Activity To LAB2
-Student Zaki changed activity to LAB2
+Setting state to State 1
+Observer Alice New State : State 1
+Observer Bob New State : State 1
+Setting state to State 2
+Observer Bob New State : State 2
 \end{lstlisting}
 \vspace{0.5cm}
 
