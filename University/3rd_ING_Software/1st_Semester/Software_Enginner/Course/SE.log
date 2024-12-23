@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  23 DEC 2024 09:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  23 DEC 2024 10:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -624,7 +624,7 @@ pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX1/ex1.drawio.pdf): PDF i
 <Chapters/Diagram/OOP/EX1/ex1.drawio.pdf, id=88, 418.4433pt x 73.2336pt>
 File: Chapters/Diagram/OOP/EX1/ex1.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/EX1/ex1.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/EX1/ex1.drawio.pdf  used on input line 629.
+Package pdftex.def Info: Chapters/Diagram/OOP/EX1/ex1.drawio.pdf  used on input line 622.
 (pdftex.def)             Requested size: 625.96065pt x 109.55284pt.
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
@@ -634,167 +634,167 @@ pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX2/ex2.a.drawio.pdf): PDF
 <Chapters/Diagram/OOP/EX2/ex2.a.drawio.pdf, id=116, 413.62529pt x 148.6353pt>
 File: Chapters/Diagram/OOP/EX2/ex2.a.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/EX2/ex2.a.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/EX2/ex2.a.drawio.pdf  used on input line 698.
+Package pdftex.def Info: Chapters/Diagram/OOP/EX2/ex2.a.drawio.pdf  used on input line 691.
 (pdftex.def)             Requested size: 406.87059pt x 146.21725pt.
 [26 <./Chapters/Diagram/OOP/EX2/ex2.a.drawio.pdf>] (./Chapters/JAVA/EX2/A/Employee.java)
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX2/ex2.b.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/EX2/ex2.b.drawio.pdf, id=133, 605.3817pt x 91.3011pt>
+<Chapters/Diagram/OOP/EX2/ex2.b.drawio.pdf, id=133, 605.36081pt x 91.27644pt>
 File: Chapters/Diagram/OOP/EX2/ex2.b.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/EX2/ex2.b.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/EX2/ex2.b.drawio.pdf  used on input line 709.
-(pdftex.def)             Requested size: 625.96065pt x 94.40479pt.
+Package pdftex.def Info: Chapters/Diagram/OOP/EX2/ex2.b.drawio.pdf  used on input line 702.
+(pdftex.def)             Requested size: 625.96065pt x 94.38904pt.
 (./Chapters/JAVA/EX2/B/Person.java) [27 <./Chapters/Diagram/OOP/EX2/ex2.b.drawio.pdf>] (./Chapters/JAVA/EX2/B/Address.java)
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX2/ex2.c.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/EX2/ex2.c.drawio.pdf, id=150, 572.1375pt x 120.45pt>
+<Chapters/Diagram/OOP/EX2/ex2.c.drawio.pdf, id=148, 572.128pt x 120.44052pt>
 File: Chapters/Diagram/OOP/EX2/ex2.c.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/EX2/ex2.c.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/EX2/ex2.c.drawio.pdf  used on input line 723.
-(pdftex.def)             Requested size: 625.96065pt x 131.78227pt.
+Package pdftex.def Info: Chapters/Diagram/OOP/EX2/ex2.c.drawio.pdf  used on input line 716.
+(pdftex.def)             Requested size: 625.96065pt x 131.77191pt.
 (./Chapters/JAVA/EX2/C/Teacher.java) [28 <./Chapters/Diagram/OOP/EX2/ex2.c.drawio.pdf>] (./Chapters/JAVA/EX2/C/Article.java)
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX2/ex2.d.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/EX2/ex2.d.drawio.pdf, id=167, 606.34526pt x 217.77359pt>
+<Chapters/Diagram/OOP/EX2/ex2.d.drawio.pdf, id=163, 606.32823pt x 217.74895pt>
 File: Chapters/Diagram/OOP/EX2/ex2.d.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/EX2/ex2.d.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/EX2/ex2.d.drawio.pdf  used on input line 742.
-(pdftex.def)             Requested size: 625.96065pt x 224.82767pt.
+Package pdftex.def Info: Chapters/Diagram/OOP/EX2/ex2.d.drawio.pdf  used on input line 735.
+(pdftex.def)             Requested size: 625.96065pt x 224.80222pt.
 [29] (./Chapters/JAVA/EX2/D/Person.java) [30 <./Chapters/Diagram/OOP/EX2/ex2.d.drawio.pdf>] (./Chapters/JAVA/EX2/D/Organization.java) [31] (./Chapters/JAVA/EX2/D/WorkFor.java)
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX2/ex2.e.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/EX2/ex2.e.drawio.pdf, id=192, 446.62859pt x 336.29637pt>
+<Chapters/Diagram/OOP/EX2/ex2.e.drawio.pdf, id=186, 446.62859pt x 336.29637pt>
 File: Chapters/Diagram/OOP/EX2/ex2.e.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/EX2/ex2.e.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/EX2/ex2.e.drawio.pdf  used on input line 760.
+Package pdftex.def Info: Chapters/Diagram/OOP/EX2/ex2.e.drawio.pdf  used on input line 753.
 (pdftex.def)             Requested size: 438.17053pt x 329.9274pt.
 [32] (./Chapters/JAVA/EX2/E/Course.java) [33 <./Chapters/Diagram/OOP/EX2/ex2.e.drawio.pdf>] (./Chapters/JAVA/EX2/E/Instructor.java) (./Chapters/JAVA/EX2/E/Student.java) (./Chapters/JAVA/EX2/E/Enrollment.java) [34]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX3/ex3.a.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/EX3/ex3.a.drawio.pdf, id=216, 305.22029pt x 41.1939pt>
+<Chapters/Diagram/OOP/EX3/ex3.a.drawio.pdf, id=210, 305.22029pt x 41.1939pt>
 File: Chapters/Diagram/OOP/EX3/ex3.a.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/EX3/ex3.a.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/EX3/ex3.a.drawio.pdf  used on input line 812.
+Package pdftex.def Info: Chapters/Diagram/OOP/EX3/ex3.a.drawio.pdf  used on input line 805.
 (pdftex.def)             Requested size: 625.96065pt x 84.49072pt.
 (./Chapters/JAVA/EX3/A/Printer.java) [35 <./Chapters/Diagram/OOP/EX3/ex3.a.drawio.pdf>] (./Chapters/JAVA/EX3/A/Document.java)
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX3/ex3.b.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/EX3/ex3.b.drawio.pdf, id=233, 319.1925pt x 66.2475pt>
+<Chapters/Diagram/OOP/EX3/ex3.b.drawio.pdf, id=227, 319.1925pt x 66.2475pt>
 File: Chapters/Diagram/OOP/EX3/ex3.b.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/EX3/ex3.b.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/EX3/ex3.b.drawio.pdf  used on input line 824.
+Package pdftex.def Info: Chapters/Diagram/OOP/EX3/ex3.b.drawio.pdf  used on input line 817.
 (pdftex.def)             Requested size: 625.96065pt x 129.91798pt.
 (./Chapters/JAVA/EX3/B/Email.java) (./Chapters/JAVA/EX3/B/EmailService.java)
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX3/ex3.c.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/EX3/ex3.c.drawio.pdf, id=234, 435.54718pt x 66.2475pt>
+<Chapters/Diagram/OOP/EX3/ex3.c.drawio.pdf, id=228, 435.54718pt x 66.2475pt>
 File: Chapters/Diagram/OOP/EX3/ex3.c.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/EX3/ex3.c.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/EX3/ex3.c.drawio.pdf  used on input line 835.
+Package pdftex.def Info: Chapters/Diagram/OOP/EX3/ex3.c.drawio.pdf  used on input line 828.
 (pdftex.def)             Requested size: 625.96065pt x 95.2194pt.
 [36 <./Chapters/Diagram/OOP/EX3/ex3.b.drawio.pdf>] (./Chapters/JAVA/EX3/C/Report.java) (./Chapters/JAVA/EX3/C/ReportGenerator.java)
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX4/ex4.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/EX4/ex4.drawio.pdf, id=251, 334.3692pt x 197.7789pt>
+<Chapters/Diagram/OOP/EX4/ex4.drawio.pdf, id=245, 334.3692pt x 197.7789pt>
 File: Chapters/Diagram/OOP/EX4/ex4.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/EX4/ex4.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/EX4/ex4.drawio.pdf  used on input line 861.
+Package pdftex.def Info: Chapters/Diagram/OOP/EX4/ex4.drawio.pdf  used on input line 854.
 (pdftex.def)             Requested size: 375.5802pt x 222.16875pt.
 [37 <./Chapters/Diagram/OOP/EX3/ex3.c.drawio.pdf>] (./Chapters/JAVA/EX4/Animal.java) (./Chapters/JAVA/EX4/Cat.java) [38 <./Chapters/Diagram/OOP/EX4/ex4.drawio.pdf>] (./Chapters/JAVA/EX4/Dog.java)
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX5/ex5.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/EX5/ex5.drawio.pdf, id=290, 485.89528pt x 83.3514pt>
+<Chapters/Diagram/OOP/EX5/ex5.drawio.pdf, id=284, 485.89528pt x 83.3514pt>
 File: Chapters/Diagram/OOP/EX5/ex5.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/EX5/ex5.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/EX5/ex5.drawio.pdf  used on input line 885.
+Package pdftex.def Info: Chapters/Diagram/OOP/EX5/ex5.drawio.pdf  used on input line 878.
 (pdftex.def)             Requested size: 563.36075pt x 96.64314pt.
 (./Chapters/JAVA/EX5/Teacher.java) [39 <./Chapters/Diagram/OOP/EX5/ex5.drawio.pdf>] (./Chapters/JAVA/EX5/Department.java)
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/EX6/ex6.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/EX6/ex6.drawio.pdf, id=307, 598.15468pt x 223.7961pt>
+<Chapters/Diagram/OOP/EX6/ex6.drawio.pdf, id=301, 598.13385pt x 223.78093pt>
 File: Chapters/Diagram/OOP/EX6/ex6.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/EX6/ex6.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/EX6/ex6.drawio.pdf  used on input line 906.
-(pdftex.def)             Requested size: 563.36075pt x 210.78496pt.
+Package pdftex.def Info: Chapters/Diagram/OOP/EX6/ex6.drawio.pdf  used on input line 899.
+(pdftex.def)             Requested size: 563.36075pt x 210.77066pt.
 [40] (./Chapters/JAVA/EX6/Version.java) (./Chapters/JAVA/EX6/fileExtension.java) [41 <./Chapters/Diagram/OOP/EX6/ex6.drawio.pdf>] (./Chapters/JAVA/EX6/Document.java)
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/Enum/enum.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/Sum/Enum/enum.drawio.pdf, id=334, 222.8325pt x 67.2111pt>
+<Chapters/Diagram/OOP/Sum/Enum/enum.drawio.pdf, id=324, 222.8325pt x 67.2111pt>
 File: Chapters/Diagram/OOP/Sum/Enum/enum.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/Sum/Enum/enum.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Enum/enum.drawio.pdf  used on input line 923.
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Enum/enum.drawio.pdf  used on input line 916.
 (pdftex.def)             Requested size: 375.5802pt x 113.29231pt.
 [42]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/Inter/inte.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/Sum/Inter/inte.drawio.pdf, id=338, 341.34772pt x 89.3701pt>
+<Chapters/Diagram/OOP/Sum/Inter/inte.drawio.pdf, id=328, 341.34772pt x 89.3701pt>
 File: Chapters/Diagram/OOP/Sum/Inter/inte.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/Sum/Inter/inte.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Inter/inte.drawio.pdf  used on input line 928.
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Inter/inte.drawio.pdf  used on input line 921.
 (pdftex.def)             Requested size: 500.77042pt x 131.10927pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/reflexiveAssoc/selfassoc.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/Sum/reflexiveAssoc/selfassoc.drawio.pdf, id=339, 138.50803pt x 81.40334pt>
+<Chapters/Diagram/OOP/Sum/reflexiveAssoc/selfassoc.drawio.pdf, id=329, 138.50803pt x 81.40334pt>
 File: Chapters/Diagram/OOP/Sum/reflexiveAssoc/selfassoc.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/Sum/reflexiveAssoc/selfassoc.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/Sum/reflexiveAssoc/selfassoc.drawio.pdf  used on input line 933.
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/reflexiveAssoc/selfassoc.drawio.pdf  used on input line 926.
 (pdftex.def)             Requested size: 250.38043pt x 147.16058pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/SAssoc/simpleassoc.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/Sum/SAssoc/simpleassoc.drawio.pdf, id=340, 327.12132pt x 66.23802pt>
+<Chapters/Diagram/OOP/Sum/SAssoc/simpleassoc.drawio.pdf, id=330, 327.12132pt x 66.23802pt>
 File: Chapters/Diagram/OOP/Sum/SAssoc/simpleassoc.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/Sum/SAssoc/simpleassoc.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/Sum/SAssoc/simpleassoc.drawio.pdf  used on input line 939.
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/SAssoc/simpleassoc.drawio.pdf  used on input line 932.
 (pdftex.def)             Requested size: 469.47047pt x 95.06932pt.
 [43 <./Chapters/Diagram/OOP/Sum/Enum/enum.drawio.pdf> <./Chapters/Diagram/OOP/Sum/Inter/inte.drawio.pdf> <./Chapters/Diagram/OOP/Sum/reflexiveAssoc/selfassoc.drawio.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/NaryAssoc/naryassoc.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/Sum/NaryAssoc/naryassoc.drawio.pdf, id=391, 298.21333pt x 210.77802pt>
+<Chapters/Diagram/OOP/Sum/NaryAssoc/naryassoc.drawio.pdf, id=382, 298.21333pt x 210.77802pt>
 File: Chapters/Diagram/OOP/Sum/NaryAssoc/naryassoc.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/Sum/NaryAssoc/naryassoc.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/Sum/NaryAssoc/naryassoc.drawio.pdf  used on input line 945.
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/NaryAssoc/naryassoc.drawio.pdf  used on input line 938.
 (pdftex.def)             Requested size: 406.87059pt x 287.59987pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/Class Association/classassoc.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/Sum/Class Association/classassoc.drawio.pdf, id=392, 391.453pt x 113.44115pt>
+<Chapters/Diagram/OOP/Sum/Class Association/classassoc.drawio.pdf, id=383, 391.453pt x 113.44115pt>
 File: Chapters/Diagram/OOP/Sum/Class Association/classassoc.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/Sum/Class Association/classassoc.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Class Association/classassoc.drawio.pdf  used on input line 951.
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Class Association/classassoc.drawio.pdf  used on input line 944.
 (pdftex.def)             Requested size: 469.47047pt x 136.05424pt.
 [44 <./Chapters/Diagram/OOP/Sum/SAssoc/simpleassoc.drawio.pdf> <./Chapters/Diagram/OOP/Sum/NaryAssoc/naryassoc.drawio.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/Depend/depend.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/Sum/Depend/depend.drawio.pdf, id=418, 327.12132pt x 66.23802pt>
+<Chapters/Diagram/OOP/Sum/Depend/depend.drawio.pdf, id=409, 327.12132pt x 66.23802pt>
 File: Chapters/Diagram/OOP/Sum/Depend/depend.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/Sum/Depend/depend.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Depend/depend.drawio.pdf  used on input line 957.
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Depend/depend.drawio.pdf  used on input line 950.
 (pdftex.def)             Requested size: 469.47047pt x 95.06932pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/Inhe/inherit.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/Sum/Inhe/inherit.drawio.pdf, id=419, 327.12132pt x 66.23802pt>
+<Chapters/Diagram/OOP/Sum/Inhe/inherit.drawio.pdf, id=410, 327.12132pt x 66.23802pt>
 File: Chapters/Diagram/OOP/Sum/Inhe/inherit.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/Sum/Inhe/inherit.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Inhe/inherit.drawio.pdf  used on input line 963.
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Inhe/inherit.drawio.pdf  used on input line 956.
 (pdftex.def)             Requested size: 469.47047pt x 95.06932pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/Aggrega/aggrega.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/Sum/Aggrega/aggrega.drawio.pdf, id=420, 345.18883pt x 66.23802pt>
+<Chapters/Diagram/OOP/Sum/Aggrega/aggrega.drawio.pdf, id=411, 345.18883pt x 66.23802pt>
 File: Chapters/Diagram/OOP/Sum/Aggrega/aggrega.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/Sum/Aggrega/aggrega.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Aggrega/aggrega.drawio.pdf  used on input line 969.
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Aggrega/aggrega.drawio.pdf  used on input line 962.
 (pdftex.def)             Requested size: 469.47047pt x 90.08551pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/OOP/Sum/Composition/composition.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/OOP/Sum/Composition/composition.drawio.pdf, id=421, 345.18883pt x 66.23802pt>
+<Chapters/Diagram/OOP/Sum/Composition/composition.drawio.pdf, id=412, 345.18883pt x 66.23802pt>
 File: Chapters/Diagram/OOP/Sum/Composition/composition.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/OOP/Sum/Composition/composition.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Composition/composition.drawio.pdf  used on input line 975.
+Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Composition/composition.drawio.pdf  used on input line 968.
 (pdftex.def)             Requested size: 469.47047pt x 90.08551pt.
 [45 <./Chapters/Diagram/OOP/Sum/Class Association/classassoc.drawio.pdf> <./Chapters/Diagram/OOP/Sum/Depend/depend.drawio.pdf> <./Chapters/Diagram/OOP/Sum/Inhe/inherit.drawio.pdf> <./Chapters/Diagram/OOP/Sum/Aggrega/aggrega.drawio.pdf>]) [46 <./Chapters/Diagram/OOP/Sum/Composition/composition.drawio.pdf>]
 \openout2 = `Chapters/Conception.aux'.
@@ -803,53 +803,53 @@ Package pdftex.def Info: Chapters/Diagram/OOP/Sum/Composition/composition.drawio
 
 
 
-] [48] [49] [50]
+] [48] [49]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/DFD/dfd2.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/DFD/dfd2.drawio.pdf, id=496, 515.04419pt x 154.6578pt>
+<Chapters/Diagram/DFD/dfd2.drawio.pdf, id=484, 515.04419pt x 154.6578pt>
 File: Chapters/Diagram/DFD/dfd2.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/DFD/dfd2.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/DFD/dfd2.drawio.pdf  used on input line 235.
+Package pdftex.def Info: Chapters/Diagram/DFD/dfd2.drawio.pdf  used on input line 231.
 (pdftex.def)             Requested size: 563.36075pt x 169.18013pt.
-
+[50]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/SD/smb.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/SD/smb.drawio.pdf, id=497, 385.44pt x 174.6525pt>
+<Chapters/Diagram/SD/smb.drawio.pdf, id=488, 385.44pt x 174.6525pt>
 File: Chapters/Diagram/SD/smb.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/SD/smb.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/SD/smb.drawio.pdf  used on input line 257.
+Package pdftex.def Info: Chapters/Diagram/SD/smb.drawio.pdf  used on input line 253.
 (pdftex.def)             Requested size: 563.36075pt x 255.27301pt.
 [51 <./Chapters/Diagram/DFD/dfd2.drawio.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/SD/sd1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/SD/sd1.drawio.pdf, id=511, 470.7186pt x 290.0436pt>
+<Chapters/Diagram/SD/sd1.drawio.pdf, id=501, 470.7186pt x 290.0436pt>
 File: Chapters/Diagram/SD/sd1.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/SD/sd1.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/SD/sd1.drawio.pdf  used on input line 281.
+Package pdftex.def Info: Chapters/Diagram/SD/sd1.drawio.pdf  used on input line 277.
 (pdftex.def)             Requested size: 532.07036pt x 327.86493pt.
 [52 <./Chapters/Diagram/SD/smb.drawio.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/SD/sd2.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/SD/sd2.drawio.pdf, id=529, 558.16531pt x 139.4811pt>
+<Chapters/Diagram/SD/sd2.drawio.pdf, id=520, 558.16531pt x 139.4811pt>
 File: Chapters/Diagram/SD/sd2.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/SD/sd2.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/SD/sd2.drawio.pdf  used on input line 291.
+Package pdftex.def Info: Chapters/Diagram/SD/sd2.drawio.pdf  used on input line 287.
 (pdftex.def)             Requested size: 532.07036pt x 132.96811pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/SD/sd3.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/SD/sd3.drawio.pdf, id=530, 515.04419pt x 246.9225pt>
+<Chapters/Diagram/SD/sd3.drawio.pdf, id=521, 515.04419pt x 246.9225pt>
 File: Chapters/Diagram/SD/sd3.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/SD/sd3.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/SD/sd3.drawio.pdf  used on input line 298.
+Package pdftex.def Info: Chapters/Diagram/SD/sd3.drawio.pdf  used on input line 294.
 (pdftex.def)             Requested size: 500.77042pt x 240.08344pt.
 [53 <./Chapters/Diagram/SD/sd1.drawio.pdf> <./Chapters/Diagram/SD/sd2.drawio.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/SQD/sym.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/SQD/sym.drawio.pdf, id=552, 385.44pt x 435.54718pt>
+<Chapters/Diagram/SQD/sym.drawio.pdf, id=543, 385.44pt x 435.54718pt>
 File: Chapters/Diagram/SQD/sym.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/SQD/sym.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/SQD/sym.drawio.pdf  used on input line 313.
+Package pdftex.def Info: Chapters/Diagram/SQD/sym.drawio.pdf  used on input line 309.
 (pdftex.def)             Requested size: 500.77042pt x 565.8723pt.
 [54 <./Chapters/Diagram/SD/sd3.drawio.pdf>]
 Overfull \vbox (19.0087pt too high) has occurred while \output is active []
@@ -857,109 +857,106 @@ Overfull \vbox (19.0087pt too high) has occurred while \output is active []
  [55 <./Chapters/Diagram/SQD/sym.drawio.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/SQD/sqd.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/SQD/sqd.drawio.pdf, id=583, 517.935pt x 266.91718pt>
+<Chapters/Diagram/SQD/sqd.drawio.pdf, id=574, 517.935pt x 266.91718pt>
 File: Chapters/Diagram/SQD/sqd.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/SQD/sqd.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/SQD/sqd.drawio.pdf  used on input line 321.
+Package pdftex.def Info: Chapters/Diagram/SQD/sqd.drawio.pdf  used on input line 317.
 (pdftex.def)             Requested size: 594.66069pt x 306.49213pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/ST/sym.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/ST/sym.drawio.pdf, id=584, 385.44pt x 262.0992pt>
+<Chapters/Diagram/ST/sym.drawio.pdf, id=575, 385.44pt x 262.0992pt>
 File: Chapters/Diagram/ST/sym.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/ST/sym.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/ST/sym.drawio.pdf  used on input line 335.
+Package pdftex.def Info: Chapters/Diagram/ST/sym.drawio.pdf  used on input line 331.
 (pdftex.def)             Requested size: 500.77042pt x 340.52493pt.
 [56 <./Chapters/Diagram/SQD/sqd.drawio.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/ST/state.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/ST/state.drawio.pdf, id=597, 369.29968pt x 162.6075pt>
+<Chapters/Diagram/ST/state.drawio.pdf, id=588, 369.29968pt x 162.6075pt>
 File: Chapters/Diagram/ST/state.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/ST/state.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/ST/state.drawio.pdf  used on input line 347.
+Package pdftex.def Info: Chapters/Diagram/ST/state.drawio.pdf  used on input line 343.
 (pdftex.def)             Requested size: 594.66069pt x 261.86948pt.
 [57 <./Chapters/Diagram/ST/sym.drawio.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/AC/sym.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/AC/sym.drawio.pdf, id=620, 353.99152pt x 586.22314pt>
+<Chapters/Diagram/AC/sym.drawio.pdf, id=611, 353.99152pt x 586.22314pt>
 File: Chapters/Diagram/AC/sym.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/AC/sym.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/AC/sym.drawio.pdf  used on input line 361.
-(pdftex.def)             Requested size: 500.79715pt x 557.69598pt.
+Package pdftex.def Info: Chapters/Diagram/AC/sym.drawio.pdf  used on input line 357.
+(pdftex.def)             Requested size: 447.58188pt x 512.17471pt.
 [58 <./Chapters/Diagram/ST/state.drawio.pdf>]
-Overfull \vbox (10.83238pt too high) has occurred while \output is active []
-
- [59 <./Chapters/Diagram/AC/sym.drawio.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/AC/ac1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/AC/ac1.drawio.pdf, id=654, 190.60912pt x 274.73741pt>
+<Chapters/Diagram/AC/ac1.drawio.pdf, id=624, 190.60912pt x 274.73741pt>
 File: Chapters/Diagram/AC/ac1.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/AC/ac1.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/AC/ac1.drawio.pdf  used on input line 369.
-(pdftex.def)             Requested size: 406.90182pt x 426.81535pt.
-
+Package pdftex.def Info: Chapters/Diagram/AC/ac1.drawio.pdf  used on input line 366.
+(pdftex.def)             Requested size: 344.30602pt x 341.4548pt.
+[59 <./Chapters/Diagram/AC/sym.drawio.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/AC/ac2.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/AC/ac2.drawio.pdf, id=655, 449.76028pt x 264.02641pt>
+<Chapters/Diagram/AC/ac2.drawio.pdf, id=645, 449.76028pt x 264.02641pt>
 File: Chapters/Diagram/AC/ac2.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/AC/ac2.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/AC/ac2.drawio.pdf  used on input line 373.
-(pdftex.def)             Requested size: 594.66676pt x 426.83008pt.
+Package pdftex.def Info: Chapters/Diagram/AC/ac2.drawio.pdf  used on input line 370.
+(pdftex.def)             Requested size: 594.66676pt x 369.91644pt.
 [60 <./Chapters/Diagram/AC/ac1.drawio.pdf>] [61 <./Chapters/Diagram/AC/ac2.drawio.pdf>] [62] [63]
 
 pdfTeX warning: pdflatex (file ./Chapters/DesignPattern/Singleton/single.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/DesignPattern/Singleton/single.drawio.pdf, id=689, 155.6214pt x 90.3375pt>
+<Chapters/DesignPattern/Singleton/single.drawio.pdf, id=680, 155.6214pt x 90.3375pt>
 File: Chapters/DesignPattern/Singleton/single.drawio.pdf Graphic file (type pdf)
 <use Chapters/DesignPattern/Singleton/single.drawio.pdf>
-Package pdftex.def Info: Chapters/DesignPattern/Singleton/single.drawio.pdf  used on input line 481.
+Package pdftex.def Info: Chapters/DesignPattern/Singleton/single.drawio.pdf  used on input line 478.
 (pdftex.def)             Requested size: 375.64557pt x 199.19244pt.
 (./Chapters/DesignPattern/Singleton/S1/Singleton.java) (./Chapters/DesignPattern/Singleton/S1/Main.java [64 <./Chapters/DesignPattern/Singleton/single.drawio.pdf>])
 
 pdfTeX warning: pdflatex (file ./Chapters/DesignPattern/Singleton/single2.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/DesignPattern/Singleton/single2.drawio.pdf, id=706, 135.13786pt x 110.46771pt>
+<Chapters/DesignPattern/Singleton/single2.drawio.pdf, id=697, 135.13786pt x 110.46771pt>
 File: Chapters/DesignPattern/Singleton/single2.drawio.pdf Graphic file (type pdf)
 <use Chapters/DesignPattern/Singleton/single2.drawio.pdf>
-Package pdftex.def Info: Chapters/DesignPattern/Singleton/single2.drawio.pdf  used on input line 505.
+Package pdftex.def Info: Chapters/DesignPattern/Singleton/single2.drawio.pdf  used on input line 502.
 (pdftex.def)             Requested size: 250.40321pt x 170.73941pt.
 (./Chapters/DesignPattern/Singleton/S2/Main.java) (./Chapters/DesignPattern/Singleton/S2/dataBaseManager.java [65 <./Chapters/DesignPattern/Singleton/single2.drawio.pdf>]) [66]
 
 pdfTeX warning: pdflatex (file ./Chapters/DesignPattern/Composite/comp1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/DesignPattern/Composite/comp1.drawio.pdf, id=728, 288.17664pt x 137.46356pt>
+<Chapters/DesignPattern/Composite/comp1.drawio.pdf, id=719, 288.17664pt x 137.46356pt>
 File: Chapters/DesignPattern/Composite/comp1.drawio.pdf Graphic file (type pdf)
 <use Chapters/DesignPattern/Composite/comp1.drawio.pdf>
-Package pdftex.def Info: Chapters/DesignPattern/Composite/comp1.drawio.pdf  used on input line 530.
+Package pdftex.def Info: Chapters/DesignPattern/Composite/comp1.drawio.pdf  used on input line 527.
 (pdftex.def)             Requested size: 344.30197pt x 199.18698pt.
 (./Chapters/DesignPattern/Composite/C1/Element.java [67 <./Chapters/DesignPattern/Composite/comp1.drawio.pdf>]) (./Chapters/DesignPattern/Composite/C1/Leaf.java) (./Chapters/DesignPattern/Composite/C1/Composite.java) [68] (./Chapters/DesignPattern/Composite/C1/Main.java)
 
 pdfTeX warning: pdflatex (file ./Chapters/DesignPattern/Composite/tree.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/DesignPattern/Composite/tree.drawio.pdf, id=751, 361.9673pt x 193.21585pt>
+<Chapters/DesignPattern/Composite/tree.drawio.pdf, id=742, 361.9673pt x 193.21585pt>
 File: Chapters/DesignPattern/Composite/tree.drawio.pdf Graphic file (type pdf)
 <use Chapters/DesignPattern/Composite/tree.drawio.pdf>
-Package pdftex.def Info: Chapters/DesignPattern/Composite/tree.drawio.pdf  used on input line 580.
+Package pdftex.def Info: Chapters/DesignPattern/Composite/tree.drawio.pdf  used on input line 577.
 (pdftex.def)             Requested size: 344.30331pt x 227.6301pt.
 [69]
 
 pdfTeX warning: pdflatex (file ./Chapters/DesignPattern/Composite/comp2.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/DesignPattern/Composite/comp2.drawio.pdf, id=755, 285.66566pt x 206.16867pt>
+<Chapters/DesignPattern/Composite/comp2.drawio.pdf, id=746, 285.66566pt x 206.16867pt>
 File: Chapters/DesignPattern/Composite/comp2.drawio.pdf Graphic file (type pdf)
 <use Chapters/DesignPattern/Composite/comp2.drawio.pdf>
-Package pdftex.def Info: Chapters/DesignPattern/Composite/comp2.drawio.pdf  used on input line 588.
+Package pdftex.def Info: Chapters/DesignPattern/Composite/comp2.drawio.pdf  used on input line 585.
 (pdftex.def)             Requested size: 344.2878pt x 227.62932pt.
 [70 <./Chapters/DesignPattern/Composite/tree.drawio.pdf> <./Chapters/DesignPattern/Composite/comp2.drawio.pdf>] (./Chapters/DesignPattern/Composite/C2/GeoForm.java) (./Chapters/DesignPattern/Composite/C2/simpleForm.java) (./Chapters/DesignPattern/Composite/C2/formType.java) [71] (./Chapters/DesignPattern/Composite/C2/complexForm.java) [72] (./Chapters/DesignPattern/Composite/C2/Main.java)
 
 pdfTeX warning: pdflatex (file ./Chapters/DesignPattern/Observer/obs1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/DesignPattern/Observer/obs1.drawio.pdf, id=787, 277.15544pt x 164.41425pt>
+<Chapters/DesignPattern/Observer/obs1.drawio.pdf, id=778, 277.15544pt x 164.41425pt>
 File: Chapters/DesignPattern/Observer/obs1.drawio.pdf Graphic file (type pdf)
 <use Chapters/DesignPattern/Observer/obs1.drawio.pdf>
-Package pdftex.def Info: Chapters/DesignPattern/Observer/obs1.drawio.pdf  used on input line 619.
+Package pdftex.def Info: Chapters/DesignPattern/Observer/obs1.drawio.pdf  used on input line 616.
 (pdftex.def)             Requested size: 344.31622pt x 199.18016pt.
 [73] [74 <./Chapters/DesignPattern/Observer/obs1.drawio.pdf>] (./Chapters/DesignPattern/Observer/O1/Observer.java) (./Chapters/DesignPattern/Observer/O1/Subject.java) (./Chapters/DesignPattern/Observer/O1/concretObserver.java) [75] (./Chapters/DesignPattern/Observer/O1/concretSubject.java) (./Chapters/DesignPattern/Observer/O1/Main.java) [76]
 
 pdfTeX warning: pdflatex (file ./Chapters/DesignPattern/Observer/obs2.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/DesignPattern/Observer/obs2.drawio.pdf, id=817, 274.41522pt x 162.8484pt>
+<Chapters/DesignPattern/Observer/obs2.drawio.pdf, id=807, 274.41522pt x 162.8484pt>
 File: Chapters/DesignPattern/Observer/obs2.drawio.pdf Graphic file (type pdf)
 <use Chapters/DesignPattern/Observer/obs2.drawio.pdf>
-Package pdftex.def Info: Chapters/DesignPattern/Observer/obs2.drawio.pdf  used on input line 669.
+Package pdftex.def Info: Chapters/DesignPattern/Observer/obs2.drawio.pdf  used on input line 666.
 (pdftex.def)             Requested size: 344.28691pt x 227.62341pt.
 [77 <./Chapters/DesignPattern/Observer/obs2.drawio.pdf>] (./Chapters/DesignPattern/Observer/O2/Student.java) (./Chapters/DesignPattern/Observer/O2/Teacher.java) (./Chapters/DesignPattern/Observer/O2/concretStudent.java) [78] (./Chapters/DesignPattern/Observer/O2/concretTeacher.java) (./Chapters/DesignPattern/Observer/O2/Main.java) [79]) [80] (./SE.aux (./Chapters/Introduction.aux) (./Chapters/SoftWareCrisis.aux) (./Chapters/LifeCycle.aux) (./Chapters/Needs Analysis.aux) (./Chapters/UML.aux) (./Chapters/Conception.aux))
  ***********
@@ -976,10 +973,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  99i,17n,107p,725b,2169s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on SE.pdf (80 pages, 1607209 bytes).
+Output written on SE.pdf (80 pages, 1525183 bytes).
 PDF statistics:
- 897 PDF objects out of 1000 (max. 8388607)
- 581 compressed objects within 6 object streams
+ 888 PDF objects out of 1000 (max. 8388607)
+ 572 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
  218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
