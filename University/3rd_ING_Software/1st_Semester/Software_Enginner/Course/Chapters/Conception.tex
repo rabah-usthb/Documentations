@@ -358,7 +358,7 @@ An activity diagram describes the progression of activities within the system an
 \subsection*{\underline{Symboles :}}
 
 \begin{center}
-\includegraphics[width=0.85\textwidth,height=0.97\textheight]{Chapters/Diagram/AC/sym.drawio.pdf}
+\includegraphics[width=0.8\textwidth,height=0.98\textheight]{Chapters/Diagram/AC/sym.drawio.pdf}
 \end{center}
 
 
@@ -366,11 +366,11 @@ An activity diagram describes the progression of activities within the system an
 
 
 \begin{center}
-\includegraphics[width=0.7\textwidth,height=0.8\textheight]{Chapters/Diagram/AC/ac1.drawio.pdf}
+\includegraphics[width=0.65\textwidth,height=0.75\textheight]{Chapters/Diagram/AC/ac1.drawio.pdf}
 \end{center}
 
 \begin{center}
-\includegraphics[width=0.9\textwidth,height=0.78\textheight]{Chapters/Diagram/AC/ac2.drawio.pdf}
+\includegraphics[width=0.95\textwidth,height=0.75\textheight]{Chapters/Diagram/AC/ac2.drawio.pdf}
 \end{center}
 
 
@@ -386,4 +386,312 @@ An activity diagram describes the progression of activities within the system an
 \end{prettyBox}
 
 
+\subsubsection{Design Pattern}
+
+\begin{prettyBox}{Definition}{mypur}
+A design pattern describes \textbf{proven} and \textbf{abstract} solutions  
+to \textbf{recurring} problems in software design.
+\end{prettyBox}
+
+
+\vspace{0.25cm}
+\begin{prettyBox}{Why Proven}{red}
+Proven solutions have been tested on real projects, ensuring reliability and effectiveness.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\begin{prettyBox}{Why Abstract}{red}
+Abstract solutions can be adapted and customized to meet specific needs.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\begin{prettyBox}{Why Recurring}{red}
+We want model for recurring problems to address patterns in design problems that repeat across different contexts.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{History}{mypur}
+The concept of design patterns was first introduced by Christopher Alexander
+in the field of architecture. It was later adapted to the field of computer
+science in 1977.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection*{\underline{Categories :}}
+The first influential book on design patterns, \textbf{Design Patterns: Elements of Reusable
+Object-Oriented Software} by the "Gang of Four" (Erich Gamma, Richard Helm,
+Ralph Johnson, and John Vlissides), was published in its second edition in 1995.
+It presents a collection of 23 design patterns, classified into three categories.
+
+
+\vspace{0.75cm}
+
+\begin{prettyBox}{Creational Design Pattern}{mypur}
+Addresses issues related to object creation and configuration, such as the Singleton pattern.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\begin{prettyBox}{Structural Design Pattern}{mypur}
+Describes how to structure classes like: The Composite Pattern
+\end{prettyBox}
+
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Behavioral Design Pattern}{mypur}
+Focuses on the interaction and communication between objects to define
+the behavior of an application, such as the Observer pattern.
+\end{prettyBox}
+
+
+\vspace{0.25cm}
+\begin{prettyBox}{Note}{red}
+The design patterns from the "Gang of Four" are intended for
+object-oriented design.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsection*{\underline{Pros:}}
+\begin{itemize}
+    \item Solves recurring problems with proven and reliable solutions.
+    \item Improves quality and speed.
+    \item Design patterns provide a common language for communication between designers.
+    \item Design patterns are independent of implementation languages and sufficiently generic (abstract) to be applied in various situations.
+\end{itemize}
+
+\vspace{0.25cm}
+
+\subsection*{\underline{Cons:}}
+\begin{itemize}
+    \item Design patterns need to be mastered and thoroughly studied.
+    \item Design patterns always require adaptation when applied.
+    \item Design patterns can increase the complexity of simple solutions.
+\end{itemize}
+
+\newpage
+\subsection*{\underline{Some Design Pattern:}}
+
+\subsection*{\underline{Singleton:}}
+Singleton is a creational design pattern that aims to limit the instanciation
+of the a class to only one object and give global acess to it.
+
+\begin{center}
+\includegraphics[width=0.6\textwidth,height=0.35\textheight]{Chapters/DesignPattern/Singleton/single.drawio.pdf}
+\end{center}
+
+\begin{prettyBox}{Explication}{mypur}
+We first initialize a static private attribut called instance to null , when ever we want to get instance of singleton
+we call the public static method getInstance that checks if instance is null if yes it will call the private constructor
+and in either case it returns the instance 
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsubsection*{\underline{Java Code:}}
+
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Singleton/S1/Singleton.java}
+
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Singleton/S1/Main.java}
+
+
+\subsubsection*{\underline{Output:}}
+\begin{lstlisting}[style=cmd]
+Instance Of Singleton
+\end{lstlisting}
+
+\subsubsection*{\underline{Example:}}
+\begin{center}
+\includegraphics[width=0.4\textwidth,height=0.3\textheight]{Chapters/DesignPattern/Singleton/single2.drawio.pdf}
+\end{center}
+
+
+\subsubsection*{\underline{Java Code:}}
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Singleton/S2/Main.java}
+
+\lstinputlisting[style=javastyle,basicstyle=\scriptsize\ttfamily]{Chapters/DesignPattern/Singleton/S2/dataBaseManager.java}
+
+
+\newpage
+\subsubsection*{\underline{Output:}}
+\begin{lstlisting}[style=cmd]
+dataBaseManager Initialized
+system/1234//localhost:1521/XE
+Dbaiot/psw//localhost:1521/XE
+Already Initialized
+\end{lstlisting}
+
+\vspace{0.5cm}
+\subsection*{\underline{Composite:}}
+The Composite pattern is a structural design pattern that imposes a
+hierarchical tree structure, consisting of simple elements and composite elements.
+
+\begin{center}
+\includegraphics[width=0.55\textwidth,height=0.35\textheight]{Chapters/DesignPattern/Composite/comp1.drawio.pdf}
+\end{center}
+
+
+\begin{prettyBox}{Explication}{mypur}
+The Element class serves as an abstract parent class with an unimplemented method, operation().  
+The Leaf class inherits from Element and overrides the operation() method to provide its specific implementation.  
+Similarly, the Composite class also inherits from Element and implements operation(). However, it has an attribute that is a collection of Element objects.  
+This design allows the collection to hold both simple elements (Leaf) and complex elements (Composite), organizing them into a tree structure.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\begin{prettyBox}{Note}{red}
+Element can be an abstract class or an interface both implementations are valid.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsubsection*{\underline{Java Code:}}
+
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Composite/C1/Element.java}
+
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Composite/C1/Leaf.java}
+
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Composite/C1/Composite.java}
+
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Composite/C1/Main.java}
+
+
+\subsubsection*{\underline{Output:}}
+\begin{lstlisting}[style=cmd]
+Leaf Operation
+Leaf Operation
+Composite Operation
+
+
+Leaf
+Leaf
+
+ Composite
+  Leaf
+   Composite
+    Leaf
+    Leaf
+\end{lstlisting}
+
+
+\subsubsection*{\underline{Graphical Representation Of The Composite}}
+
+\vspace{0.25cm}
+\begin{center}
+\includegraphics[width=0.55\textwidth,height=0.4\textheight]{Chapters/DesignPattern/Composite/tree.drawio.pdf}
+\end{center}
+
+
+
+\vspace{0.25cm}
+\subsubsection*{\underline{Example:}}
+\begin{center}
+\includegraphics[width=0.55\textwidth,height=0.4\textheight]{Chapters/DesignPattern/Composite/comp2.drawio.pdf}
+\end{center}
+
+\newpage
+\subsubsection*{\underline{Java Code:}}
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Composite/C2/GeoForm.java}
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Composite/C2/simpleForm.java}
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Composite/C2/formType.java}
+\newpage
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Composite/C2/complexForm.java}
+\newpage
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Composite/C2/Main.java}
+
+\subsubsection*{\underline{Output:}}
+\begin{lstlisting}[style=cmd]
+Setting state to State 1
+Observer Alice New State : State 1
+Observer Bob New State : State 1
+Setting state to State 2
+Observer Bob New State : State 2
+\end{lstlisting}
+
+\vspace{0.5cm}
+
+\subsection*{\underline{Observer:}}
+The Observer pattern is a behavioral design pattern.It monitors
+the state of a subject object, and when the state changes, the subject 
+notifies the observers, which then update accordingly.
+
+\vspace{0.25cm}
+\begin{center}
+\includegraphics[width=0.55\textwidth,height=0.35\textheight]{Chapters/DesignPattern/Observer/obs1.drawio.pdf}
+\end{center}
+
+\vspace{0.25cm}
+\begin{prettyBox}{Explication}{mypur}
+The Observer is an abstract class that defines an unimplemented method, update(state), which is executed each time the state changes.  
+The Subject is also an abstract class. It holds a collection of observers and defines unimplemented methods: add(observer), delete(observer), and notify(). The notify() 
+method calls the update method of each observer when the state changes.  
+A ConcreteObserver inherits from Observer and implements the update method.  
+A ConcreteSubject inherits from Subject, overrides all unimplemented methods, and includes a state attribute with its getter and setter.  
+Whenever the setter is called, the notify() method is invoked within its body to ensure all observers are updated.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\begin{prettyBox}{Note}{red}
+Subject and Observer can be an abstract class or an interface both implementations are valid.
+\end{prettyBox}
+
+\newpage
+\subsubsection*{\underline{Java Code:}}
+
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Observer/O1/Observer.java}
+
+\vspace{0.25cm}
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Observer/O1/Subject.java}
+
+\vspace{0.25cm}
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Observer/O1/concretObserver.java}
+\newpage
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Observer/O1/concretSubject.java}
+
+\vspace{0.5cm}
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Observer/O1/Main.java}
+\newpage
+
+\subsubsection*{\underline{Output:}}
+\begin{lstlisting}[style=cmd]
+Setting Activity To DW 2 EX1
+Student Zaki changed activity to DW 2 EX1
+Student Rabah changed activity to DW 2 EX1
+Setting Activity To LAB2
+Student Zaki changed activity to LAB2
+\end{lstlisting}
+\vspace{0.5cm}
+
+\vspace{0.25cm}
+\subsubsection*{\underline{Example:}}
+
+\vspace{0.25cm}
+\begin{center}
+\includegraphics[width=0.55\textwidth,height=0.4\textheight]{Chapters/DesignPattern/Observer/obs2.drawio.pdf}
+\end{center}
+
+\newpage
+\subsubsection*{\underline{Java Code:}}
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Observer/O2/Student.java}
+
+\vspace{0.25cm}
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Observer/O2/Teacher.java}
+
+\vspace{0.25cm}
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Observer/O2/concretStudent.java}
+\newpage
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Observer/O2/concretTeacher.java}
+
+\vspace{0.5cm}
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Observer/O2/Main.java}
+
+\newpage
+
+\subsubsection*{\underline{Output:}}
+\begin{lstlisting}[style=cmd]
+Setting Activity To DW 2 EX1
+Student Zaki changed activity to DW 2 EX1
+Student Rabah changed activity to DW 2 EX1
+Setting Activity To LAB2
+Student Zaki changed activity to LAB2
+\end{lstlisting}
 
