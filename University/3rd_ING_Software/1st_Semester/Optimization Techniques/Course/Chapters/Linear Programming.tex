@@ -936,6 +936,7 @@ variables are called \textbf{non-basic variables}.
 \]
 \end{prettyBox}
 
+\newpage
 The notation for vectors and matrices is as follows:
 
 \[
@@ -984,5 +985,87 @@ Where:
 
 \vspace{0.15cm}
 \[U \cdot V = u_1.v_1 + u_2.v_2 + \dots + u_m.v_m\]
+\end{prettyBox}
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/table.pdf}
+\end{center}
+
+\vspace{0.25cm}
+
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{Chapters/Simplexe/leg.drawio.pdf}
+\end{center}
+
+\subsubsection{Change of Basis}
+\begin{prettyBox}{Changing the Basis}{box}
+To change the basis, follow these steps:
+\begin{enumerate}
+    \item Choose a non-basic variable to enter the basis.
+    \item Choose a basic variable to leave the basis.
+\end{enumerate}
+\end{prettyBox}
+
+
+\begin{prettyBox}{Choose Variable to Enter the Basis}{box}
+    Select the column where \(C_i - Z_{i+1} > 0\) and is at its maximum. This column is called the 
+\textbf{pivoting column}, and \(x_i\) is the variable that will enter the basis.
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\begin{prettyBox}{Choose Variable to Leave the Basis}{box}
+Select the line where \(a_{ji} > 0\) and \(\frac{b_j}{a_{ji}}\) is at its minimum (where \(i\) is the pivoting column). This line is called the \textbf{pivoting line}, and 
+\(B_i\) is the basic variable that will leave the basis.
+\end{prettyBox}
+\vspace{0.35cm}
+\begin{prettyBox}{Note}{red}
+    The intersection of the pivoting column and the pivoting line is called the \textbf{pivot} which is \(a_{ji}\).
+\end{prettyBox}
+
+\vspace{0.35cm}
+\begin{center}
+    \includegraphics{Chapters/Simplexe/basis.pdf}
+\end{center}
+
+\begin{itemize}   
+    \item In this case the max of\hspace{0.2cm}\(C_i - Z_{i+1} > 0\)\hspace{0.2cm}is\hspace{0.2cm}\(C_2 - Z_3\)\hspace{0.35cm} i = 2 so \(x_2\) 
+will be the variable to enter the basis.
+\item The min of \hspace{0.1cm}\(\frac{b_j}{a_{ji}}\)\hspace{0.1cm} with \(a_{ji} > 0\)\hspace{0.1cm} is \hspace{0.1cm} \(\frac{b_1}{a_{12}}\)\hspace{0.35cm} j = 1 so \(B_1\)
+will leave the basis
+\item The intersection between the pivoting line and pivoting column is \(a_{12}\)
+ 
+\end{itemize}
+
+
+
+\subsubsection{Pivoting}
+\begin{prettyBox}{Pivoting}{box}
+To get the new table, follow these steps:
+\begin{enumerate}
+    \item Replace \(B_j\) with \(x_i\).
+    \item Divide all the elements of the pivoting line by the pivot value (excluding \(C_B\) and \(B\)).
+    \item Set all cells above or below the pivot to 0.
+    \item Fill the remaining cells using the rectangle rule:
+        \[
+        a = a' - \frac{b \times c}{\text{pivot}}
+        \]
+        where:
+        \begin{itemize}
+            \item \(a\): New value of the cell.
+            \item \(a'\): Old value of the cell.
+            \item \(b\): Intersection of the cell's row with the pivoting column.
+            \item \(c\): Intersection of the cell's column with the pivoting row.
+        \end{itemize}
+\end{enumerate}
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{Note}{red}
+\begin{itemize}
+    \item If a cell in the pivoting column is 0 (\(b = 0\)), the entire row intersecting with it stays the same.
+    \item If a cell in the pivoting line is 0 (\(c = 0\)), the entire column intersecting with it stays the same.
+\end{itemize}
 \end{prettyBox}
 

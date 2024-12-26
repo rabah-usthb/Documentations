@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1735174902.59313 "OT.tex" "OT.pdf" "OT" 1735174905.48876 2
+["pdflatex"] 1735194635.68333 "OT.tex" "OT.pdf" "OT" 1735194638.51989 2
   "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -34,10 +34,12 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1248133631 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1248133631 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb" 1248133631 36094 798f80770b3b148ceedd006d487db67c ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1248133631 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
@@ -201,9 +203,12 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1732594860.33734 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1731402230 8212896 b2d3a67526ed46e54375dd7fb267ffaf ""
   "Chapters/Diagram/simplexe.drawio.pdf" 1735167057.38017 30363 5dd87c31cc1ebdb81e88e9c7f2dd7af0 ""
-  "Chapters/Linear Programming.tex" 1735174901.57161 35408 657f27c36a9699871494d2a51b75e0c6 ""
+  "Chapters/Linear Programming.tex" 1735194635.42346 38378 f8bff515702dae878539028ff062f504 ""
   "Chapters/Operations research.tex" 1733953412.10106 3922 d0457832fe8f5dbcd7b76fc7d22ba583 ""
-  "OT.aux" 1735174905.35761 1613 7d288fac595d7823103fd5408a7d08f6 "pdflatex"
+  "Chapters/Simplexe/basis.pdf" 1735190895.75325 17463 0309b8a44f46d595ed411528b1f465b1 ""
+  "Chapters/Simplexe/leg.drawio.pdf" 1735186926.87702 30381 957edbfcc62294e9af40a1b2df7298d6 ""
+  "Chapters/Simplexe/table.pdf" 1735186824.35402 16786 d0ae716b919c2ca0cd48ea38a3c3dbe1 ""
+  "OT.aux" 1735194638.38946 1834 edd6fe5d121aff235840100ff1e763fd "pdflatex"
   "OT.tex" 1733956215.28722 1513 9e7a8e88fe6df33dbe923efdbeaa5018 ""
   (generated)
   "OT.aux"
