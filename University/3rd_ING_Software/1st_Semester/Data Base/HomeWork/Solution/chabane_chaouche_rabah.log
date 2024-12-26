@@ -1,0 +1,1094 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  26 DEC 2024 01:05
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**chabane_chaouche_rabah.tex
+(./chabane_chaouche_rabah.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count195
+\Gm@cntv=\count196
+\c@Gm@tempcnt=\count197
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
+\Gm@dimlist=\toks18
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks19
+\pgfutil@tempdima=\dimen149
+\pgfutil@tempdimb=\dimen150
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box51
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks20
+\pgfkeys@temptoks=\toks21
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks22
+))
+\pgf@x=\dimen153
+\pgf@y=\dimen154
+\pgf@xa=\dimen155
+\pgf@ya=\dimen156
+\pgf@xb=\dimen157
+\pgf@yb=\dimen158
+\pgf@xc=\dimen159
+\pgf@yc=\dimen160
+\pgf@xd=\dimen161
+\pgf@yd=\dimen162
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count198
+\c@pgf@countb=\count199
+\c@pgf@countc=\count266
+\c@pgf@countd=\count267
+\t@pgf@toka=\toks23
+\t@pgf@tokb=\toks24
+\t@pgf@tokc=\toks25
+\pgf@sys@id@count=\count268
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count269
+\pgfsyssoftpath@bigbuffer@items=\count270
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen163
+\pgfmath@count=\count271
+\pgfmath@box=\box52
+\pgfmath@toks=\toks26
+\pgfmath@stack@operand=\toks27
+\pgfmath@stack@operation=\toks28
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count272
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen164
+\pgf@picmaxx=\dimen165
+\pgf@picminy=\dimen166
+\pgf@picmaxy=\dimen167
+\pgf@pathminx=\dimen168
+\pgf@pathmaxx=\dimen169
+\pgf@pathminy=\dimen170
+\pgf@pathmaxy=\dimen171
+\pgf@xx=\dimen172
+\pgf@xy=\dimen173
+\pgf@yx=\dimen174
+\pgf@yy=\dimen175
+\pgf@zx=\dimen176
+\pgf@zy=\dimen177
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen178
+\pgf@path@lasty=\dimen179
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen180
+\pgf@shorten@start@additional=\dimen181
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box53
+\pgf@hbox=\box54
+\pgf@layerbox@main=\box55
+\pgf@picture@serial@count=\count273
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen182
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen183
+\pgf@pt@y=\dimen184
+\pgf@pt@temp=\dimen185
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen186
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen187
+\pgf@sys@shading@range@num=\count274
+\pgf@shadingcount=\count275
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box56
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box57
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen188
+\pgf@nodesepend=\dimen189
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen190
+\pgffor@skip=\dimen191
+\pgffor@stack=\toks29
+\pgffor@toks=\toks30
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count276
+\pgfplotmarksize=\dimen192
+)
+\tikz@lastx=\dimen193
+\tikz@lasty=\dimen194
+\tikz@lastxsaved=\dimen195
+\tikz@lastysaved=\dimen196
+\tikz@lastmovetox=\dimen197
+\tikz@lastmovetoy=\dimen198
+\tikzleveldistance=\dimen199
+\tikzsiblingdistance=\dimen256
+\tikz@figbox=\box58
+\tikz@figbox@bg=\box59
+\tikz@tempbox=\box60
+\tikz@tempbox@bg=\box61
+\tikztreelevel=\count277
+\tikznumberofchildren=\count278
+\tikznumberofcurrentchild=\count279
+\tikz@fig@count=\count280
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count281
+\pgfmatrixcurrentcolumn=\count282
+\pgf@matrix@numberofcolumns=\count283
+)
+\tikz@expandcount=\count284
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks31
+\verbatim@line=\toks32
+\verbatim@in@stream=\read3
+) (/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+ (/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks33
+) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count285
+)
+\tcb@titlebox=\box62
+\tcb@upperbox=\box63
+\tcb@lowerbox=\box64
+\tcb@phantombox=\box65
+\c@tcbbreakpart=\count286
+\c@tcblayer=\count287
+\c@tcolorbox@number=\count288
+\l__tcobox_tmpa_box=\box66
+\l__tcobox_tmpa_dim=\dimen257
+\tcb@temp=\box67
+\tcb@temp=\box68
+\tcb@temp=\box69
+\tcb@temp=\box70
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks34
+\ex@=\dimen258
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen259
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count289
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count290
+\leftroot@=\count291
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count292
+\DOTSCASE@=\count293
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box71
+\strutbox@=\box72
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen260
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count294
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count295
+\dotsspace@=\muskip16
+\c@parentequation=\count296
+\dspbrk@lvl=\count297
+\tag@help=\toks35
+\row@=\count298
+\column@=\count299
+\maxfields@=\count300
+\andhelp@=\toks36
+\eqnshift@=\dimen261
+\alignsep@=\dimen262
+\tagshift@=\dimen263
+\tagwidth@=\dimen264
+\totwidth@=\dimen265
+\lineht@=\dimen266
+\@envbody=\toks37
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks38
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen267
+\ar@mcellbox=\box73
+\extrarowheight=\dimen268
+\NC@list=\toks39
+\extratabsurround=\skip53
+\backup@length=\skip54
+\ar@cellbox=\box74
+)
+\everycr=\toks40
+\minrowclearance=\skip55
+\rownum=\count301
+)
+
+LaTeX Warning: Package "xcolor" has already been loaded: ignoring load-time
+(LaTeX)        option "xcdraw".
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count302
+\lst@gtempboxa=\box75
+\lst@token=\toks41
+\lst@length=\count303
+\lst@currlwidth=\dimen269
+\lst@column=\count304
+\lst@pos=\count305
+\lst@lostspace=\dimen270
+\lst@width=\dimen271
+\lst@newlines=\count306
+\lst@lineno=\count307
+\lst@maxwidth=\dimen272
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count308
+\lst@skipnumbers=\count309
+\lst@framebox=\box76
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip56
+\multirow@cntb=\count310
+\multirow@dima=\skip57
+\bigstrutjot=\dimen273
+) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen274
+\lightrulewidth=\dimen275
+\cmidrulewidth=\dimen276
+\belowrulesep=\dimen277
+\belowbottomsep=\dimen278
+\aboverulesep=\dimen279
+\abovetopsep=\dimen280
+\cmidrulesep=\dimen281
+\cmidrulekern=\dimen282
+\defaultaddspace=\dimen283
+\@cmidla=\count311
+\@cmidlb=\count312
+\@aboverulesep=\dimen284
+\@belowrulesep=\dimen285
+\@thisruleclass=\count313
+\@lastruleclass=\count314
+\@thisrulewidth=\dimen286
+) (/usr/share/texlive/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen287
+\c@nlinenum=\count315
+\TeXr@lab=\toks42
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
+(/usr/share/texlive/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
+Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
+ (/usr/share/texlive/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
+Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
+) (/usr/share/texlive/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
+File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
+\l__tikzfill_img_box=\box77
+)) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.2.0'
+)) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.2.0'
+(/usr/share/texlive/texmf-dist/tex/latex/pdfcol/pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+))
+Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
+\tcb@testbox=\box78
+\tcb@totalupperbox=\box79
+\tcb@totallowerbox=\box80
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '6.2.0'
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count316
+\l__pdf_internal_box=\box81
+) (./chabane_chaouche_rabah.aux)
+\openout1 = `chabane_chaouche_rabah.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(42.67912pt, 625.96065pt, 42.67912pt)
+* v-part:(T,H,B)=(28.45274pt, 640.18703pt, 56.9055pt)
+* \paperwidth=711.3189pt
+* \paperheight=725.54527pt
+* \textwidth=625.96065pt
+* \textheight=640.18703pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-80.81725pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count317
+\scratchdimen=\dimen288
+\scratchbox=\box82
+\nofMPsegments=\count318
+\nofMParguments=\count319
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count320
+\MPscratchDim=\dimen289
+\MPnumerator=\count321
+\makeMPintoPDFobject=\count322
+\everyMPtoPDFconversion=\toks44
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+\c@lstlisting=\count323
+ (./Question/Partie1/connect.tex (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (./SQL/Partie1/connect.sql)
+<ScreenShot/Partie1/connect.png, id=4, 1908.12875pt x 516.93124pt>
+File: ScreenShot/Partie1/connect.png Graphic file (type png)
+<use ScreenShot/Partie1/connect.png>
+Package pdftex.def Info: ScreenShot/Partie1/connect.png  used on input line 6.
+(pdftex.def)             Requested size: 625.96065pt x 169.5782pt.
+) (./Question/Partie1/ts1.tex (./SQL/Partie1/ts1.sql
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1.
+)
+<ScreenShot/Partie1/ts1.png, id=5, 1908.12875pt x 223.83624pt>
+File: ScreenShot/Partie1/ts1.png Graphic file (type png)
+<use ScreenShot/Partie1/ts1.png>
+Package pdftex.def Info: ScreenShot/Partie1/ts1.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 73.429pt.
+) (./Question/Partie1/ts2.tex (./SQL/Partie1/ts2.sql)
+<ScreenShot/Partie1/ts2.png, id=6, 1907.125pt x 211.79124pt>
+File: ScreenShot/Partie1/ts2.png Graphic file (type png)
+<use ScreenShot/Partie1/ts2.png>
+Package pdftex.def Info: ScreenShot/Partie1/ts2.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 69.51645pt.
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./ScreenShot/Partie1/connect.png> <./ScreenShot/Partie1/ts1.png> <./ScreenShot/Partie1/ts2.png>] (./Question/Partie1/dbaiot.tex (./SQL/Partie1/dbaiot.sql)
+<ScreenShot/Partie1/dbaiot.png, id=17, 1908.12875pt x 332.24126pt>
+File: ScreenShot/Partie1/dbaiot.png Graphic file (type png)
+<use ScreenShot/Partie1/dbaiot.png>
+Package pdftex.def Info: ScreenShot/Partie1/dbaiot.png  used on input line 8.
+(pdftex.def)             Requested size: 625.96065pt x 108.99104pt.
+) (./Question/Partie1/grant.tex (./SQL/Partie1/grant.sql)
+<ScreenShot/Partie1/grant.png, id=18, 1911.14pt x 181.67876pt>
+File: ScreenShot/Partie1/grant.png Graphic file (type png)
+<use ScreenShot/Partie1/grant.png>
+Package pdftex.def Info: ScreenShot/Partie1/grant.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 59.50507pt.
+) (./Question/Partie2/connect.tex (./SQL/Partie2/connect.sql)
+<ScreenShot/Partie2/connect.png, id=19, 1910.13625pt x 437.635pt>
+File: ScreenShot/Partie2/connect.png Graphic file (type png)
+<use ScreenShot/Partie2/connect.png>
+Package pdftex.def Info: ScreenShot/Partie2/connect.png  used on input line 6.
+(pdftex.def)             Requested size: 625.96065pt x 143.41165pt.
+) (./Question/Partie2/createTable.tex (./SQL/Partie2/createTable/users.sql [2 <./ScreenShot/Partie1/dbaiot.png> <./ScreenShot/Partie1/grant.png> <./ScreenShot/Partie2/connect.png>])
+<ScreenShot/Partie2/createTable/users.png, id=23, 1907.125pt x 371.3875pt>
+File: ScreenShot/Partie2/createTable/users.png Graphic file (type png)
+<use ScreenShot/Partie2/createTable/users.png>
+Package pdftex.def Info: ScreenShot/Partie2/createTable/users.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 121.90088pt.
+ (./SQL/Partie2/createTable/service.sql)
+<ScreenShot/Partie2/createTable/service.png, id=24, 1908.12875pt x 392.46625pt>
+File: ScreenShot/Partie2/createTable/service.png Graphic file (type png)
+<use ScreenShot/Partie2/createTable/service.png>
+Package pdftex.def Info: ScreenShot/Partie2/createTable/service.png  used on input line 17.
+(pdftex.def)             Requested size: 625.96065pt x 128.74771pt.
+ [3 <./ScreenShot/Partie2/createTable/users.png> <./ScreenShot/Partie2/createTable/service.png>] (./SQL/Partie2/createTable/thing.sql)
+<ScreenShot/Partie2/createTable/thing.png, id=28, 1907.125pt x 422.57875pt>
+File: ScreenShot/Partie2/createTable/thing.png Graphic file (type png)
+<use ScreenShot/Partie2/createTable/thing.png>
+Package pdftex.def Info: ScreenShot/Partie2/createTable/thing.png  used on input line 27.
+(pdftex.def)             Requested size: 625.96065pt x 138.70345pt.
+ (./SQL/Partie2/createTable/sub.sql)
+<ScreenShot/Partie2/createTable/sub.png, id=29, 1908.12875pt x 374.39874pt>
+File: ScreenShot/Partie2/createTable/sub.png Graphic file (type png)
+<use ScreenShot/Partie2/createTable/sub.png>
+Package pdftex.def Info: ScreenShot/Partie2/createTable/sub.png  used on input line 38.
+(pdftex.def)             Requested size: 625.96065pt x 122.82071pt.
+) [4 <./ScreenShot/Partie2/createTable/thing.png> <./ScreenShot/Partie2/createTable/sub.png>] (./Question/Partie2/addCol.tex (./SQL/Partie2/addCol.sql)
+<ScreenShot/Partie2/addCol.png, id=33, 1908.12875pt x 172.645pt>
+File: ScreenShot/Partie2/addCol.png Graphic file (type png)
+<use ScreenShot/Partie2/addCol.png>
+Package pdftex.def Info: ScreenShot/Partie2/addCol.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 56.63582pt.
+) (./Question/Partie2/nn.tex (./SQL/Partie2/nn1.sql)
+<ScreenShot/Partie2/nn1.png, id=34, 1910.13625pt x 170.6375pt>
+File: ScreenShot/Partie2/nn1.png Graphic file (type png)
+<use ScreenShot/Partie2/nn1.png>
+Package pdftex.def Info: ScreenShot/Partie2/nn1.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 55.91737pt.
+ (./SQL/Partie2/nn2.sql)
+<ScreenShot/Partie2/nn2.png, id=35, 1908.12875pt x 198.7425pt>
+File: ScreenShot/Partie2/nn2.png Graphic file (type png)
+<use ScreenShot/Partie2/nn2.png>
+Package pdftex.def Info: ScreenShot/Partie2/nn2.png  used on input line 17.
+(pdftex.def)             Requested size: 625.96065pt x 65.19705pt.
+) (./Question/Partie2/resize.tex (./SQL/Partie2/big.sql)
+<ScreenShot/Partie2/big.png, id=36, 1910.13625pt x 179.67125pt>
+File: ScreenShot/Partie2/big.png Graphic file (type png)
+<use ScreenShot/Partie2/big.png>
+Package pdftex.def Info: ScreenShot/Partie2/big.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 58.8777pt.
+ (./SQL/Partie2/small.sql) [5 <./ScreenShot/Partie2/addCol.png> <./ScreenShot/Partie2/nn1.png> <./ScreenShot/Partie2/nn2.png> <./ScreenShot/Partie2/big.png>]
+<ScreenShot/Partie2/small.png, id=40, 1893.0725pt x 181.67876pt>
+File: ScreenShot/Partie2/small.png Graphic file (type png)
+<use ScreenShot/Partie2/small.png>
+Package pdftex.def Info: ScreenShot/Partie2/small.png  used on input line 17.
+(pdftex.def)             Requested size: 625.96065pt x 60.07336pt.
+) (./Question/Partie2/rename.tex (./SQL/Partie2/rename.sql)
+<ScreenShot/Partie2/rename.png, id=41, 1904.11375pt x 102.3825pt>
+File: ScreenShot/Partie2/rename.png Graphic file (type png)
+<use ScreenShot/Partie2/rename.png>
+Package pdftex.def Info: ScreenShot/Partie2/rename.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 33.65666pt.
+ (./SQL/Partie2/verifyrename.sql)
+<ScreenShot/Partie2/verifyrename.png, id=42, 1911.14pt x 347.2975pt>
+File: ScreenShot/Partie2/verifyrename.png Graphic file (type png)
+<use ScreenShot/Partie2/verifyrename.png>
+Package pdftex.def Info: ScreenShot/Partie2/verifyrename.png  used on input line 17.
+(pdftex.def)             Requested size: 625.96065pt x 113.75003pt.
+) (./Question/Partie2/drop.tex (./SQL/Partie2/drop.sql)
+<ScreenShot/Partie2/drop.png, id=43, 1905.1175pt x 177.66376pt>
+File: ScreenShot/Partie2/drop.png Graphic file (type png)
+<use ScreenShot/Partie2/drop.png>
+Package pdftex.def Info: ScreenShot/Partie2/drop.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 58.37439pt.
+ [6 <./ScreenShot/Partie2/small.png> <./ScreenShot/Partie2/rename.png> <./ScreenShot/Partie2/verifyrename.png> <./ScreenShot/Partie2/drop.png>] (./SQL/Partie2/verifydrop.sql)
+<ScreenShot/Partie2/verifydrop.png, id=47, 1908.12875pt x 302.12875pt>
+File: ScreenShot/Partie2/verifydrop.png Graphic file (type png)
+<use ScreenShot/Partie2/verifydrop.png>
+Package pdftex.def Info: ScreenShot/Partie2/verifydrop.png  used on input line 17.
+(pdftex.def)             Requested size: 625.96065pt x 99.1127pt.
+) (./Question/Partie2/date.tex (./SQL/Partie2/deb.sql)
+<ScreenShot/Partie2/deb.png, id=48, 1904.11375pt x 491.8375pt>
+File: ScreenShot/Partie2/deb.png Graphic file (type png)
+<use ScreenShot/Partie2/deb.png>
+Package pdftex.def Info: ScreenShot/Partie2/deb.png  used on input line 10.
+(pdftex.def)             Requested size: 625.96065pt x 161.68396pt.
+ [7 <./ScreenShot/Partie2/verifydrop.png> <./ScreenShot/Partie2/deb.png>]
+(./SQL/Partie2/fin.sql)
+<ScreenShot/Partie2/fin.png, id=53, 1907.125pt x 323.2075pt>
+File: ScreenShot/Partie2/fin.png Graphic file (type png)
+<use ScreenShot/Partie2/fin.png>
+Package pdftex.def Info: ScreenShot/Partie2/fin.png  used on input line 20.
+(pdftex.def)             Requested size: 625.96065pt x 106.08672pt.
+) (./Question/Partie3/insert.tex (./SQL/Partie3/users.sql)
+<ScreenShot/Partie3/users.png, id=54, 1905.1175pt x 506.89375pt>
+File: ScreenShot/Partie3/users.png Graphic file (type png)
+<use ScreenShot/Partie3/users.png>
+Package pdftex.def Info: ScreenShot/Partie3/users.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 166.5484pt.
+ (./SQL/Partie3/service.sql [8 <./ScreenShot/Partie2/fin.png> <./ScreenShot/Partie3/users.png>])
+<ScreenShot/Partie3/service.png, id=59, 1908.12875pt x 403.5075pt>
+File: ScreenShot/Partie3/service.png Graphic file (type png)
+<use ScreenShot/Partie3/service.png>
+Package pdftex.def Info: ScreenShot/Partie3/service.png  used on input line 17.
+(pdftex.def)             Requested size: 625.96065pt x 132.36978pt.
+ (./SQL/Partie3/thing.sql)
+<ScreenShot/Partie3/thing.png, id=60, 1899.095pt x 577.15625pt>
+File: ScreenShot/Partie3/thing.png Graphic file (type png)
+<use ScreenShot/Partie3/thing.png>
+Package pdftex.def Info: ScreenShot/Partie3/thing.png  used on input line 27.
+(pdftex.def)             Requested size: 625.96065pt x 190.23317pt.
+ [9 <./ScreenShot/Partie3/service.png> <./ScreenShot/Partie3/thing.png>] (./SQL/Partie3/sub.sql)
+<ScreenShot/Partie3/sub.png, id=64, 1816.7875pt x 414.54875pt>
+File: ScreenShot/Partie3/sub.png Graphic file (type png)
+<use ScreenShot/Partie3/sub.png>
+Package pdftex.def Info: ScreenShot/Partie3/sub.png  used on input line 41.
+(pdftex.def)             Requested size: 625.96065pt x 142.8297pt.
+) (./Question/Partie4/admin.tex (./SQL/Partie4/admin.sql)
+<ScreenShot/Partie4/admin.png, id=65, 1902.10625pt x 378.41376pt>
+File: ScreenShot/Partie4/admin.png Graphic file (type png)
+<use ScreenShot/Partie4/admin.png>
+Package pdftex.def Info: ScreenShot/Partie4/admin.png  used on input line 8.
+(pdftex.def)             Requested size: 625.96065pt x 124.53047pt.
+) [10 <./ScreenShot/Partie3/sub.png> <./ScreenShot/Partie4/admin.png>] (./Question/Partie4/connect.tex (./SQL/Partie4/connect.sql)
+<ScreenShot/Partie4/connect.png, id=69, 1908.12875pt x 418.56375pt>
+File: ScreenShot/Partie4/connect.png Graphic file (type png)
+<use ScreenShot/Partie4/connect.png>
+Package pdftex.def Info: ScreenShot/Partie4/connect.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 137.30894pt.
+) (./Question/Partie4/grantsession.tex (./SQL/Partie4/grantsession.sql)
+<ScreenShot/Partie4/grantsession.png, id=70, 1908.12875pt x 199.74625pt>
+File: ScreenShot/Partie4/grantsession.png Graphic file (type png)
+<use ScreenShot/Partie4/grantsession.png>
+Package pdftex.def Info: ScreenShot/Partie4/grantsession.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 65.52634pt.
+ (./SQL/Partie4/connect.sql)
+<ScreenShot/Partie4/connect2.png, id=71, 1907.125pt x 436.63126pt>
+File: ScreenShot/Partie4/connect2.png Graphic file (type png)
+<use ScreenShot/Partie4/connect2.png>
+Package pdftex.def Info: ScreenShot/Partie4/connect2.png  used on input line 16.
+(pdftex.def)             Requested size: 625.96065pt x 143.3159pt.
+) (./Question/Partie4/grant1.tex [11 <./ScreenShot/Partie4/connect.png> <./ScreenShot/Partie4/grantsession.png> <./ScreenShot/Partie4/connect2.png>] (./SQL/Partie4/grant1.sql)
+<ScreenShot/Partie4/grant1.png, id=75, 1905.1175pt x 187.70125pt>
+File: ScreenShot/Partie4/grant1.png Graphic file (type png)
+<use ScreenShot/Partie4/grant1.png>
+Package pdftex.def Info: ScreenShot/Partie4/grant1.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 61.67238pt.
+ (./SQL/Partie4/verify1.sql)
+<ScreenShot/Partie4/verify1.png, id=76, 1905.1175pt x 594.22pt>
+File: ScreenShot/Partie4/verify1.png Graphic file (type png)
+<use ScreenShot/Partie4/verify1.png>
+Package pdftex.def Info: ScreenShot/Partie4/verify1.png  used on input line 16.
+(pdftex.def)             Requested size: 625.96065pt x 195.2409pt.
+) [12 <./ScreenShot/Partie4/grant1.png> <./ScreenShot/Partie4/verify1.png>] (./Question/Partie4/select.tex (./SQL/Partie4/select.sql)
+<ScreenShot/Partie4/select.png, id=80, 1899.095pt x 305.14pt>
+File: ScreenShot/Partie4/select.png Graphic file (type png)
+<use ScreenShot/Partie4/select.png>
+Package pdftex.def Info: ScreenShot/Partie4/select.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 100.57544pt.
+) (./Question/Partie4/grantselect.tex (./SQL/Partie4/grantselect.sql)
+<ScreenShot/Partie4/grantselect.png, id=81, 1902.10625pt x 211.79124pt>
+File: ScreenShot/Partie4/grantselect.png Graphic file (type png)
+<use ScreenShot/Partie4/grantselect.png>
+Package pdftex.def Info: ScreenShot/Partie4/grantselect.png  used on input line 8.
+(pdftex.def)             Requested size: 625.96065pt x 69.69742pt.
+ (./SQL/Partie4/select.sql)
+<ScreenShot/Partie4/select1.png, id=82, 1896.08376pt x 826.08624pt>
+File: ScreenShot/Partie4/select1.png Graphic file (type png)
+<use ScreenShot/Partie4/select1.png>
+Package pdftex.def Info: ScreenShot/Partie4/select1.png  used on input line 17.
+(pdftex.def)             Requested size: 625.96065pt x 272.71013pt.
+ [13 <./ScreenShot/Partie4/select.png> <./ScreenShot/Partie4/grantselect.png>]) (./Question/Partie4/createView.tex (./SQL/Partie4/createView.sql)
+<ScreenShot/Partie4/createView.png, id=87, 1902.10625pt x 246.9225pt>
+File: ScreenShot/Partie4/createView.png Graphic file (type png)
+<use ScreenShot/Partie4/createView.png>
+Package pdftex.def Info: ScreenShot/Partie4/createView.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 81.2586pt.
+) (./Question/Partie4/grant2.tex (./SQL/Partie4/grant2.sql)
+<ScreenShot/Partie4/grant2.png, id=88, 1905.1175pt x 376.40625pt>
+File: ScreenShot/Partie4/grant2.png Graphic file (type png)
+<use ScreenShot/Partie4/grant2.png>
+Package pdftex.def Info: ScreenShot/Partie4/grant2.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 123.67455pt.
+ [14 <./ScreenShot/Partie4/select1.png> <./ScreenShot/Partie4/createView.png>] (./SQL/Partie4/createView.sql)
+<ScreenShot/Partie4/createView1.png, id=92, 1905.1175pt x 330.23375pt>
+File: ScreenShot/Partie4/createView1.png Graphic file (type png)
+<use ScreenShot/Partie4/createView1.png>
+Package pdftex.def Info: ScreenShot/Partie4/createView1.png  used on input line 16.
+(pdftex.def)             Requested size: 625.96065pt x 108.5038pt.
+) (./Question/Partie4/index.tex (./SQL/Partie4/index.sql)
+<ScreenShot/Partie4/index.png, id=93, 1905.1175pt x 326.21875pt>
+File: ScreenShot/Partie4/index.png Graphic file (type png)
+<use ScreenShot/Partie4/index.png>
+Package pdftex.def Info: ScreenShot/Partie4/index.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 107.1846pt.
+) (./Question/Partie4/grant3.tex (./SQL/Partie4/grant3.sql) [15 <./ScreenShot/Partie4/grant2.png> <./ScreenShot/Partie4/createView1.png> <./ScreenShot/Partie4/index.png>]
+<ScreenShot/Partie4/grant3.png, id=97, 1899.095pt x 356.33125pt>
+File: ScreenShot/Partie4/grant3.png Graphic file (type png)
+<use ScreenShot/Partie4/grant3.png>
+Package pdftex.def Info: ScreenShot/Partie4/grant3.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 117.4483pt.
+ (./SQL/Partie4/index.sql)
+<ScreenShot/Partie4/index1.png, id=98, 1904.11375pt x 332.24126pt>
+File: ScreenShot/Partie4/index1.png Graphic file (type png)
+<use ScreenShot/Partie4/index1.png>
+Package pdftex.def Info: ScreenShot/Partie4/index1.png  used on input line 16.
+(pdftex.def)             Requested size: 625.96065pt x 109.21916pt.
+) (./Question/Partie4/revoke.tex (./SQL/Partie4/revoke.sql)
+<ScreenShot/Partie4/revoke.png, id=99, 1904.11375pt x 777.90625pt>
+File: ScreenShot/Partie4/revoke.png Graphic file (type png)
+<use ScreenShot/Partie4/revoke.png>
+Package pdftex.def Info: ScreenShot/Partie4/revoke.png  used on input line 8.
+(pdftex.def)             Requested size: 625.96065pt x 255.72466pt.
+ [16{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./ScreenShot/Partie4/grant3.png> <./ScreenShot/Partie4/index1.png>]) (./Question/Partie4/verify2.tex (./SQL/Partie4/verify2.sql)
+<ScreenShot/Partie4/verify2.png, id=104, 1901.1025pt x 199.74625pt>
+File: ScreenShot/Partie4/verify2.png Graphic file (type png)
+<use ScreenShot/Partie4/verify2.png>
+Package pdftex.def Info: ScreenShot/Partie4/verify2.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 65.7671pt.
+) (./Question/Partie4/profile.tex (./SQL/Partie4/profile.sql
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1.
+)
+<ScreenShot/Partie4/profile.png, id=105, 1907.125pt x 425.59pt>
+File: ScreenShot/Partie4/profile.png Graphic file (type png)
+<use ScreenShot/Partie4/profile.png>
+Package pdftex.def Info: ScreenShot/Partie4/profile.png  used on input line 8.
+(pdftex.def)             Requested size: 625.96065pt x 139.69182pt.
+ [17 <./ScreenShot/Partie4/revoke.png> <./ScreenShot/Partie4/verify2.png>])
+(./Question/Partie4/alterprof.tex (./SQL/Partie4/alterprof.sql)
+<ScreenShot/Partie4/alterprof.png, id=110, 1907.125pt x 121.45375pt>
+File: ScreenShot/Partie4/alterprof.png Graphic file (type png)
+<use ScreenShot/Partie4/alterprof.png>
+Package pdftex.def Info: ScreenShot/Partie4/alterprof.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 39.86487pt.
+) (./Question/Partie4/role.tex (./SQL/Partie4/role.sql)
+<ScreenShot/Partie4/role.png, id=111, 1884.03876pt x 702.625pt>
+File: ScreenShot/Partie4/role.png Graphic file (type png)
+<use ScreenShot/Partie4/role.png>
+Package pdftex.def Info: ScreenShot/Partie4/role.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 233.44298pt.
+ [18 <./ScreenShot/Partie4/profile.png> <./ScreenShot/Partie4/alterprof.png>]) (./Question/Partie4/grantrole.tex (./SQL/Partie4/grantrole.sql)
+<ScreenShot/Partie4/grantrole.png, id=116, 1901.1025pt x 199.74625pt>
+File: ScreenShot/Partie4/grantrole.png Graphic file (type png)
+<use ScreenShot/Partie4/grantrole.png>
+Package pdftex.def Info: ScreenShot/Partie4/grantrole.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 65.7671pt.
+ (./SQL/Partie4/verifyrole.sql)
+<ScreenShot/Partie4/verifyrole.png, id=117, 1905.1175pt x 668.4975pt>
+File: ScreenShot/Partie4/verifyrole.png Graphic file (type png)
+<use ScreenShot/Partie4/verifyrole.png>
+Package pdftex.def Info: ScreenShot/Partie4/verifyrole.png  used on input line 19.
+(pdftex.def)             Requested size: 625.96065pt x 219.64601pt.
+ [19 <./ScreenShot/Partie4/role.png> <./ScreenShot/Partie4/grantrole.png>]) (./Question/Partie5/dict.tex (./SQL/Partie5/connectsystem.sql)
+<ScreenShot/Partie5/connectsystem.png, id=122, 1905.1175pt x 404.51125pt>
+File: ScreenShot/Partie5/connectsystem.png Graphic file (type png)
+<use ScreenShot/Partie5/connectsystem.png>
+Package pdftex.def Info: ScreenShot/Partie5/connectsystem.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 132.90892pt.
+ [20 <./ScreenShot/Partie4/verifyrole.png> <./ScreenShot/Partie5/connectsystem.png>] (./SQL/Partie5/dict.sql)
+<ScreenShot/Partie5/dict.png, id=126, 1904.11375pt x 208.78pt>
+File: ScreenShot/Partie5/dict.png Graphic file (type png)
+<use ScreenShot/Partie5/dict.png>
+Package pdftex.def Info: ScreenShot/Partie5/dict.png  used on input line 17.
+(pdftex.def)             Requested size: 625.96065pt x 68.63318pt.
+ (./SQL/Partie5/selectDICT.sql)
+<ScreenShot/Partie5/selectDICT.png, id=127, 1898.09125pt x 832.10875pt>
+File: ScreenShot/Partie5/selectDICT.png Graphic file (type png)
+<use ScreenShot/Partie5/selectDICT.png>
+Package pdftex.def Info: ScreenShot/Partie5/selectDICT.png  used on input line 26.
+(pdftex.def)             Requested size: 625.96065pt x 274.41898pt.
+) (./Question/Partie5/q2.tex (./SQL/Partie5/desc.sql)
+<ScreenShot/Partie5/desc1.png, id=128, 1904.11375pt x 811.03pt>
+File: ScreenShot/Partie5/desc1.png Graphic file (type png)
+<use ScreenShot/Partie5/desc1.png>
+Package pdftex.def Info: ScreenShot/Partie5/desc1.png  used on input line 8.
+(pdftex.def)             Requested size: 625.96065pt x 266.61357pt.
+ [21 <./ScreenShot/Partie5/dict.png> <./ScreenShot/Partie5/selectDICT.png>]
+<ScreenShot/Partie5/desc2.png, id=132, 1861.95625pt x 653.44125pt>
+File: ScreenShot/Partie5/desc2.png Graphic file (type png)
+<use ScreenShot/Partie5/desc2.png>
+Package pdftex.def Info: ScreenShot/Partie5/desc2.png  used on input line 12.
+(pdftex.def)             Requested size: 625.96065pt x 219.67441pt.
+<ScreenShot/Partie5/desc3.png, id=133, 1893.0725pt x 784.9325pt>
+File: ScreenShot/Partie5/desc3.png Graphic file (type png)
+<use ScreenShot/Partie5/desc3.png>
+Package pdftex.def Info: ScreenShot/Partie5/desc3.png  used on input line 17.
+(pdftex.def)             Requested size: 625.96065pt x 259.54353pt.
+ [22 <./ScreenShot/Partie5/desc1.png> <./ScreenShot/Partie5/desc2.png>]
+<ScreenShot/Partie5/desc4.png, id=137, 1862.96pt x 440.64626pt>
+File: ScreenShot/Partie5/desc4.png Graphic file (type png)
+<use ScreenShot/Partie5/desc4.png>
+Package pdftex.def Info: ScreenShot/Partie5/desc4.png  used on input line 22.
+(pdftex.def)             Requested size: 625.96065pt x 148.05612pt.
+) (./Question/Partie5/q3.tex (./SQL/Partie5/showUser.sql)
+<ScreenShot/Partie5/showUser.png, id=138, 1904.11375pt x 246.9225pt>
+File: ScreenShot/Partie5/showUser.png Graphic file (type png)
+<use ScreenShot/Partie5/showUser.png>
+Package pdftex.def Info: ScreenShot/Partie5/showUser.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 81.17194pt.
+ [23 <./ScreenShot/Partie5/desc3.png> <./ScreenShot/Partie5/desc4.png>]) (./Question/Partie5/q4.tex (./SQL/Partie5/descr.sql)
+File: ScreenShot/Partie5/desc1.png Graphic file (type png)
+<use ScreenShot/Partie5/desc1.png>
+Package pdftex.def Info: ScreenShot/Partie5/desc1.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 266.61357pt.
+<ScreenShot/Partie5/desc5.png, id=142, 1792.6975pt x 792.9625pt>
+File: ScreenShot/Partie5/desc5.png Graphic file (type png)
+<use ScreenShot/Partie5/desc5.png>
+Package pdftex.def Info: ScreenShot/Partie5/desc5.png  used on input line 11.
+(pdftex.def)             Requested size: 625.96065pt x 276.87555pt.
+ [24 <./ScreenShot/Partie5/showUser.png>]) (./Question/Partie5/q5.tex (./SQL/Partie5/q5.sql)
+<ScreenShot/Partie5/q5.png, id=146, 1881.0275pt x 552.0625pt>
+File: ScreenShot/Partie5/q5.png Graphic file (type png)
+<use ScreenShot/Partie5/q5.png>
+Package pdftex.def Info: ScreenShot/Partie5/q5.png  used on input line 8.
+(pdftex.def)             Requested size: 625.96065pt x 183.71431pt.
+) (./Question/Partie5/q6.tex [25 <./ScreenShot/Partie5/desc5.png> <./ScreenShot/Partie5/q5.png>] (./SQL/Partie5/q6.a.sql)
+<ScreenShot/Partie5/q6.a.png, id=152, 1893.0725pt x 806.01125pt>
+File: ScreenShot/Partie5/q6.a.png Graphic file (type png)
+<use ScreenShot/Partie5/q6.a.png>
+Package pdftex.def Info: ScreenShot/Partie5/q6.a.png  used on input line 11.
+(pdftex.def)             Requested size: 625.96065pt x 266.51338pt.
+ (./SQL/Partie5/q6.b.sql)
+<ScreenShot/Partie5/q6.b.png, id=153, 1881.0275pt x 229.85875pt>
+File: ScreenShot/Partie5/q6.b.png Graphic file (type png)
+<use ScreenShot/Partie5/q6.b.png>
+Package pdftex.def Info: ScreenShot/Partie5/q6.b.png  used on input line 20.
+(pdftex.def)             Requested size: 625.96065pt x 76.49194pt.
+) (./Question/Partie5/q7.tex [26 <./ScreenShot/Partie5/q6.a.png> <./ScreenShot/Partie5/q6.b.png>] (./SQL/Partie5/thing.sql)
+<ScreenShot/Partie5/thing.png, id=157, 1793.70125pt x 741.77126pt>
+File: ScreenShot/Partie5/thing.png Graphic file (type png)
+<use ScreenShot/Partie5/thing.png>
+Package pdftex.def Info: ScreenShot/Partie5/thing.png  used on input line 13.
+(pdftex.def)             Requested size: 625.96065pt x 258.85417pt.
+ (./SQL/Partie5/sub.sql)
+<ScreenShot/Partie5/sub.png, id=158, 1832.8475pt x 703.62875pt>
+File: ScreenShot/Partie5/sub.png Graphic file (type png)
+<use ScreenShot/Partie5/sub.png>
+Package pdftex.def Info: ScreenShot/Partie5/sub.png  used on input line 22.
+(pdftex.def)             Requested size: 625.96065pt x 240.30426pt.
+ [27 <./ScreenShot/Partie5/thing.png>]) (./Question/Partie5/q8.tex (./SQL/Partie5/fr.sql)
+<ScreenShot/Partie5/fr.png, id=162, 1859.94875pt x 416.55624pt>
+File: ScreenShot/Partie5/fr.png Graphic file (type png)
+<use ScreenShot/Partie5/fr.png>
+Package pdftex.def Info: ScreenShot/Partie5/fr.png  used on input line 13.
+(pdftex.def)             Requested size: 625.96065pt x 140.19075pt.
+) (./Question/Partie5/q9.tex [28 <./ScreenShot/Partie5/sub.png> <./ScreenShot/Partie5/fr.png>]
+Overfull \hbox (5.57143pt too wide) in paragraph at lines 2--4
+\OT1/cmr/m/n/10 Pour af-ficher les con-traintes creer par DBAIOT on va utiliser la ta-ble USER[]CONSTRAINTS , et af-ficher les noms des con-traintes(constraint[]name)
+ []
+
+(./SQL/Partie5/const.sql)
+<ScreenShot/Partie5/const.png, id=167, 1829.83624pt x 801.99625pt>
+File: ScreenShot/Partie5/const.png Graphic file (type png)
+<use ScreenShot/Partie5/const.png>
+Package pdftex.def Info: ScreenShot/Partie5/const.png  used on input line 8.
+(pdftex.def)             Requested size: 625.96065pt x 274.35164pt.
+) (./Question/Partie5/q10.tex (./SQL/Partie5/att.sql)
+<ScreenShot/Partie5/att.png, id=168, 1855.93375pt x 789.95125pt>
+File: ScreenShot/Partie5/att.png Graphic file (type png)
+<use ScreenShot/Partie5/att.png>
+Package pdftex.def Info: ScreenShot/Partie5/att.png  used on input line 9.
+(pdftex.def)             Requested size: 625.96065pt x 266.43431pt.
+ [29 <./ScreenShot/Partie5/const.png>] (./SQL/Partie5/pk.sql)
+<ScreenShot/Partie5/pk.png, id=172, 1898.09125pt x 729.72626pt>
+File: ScreenShot/Partie5/pk.png Graphic file (type png)
+<use ScreenShot/Partie5/pk.png>
+Package pdftex.def Info: ScreenShot/Partie5/pk.png  used on input line 22.
+(pdftex.def)             Requested size: 625.96065pt x 240.65453pt.
+ [30 <./ScreenShot/Partie5/att.png>] (./SQL/Partie5/fr1.sql)
+<ScreenShot/Partie5/fr1.png, id=176, 1724.4425pt x 770.88pt>
+File: ScreenShot/Partie5/fr1.png Graphic file (type png)
+<use ScreenShot/Partie5/fr1.png>
+Package pdftex.def Info: ScreenShot/Partie5/fr1.png  used on input line 36.
+(pdftex.def)             Requested size: 625.96065pt x 279.82207pt.
+ [31 <./ScreenShot/Partie5/pk.png>] (./SQL/Partie5/uni.sql)
+<ScreenShot/Partie5/uni.png, id=181, 1718.42pt x 332.24126pt>
+File: ScreenShot/Partie5/uni.png Graphic file (type png)
+<use ScreenShot/Partie5/uni.png>
+Package pdftex.def Info: ScreenShot/Partie5/uni.png  used on input line 49.
+(pdftex.def)             Requested size: 625.96065pt x 121.02623pt.
+
+Overfull \hbox (3.18379pt too wide) in paragraph at lines 53--57
+\OT1/cmr/m/n/10 On va obtenir les nom des con-traints check + leur con-di-tion avec la ta-ble USER[]CONSTRAINTS , on se-lec-tion-nant l'attribut con-straint[]name(nom
+ []
+
+(./SQL/Partie5/chk.sql [32 <./ScreenShot/Partie5/fr1.png> <./ScreenShot/Partie5/uni.png>])
+<ScreenShot/Partie5/chk.png, id=185, 1841.88126pt x 442.65375pt>
+File: ScreenShot/Partie5/chk.png Graphic file (type png)
+<use ScreenShot/Partie5/chk.png>
+Package pdftex.def Info: ScreenShot/Partie5/chk.png  used on input line 61.
+(pdftex.def)             Requested size: 625.96065pt x 150.43272pt.
+) (./Question/Partie5/q11.tex (./SQL/Partie5/grant.sql)
+<ScreenShot/Partie5/grant.png, id=186, 1893.0725pt x 444.66125pt>
+File: ScreenShot/Partie5/grant.png Graphic file (type png)
+<use ScreenShot/Partie5/grant.png>
+Package pdftex.def Info: ScreenShot/Partie5/grant.png  used on input line 8.
+(pdftex.def)             Requested size: 625.96065pt x 147.03041pt.
+ (./SQL/Partie5/connectadmin.sql) (./SQL/Partie5/priv.sql) [33 <./ScreenShot/Partie5/chk.png> <./ScreenShot/Partie5/grant.png>]
+<ScreenShot/Partie5/objpriv.png, id=190, 1858.945pt x 427.5975pt>
+File: ScreenShot/Partie5/objpriv.png Graphic file (type png)
+<use ScreenShot/Partie5/objpriv.png>
+Package pdftex.def Info: ScreenShot/Partie5/objpriv.png  used on input line 23.
+(pdftex.def)             Requested size: 625.96065pt x 143.97842pt.
+<ScreenShot/Partie5/syspriv.png, id=191, 1793.70125pt x 299.1175pt>
+File: ScreenShot/Partie5/syspriv.png Graphic file (type png)
+<use ScreenShot/Partie5/syspriv.png>
+Package pdftex.def Info: ScreenShot/Partie5/syspriv.png  used on input line 27.
+(pdftex.def)             Requested size: 625.96065pt x 104.38232pt.
+) (./Question/Partie5/q12.tex (./SQL/Partie5/role.sql)
+<ScreenShot/Partie5/role.png, id=192, 1862.96pt x 320.19624pt>
+File: ScreenShot/Partie5/role.png Graphic file (type png)
+<use ScreenShot/Partie5/role.png>
+Package pdftex.def Info: ScreenShot/Partie5/role.png  used on input line 8.
+(pdftex.def)             Requested size: 625.96065pt x 107.58519pt.
+ [34 <./ScreenShot/Partie5/objpriv.png> <./ScreenShot/Partie5/syspriv.png>]) (./Question/Partie5/q13.tex (./SQL/Partie5/obj.sql)
+<ScreenShot/Partie5/obj.png, id=196, 1877.0125pt x 380.42125pt>
+File: ScreenShot/Partie5/obj.png Graphic file (type png)
+<use ScreenShot/Partie5/obj.png>
+Package pdftex.def Info: ScreenShot/Partie5/obj.png  used on input line 9.
+(pdftex.def)             Requested size: 625.96065pt x 126.86287pt.
+) (./Question/Partie5/q14.tex (./SQL/Partie5/own.sql)
+<ScreenShot/Partie5/own.png, id=197, 1903.11pt x 388.45125pt>
+File: ScreenShot/Partie5/own.png Graphic file (type png)
+<use ScreenShot/Partie5/own.png>
+Package pdftex.def Info: ScreenShot/Partie5/own.png  used on input line 9.
+(pdftex.def)             Requested size: 625.96065pt x 127.76846pt.
+ [35 <./ScreenShot/Partie5/role.png> <./ScreenShot/Partie5/obj.png>]) (./Question/Partie5/q15.tex (./SQL/Partie5/size.sql)
+<ScreenShot/Partie5/size.png, id=201, 1852.9225pt x 356.33125pt>
+File: ScreenShot/Partie5/size.png Graphic file (type png)
+<use ScreenShot/Partie5/size.png>
+Package pdftex.def Info: ScreenShot/Partie5/size.png  used on input line 10.
+(pdftex.def)             Requested size: 625.96065pt x 120.37894pt.
+) (./Question/Partie5/q16.tex (./SQL/Partie5/create.sql)
+<ScreenShot/Partie5/create.png, id=202, 1905.1175pt x 603.25375pt>
+File: ScreenShot/Partie5/create.png Graphic file (type png)
+<use ScreenShot/Partie5/create.png>
+Package pdftex.def Info: ScreenShot/Partie5/create.png  used on input line 7.
+(pdftex.def)             Requested size: 625.96065pt x 198.20909pt.
+ [36 <./ScreenShot/Partie5/own.png> <./ScreenShot/Partie5/size.png>] (./SQL/Partie5/connecttest.sql)
+<ScreenShot/Partie5/connecttest.png, id=207, 1877.0125pt x 540.0175pt>
+File: ScreenShot/Partie5/connecttest.png Graphic file (type png)
+<use ScreenShot/Partie5/connecttest.png>
+Package pdftex.def Info: ScreenShot/Partie5/connecttest.png  used on input line 16.
+(pdftex.def)             Requested size: 625.96065pt x 180.08504pt.
+ (./SQL/Partie5/testobj.sql)
+<ScreenShot/Partie5/testobj1.png, id=208, 1811.76875pt x 241.90375pt>
+File: ScreenShot/Partie5/testobj1.png Graphic file (type png)
+<use ScreenShot/Partie5/testobj1.png>
+Package pdftex.def Info: ScreenShot/Partie5/testobj1.png  used on input line 28.
+(pdftex.def)             Requested size: 625.96065pt x 83.575pt.
+ (./SQL/Partie5/testatt.sql [37 <./ScreenShot/Partie5/create.png> <./ScreenShot/Partie5/connecttest.png> <./ScreenShot/Partie5/testobj1.png>])
+<ScreenShot/Partie5/testatt1.png, id=213, 1769.61125pt x 374.39874pt>
+File: ScreenShot/Partie5/testatt1.png Graphic file (type png)
+<use ScreenShot/Partie5/testatt1.png>
+Package pdftex.def Info: ScreenShot/Partie5/testatt1.png  used on input line 35.
+(pdftex.def)             Requested size: 625.96065pt x 132.43546pt.
+ (./SQL/Partie5/const.sql)
+<ScreenShot/Partie5/testconst1.png, id=214, 1804.7425pt x 285.065pt>
+File: ScreenShot/Partie5/testconst1.png Graphic file (type png)
+<use ScreenShot/Partie5/testconst1.png>
+Package pdftex.def Info: ScreenShot/Partie5/testconst1.png  used on input line 42.
+(pdftex.def)             Requested size: 625.96065pt x 98.87384pt.
+ (./SQL/Partie5/tab.sql)
+<ScreenShot/Partie5/tab.png, id=215, 1826.825pt x 323.2075pt>
+File: ScreenShot/Partie5/tab.png Graphic file (type png)
+<use ScreenShot/Partie5/tab.png>
+Package pdftex.def Info: ScreenShot/Partie5/tab.png  used on input line 55.
+(pdftex.def)             Requested size: 625.96065pt x 110.74721pt.
+ [38 <./ScreenShot/Partie5/testatt1.png> <./ScreenShot/Partie5/testconst1.png> <./ScreenShot/Partie5/tab.png>] (./SQL/Partie5/testobj.sql)
+<ScreenShot/Partie5/testobj2.png, id=219, 1885.0425pt x 287.0725pt>
+File: ScreenShot/Partie5/testobj2.png Graphic file (type png)
+<use ScreenShot/Partie5/testobj2.png>
+Package pdftex.def Info: ScreenShot/Partie5/testobj2.png  used on input line 63.
+(pdftex.def)             Requested size: 625.96065pt x 95.32556pt.
+ (./SQL/Partie5/testatt.sql)
+<ScreenShot/Partie5/testatt2.png, id=220, 1895.08pt x 761.84625pt>
+File: ScreenShot/Partie5/testatt2.png Graphic file (type png)
+<use ScreenShot/Partie5/testatt2.png>
+Package pdftex.def Info: ScreenShot/Partie5/testatt2.png  used on input line 70.
+(pdftex.def)             Requested size: 625.96065pt x 251.64253pt.
+ (./SQL/Partie5/col.sql)
+<ScreenShot/Partie5/col.png, id=221, 1700.3525pt x 186.6975pt>
+File: ScreenShot/Partie5/col.png Graphic file (type png)
+<use ScreenShot/Partie5/col.png>
+Package pdftex.def Info: ScreenShot/Partie5/col.png  used on input line 83.
+(pdftex.def)             Requested size: 625.96065pt x 68.72943pt.
+ [39 <./ScreenShot/Partie5/testobj2.png> <./ScreenShot/Partie5/testatt2.png>] (./SQL/Partie5/testatt.sql)
+<ScreenShot/Partie5/testatt3.png, id=225, 1841.88126pt x 670.505pt>
+File: ScreenShot/Partie5/testatt3.png Graphic file (type png)
+<use ScreenShot/Partie5/testatt3.png>
+Package pdftex.def Info: ScreenShot/Partie5/testatt3.png  used on input line 89.
+(pdftex.def)             Requested size: 625.96065pt x 227.86638pt.
+ (./SQL/Partie5/con.sql)
+<ScreenShot/Partie5/con.png, id=226, 1892.06876pt x 309.155pt>
+File: ScreenShot/Partie5/con.png Graphic file (type png)
+<use ScreenShot/Partie5/con.png>
+Package pdftex.def Info: ScreenShot/Partie5/con.png  used on input line 101.
+(pdftex.def)             Requested size: 625.96065pt x 102.27618pt.
+ (./SQL/Partie5/testatt.sql [40 <./ScreenShot/Partie5/col.png> <./ScreenShot/Partie5/testatt3.png> <./ScreenShot/Partie5/con.png>])
+<ScreenShot/Partie5/testconst2.png, id=230, 1781.65625pt x 732.7375pt>
+File: ScreenShot/Partie5/testconst2.png Graphic file (type png)
+<use ScreenShot/Partie5/testconst2.png>
+Package pdftex.def Info: ScreenShot/Partie5/testconst2.png  used on input line 107.
+(pdftex.def)             Requested size: 625.96065pt x 257.43468pt.
+) [41 <./ScreenShot/Partie5/testconst2.png>] (./chabane_chaouche_rabah.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 21076 strings out of 474222
+ 449355 string characters out of 5748732
+ 2151975 words of memory out of 5000000
+ 42686 multiletter control sequences out of 15000+600000
+ 564678 words of font info for 60 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 102i,7n,107p,491b,1802s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on chabane_chaouche_rabah.pdf (41 pages, 1891524 bytes).
+PDF statistics:
+ 289 PDF objects out of 1000 (max. 8388607)
+ 133 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 448 words of extra memory for PDF output out of 10000 (max. 10000000)
+

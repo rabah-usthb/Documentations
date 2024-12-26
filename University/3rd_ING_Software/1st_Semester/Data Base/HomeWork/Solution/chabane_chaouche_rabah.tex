@@ -1,0 +1,225 @@
+\documentclass{article}
+\usepackage[a4paper, paperwidth=25cm, paperheight=25.5cm, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+
+\lstdefinestyle{sqlstyle}{
+    language=SQL,                    % Set language to SQL
+    basicstyle=\ttfamily\small,      % Font size and family for code
+    keywordstyle=\color{blue}\bfseries, % Color for SQL keywords
+    commentstyle=\color{gray},       % Color for comments
+    stringstyle=\color{red},         % Color for strings
+    numbers=left,                    % Show line numbers on the left
+    numberstyle=\tiny\color{gray},   % Line number font and color
+    stepnumber=1,                    % Line number step
+    breaklines=true,                 % Wrap long lines
+    frame=single,                    % Add a frame around code
+    tabsize=2,                       % Set tab size
+    showstringspaces=false           % Hide spaces in strings
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+\setcellgapes{2pt}  % Adjust padding as needed
+\makegapedcells
+
+
+\begin{document}
+\renewcommand{\arrayrulewidth}{0.75mm} % Set line thickness
+\setlength{\tabcolsep}{10pt} % Set horizontal padding
+\renewcommand{\arraystretch}{1} % Set vertical padding (1.0 is default)
+\arrayrulecolor{myblue!70!black}
+
+\subsection*{\underline{Partie 1}}
+\input{Question/Partie1/connect.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie1/ts1.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie1/ts2.tex}
+
+\newpage
+\input{Question/Partie1/dbaiot.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie1/grant.tex}
+
+\vspace{0.25cm}
+\subsection*{\underline{Partie 2}}
+\input{Question/Partie2/connect.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie2/createTable.tex}
+
+\newpage
+\input{Question/Partie2/addCol.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie2/nn.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie2/resize.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie2/rename.tex}
+
+
+\vspace{0.25cm}
+\input{Question/Partie2/drop.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie2/date.tex}
+
+\vspace{0.25cm}
+\subsection*{\underline{Partie 3}}
+\input{Question/Partie3/insert.tex}
+
+
+\vspace{0.25cm}
+\subsection*{\underline{Partie 4}}
+\input{Question/Partie4/admin.tex}
+
+
+\newpage
+\input{Question/Partie4/connect.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie4/grantsession.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie4/grant1.tex}
+
+\newpage
+\input{Question/Partie4/select.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie4/grantselect.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie4/createView.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie4/grant2.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie4/index.tex}
+
+
+\vspace{0.25cm}
+\input{Question/Partie4/grant3.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie4/revoke.tex}
+
+
+\vspace{0.25cm}
+\input{Question/Partie4/verify2.tex}
+
+
+\vspace{0.25cm}
+\input{Question/Partie4/profile.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie4/alterprof.tex}
+
+
+\vspace{0.25cm}
+\input{Question/Partie4/role.tex}
+
+
+\vspace{0.25cm}
+\input{Question/Partie4/grantrole.tex}
+
+
+\vspace{0.25cm}
+\subsection*{\underline{Partie 5}}
+\input{Question/Partie5/dict.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie5/q2.tex}
+
+
+\vspace{0.25cm}
+\input{Question/Partie5/q3.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie5/q4.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie5/q5.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie5/q6.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie5/q7.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie5/q8.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie5/q9.tex}
+
+
+\vspace{0.25cm}
+\input{Question/Partie5/q10.tex}
+
+\vspace{0.25cm}
+\input{Question/Partie5/q11.tex}
+
+
+\vspace{0.25cm}
+\input{Question/Partie5/q12.tex}
+
+
+\vspace{0.25cm}
+\input{Question/Partie5/q13.tex}
+
+
+\vspace{0.25cm}
+\input{Question/Partie5/q14.tex}
+
+
+\vspace{0.25cm}
+\input{Question/Partie5/q15.tex}
+
+
+\vspace{0.25cm}
+\input{Question/Partie5/q16.tex}
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+

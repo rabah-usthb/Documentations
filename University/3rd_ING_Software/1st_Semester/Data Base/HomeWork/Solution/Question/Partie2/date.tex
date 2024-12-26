@@ -1,0 +1,21 @@
+\subsubsection*{7.}
+Pour reprondre a ce besoin on doit ajouter les deux attributs date\_fin et date\_deb a la table subscribe
+
+\vspace{0.25cm}
+\subsubsection*{7.a}
+Ajouter l'attribut date\_deb, supprimer l'ancienne contrainte pk\_subscribe, puis la recréer en incluant date\_deb dans la clé primaire de la table subscribe.
+\lstinputlisting[style=sqlstyle]{SQL/Partie2/deb.sql}
+
+\begin{center}
+    \includegraphics[width=\textwidth]{ScreenShot/Partie2/deb.png}
+\end{center}
+
+\newpage
+\subsubsection*{7.b}
+Ajouter l'attribut date\_fin et ajouter une contrainte pour verifie que date\_deb\(<\)date\_fin
+
+\lstinputlisting[style=sqlstyle]{SQL/Partie2/fin.sql}
+
+\begin{center}
+    \includegraphics[width=\textwidth]{ScreenShot/Partie2/fin.png}
+\end{center}

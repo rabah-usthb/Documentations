@@ -1,0 +1,14 @@
+\subsubsection*{13.}
+Pour afficher les objets dont ADMIN est propriétaire on va utiliser
+la table ALL\_OBJECTS , selectionner l'attribut OBJECT\_NAME et filtrer avec
+where owner='ADMIN' pour seulement avoir les objets d'ADMIN
+
+\lstinputlisting[style=sqlstyle]{SQL/Partie5/obj.sql}
+
+\begin{center}
+    \includegraphics[width=\textwidth]{ScreenShot/Partie5/obj.png}
+\end{center}
+
+\begin{prettyBox}{Remarque}{myblue}
+L'objet USER\_THING est une vue qu'on a creer dans la partie4
+\end{prettyBox}

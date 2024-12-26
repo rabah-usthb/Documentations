@@ -1,0 +1,12 @@
+\subsubsection*{7.}
+On va créer la vue USER\_THING avec une jointure entre les tables DBAIOT.USERS et DBAIOT.THING depuis l'utilisateur admin
+
+\lstinputlisting[style=sqlstyle]{SQL/Partie4/createView.sql}
+
+\begin{center}
+    \includegraphics[width=\textwidth]{ScreenShot/Partie4/createView.png}
+\end{center}
+
+\begin{prettyBox}{}{myblue}
+Le problem est que l'admin n'a pas le privelege de select la table DBAIOT.THING ni le privelge de creer des views
+\end{prettyBox}

@@ -1,0 +1,1 @@
+SELECT * FROM ALL_TAB_PRIVS where grantee='ADMIN';

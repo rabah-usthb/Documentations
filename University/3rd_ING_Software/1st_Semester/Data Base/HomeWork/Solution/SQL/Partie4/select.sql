@@ -1,0 +1,1 @@
+Select * from DBAIOT.USERS;
