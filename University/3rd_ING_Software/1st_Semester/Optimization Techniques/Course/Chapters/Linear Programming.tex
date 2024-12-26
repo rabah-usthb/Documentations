@@ -791,7 +791,7 @@ understanding and computational implementation.
 
 \begin{prettyBox}{}{box}
 \[
-    \text{Minimize } Z = c_1x_1 + c_2x_2 + \cdots + c_nx_n
+    \text{Maximize } Z = c_1x_1 + c_2x_2 + \cdots + c_nx_n
 \]
 
 \vspace{0.25cm}
@@ -806,24 +806,25 @@ understanding and computational implementation.
 \]
 
 \[
-x_1, x_2, \dots, x_n \geq 0 
+    x_1, x_2, \dots, x_n \geq 0 \hspace{0.35cm} b_1, b_2, \dots, b_m \geq 0 
 \]
 \end{prettyBox}
 
 \subsubsection{How To Transition To Standard Form}
 
 
-\begin{prettyBox}{Maximization Problem}{box}
-In the standard form, all linear programming problems must be expressed as minimization problems. If we are given a maximization problem, we can convert it by multiplying the objective function by \(-1\), effectively turning it into a minimization problem.
+\begin{prettyBox}{Minimization Problem}{box}
+In the standard form, all linear programming problems must be expressed as maximization problems. If we are given a minimization problem, 
+we can convert it by multiplying the objective function by \(-1\), effectively turning it into a maximization problem.
 \end{prettyBox}
 
 \subsubsection*{\underline{Example}}
 \[
-\text{Maximize } f(x_i) = 3x_1 + 2x_2
+\text{Minimize } f(x_i) = 3x_1 + 2x_2
 \]
 is equivalent to:
 \[
-\text{Minimize } g(x_i) = -f(x_i) = -3x_1 - 2x_2
+\text{Maximize } g(x_i) = -f(x_i) = -3x_1 - 2x_2
 \]
 
 \vspace{0.5cm}
@@ -843,22 +844,145 @@ x \leq b \Leftrightarrow x + s_1 = b \quad \text{with} \quad s_1 \geq 0
 \subsubsection*{\underline{Example}}
 
 \[
-\begin{array}{ccc}
 \left\{
-    \begin{array}{l}
-         x_{1} + x_{2} + x_{3} \leq 100 \\
-         x_{1} - x_{2} \geq 5 \\
-         x_{1} , x_{2} , x_{3} \geq 0
-    \end{array}
-\right.
-& \quad \Longrightarrow \quad &
-\left\{
-    \begin{array}{l}
-         x_{1} + x_{2} + x_{3} + s_{1} = 100 \\
-         x_{1} - x_{2} - s_{2} = 5 \\
-         x_{1} , x_{2} , x_{3} , s_{1} , s_{2} \geq 0
-    \end{array}
-\right.
+\begin{array}{l}
+    x_{1} + x_{2} + x_{3} \leq 100 \\
+    x_{1} - x_{2} \geq 5 \\
+    x_{1}, x_{2}, x_{3} \geq 0
 \end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    x_{1} + x_{2} + x_{3} + s_{1} = 100 \\
+    x_{1} - x_{2} - s_{2} = 5 \\
+    x_{1}, x_{2}, x_{3}, s_{1}, s_{2} \geq 0
+\end{array}
+\right.
 \]
+
+
+\vspace{1cm}
+\subsection{Simplex Method}
+The Simplex method, an algebraic iterative algorithm developed by B. Dantzig
+in 1948, allows us to solve linear programming (LP) problems even those involving more 
+than two variables. The principle of the method is to start from an initial feasible 
+solution and iteratively move along the vertices of the polyhedron (feasible area) until the optimal solution
+is reached.
+
+\subsection*{\underline{Overview Of Simplexe Steps}}
+
+\vspace{0.35cm}
+\begin{center}
+    \includegraphics[height=0.9\textheight]{Chapters/Diagram/simplexe.drawio.pdf}
+\end{center}
+
+
+\subsubsection{BFS}
+
+\begin{prettyBox}{Basic Feasible Solution}{box}
+After converting the \textbf{LP} problem into standard form, the next step is to find a basic feasible solution. 
+To achieve this, set all decision variables to 0 and assign the slack variables the values of the right-hand side (\textbf{RHS}) of the constraints.\\[0.15cm]
+If any slack variable equals \(-\text{\textbf{RHS}}\), an artificial variable must be added to satisfy the non-negativity constraint for slack variables. 
+In this case, the slack variable is set to 0, and the artificial variable is assigned the RHS value.\\[0.2cm]
+For example: 
+\[
+x_1 + x_2 - s_1 = 10 \quad \Longrightarrow \quad x_1 + x_2 - s_1 + t_1 = 10
+\]
+
+where \(t_1 \geq 0\) is the artificial variable added to the equation.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Coefficient Of Objective Function}{red}
+The coefficient of artificial variables in the objective function is \(-M\),
+where \(M\) is a very large number, ensuring that artificial variables are
+driven out of the basis during the optimization process.\\[0.15cm]
+The coefficient of slack variables is 0.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\begin{prettyBox}{Basic/Non-Basic}{red}
+In the context of the Basic Feasible Solution (BFS), the variables that 
+are non-zero are referred to as \textbf{basic variables}, while the remaining
+variables are called \textbf{non-basic variables}.
+\end{prettyBox}
+
+
+\vspace{1cm}
+
+\subsubsection{Initial Table}
+\begin{prettyBox}{Create Initial Table}{box}
+\[
+    \text{Maximize } Z = c_1x_1 + c_2x_2 + \cdots + c_nx_n
+\]
+
+\vspace{0.25cm}
+\hspace{1cm}\text{Subject to:}
+\[
+\begin{aligned}
+    a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= b_1 \\
+    a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &= b_2 \\
+    &\hspace{-2cm}\vdots \\
+    a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &= b_m
+\end{aligned}
+\]
+
+\[
+    x_1, x_2, \dots, x_n \geq 0 \quad b_1, b_2, \dots, b_m \geq 0 
+\]
+\end{prettyBox}
+
+The notation for vectors and matrices is as follows:
+
+\[
+X = \left[\begin{matrix} x_1 & x_2 & \dots & x_n \end{matrix}\right], \hspace{0.35cm}
+C = \left[\begin{matrix} c_1 & c_2 & \dots & c_n \end{matrix}\right], \hspace{0.35cm}
+b = \left[\begin{matrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{matrix}\right], \hspace{0.35cm}
+B = \left[\begin{matrix} B_1 \\ B_2 \\ \vdots \\ B_m \end{matrix}\right], \hspace{0.35cm}
+C_B = \left[\begin{matrix} cb_1 \\ cb_2 \\ \vdots \\ cb_m \end{matrix}\right]
+\]
+
+\vspace{0.5cm}
+
+\[
+A = \left[\begin{matrix} a_{11} & \dots & a_{1n}\\
+                           \vdots & & \vdots\\
+                           a_{m1} & \dots & a_{mn}\end{matrix}\right]
+\]
+
+
+\vspace{0.75cm}
+\[
+Z_1 = C_B \cdot b \quad \text{and} \quad Z_i = C_B \cdot A(:, i-1) \quad \text{for} \quad i \geq 2 
+\]
+
+\vspace{0.5cm}
+Where:
+\begin{itemize}
+    \item \( n \) is the number of variables.
+    \item \( m \) is the number of constraints.
+    \item \( b \) is the vector of right-hand side (RHS) values.
+    \item \( X \) is the vector of variables.
+    \item \( C \) is the vector of coefficients in the objective function.
+    \item \( A \) is the matrix of coefficients in the constraints.
+    \item \( A(:,i-1) \) is submatrix of A all rows of column\(_{i-1}\)
+    \item \( B \) is the vector of basic variables.
+    \item \( C_B \) is the vector of the coefficients of the objective function for the basic variables.
+    \item \( Z_1 \) is the value of the objective function.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{Reminder: Dot Product}{red}
+    \[U = \left[\begin{matrix} u_1 & u_2 & \dots & u_m \end{matrix}\right] ,
+\hspace{0.3cm}
+    V = \left[\begin{matrix} v_1 & v_2 & \dots & v_m \end{matrix}\right]\]
+
+\vspace{0.15cm}
+\[U \cdot V = u_1.v_1 + u_2.v_2 + \dots + u_m.v_m\]
+\end{prettyBox}
 
