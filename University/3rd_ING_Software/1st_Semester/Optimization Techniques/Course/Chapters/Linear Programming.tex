@@ -1581,3 +1581,476 @@ If no basic variable can be selected to leave the basis (all coefficients of the
 If the algorithm terminates and artificial variables remain in the basis, the solution is infeasible. 
 \end{prettyBox}
 
+\newpage
+\subsubsection*{\underline{Example}}
+
+max \(Z = x_1 - x_2\)
+
+\[
+\left\{
+\begin{array}{l}
+    2x_{1} - x_{2} \geq -4 \\
+    x_{2}-x_{2} \leq 4 \\
+    x_{1} + x_{2} \leq 10 \\
+    x_{1}, x_{2}\geq 0
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    -2x_{1} + x_{2} \leq 4 \\
+    x_{2}-x_{2} \leq 4 \\
+    x_{1} + x_{2} \leq 10 \\
+    x_{1}, x_{2} \geq 0
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    -2x_{1} + x_{2} + s_{1} = 4 \\
+    x_{2}-x_{2} + s_{2} = 4 \\
+    x_{1} + x_{2} + s_{3} = 10 \\
+    x_{1}, x_{2}, s_{1}, s_{2}, s_{3}\geq 0
+\end{array}
+\right.
+\]
+
+
+\vspace{1.5cm}
+
+
+\subsubsection*{\underline{BFS}}
+\((x_1,x_2,s_1,s_2,s_3) = (0,0,4,4,10)\)
+
+\[
+    X = \left[\begin{matrix} x_1 & x_2 & s_1 & s_2 & s_3 \end{matrix}\right], \hspace{0.35cm}
+    C = \left[\begin{matrix} 1 & -1 & 0 & 0 & 0 \end{matrix}\right], \hspace{0.35cm}
+b = \left[\begin{matrix} 4 \\ 4 \\ 10 \end{matrix}\right], \hspace{0.35cm}
+B = \left[\begin{matrix} s_1 \\ s_2 \\ s_3 \end{matrix}\right], \hspace{0.35cm}
+C_B = \left[\begin{matrix} 0 \\ 0 \\ 0 \end{matrix}\right]
+\]
+
+
+\vspace{1cm}
+\[
+    A = \left[\begin{matrix} -2 & 1 & 1 & 0 & 0\\
+                             1 & -1 & 0 & 1 & 0\\
+                             1 & 1 & 0 & 0 & 1\end{matrix}\right]
+\]
+
+
+\vspace{0.75cm}
+\[Z_1 = C_B \cdot b\] 
+
+
+\[Z_i = C_B \cdot A(:, i-1) \quad \text{for} \quad i \geq 2\] 
+
+\[Z_i = \left[\begin{matrix} 0 & 0 & 0 & 0 & 0 & 0 \end{matrix}\right]\]
+
+\vspace{0.5cm}
+
+\[C_i-Z_i = \left[\begin{matrix} 1  & -1 & 0  & 0  & 0  \end{matrix}\right]\]
+
+\vspace{0.35cm}
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX4/ex4.1.pdf}
+\end{center}
+
+\vspace{0.25cm}
+\begin{itemize}   
+    \item The max of\hspace{0.2cm}\(C_i - Z_{i+1} > 0\)\hspace{0.2cm}is\hspace{0.2cm}\(C_1 - Z_2 = 1\)\hspace{0.1cm} so \(x_1\) 
+will be the variable to enter the basis.
+\item The min of \hspace{0.1cm}\(\frac{b_j}{a_{ji}}\)\hspace{0.1cm} with \(a_{ji} > 0\)\hspace{0.1cm} is \hspace{0.1cm} \(\frac{b_2}{a_{21}} = \frac{4}{1} = 4\)\hspace{0.35cm} \(s_2\)
+will leave the basis
+\item The pivot is \(a_{21} = 1\)
+ 
+\end{itemize}
+
+
+\vspace{0.25cm}
+
+
+
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX4/ex4.2.pdf}
+\end{center}
+
+\vspace{0.25cm}
+\begin{itemize}
+ \item Column \(s_1 , s_3\) remain the same.
+ \item \(b`_{1} = b_{1} - \frac{-2\times4}{1} = 4 + 8  = 12\)
+ \item \(b`_{3} = b_{3} - \frac{4\times1}{1} = 10 - 4  = 6\)
+ \item \(a`_{12} = a_{12} - \frac{-1\times-2}{1} = 1 - 2  = -1\)
+ \item \(a`_{32} = a_{32} - \frac{-1\times1}{1} = 1 + 1  = 2\)
+ \item \(a`_{14} = a_{14} - \frac{-2\times1}{1} = 0 + 2  = 2\)
+ \item \(a`_{34} = a_{34} - \frac{1\times1}{1} = 1 - 1  = 0\)
+\end{itemize}
+
+\vspace{0.25cm}
+
+
+
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX4/ex4.3.pdf}
+\end{center}
+
+\vspace{0.25cm}
+
+\begin{itemize}
+    \item Since all \hspace{0.2cm}\(C_i - Z_{i+1} \leq 0\)\hspace{0.2cm}we can no longer enter a variable to the basis so algorithm ended.
+    \item Solution is \(S_1 = (x_1,x_2,s_1,s_2,s_3) = (4,0,12,0,4)\) and value of objective function = \(Z_1 = 4\)
+    \item We notice that \(x_2\) a non basic variable has its \(C_i - Z_i = 0\) so if we enter \(x_2\) to the basis it will result into another
+        optimal solution
+   \item The min of \hspace{0.1cm}\(\frac{b_j}{a_{ji}}\)\hspace{0.1cm} with \(a_{ji} > 0\)\hspace{0.1cm} is \hspace{0.1cm} \(\frac{b_3}{a_{32}} = \frac{4}{2} = 2\)\hspace{0.35cm} \(s_2\)
+will leave the basis
+   \item The pivot is \(a_{32} = 2\)
+ 
+\end{itemize}
+
+\vspace{0.15cm}
+
+
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX4/ex4.4.pdf}
+\end{center}
+
+\vspace{0.15cm}
+\begin{itemize}
+
+ \item Column \(x_1 , s_1\) remain the same.
+ \item \(b``_{1} = b_`{1} - \frac{-1\times6}{2} = 12 + 3  = 15\)
+ \item \(b`_{2} = b_{2} - \frac{-1\times6}{2} = 4 + 3  = 7\)
+ \item \(a``_{14} = a`_{14} - \frac{-1\times-1}{2} = 2 - \frac{1}{2}  = \frac{3}{2}\)
+ \item \(a`_{24} = a_{24} - \frac{-1\times-1}{2} = 1 - \frac{1}{2}  = \frac{1}{2}\)
+ \item \(a``_{15} = a`_{15} - \frac{-1\times1}{2} = 0 + \frac{1}{2}  = \frac{1}{2}\)
+ \item \(a`_{25} = a_{25} - \frac{1\times-1}{2} = 0 + \frac{1}{2}  = \frac{1}{2}\)
+
+\end{itemize}
+
+\vspace{0.25cm}
+
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX4/ex4.5.pdf}
+\end{center}
+
+\begin{itemize}
+    \item Second Solution is \(S_2 = (x_1,x_2,s_1,s_2,s_3) = (7,3,15,0,0)\) and value of objective function is the same = \(Z_1 = 4\)
+    \item Segment of solution \(\in[S_1,S_2]\) 
+\end{itemize}
+
+\vspace{1cm}
+
+\[\text{min } Z = -x_1 + x_2 \hspace{0.5cm} \Longrightarrow \hspace{0.5cm} \text{max } -\hspace{-0.1cm}Z = x_1 - x_2  \hspace{0.5cm} \Longrightarrow \hspace{0.5cm} \text{max } -\hspace{-0.1cm}Z = x_1 - x_2 - Mt_1\] 
+
+\[
+\left\{
+\begin{array}{l}
+    2x_{1} - x_{2} \geq -2 \\
+    x_{1} - 2x_{2} \leq -8 \\
+    x_{1} + x_{2} \leq 5 \\
+    x_{1}, x_{2} \geq 0
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    -2x_{1} + x_{2} \leq 2 \\
+    -x_{1} + 2x_{2} \geq 8 \\
+    x_{1} + x_{2} \leq 5 \\
+    x_{1}, x_{2} \geq 0
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    -2x_{1} + x_{2} + s_{1} = 2 \\
+    -x_{1} + 2x_{2} - s_{2} = 8 \\
+    x_{1} + x_{2} + s_{3} = 5 \\
+    x_{1}, x_{2}, s_{1}, s_{2}, s_{3} \geq 0
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    -2x_{1} + x_{2} + s_{1} = 2 \\
+    -x_{1} + 2x_{2} - s_{2} + t_{1} = 8 \\
+    x_{1} + x_{2} + s_{3} = 5 \\
+    x_{1}, x_{2}, s_{1}, s_{2}, s_{3}, t_{1} \geq 0
+\end{array}
+\right.
+
+
+
+\]
+
+\vspace{1cm}
+
+\subsubsection*{\underline{BFS}}
+\((x_1,x_2,s_1,s_2,s_3,t_1) = (0,0,2,0,5,8)\)
+
+\[
+X = \left[\begin{matrix} x_1 & x_2 & s_1 & s_2 & s_3 & t_1 \end{matrix}\right], \hspace{0.35cm}
+C = \left[\begin{matrix} 1 & -1 & 0 & 0 & 0 & -M \end{matrix}\right], \hspace{0.35cm}
+b = \left[\begin{matrix} 2 \\ 8 \\ 5 \end{matrix}\right], \hspace{0.35cm}
+B = \left[\begin{matrix} s_1 \\ t_1 \\ s_3 \end{matrix}\right], \hspace{0.35cm}
+C_B = \left[\begin{matrix} 0 \\ -M \\ 0 \end{matrix}\right]
+\]
+
+
+\vspace{0.5cm}
+\[
+    A = \left[\begin{matrix} -2 & 1 & 1 & 0  & 0 & 0\\
+                             -1 & 2 & 0 & -1 & 0 & 1\\
+                              1 & 1 & 0 & 0  & 1 & 0
+                            \end{matrix}\right]
+\]
+
+\vspace{0.6cm}
+
+\[Z_1 = C_B \cdot b\] 
+
+
+\[Z_i = C_B \cdot A(:, i-1) \quad \text{for} \quad i \geq 2\] 
+
+\[Z_i =  \left[\begin{matrix} -8M & M & -2M & 0 & M & 0 & -M   \end{matrix}\right]\]
+
+\vspace{0.5cm}
+
+\[C_i-Z_i = \left[\begin{matrix} 1-M & -1+2M & 0 & -M & 0 & 0  \end{matrix}\right]\]
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX5/ex5.1.pdf}
+\end{center}
+
+\vspace{0.25cm}
+\begin{itemize}   
+    \item The max of\hspace{0.2cm}\(C_i - Z_{i+1} > 0\)\hspace{0.2cm}is\hspace{0.2cm}\(C_2 - Z_3 = -1+2M\)\hspace{0.1cm} so \(x_2\) 
+will be the variable to enter the basis.
+\item The min of \hspace{0.1cm}\(\frac{b_j}{a_{ji}}\)\hspace{0.1cm} with \(a_{ji} > 0\)\hspace{0.1cm} is \hspace{0.1cm} \(\frac{b_1}{a_{12}} = \frac{2}{1} = 2\)\hspace{0.35cm} \(s_1\)
+will leave the basis
+\item The pivot is \(a_{12} = 1\)
+ 
+\end{itemize}
+
+
+\vspace{0.25cm}
+
+
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX5/ex5.2.pdf}
+\end{center}
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX5/ex5.3.pdf}
+\end{center}
+
+\vspace{0.25cm}
+\begin{itemize}   
+    \item The max of\hspace{0.2cm}\(C_i - Z_{i+1} > 0\)\hspace{0.2cm}is\hspace{0.2cm}\(C_1 - Z_2 = -1+3M\)\hspace{0.1cm} so \(x_1\) 
+will be the variable to enter the basis.
+\item The min of \hspace{0.1cm}\(\frac{b_j}{a_{ji}}\)\hspace{0.1cm} with \(a_{ji} > 0\)\hspace{0.1cm} is \hspace{0.1cm} \(\frac{b_3}{a_{31}} = \frac{3}{3} = 1\)\hspace{0.35cm} \(s_3\)
+will leave the basis
+\item The pivot is \(a_{31} = 3\)
+ 
+\end{itemize}
+
+
+\vspace{0.25cm}
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX5/ex5.4.pdf}
+\end{center}
+
+\newpage
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX5/ex5.5.pdf}
+\end{center}
+
+\vspace{0.25cm}
+
+\begin{itemize}
+    \item Since all \hspace{0.2cm}\(C_i - Z_{i+1} \leq 0\)\hspace{0.2cm}, no variable can enter the basis, indicating that the algorithm has terminated.
+    \item \(t_1\) an artificial variable is still in the basis; therefore, the solution is infeasible.
+\end{itemize}
+
+\vspace{1cm}
+
+\[\text{max } Z = 10x_1 + 14x_2 \hspace{1cm} \Longrightarrow \hspace{1cm} \text{max } \hspace{-0.1cm}Z = 10x_1 + 14x_2 - Mt_1 - Mt_2\] 
+
+\[
+\left\{
+\begin{array}{l}
+    x_{1} + x_{2} \geq 12 \\
+    x_{1} \geq 8 \\
+    x_{1} \leq 6 \\
+    x_{1}, x_{2}\geq 0
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    x_{1} + x_{2} - s_{1} = 12 \\
+    x_{1} - s_{2} = 8 \\
+    x_{1} + s_{3} = 6 \\
+    x_{1}, x_{2}, s_{1}, s_{2}, s_{3}\geq 0
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    x_{1} + x_{2} - s_{1} + t_{1} = 12 \\
+    x_{1} - s_{2} + t_{2} = 8 \\
+    x_{1} + s_{3} = 6 \\
+    x_{1}, x_{2}, s_{1}, s_{2}, s_{3}, t_{1}, t_{2}\geq 0
+\end{array}
+\right.
+\]
+
+
+\vspace{1.5cm}
+
+
+\subsubsection*{\underline{BFS}}
+\((x_1,x_2,s_1,s_2,s_3,t_1,t_2) = (0,0,0,0,6,12,8)\)
+
+\[
+X = \left[\begin{matrix} x_1 & x_2 & s_1 & s_2 & s_3 & t_1 & t_2\end{matrix}\right], \hspace{0.35cm}
+C = \left[\begin{matrix} 10 & 14 & 0 & 0 & 0 & -M & -M \end{matrix}\right], \hspace{0.35cm}
+b = \left[\begin{matrix} 12 \\ 8 \\ 6 \end{matrix}\right], \hspace{0.35cm}
+B = \left[\begin{matrix} t_1 \\ t_2 \\ s_3 \end{matrix}\right], \hspace{0.35cm}
+C_B = \left[\begin{matrix} -M \\ -M \\ 0 \end{matrix}\right]
+\]
+
+\vspace{0.5cm}
+\[
+    A = \left[\begin{matrix}  1 & 1 & -1& 0 & 0 & 1 & 0\\
+                              1 & 0 & 0 & -1& 0 & 0 & 1 \\
+                              0 & 1 & 0 & 0 & 1 & 0 & 0\end{matrix}\right]
+\]
+
+
+\vspace{0.75cm}
+\[Z_1 = C_B \cdot b\] 
+
+
+\[Z_i = C_B \cdot A(:, i-1) \quad \text{for} \quad i \geq 2\] 
+
+\[Z_i = \left[\begin{matrix} -20M & -2M & -M & M & M & 0 & -M & -M \end{matrix}\right]\]
+
+\vspace{0.5cm}
+
+\[C_i-Z_i = \left[\begin{matrix} 10 + 2M  & 14+M & -M  & -M  & 0 & 0 & 0  \end{matrix}\right]\]
+
+\vspace{0.35cm}
+
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX6/ex6.1.pdf}
+\end{center}
+
+\vspace{0.25cm}
+\begin{itemize}   
+\item The max of\hspace{0.2cm}\(C_i - Z_{i+1} > 0\)\hspace{0.2cm}is\hspace{0.2cm}\(C_1 - Z_2 = 10+2M\)\hspace{0.1cm} so \(x_1\) 
+will be the variable to enter the basis.
+\item The min of \hspace{0.1cm}\(\frac{b_j}{a_{ji}}\)\hspace{0.1cm} with \(a_{ji} > 0\)\hspace{0.1cm} is \hspace{0.1cm} \(\frac{b_2}{a_{21}} = \frac{8}{1} = 8\)\hspace{0.35cm} \(t_2\)
+will leave the basis
+\item The pivot is \(a_{21} = 1\)
+ 
+\end{itemize}
+
+
+\vspace{0.25cm}
+
+
+
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX6/ex6.2.pdf}
+\end{center}
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX6/ex6.3.pdf}
+\end{center}
+
+\vspace{0.25cm}
+\begin{itemize}   
+\item The max of\hspace{0.2cm}\(C_i - Z_{i+1} > 0\)\hspace{0.2cm}is\hspace{0.2cm}\(C_2 - Z_3 = 14+M\)\hspace{0.1cm} so \(x_2\) 
+will be the variable to enter the basis.
+\item The min of \hspace{0.1cm}\(\frac{b_j}{a_{ji}}\)\hspace{0.1cm} with \(a_{ji} > 0\)\hspace{0.1cm} is \hspace{0.1cm} \(\frac{b_1}{a_{12}} = \frac{4}{1} = 4\)\hspace{0.35cm} \(t_1\)
+will leave the basis
+\item The pivot is \(a_{12} = 1\)
+ 
+\end{itemize}
+
+
+\vspace{0.25cm}
+
+
+
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX6/ex6.4.pdf}
+\end{center}
+
+\newpage
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX6/ex6.5.pdf}
+\end{center}
+
+\vspace{0.25cm}
+\begin{itemize}   
+\item The max of\hspace{0.2cm}\(C_i - Z_{i+1} > 0\)\hspace{0.2cm}is\hspace{0.2cm}\(C_3 - Z_4 = 14\)\hspace{0.1cm} so \(s_1\) 
+will be the variable to enter the basis.
+\item The min of \hspace{0.1cm}\(\frac{b_j}{a_{ji}}\)\hspace{0.1cm} with \(a_{ji} > 0\)\hspace{0.1cm} is \hspace{0.1cm} \(\frac{b_3}{a_{33}} = \frac{2}{1} = 1\)\hspace{0.35cm} \(s_3\)
+will leave the basis
+\item The pivot is \(a_{33} = 1\)
+ 
+\end{itemize}
+
+
+\vspace{0.25cm}
+
+
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX6/ex6.6.pdf}
+\end{center}
+
+\newpage
+
+\begin{center}
+    \includegraphics{Chapters/Simplexe/EX/EX6/ex6.7.pdf}
+\end{center}
+
+\vspace{0.25cm}
+\begin{itemize}   
+\item The max of\hspace{0.2cm}\(C_i - Z_{i+1} > 0\)\hspace{0.2cm}is\hspace{0.2cm}\(C_4 - Z_5 = 10\)\hspace{0.1cm} so \(s_2\) 
+will be the variable to enter the basis.
+\item The min of \hspace{0.1cm}\(\frac{b_j}{a_{ji}}\)\hspace{0.1cm} with \(a_{ji} > 0\)\hspace{0.1cm} doesn't exist cause all coefficients of \(s_2\) column are \(\leq 0\) 
+\item Therefore, the solution is unbounded \(\to +\infty\).
+ 
+\end{itemize}
+
+
