@@ -2053,4 +2053,137 @@ will be the variable to enter the basis.
  
 \end{itemize}
 
+\newpage
+
+\subsection{Dual}
+
+\subsubsection{Max \& Min Form}
+
+\begin{prettyBox}{Max Form}{box}
+ \[
+    \text{Maximize } Z = c_1x_1 + c_2x_2 + \cdots + c_nx_n
+\]
+
+\vspace{0.25cm}
+\hspace{1cm}\text{Subject to:}
+\[
+\begin{aligned}
+    a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &\leq b_1 \\
+    a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &\leq b_2 \\
+    &\hspace{-2cm}\vdots \\
+    a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &\leq b_m
+\end{aligned}
+\]
+
+\[
+    x_1, x_2, \dots, x_n \geq 0  
+\]
+   
+\end{prettyBox}
+
+\vspace{0.85cm}
+
+\begin{prettyBox}{Min Form}{box}
+ \[
+    \text{Minimize } Z = c_1x_1 + c_2x_2 + \cdots + c_nx_n
+\]
+
+\vspace{0.25cm}
+\hspace{1cm}\text{Subject to:}
+\[
+\begin{aligned}
+    a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &\geq b_1 \\
+    a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &\geq b_2 \\
+    &\hspace{-2cm}\vdots \\
+    a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &\geq b_m
+\end{aligned}
+\]
+
+\[
+    x_1, x_2, \dots, x_n \geq 0  
+\]
+   
+\end{prettyBox}
+
+\newpage
+
+\subsubsection{Primal \(\to\) Dual}
+To get the dual of a problem we need to follow these steps
+
+\vspace{0.35cm}
+
+\begin{center}
+    \includegraphics[width = 0.2\textwidth]{Chapters/Diagram/dual.drawio.pdf}
+\end{center}
+
+\subsubsection*{\underline{Put Primal Into Max Form}}
+we can force the primal to be in max form by following these tricks 
+
+\vspace{0.35cm}
+\begin{center}
+    \includegraphics{Chapters/Dual/maxForm.pdf}
+\end{center}
+
+
+\subsubsection*{\underline{Form The Dual}}
+\begin{prettyBox}{Primal LP}{box}
+ \[
+    \text{Maximize } Z = c_1x_1 + c_2x_2 + \cdots + c_nx_n
+\]
+
+\vspace{0.25cm}
+\hspace{1cm}\text{Subject to:}
+\[
+\begin{aligned}
+    a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &\leq b_1 \\
+    a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &\leq b_2 \\
+    &\hspace{-2cm}\vdots \\
+    a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &\leq b_m
+\end{aligned}
+\]
+
+\[
+    x_1, x_2, \dots, x_n \geq 0  
+\]
+ 
+\end{prettyBox}
+
+\vspace{1cm}
+
+The notation for vectors and matrices is as follows:
+
+\[
+X = \left[\begin{matrix} x_1 & x_2 & \dots & x_n \end{matrix}\right], \hspace{0.35cm}
+C = \left[\begin{matrix} c_1 & c_2 & \dots & c_n \end{matrix}\right], \hspace{0.35cm}
+b = \left[\begin{matrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{matrix}\right], \hspace{0.35cm}
+Y = \left[\begin{matrix} y_1 & y_2 & \dots & y_m \end{matrix}\right]
+\]
+
+\vspace{0.5cm}
+
+\[
+A = \left[\begin{matrix} a_{11} & \dots & a_{1n} \\
+                           \vdots & & \vdots \\
+                           a_{m1} & \dots & a_{mn} \end{matrix}\right], \hspace{0.35cm}
+A^{T} = \left[\begin{matrix} a_{11} & \dots & a_{m1} \\
+                             \vdots & & \vdots \\
+                             a_{1n} & \dots & a_{mn} \end{matrix}\right]
+\]
+
+\vspace{1cm}
+where
+\begin{itemize}
+    \item \(X\): Vector of variables of the primal.
+    \item \(C\): Vector of coefficients of the objective function of the primal.
+    \item \(b\): Vector of RHS of the primal.
+    \item \(A\): Matrix of coefficients of the constraints of the primal.
+    \item \(Y\): Vector of variables of the dual.
+    \item \(A^{T}\): Transpose of \(A\).
+\end{itemize}
+
+\vspace{0.35cm}
+\begin{center}
+    \includegraphics{Chapters/Dual/dual.pdf}
+\end{center}
+
 

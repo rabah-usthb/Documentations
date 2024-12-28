@@ -1,0 +1,25 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram name="Page-1" id="ZTiOVYBDubDf3i6veerB">
+    <mxGraphModel dx="722" dy="472" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="570" pageHeight="940" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TNCD69EW-_Z-LIMdJ20q-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TNCD69EW-_Z-LIMdJ20q-2" target="TNCD69EW-_Z-LIMdJ20q-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TNCD69EW-_Z-LIMdJ20q-2" value="Put Primal Into&amp;nbsp;&lt;div&gt;Max Form&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="180" y="100" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TNCD69EW-_Z-LIMdJ20q-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TNCD69EW-_Z-LIMdJ20q-3" target="TNCD69EW-_Z-LIMdJ20q-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TNCD69EW-_Z-LIMdJ20q-3" value="Vector And&amp;nbsp;&lt;div&gt;Matrix Operation&amp;nbsp;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="180" y="180" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TNCD69EW-_Z-LIMdJ20q-4" value="Dual Form&amp;nbsp;&lt;div&gt;I&lt;span style=&quot;background-color: initial;&quot;&gt;n Min Form&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="180" y="260" width="120" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
