@@ -2186,4 +2186,522 @@ where
     \includegraphics{Chapters/Dual/dual.pdf}
 \end{center}
 
+\vspace{0.5cm}
+
+\subsubsection*{\underline{Example}}
+\subsubsection*{\underline{Primal}}
+
+\[\text{max } Z = x_1 + 3x_2 + 5x_3\]
+
+\[
+\left\{
+\begin{array}{l}
+    x_{1} + 2x_{2} + 3x_{3}\leq 10 \\
+    4x_{1} + 5x_{2} + x_{3} \leq 15 \\
+    x_{1}, x_{2}, x_{3}\geq 0
+\end{array}
+\right.
+
+\vspace{0.5cm}
+\[
+X = \left[\begin{matrix} x_1 & x_2 & x_3 \end{matrix}\right], \hspace{0.35cm}
+C = \left[\begin{matrix} 1 & 3 & 5 \end{matrix}\right], \hspace{0.35cm}
+b = \left[\begin{matrix} 10 \\ 15 \ \end{matrix}\right], \hspace{0.35cm}
+Y = \left[\begin{matrix} y_1 & y_2 \end{matrix}\right]
+\]
+
+\vspace{0.5cm}
+
+\[
+A = \left[\begin{matrix}   1 & 2 & 3 \\
+                           4 & 5 & 1 
+                           \end{matrix}\right], \hspace{0.35cm}
+A^{T} = \left[\begin{matrix}  1 & 4  \\
+                              2 & 5 \\
+                              3 & 1
+                     \end{matrix}\right]
+\]
+
+
+\subsubsection*{\underline{Dual}}
+\[\text{min } Z = 10y_1 + 15y_2\]
+
+\[
+\left\{
+\begin{array}{l}
+    y_{1} + 4y_{2} \geq 1 \\
+    2y_{1} + 5y_{2} \geq 3 \\
+    3y_{1} + y_{2}  \geq 5\\ 
+    y_{1}, y_{2}\geq 0
+\end{array}
+\right.
+
+
+\subsubsection*{\underline{Primal}}
+
+\[\text{max } Z = 6x_1 + x_2 + 4x_3 \]
+
+\[
+\left\{
+\begin{array}{l}
+    3x_{1} + 7x_{2} + x_{3}\leq 15 \\
+    x_{1} - 2x_{2} + 3x_{3} = 20 \\
+    x_{1}, x_{2}, x_{3}\geq 0
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    3x_{1} + 7x_{2} + x_{3}\leq 15 \\
+    x_{1} - 2x_{2} + 3x_{3} \leq 20 \\
+    x_{1} - 2x_{2} + 3x_{3} \geq 20 \\
+    x_{1}, x_{2}, x_{3}\geq 0
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    3x_{1} + 7x_{2} + x_{3}\leq 15 \\
+    x_{1} - 2x_{2} + 3x_{3} \leq 20 \\
+    -x_{1} + 2x_{2} - 3x_{3} \leq -20 \\
+    x_{1}, x_{2}, x_{3}\geq 0
+\end{array}
+\right.
+
+
+\vspace{0.5cm}
+\[
+X = \left[\begin{matrix} x_1 & x_2 & x_3 \end{matrix}\right], \hspace{0.35cm}
+C = \left[\begin{matrix} 1 & 1 & 4 \end{matrix}\right], \hspace{0.35cm}
+b = \left[\begin{matrix} 15 \\ 20 \\ -20 \end{matrix}\right], \hspace{0.35cm}
+Y = \left[\begin{matrix} y_1 & y_2 & y_3 \end{matrix}\right]
+\]
+
+\vspace{0.5cm}
+
+\[
+A = \left[\begin{matrix}   3 & 7 & 1 \\
+                           1 & -2& 3\\
+                           -1& 2 & -3
+                           \end{matrix}\right], \hspace{0.35cm}
+A^{T} = \left[\begin{matrix}  3 & 1 & -1  \\
+                              7 & -2& 2\\
+                              1 & 3 & -3
+                     \end{matrix}\right]
+\]
+
+
+\subsubsection*{\underline{Dual}}
+\[\text{min } Z = 15y_1 + 20y_2 - 20y_3\]
+
+\[
+\left\{
+\begin{array}{l}
+    3y_{1} + y_{2} - y_{3} \geq 6 \\
+    7y_{1} - 2y_{2} + 2y_{3} \geq 1 \\
+    y_{1} + 3y_{2} - 3y_{3} \geq 4\\ 
+    y_{1}, y_{2}, y_{3}\geq 0
+\end{array}
+\right.
+
+\newpage
+
+\subsubsection*{\underline{Primal}}
+
+\[\text{min } Z = x_1 - x_2 + 3x_3 \hspace{0.5cm}\Longrightarrow\hspace{0.5cm} \text{max } -Z = - x_1 + x_2 - 3x_3
+    \hspace{0.5cm}\Longrightarrow\hspace{0.5cm} \text{max } -Z = - x_1 + x_2 - 3a_1 + 3a_2
+\]
+
+\[
+\left\{
+\begin{array}{l}
+    4x_{1} + 5x_{2} - 6x_{3} = 7 \\
+    8x_{1} - 9x_{2} + 10x_{3} \leq 11 \\
+    x_{1}, x_{2}\geq 0 ,\hspace{0.1cm}x_{3}\hspace{0.1cm}\text{unrestricted}
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    4x_{1} + 5x_{2} - 6x_{3} \leq 7 \\
+    -4x_{1} - 5x_{2} + 6x_{3} \geq -7 \\
+    8x_{1} - 9x_{2} + 10x_{3} \leq 11 \\
+    x_{1}, x_{2}\geq 0 ,\hspace{0.1cm}x_{3}\hspace{0.1cm}\text{unrestricted}
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    4x_{1} + 5x_{2} - 6a_{1} + 6a_{2} \leq 7 \\
+    -4x_{1} - 5x_{2} + 6a_{1} - 6a_{2} \geq -7 \\
+    8x_{1} - 9x_{2} + 10x_{1} - 10a_{2} \leq 11 \\
+    x_{1}, x_{2}, a_{1}, a_{2}\geq 0 
+\end{array}
+\right.
+
+
+\vspace{0.5cm}
+\[
+    X = \left[\begin{matrix} x_1 & x_2 & a_1 & a_2 \end{matrix}\right], \hspace{0.35cm}
+    C = \left[\begin{matrix} -1 & 2 & -3 & 3 \end{matrix}\right], \hspace{0.35cm}
+b = \left[\begin{matrix} 7 \\ -7 \\ 11  \end{matrix}\right], \hspace{0.35cm}
+Y = \left[\begin{matrix} y_1 & y_2 & y_3 \end{matrix}\right]
+\]
+
+\vspace{0.5cm}
+
+\[
+    A = \left[\begin{matrix}   4 & 5 & -6 & 6 \\
+                               -4 & -5& 6 & -6\\
+                              8 & -9 & 10 &-10
+                           \end{matrix}\right], \hspace{0.35cm}
+A^{T} = \left[\begin{matrix}  4& -4 & 8  \\
+                              5 & -5& -9\\
+                              6 & -6 & 10\\
+                              -6 & 6 & -10
+                     \end{matrix}\right]
+\]
+
+\vspace{1cm}
+
+\subsubsection*{\underline{Dual}}
+\[\text{min } Z = 7y_1 + -7y_2 + 11y_3\]
+
+\[
+\left\{
+\begin{array}{l}
+    4y_{1} - 4y_{2} + 8y_{3} \geq -1 \\
+    5y_{1} - 5y_{2} - 9y_{3} \geq 2 \\
+    6y_{1} - 6y_{2} + 10y_{3} \geq -3\\
+    -6y_{1} + 6y_{2} - 10y_{3} \geq 3\\ 
+    y_{1}, y_{2}, y_{3}\geq 0
+\end{array}
+\right.
+
+\newpage
+
+
+\subsubsection{Complementary Slackness Theorem}
+\begin{prettyBox}{Theorem}{box}
+\[
+X^{*} \cdot (A^{T} \cdot Y^{*} - C) = 0
+\]  
+and  
+\[
+Y^{*} \cdot (b - A \cdot X^{*}) = 0
+\]
+\end{prettyBox}
+
+\vspace{1cm}
+
+where
+\begin{itemize}
+    \item \(X^{*}\): Vector of feasible solutions of the primal.
+    \item \(C\): Vector of coefficients of the objective function of the primal.
+    \item \(b\): Vector of RHS of the primal.
+    \item \(A\): Matrix of coefficients of the constraints of the primal.
+    \item \(Y^{*}\): Vector of feasible solutions of the dual.
+    \item \(A^{T}\): Transpose of \(A\).
+\end{itemize}
+
+\vspace{0.25cm}
+
+\subsubsection*{\underline{Example}}
+\subsubsection*{\underline{Dual Solution From Primal Solution}}
+
+
+\vspace{0.5cm}
+
+\begin{minipage}{0.45\textwidth}
+\subsubsection*{\underline{Primal}}
+\(X^{*} = \left[\begin{matrix} 7 & 0 & 3 \end{matrix}\right]\)
+
+\vspace{0.45cm}
+\(\text{max } Z = -12x_1-5x_2-10x_3\)
+
+\vspace{0.45cm}
+\(
+\left\{
+\begin{array}{l}
+    -x_{1} + x_{2} - 2x_{3} \leq -10 \\
+    3x_{1} - x_{2} - 4x_{3} \leq 9 \\
+    x_{1} - 2x_{2} - 3x_{3} \leq -1\\
+    -2x_{1} + 3x_{2}  \leq 2\\
+    -7x_{1} + x_{2} + 5x_{3} \leq -34\\
+    x_{1}, x_{2}, x_{3}\geq 0
+\end{array}
+\right.
+\)
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+
+\vspace{-1cm}
+\subsubsection*{\underline{Dual}}
+\(Y^{*} = \left[\begin{matrix} y^{*}_{1} & y^{*}_{2}  & y^{*}_{3} & y^{*}_{4}  & y^{*}_{5}  \end{matrix}\right]\)
+
+\vspace{0.45cm}
+\(\text{min } Z = -10y_1+9y_2-y_3+2y_{4}-34y_{5}\)
+
+\vspace{0.45cm}
+\(
+
+\left\{
+\begin{array}{l}
+    -y_{1} + 3y_{2} + y_{3} - 2y_{4} - 7y_{5} \geq -12 \\
+    y_{1} - y_{2} - 2y_{3} + 3y_{4} + y_{5} \geq -5 \\
+    2y_{1} - 4y_{2} -3 y_{3} + 5y_{5} \geq -10 \\
+    y_{1}, y_{2}, y_{3}, y_{4}, y_{5}\geq 0
+\end{array}
+\right.
+\)
+\end{minipage}
+
+\newpage
+
+\[
+\left\{
+\begin{array}{l}
+    y^{*}_{1} (-10 +(7) -(0) + 2(3)) = 0  \\
+    y^{*}_{2}(9 - 3(7) + (0) + 4(3)) = 0  \\
+    y^{*}_{3}(-1 - (7) + 2(0) + 3(3)) = 0 \\
+    y^{*}_{4}(2+2(7) - 3(3)) = 0\\
+    y^{*}_{5}(-34+7(7) - (0) - 5(3)) =0 \\
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    y^{*}_{1} (3) = 0  \\
+    y^{*}_{2}(0) = 0  \\
+    y^{*}_{3}(1) = 0 \\
+    y^{*}_{4}(7) = 0\\
+    y^{*}_{5}(0) =0 \\
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    y^{*}_{1}  = 0  \\
+    y^{*}_{2} > 0  \\
+    y^{*}_{3} = 0 \\
+    y^{*}_{4} = 0\\
+    y^{*}_{5}>0 \\
+\end{array}
+\right.
+
+\]
+
+\[
+\left\{
+\begin{array}{l}
+    x^{*}_{1}(-y^{*}_{1} + 3y^{*}_{2} + y^{*}_{3} - 2y^{*}_{4} - 7y^{*}_{5}+12) = 0 \\
+    x^{*}_{2} (y^{*}_{1} - y^{*}_{2} - 2y^{*}_{3} + 3y^{*}_{4} + y^{*}_{5}  + 5 ) = 0\\
+    x^{*}_3 (2y^{*}_{1} - 4y^{*}_{2} -3y^{*}_{3} + 5y^{*}_{5}  + 10) = 0 \\
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    7(3y^{*}_{2} - 7y^{*}_{5}+12) = 0 \\
+    0(- y^{*}_{2} + y^{*}_{5}  + 5 ) = 0\\
+    3 (- 4y^{*}_{2} + 5y^{*}_{5}  + 10) = 0 \\
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    (3y^{*}_{2} - 7y^{*}_{5}+12) = 0 \\
+    (- 4y^{*}_{2} + 5y^{*}_{5}  + 10) = 0 \\
+\end{array}
+\right.
+\]
+
+\vspace{0.75cm}
+
+\[
+\left\{
+\begin{array}{l}
+    3y^{*}_{2} - 7y^{*}_{5} = -12 \\
+    - 4y^{*}_{2} + 5y^{*}_{5} = -10 \\
+\end{array}
+\right.
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+     y^{*}_{2} = 10 \\
+     y^{*}_{5}= 6 \\
+\end{array}
+\right.
+\]
+
+\vspace{0.5cm}
+
+
+\[Y^{*} = \left[\begin{matrix} 0 & 10  & 0 & 0  & 6  \end{matrix}\right]\]
+
+\vspace{1cm}
+
+\subsubsection*{\underline{Dual Solution From Primal Solution}}
+
+
+\vspace{0.5cm}
+
+\begin{minipage}{0.45\textwidth}
+\subsubsection*{\underline{Primal}}
+\(X^{*} = \left[\begin{matrix} x^{*}_{1} & x^{*}_{2} & x^{*}_{3}  \end{matrix}\right]\)
+
+\vspace{0.45cm}
+\(\text{max } Z = -2x_1-5x_2-3x_3\)
+
+\vspace{0.45cm}
+\(
+\left\{
+\begin{array}{l}
+    -x_{1}  \leq -10 \\
+    - x_{2} \leq -15 \\
+    -x_{1} - 2x_{2} - x_{3} \leq -60\\
+    -2x_{1} - x_{2} - 2x_{3} \leq -95\\
+    x_{1}, x_{2}, x_{3}\geq 0
+\end{array}
+\right.
+\)
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+
+\vspace{-0.3cm}
+\subsubsection*{\underline{Dual}}
+\(Y^{*} = \left[\begin{matrix} 0 & 4  & 0 & 1 \end{matrix}\right]\)
+
+\vspace{0.45cm}
+\(\text{min } Z = -10y_1-15y_2-60y_3-95y_{4}\)
+
+\vspace{0.45cm}
+\(
+
+\left\{
+\begin{array}{l}
+    -y_{1}  - y_{3} - 2y_{4} \geq -2 \\
+    - y_{2} - 2y_{3} - y_{4}  \geq -5 \\
+    -y_{3} - 2y_{4} \geq -3 \\
+    y_{1}, y_{2}, y_{3}, y_{4}\geq 0
+\end{array}
+\right.
+\)
+\end{minipage}
+
+\newpage
+
+\[
+\left\{
+\begin{array}{l}
+    x^{*}_{1}(-(0) - (0) - 2(1) + 2) = 0 \\
+    x^{*}_{2} (-(4) - 2(0) - (1) + 5 ) = 0\\
+    x^{*}_3 (-(0) -2(1) + 3) = 0 \\
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    x^{*}_{1}(0) = 0 \\
+    x^{*}_{2} (0) = 0\\
+    x^{*}_3 (1) = 0 \\
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    x^{*}_{1} > 0 \\
+    x^{*}_{2} > 0\\
+    x^{*}_3 = 0 \\
+\end{array}
+\right.
+\]
+
+\vspace{0.75cm}
+
+\[
+\left\{
+\begin{array}{l}
+    y^{*}_{1} (-10 +x^{*}_{1}) = 0  \\
+    y^{*}_{2}(-15 + x^{*}_{2}) = 0  \\ 
+    y^{*}_{3}(-60 + x^{*}_{1} +2x^{*}_{2} +x^{*}_{3}) = 0\\
+    y^{*}_{4}(-95 + 2x^{*}_{1} +x^{*}_{2} +2 x^{*}_{3}) = 0\\
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    0 (-10 +x^{*}_{1}) = 0  \\
+    4(-15 + x^{*}_{2}) = 0  \\ 
+    0(-60 + x^{*}_{1} +2x^{*}_{2}) = 0\\
+    1(-95 + 2x^{*}_{1} +x^{*}_{2}) = 0\\
+\end{array}
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+    -15 + x^{*}_{2} = 0  \\ 
+    -95 + 2x^{*}_{1} +x^{*}_{2} = 0\\
+\end{array}
+\right.
+
+\]
+
+\vspace{0.25cm}
+
+\[
+\left\{
+\begin{array}{l}
+    -15 + x^{*}_{2} = 0  \\ 
+    -95 + 2x^{*}_{1} +x^{*}_{2} = 0\\
+\end{array}
+\right.
+\right.
+\quad
+\Longrightarrow
+\quad
+\left\{
+\begin{array}{l}
+     x^{*}_{1} = 40 \\
+     x^{*}_{2}= 15 \\
+\end{array}
+\right.
+\]
+
+
+\vspace{0.75cm}
+
+
+
+\[X^{*} = \left[\begin{matrix} 40 & 15  & 0   \end{matrix}\right]\]
+
 

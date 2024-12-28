@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  28 DEC 2024 08:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  28 DEC 2024 23:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1146,25 +1146,288 @@ File: Chapters/Dual/dual.pdf Graphic file (type pdf)
 <use Chapters/Dual/dual.pdf>
 Package pdftex.def Info: Chapters/Dual/dual.pdf  used on input line 2186.
 (pdftex.def)             Requested size: 364.22183pt x 175.24829pt.
-[45]) [46 <./Chapters/Dual/dual.pdf>] (./OT.aux)
+[45]
+./Chapters/Linear Programming.tex:2204: Missing $ inserted.
+<inserted text> 
+                $
+l.2204 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/Linear Programming.tex:2204: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.2204 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Chapters/Linear Programming.tex:2238: Missing $ inserted.
+<inserted text> 
+                $
+l.2238 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/Linear Programming.tex:2238: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.2238 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[46 <./Chapters/Dual/dual.pdf>]
+./Chapters/Linear Programming.tex:2274: Missing $ inserted.
+<inserted text> 
+                $
+l.2274 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/Linear Programming.tex:2274: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.2274 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Chapters/Linear Programming.tex:2310: Missing $ inserted.
+<inserted text> 
+                $
+l.2310 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/Linear Programming.tex:2310: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.2310 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[47]
+./Chapters/Linear Programming.tex:2349: Missing $ inserted.
+<inserted text> 
+                $
+l.2349 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/Linear Programming.tex:2349: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.2349 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Chapters/Linear Programming.tex:2388: Missing $ inserted.
+<inserted text> 
+                $
+l.2388 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/Linear Programming.tex:2388: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.2388 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[48]
+./Chapters/Linear Programming.tex:2456: Missing $ inserted.
+<inserted text> 
+                $
+l.2456 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/Linear Programming.tex:2457: Missing $ inserted.
+<inserted text> 
+                $
+l.2457 \left
+            \{
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[49]
+./Chapters/Linear Programming.tex:2504: Missing $ inserted.
+<inserted text> 
+                $
+l.2504 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/Linear Programming.tex:2504: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.2504 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+./Chapters/Linear Programming.tex:2505: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2505 \]
+         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./Chapters/Linear Programming.tex:2505: Missing $ inserted.
+<inserted text> 
+                $
+l.2505 \]
+         
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Chapters/Linear Programming.tex:2505: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.2505 \]
+         
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Chapters/Linear Programming.tex:2545: Extra \right.
+l.2545 \right.
+              
+I'm ignoring a \right that had no matching \left.
+
+./Chapters/Linear Programming.tex:2601: Missing $ inserted.
+<inserted text> 
+                $
+l.2601 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/Linear Programming.tex:2602: Missing $ inserted.
+<inserted text> 
+                $
+l.2602 \left
+            \{
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[50]
+./Chapters/Linear Programming.tex:2676: Missing $ inserted.
+<inserted text> 
+                $
+l.2676 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/Linear Programming.tex:2676: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.2676 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+./Chapters/Linear Programming.tex:2677: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2677 \]
+         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./Chapters/Linear Programming.tex:2677: Missing $ inserted.
+<inserted text> 
+                $
+l.2677 \]
+         
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Chapters/Linear Programming.tex:2677: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.2677 \]
+         
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Chapters/Linear Programming.tex:2688: Extra \right.
+l.2688 \right.
+              
+I'm ignoring a \right that had no matching \left.
+
+) [51]
+
+./OT.tex:45: LaTeX Error: \begin{equation*} on input line 2378 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45 \end{document}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(./OT.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
- ) 
+ )
+(\end occurred inside a group at level 6)
+
+### semi simple group (level 6) entered at line 2378 (\begingroup)
+### semi simple group (level 5) entered at line 2319 (\begingroup)
+### semi simple group (level 4) entered at line 2301 (\begingroup)
+### semi simple group (level 3) entered at line 2244 (\begingroup)
+### semi simple group (level 2) entered at line 2229 (\begingroup)
+### semi simple group (level 1) entered at line 2196 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 28731 strings out of 474222
- 752856 string characters out of 5748732
+ 28734 strings out of 474222
+ 752932 string characters out of 5748732
  1946975 words of memory out of 5000000
- 50551 multiletter control sequences out of 15000+600000
+ 50554 multiletter control sequences out of 15000+600000
  567074 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,14n,107p,719b,1972s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on OT.pdf (46 pages, 771681 bytes).
+Output written on OT.pdf (51 pages, 781674 bytes).
 PDF statistics:
- 581 PDF objects out of 1000 (max. 8388607)
- 353 compressed objects within 4 object streams
+ 597 PDF objects out of 1000 (max. 8388607)
+ 364 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  223 words of extra memory for PDF output out of 10000 (max. 10000000)
 
