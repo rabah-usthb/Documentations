@@ -2701,7 +2701,87 @@ where
 \vspace{0.75cm}
 
 
-
 \[X^{*} = \left[\begin{matrix} 40 & 15  & 0   \end{matrix}\right]\]
 
+\vspace{1cm}
+
+\subsection{Branch \& Bound}
+To solve integer linear programming problems, we add an additional constraint
+that requires the variables to be integers. We begin by solving the (LP) as
+usual. Then, we apply the Branch \& Bound algorithm to refine the solution and
+ensure all variables are integers.
+
+\vspace{0.25cm}
+\subsubsection*{\underline{Example}}
+
+\vspace{0.25cm}
+\[\text{max } Z = 5x_1+6x_2\]
+\[
+\left\{
+\begin{array}{l}
+    x_{1}  + x_{2}  \leq 5 \\
+    4x_{1} + 7x_{2}  \leq 28 \\
+    x_{1}, x_{2}\hspace{0.2cm}\text{are integer}
+\end{array}
+\right.
+\]
+
+\begin{center}
+    \includegraphics{Chapters/Branch&Bound/branch.drawio.pdf}
+\end{center}
+
+\begin{center}
+    \includegraphics[width=1\textwidth]{Chapters/Branch&Bound/PY/EX1/ex1.1.pdf}
+\end{center}
+
+
+\begin{center}
+    \includegraphics[width=1\textwidth]{Chapters/Branch&Bound/PY/EX1/ex1.2.pdf}
+\end{center}
+
+
+\begin{center}
+    \includegraphics[width=1\textwidth]{Chapters/Branch&Bound/PY/EX1/ex1.3.pdf}
+\end{center}
+
+
+\begin{center}
+    \includegraphics[width=1\textwidth]{Chapters/Branch&Bound/PY/EX1/ex1.4.pdf}
+\end{center}
+
+
+\begin{center}
+    \includegraphics[width=1\textwidth]{Chapters/Branch&Bound/PY/EX1/ex1.5.pdf}
+\end{center}
+
+
+\begin{center}
+    \includegraphics[width=1\textwidth]{Chapters/Branch&Bound/PY/EX1/ex1.6.pdf}
+\end{center}
+
+
+\begin{center}
+    \includegraphics[width=1\textwidth]{Chapters/Branch&Bound/PY/EX1/ex1.7.pdf}
+\end{center}
+
+
+\vspace{0.15cm}
+
+\begin{center}
+optimal solution \((x_1,x_2) = (3,2)\) with \(Z = 27\) 
+\end{center}
+
+
+\begin{prettyBox}{Note}{red}
+\begin{itemize}
+    \item As we move deeper into the tree, the value of \(Z\) decreases for maximization LP. 
+    \item A branch is terminated if:
+        \begin{itemize}
+            \item All variables in the solution are integers, or
+            \item The solution is not feasible.
+        \end{itemize}
+    \item Each branch introduces an additional constraint, which accumulates as we go deeper into the tree.
+    \item In some cases, the feasible region may reduce to a single point or a line segment.
+\end{itemize}
+\end{prettyBox}
 

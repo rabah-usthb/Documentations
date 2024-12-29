@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1735427180.36211 "OT.tex" "OT.pdf" "OT" 1735427183.69234 2
+["pdflatex"] 1735475085.09723 "OT.tex" "OT.pdf" "OT" 1735475088.5487 2
   "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -203,11 +203,19 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1732594860.33734 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1731402230 8212896 b2d3a67526ed46e54375dd7fb267ffaf ""
+  "Chapters/Branch&Bound/PY/EX1/ex1.1.pdf" 1735472013.37713 15924 1f166b2a42d41c02e9f883e4db706ba8 ""
+  "Chapters/Branch&Bound/PY/EX1/ex1.2.pdf" 1735472152.69614 15188 e625209ac6b81be9b30199aa0ff8533a ""
+  "Chapters/Branch&Bound/PY/EX1/ex1.3.pdf" 1735472200.87514 15727 340864218498ab56966551d19818cfef ""
+  "Chapters/Branch&Bound/PY/EX1/ex1.4.pdf" 1735472248.50715 16858 cc9b1ca7c3aee125d1c236e1687d8956 ""
+  "Chapters/Branch&Bound/PY/EX1/ex1.5.pdf" 1735472309.91715 15056 4b549f109f7515e81ad35bde254a5cae ""
+  "Chapters/Branch&Bound/PY/EX1/ex1.6.pdf" 1735472385.45316 15088 38c9a2bc79041cbb5d333301f2aa8519 ""
+  "Chapters/Branch&Bound/PY/EX1/ex1.7.pdf" 1735472454.88916 9894 0e4fab5b47fec0a38ddc3e61a2da02d3 ""
+  "Chapters/Branch&Bound/branch.drawio.pdf" 1735470684.75306 21883 fac9aeb25f5c93f3f7370ee019d5abaf ""
   "Chapters/Diagram/dual.drawio.pdf" 1735369850.3361 25436 ec5d7781400118803c82914d07ff4511 ""
   "Chapters/Diagram/simplexe.drawio.pdf" 1735242745.91804 21150 f16195645bd354bfc7f93ff9b2530736 ""
   "Chapters/Dual/dual.pdf" 1735374764.68838 15690 49ad6b139a4c00b177a1837e3d600dc1 ""
   "Chapters/Dual/maxForm.pdf" 1735371961.75322 16837 496b37b3411289d666c62410213709b5 ""
-  "Chapters/Linear Programming.tex" 1735427178.47249 79588 24b02792a31686f7f2e6970cf456b02c ""
+  "Chapters/Linear Programming.tex" 1735475084.88831 81692 00beda239b989178693cf07f73c347ab ""
   "Chapters/Operations research.tex" 1733953412.10106 3922 d0457832fe8f5dbcd7b76fc7d22ba583 ""
   "Chapters/Simplexe/EX/EX1/ex1.1.pdf" 1735254360.53571 13819 3915a0c86a5437d6506826aee1d00e6c ""
   "Chapters/Simplexe/EX/EX1/ex1.2.pdf" 1735256613.59683 40842 a2dcba4105b3ba4945a3534ea2a273de ""
@@ -247,7 +255,7 @@
   "Chapters/Simplexe/leg.drawio.pdf" 1735186926.87702 30381 957edbfcc62294e9af40a1b2df7298d6 ""
   "Chapters/Simplexe/pivot.pdf" 1735243239.56707 17143 06f8cf373cf75414b106366e91529349 ""
   "Chapters/Simplexe/table.pdf" 1735186824.35402 16786 d0ae716b919c2ca0cd48ea38a3c3dbe1 ""
-  "OT.aux" 1735427183.48749 2550 cf02b773462e8c13dcb5539ec83a224a "pdflatex"
+  "OT.aux" 1735475088.35531 2659 5c7d9fb61f7fa40c583b1622ef3d4d10 "pdflatex"
   "OT.tex" 1733956215.28722 1513 9e7a8e88fe6df33dbe923efdbeaa5018 ""
   (generated)
   "OT.aux"
