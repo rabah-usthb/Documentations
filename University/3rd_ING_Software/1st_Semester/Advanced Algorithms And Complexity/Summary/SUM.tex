@@ -1,0 +1,125 @@
+\documentclass[fleqn]{article}
+\usepackage{tikz,tcolorbox}
+\usepackage{array} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage[a4paper, paperwidth=25cm, paperheight=25.5cm, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+
+\pgfplotsset{compat=1.18}
+\usepackage{makecell}
+\usetikzlibrary{patterns}
+\definecolor{mygreen}{HTML}{14C877}
+\definecolor{orangePlot}{HTML}{EA6E12}
+\definecolor{purplePlot}{HTML}{4C12EA}
+\definecolor{blueArea}{HTML}{10D9EE}
+\definecolor{redPlot}{HTML}{ED014A}
+\definecolor{myblue}{HTML}{338AC7}
+\definecolor{p}{HTML}{D813E7}
+\definecolor{y}{HTML}{F5F806}
+\usepackage{amssymb}
+\setlength{\parindent}{0pt}
+\setcellgapes{3pt}  % Adjust padding as needed
+\makegapedcells
+\tcbuselibrary{skins, breakable, theorems}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{xcolor}
+\setlength{\mathindent}{8cm}
+\renewcommand{\thealgorithm}{}
+\usepackage{mathtools}
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+\algrenewcommand\algorithmicif{\textcolor{redPlot}{\textbf{if}}}
+\algrenewcommand\algorithmicelse{\textcolor{redPlot}{\textbf{else}}}
+\algrenewcommand\algorithmicprocedure{\textcolor{redPlot}{\textbf{procedure}}}
+
+\algrenewcommand\algorithmicfunction{\textcolor{redPlot}{\textbf{function}}}
+\algrenewcommand\algorithmicend{\textcolor{redPlot}{\textbf{end}}}
+\algrenewcommand\algorithmicthen{\textcolor{redPlot}{\textbf{then}}}
+
+\algrenewcommand\algorithmicdo{\textcolor{redPlot}{\textbf{do}}}
+\algrenewcommand\algorithmicwhile{\textcolor{redPlot}{\textbf{while}}}
+
+\algrenewcommand\algorithmicfor{\textcolor{redPlot}{\textbf{for}}}
+
+
+
+\begin{document}
+\renewcommand{\arrayrulewidth}{0.75mm} % Set line thickness
+\setlength{\tabcolsep}{12pt} % Set horizontal padding
+\renewcommand{\arraystretch}{1.5} % Set vertical padding (1.0 is default)
+
+\begin{center}
+    \Huge{\textbf{\underline{Mathemathical Formulas}}}
+\end{center}
+
+\vspace{0.65cm}
+\input{Parts/math.tex}
+
+\newpage
+\begin{center}
+    \Huge{\textbf{\underline{How To Calculate Sums}}}
+\end{center}
+
+\vspace{0.65cm}
+\input{Parts/sum.tex}
+
+\newpage
+\begin{center}
+    \Huge{\textbf{\underline{Big Notation}}}
+\end{center}
+
+\input{Parts/big.tex}
+
+\vspace{1.5cm}
+\begin{center}
+    \Huge{\textbf{\underline{Induction}}}
+\end{center}
+
+\input{Parts/ind.tex}
+
+
+\vspace{1.5cm}
+\begin{center}
+    \Huge{\textbf{\underline{Order Of Complexity}}}
+\end{center}
+
+
+\input{Parts/order.tex}
+
+\vspace{1cm}
+
+\begin{center}
+    \Huge{\textbf{\underline{Complexity}}}
+\end{center}
+
+\vspace{0.6cm}
+
+\input{Parts/Com.tex}
+
+\newpage
+
+\begin{center}
+    \Huge{\textbf{\underline{Iterative Algorithm}}}
+\end{center}
+
+\vspace{0.6cm}
+
+\input{Parts/Iter.tex}
+
+
+
+
+\end{document}

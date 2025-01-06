@@ -1,0 +1,159 @@
+
+\begin{prettyBox}{Iterative Algorithm}{mygreen}
+Iterative algorithm complexity is calculated by summing the frequency of all instructions.
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\begin{prettyBox}{For Loop}{mygreen}
+\begin{itemize}
+    \item If the index is decremented or incremented by just 1:
+    \begin{itemize}
+        \item The number of iterations is \textbf{upper bound - lower bound + 1}
+        \item Each loop can be represented as a sum and used to calculate complexity
+    \end{itemize}
+    
+    \item If the index is decremented or incremented by a constant \( c \geq 2 \):
+    \begin{itemize}
+        \item The number of iterations is \( c \cdot k = n \rightarrow k = \frac{n}{c} \)
+        \item Cannot be represented as a sum
+    \end{itemize}
+    
+    \item If the index is multiplied or divided by a constant \( c \geq 2 \):
+    \begin{itemize}
+        \item The number of iterations is \( c^k = n \rightarrow k = \log_c(n) \)
+        \item Cannot be represented as a sum
+    \end{itemize}
+\end{itemize}
+\end{prettyBox}
+
+
+\vspace{0.35cm}
+\begin{prettyBox}{While Loop}{mygreen}
+\begin{itemize}
+        \item Can never be represented as a sum
+        \item If the index is incremented or decremented by just 1, the number of iterations is the difference between the upper and lower bounds.
+        \item If the index is incremented or decremented by a constant \(c \geq 2\), the number of iterations is \( \frac{n}{c} \).
+        \item If the index is multiplied or divided by a constant \(c \geq 2\), the number of iterations is \( \log_c(n) \).
+\end{itemize}
+\end{prettyBox}
+
+\newpage
+
+\subsubsection*{\underline{Example}}
+
+\begin{algorithm}[ht]
+\caption{}
+\begin{algorithmic}
+    \For{ \( (i = n \hspace{0.15cm} ;\hspace{0.15cm} i\geq 0 \hspace{0.15cm}; \hspace{0.15cm}i \gets i/2) \)}
+\State \textcolor{purplePlot!80!black}{print}(\textcolor{blueArea!60!black}{'Index i : '},i) 
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+Iteration : 
+\(\frac{n}{2^0},\frac{n}{2^1},\frac{n}{2^2},\frac{n}{2^3},\dots,\frac{n}{2^k}\)\\[0.25cm]
+Loop stops when \(i < 0 \Rightarrow \frac{n}{2^k} < 0\)
+since it's an natural division it means :
+\(2^k > n \Longrightarrow k > \log_{2}(n) \Longrightarrow k= \lceil \log_{2}(n) \rceil = \boxed{\log_{2}(n) + 1 } \)\\[0.25cm]
+In conslusion \(O(\log(n))\)
+
+\vspace{0.75cm}
+\begin{algorithm}[ht]
+\caption{}
+\begin{algorithmic}
+\State \(r \gets 0;\)
+
+\For{ \( (i = 1 \hspace{0.15cm} ;\hspace{0.15cm} i\leq n^2 \hspace{0.15cm}; \hspace{0.15cm}i \gets i+1) \)}
+\For{ \( (j = 1 \hspace{0.15cm} ;\hspace{0.15cm} j\leq 2n-1 \hspace{0.15cm}; \hspace{0.15cm}j \gets j+1) \)}
+\State \(r\gets r+1;\)
+\EndFor
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+\begin{align*}
+\sum_{i=1}^{n^2} \sum_{j=1}^{2n-1} 1 &=\sum_{i=1}^{n^2} 2n-1\\
+                                     &=(2n-1)\cdot n^2\\
+                                     &=\boxed{2n^3 - n^2}
+\end{align*}
+
+In conslusion \(O(n^3)\)
+
+
+\newpage
+\begin{algorithm}[ht]
+\caption{}
+\begin{algorithmic}
+\State \(r \gets 0;\)
+
+\For{ \((i = 1 \hspace{0.15cm} ;\hspace{0.15cm} i\leq n \hspace{0.15cm}; \hspace{0.15cm}i \gets i+1) \)}
+\For{ \((j = i+1 \hspace{0.15cm} ;\hspace{0.15cm} j\leq n \hspace{0.15cm}; \hspace{0.15cm}j \gets j+1) \)}
+\For{ \((k = 1 \hspace{0.15cm} ;\hspace{0.15cm} k\leq j \hspace{0.15cm}; \hspace{0.15cm}j \gets j+1) \)}
+\State \(r\gets r+1;\)
+\EndFor
+\EndFor
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+\begin{align*}
+\sum_{i=1}^n \sum_{j=i+1}^n \sum_{k=1}^{j} 1 &= \sum_{i=1}^n \sum_{j=i+1}^n j\\
+                                             &= \sum_{i=1}^n (\sum_{j=1}^n j - \sum_{j=1}^{i} j)\\
+                                             &= \sum_{i=1}^n (\frac{n(n+1)}{2} - \frac{i(i+1)}{2})\\
+                                             &= \frac{1}{2}(\sum_{i=1}^n n(n+1) - \sum_{i=1}^n i^2 - \sum_{i=1}^n i)\\
+                                             &= \frac{1}{2}(n^2(n+1) - \frac{n(n+1)(2n+1)}{6} - \frac{n(n+1)}{2})\\
+                                             &= \frac{4n^3 - 3n^2 - 7n}{12}
+\end{align*}
+
+In conslusion \(O(n^3)\)
+
+\newpage
+
+\begin{algorithm}[ht]
+\caption{}
+\begin{algorithmic}
+\State \(r \gets 0;i\gets 1\)
+
+\While{ \((i\leq n) \)}
+\For{ \((j = n^2 \hspace{0.15cm} ;\hspace{0.15cm} j\leq 5 \hspace{0.15cm}; \hspace{0.15cm}j \gets j-1) \)}
+\State \(r\gets r+1;\)
+\EndFor
+\State \(i \gets i+2;\)
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+For Loop iterates : \(n^2 - 5+1 = \boxed{n^2-4}\)\\[0.35cm]
+While Loop :
+\(2k>n \Rightarrow k>\frac{n}{2} \Rightarrow k = \lceil \frac{n}{2} \rceil = \boxed{\frac{n}{2} + 1}\)\\[0.35cm]
+
+In conslusion \(O((n^2-4)(\frac{n}{2} + 1)) = O(n^3)\)
+
+\vspace{1cm}
+
+\begin{algorithm}[ht]
+\caption{}
+\begin{algorithmic}
+\State \(i \gets 2;j\gets 1\)
+
+\While{ \((i\leq n) \)}
+\State \(i \gets i*i;\)
+\EndWhile
+
+\While{ \((j\leq i) \)}
+\State \(j \gets 4*j;\)
+\EndWhile
+
+\end{algorithmic}
+\end{algorithm}
+
+First While Iteration :
+\(2,2^{2^{1}},2^{2^{2}}, 2^{2^{3}},\dots,2^{2^{k}}\)\\[0.15cm]
+\(2^{2^k} > n \Rightarrow k > \log(\log(n)) \Rightarrow k = \lceil \log(\log(n)) \rceil = \boxed{\log(\log(n)) + 1}\)\\[0.35cm]
+
+Second While Iteration :
+\(1,4^1,4^2,4^3,\dots,4^k\)\\[0.15cm]
+\(4^k > i \Rightarrow 4^k > n \Rightarrow k>\log(n) \Rightarrow  k = \lceil \log(n) \rceil = \boxed{\log(n) + 1} \)\\[0.35cm]
+
+In Conclusion \(O(\log(\log(n))+1+\log(n)+1) = O(\log(n))\)

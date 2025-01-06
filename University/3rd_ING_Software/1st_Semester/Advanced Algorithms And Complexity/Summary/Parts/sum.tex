@@ -1,0 +1,41 @@
+\section{Nested Sum}
+
+\begin{prettyBox}{Calculate Nested Sum}{mygreen}
+We always start from the most inner sum until we finish calculating 
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsubsection*{\underline{Example :}}
+\begin{align*}
+    \sum_{i=1}^{n} \sum_{j=1}^{i} \sum_{k=1}^{j} 1 &= \sum_{i=1}^{n} \sum_{j=1}^i j\\[0.15cm] 
+                                                   &= \sum_{i=1}^{n} \frac{i(i+1)}{2}\\[0.15cm]
+                                                   &= \frac{1}{2}\sum_{i=1}^{n} i(i+1)\\[0.15cm]
+                                                   &= \frac{1}{2}(\sum_{i=1}^{n} i^2 + \sum_{i=1}^{n} i)\\[0.15cm]
+                                                   &= \frac{1}{2}(\frac{n(n+1)(2n+1)}{6} + \frac{n(n+1)}{2})\\[0.15cm]
+                                                 &=\frac{n(n+1)(2n+4)}{12}
+\end{align*}
+
+\vspace{0.5cm}
+\newpage
+\section{Adjusting Boundaries To Match A Known Sum}
+\begin{prettyBox}{Adjusting Boundaries}{mygreen}
+We might come across a known sum where the boundaries aren't the same as the rule.
+All we need to do is calculate the sum with the boundaries of the rule and then add
+or subtract the term accordingly.
+\end{prettyBox}
+
+\subsubsection*{\underline{Example:}}
+\begin{align*}
+    \sum_{i=0}^{k-1} 2^i &= \sum_{i=0}^{k} 2^i - \sum_{i=k}^{k} 2^i \\[0.15cm]
+                          &= 2^{k+1} - 1 - 2^{k}
+\end{align*}
+
+\vspace{0.25cm}
+We have a sum that, by the rule, goes till the \(k\)-th term, but here it goes up to the \((k-1)\)-th term.
+So, to get the sum up to \((k-1)\), we take the sum up to \(k\) and remove the last term.
+
+\vspace{0.75cm}
+
+\hspace{6cm}\(\text{term}(0) + \text{term}(1) + \dots + \text{term}(k-1) + \text{term}(k) = \sum_{i=0}^{k} 2^i\)
+\[\sum_{i=0}^{k-1} 2^i + \text{term}(k) = \sum_{i=0}^{k} 2^i \]
+\[\sum_{i=0}^{k-1} 2^i = \sum_{i=0}^{k} 2^i - \text{term}(k)\]

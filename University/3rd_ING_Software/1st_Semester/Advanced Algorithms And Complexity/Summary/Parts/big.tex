@@ -1,0 +1,102 @@
+
+\vspace{0.5cm}
+\begin{prettyBox}{Notations}{mygreen}
+\begin{itemize}
+    \item \textbf{Big O} : \(O\) upper bound
+    \item \textbf{Big Omega}: \(\Omega\) lower bound 
+    \item \textbf{Big Theta} : \(\Theta\) average
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{Limit Definition}{mygreen}
+    if \quad\(\lim\limits_{n \to +\infty}\left| \frac{f(n)}{g(n)}\right| =\)\hspace{0.15cm}\(k\)\quad,\quad\( k > \)0  \quad \(=> \) \quad \(f(n) \in \Theta (g(n))\)
+
+    \vspace{0.25cm}
+    if \quad\(\lim\limits_{n \to +\infty}\left| \frac{f(n)}{g(n)}\right| =\)\hspace{0.15cm}\(0\) \hspace{1.45cm} \quad \(=> \) \quad \(f(n) \in O (g(n))\)
+    
+    \vspace{0.25cm}
+    if \quad\(\lim\limits_{n \to +\infty}\left| \frac{f(n)}{g(n)}\right| =\)\hspace{0.15cm}\(+\infty\) \hspace{1cm} \quad \(=> \) \quad \(f(n) \in \Omega (g(n))\)
+\end{prettyBox}
+
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{Enequalities Definition}{mygreen}
+    \(f(n) = \Omega(g(n))\) \quad \( \exists c > 0\)\hspace{0.1cm},\quad \(c . g(n) \leq f(n)\) \quad ,\hspace{0.1cm}\(\forall n \geq n_0\)
+
+
+\vspace{0.15cm}
+\(f(n) = O(g(n))\) \quad \(\exists c > 0\)\hspace{0.1cm},\quad\(c . g(n) \geq f(n)\) \quad ,\hspace{0.1cm}\(\forall n \geq n_0\)
+
+\vspace{0.15cm}
+\(f(n) = \Theta(g(n))\) \quad \(\exists c_1 > 0\)\hspace{0.1cm},\hspace{0.1cm}\(\exists c_2 > 0\)\hspace{0.1cm},\quad \(c_1 . g(n) \leq f(n) \leq c_2. g(n)\)\quad  ,\hspace{0.1cm}\(\forall n \geq n_0\)
+
+\end{prettyBox}
+
+\vspace{0.5cm}
+\begin{prettyBox}{Note}{red}
+\begin{itemize}
+    \item \(c\) is a strictly positive real number.
+    \item \(n\) is a strictly positive integer.
+\end{itemize}
+\end{prettyBox}
+
+\newpage
+\subsubsection*{\underline{Example}}
+\vspace{0.25cm}
+\(\sqrt{2\log_2{n}+3+7n} \sim O(\sqrt{n})\)
+
+\begin{align*}
+\sqrt{2\log_2{n}+3+7n} &\leq \sqrt{n} \cdot c\\[0.25cm]  
+\sqrt{\frac{2\log_2{n}+3+7n}{n}} &\leq c\\[0.25cm]
+\sqrt{\frac{2\log_2{n}}{n}+\frac{3}{n}+7} &\leq c
+\end{align*}
+
+\[
+\begin{rcases}
+\frac{2\log_2{n}}{n} \leq 1 \quad &\Longrightarrow \quad n\geq 4\\[0.25cm]
+\frac{3}{n} \leq 1 \quad &\Longrightarrow \quad n\geq 3 
+\end{rcases}\longrightarrow \boxed{n_0 = 4}
+\]
+
+\vspace{0.15cm}
+
+\begin{center}
+    \(\sqrt{1+1+7} \leq c\)\\[0.2cm]
+    \(\sqrt{9} \leq c  \longrightarrow \boxed{c = \sqrt{9}}\)
+\end{center}
+
+
+\vspace{1cm}
+\(2^n \sim \Omega(5^{\log_e(n)})\)
+
+\begin{align*}
+2^n &\geq 5^{\log_e(n)}\cdot c\\[0.25cm]  
+2^n &\geq n^{\log_e(5)}\cdot c\\[0.25cm] 
+2^n &\geq n^{1.6}\cdot c\\[0.25cm]  
+\frac{2^n}{n^{1.6}} &\geq  c\\[0.25cm] 
+\end{align*}
+
+\begin{center}
+\(\frac{2^n}{n^{1.6}} \geq 1 \Longrightarrow n\geq 1 \longrightarrow \boxed{n_0 = 1}\hspace{0.15cm} \text{and} \hspace{0.15cm} \boxed{c = 1}\)
+\end{center}
+
+\newpage
+
+\(n^{2^n} + 6\cdot2^n  \sim \Theta(n^{2^n})\)\\[0.15cm]
+
+\begin{center}
+ \(c_1\cdot n^{2^n} \leq n^{2^n} + 6\cdot2^n \leq c_2 \cdot n^{2^n}  \)\\[0.15cm]
+\(c_1 \leq 1 + \frac{6\cdot2^n}{n^{2^n}} \leq c_2\)
+
+   
+\end{center}
+
+\begin{center}
+\( \frac{6\cdot2^n}{n^{2^n}} \leq 1 \Longrightarrow n\geq 3 \longrightarrow \boxed{n_0 = 3} \)\\[0.4cm]
+\(c_1 \leq 2 \leq c_2 \longrightarrow \boxed{c_1 = 1} \hspace{0.15cm} \text{and} \hspace{0.15cm} \boxed{c_2 =2}\)
+\end{center}
+
+

@@ -1,0 +1,47 @@
+\vspace{0.35cm}
+\begin{prettyBox}{Induction's Steps}{mygreen}
+\begin{enumerate}
+    \item Verify for \(n =\) term
+    \item Assume true for \(n\)
+    \item Prove for \(n+1\)
+\end{enumerate}
+\end{prettyBox}
+
+\vspace{0.35cm}
+\subsubsection*{\underline{Example}}
+\(a_1 = 1\)\hspace{0.5cm}\(a_2 = 1\)\\[0.25cm]
+\(a_n = a_{n-1} + a_{n-2}\) \hspace{0.25cm} if \(n \geq 3\)\\[0.35cm]
+Prove That : \(a_n = \frac{(\frac{1+\sqrt{5}}{2})^n - (\frac{1-\sqrt{5}}{2})^n}{\sqrt{5}}\)\\[0.5cm]
+
+\subsubsection*{Verify For n = 1}
+
+\vspace{0.35cm}
+\[
+\begin{rcases}
+a_1  = 1\\[0.25cm]
+a_1 = \frac{(\frac{1+\sqrt{5}}{2})^1 - (\frac{1-\sqrt{5}}{2})^1}{\sqrt{5}} = 1\hspace{0.1cm}
+\end{rcases}\longrightarrow \text{True For} \hspace{0.25cm} n=1
+\]
+
+\newpage
+
+\subsubsection*{Assume True For n And Prove For n+1}
+\vspace{0.15cm}
+\(a_{n+1} = a_{n} + a_{n-1}\) \hspace{0.25cm} if \(n \geq 3\)\\[0.35cm]
+Prove That : \(a_{n+1} = \frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n+1} - \left(\frac{1-\sqrt{5}}{2}\right)^{n+1}}{\sqrt{5}}\) 
+
+
+\begin{align*}
+a_{n+1} &= a_{n} + a_{n-1} \\[0.3cm]
+&= \frac{\left(\frac{1+\sqrt{5}}{2}\right)^n - \left(\frac{1-\sqrt{5}}{2}\right)^n}{\sqrt{5}}+ \frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n-1} - \left(\frac{1-\sqrt{5}}{2}\right)^{n-1}}{\sqrt{5}}\\[0.3cm]
+&= \frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n} \cdot   \left(1 + \frac{2}{1+\sqrt{5}}\right)    -  \left(\frac{1-\sqrt{5}}{2}\right)^{n} \cdot \left(1 + \frac{2}{1-\sqrt{5}}\right)}{\sqrt{5}}\\[0.3cm]
+&=\frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n} \cdot   \left(\frac{(3+\sqrt{5})(1-\sqrt{5})}{(1+\sqrt{5})(1-\sqrt{5})}\right)    -  \left(\frac{1-\sqrt{5}}{2}\right)^{n} \cdot \left(\frac{(3-\sqrt{5})(1+\sqrt{5})}{(1-\sqrt{5})(1+\sqrt{5})}\right)}{\sqrt{5}}\\[0.3cm] 
+&=\frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n} \cdot   \left(\frac{1+\sqrt{5}}{2}\right)    -  \left(\frac{1-\sqrt{5}}{2}\right)^{n} \cdot \left(\frac{1-\sqrt{5}}{2}\right)}{\sqrt{5}}\\[0.3cm]
+&= \frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n+1} - \left(\frac{1-\sqrt{5}}{2}\right)^{n+1}}{\sqrt{5}}\\[0.2cm]
+&= a_{n+1}
+\end{align*}
+
+
+True For \(n+1\)
+
+\subsubsection*{Conclusion True For n}
