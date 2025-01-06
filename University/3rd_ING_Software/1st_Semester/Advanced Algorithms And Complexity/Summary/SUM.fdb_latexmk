@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1736139025.16431 "SUM.tex" "SUM.pdf" "SUM" 1736139027.00824 0
+["pdflatex"] 1736160650.29156 "SUM.tex" "SUM.pdf" "SUM" 1736160653.06105 2
   "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -13,6 +13,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm" 1136768653 1300 63a6111ee6274895728663cf4b4e7e81 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -27,6 +28,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb" 1248133631 32001 6aeea3afe875097b1eb0da29acd61e28 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1248133631 37912 77d683123f92148345f3fc36a38d9ab1 ""
@@ -216,9 +218,10 @@
   "Parts/ind.tex" 1736072137.33535 2117 f0dc34f529114ebed24b0a57a9b2eac9 ""
   "Parts/math.tex" 1736049052.24164 1555 a6c4d801a290864570e99b6f13acfbce ""
   "Parts/order.tex" 1736118439.92423 193 b841ad5cbc73f15cd513c39c66c43d19 ""
+  "Parts/recur.tex" 1736160649.13863 6399 f452cf2ce5f2fd5eb1511991c25f5671 ""
   "Parts/sum.tex" 1736053514.04168 1848 377432bd9cb3386379cc23fc90b1baa8 ""
-  "SUM.aux" 1736139026.8164 918 3f5a382dfe0ee0b0b9af23b2a55ffc49 "pdflatex"
-  "SUM.tex" 1736131950.528 3152 96e3aff20133e5fdc24937d43dba0289 ""
+  "SUM.aux" 1736160652.81263 1033 c49ec05f52de8ededd7326f16392c0e3 "pdflatex"
+  "SUM.tex" 1736146090.0068 3266 0d2bb9faa164f76acd373b487da3abdc ""
   (generated)
   "SUM.aux"
   "SUM.log"

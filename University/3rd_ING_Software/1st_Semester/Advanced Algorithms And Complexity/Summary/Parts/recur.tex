@@ -1,0 +1,243 @@
+
+\begin{prettyBox}{Recursive Algorithm}{mygreen}
+A recursive algorithm is a function that calls itself and includes a base case to terminate the recursion.  
+We analyze its complexity using recursive equations.
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{Recursive Equations}{mygreen}
+    \textbf{\underline{Divide and Conquer:}}  
+    \[
+    T(n) = aT\left(\frac{n}{b}\right) + f(n)
+    \]  
+    Where: 
+    \begin{itemize}
+    \item \(a\) : Number of recursive calls at once.  
+    \item \(b\) : Size of subproblem.  
+    \item \(f(n)\) : Cost of composition/decomposition.  
+    \end{itemize}
+
+    \vspace{0.45cm}
+
+    \textbf{\underline{Decrement and Conquer:}}  
+    \[
+    T(n) = aT\left(n-b\right) + c
+    \]  
+    Where:  
+    \begin{itemize}
+    \item \(a\) : Number of recursive calls at once.  
+    \item \(b\) : Size of subproblem.  
+    \item \(c\) : Cost of performing an operation.  
+    \end{itemize}
+
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+
+\begin{prettyBox}{By Substitution}{mygreen}
+The substitution method involves repeatedly substituting into the recursive equation  
+until the \(k\)-th step, where the base case is reached.
+\end{prettyBox}
+
+\newpage
+
+\subsubsection*{\underline{Example}}
+\vspace{0.1cm}
+\(T(0) = 1\)\\
+\(T(n) = T(n-1) + 2^n\)
+
+\vspace{-0.1cm}
+\begin{align*}
+    T(n) &= T(n-1) + 2^n\\
+         &= T(n-2) + 2^{n-1} + 2^n\\
+         &= T(n-3) + 2^{n-2} + 2^{n-1} + 2^{n}\\
+         &= T(n-k) + 2^{n-k+1} + \dots + 2^{n-2} + 2^{n-1} + 2^{n}
+\end{align*}
+
+\(n-k = 0 \Rightarrow \boxed{k = n}\)
+
+\begin{align*}
+    &=T(0) + 2^{1} + \dots + 2^{n-2} + 2^{n-1} + 2^{n}\\
+    &=2^{0} + 2^{1} + \dots + 2^{n-2} + 2^{n-1} + 2^{n}\\
+    &=\sum_{i=0}^{n} 2^{i}\\
+    &=2^{n+1} - 1 = \boxed{O(2^n)}
+\end{align*}    
+
+\vspace{0.75cm}
+\( T(1) = 1\)\\
+\( T(n) = 2n+1+2T(\frac{n}{2}) \)
+
+\begin{align*}
+T(n) &= 2n+1+2T(\frac{n}{2})\\
+     &= 2n+1+2[2(\frac{n}{2} + 1 + 2T(\frac{n}{2^2}))]\\
+     &= 2n+2n+1+2+2^2T(\frac{n}{2^2})\\
+     &= 2n+2n+1+2+2^2[2\frac{n}{2^2}+1+2T(\frac{n}{2^3})]\\
+     &= 2n+2n+2n+1+2+2^2+2^3T(\frac{n}{2^3})\\
+     &= 2n\cdot k +1+2+2^2+\dots+2^{k-1}+2^kT(\frac{n}{2^k})\\
+     &= 2n\cdot k+ \sum_{i=0}^{k-1} 2^i+2^kT(\frac{n}{2^k})
+\end{align*}
+
+
+\(\frac{n}{2^k} = 1 \Rightarrow \boxed{k = \log(n)}\)
+
+\begin{align*}
+&= 2n\log(n)+ \sum_{i=0}^{k-1} 2^i+nT(1)\\
+&= 2n\log(n) + 2^{k+1} - 1 - 2^{k} +n\\
+&= 2n\log(n) + 2n - 1 - n+n\\
+&= 2n\log(n) + 2n - 1 = \boxed{O(n\log(n))}\\
+\end{align*}
+
+
+\newpage
+\(T(1) = 1\)\\
+\(T(n) = T(\frac{n}{2}) + \log\log n\)
+
+\begin{align*}
+    T(n) &= T(\frac{n}{2}) + \log\log n\\
+  &= T(\frac{n}{2^2}) +\log\log(\frac{n}{2}) +\log\log n\\
+  &= T(\frac{n}{2^3})+ \log\log(\frac{n}{2^2}) +\log\log(\frac{n}{2}) +\log\log n\\
+  &= T(\frac{n}{2^k})+ \log\log(\frac{n}{2^{k-1}})+\dots +\log\log(\frac{n}{2}) +\log\log n\\ 
+  &= T(\frac{n}{2^k}) +\sum_{i=0}^{k-1} \log\log(\frac{n}{2^i})\\
+  &= T(\frac{n}{2^k}) +\sum_{i=0}^{k-1} \log(\log(n) - \log(2^i))\\
+  &= T(\frac{n}{2^k}) +\sum_{i=0}^{k-1} \log(\log(n) - i\log(2))\\
+  &= T(\frac{n}{2^k}) +\sum_{i=0}^{k-1} \log(\log(n) - i)\\
+\end{align*}
+
+
+\(\frac{n}{2^k} = 1 \Rightarrow \boxed{k = \log(n)}\)
+
+\begin{align*}
+    &= T(1) +\sum_{i=0}^{\log(n)-1} \log(\log(n) - i)\\
+    &= 1 + \log(\log(n)) + \log(\log(n) - 1)+ \dots +\log(\log(n) - \log(n) +1)\\
+    &= 1 + \log(\log(n)*(\log(n)-1)*\dots*1) \\
+    &= 1+\log((\log(n))!)\\
+    &= 1+\log(n)\log(\log(n)) = \boxed{ O(\log(n)\log(\log(n)))}
+\end{align*}
+
+\vspace{1.5cm}
+
+
+\begin{prettyBox}{Change of Variable}{mygreen}
+To simplify the recursive equation, we substitute \(n\) with a value related to \(m\), transforming \(T(n)\) into \(S(m)\).  
+This allows us to analyze the complexity in terms of \(m\).  
+Finally, we revert the substitution to express the complexity in terms of \(n\).
+\end{prettyBox}
+
+\newpage
+
+\subsubsection*{\underline{Example}}
+\(T(1) = 1\)\\
+\(T(n) = 2T(\sqrt{n}) + \log(n)\)\\[0.15cm]
+
+let \(n = 2^m\)
+\begin{center}
+\(T(2^m) = 2T(2^{\frac{m}{2}}) + m\)\\[0.15cm]
+\end{center}
+let \(T(2^m) = S(m)\)
+
+\begin{center}
+\(S(m) = 2S(\frac{m}{2}) + m\)\\[0.15cm]
+\end{center}
+
+\vspace{0.5cm}
+\begin{center}
+This is the same as merge sort so complexity in terms of m is
+\(O(m\log(m))\) , in terms of n is \(\boxed{O(\log(n)\log(\log(n)))}\)
+\end{center}
+
+\vspace{1cm}
+
+
+\begin{prettyBox}{Upper \& Lower Bounds}{mygreen}
+To analyze the complexity of a recursive equation with multiple calls, we calculate both the upper and lower bounds.  
+Ultimately, the result remains consistent.  
+
+\begin{itemize}
+    \item \textbf{Lower Bound}: Replace larger terms call with smaller ones.
+    \item \textbf{Upper Bound}: Replace smaller terms call with larger ones.  
+\end{itemize}
+\end{prettyBox}
+
+
+\subsubsection*{\underline{Example}}
+
+\begin{algorithm}
+\caption{Fibonnaci}
+\begin{algorithmic}[1]
+\Function{Fib\_rec}{(I/n:Integer): Integer}
+\State  \textbf{\textcolor{redPlot}{Begin}}
+\If{(n = 0)}
+\State return 0;
+\ElsIf{(n = 1)}
+\State return 1;
+\Else 
+\State return Fib\_rec(n-1)+Fib\_rec(n-2);
+\EndIf
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\(T(0) = T(1) = 0\)\\
+\(T(n) = T(n-1) + T(n-2) + 1\)\\
+
+\newpage
+
+
+\subsubsection*{\underline{Lower Bound}}
+\(T(n) = 2T(n-2) + 1\)\\
+
+\begin{align*}
+T(n) &= 2T(n-2) + 1\\
+     &= 2[2T(n-4)+1] + 1\\
+     &= 2^2T(n-4)+2+ 1\\
+     &= 2^2[2T(n-6)+1]+2+1\\
+     &= 2^3T(n-6)+2^2+2+1\\
+     &= 2^kT(n-2k)+\sum_{i=0}^{k-1} 2^i\\
+     &= 2^kT(n-2k)+ 2^{k+1} - 1 - 2^{k}\\
+\end{align*}
+
+\(n-2k = 0 \Rightarrow \boxed{k =\frac{n}{2}} \)
+
+\begin{align*}
+&= 2^{\frac{n}{2}}T(0)+ 2^{\frac{n}{2}+1} - 1 - 2^{\frac{n}{2}}\\
+&= 2^{\frac{n}{2}}+ 2^{\frac{n}{2}+1} - 1 - 2^{\frac{n}{2}}\\
+&= 2^{\frac{n}{2}+1} - 1  = O(2^n)\\
+\end{align*}
+
+\subsubsection*{\underline{Upper Bound}}
+\(T(n) = 2T(n-1) + 1\)\\
+
+\begin{align*}
+T(n) &= 2T(n-1) + 1\\
+&= 2[2T(n-2)+1] + 1\\
+&= 2^2T(n-2)+2 + 1\\
+&= 2^2[2T(n-3)+1]+2 + 1\\
+&= 2^3T(n-3)+2^2+2 + 1\\
+&= 2^3T(n-3)+2^2+2 + 1\\
+&= 2^kT(n-k)+\sum_{i=0}^{k-1} 2^i\\
+&= 2^kT(n-k)+ 2^{k+1} - 1 - 2^k\\
+\end{align*}
+
+\newpage
+
+\(n-k = 0 \Rightarrow \boxed{k = n} \)
+
+\begin{align*}
+&= 2^{n}T(0)+ 2^{n+1} - 1 - 2^{n}\\
+&= 2^{n}+ 2^{n+1} - 1 - 2^{n}\\
+&= 2^{n+1} - 1  = O(2^n)\\
+\end{align*}
+
+\begin{center}
+\boxed{Lower Bound = Upper Bound = \(O(2^n) \Rightarrow \) Complexity = \(O(2^n)\) }
+\end{center}
+
+\begin{prettyBox}{Tree}{mygreen}
+    prettyBox
+\end{prettyBox}
+
+\begin{prettyBox}{Guess \& Test}{mygreen}
+    prettyBox
+\end{prettyBox}
