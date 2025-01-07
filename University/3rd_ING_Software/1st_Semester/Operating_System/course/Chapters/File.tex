@@ -1,11 +1,231 @@
-\section{File Management}
+\newpage
+\null
+\vspace{0.15cm}
 
-\subsection{What's A File Management}
+\begin{center}
+    \Huge{\textbf{\underline{Chapter 2: File Management}}}
+\end{center}
 
-\subsection{Objective Of A File Management}
+\setcounter{section}{0}
 
-\subsection{Concept Of File}
+\vspace{0.35cm}
 
-\subsection{Concept Of Repository}
+\section{Introduction}
+\begin{prettyBox}{File}{myblue}
+Central memory is volatile, so we need a way to preserve data beyond 
+program termination and reboots. This is why we rely on files, 
+which are resources used to store data on storage peripherals.
+\end{prettyBox}
 
-\subsection{UNIX Solution}
+\vspace{0.35cm}
+\section{View Of File}
+\begin{prettyBox}{View}{myblue}
+\begin{itemize}
+    \item \textbf{Logical File:} How the user views the file. 
+    \item \textbf{Physical File:} How the operating system views the file.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{Logical File}
+\begin{prettyBox}{Logical File}{myblue}
+This is how the user sees the file: described with a unique name , that holds set of data of a given type. Where users can perform operations 
+such as reading, creating, inserting, and deleting data that are accessible via \textbf{access functions}(squential , direct).
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsubsection{Sequential Access}
+\begin{prettyBox}{Sequential}{myblue}
+To access the \(k\)-th element, we need to read all the elements before it until we find it.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsubsection{Direct Access}
+\begin{prettyBox}{Direct}{myblue}
+Elements are accessed by their relative position. We simply specify the position index \(i\) 
+and place the cursor directly at the \(i\)-th element.
+\end{prettyBox}
+
+\newpage
+\null
+\vspace{0.35cm}
+
+\subsection{Physical File}
+\begin{prettyBox}{Physical File}{myblue}
+This refers to how the operating system views the file — the implementation 
+of how files are stored on storage peripherals. It involves \textbf{the method of allocation}, 
+which is the arrangement of a set of physical blocks.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsubsection{Disk Allocation}
+\begin{prettyBox}{Allocation}{myblue}
+The unit of allocation on a hard drive is a physical block, which is composed of \(n\) sectors, 
+of total size \(k\) bytes. This means that each time the hard drive reads data, it transfers 
+\(k\) bytes at a time.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsubsection{Types of Allocation}
+\begin{prettyBox}{Types}{myblue}
+\begin{itemize}
+    \item Sequential Allocation
+    \item Zone Allocation
+    \item Chained Block Allocation
+    \item Indexed Allocation
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.75cm}
+
+\section{Unix Solution}
+\begin{prettyBox}{Inodes}{myblue}
+Unix utilizes inodes, which are structures containing an array of 13 pointers. These pointers either reference data blocks (physical blocks) directly or point to index blocks, which themselves are arrays of pointers to other blocks.
+\end{prettyBox}
+
+\subsection{Levels of Indirection}
+\begin{prettyBox}{Structure}{myblue}
+The 13 pointers in an inode are organized into multiple levels of indirection to optimize for both small and large files:
+\begin{itemize}
+    \item \textbf{Level 0 (Direct Pointers):} The first 10 pointers in the inode array directly reference data blocks. These are used for small files, enabling quick and efficient access.
+    \item \textbf{Level 1 (Single Indirect Pointer):} The 11th pointer references an index block. This index block contains pointers that each reference a data block.
+    \item \textbf{Level 2 (Double Indirect Pointer):} The 12th pointer references an index block, which in turn points to multiple Level 1 index blocks. Each Level 1 block then points to data blocks.
+    \item \textbf{Level 3 (Triple Indirect Pointer):} The 13th pointer references an index block, which points to Level 2 index blocks. Each Level 2 block references Level 1 blocks, which ultimately point to data blocks.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Note}{red}
+\begin{itemize}
+    \item \textbf{Why Use 10 Direct Pointers?} Direct pointers are included to optimize performance for small files, as they provide immediate access to data without additional lookup overhead.
+    \item \textbf{How Does Unix Handle Performance Issues with Indirection Levels?} 
+        Unix employs a cache buffer to store frequently accessed blocks, using a Least Recently Used (LRU) strategy to maintain efficiency.
+\end{itemize}
+\end{prettyBox}
+
+
+\vspace{1cm}
+
+\subsection{Key Formulas}
+\begin{prettyBox}{Important Rules}{myblue}
+\begin{itemize}
+    \item S$_{File}$ : size of file
+    \item S$_{Block}$ : size of data block
+    \item S$_{Pointer}$ : size of pointers
+    \item Nb$_{Pointer}$ : number of pointer per index block
+        \[\text{Nb}_{Pointer} = \frac{\text{S$_{Block}$}}{\text{S$_{Pointer}$}}\]
+    \item Nb$_{Block}$ : number of data block of the file
+    \[\text{Nb}_{Block} = \frac{\text{S$_{File}$}}{\text{S$_{Block}$}}\]
+\end{itemize}
+\end{prettyBox}
+
+\newpage
+\null
+
+\subsection{Max File Size Calculation}
+\begin{prettyBox}{Max Size}{myblue}
+\item Nb$_{Block_0}$ : number of data block of level 0 
+    \[\text{Nb}_{Block_0} = 10\]
+\item Nb$_{Block_1}$ : number of data block of level 1 
+    \[ \text{Nb}_{Block_1} = \text{Nb}_{Pointer}\]
+\item Nb$_{Block_2}$ : number of data block of level 2 
+    \[ \text{Nb}_{Block_2} = (\text{Nb}_{Pointer})^2\]
+\item Nb$_{Block_3}$ : number of data block of level 3 
+    \[ \text{Nb}_{Block_3} = (\text{Nb}_{Pointer})^3\]
+\item Max : maximumum size the inodes can hold
+    \[\text{Max} = ( \text{Nb}_{Block_0} + \text{Nb}_{Block_1} + \text{Nb}_{Block_2} + \text{Nb}_{Block_3})\cdot 
+    S_{Block}\]
+\end{prettyBox}
+
+
+
+\vspace{0.65cm}
+
+\subsection{Number Of Index Block Calculation }
+\begin{prettyBox}{Number Of Index Block}{myblue}
+\begin{itemize}
+   \item if Nb$_{Block}$ \(\leq\) Nb$_{Block_0}$
+        \[\text{Nb}_{Index} = 0\]
+    \item else Nb$_{Block}$ $\gets$ Nb$_{Block}$ - Nb$_{Block_0}$ 
+    \begin{itemize}
+        \item If Nb$_{Block}$ \(\leq\) Nb$_{Block_1}$
+            \[\text{Nb}_{Index} = 1\]
+        \item else Nb$_{Block}$ $\gets$ Nb$_{Block}$ - Nb$_{Block_1}$
+            \begin{itemize}
+                \item If Nb$_{Block}$ \(\leq\) Nb$_{Block_2}$
+                 \[\text{Nb}_{Index} = 1 + (1+\lceil \frac{\text{Nb}_{Block}}{\text{Nb}_{Block_1}} \rceil) \]
+                 \begin{itemize}
+                    \item Else Nb$_{Block}$ $\gets$ Nb$_{Block}$ - Nb$_{Block_2}$
+     \[\text{Nb}_{Index} = 1 + (1+{\text{Nb}_{Pointer}) + (1+\lceil \frac{\text{Nb}_{Block}}{\text{Nb}_{Block_2}} \rceil + \lceil \frac{\text{Nb}_{Block}}{\text{Nb}_{Block_1}} \rceil ) \]
+                 \end{itemize}
+            \end{itemize}
+    \end{itemize}
+\end{itemize}
+\end{prettyBox}
+
+\newpage
+\null
+
+\subsubsection*{\underline{Example}}
+
+Data block size = 128 bytes , pointer size = 2 bytes , File = 1 mega bytes
+
+\begin{enumerate}
+    \item Max file size 
+    \item Number of index block 
+\end{enumerate}
+
+\begin{align*}
+    \text{Nb}_{Pointer} &= \frac{\text{S}_{Block}}{\text{S}_{Pointer}}\\[0.15cm]
+                        &= \frac{128 \hspace{0.1cm} \text{bytes}}{2 \hspace{0.1cm} \text{bytes}}\\[0.15cm]
+&=\boxed{64\hspace{0.1cm}\text{pointers}}
+\end{align*}
+
+\vspace{0.25cm}
+
+\begin{center}
+\(\boxed{\text{Nb}_{Block_0} = 10}\)\\[0.15cm]
+\(\text{Nb}_{Block_1} = \text{Nb}_{Pointer} = \boxed{64}\)\\[0.15cm]
+\(\text{Nb}_{Block_2} = (\text{Nb}_{Pointer})^2 = \boxed{64^2}\)\\[0.15cm]
+\(\text{Nb}_{Block_3} = (\text{Nb}_{Pointer})^3 = \boxed{64^3}\)\\[0.15cm]
+\end{center}
+
+\vspace{0.25cm}
+
+\begin{align*}
+    \text{Max}  &= ( \text{Nb}_{Block_0} + \text{Nb}_{Block_1} + \text{Nb}_{Block_2} + \text{Nb}_{Block_3})\cdot 
+    S_{Block}\\
+                &= (10+64+64^2+64^3)\cdot 128\hspace{0.1cm}\text{bytes}\\
+                &=266442 \hspace{0.1cm}\text{bytes}\\
+                &=\boxed{260.20\hspace{0.1cm}\text{Kilo bytes}}
+\end{align*}
+
+\vspace{0.25cm}
+
+\begin{align*}
+    \text{Nb}_{Block} &= \frac{\text{S}_{File}}{\text{S}_{Block}}\\[0.15cm]
+                  &= \frac{2^{20}}{128}\\[0.15cm]
+                  &=\boxed{8192}
+\end{align*}
+
+\newpage
+\null
+
+\begin{center}
+    \(\text{Nb}_{Block} > \text{Nb}_{Block_0} \)\\[0.15cm]
+    \( \text{Nb}_{Block} \gets \text{Nb}_{Block} - 10 = 8182\)\\[0.15cm]
+    \(\text{Nb}_{Block} > \text{Nb}_{Block_1} \)\\[0.15cm]
+    \( \text{Nb}_{Block} \gets \text{Nb}_{Block} - 64 = 8118\)\\[0.15cm]
+    \(\text{Nb}_{Block} > \text{Nb}_{Block_2} \)\\[0.15cm]
+    \( \text{Nb}_{Block} \gets \text{Nb}_{Block} - 64^2 = 4022\)\\[0.15cm]
+    \(\text{Nb}_{Block} \leq \text{Nb}_{Block_3} \)\\[0.15cm]
+\end{center}
+
+\begin{align*}
+    \text{Nb}_{Index} &= 1 + (1+\text{Nb}_{Pointer}) + (1+\lceil \frac{\text{Nb}_{Block}}{\text{Nb}_{Block_1}} \rceil + \lceil \frac{\text{Nb}_{Block}}{\text{Nb}_{Block_2}} \rceil )\\[0.15cm]
+                      &= 1+(1+64)+(1+\lceil\frac{4022}{64^2}\rceil+\lceil\frac{4022}{64}\rceil)\\[0.15cm]
+                      &=\boxed{131}
+\end{align*}
