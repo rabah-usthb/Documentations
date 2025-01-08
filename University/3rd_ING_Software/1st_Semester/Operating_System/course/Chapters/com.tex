@@ -1,0 +1,177 @@
+\newpage
+\null
+\vspace{0.15cm}
+
+\begin{center}
+    \Huge{\textbf{\underline{Chapter 3: Communication Between Processes}}}
+\end{center}
+
+\setcounter{section}{0}
+
+\vspace{0.35cm}
+
+
+\section{Introduction}
+
+\begin{prettyBox}{Introduction}{myblue}
+When processes communicate with each other, it is called \textbf{Inter-Process Communication (IPC)}. IPC allows processes to share information and work together. There are two main scenarios: 
+\begin{itemize}
+    \item \textbf{Same Process}: A single program is divided into threads or split into child processes that communicate internally.
+    \item \textbf{Different Processes}: Two separate programs running at the same time exchange information.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\section{Same Process}
+
+\subsection{Child Processes}
+\begin{prettyBox}{Child Processes}{myblue}
+The parent process is the first instance of the program, which is split into child
+processes using the primitive \textbf{fork()} that inherit all variables from parent and start executing after the fork. These processes communicate with
+each other and with their parent through pipes.
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\subsubsection{Fork}
+
+\begin{prettyBox}{fork()}{myblue}
+To use \textbf{fork()}, include the \texttt{<unistd.h>} header  
+,the \textbf{fork()} function splits the current process into two: a parent process and a child process. It returns a process ID (\textbf{pid}) with the following results:
+\begin{itemize}
+    \item \textbf{fork() = -1} : Error, fork failed.
+    \item \textbf{fork() = 0} : PID of the child process.
+    \item \textbf{fork() \(>\) 0} : PID of the parent process.
+\end{itemize}
+\end{prettyBox}
+
+\newpage
+\null
+
+\lstinputlisting[style=cstyle]{Chapters/C/Fork/ex1.c}
+
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{exit()}{red}
+    Terminates the current process with the given status. Use:
+    \begin{itemize}
+        \item \texttt{0} for a successful termination.
+        \item \texttt{-1} for indicating an error.
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\begin{prettyBox}{When Forking Fails}{red}
+    \begin{itemize}
+        \item Exceeded the maximum number of child processes.
+        \item Not enough memory or resources to fork.
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\subsubsection{Wait}
+\begin{prettyBox}{wait(NULL)}{myblue}
+To use \textbf{wait(NULL)}, include the \texttt{<sys/wait.h>} header used by parent processes , wait for its child processes to terminates
+\end{prettyBox}
+
+\newpage
+\null
+\lstinputlisting[style=cstyle]{Chapters/C/Fork/ex2.c}
+
+\vspace{0.35cm}
+\subsubsection{Pipe}
+\begin{prettyBox}{pipe()}{myblue}
+To use \texttt{pipe()} we need to include the header \texttt{<unistd.h>}\\
+    The \texttt{pipe()} function creates a pipe and takes an array of two integers as input:
+    \begin{itemize}
+        \item \texttt{pipe(descriptor)} creates the pipe and stores the file descriptors in the \texttt{descriptor} array , if pipe creation fails, \texttt{-1} is returned.
+    \end{itemize}
+    The two elements of the \texttt{descriptor} array represent the ends of the pipe:
+    \begin{itemize}
+        \item \texttt{read(descriptor[0], \&var, sizeof(var))} reads from the pipe.
+        \item \texttt{write(descriptor[1], \&var, sizeof(var))} writes to the pipe.
+    \end{itemize}
+    To close a pipe end, use the \texttt{close(descriptor[i])} function.
+
+\end{prettyBox}
+
+
+\newpage
+\null
+
+\begin{prettyBox}{Reminder}{red}
+\textbf{Frequent Mistakes With Pipes}
+\begin{itemize}
+    \item \textbf{Closing All Read Descriptors Then Trying To Write On Pipe}: 
+    Kernel doesn't find where to write the data, causing a SIGPIPE signal or an EPIPE error.
+    \item \textbf{Not Closing All Write Descriptors Then Trying To Read From That Pipe}: 
+    Kernel waits for the pipe to be written to, as it doesn't see an EOF (End Of File) signal.
+\end{itemize}
+
+\textbf{Solution}
+\begin{itemize}
+    \item \textbf{Leave at least one read end of the pipe open before writing to it}, 
+    so the kernel knows where to write the data.
+    \item \textbf{Always close all write ends of a pipe before reading from it}, 
+    so the kernel knows that the pipe has reached its EOF.
+\end{itemize}
+
+\end{prettyBox}
+
+
+\vspace{0.35cm}
+\begin{prettyBox}{Note}{red}
+    You can loop through \texttt{read()} using \texttt{read() > 0}, as it returns the number of bytes read. 
+    As data is read, the cursor moves until \textbf{EOF} (End of File) is reached.
+\end{prettyBox}
+
+\vspace{1.25cm}
+
+\subsubsection*{\underline{Example}}
+
+\begin{itemize}
+    \item \textbf{child\_1}: Accepts input of n characters. Write only alphabetic characters to the pipe, converts lowercase letters to uppercase. Stops when the user inputs '0'.
+    \item \textbf{child\_2}: Prints the characters written to the pipe by \textbf{child\_1}.
+    \item \textbf{parent}: Creates the child processes and waits for them to finish.
+\end{itemize}
+
+\newpage
+
+\subsubsection*{\underline{Code Overview}}
+\lstinputlisting[style=cstyle,basicstyle=\footnotesize\ttfamily]{Chapters/C/Fork/ex3.1.c}
+
+\newpage
+
+\subsubsection*{\underline{child\_1 function :}}
+\lstinputlisting[style=cstyle,basicstyle=\footnotesize\ttfamily]{Chapters/C/Fork/ex3.2.c}
+
+\vspace{0.5cm}
+
+\subsubsection*{\underline{child\_1 function :}}
+\lstinputlisting[style=cstyle,basicstyle=\footnotesize\ttfamily]{Chapters/C/Fork/ex3.3.c}
+
+\vspace{1cm}
+
+\begin{itemize}
+    \item \textbf{parent}: Write 5 integers.
+    \item \textbf{child}: Read the integers of parent and write their double.
+    \item \textbf{parent}: Read Double integers of child.
+\end{itemize}
+
+\newpage
+\null
+\subsubsection*{\underline{Code Overview}}
+\lstinputlisting[style=cstyle,basicstyle=\footnotesize\ttfamily]{Chapters/C/Fork/ex4.1.c}
+\newpage
+\subsubsection*{\underline{Parent's Functions}}
+\lstinputlisting[style=cstyle,firstline=28,lastline=47,basicstyle=\footnotesize\ttfamily]{Chapters/C/Fork/ex4.c}
+\subsubsection*{\underline{Child's Functions}}
+\lstinputlisting[style=cstyle,firstline=12,lastline=26,basicstyle=\footnotesize\ttfamily]{Chapters/C/Fork/ex4.c}
+\subsection{Threads}
+\begin{prettyBox}{Thread}{myblue}
+    prettyBox
+\end{prettyBox}

@@ -25,11 +25,49 @@
   drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
 }
 
+\usepackage{listings}
+% Define the style for C code
+\lstdefinestyle{cstyle}{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    stringstyle=\color{red},
+    commentstyle=\color{green!50!black}\itshape,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    breaklines=true,
+    frame=tb,
+    tabsize=4,
+    showstringspaces=false,
+    captionpos=b
+}
+
+
+\lstdefinestyle{pythonstyle2}{
+    language=python,                    % Language set to Python
+    basicstyle=\ttfamily\footnotesize,   % Change basic font size
+    keywordstyle=\color{blue}\bfseries, % Different keyword style
+    stringstyle=\color{red},         % Different string color
+    commentstyle=\color{green!60!black}\itshape, % Adjust comment color
+    numbers=left,                       % Line numbers on the left
+    numberstyle=\tiny\color{gray},      % Smaller number font and color
+    stepnumber=1,                       % Number each line
+    frame=single,                       % Single frame around code
+    tabsize=4,                          % Adjust tab size
+    showstringspaces=false,             % Do not show spaces in strings
+    captionpos=b,% Position of caption
+    breaklines=true,
+    inputencoding=utf8
+}
+
+
 
 
 \begin{document}
 \input{Chapters/Introduction.tex} 
-
 \input{Chapters/File.tex} 
+\input{Chapters/com.tex}
 \input{Chapters/deadlock.tex} 
+
 \end{document}
