@@ -1,0 +1,106 @@
+
+\newpage
+\null
+\begin{center}
+    \Huge{\textbf{\underline{Chapter 1.2: Informed}}}
+\end{center}
+
+\setcounter{section}{0}
+
+\vspace{0.35cm}
+
+\section{Heuristic Function \(h(n)\)}
+\begin{prettyBox}{Definition}{myblue}
+The Heuristic Function takes a state as input and returns a heuristic value, which indicates how close the state is to the solution.
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\begin{prettyBox}{Better Heuristic \(h(n)\)}{myblue}
+A single problem can have many heuristic functions. These heuristics can be compared on two main points:
+\begin{itemize}
+    \item \textbf{Cost:} We aim for a low cost since each node we traverse will involve applying the heuristic function.
+    \item \textbf{Effectiveness:} How efficient the heuristic is at guiding the search. If the ratio is equal to 1, it is perfect.
+    \[
+    \text{Effectiveness} = \frac{\text{Nb}_{\text{Seen Nodes}}}{|\text{Path}|}
+    \]
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\section{Types of Heuristic Functions}
+\begin{prettyBox}{Types}{myblue}
+    Heuristic functions can be divided into the following types:
+    \begin{itemize}
+        \item \textbf{Static (Dependent on the Domain):} A static rule derived from the goal state is applied to a given state to compute its heuristic value.
+        \item \textbf{Dynamic (Independent of the Domain):} Uses a relaxed problem, typically simplifying the problem constraints to guide the search.
+    \end{itemize}
+\end{prettyBox}
+
+\newpage
+\section{Searching Algorithms}
+
+\subsection{Best-First Search}
+
+\begin{algorithm}[ht]
+\caption{Best-First Search}
+\begin{algorithmic}
+\State Open \(\gets\) \{\{S, \text{nil}, h(S)\}\}; 
+\State Closed \(\gets\) \{\}; 
+\vspace{0.1cm}
+\While{ Open \(\neq\) nil) }
+    \State N \(\gets\) Head(Open); 
+    
+    \vspace{0.07cm}
+    \If{GoalTest(N.current)} 
+        \State return reconstructPath(N, Closed); 
+    \Else
+        \State Closed \(\gets\) Closed \(\bigcup\) \{N\}; 
+        \For{each new state in MoveGen(\(N.\text{current}\))}
+            \If{new \(\notin\) Open \(\bigcup\) Closed}
+                \State Open \(\gets\) append(\{new, N, h(new)\}); 
+            \EndIf
+        \EndFor
+
+        \State sort\(_{h}\)(Open); 
+    \EndIf
+    \vspace{0.07cm}
+\EndWhile
+
+\vspace{0.1cm}
+\State return nil; 
+\end{algorithmic}
+\end{algorithm}
+
+
+\subsection{Hill Climbing}
+
+\begin{algorithm}[ht]
+\caption{Best-First Search}
+\begin{algorithmic}
+\State next \(\gets\) \{\{S, \text{nil}, h\}\}; 
+\State value \(\gets\) Next.h;
+\State b \(\gets\) true;
+\State path \(\gets\) \{next\};
+\vspace{0.1cm}
+\While{ b }
+\For {each new in MoveGen(next) }
+\If{new better than next}
+\State next \(\gets\) new;
+\State path \(\gets\) append(new);
+\EndIf
+\EndFor
+    
+\If{value = next.h}
+\State b \(\gets\) false;
+\Else
+\State value \(\gets\) next.h;
+\EndIf
+\EndWhile
+
+\vspace{0.1cm}
+\State return path; 
+\end{algorithmic}
+\end{algorithm}
+
