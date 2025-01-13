@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  13 JAN 2025 10:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  13 JAN 2025 16:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -615,73 +615,73 @@ File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 40.
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
-
- []
-
-[5] [6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 488--489
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 490--491
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
 
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 626--627
+[6] [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 504--505
 
  []
 
 
-Overfull \hbox (31.53203pt too wide) detected at line 655
+Underfull \hbox (badness 10000) in paragraph at lines 506--507
+
+ []
+
+[9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 642--643
+
+ []
+
+
+Overfull \hbox (31.53203pt too wide) detected at line 671
 []
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 675--676
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 691--692
 
  []
 
 
-Overfull \hbox (31.53203pt too wide) detected at line 708
+Overfull \hbox (31.53203pt too wide) detected at line 724
 []
  []
 
-[11] [12]
-./Chapters/Linear Programming.tex:834: Missing $ inserted.
+[12] [13]
+./Chapters/Linear Programming.tex:850: Missing $ inserted.
 <inserted text> 
                 $
-l.834 \boldsymbol{\leq}
+l.850 \boldsymbol{\leq}
                         \textbf{Constraint}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Chapters/Linear Programming.tex:834: Missing $ inserted.
+./Chapters/Linear Programming.tex:850: Missing $ inserted.
 <inserted text> 
                 $
-l.834 \boldsymbol{\leq}
+l.850 \boldsymbol{\leq}
                         \textbf{Constraint}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -689,18 +689,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./Chapters/Linear Programming.tex:838: Missing $ inserted.
+./Chapters/Linear Programming.tex:854: Missing $ inserted.
 <inserted text> 
                 $
-l.838 \boldsymbol{\geq}
+l.854 \boldsymbol{\geq}
                         \textbf{Constraint}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Chapters/Linear Programming.tex:838: Missing $ inserted.
+./Chapters/Linear Programming.tex:854: Missing $ inserted.
 <inserted text> 
                 $
-l.838 \boldsymbol{\geq}
+l.854 \boldsymbol{\geq}
                         \textbf{Constraint}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -711,121 +711,121 @@ my insertion and my current dilemma will both disappear.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/simplexe.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/simplexe.drawio.pdf, id=56, 104.45007pt x 243.58405pt>
+<Chapters/Diagram/simplexe.drawio.pdf, id=60, 104.45007pt x 243.58405pt>
 File: Chapters/Diagram/simplexe.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/simplexe.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/simplexe.drawio.pdf  used on input line 884.
+Package pdftex.def Info: Chapters/Diagram/simplexe.drawio.pdf  used on input line 900.
 (pdftex.def)             Requested size: 236.10059pt x 550.5571pt.
-[13] [14 <./Chapters/Diagram/simplexe.drawio.pdf>] [15]
+[14] [15 <./Chapters/Diagram/simplexe.drawio.pdf>] [16]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/table.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/table.pdf, id=74, 487.74222pt x 174.19379pt>
+<Chapters/Simplexe/table.pdf, id=77, 487.74222pt x 174.19379pt>
 File: Chapters/Simplexe/table.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/table.pdf>
-Package pdftex.def Info: Chapters/Simplexe/table.pdf  used on input line 996.
+Package pdftex.def Info: Chapters/Simplexe/table.pdf  used on input line 1012.
 (pdftex.def)             Requested size: 487.74103pt x 174.19334pt.
-[16]
+[17]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/leg.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/leg.drawio.pdf, id=79, 181.25316pt x 166.97281pt>
+<Chapters/Simplexe/leg.drawio.pdf, id=82, 181.25316pt x 166.97281pt>
 File: Chapters/Simplexe/leg.drawio.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/leg.drawio.pdf>
-Package pdftex.def Info: Chapters/Simplexe/leg.drawio.pdf  used on input line 1002.
+Package pdftex.def Info: Chapters/Simplexe/leg.drawio.pdf  used on input line 1018.
 (pdftex.def)             Requested size: 268.87672pt x 247.6942pt.
-[17 <./Chapters/Simplexe/table.pdf> <./Chapters/Simplexe/leg.drawio.pdf>]
+[18 <./Chapters/Simplexe/table.pdf> <./Chapters/Simplexe/leg.drawio.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/basis.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/basis.pdf, id=107, 516.24571pt x 186.86212pt>
+<Chapters/Simplexe/basis.pdf, id=110, 516.24571pt x 186.86212pt>
 File: Chapters/Simplexe/basis.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/basis.pdf>
-Package pdftex.def Info: Chapters/Simplexe/basis.pdf  used on input line 1033.
+Package pdftex.def Info: Chapters/Simplexe/basis.pdf  used on input line 1049.
 (pdftex.def)             Requested size: 516.24445pt x 186.86165pt.
-[18 <./Chapters/Simplexe/basis.pdf>]
+[19 <./Chapters/Simplexe/basis.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/pivot.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/pivot.pdf, id=126, 495.13182pt x 173.13783pt>
+<Chapters/Simplexe/pivot.pdf, id=130, 495.13182pt x 173.13783pt>
 File: Chapters/Simplexe/pivot.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/pivot.pdf>
-Package pdftex.def Info: Chapters/Simplexe/pivot.pdf  used on input line 1080.
+Package pdftex.def Info: Chapters/Simplexe/pivot.pdf  used on input line 1096.
 (pdftex.def)             Requested size: 495.1306pt x 173.1374pt.
-[19 <./Chapters/Simplexe/pivot.pdf>] [20]
-Overfull \hbox (42.09018pt too wide) detected at line 1159
+[20 <./Chapters/Simplexe/pivot.pdf>] [21]
+Overfull \hbox (42.09018pt too wide) detected at line 1175
 \OML/cmm/m/it/10 Z[] \OT1/cmr/m/n/10 = []
  []
 
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX1/ex1.1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX1/ex1.1.pdf, id=147, 490.09698pt x 150.16702pt>
+<Chapters/Simplexe/EX/EX1/ex1.1.pdf, id=150, 490.09698pt x 150.16702pt>
 File: Chapters/Simplexe/EX/EX1/ex1.1.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX1/ex1.1.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX1/ex1.1.pdf  used on input line 1171.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX1/ex1.1.pdf  used on input line 1187.
 (pdftex.def)             Requested size: 490.09578pt x 150.16666pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX1/ex1.2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX1/ex1.2.pdf, id=148, 517.29958pt x 158.33958pt>
+<Chapters/Simplexe/EX/EX1/ex1.2.pdf, id=151, 517.29958pt x 158.33958pt>
 File: Chapters/Simplexe/EX/EX1/ex1.2.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX1/ex1.2.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX1/ex1.2.pdf  used on input line 1187.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX1/ex1.2.pdf  used on input line 1203.
 (pdftex.def)             Requested size: 517.29831pt x 158.33919pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX1/ex1.3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX1/ex1.3.pdf, id=149, 487.73712pt x 146.73087pt>
+<Chapters/Simplexe/EX/EX1/ex1.3.pdf, id=152, 487.73712pt x 146.73087pt>
 File: Chapters/Simplexe/EX/EX1/ex1.3.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX1/ex1.3.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX1/ex1.3.pdf  used on input line 1191.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX1/ex1.3.pdf  used on input line 1207.
 (pdftex.def)             Requested size: 487.73593pt x 146.73048pt.
-[21 <./Chapters/Simplexe/EX/EX1/ex1.1.pdf> <./Chapters/Simplexe/EX/EX1/ex1.2.pdf>]
+[22 <./Chapters/Simplexe/EX/EX1/ex1.1.pdf> <./Chapters/Simplexe/EX/EX1/ex1.2.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX1/ex1.4.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX1/ex1.4.pdf, id=167, 505.66237pt x 164.68456pt>
+<Chapters/Simplexe/EX/EX1/ex1.4.pdf, id=170, 505.66237pt x 164.68456pt>
 File: Chapters/Simplexe/EX/EX1/ex1.4.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX1/ex1.4.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX1/ex1.4.pdf  used on input line 1207.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX1/ex1.4.pdf  used on input line 1223.
 (pdftex.def)             Requested size: 505.66113pt x 164.68414pt.
-[22 <./Chapters/Simplexe/EX/EX1/ex1.3.pdf> <./Chapters/Simplexe/EX/EX1/ex1.4.pdf>]
+[23 <./Chapters/Simplexe/EX/EX1/ex1.3.pdf> <./Chapters/Simplexe/EX/EX1/ex1.4.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX1/ex1.5.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX1/ex1.5.pdf, id=183, 486.65594pt x 148.8079pt>
+<Chapters/Simplexe/EX/EX1/ex1.5.pdf, id=186, 486.65594pt x 148.8079pt>
 File: Chapters/Simplexe/EX/EX1/ex1.5.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX1/ex1.5.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX1/ex1.5.pdf  used on input line 1212.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX1/ex1.5.pdf  used on input line 1228.
 (pdftex.def)             Requested size: 486.65475pt x 148.80754pt.
-./Chapters/Linear Programming.tex:1268: Missing $ inserted.
+./Chapters/Linear Programming.tex:1284: Missing $ inserted.
 <inserted text> 
                 $
-l.1268 
+l.1284 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Chapters/Linear Programming.tex:1268: Display math should end with $$.
+./Chapters/Linear Programming.tex:1284: Display math should end with $$.
 <to be read again> 
                    \tex_par:D 
-l.1268 
+l.1284 
        
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
 
-./Chapters/Linear Programming.tex:1271: LaTeX Error: Bad math environment delimiter.
+./Chapters/Linear Programming.tex:1287: LaTeX Error: Bad math environment delimiter.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1271 \]
+l.1287 \]
          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./Chapters/Linear Programming.tex:1271: Missing $ inserted.
+./Chapters/Linear Programming.tex:1287: Missing $ inserted.
 <inserted text> 
                 $
-l.1271 \]
+l.1287 \]
          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -833,184 +833,184 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./Chapters/Linear Programming.tex:1271: Display math should end with $$.
+./Chapters/Linear Programming.tex:1287: Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.1271 \]
+l.1287 \]
          
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-[23 <./Chapters/Simplexe/EX/EX1/ex1.5.pdf>]
+[24 <./Chapters/Simplexe/EX/EX1/ex1.5.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX2/ex2.1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX2/ex2.1.pdf, id=194, 493.0009pt x 153.07582pt>
+<Chapters/Simplexe/EX/EX2/ex2.1.pdf, id=197, 493.0009pt x 153.07582pt>
 File: Chapters/Simplexe/EX/EX2/ex2.1.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX2/ex2.1.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX2/ex2.1.pdf  used on input line 1311.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX2/ex2.1.pdf  used on input line 1327.
 (pdftex.def)             Requested size: 492.99968pt x 153.07544pt.
-[24 <./Chapters/Simplexe/EX/EX2/ex2.1.pdf>]
+[25 <./Chapters/Simplexe/EX/EX2/ex2.1.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX2/ex2.2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX2/ex2.2.pdf, id=204, 516.21832pt x 167.81436pt>
+<Chapters/Simplexe/EX/EX2/ex2.2.pdf, id=208, 516.21832pt x 167.81436pt>
 File: Chapters/Simplexe/EX/EX2/ex2.2.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX2/ex2.2.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX2/ex2.2.pdf  used on input line 1327.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX2/ex2.2.pdf  used on input line 1343.
 (pdftex.def)             Requested size: 516.21706pt x 167.81393pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX2/ex2.3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX2/ex2.3.pdf, id=205, 494.05367pt x 151.99463pt>
+<Chapters/Simplexe/EX/EX2/ex2.3.pdf, id=209, 494.05367pt x 151.99463pt>
 File: Chapters/Simplexe/EX/EX2/ex2.3.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX2/ex2.3.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX2/ex2.3.pdf  used on input line 1340.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX2/ex2.3.pdf  used on input line 1356.
 (pdftex.def)             Requested size: 494.05244pt x 151.99425pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX2/ex2.4.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX2/ex2.4.pdf, id=206, 513.0601pt x 169.9483pt>
+<Chapters/Simplexe/EX/EX2/ex2.4.pdf, id=210, 513.0601pt x 169.9483pt>
 File: Chapters/Simplexe/EX/EX2/ex2.4.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX2/ex2.4.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX2/ex2.4.pdf  used on input line 1355.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX2/ex2.4.pdf  used on input line 1371.
 (pdftex.def)             Requested size: 513.05885pt x 169.94788pt.
-[25 <./Chapters/Simplexe/EX/EX2/ex2.2.pdf> <./Chapters/Simplexe/EX/EX2/ex2.3.pdf>]
+[26 <./Chapters/Simplexe/EX/EX2/ex2.2.pdf> <./Chapters/Simplexe/EX/EX2/ex2.3.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX2/ex2.5.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX2/ex2.5.pdf, id=223, 493.0009pt x 148.83636pt>
+<Chapters/Simplexe/EX/EX2/ex2.5.pdf, id=226, 493.0009pt x 148.83636pt>
 File: Chapters/Simplexe/EX/EX2/ex2.5.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX2/ex2.5.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX2/ex2.5.pdf  used on input line 1371.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX2/ex2.5.pdf  used on input line 1387.
 (pdftex.def)             Requested size: 492.99968pt x 148.836pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX2/ex2.6.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX2/ex2.6.pdf, id=224, 513.0601pt x 166.79005pt>
+<Chapters/Simplexe/EX/EX2/ex2.6.pdf, id=227, 513.0601pt x 166.79005pt>
 File: Chapters/Simplexe/EX/EX2/ex2.6.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX2/ex2.6.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX2/ex2.6.pdf  used on input line 1386.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX2/ex2.6.pdf  used on input line 1402.
 (pdftex.def)             Requested size: 513.05885pt x 166.78964pt.
-[26 <./Chapters/Simplexe/EX/EX2/ex2.4.pdf> <./Chapters/Simplexe/EX/EX2/ex2.5.pdf>]
+[27 <./Chapters/Simplexe/EX/EX2/ex2.4.pdf> <./Chapters/Simplexe/EX/EX2/ex2.5.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX2/ex2.7.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX2/ex2.7.pdf, id=240, 500.39864pt x 153.07582pt>
+<Chapters/Simplexe/EX/EX2/ex2.7.pdf, id=243, 500.39864pt x 153.07582pt>
 File: Chapters/Simplexe/EX/EX2/ex2.7.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX2/ex2.7.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX2/ex2.7.pdf  used on input line 1401.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX2/ex2.7.pdf  used on input line 1417.
 (pdftex.def)             Requested size: 500.39742pt x 153.07544pt.
-[27 <./Chapters/Simplexe/EX/EX2/ex2.6.pdf> <./Chapters/Simplexe/EX/EX2/ex2.7.pdf>] [28]
+[28 <./Chapters/Simplexe/EX/EX2/ex2.6.pdf> <./Chapters/Simplexe/EX/EX2/ex2.7.pdf>] [29]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX3/ex3.1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX3/ex3.1.pdf, id=260, 494.05367pt x 131.96388pt>
+<Chapters/Simplexe/EX/EX3/ex3.1.pdf, id=263, 494.05367pt x 131.96388pt>
 File: Chapters/Simplexe/EX/EX3/ex3.1.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX3/ex3.1.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX3/ex3.1.pdf  used on input line 1483.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX3/ex3.1.pdf  used on input line 1499.
 (pdftex.def)             Requested size: 494.05244pt x 131.96355pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX3/ex3.2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX3/ex3.2.pdf, id=261, 514.11285pt x 151.99463pt>
+<Chapters/Simplexe/EX/EX3/ex3.2.pdf, id=264, 514.11285pt x 151.99463pt>
 File: Chapters/Simplexe/EX/EX3/ex3.2.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX3/ex3.2.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX3/ex3.2.pdf  used on input line 1501.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX3/ex3.2.pdf  used on input line 1517.
 (pdftex.def)             Requested size: 514.1116pt x 151.99425pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX3/ex3.3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX3/ex3.3.pdf, id=262, 497.24037pt x 136.17488pt>
+<Chapters/Simplexe/EX/EX3/ex3.3.pdf, id=265, 497.24037pt x 136.17488pt>
 File: Chapters/Simplexe/EX/EX3/ex3.3.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX3/ex3.3.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX3/ex3.3.pdf  used on input line 1517.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX3/ex3.3.pdf  used on input line 1533.
 (pdftex.def)             Requested size: 497.23915pt x 136.17455pt.
-[29 <./Chapters/Simplexe/EX/EX3/ex3.1.pdf> <./Chapters/Simplexe/EX/EX3/ex3.2.pdf>]
+[30 <./Chapters/Simplexe/EX/EX3/ex3.1.pdf> <./Chapters/Simplexe/EX/EX3/ex3.2.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX3/ex3.4.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX3/ex3.4.pdf, id=278, 516.21832pt x 139.33315pt>
+<Chapters/Simplexe/EX/EX3/ex3.4.pdf, id=281, 516.21832pt x 139.33315pt>
 File: Chapters/Simplexe/EX/EX3/ex3.4.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX3/ex3.4.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX3/ex3.4.pdf  used on input line 1535.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX3/ex3.4.pdf  used on input line 1551.
 (pdftex.def)             Requested size: 516.21706pt x 139.3328pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX3/ex3.5.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX3/ex3.5.pdf, id=279, 497.24037pt x 134.06938pt>
+<Chapters/Simplexe/EX/EX3/ex3.5.pdf, id=282, 497.24037pt x 134.06938pt>
 File: Chapters/Simplexe/EX/EX3/ex3.5.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX3/ex3.5.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX3/ex3.5.pdf  used on input line 1550.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX3/ex3.5.pdf  used on input line 1566.
 (pdftex.def)             Requested size: 497.23915pt x 134.06905pt.
-[30 <./Chapters/Simplexe/EX/EX3/ex3.3.pdf> <./Chapters/Simplexe/EX/EX3/ex3.4.pdf>] [31 <./Chapters/Simplexe/EX/EX3/ex3.5.pdf>]
+[31 <./Chapters/Simplexe/EX/EX3/ex3.3.pdf> <./Chapters/Simplexe/EX/EX3/ex3.4.pdf>] [32 <./Chapters/Simplexe/EX/EX3/ex3.5.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX4/ex4.1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX4/ex4.1.pdf, id=305, 503.55688pt x 151.99463pt>
+<Chapters/Simplexe/EX/EX4/ex4.1.pdf, id=308, 503.55688pt x 151.99463pt>
 File: Chapters/Simplexe/EX/EX4/ex4.1.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX4/ex4.1.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX4/ex4.1.pdf  used on input line 1661.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX4/ex4.1.pdf  used on input line 1677.
 (pdftex.def)             Requested size: 503.55565pt x 151.99425pt.
-[32]
+[33]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX4/ex4.2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX4/ex4.2.pdf, id=309, 553.17848pt x 175.24052pt>
+<Chapters/Simplexe/EX/EX4/ex4.2.pdf, id=312, 553.17848pt x 175.24052pt>
 File: Chapters/Simplexe/EX/EX4/ex4.2.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX4/ex4.2.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX4/ex4.2.pdf  used on input line 1681.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX4/ex4.2.pdf  used on input line 1697.
 (pdftex.def)             Requested size: 553.17712pt x 175.2401pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX4/ex4.3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX4/ex4.3.pdf, id=310, 491.9197pt x 153.07582pt>
+<Chapters/Simplexe/EX/EX4/ex4.3.pdf, id=313, 491.9197pt x 153.07582pt>
 File: Chapters/Simplexe/EX/EX4/ex4.3.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX4/ex4.3.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX4/ex4.3.pdf  used on input line 1701.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX4/ex4.3.pdf  used on input line 1717.
 (pdftex.def)             Requested size: 491.91849pt x 153.07544pt.
-[33 <./Chapters/Simplexe/EX/EX4/ex4.1.pdf> <./Chapters/Simplexe/EX/EX4/ex4.2.pdf>]
+[34 <./Chapters/Simplexe/EX/EX4/ex4.1.pdf> <./Chapters/Simplexe/EX/EX4/ex4.2.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX4/ex4.4.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX4/ex4.4.pdf, id=326, 533.1193pt x 164.68456pt>
+<Chapters/Simplexe/EX/EX4/ex4.4.pdf, id=329, 533.1193pt x 164.68456pt>
 File: Chapters/Simplexe/EX/EX4/ex4.4.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX4/ex4.4.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX4/ex4.4.pdf  used on input line 1722.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX4/ex4.4.pdf  used on input line 1738.
 (pdftex.def)             Requested size: 533.11798pt x 164.68414pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX4/ex4.5.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX4/ex4.5.pdf, id=327, 494.05367pt x 155.15288pt>
+<Chapters/Simplexe/EX/EX4/ex4.5.pdf, id=330, 494.05367pt x 155.15288pt>
 File: Chapters/Simplexe/EX/EX4/ex4.5.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX4/ex4.5.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX4/ex4.5.pdf  used on input line 1742.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX4/ex4.5.pdf  used on input line 1758.
 (pdftex.def)             Requested size: 494.05244pt x 155.15248pt.
-[34 <./Chapters/Simplexe/EX/EX4/ex4.3.pdf> <./Chapters/Simplexe/EX/EX4/ex4.4.pdf>]
-./Chapters/Linear Programming.tex:1796: Missing $ inserted.
+[35 <./Chapters/Simplexe/EX/EX4/ex4.3.pdf> <./Chapters/Simplexe/EX/EX4/ex4.4.pdf>]
+./Chapters/Linear Programming.tex:1812: Missing $ inserted.
 <inserted text> 
                 $
-l.1796 
+l.1812 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Chapters/Linear Programming.tex:1796: Display math should end with $$.
+./Chapters/Linear Programming.tex:1812: Display math should end with $$.
 <to be read again> 
                    \tex_par:D 
-l.1796 
+l.1812 
        
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
 
-./Chapters/Linear Programming.tex:1799: LaTeX Error: Bad math environment delimiter.
+./Chapters/Linear Programming.tex:1815: LaTeX Error: Bad math environment delimiter.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1799 \]
+l.1815 \]
          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./Chapters/Linear Programming.tex:1799: Missing $ inserted.
+./Chapters/Linear Programming.tex:1815: Missing $ inserted.
 <inserted text> 
                 $
-l.1799 \]
+l.1815 \]
          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1018,354 +1018,284 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./Chapters/Linear Programming.tex:1799: Display math should end with $$.
+./Chapters/Linear Programming.tex:1815: Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.1799 \]
+l.1815 \]
          
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-[35 <./Chapters/Simplexe/EX/EX4/ex4.5.pdf>]
+[36 <./Chapters/Simplexe/EX/EX4/ex4.5.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX5/ex5.1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX5/ex5.1.pdf, id=352, 499.34587pt x 149.88911pt>
+<Chapters/Simplexe/EX/EX5/ex5.1.pdf, id=355, 499.34587pt x 149.88911pt>
 File: Chapters/Simplexe/EX/EX5/ex5.1.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX5/ex5.1.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX5/ex5.1.pdf  used on input line 1837.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX5/ex5.1.pdf  used on input line 1853.
 (pdftex.def)             Requested size: 499.34465pt x 149.88875pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX5/ex5.2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX5/ex5.2.pdf, id=353, 521.51056pt x 174.18776pt>
+<Chapters/Simplexe/EX/EX5/ex5.2.pdf, id=356, 521.51056pt x 174.18776pt>
 File: Chapters/Simplexe/EX/EX5/ex5.2.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX5/ex5.2.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX5/ex5.2.pdf  used on input line 1856.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX5/ex5.2.pdf  used on input line 1872.
 (pdftex.def)             Requested size: 521.50928pt x 174.18732pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX5/ex5.3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX5/ex5.3.pdf, id=354, 495.1064pt x 160.4451pt>
+<Chapters/Simplexe/EX/EX5/ex5.3.pdf, id=357, 495.1064pt x 160.4451pt>
 File: Chapters/Simplexe/EX/EX5/ex5.3.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX5/ex5.3.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX5/ex5.3.pdf  used on input line 1860.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX5/ex5.3.pdf  used on input line 1876.
 (pdftex.def)             Requested size: 495.10518pt x 160.44469pt.
-[36 <./Chapters/Simplexe/EX/EX5/ex5.1.pdf> <./Chapters/Simplexe/EX/EX5/ex5.2.pdf>]
+[37 <./Chapters/Simplexe/EX/EX5/ex5.1.pdf> <./Chapters/Simplexe/EX/EX5/ex5.2.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX5/ex5.4.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX5/ex5.4.pdf, id=371, 522.56331pt x 167.8428pt>
+<Chapters/Simplexe/EX/EX5/ex5.4.pdf, id=375, 522.56331pt x 167.8428pt>
 File: Chapters/Simplexe/EX/EX5/ex5.4.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX5/ex5.4.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX5/ex5.4.pdf  used on input line 1877.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX5/ex5.4.pdf  used on input line 1893.
 (pdftex.def)             Requested size: 522.56203pt x 167.84238pt.
-[37 <./Chapters/Simplexe/EX/EX5/ex5.3.pdf> <./Chapters/Simplexe/EX/EX5/ex5.4.pdf>]
+[38 <./Chapters/Simplexe/EX/EX5/ex5.3.pdf> <./Chapters/Simplexe/EX/EX5/ex5.4.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX5/ex5.5.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX5/ex5.5.pdf, id=388, 493.0009pt x 157.28683pt>
+<Chapters/Simplexe/EX/EX5/ex5.5.pdf, id=391, 493.0009pt x 157.28683pt>
 File: Chapters/Simplexe/EX/EX5/ex5.5.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX5/ex5.5.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX5/ex5.5.pdf  used on input line 1883.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX5/ex5.5.pdf  used on input line 1899.
 (pdftex.def)             Requested size: 492.99968pt x 157.28644pt.
-[38 <./Chapters/Simplexe/EX/EX5/ex5.5.pdf>]
+[39 <./Chapters/Simplexe/EX/EX5/ex5.5.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX6/ex6.1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX6/ex6.1.pdf, id=398, 497.24037pt x 151.99463pt>
+<Chapters/Simplexe/EX/EX6/ex6.1.pdf, id=401, 497.24037pt x 151.99463pt>
 File: Chapters/Simplexe/EX/EX6/ex6.1.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX6/ex6.1.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX6/ex6.1.pdf  used on input line 1969.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX6/ex6.1.pdf  used on input line 1985.
 (pdftex.def)             Requested size: 497.23915pt x 151.99425pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX6/ex6.2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX6/ex6.2.pdf, id=399, 519.40503pt x 173.13503pt>
+<Chapters/Simplexe/EX/EX6/ex6.2.pdf, id=402, 519.40503pt x 173.13503pt>
 File: Chapters/Simplexe/EX/EX6/ex6.2.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX6/ex6.2.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX6/ex6.2.pdf  used on input line 1989.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX6/ex6.2.pdf  used on input line 2005.
 (pdftex.def)             Requested size: 519.40375pt x 173.13458pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX6/ex6.3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX6/ex6.3.pdf, id=400, 497.24037pt x 156.23409pt>
+<Chapters/Simplexe/EX/EX6/ex6.3.pdf, id=403, 497.24037pt x 156.23409pt>
 File: Chapters/Simplexe/EX/EX6/ex6.3.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX6/ex6.3.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX6/ex6.3.pdf  used on input line 1993.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX6/ex6.3.pdf  used on input line 2009.
 (pdftex.def)             Requested size: 497.23915pt x 156.23369pt.
-[39 <./Chapters/Simplexe/EX/EX6/ex6.1.pdf> <./Chapters/Simplexe/EX/EX6/ex6.2.pdf>]
+[40 <./Chapters/Simplexe/EX/EX6/ex6.1.pdf> <./Chapters/Simplexe/EX/EX6/ex6.2.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX6/ex6.4.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX6/ex6.4.pdf, id=416, 504.60962pt x 173.13503pt>
+<Chapters/Simplexe/EX/EX6/ex6.4.pdf, id=419, 504.60962pt x 173.13503pt>
 File: Chapters/Simplexe/EX/EX6/ex6.4.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX6/ex6.4.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX6/ex6.4.pdf  used on input line 2013.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX6/ex6.4.pdf  used on input line 2029.
 (pdftex.def)             Requested size: 504.60838pt x 173.13458pt.
-[40 <./Chapters/Simplexe/EX/EX6/ex6.3.pdf> <./Chapters/Simplexe/EX/EX6/ex6.4.pdf>]
+[41 <./Chapters/Simplexe/EX/EX6/ex6.3.pdf> <./Chapters/Simplexe/EX/EX6/ex6.4.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX6/ex6.5.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX6/ex6.5.pdf, id=432, 500.39864pt x 159.39233pt>
+<Chapters/Simplexe/EX/EX6/ex6.5.pdf, id=435, 500.39864pt x 159.39233pt>
 File: Chapters/Simplexe/EX/EX6/ex6.5.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX6/ex6.5.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX6/ex6.5.pdf  used on input line 2019.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX6/ex6.5.pdf  used on input line 2035.
 (pdftex.def)             Requested size: 500.39742pt x 159.39192pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX6/ex6.6.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX6/ex6.6.pdf, id=433, 516.21832pt x 164.68456pt>
+<Chapters/Simplexe/EX/EX6/ex6.6.pdf, id=436, 516.21832pt x 164.68456pt>
 File: Chapters/Simplexe/EX/EX6/ex6.6.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX6/ex6.6.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX6/ex6.6.pdf  used on input line 2038.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX6/ex6.6.pdf  used on input line 2054.
 (pdftex.def)             Requested size: 516.21706pt x 164.68414pt.
-[41 <./Chapters/Simplexe/EX/EX6/ex6.5.pdf> <./Chapters/Simplexe/EX/EX6/ex6.6.pdf>]
+[42 <./Chapters/Simplexe/EX/EX6/ex6.5.pdf> <./Chapters/Simplexe/EX/EX6/ex6.6.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Simplexe/EX/EX6/ex6.7.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Simplexe/EX/EX6/ex6.7.pdf, id=449, 495.1064pt x 155.18134pt>
+<Chapters/Simplexe/EX/EX6/ex6.7.pdf, id=452, 495.1064pt x 155.18134pt>
 File: Chapters/Simplexe/EX/EX6/ex6.7.pdf Graphic file (type pdf)
 <use Chapters/Simplexe/EX/EX6/ex6.7.pdf>
-Package pdftex.def Info: Chapters/Simplexe/EX/EX6/ex6.7.pdf  used on input line 2044.
+Package pdftex.def Info: Chapters/Simplexe/EX/EX6/ex6.7.pdf  used on input line 2060.
 (pdftex.def)             Requested size: 495.10518pt x 155.18094pt.
-[42 <./Chapters/Simplexe/EX/EX6/ex6.7.pdf>] [43]
+[43 <./Chapters/Simplexe/EX/EX6/ex6.7.pdf>] [44]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/dual.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/dual.drawio.pdf, id=463, 52.13478pt x 86.10368pt>
+<Chapters/Diagram/dual.drawio.pdf, id=466, 52.13478pt x 86.10368pt>
 File: Chapters/Diagram/dual.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/dual.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/dual.drawio.pdf  used on input line 2116.
+Package pdftex.def Info: Chapters/Diagram/dual.drawio.pdf  used on input line 2132.
 (pdftex.def)             Requested size: 119.49974pt x 197.36684pt.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Dual/maxForm.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Dual/maxForm.pdf, id=464, 351.5544pt x 196.36362pt>
+<Chapters/Dual/maxForm.pdf, id=467, 351.5544pt x 196.36362pt>
 File: Chapters/Dual/maxForm.pdf Graphic file (type pdf)
 <use Chapters/Dual/maxForm.pdf>
-Package pdftex.def Info: Chapters/Dual/maxForm.pdf  used on input line 2124.
+Package pdftex.def Info: Chapters/Dual/maxForm.pdf  used on input line 2140.
 (pdftex.def)             Requested size: 351.55354pt x 196.36311pt.
-[44 <./Chapters/Diagram/dual.drawio.pdf> <./Chapters/Dual/maxForm.pdf>]
+[45 <./Chapters/Diagram/dual.drawio.pdf> <./Chapters/Dual/maxForm.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Dual/dual.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Dual/dual.pdf, id=487, 364.22273pt x 175.24872pt>
+<Chapters/Dual/dual.pdf, id=490, 364.22273pt x 175.24872pt>
 File: Chapters/Dual/dual.pdf Graphic file (type pdf)
 <use Chapters/Dual/dual.pdf>
-Package pdftex.def Info: Chapters/Dual/dual.pdf  used on input line 2186.
+Package pdftex.def Info: Chapters/Dual/dual.pdf  used on input line 2202.
 (pdftex.def)             Requested size: 364.22183pt x 175.24829pt.
-[45]
-./Chapters/Linear Programming.tex:2204: Missing $ inserted.
+[46]
+./Chapters/Linear Programming.tex:2220: Missing $ inserted.
 <inserted text> 
                 $
-l.2204 
+l.2220 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Chapters/Linear Programming.tex:2204: Display math should end with $$.
+./Chapters/Linear Programming.tex:2220: Display math should end with $$.
 <to be read again> 
                    \tex_par:D 
-l.2204 
+l.2220 
        
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-./Chapters/Linear Programming.tex:2238: Missing $ inserted.
+./Chapters/Linear Programming.tex:2254: Missing $ inserted.
 <inserted text> 
                 $
-l.2238 
+l.2254 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Chapters/Linear Programming.tex:2238: Display math should end with $$.
+./Chapters/Linear Programming.tex:2254: Display math should end with $$.
 <to be read again> 
                    \tex_par:D 
-l.2238 
+l.2254 
        
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-[46 <./Chapters/Dual/dual.pdf>]
-./Chapters/Linear Programming.tex:2274: Missing $ inserted.
+[47 <./Chapters/Dual/dual.pdf>]
+./Chapters/Linear Programming.tex:2290: Missing $ inserted.
 <inserted text> 
                 $
-l.2274 
+l.2290 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Chapters/Linear Programming.tex:2274: Display math should end with $$.
+./Chapters/Linear Programming.tex:2290: Display math should end with $$.
 <to be read again> 
                    \tex_par:D 
-l.2274 
+l.2290 
        
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-./Chapters/Linear Programming.tex:2310: Missing $ inserted.
+./Chapters/Linear Programming.tex:2326: Missing $ inserted.
 <inserted text> 
                 $
-l.2310 
+l.2326 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Chapters/Linear Programming.tex:2310: Display math should end with $$.
+./Chapters/Linear Programming.tex:2326: Display math should end with $$.
 <to be read again> 
                    \tex_par:D 
-l.2310 
-       
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-[47]
-./Chapters/Linear Programming.tex:2349: Missing $ inserted.
-<inserted text> 
-                $
-l.2349 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Chapters/Linear Programming.tex:2349: Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.2349 
-       
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-./Chapters/Linear Programming.tex:2388: Missing $ inserted.
-<inserted text> 
-                $
-l.2388 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Chapters/Linear Programming.tex:2388: Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.2388 
+l.2326 
        
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
 [48]
-./Chapters/Linear Programming.tex:2456: Missing $ inserted.
+./Chapters/Linear Programming.tex:2365: Missing $ inserted.
 <inserted text> 
                 $
-l.2456 
+l.2365 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Chapters/Linear Programming.tex:2457: Missing $ inserted.
-<inserted text> 
-                $
-l.2457 \left
-            \{
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[49]
-./Chapters/Linear Programming.tex:2504: Missing $ inserted.
-<inserted text> 
-                $
-l.2504 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Chapters/Linear Programming.tex:2504: Display math should end with $$.
+./Chapters/Linear Programming.tex:2365: Display math should end with $$.
 <to be read again> 
                    \tex_par:D 
-l.2504 
+l.2365 
        
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-
-./Chapters/Linear Programming.tex:2505: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2505 \]
-         
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./Chapters/Linear Programming.tex:2505: Missing $ inserted.
+./Chapters/Linear Programming.tex:2404: Missing $ inserted.
 <inserted text> 
                 $
-l.2505 \]
-         
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./Chapters/Linear Programming.tex:2505: Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.2505 \]
-         
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-./Chapters/Linear Programming.tex:2545: Extra \right.
-l.2545 \right.
-              
-I'm ignoring a \right that had no matching \left.
-
-./Chapters/Linear Programming.tex:2601: Missing $ inserted.
-<inserted text> 
-                $
-l.2601 
+l.2404 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Chapters/Linear Programming.tex:2602: Missing $ inserted.
+./Chapters/Linear Programming.tex:2404: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.2404 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[49]
+./Chapters/Linear Programming.tex:2472: Missing $ inserted.
 <inserted text> 
                 $
-l.2602 \left
+l.2472 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/Linear Programming.tex:2473: Missing $ inserted.
+<inserted text> 
+                $
+l.2473 \left
             \{
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 [50]
-./Chapters/Linear Programming.tex:2676: Missing $ inserted.
+./Chapters/Linear Programming.tex:2520: Missing $ inserted.
 <inserted text> 
                 $
-l.2676 
+l.2520 
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./Chapters/Linear Programming.tex:2676: Display math should end with $$.
+./Chapters/Linear Programming.tex:2520: Display math should end with $$.
 <to be read again> 
                    \tex_par:D 
-l.2676 
+l.2520 
        
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
 
-./Chapters/Linear Programming.tex:2677: LaTeX Error: Bad math environment delimiter.
+./Chapters/Linear Programming.tex:2521: LaTeX Error: Bad math environment delimiter.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2677 \]
+l.2521 \]
          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./Chapters/Linear Programming.tex:2677: Missing $ inserted.
+./Chapters/Linear Programming.tex:2521: Missing $ inserted.
 <inserted text> 
                 $
-l.2677 \]
+l.2521 \]
          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1373,69 +1303,139 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./Chapters/Linear Programming.tex:2677: Display math should end with $$.
+./Chapters/Linear Programming.tex:2521: Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.2677 \]
+l.2521 \]
          
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-./Chapters/Linear Programming.tex:2688: Extra \right.
-l.2688 \right.
+./Chapters/Linear Programming.tex:2561: Extra \right.
+l.2561 \right.
+              
+I'm ignoring a \right that had no matching \left.
+
+./Chapters/Linear Programming.tex:2617: Missing $ inserted.
+<inserted text> 
+                $
+l.2617 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/Linear Programming.tex:2618: Missing $ inserted.
+<inserted text> 
+                $
+l.2618 \left
+            \{
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[51]
+./Chapters/Linear Programming.tex:2692: Missing $ inserted.
+<inserted text> 
+                $
+l.2692 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/Linear Programming.tex:2692: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.2692 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+./Chapters/Linear Programming.tex:2693: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2693 \]
+         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./Chapters/Linear Programming.tex:2693: Missing $ inserted.
+<inserted text> 
+                $
+l.2693 \]
+         
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Chapters/Linear Programming.tex:2693: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.2693 \]
+         
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./Chapters/Linear Programming.tex:2704: Extra \right.
+l.2704 \right.
               
 I'm ignoring a \right that had no matching \left.
 
 
 
 pdfTeX warning: pdflatex (file ./Chapters/Branch&Bound/branch.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Branch&Bound/branch.drawio.pdf, id=515, 313.47112pt x 235.7307pt>
+<Chapters/Branch&Bound/branch.drawio.pdf, id=518, 313.47112pt x 235.7307pt>
 File: Chapters/Branch&Bound/branch.drawio.pdf Graphic file (type pdf)
 <use Chapters/Branch&Bound/branch.drawio.pdf>
-Package pdftex.def Info: Chapters/Branch&Bound/branch.drawio.pdf  used on input line 2730.
+Package pdftex.def Info: Chapters/Branch&Bound/branch.drawio.pdf  used on input line 2746.
 (pdftex.def)             Requested size: 313.47034pt x 235.7301pt.
-[51]
-<Chapters/Branch&Bound/PY/EX1/ex1.1.pdf, id=519, 1387.58403pt x 597.6729pt>
+[52]
+<Chapters/Branch&Bound/PY/EX1/ex1.1.pdf, id=522, 1387.58403pt x 597.6729pt>
 File: Chapters/Branch&Bound/PY/EX1/ex1.1.pdf Graphic file (type pdf)
 <use Chapters/Branch&Bound/PY/EX1/ex1.1.pdf>
-Package pdftex.def Info: Chapters/Branch&Bound/PY/EX1/ex1.1.pdf  used on input line 2734.
+Package pdftex.def Info: Chapters/Branch&Bound/PY/EX1/ex1.1.pdf  used on input line 2750.
 (pdftex.def)             Requested size: 597.50789pt x 257.35912pt.
-<Chapters/Branch&Bound/PY/EX1/ex1.2.pdf, id=520, 1387.58403pt x 597.6729pt>
+<Chapters/Branch&Bound/PY/EX1/ex1.2.pdf, id=523, 1387.58403pt x 597.6729pt>
 File: Chapters/Branch&Bound/PY/EX1/ex1.2.pdf Graphic file (type pdf)
 <use Chapters/Branch&Bound/PY/EX1/ex1.2.pdf>
-Package pdftex.def Info: Chapters/Branch&Bound/PY/EX1/ex1.2.pdf  used on input line 2739.
+Package pdftex.def Info: Chapters/Branch&Bound/PY/EX1/ex1.2.pdf  used on input line 2755.
 (pdftex.def)             Requested size: 597.50789pt x 257.35912pt.
- [52 <./Chapters/Branch&Bound/branch.drawio.pdf> <./Chapters/Branch&Bound/PY/EX1/ex1.1.pdf>]
-<Chapters/Branch&Bound/PY/EX1/ex1.3.pdf, id=576, 1387.58403pt x 597.6729pt>
+ [53 <./Chapters/Branch&Bound/branch.drawio.pdf> <./Chapters/Branch&Bound/PY/EX1/ex1.1.pdf>]
+<Chapters/Branch&Bound/PY/EX1/ex1.3.pdf, id=579, 1387.58403pt x 597.6729pt>
 File: Chapters/Branch&Bound/PY/EX1/ex1.3.pdf Graphic file (type pdf)
 <use Chapters/Branch&Bound/PY/EX1/ex1.3.pdf>
-Package pdftex.def Info: Chapters/Branch&Bound/PY/EX1/ex1.3.pdf  used on input line 2744.
+Package pdftex.def Info: Chapters/Branch&Bound/PY/EX1/ex1.3.pdf  used on input line 2760.
 (pdftex.def)             Requested size: 597.50789pt x 257.35912pt.
-<Chapters/Branch&Bound/PY/EX1/ex1.4.pdf, id=577, 1387.58403pt x 597.6729pt>
+<Chapters/Branch&Bound/PY/EX1/ex1.4.pdf, id=580, 1387.58403pt x 597.6729pt>
 File: Chapters/Branch&Bound/PY/EX1/ex1.4.pdf Graphic file (type pdf)
 <use Chapters/Branch&Bound/PY/EX1/ex1.4.pdf>
-Package pdftex.def Info: Chapters/Branch&Bound/PY/EX1/ex1.4.pdf  used on input line 2749.
+Package pdftex.def Info: Chapters/Branch&Bound/PY/EX1/ex1.4.pdf  used on input line 2765.
 (pdftex.def)             Requested size: 597.50789pt x 257.35912pt.
- [53 <./Chapters/Branch&Bound/PY/EX1/ex1.2.pdf> <./Chapters/Branch&Bound/PY/EX1/ex1.3.pdf>]
-<Chapters/Branch&Bound/PY/EX1/ex1.5.pdf, id=659, 1387.58403pt x 597.6729pt>
+ [54 <./Chapters/Branch&Bound/PY/EX1/ex1.2.pdf> <./Chapters/Branch&Bound/PY/EX1/ex1.3.pdf>]
+<Chapters/Branch&Bound/PY/EX1/ex1.5.pdf, id=662, 1387.58403pt x 597.6729pt>
 File: Chapters/Branch&Bound/PY/EX1/ex1.5.pdf Graphic file (type pdf)
 <use Chapters/Branch&Bound/PY/EX1/ex1.5.pdf>
-Package pdftex.def Info: Chapters/Branch&Bound/PY/EX1/ex1.5.pdf  used on input line 2754.
+Package pdftex.def Info: Chapters/Branch&Bound/PY/EX1/ex1.5.pdf  used on input line 2770.
 (pdftex.def)             Requested size: 597.50789pt x 257.35912pt.
-<Chapters/Branch&Bound/PY/EX1/ex1.6.pdf, id=660, 1387.58403pt x 597.6729pt>
+<Chapters/Branch&Bound/PY/EX1/ex1.6.pdf, id=663, 1387.58403pt x 597.6729pt>
 File: Chapters/Branch&Bound/PY/EX1/ex1.6.pdf Graphic file (type pdf)
 <use Chapters/Branch&Bound/PY/EX1/ex1.6.pdf>
-Package pdftex.def Info: Chapters/Branch&Bound/PY/EX1/ex1.6.pdf  used on input line 2759.
+Package pdftex.def Info: Chapters/Branch&Bound/PY/EX1/ex1.6.pdf  used on input line 2775.
 (pdftex.def)             Requested size: 597.50789pt x 257.35912pt.
- [54 <./Chapters/Branch&Bound/PY/EX1/ex1.4.pdf> <./Chapters/Branch&Bound/PY/EX1/ex1.5.pdf>]
-<Chapters/Branch&Bound/PY/EX1/ex1.7.pdf, id=744, 1387.58403pt x 597.6729pt>
+ [55 <./Chapters/Branch&Bound/PY/EX1/ex1.4.pdf> <./Chapters/Branch&Bound/PY/EX1/ex1.5.pdf>]
+<Chapters/Branch&Bound/PY/EX1/ex1.7.pdf, id=748, 1387.58403pt x 597.6729pt>
 File: Chapters/Branch&Bound/PY/EX1/ex1.7.pdf Graphic file (type pdf)
 <use Chapters/Branch&Bound/PY/EX1/ex1.7.pdf>
-Package pdftex.def Info: Chapters/Branch&Bound/PY/EX1/ex1.7.pdf  used on input line 2764.
+Package pdftex.def Info: Chapters/Branch&Bound/PY/EX1/ex1.7.pdf  used on input line 2780.
 (pdftex.def)             Requested size: 597.50789pt x 257.35912pt.
- [55 <./Chapters/Branch&Bound/PY/EX1/ex1.6.pdf> <./Chapters/Branch&Bound/PY/EX1/ex1.7.pdf>]) [56]
+ [56 <./Chapters/Branch&Bound/PY/EX1/ex1.6.pdf> <./Chapters/Branch&Bound/PY/EX1/ex1.7.pdf>]) [57]
 
-./OT.tex:45: LaTeX Error: \begin{equation*} on input line 2378 ended by \end{document}.
+./OT.tex:45: LaTeX Error: \begin{equation*} on input line 2394 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1455,26 +1455,26 @@ L3 programming layer <2024-01-22>
  )
 (\end occurred inside a group at level 6)
 
-### semi simple group (level 6) entered at line 2378 (\begingroup)
-### semi simple group (level 5) entered at line 2319 (\begingroup)
-### semi simple group (level 4) entered at line 2301 (\begingroup)
-### semi simple group (level 3) entered at line 2244 (\begingroup)
-### semi simple group (level 2) entered at line 2229 (\begingroup)
-### semi simple group (level 1) entered at line 2196 (\begingroup)
+### semi simple group (level 6) entered at line 2394 (\begingroup)
+### semi simple group (level 5) entered at line 2335 (\begingroup)
+### semi simple group (level 4) entered at line 2317 (\begingroup)
+### semi simple group (level 3) entered at line 2260 (\begingroup)
+### semi simple group (level 2) entered at line 2245 (\begingroup)
+### semi simple group (level 1) entered at line 2212 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 28791 strings out of 474222
- 755659 string characters out of 5748732
- 1946975 words of memory out of 5000000
- 50611 multiletter control sequences out of 15000+600000
+ 28792 strings out of 474222
+ 755683 string characters out of 5748732
+ 1947975 words of memory out of 5000000
+ 50612 multiletter control sequences out of 15000+600000
  567074 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,14n,107p,719b,1972s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,14n,107p,719b,1970s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on OT.pdf (56 pages, 877206 bytes).
+Output written on OT.pdf (57 pages, 878410 bytes).
 PDF statistics:
- 892 PDF objects out of 1000 (max. 8388607)
- 446 compressed objects within 5 object streams
+ 895 PDF objects out of 1000 (max. 8388607)
+ 448 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  263 words of extra memory for PDF output out of 10000 (max. 10000000)
 

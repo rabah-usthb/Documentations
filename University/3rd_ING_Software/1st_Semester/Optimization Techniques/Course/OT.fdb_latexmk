@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1736762976.76314 "OT.tex" "OT.pdf" "OT" 1736762980.17094 2
+["pdflatex"] 1736786264.54468 "OT.tex" "OT.pdf" "OT" 1736786267.78334 2
   "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -215,7 +215,7 @@
   "Chapters/Diagram/simplexe.drawio.pdf" 1735242745.91804 21150 f16195645bd354bfc7f93ff9b2530736 ""
   "Chapters/Dual/dual.pdf" 1735374764.68838 15690 49ad6b139a4c00b177a1837e3d600dc1 ""
   "Chapters/Dual/maxForm.pdf" 1735371961.75322 16837 496b37b3411289d666c62410213709b5 ""
-  "Chapters/Linear Programming.tex" 1736762976.62868 81701 bd9fc05db0d180b9c42b886518aff124 ""
+  "Chapters/Linear Programming.tex" 1736786264.40033 82518 3fe3263e1a4157dd2f0e4ff7c6cfe77e ""
   "Chapters/Operations research.tex" 1733953412.10106 3922 d0457832fe8f5dbcd7b76fc7d22ba583 ""
   "Chapters/Simplexe/EX/EX1/ex1.1.pdf" 1735254360.53571 13819 3915a0c86a5437d6506826aee1d00e6c ""
   "Chapters/Simplexe/EX/EX1/ex1.2.pdf" 1735256613.59683 40842 a2dcba4105b3ba4945a3534ea2a273de ""
@@ -255,7 +255,7 @@
   "Chapters/Simplexe/leg.drawio.pdf" 1735186926.87702 30381 957edbfcc62294e9af40a1b2df7298d6 ""
   "Chapters/Simplexe/pivot.pdf" 1735243239.56707 17143 06f8cf373cf75414b106366e91529349 ""
   "Chapters/Simplexe/table.pdf" 1735186824.35402 16786 d0ae716b919c2ca0cd48ea38a3c3dbe1 ""
-  "OT.aux" 1736762979.95134 2659 5c7d9fb61f7fa40c583b1622ef3d4d10 "pdflatex"
+  "OT.aux" 1736786267.61794 2659 45c154b18b1f066a5400a9bb564ba707 "pdflatex"
   "OT.tex" 1733956215.28722 1513 9e7a8e88fe6df33dbe923efdbeaa5018 ""
   (generated)
   "OT.aux"

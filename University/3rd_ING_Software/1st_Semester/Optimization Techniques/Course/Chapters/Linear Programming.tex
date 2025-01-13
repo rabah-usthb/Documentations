@@ -42,6 +42,24 @@ system has contradictions.
 \end{itemize}
 
 
+\textbf{\underline{How to Draw Constraints:}}
+\begin{itemize}
+    \item Always change \(\leq\) or \(\geq\) to \(=\), then set one variable to \(0\) and solve for the other.
+    \item To choose the feasible region (either above or below the line), consider the coefficient of the \(y\)-axis variable:
+    \begin{itemize}
+        \item If the coefficient of \(y\) is positive:
+        \begin{itemize}
+            \item \(\leq\): The region below the line is feasible.
+            \item \(\geq\): The region above the line is feasible.
+        \end{itemize}
+        \item If the coefficient of \(y\) is negative:
+        \begin{itemize}
+            \item \(\leq\): The region above the line is feasible.
+            \item \(\geq\): The region below the line is feasible.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
 \textbf{\underline{Direction of Increase/Decrease:}}
 
 \begin{itemize}
@@ -61,7 +79,7 @@ the direction of increase follows the pattern for both negative coefficients.
 \end{prettyBox}
 
 
-
+\newpage
 \subsubsection*{{\underline{Example1 :} Diet Problem}}
 
 \vspace{0.25cm}
@@ -79,7 +97,6 @@ The Goal is to minimize food cost but to meet the minimum daily nutrition requir
 \end{tabular}
 \end{center}
 
-\newpage
 
 \begin{multicols}{2}
 \textbf{\underline{Variables Definition:}}\\
@@ -114,11 +131,10 @@ The goal is to minimize food cost by minmizing \(f(x_i)\), while meeting the min
 \vspace{1cm} 
 \textbf{\underline{Problem :}} Find the minimum of \(f(x_i)\) subject to the contraints\\
 
-\vspace{1cm}
 \begin{center}
 \begin{tikzpicture}
     \begin{axis}[
-        height = 9.5cm,
+        height = 9cm,
         width = 10cm,
         axis lines = middle,           % Ensures axes cross at (0, 0)
         xlabel=$x_1$, 
@@ -429,7 +445,7 @@ solutions, which have their solutions on a finite segment. But as mentioned befo
 have infinite solutions, we focus only on the boundary corner points (vertex points).
 \end{prettyBox}
 
-\newpage
+\vspace{0.5cm}
 \subsubsection*{\underline{Example :}} Minimize \(f(x,y) = x + y\)
 
 \vspace{0.5cm}
@@ -483,7 +499,7 @@ to maximize the profit while adhering to the limitations of resources and labor.
         \hline
     \end{tabular}
 \end{center}
-\newpage
+\vspace{0.5cm}
 \begin{multicols}{2}
 \textbf{\underline{Variables Definition:}}\\
 
@@ -586,7 +602,7 @@ The goal is to maximize the profits by maximizing \(f(x_i)\), while adhering to 
         \hline 
     \end{tabular}
 \end{center}
-\newpage
+\vspace{1cm}
 \subsubsection*{\underline{Solution}}
 
 The blue area in the plot represents the feasible region, so the optimal solution(s) must be within this area. Since
@@ -595,7 +611,7 @@ maximize \( Z \), we need to sweep the objective function line towards the right
 between the objective function and one of the vertex points of the feasible region is the max the optimal solution . 
 Therefore,the optimal solution is \((25, 25)\) with \( Z = 50 \times 25 + 60 \times 25 = 2750 \).
 
-\vspace{0.5cm}
+\newpage
 \subsubsection*{\underline{Example :}}An Industry produce two products , P1 and P2 ,they want to minimize the costs
 of the ressources needed to create the product : raw material M$_{A}$(lb) \& M$_{B}$(lb) and the needed labour (hr)
 while adhering the constraint set upon the ressources and minimum production 
