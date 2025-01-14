@@ -2798,6 +2798,35 @@ optimal solution \((x_1,x_2) = (3,2)\) with \(Z = 27\)
         \end{itemize}
     \item Each branch introduces an additional constraint, which accumulates as we go deeper into the tree.
     \item In some cases, the feasible region may reduce to a single point or a line segment.
+    \item We can prune a node if there is another finished node at the same level with the same \(Z\) value, as branching further would only decrease \(Z\) (for a maximization problem).
+\end{itemize}
+\end{prettyBox}
+
+\vspace{1.5cm}
+
+\subsection{Sensitivity Analysis}
+
+\subsubsection{Changing the Coefficient of the Objective Function}
+
+\begin{prettyBox}{Range Of Optimality}{box}
+When changing the value of a coefficient in the objective function, there is a range of values for which the optimal solution remains unaffected.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\begin{prettyBox}{Binding \& Non-Binding Constraints}{red}
+A constraint is considered \textbf{binding} if substituting the optimal solution into the constraint results in \(\text{LHS} = \text{RHS}\). Otherwise, it is \textbf{non-binding}.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsubsection{Changing the RHS of a Constraint}
+\begin{prettyBox}{Impact on \(Z\)}{box}
+There are two cases:
+\begin{itemize}
+    \item \textbf{Binding (Saturated):} Changing the RHS of a binding constraint will affect \(Z\), and the shadow price is calculated as:
+    \[
+    \text{Shadow Price} = Z_{\text{new}} - Z_{\text{old}} \neq 0
+    \]
+    \item \textbf{Non-Binding:} Changing the RHS of a non-binding constraint will not affect \(Z\), and the shadow price is \(0\).
 \end{itemize}
 \end{prettyBox}
 
