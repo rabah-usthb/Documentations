@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1736842889.1302 "Wd_4.tex" "Wd_4.pdf" "Wd_4" 1736842890.34612 0
+["pdflatex"] 1736910050.27238 "Wd_4.tex" "Wd_4.pdf" "Wd_4" 1736910051.80025 0
   "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -195,9 +195,9 @@
   "Exercice/PY/EX2/ex2.6.pdf" 1736834167.86441 13687 30bd87291de77d027e538ced516d3925 ""
   "Exercice/PY/EX2/ex2.7.pdf" 1736834606.7534 15246 e7ed6b5700af133dbe061ecc3610ad2f ""
   "Exercice/ex1.tex" 1736817450.92398 672 32b941c4e5c8a53be30068b4ff9c4e0d ""
-  "Exercice/sol1.tex" 1736835526.29736 1315 ea927d091100082a6c274a3b11d1e633 ""
+  "Exercice/sol1.tex" 1736910049.922 1315 a840fa8aba9996096a6a2019dea9d69a ""
   "Exercice/sol2.tex" 1736837172.74631 1456 d364103a54d7486a65f8ce422a337478 ""
-  "Wd_4.aux" 1736842890.24498 33 cd8a9e253be16178be412705367a589a "pdflatex"
+  "Wd_4.aux" 1736910051.676 33 cd8a9e253be16178be412705367a589a "pdflatex"
   "Wd_4.tex" 1736817398.15998 1509 142b83b3c1c6227e5bc5684064236800 ""
   (generated)
   "Wd_4.aux"

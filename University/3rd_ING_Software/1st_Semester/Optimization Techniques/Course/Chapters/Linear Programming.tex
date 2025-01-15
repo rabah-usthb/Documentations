@@ -673,7 +673,7 @@ Let \(x_4\) be the process 4.
 \vspace{0.5cm}
 \begin{prettyBox}{Objective Function}{box}
 \[
-f(x_i) = Z = 3\times(160x_1 + 100x_2 + 200x_3 + 75x_3) + 4\times(30x_1 + 35x_2 + 60x_3 + 80x_4)\\
+f(x_i) = Z = 3\times(160x_1 + 100x_2 + 200x_3 + 75x_3) + 7\times(30x_1 + 35x_2 + 60x_3 + 80x_4)\\
            =690x_1 + 545x_2 + 1070x_3 + 785x_4
 \]
 \begin{center}
@@ -736,7 +736,7 @@ minimum production of P1 \& P2.
 
 \vspace{0.5cm}
 \subsubsection*{\underline{Example :}}The transportation model setting , good at location A$_{i}$, transport 
-to B$_{j}$ cost from A$_{i}$ Tp B$_{j}$, the goal is to find a schedule to minimize the cost 
+to B$_{j}$ cost from A$_{i}$ To B$_{j}$, the goal is to find a schedule to minimize the cost 
 At location A$_{1}$ we have 200 units , location A$_{2}$ we have 300 units , the will be distriuted to 
 B$_{1}$ ,B$_{2}$, B$_{3}$ :
 
@@ -913,10 +913,15 @@ For example:
 x_1 + x_2 - s_1 = 10 \quad \Longrightarrow \quad x_1 + x_2 - s_1 + t_1 = 10
 \]
 
-where \(t_1 \geq 0\) is the artificial variable added to the equation.
+where \(t_1 \geq 0\) is the artificial variable added to the equation.\\[0.25cm]
+
+If the constraint is by default an equality we add an artificial variable:
+\[
+x_1 + x_2 = 10 \quad \Longrightarrow \quad x_1 + x_2 + t_1 = 10
+\]
 \end{prettyBox}
 
-\vspace{0.25cm}
+\vspace{0.15cm}
 
 \begin{prettyBox}{Coefficient Of Objective Function}{red}
 The coefficient of artificial variables in the objective function is \(-M\),
@@ -925,7 +930,7 @@ driven out of the basis during the optimization process.\\[0.15cm]
 The coefficient of slack variables is 0.
 \end{prettyBox}
 
-\vspace{0.25cm}
+\vspace{0.15cm}
 \begin{prettyBox}{Basic/Non-Basic}{red}
 In the context of the Basic Feasible Solution (BFS), the variables that 
 are non-zero are referred to as \textbf{basic variables}, while the remaining
@@ -933,7 +938,7 @@ variables are called \textbf{non-basic variables}.
 \end{prettyBox}
 
 
-\vspace{1cm}
+\vspace{0.25cm}
 
 \subsubsection{Initial Table}
 \begin{prettyBox}{Create Initial Table}{box}
