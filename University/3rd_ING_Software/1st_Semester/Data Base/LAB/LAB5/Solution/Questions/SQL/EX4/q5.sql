@@ -1,0 +1,1 @@
+create view vtp5ex4q5(prof,max_salaire) as select e.prof , max(e.salaire) from employetp5 e group by e.prof; 

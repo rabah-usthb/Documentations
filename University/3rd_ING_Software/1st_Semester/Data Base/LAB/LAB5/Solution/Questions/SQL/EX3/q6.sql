@@ -1,0 +1,1 @@
+create view vtp5q6 as select count(m.num_mus) nb_mus from musicientp5 m where m.num_rep =20;

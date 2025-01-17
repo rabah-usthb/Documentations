@@ -1,0 +1,1 @@
+create view vtp5q3(nb_ibn_khaldoun) as select count(r.num_rep) from representationtp5 r where r.lieu='theatre ibn khaldoun';

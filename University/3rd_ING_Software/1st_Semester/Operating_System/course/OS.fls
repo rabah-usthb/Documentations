@@ -272,6 +272,9 @@ INPUT Chapters/C/Fork/ex4.c
 INPUT ./Chapters/C/Fork/ex4.c
 INPUT ./Chapters/C/Fork/ex4.c
 INPUT Chapters/C/Fork/ex4.c
+INPUT ./Chapters/syn.tex
+INPUT ./Chapters/syn.tex
+INPUT Chapters/syn.tex
 INPUT ./Chapters/deadlock.tex
 INPUT ./Chapters/deadlock.tex
 INPUT Chapters/deadlock.tex

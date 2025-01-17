@@ -1,0 +1,1 @@
+create view vtp5q2(titre) as select r.titre_rep from representationtp5 r where r.lieu='theatre ibn khaldoun';  

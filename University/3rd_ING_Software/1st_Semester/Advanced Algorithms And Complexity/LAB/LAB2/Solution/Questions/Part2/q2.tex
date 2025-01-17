@@ -1,0 +1,103 @@
+we have \(f(n) = \sum fr\) since \(f(n)\) is sum of frequency of execution (\(fr\)) we need to figure out the
+\(fr\) of each instruction and sum them : 
+
+\subsubsection*{\underline{Best Case (N is prime)}}
+
+\vspace{0.5cm}
+cmpt $\gets$ 0  \hspace{4cm} \(fr = 1\) (one affectation)
+
+\vspace{0.15cm}
+i $\gets$ 1  \hspace{4.65cm} \(fr = 1\) (one affectation)
+
+\vspace{0.15cm}
+\textcolor{purplePlot!80!black}{print}(\textcolor{blueArea!60!black}{'Input Integer N\(>\)1 : '})  \hspace{0.95cm} \(fr = 1\) (one print)
+
+\vspace{0.15cm}
+\textcolor{purplePlot!80!black}{Read}(n)  \hspace{4.25cm} \(fr = 1\) (one read)
+
+\vspace{0.15cm}
+
+\textbf{while} i \textcolor{redPlot}{\textbf{\textless=}} \(\frac{n}{2}\)  \textbf{do} \hspace{2.7cm} \(fr = \frac{n}{2}+1\) (check the while condition \(\frac{n}{2}+1\) times)
+
+
+\vspace{0.15cm}
+cmpt $\gets$ cmpt \textcolor{redPlot}{ \textbf{+}} 1 \hspace{2.6cm} \(fr = 2\) (one affectation and one arithmetic operation (2) , repeated once because N is Prime)
+
+\vspace{0.15cm}
+i $\gets$ i \textcolor{redPlot}{ \textbf{+}} 1 \hspace{4cm} \(fr = n\) (one affectation and one arithmetic operation (2) , inside a while that loops \(\frac{n}{2}\) times (n))
+
+\vspace{0.15cm}
+
+\textcolor{purplePlot!80!black}{print}(\textcolor{blueArea!60!black}{'Prime Number'}) \hspace{1.95cm} \(fr = 1\) (one print)
+
+\vspace{0.75cm}
+\begin{align*}
+f_3(n) &= \sum fr \\
+     &= 1 + 1 + 1 + 1 + (\frac{n}{2}+1) + 2 + n + 1 \\
+     &= \frac{n}{2} + n + 8 \\
+     &= \boxed{\frac{3n}{2} + 8}
+\end{align*}
+
+\vspace{0.5cm}
+now that we have the complexity function \(f_3(n)\) we need to find the \(T_3(n)\)  we have \(T_3(n) = f_3(n) \times \Delta t\)
+
+\begin{align*}
+T_3(n) &= f_3(n) \times \Delta t\\ 
+&= (\frac{3n}{2} + 8) \times \Delta t \\
+&= \underbrace{\frac{3 \Delta t}{2}}_{a_3} n + \underbrace{\Delta t 8}_{b_3} \\
+&= \boxed{a_3n+b_3} 
+\end{align*}
+
+\subsubsection*{\underline{Worst Case (N is not prime)}}
+
+\vspace{0.5cm}
+cmpt $\gets$ 0  \hspace{4cm} \(fr = 1\) (one affectation)
+
+\vspace{0.15cm}
+i $\gets$ 1  \hspace{4.65cm} \(fr = 1\) (one affectation)
+
+\vspace{0.15cm}
+\textcolor{purplePlot!80!black}{print}(\textcolor{blueArea!60!black}{'Input Integer N\(>\)1 : '})  \hspace{0.95cm} \(fr = 1\) (one print)
+
+\vspace{0.15cm}
+\textcolor{purplePlot!80!black}{Read}(n)  \hspace{4.25cm} \(fr = 1\) (one read)
+
+\vspace{0.15cm}
+
+\textbf{while} i \textcolor{redPlot}{\textbf{\textless=}} \(\frac{n}{2}\)  \textbf{do} \hspace{2.7cm} \(fr = \frac{n}{2}+1\) (check the while condition \(\frac{n}{2}\)+1 times)
+
+
+\vspace{0.15cm}
+cmpt $\gets$ cmpt \textcolor{redPlot}{ \textbf{+}} 1 \hspace{2.6cm} \(fr = n\) (one affectation and one arithmetic operation (2) , repeated at worst \(\frac{n}{2}\) times (n))
+
+\vspace{0.15cm}
+i $\gets$ i \textcolor{redPlot}{ \textbf{+}} 1 \hspace{4cm} \(fr = n\) (one affectation and one arithmetic operation (2) , inside a while that loops \(\frac{n}{2}\) times (n))
+
+\vspace{0.15cm}
+
+\textcolor{purplePlot!80!black}{print}(\textcolor{blueArea!60!black}{'Not A Prime Number'}) \hspace{0.9cm} \(fr = 1\) (one print)
+
+\vspace{0.75cm}
+\begin{align*}
+f_4(n) &= \sum fr \\
+       &= 1 + 1 + 1 + 1 + (\frac{n}{2}+1) + n + n + 1 \\
+       &= 2n + \frac{n}{2} + 6 \\
+       &= \boxed{\frac{5n}{2} + 6}
+\end{align*}
+
+\vspace{0.5cm} 
+now that we have the complexity function \(f_4(n)\) we need to find the \(T_4(n)\)  we have \(T_4(n) = f_4(n) \times \Delta t\)
+
+\begin{align*}
+T_4(n) &= f_4(n) \times \Delta t\\ 
+&= (3n + 6) \times \Delta t \\
+&= \underbrace{\frac{5 \Delta t}{2}}_{a_4} n + \underbrace{\Delta t 6}_{b_4} \\
+&= \boxed{a_4n+b_4} 
+\end{align*}
+
+\subsubsection*{\underline{Conclusion}}
+Both \(T_3(n)\) and \(T_4(n)\) are linear complexity therefore they both $\sim$ \(O(n)\)
+
+\vspace{1cm}
+
+

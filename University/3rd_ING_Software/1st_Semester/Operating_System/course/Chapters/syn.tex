@@ -1,0 +1,91 @@
+\newpage
+\null
+\vspace{0.15cm}
+
+\begin{center}
+    \Huge{\textbf{\underline{Chapter 4: Synchronization}}}
+\end{center}
+
+\vspace{0.25cm}
+
+\setcounter{section}{0}
+
+\section{Introduction}
+\begin{prettyBox}{Introduction}{myblue}
+In multi-threading and multi-processing, threads and processes often share resources.
+If these resources are modified without proper synchronization, problems can arise. 
+When a machine has only one CPU core, true parallelism doesn't occur; instead, the core
+switches between tasks very quickly. This rapid switching, known as context switching, 
+can lead to race conditions where values are overwritten unexpectedly,
+causing incorrect results.
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\section{Critical Section}
+\begin{prettyBox}{Critical Section}{myblue}
+A critical section is a part of a program or code that accesses shared resources
+(like variables, memory, or hardware) and needs to be executed by only one thread or 
+process at a time to prevent data corruption or inconsistency. Multiple threads or 
+processes trying to access the same critical section simultaneously can lead 
+to race conditions, where the outcome depends on the unpredictable order in which the threads run.
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\section{Bernstein Conditions}
+\begin{prettyBox}{Bernstein Conditions}{myblue}
+The Bernstein Conditions are a set of conditions that verify if threads or processes
+can truly execute at the same time without needing to switch between them or lock resources.
+
+\begin{itemize}
+    \item \textbf{No Read-Write Conflict:} No shared resources should be written to while they are being read by another thread or process.
+    \item \textbf{No Write-Write Conflict:} No simultaneous writes to the same resource should occur to avoid data corruption.
+    \item \textbf{No Read-Read Conflict:} Multiple threads or processes can read the same resource without issue, as reading does not modify the data.
+\end{itemize}
+\end{prettyBox}
+
+
+\vspace{0.35cm}
+\section{Tools To Synchronize}
+
+\subsection{Semaphore}
+
+
+\begin{prettyBox}{Semaphore}{myblue}
+A semaphore is a synchronization primitive that maintains a positive integer value. This value can only be modified through its atomic operations, which are:
+
+\begin{itemize}
+    \item \textbf{P(semaphore):} If the semaphore value is 0, the process waits until it becomes greater than 0, then decrements the semaphore.
+    \item \textbf{V(semaphore):} Increments the value of the semaphore by 1, signaling that a resource is available.
+\end{itemize}
+
+There are two main types of semaphores:
+\begin{itemize}
+    \item \textbf{Binary Semaphore:} The value is restricted to 0 or 1. It is used for locking critical sections to ensure that only one thread can access the resource at a time.
+    \item \textbf{Mutex:} The value of the semaphore is unbounded and shared across multiple threads or processes. It not only enforces mutual exclusion, but also help with ressource management.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.35cm}
+\begin{prettyBox}{When To Use Semaphore}{myblue}
+Semaphores are commonly used in the following situations:
+
+\begin{itemize}
+    \item \textbf{Mutual Exclusion:} Ensuring that critical sections are accessed by only one thread or process at a time, preventing race conditions.
+    \item \textbf{Signaling Between Processes:} Semaphores can be used to signal one process from another. For example, a producer can signal a consumer when new data is available.
+    \item \textbf{Resource Management:} Managing access to a limited number of resources, such as database connections, printers, or buffers. A semaphore can keep track of how many resources are available and prevent overuse.
+    \item \textbf{Synchronizing Threads:} In multi-threaded programs, semaphores can be used to coordinate the execution of threads. For example, you might use a semaphore to ensure that certain threads wait until others have completed their work.
+\end{itemize}
+\end{prettyBox}
+
+\subsection{Monitor}
+\begin{prettyBox}{Monitor}{myblue}
+    prettyBox
+\end{prettyBox}
+
+\begin{prettyBox}{When To Use Semaphore}{myblue}
+    prettyBox
+\end{prettyBox}
+
+

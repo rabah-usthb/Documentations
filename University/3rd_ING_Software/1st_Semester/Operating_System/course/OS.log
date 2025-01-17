@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  8 JAN 2025 03:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  8 JAN 2025 08:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -633,26 +633,26 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
 ) [10] (./Chapters/C/Fork/ex2.c) [11] [12] (./Chapters/C/Fork/ex3.1.c
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1.
-) [13] (./Chapters/C/Fork/ex3.2.c) (./Chapters/C/Fork/ex3.3.c) [14] (./Chapters/C/Fork/ex4.1.c) [15] (./Chapters/C/Fork/ex4.c) (./Chapters/C/Fork/ex4.c)) (./Chapters/deadlock.tex [16]
+) [13] (./Chapters/C/Fork/ex3.2.c) (./Chapters/C/Fork/ex3.3.c) [14] (./Chapters/C/Fork/ex4.1.c) [15] (./Chapters/C/Fork/ex4.c) (./Chapters/C/Fork/ex4.c)) (./Chapters/syn.tex [16] [17]) (./Chapters/deadlock.tex [18]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/Deadlock/sym.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/Deadlock/sym.drawio.pdf, id=68, 354.6048pt x 253.42679pt>
+<Chapters/Diagram/Deadlock/sym.drawio.pdf, id=74, 354.6048pt x 253.42679pt>
 File: Chapters/Diagram/Deadlock/sym.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/Deadlock/sym.drawio.pdf>
 Package pdftex.def Info: Chapters/Diagram/Deadlock/sym.drawio.pdf  used on input line 34.
 (pdftex.def)             Requested size: 354.60391pt x 253.42616pt.
-[17 <./Chapters/Diagram/Deadlock/sym.drawio.pdf>]
+[19 <./Chapters/Diagram/Deadlock/sym.drawio.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/Diagram/Deadlock/coffman.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/Deadlock/coffman.drawio.pdf, id=88, 356.0502pt x 290.5254pt>
+<Chapters/Diagram/Deadlock/coffman.drawio.pdf, id=95, 356.0502pt x 290.5254pt>
 File: Chapters/Diagram/Deadlock/coffman.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/Deadlock/coffman.drawio.pdf>
 Package pdftex.def Info: Chapters/Diagram/Deadlock/coffman.drawio.pdf  used on input line 53.
 (pdftex.def)             Requested size: 356.04932pt x 290.52469pt.
-[18 <./Chapters/Diagram/Deadlock/coffman.drawio.pdf>] [19]
+[20 <./Chapters/Diagram/Deadlock/coffman.drawio.pdf>] [21]
 
 pdfTeX warning: pdflatex (file ./Chapters/DFS/ex1.1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/DFS/ex1.1.drawio.pdf, id=108, 211.2432pt x 224.81693pt>
+<Chapters/DFS/ex1.1.drawio.pdf, id=114, 211.2432pt x 224.81693pt>
 File: Chapters/DFS/ex1.1.drawio.pdf Graphic file (type pdf)
 <use Chapters/DFS/ex1.1.drawio.pdf>
 Package pdftex.def Info: Chapters/DFS/ex1.1.drawio.pdf  used on input line 120.
@@ -660,46 +660,46 @@ Package pdftex.def Info: Chapters/DFS/ex1.1.drawio.pdf  used on input line 120.
 
 
 pdfTeX warning: pdflatex (file ./Chapters/DFS/ex1.2.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/DFS/ex1.2.drawio.pdf, id=109, 344.43681pt x 223.96875pt>
+<Chapters/DFS/ex1.2.drawio.pdf, id=115, 344.43681pt x 223.96875pt>
 File: Chapters/DFS/ex1.2.drawio.pdf Graphic file (type pdf)
 <use Chapters/DFS/ex1.2.drawio.pdf>
 Package pdftex.def Info: Chapters/DFS/ex1.2.drawio.pdf  used on input line 130.
 (pdftex.def)             Requested size: 438.17053pt x 284.94292pt.
-[20 <./Chapters/DFS/ex1.1.drawio.pdf>]
+[22 <./Chapters/DFS/ex1.1.drawio.pdf>]
 
 pdfTeX warning: pdflatex (file ./Chapters/DFS/cycle.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/DFS/cycle.pdf, id=124, 171.37024pt x 99.25883pt>
+<Chapters/DFS/cycle.pdf, id=130, 171.37024pt x 99.25883pt>
 File: Chapters/DFS/cycle.pdf Graphic file (type pdf)
 <use Chapters/DFS/cycle.pdf>
 Package pdftex.def Info: Chapters/DFS/cycle.pdf  used on input line 145.
 (pdftex.def)             Requested size: 250.38043pt x 145.03026pt.
-[21 <./Chapters/DFS/ex1.2.drawio.pdf> <./Chapters/DFS/cycle.pdf>] [22]
+[23 <./Chapters/DFS/ex1.2.drawio.pdf> <./Chapters/DFS/cycle.pdf>] [24]
 
 pdfTeX warning: pdflatex (file ./Chapters/Bank/bank.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Bank/bank.pdf, id=156, 806.06657pt x 152.56367pt>
+<Chapters/Bank/bank.pdf, id=162, 806.06657pt x 152.56367pt>
 File: Chapters/Bank/bank.pdf Graphic file (type pdf)
 <use Chapters/Bank/bank.pdf>
 Package pdftex.def Info: Chapters/Bank/bank.pdf  used on input line 226.
 (pdftex.def)             Requested size: 625.96065pt x 118.47537pt.
-[23 <./Chapters/Bank/bank.pdf>] [24]) [25] (./OS.aux)
+[25 <./Chapters/Bank/bank.pdf>] [26]) [27] (./OS.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 19680 strings out of 474222
- 409698 string characters out of 5748732
+ 19694 strings out of 474222
+ 409939 string characters out of 5748732
  2061975 words of memory out of 5000000
- 41607 multiletter control sequences out of 15000+600000
+ 41618 multiletter control sequences out of 15000+600000
  565198 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,13n,107p,455b,1399s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on OS.pdf (25 pages, 387702 bytes).
+Output written on OS.pdf (27 pages, 394062 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
+ 236 PDF objects out of 1000 (max. 8388607)
+ 154 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

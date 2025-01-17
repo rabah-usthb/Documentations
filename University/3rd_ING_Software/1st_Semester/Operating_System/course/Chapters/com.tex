@@ -171,7 +171,12 @@ To use \texttt{pipe()} we need to include the header \texttt{<unistd.h>}\\
 \lstinputlisting[style=cstyle,firstline=28,lastline=47,basicstyle=\footnotesize\ttfamily]{Chapters/C/Fork/ex4.c}
 \subsubsection*{\underline{Child's Functions}}
 \lstinputlisting[style=cstyle,firstline=12,lastline=26,basicstyle=\footnotesize\ttfamily]{Chapters/C/Fork/ex4.c}
+
+\vspace{0.5cm}
+
 \subsection{Threads}
+
 \begin{prettyBox}{Thread}{myblue}
-    prettyBox
+    Threads are components of the same program that share the same memory space, making them faster than multi-processing. This is because threads do not need to duplicate memory or copy data between separate processes, unlike in multi-processing, where each process has its own memory space.
 \end{prettyBox}
+
