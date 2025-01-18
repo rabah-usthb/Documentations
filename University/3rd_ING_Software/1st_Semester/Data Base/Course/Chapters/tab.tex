@@ -54,7 +54,7 @@ the operation relies on the temporary tablespace.
 \subsection{Tablespace Creation}
 \begin{prettyBox}{Tablespace Creation}{myblue}
 To create a tablespace we need to specify the type , the data file by giving the path ,
-though one tablespace might use many data file .dbf for permanet and .tmp for temporary ,
+though one tablespace might use many datafile/tempfile : .dbf for permanet and .tmp for temporary ,
 we give the inital size and other option like how much we extend it each time we exced and the maximum
 \end{prettyBox}
 
@@ -69,11 +69,34 @@ we give the inital size and other option like how much we extend it each time we
 \subsection*{\underline{Temporary Tablespace}}
 \lstinputlisting{SQL/syntax/Tab/createTmp.sql}
 
+\vspace{0.15cm}
+
+\subsection*{\underline{Syntax}}
+
+\subsection*{\underline{Permanent Tablespace}}
+\lstinputlisting{SQL/examples/Tab/perm.sql}
+
+
+\subsection*{\underline{Temporary Tablespace}}
+\lstinputlisting{SQL/examples/Tab/temp.sql}
+
+
+
 \vspace{0.25cm}
 
 \begin{prettyBox}{Note}{red}
-The \textcolor{blue}{REUSE} keyword allows the tablespace to reuse an existing 
-data file without throwing an error if the data file already exists.
+\begin{itemize}
+    \item The \textcolor{blue}{REUSE} keyword allows a tablespace to reuse an existing 
+          datafile without throwing an error if the file already exists.
+    \item The state of a permanent tablespace or datafile can be defined during creation. By default, 
+          it is set to \textcolor{blue}{ONLINE} (allowing read/write operations). This can be explicitly 
+          specified but is optional. Alternatively, the tablespace can be set to 
+          \textcolor{blue}{OFFLINE}, which prevents usage until it is brought back online.
+    \item Using \textcolor{blue}{AUTOEXTEND ON} without specifying values will increment the datafile 
+          size by a default value, which is typically 1 MB in most systems.
+    \item Specifying \textcolor{blue}{MAXSIZE UNLIMITED} or omitting the \textcolor{blue}{MAXSIZE} clause entirely 
+          results in the file having no upper size limit.
+\end{itemize}
 \end{prettyBox}
 
 \vspace{0.25cm}
@@ -88,6 +111,10 @@ if we want to delete just the tablespace contents , or to also delete its data f
 \lstinputlisting{SQL/syntax/Tab/drop.sql}
 
 \vspace{0.15cm}
+\subsection*{\underline{Example}}
+\lstinputlisting{SQL/examples/Tab/drop.sql}
+
+\vspace{0.15cm}
 \begin{prettyBox}{Note}{red}
 If we try to drop a tablespace that is still in use by other users , it will result in an error
 \begin{center}
@@ -95,6 +122,24 @@ ORA-01549: tablespace not empty, cannot drop
 \end{center}
 \end{prettyBox}
 
+\vspace{0.25cm}
+
+\subsection{Changing State}
+\begin{prettyBox}{State}{myblue}
+We can change the state of a permanent tablespace or datafile to online/offline using the 
+\textcolor{blue}{ALTER} command
+\end{prettyBox}
+
+\vspace{0.15cm}
+
+\subsection*{\underline{Syntax}}
+\lstinputlisting[basicstyle=\ttfamily\footnotesize]{SQL/syntax/Tab/state.sql}
+
+\vspace{0.15cm}
+\subsection*{\underline{Example}}
+\lstinputlisting{SQL/examples/Tab/state.sql}
+
+\vspace{0.25cm}
 
 \subsection{Assigning Tablespaces}
 \begin{prettyBox}{Assigning Tablespaces}{myblue}
@@ -104,6 +149,10 @@ When creating the user we can assing him user-created tablespaces
 \vspace{0.15cm}
 \subsection*{\underline{Syntax}}
 \lstinputlisting{SQL/syntax/Tab/tab.sql}
+
+\vspace{0.15cm}
+\subsection*{\underline{Example}}
+\lstinputlisting{SQL/examples/Tab/tab.sql}
 
 
 \vspace{0.25cm}
@@ -124,10 +173,13 @@ tablespace to the datafiles of the new one, doing that
 \end{prettyBox}
 
 \vspace{0.15cm}
-
 \subsection*{\underline{Syntax}}
-
 \lstinputlisting[basicstyle=\ttfamily\footnotesize]{SQL/syntax/Tab/change.sql}
+
+\vspace{0.15cm}
+\subsection*{\underline{Example}}
+\lstinputlisting[basicstyle=\ttfamily\footnotesize]{SQL/examples/Tab/change.sql}
+
 
 
 \vspace{0.25cm}
@@ -139,8 +191,16 @@ The quota defines how much space a user can use in a permanent tablespace.
 By default, the quota is set to \textbf{0}. You can modify it using the \textcolor{blue}{ALTER} command.
 \end{prettyBox}
 
-\vspace{0.15cm}
+\newpage
 \subsection*{\underline{Syntax}}
 \lstinputlisting{SQL/syntax/Tab/qouta.sql}
 
+\vspace{0.15cm}
+\subsection*{\underline{Example}}
+\lstinputlisting{SQL/examples/Tab/qouta.sql}
+
+\vspace{0.25cm}
+\begin{prettyBox}{Note}{red}
+If a user tries to write to or create objects in a permanent tablespace with insufficient quota, it will result in an error.
+\end{prettyBox}
 
