@@ -1,0 +1,280 @@
+\newpage 
+\null 
+\vspace{0.15cm}
+
+\begin{center} 
+\Huge{\textbf{\underline{Chapter 4: Database Administration}}}
+\end{center}
+
+\vspace{0.25cm}
+
+\setcounter{section}{0}
+
+\vspace{1cm}
+
+\section{Introduction}
+
+\begin{prettyBox}{Introduction}{myblue} 
+Oracle SQL is known for its robust security features and management of users' 
+rights and resources. In this section, we will explore how to manage rights 
+and resources.
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\section{Users}
+
+\subsection{Sysdba (Root)} 
+\begin{prettyBox}{Sysdba User}{myblue} 
+The Sysdba user is the root user. He has access to all PDBs, has access to
+certain commands and tables that only he can use, and obviously, he has all
+the privileges.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{System}
+
+\begin{prettyBox}{System User}{myblue} 
+The system user has all rights, but he lacks DBA privileges.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{User Creation}
+\begin{prettyBox}{User Creation}{myblue}
+To create a user, we first need a user with the appropriate rights to do so 
+(such as the system user or DBA).
+Then, we simply use the following syntax:
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
+
+\lstinputlisting{SQL/syntax/Admin/createUser.sql}
+
+\vspace{0.15cm}
+
+\subsection*{\underline{Example}}
+\lstinputlisting{SQL/examples/Admin/createUser.sql}
+
+\vspace{0.25cm}
+\subsection{User Deletion} 
+\begin{prettyBox}{User Deletion}{myblue}
+To delete a user, we use the \textcolor{blue}{DROP} command as follows: 
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
+\lstinputlisting{SQL/syntax/Admin/dropUser.sql}
+
+\vspace{0.15cm}
+\subsection*{\underline{Example}}
+\lstinputlisting{SQL/examples/Admin/dropUser.sql}
+
+
+\vspace{0.15cm}
+\begin{prettyBox}{Note}{red}
+To delete a DBA user, you must be a DBA yourself. However,
+to delete a non-DBA user, you only need the right to drop users. 
+\end{prettyBox}
+
+
+\vspace{0.35cm}
+
+\section{Rights Management} 
+\begin{prettyBox}{Rights Management}{myblue}
+We can manage users' privileges by granting and revoking them. 
+There are 3 types of privileges:
+
+\begin{itemize} 
+\item \textbf{System Privileges:} Generalized rights (create session, select any table ,...etc) 
+\item \textbf{Object Privileges:} Rights to perform actions on specific objects (drop a certain table, select a certain view ,...etc) 
+\item \textbf{Modifier Privileges:} Rights to grant or revoke privileges. 
+\end{itemize} 
+
+\end{prettyBox}
+
+\subsection{Granting Rights} 
+\begin{prettyBox}{Granting Rights}{myblue} 
+The user must have the right to grant rights. We can: 
+\begin{itemize} 
+\item Give the right to execute a command (general system privilege). 
+\item Grant access to a specific object (object privilege). 
+\item Grant the right to grant/revoke rights to others (with admin/grant option).
+\end{itemize} 
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}} 
+\lstinputlisting{SQL/syntax/Admin/grant.sql}
+
+\vspace{0.15cm}
+\subsection*{\underline{Example}} 
+
+\lstinputlisting[basicstyle=\ttfamily\scriptsize]{SQL/examples/Admin/grant.sql}
+
+\vspace{0.25cm}
+\subsection{Revoking Rights} 
+\begin{prettyBox}{Revoking Rights}{myblue} 
+The user must have the right to revoke rights. When revoking a right, we not 
+only remove the privilege itself from the user but also the right to
+grant/revoke that privilege.
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
+\lstinputlisting{SQL/syntax/Admin/revoke.sql}
+
+\vspace{0.15cm}
+\subsection*{\underline{Example}}
+\lstinputlisting[basicstyle=\ttfamily\footnotesize]{SQL/examples/Admin/revoke.sql}
+
+\vspace{0.35cm}
+\subsection{Roles} 
+\begin{prettyBox}{Roles}{myblue}
+A role represents a set of privileges, that we can affect to a user.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsubsection{Creating Roles} 
+\begin{prettyBox}{Creating Roles}{myblue}
+We need to first create the role, then grant privileges to it to populate
+the role. We can also remove privileges from the role using 
+the \textcolor{blue}{REVOKE} command.
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
+\lstinputlisting{SQL/syntax/Admin/createRole.sql}
+
+\vspace{0.15cm}
+\subsection*{\underline{Example}}
+\lstinputlisting[basicstyle=\ttfamily\footnotesize]{SQL/examples/Admin/createRole.sql}
+
+\vspace{0.25cm}
+\subsubsection{Dropping Roles} 
+\begin{prettyBox}{Dropping Roles}{myblue}
+The user must have the right to delete a role. We use the 
+\textcolor{blue}{DROP} command to do so.
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
+\lstinputlisting{SQL/syntax/Admin/dropRole.sql}
+
+\vspace{0.15cm}
+\subsection*{\underline{Example}}
+\lstinputlisting{SQL/examples/Admin/dropRole.sql}
+
+\vspace{0.15cm}
+\begin{prettyBox}{Note}{red} 
+If we drop a role that is still in use by other users, they will automatically
+lose the privileges associated with that role.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsubsection{Granting Roles to Users}
+\begin{prettyBox}{Granting Roles}{myblue} The user must have the right to 
+grant roles to others. We can:
+\begin{itemize} 
+\item Grant the privileges of a role to users. 
+\item Grant the right to grant/revoke the role to others (with admin option).
+\end{itemize} 
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}} 
+\lstinputlisting{SQL/syntax/Admin/grantRole.sql}
+
+\vspace{0.15cm}
+\subsection*{\underline{Example}} 
+\lstinputlisting{SQL/examples/Admin/grantRole.sql}
+
+
+\vspace{0.25cm}
+\subsubsection{Revoking Roles from Users} 
+\begin{prettyBox}{Revoking Roles}{myblue}
+The user needs the right to revoke roles from others. By revoking a role from
+a user, we remove all the privileges of that role, as well as the right to
+grant or revoke that role.
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}} 
+\lstinputlisting{SQL/syntax/Admin/revokeRole.sql}
+
+\vspace{0.15cm}
+\subsection*{\underline{Example}} 
+\lstinputlisting{SQL/examples/Admin/revokeRole.sql}
+
+\vspace{0.35cm}
+\section{Resource Management}
+
+\subsection{Profiles} 
+\begin{prettyBox}{Profiles}{myblue} To manage the resources used by users,
+we use profiles, which represent a set of limitations that we can assign
+to users.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{Profile Creation}
+\begin{prettyBox}{Profile Creation}{myblue} The user needs the right to create
+profiles. We can limit many resources, such as the number of simultaneous 
+sessions for a user, idle time per session, and more. 
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}} 
+\lstinputlisting{SQL/syntax/Admin/createProfile.sql}
+
+\vspace{0.15cm}
+\subsection*{\underline{Example}} 
+\lstinputlisting[basicstyle=\ttfamily\footnotesize]{SQL/examples/Admin/createProfile.sql}
+
+
+\vspace{0.25cm}
+\subsection{Dropping Profiles}
+\begin{prettyBox}{Dropping Profiles}{myblue} The user needs the right to 
+drop profiles. We use the \textcolor{blue}{DROP} command to do so.
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
+\lstinputlisting{SQL/syntax/Admin/dropProfile.sql}
+
+\vspace{0.15cm}
+\subsection*{\underline{Example}}
+\lstinputlisting{SQL/examples/Admin/dropProfile.sql}
+
+
+\vspace{0.25cm}
+\subsection{Assigning Profiles} 
+\begin{prettyBox}{Assigning Profiles}{myblue} 
+The user needs the right to alter other users. We use the 
+\textcolor{blue}{ALTER} command to assign profiles.
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}} 
+\lstinputlisting{SQL/syntax/Admin/profile.sql}
+
+\vspace{0.15cm}
+\subsection*{\underline{Example}} 
+\lstinputlisting{SQL/examples/Admin/profile.sql}
+
+
+
+\vspace{0.25cm}
+\subsection{Unassigning Profiles} 
+\begin{prettyBox}{Unassigning Profiles}{myblue}
+The user needs the right to alter other users. We use the
+\textcolor{blue}{ALTER} command to assign the default profile to a user. 
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}} 
+\lstinputlisting{SQL/syntax/Admin/def.sql}
+
+\vspace{0.15cm}
+\subsection*{\underline{Example}} 
+\lstinputlisting{SQL/examples/Admin/def.sql}
