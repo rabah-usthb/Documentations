@@ -1,0 +1,146 @@
+\newpage 
+\null 
+\vspace{0.15cm}
+
+\begin{center} 
+\Huge{\textbf{\underline{Chapter 5: Tablespace}}}
+\end{center}
+
+\vspace{0.25cm}
+
+\setcounter{section}{0}
+
+\vspace{1cm}
+
+\section{Tablespace}
+\begin{prettyBox}{Definition}{myblue}
+A tablespace is a logical storage container that groups related objects 
+and maps them to physical data files on disk. Tablespaces help manage storage, 
+improve performance, and simplify administration. There are two types: permanent and temporary.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsection{Permanent Tablespace}
+\begin{prettyBox}{Permanent}{myblue}
+A permanent tablespace stores metadata, objects, and user data.
+\begin{itemize}
+    \item \textbf{SYSTEM}: The default permanent tablespace that stores 
+          metadata such as table constraints, procedures, functions, triggers, etc.
+    \item \textbf{USERS}: The default permanent tablespace that stores 
+          user-created data like tables and views.
+    \item \textbf{User-Created Tablespace}: A custom permanent tablespace 
+          created by users, similar to the \textbf{USERS} tablespace.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsection{Temporary Tablespace}
+\begin{prettyBox}{Temporary}{myblue}
+A temporary tablespace is used to assist the server in computing 
+SQL queries more efficiently when server memory is insufficient. 
+For example, during the sorting of a large table with an \textcolor{blue}{ORDER BY} clause, 
+the operation relies on the temporary tablespace.
+
+\begin{itemize}
+    \item \textbf{TEMP}: The default temporary tablespace.
+    \item \textbf{User-Created Tablespace}: A custom temporary tablespace created by users.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsection{Tablespace Creation}
+\begin{prettyBox}{Tablespace Creation}{myblue}
+To create a tablespace we need to specify the type , the data file by giving the path ,
+though one tablespace might use many data file .dbf for permanet and .tmp for temporary ,
+we give the inital size and other option like how much we extend it each time we exced and the maximum
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsection*{\underline{Syntax}}
+
+\subsection*{\underline{Permanent Tablespace}}
+\lstinputlisting{SQL/syntax/Tab/createPerm.sql}
+
+
+\subsection*{\underline{Temporary Tablespace}}
+\lstinputlisting{SQL/syntax/Tab/createTmp.sql}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Note}{red}
+The \textcolor{blue}{REUSE} keyword allows the tablespace to reuse an existing 
+data file without throwing an error if the data file already exists.
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{Tablespace Deletion}
+\begin{prettyBox}{Tablespace Deletion}{myblue}
+To delete a tablespace we use the \textcolor{blue}{DROP} , we can decide
+if we want to delete just the tablespace contents , or to also delete its data file.
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
+\lstinputlisting{SQL/syntax/Tab/drop.sql}
+
+\vspace{0.15cm}
+\begin{prettyBox}{Note}{red}
+If we try to drop a tablespace that is still in use by other users , it will result in an error
+\begin{center}
+ORA-01549: tablespace not empty, cannot drop
+\end{center}
+\end{prettyBox}
+
+
+\subsection{Assigning Tablespaces}
+\begin{prettyBox}{Assigning Tablespaces}{myblue}
+When creating the user we can assing him user-created tablespaces
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
+\lstinputlisting{SQL/syntax/Tab/tab.sql}
+
+
+\vspace{0.25cm}
+
+\subsection{Changing Tablespaces}
+\begin{prettyBox}{Changing Tablespaces}{myblue}
+    We use the \textcolor{blue}{ALTER} keyword , we have two possibilities:
+\begin{itemize}
+    \item \textbf{Default} (works for both permanent and temporary tablespaces): This change only updates the reference to the new tablespace for future objects.
+    \begin{itemize}
+        \item \textbf{Permanent Tablespace}: The user will still rely on the datafiles of the old tablespace for objects created in it. For newly created objects, the user will rely on the datafiles of the new tablespace.
+        \item \textbf{Temporary Tablespace}: The user will switch to the new tablespace and use it for subsequent SQL queries.
+    \end{itemize}
+    \item \textbf{Move} (only for permanent tablespaces): This operation physically moves the data of a table stored in the datafiles of the previous
+tablespace to the datafiles of the new one, doing that
+        also requires to move the index of the table.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.15cm}
+
+\subsection*{\underline{Syntax}}
+
+\lstinputlisting[basicstyle=\ttfamily\footnotesize]{SQL/syntax/Tab/change.sql}
+
+
+\vspace{0.25cm}
+
+
+\subsection{The Quota}
+\begin{prettyBox}{Quota}{myblue}
+The quota defines how much space a user can use in a permanent tablespace. 
+By default, the quota is set to \textbf{0}. You can modify it using the \textcolor{blue}{ALTER} command.
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
+\lstinputlisting{SQL/syntax/Tab/qouta.sql}
+
+
