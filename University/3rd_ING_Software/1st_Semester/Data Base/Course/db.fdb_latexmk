@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1737258581.74244 "db.tex" "db.pdf" "db" 1737258586.30632 0
+["pdflatex"] 1737260925.56635 "db.tex" "db.pdf" "db" 1737260931.60883 0
   "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -159,6 +159,7 @@
   "Chapters/DRL.tex" 1737254741.69289 10027 e7494684add662abd08381303d073903 ""
   "Chapters/DataType.tex" 1737239172.62582 8500 2631333231ea6141f39f11139810c06b ""
   "Chapters/PlSql.tex" 1737257223.60918 16590 f84ad975d8ab9c0fa5b4f0ca8628329f ""
+  "Chapters/dic.tex" 1737260925.23532 7155 87bdfeedc7cd9965d2ff343d4f53543b ""
   "Chapters/tab.tex" 1737257527.25191 6992 c36072f696bf94821a73d5696e9936f6 ""
   "Chapters/view.tex" 1737258581.2454 2892 b99bf04185b12eb6e0e6466ffc9652ee ""
   "SQL/examples/Admin/createProfile.sql" 1737188058.99362 1080 0c3429365ae3b111a518e2c2a3cec8c9 ""
@@ -270,8 +271,8 @@
   "SQL/syntax/Views/comView.sql" 1737258542.0674 230 eeebd945a7325d3ec44cbb6d09c84132 ""
   "SQL/syntax/Views/exterView.sql" 1737258270.37141 86 5b55659cf89e02ef0552bddd62b5057d ""
   "SQL/syntax/Views/matView.sql" 1737258551.2734 180 77ed3258ed7d7edec92a617c20b843bc ""
-  "db.aux" 1737258586.1774 21700 5aa2be52ea9e1be3df95081d485fcb55 "pdflatex"
-  "db.tex" 1737195001.95349 2398 7e0d98d1101f28980f44c4e75f455904 ""
+  "db.aux" 1737260931.46332 23438 41dcf21226d317456288ea22ff541535 "pdflatex"
+  "db.tex" 1737259659.59836 2423 09a3d0e04e8551d580c9121c9e8db5e2 ""
   (generated)
   "db.aux"
   "db.log"

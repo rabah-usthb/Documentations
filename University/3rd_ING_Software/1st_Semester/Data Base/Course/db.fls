@@ -607,6 +607,9 @@ INPUT SQL/syntax/Tab/qouta.sql
 INPUT ./SQL/examples/Tab/qouta.sql
 INPUT ./SQL/examples/Tab/qouta.sql
 INPUT SQL/examples/Tab/qouta.sql
+INPUT ./Chapters/dic.tex
+INPUT ./Chapters/dic.tex
+INPUT Chapters/dic.tex
 INPUT db.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb

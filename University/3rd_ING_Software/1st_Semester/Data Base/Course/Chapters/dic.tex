@@ -1,0 +1,169 @@
+\newpage 
+\null 
+\vspace{0.15cm}
+
+\begin{center} 
+\Huge{\textbf{\underline{Chapter 10: Dictionnary}}}
+\end{center}
+
+\vspace{0.25cm}
+
+\setcounter{section}{0}
+
+
+\section{Introduction}
+\begin{prettyBox}{What is a Dictionary?}{myblue}
+A dictionary is a collection of views that store meta-data about the database. 
+This meta-data is stored in the default permanent tablespace SYSTEM.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Note}{red}
+Each time a user creates, modifies, deletes an object, grants or revokes privileges, or performs any other operation, the meta-data views are automatically updated.
+\end{prettyBox}
+
+\vspace{0.35cm}
+\section{Dictionary Organization}
+\begin{prettyBox}{Dictionary Organization}{myblue}
+The dictionary views are organized into three categories based on access levels and scope:
+\begin{itemize}
+    \item \textbf{DBA\_} : Accessible only by the DBA users, these views contain meta-data for all users and PDBs (Pluggable Databases).
+    \item \textbf{ALL\_} : These views require no special DBA privileges and provide meta-data for all objects accessible to the current user.
+    \item \textbf{USER\_} : These views show meta-data only for objects owned by the current user.
+\end{itemize}
+\end{prettyBox}
+
+
+\vspace{0.35cm}
+\section{Some Dictionaries}
+
+\subsection{Table Related}
+\begin{prettyBox}{Table-Related Views}{myblue}
+\begin{itemize}
+    \item \textbf{DBA\_TABLES} : Contains information about all tables in the database, including user-owned and system tables.
+    \item \textbf{ALL\_TABLES} : Displays information about tables accessible to the current user, including tables owned by other users.
+    \item \textbf{USER\_TABLES} : Shows information about the tables owned by the current user.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{Column Related}
+\begin{prettyBox}{Column-Related Views}{myblue}
+\begin{itemize}
+    \item \textbf{DBA\_TAB\_COLUMNS} : Contains information about all columns of all tables in the database.
+    \item \textbf{ALL\_TAB\_COLUMNS} : Displays column information for all tables accessible to the current user.
+    \item \textbf{USER\_TAB\_COLUMNS} : Shows column information for tables owned by the current user.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{Constraint Related}
+\begin{prettyBox}{Constraint-Related Views}{myblue}
+\begin{itemize}
+    \item \textbf{DBA\_CONSTRAINTS} : Lists the constraints associated with tables and columns.
+    \item \textbf{ALL\_CONSTRAINTS} : Shows constraints for tables accessible to the current user.
+    \item \textbf{USER\_CONSTRAINTS} : Displays constraints for the current user's owned tables.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{View Related}
+\begin{prettyBox}{View-Related Views}{myblue}
+\begin{itemize}
+    \item \textbf{DBA\_VIEWS} : Contains information about all views in the database, both user and system-defined.
+    \item \textbf{ALL\_VIEWS} : Shows views accessible to the current user, including those owned by others.
+    \item \textbf{USER\_VIEWS} : Displays views owned by the current user.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{Index Related}
+\begin{prettyBox}{Index-Related Views}{myblue}
+\begin{itemize}
+    \item \textbf{DBA\_INDEXES} : Contains information about all indexes in the database, including unique, composite, and bitmap indexes.
+    \item \textbf{ALL\_INDEXES} : Shows index information for indexes that the current user has access to.
+    \item \textbf{USER\_INDEXES} : Displays index information for indexes owned by the current user.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{Trigger Related}
+\begin{prettyBox}{Trigger-Related Views}{myblue}
+\begin{itemize}
+    \item \textbf{DBA\_TRIGGERS} : Contains details of all triggers in the database, including their type and associated events.
+    \item \textbf{ALL\_TRIGGERS} : Displays trigger information for triggers accessible by the current user.
+    \item \textbf{USER\_TRIGGERS} : Shows trigger details for triggers owned by the current user.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{Function Related}
+\begin{prettyBox}{Function-Related Views}{myblue}
+\begin{itemize}
+    \item \textbf{DBA\_FUNCTIONS} : Contains information about all functions in the database, including their return types and parameters.
+    \item \textbf{ALL\_FUNCTIONS} : Displays function details accessible to the current user.
+    \item \textbf{USER\_FUNCTIONS} : Shows functions owned by the current user.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{Procedure Related}
+\begin{prettyBox}{Procedure-Related Views}{myblue}
+\begin{itemize}
+    \item \textbf{DBA\_PROCEDURES} : Lists all procedures in the database, with details about their execution privileges.
+    \item \textbf{ALL\_PROCEDURES} : Shows procedures accessible to the current user.
+    \item \textbf{USER\_PROCEDURES} : Displays procedures owned by the current user.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{Users Related}
+\begin{prettyBox}{User-Related Views}{myblue}
+\begin{itemize}
+    \item \textbf{DBA\_USERS} : Contains information about all users in the database, including their status and default tablespace.
+    \item \textbf{ALL\_USERS} : Displays information about users that the current user can access.
+    \item \textbf{USER\_USERS} : Shows details about the current user.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{Privilege Related}
+\begin{prettyBox}{Privilege-Related Views}{myblue}
+\begin{itemize}
+    \item \textbf{DBA\_TAB\_PRIVS} : Contains all table-level privileges granted to users in the database.
+    \item \textbf{ALL\_TAB\_PRIVS} : Displays table-level privileges for the current user.
+    \item \textbf{USER\_TAB\_PRIVS} : Shows table-level privileges for the current user's tables.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{Role Related}
+\begin{prettyBox}{Role-Related Views}{myblue}
+\begin{itemize}
+    \item \textbf{DBA\_ROLES} : Contains all roles in the database, including system-defined and user-defined roles.
+    \item \textbf{ALL\_ROLES} : Displays roles available to the current user.
+    \item \textbf{USER\_ROLES} : Shows roles granted to the current user.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{Profile Related}
+\begin{prettyBox}{Profile-Related Views}{myblue}
+\begin{itemize}
+    \item \textbf{DBA\_PROFILES} : Contains information about all user profiles in the database, including resource limits and password policies.
+    \item \textbf{ALL\_PROFILES} : Displays profile details available to the current user.
+    \item \textbf{USER\_PROFILES} : Shows the profile associated with the current user.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{Tablespace Related}
+\begin{prettyBox}{Tablespace-Related Views}{myblue}
+\begin{itemize}
+    \item \textbf{DBA\_TABLESPACES} : Lists all tablespaces in the database, including their status and space usage.
+    \item \textbf{ALL\_TABLESPACES} : Displays tablespaces accessible by the current user.
+    \item \textbf{USER\_TABLESPACES} : Shows tablespaces owned by the current user.
+\end{itemize}
+\end{prettyBox}
+
