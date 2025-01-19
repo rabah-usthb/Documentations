@@ -1,9 +1,20 @@
-\section{View}
-\subsection{What Are Views ?}
+\newpage 
+\null 
+\vspace{0.15cm}
+
+\begin{center} 
+\Huge{\textbf{\underline{Chapter 7: Views}}}
+\end{center}
+
+\vspace{0.25cm}
+
+\setcounter{section}{0}
+
+\vspace{1cm}
 
 
-
-\begin{prettyBox}{View}{myblue}
+\section{Introduction}
+\begin{prettyBox}{What Are Views ?}{myblue}
     Views are virtual tables that help simplify \textcolor{blue}{SELECT} queries, allowing us to avoid retyping the same query repeatedly. They can also improve performance, especially when dealing with joins .There are two types of views:  
 \begin{itemize}
     \item \textbf{External Views} 
@@ -31,9 +42,27 @@ We can insert on External views if it must meet all the following criteria:
 \end{prettyBox}
 
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 \lstinputlisting{SQL/syntax/Views/exterView.sql}
+
+\vspace{0.25cm}
+\begin{prettyBox}{Note}{red}
+\textbf{\underline{With Check Option On External View}}
+
+\vspace{0.15cm}
+It means if we try to insert or update on the view it will first check
+the condition in the \textcolor{blue}{WHERE} clause of the \textcolor{blue}{SELECT} query of the external view creation 
+
+\vspace{0.15cm}
+\textbf{\underline{Insert On External View}}
+
+\vspace{0.15cm}
+Any insert on the external view will reflect on the source table 
+
+
+
+\end{prettyBox}
 
 \subsection{Materialized}
 
@@ -43,15 +72,16 @@ Materialized views are virtual tables that offer better performance and serve as
 refresh automatically , they are created using the \textcolor{blue}{MATERIALIZED}
 \end{prettyBox}
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
-\subsubsection*{\underline{On Demand}}
+\subsection*{\underline{On Demand}}
 \lstinputlisting{SQL/syntax/Views/matView.sql}
 
 
-\subsubsection*{\underline{On Commit}} 
+\subsection*{\underline{On Commit}} 
 \lstinputlisting{SQL/syntax/Views/comView.sql}
 
+\vspace{0.25cm}
 \begin{prettyBox}{Note}{red}
 \textbf{\underline{On Commit vs On Demand}}
 \begin{itemize}
@@ -61,12 +91,6 @@ manually using the DBMS\_MVIEW.REFRESH procedure
 \end{itemize}
 
 \vspace{0.15cm}
-\textbf{\underline{Insert On External View}}
-
-\vspace{0.15cm}
-Any insert on the external view will reflect on the source table 
-
-\vspace{0.25cm}
 
 \textbf{\underline{Explicit Column Names}}
 
