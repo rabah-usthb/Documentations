@@ -411,7 +411,7 @@ Triggers are defined for different types of events, which can be categorized as 
     \item \textcolor{blue}{INSERT} on tableName : Trigger fires when a row is inserted into the table.
     \item \textcolor{blue}{DELETE} on tableName : Trigger fires when a row is deleted from the table.
     \item \textcolor{blue}{UPDATE} on tableName : Trigger fires when a row is updated in the table.
-    \item \textcolor{blue}{UPDATE} on tableName.columnName : Trigger fires when a specific column in the table is updated.
+    \item \textcolor{blue}{UPDATE} of columnName on tableName : Trigger fires when a specific column in the table is updated.
     \item \textcolor{blue}{DROP} on tableName : Trigger fires when a table is dropped .
 \end{itemize}
 
@@ -525,4 +525,204 @@ after/before of columnName on tableName
 
 \lstinputlisting{SQL/syntax/Pl_Sql/proExec.sql}
 
+\vspace{0.35cm}
+
+\subsection*{\underline{Example}}
+let the table definition be :\\[0.2cm]
+\textbf{Client}(\textbf{\underline{numClient}},CIV,firstName,lastName,DOB,address,telProf,telPriv,fax);\\[0.1cm]
+\textbf{Employee}(\textbf{\underline{numEmployee}},firstName,lastName,category,salary)\\[0.1cm]
+\textbf{Brand}(\textbf{\underline{numBrand}},name,country)\\[0.1cm]
+\textbf{Model}(\textbf{\underline{numModel}},numBrand*,name)\\[0.1cm]
+\textbf{Vehicule}(\textbf{\underline{numVehicule}},numClient*,numModel*,mat,year)\\[0.1cm]
+\textbf{Interventions}(\textbf{\underline{numIntervention}},numVehicule*,type,datebegin,dateend,cost)\\[0.1cm]
+\textbf{Intervenants}(\textbf{\underline{numIntervention*,numEmployee}},datebegin,dateend)
+
+
+\begin{enumerate}
+    \item create the tables
+    \item add constraint on salary so it's between 10000 and 30000 
+    \item create a procedure that print how much each brand has models
+    \item create a procedure that add 30\% in salary of employee with category 'Assistant' and 50\% for 'Mechanician'
+    \item create a procedure that verifies wether the datebegin is inferior to dateend in the interventions table
+    \item create a function that return for a given numemployee number of interventions
+    \item create a trigger that notify when ever a new model is added to the brand
+    \item create a trigger that verifies if the newly updated salary is greater than the older one if not , don't let it happen
+    \item create a trigger that checks if the intervenants time respect the period of the intervention if not don't allow the insertion
+    \item add the attribut nb\_inter total number of intervention of an employee
+    \item create procedure that fills nb\_inter
+    \item create trigger to automatically increment/decrement nb\_inter
+\end{enumerate}
+
+\newpage
+
+\vspace{0.35cm}
+\subsection*{\underline{1 Table Creation}}
+\subsection*{1.1 Client Table}
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex1.1.sql}
+
+\subsection*{1.2 Employee Table}
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex1.2.sql}
+
+\subsection*{1.3 Brand Table}
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex1.3.sql}
+
+\subsection*{1.4 Model Table}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex1.4.sql}
+
+\newpage
+\subsection*{1.5 Vehicule Table}
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex1.5.sql}
+
+\subsection*{1.6 Interventions Table}
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex1.6.sql}
+
+\subsection*{1.7 Intervenants Table}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex1.7.sql}
+
+\newpage
+\subsection*{2 Print Number Of Modals For Each Brand}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex2.sql}
+
+\vspace{0.25cm}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{SQL/examples/PLSQL/EX1/PNG/ex2.png}
+\end{figure}
+
+\vspace{0.5cm}
+\subsection*{3 Salary Constraint}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex3.sql}
+
+\newpage
+\subsection*{4}
+
+\subsection*{4.1 Disable Salary Constraint}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex4.1.sql}
+
+\subsection*{4.2 Procedure To Update Salary}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex4.2.sql}
+
+\newpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{SQL/examples/PLSQL/EX1/PNG/ex4.png}
+\end{figure}
+
+\vspace{0.5cm}
+
+\subsection*{5}
+
+\subsection*{5.1 Verification For One Intervention}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex5.1.sql}
+
+\newpage
+\subsection*{5.2 Verification For All Intervention}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex5.2.sql}
+
+\vspace{0.25cm}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{SQL/examples/PLSQL/EX1/PNG/ex5.png}
+\end{figure}
+
+\newpage
+
+\subsection*{6}
+
+\subsection*{6.1 Nb Interventions For One Employee}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex6.1.sql}
+
+
+\subsection*{6.2 Nb Interventions For All Employees}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex6.2.sql}
+
+\newpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{SQL/examples/PLSQL/EX1/PNG/ex6.png}
+\end{figure}
+
+\vspace{0.5cm}
+
+\subsection*{7 Notify Model Was Added}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex8.sql}
+
+\vspace{0.25cm}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{SQL/examples/PLSQL/EX1/PNG/ex8.png}
+\end{figure}
+
+\vspace{0.5cm}
+\newpage
+\subsection*{8 Check New Salary Before Updating}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex9.sql}
+
+\vspace{0.25cm}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{SQL/examples/PLSQL/EX1/PNG/ex9.png}
+\end{figure}
+
+\newpage
+\subsection*{9 Check Period}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex10.sql}
+
+\subsection*{10 Add nb\_inter}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex11.1.sql}
+
+\vspace{0.25cm}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{SQL/examples/PLSQL/EX1/PNG/ex11.1.png}
+\end{figure}
+
+
+\subsection*{11 Fill nb\_inter Procedure}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex11.2.sql}
+
+\vspace{0.25cm}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{SQL/examples/PLSQL/EX1/PNG/ex11.2.png}
+\end{figure}
+
+
+\subsection*{12 }
+\subsection*{12.1 Trigger After Insert}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex11.3.1.sql}
+
+\subsection*{12.2 Trigger After Delete}
+
+\lstinputlisting{SQL/examples/PLSQL/EX1/ex11.3.2.sql}
+
+
+
+\newpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{SQL/examples/PLSQL/EX1/PNG/ex11.3.png}
+\end{figure}
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{Note}{red}
+Insert .sql code are inside the SQL/examples/PLSQL/EX1/insert folder
+\end{prettyBox}
 

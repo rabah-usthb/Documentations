@@ -1,0 +1,1 @@
+alter table employeeLab2 disable constraint chk_EmployeeLab2_salary;
