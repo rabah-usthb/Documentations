@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1737254717.68022 "db.tex" "db.pdf" "db" 1737254722.1459 0
+["pdflatex"] 1737257225.18791 "db.tex" "db.pdf" "db" 1737257230.27309 0
   "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -156,9 +156,9 @@
   "Chapters/Classification.tex" 1737234716.67297 2670 53d384f57b022cd9338702ed10ddb7aa ""
   "Chapters/DDL.tex" 1737254073.22091 10741 777f81687b36ce21ff092ec1d300eed2 ""
   "Chapters/DML.tex" 1737254581.71789 5013 ff96b6ba0c03f63792e9e34702792701 ""
-  "Chapters/DRL.tex" 1737254715.71589 10025 14af7e947733e529841f8e75ff22a89b ""
+  "Chapters/DRL.tex" 1737254741.69289 10027 e7494684add662abd08381303d073903 ""
   "Chapters/DataType.tex" 1737239172.62582 8500 2631333231ea6141f39f11139810c06b ""
-  "Chapters/PlSql.tex" 1733178497.73931 16600 38b23c1bad03b4ebba5c95a8b7c9dce6 ""
+  "Chapters/PlSql.tex" 1737257223.60918 16590 f84ad975d8ab9c0fa5b4f0ca8628329f ""
   "Chapters/tab.tex" 1737216572.49777 6992 ccf0f0041efa6363d3e2756e0ca561db ""
   "Chapters/view.tex" 1732921182.34762 2405 0b8ffa601f323aa83ee9e05e153f502a ""
   "SQL/examples/Admin/createProfile.sql" 1737188058.99362 1080 0c3429365ae3b111a518e2c2a3cec8c9 ""
@@ -232,7 +232,7 @@
   "SQL/syntax/DRL/select.sql" 1732085292.50404 266 f7db5ceda77ffdecb976174d12afd8a2 ""
   "SQL/syntax/DRL/where.sql" 1731777308.596 64 1628cf890c19880866b2cb335175f887 ""
   "SQL/syntax/Pl_Sql/case.sql" 1732128616.96 228 b25906413c99bc3bfe78aab747f08751 ""
-  "SQL/syntax/Pl_Sql/cursor.sql" 1732219696.48504 561 35532fc958d08e3e114d210260620501 ""
+  "SQL/syntax/Pl_Sql/cursor.sql" 1737257134.97388 540 763fe49acafd1426eff60218a02aaa1c ""
   "SQL/syntax/Pl_Sql/event.sql" 1732323462.90904 326 962d7128e1ebb47828e09e2011cbc764 ""
   "SQL/syntax/Pl_Sql/exc.sql" 1732326404.08907 478 d579a34b1de5cee951c78eb28db3de15 ""
   "SQL/syntax/Pl_Sql/exec.sql" 1732326418.45925 36 96b3ab3afd61388e746dc9c8647f164a ""
@@ -270,7 +270,7 @@
   "SQL/syntax/Views/comView.sql" 1732920831.8866 232 8a241d1b5338bcc196ca6d7a8eb81f11 ""
   "SQL/syntax/Views/exterView.sql" 1732920797.0046 65 8dc786d051a1505b4bb98d279156c773 ""
   "SQL/syntax/Views/matView.sql" 1732920831.8926 183 55b96c02a93d6c063945be1bd206172f ""
-  "db.aux" 1737254721.99689 21152 1ed976ee1286fb5c16a5b1b43a5507d8 "pdflatex"
+  "db.aux" 1737257230.0534 21806 eee504c1f9957b9a21f703c2f98a93fd "pdflatex"
   "db.tex" 1737195001.95349 2398 7e0d98d1101f28980f44c4e75f455904 ""
   (generated)
   "db.aux"

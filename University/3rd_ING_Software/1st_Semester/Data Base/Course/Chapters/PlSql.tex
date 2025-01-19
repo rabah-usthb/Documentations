@@ -1,6 +1,17 @@
+\newpage 
+\null 
+\vspace{0.15cm}
 
-\section{PL/SQL}
-\subsection{Introduction}
+\begin{center} 
+\Huge{\textbf{\underline{Chapter 6: PL/SQL}}}
+
+\end{center}
+
+\setcounter{section}{0}
+
+\vspace{0.35cm}
+
+\section{Introduction}
 
 \begin{prettyBox}{What's PL/SQL ?}{myblue}
 PL/SQL, or Procedural Language/Structured Query Language, is an extension of SQL. While SQL (Structured Query Language) is primarily used for CRUD operations (querying, inserting, updating, and deleting data in relational databases), PL/SQL allows for full programmatic control with features such as control structures (loops and conditionals), variables, and error handling with exceptions. This enables the creation of scripts that can automate tasks with functions, procedures, and triggers, implement complex business logic, and manipulate data at a higher level than SQL alone.
@@ -19,7 +30,7 @@ PL/SQL, or Procedural Language/Structured Query Language, is an extension of SQL
 
 \vspace{0.5cm}
 
-\subsection{Overview Of Plsql's Structure}
+\section{Overview Of Plsql's Structure}
 
 \begin{prettyBox}{Programme Structure}{myblue}
 A PL/SQL has 3 blocks :
@@ -54,32 +65,32 @@ A PL/SQL has 3 blocks :
 
 \vspace{0.5cm}
 
-\subsection{Comments}
+\section{Comments}
 
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 \vspace{0.25cm}
 
-\subsubsection*{\underline{Single Comment}}
+\subsection*{\underline{Single Comment}}
 \lstinputlisting{SQL/syntax/Pl_Sql/singleComment.sql}
 
 
-\subsubsection*{\underline{Multi-Line Comment}}
+\subsection*{\underline{Multi-Line Comment}}
 \lstinputlisting{SQL/syntax/Pl_Sql/multiComment.sql}
 
 
 \vspace{0.5cm}
 
 
-\subsection{Printing}
+\section{Printing}
 
 \begin{prettyBox}{DBMS\_OUTPUT.PUT\_LINE}{myblue}
 To print messages in the console, we use the \texttt{DBMS\_OUTPUT.PUT\_LINE} command. The message should be enclosed
 in single quotes ' ' and we use double pipes \texttt{||} to concatenate with variables.
 \end{prettyBox}
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 
 \lstinputlisting{SQL/syntax/Pl_Sql/print.sql}
@@ -97,14 +108,14 @@ Note that this is only needed once , and it will remain active unless you explic
 
 \vspace{0.5cm}
 
-\subsection{Variables Declaration \& Types}
+\section{Variables Declaration \& Types}
 
 \begin{prettyBox}{Variables \& Constants}{myblue}
 All variables and constants must be declared in the \textcolor{blue}{DECLARE} scope , 
 we use := to affect values to variables 
 \end{prettyBox}
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 \lstinputlisting{SQL/syntax/Pl_Sql/varDeclaration.sql}
 
@@ -129,7 +140,7 @@ PL/SQL supports all data types normal sql has like those we've seen previously. 
 We can store the output of the \textcolor{blue}{SELECT} command in variables using the \textcolor{blue}{INTO} clause as follows:
 \end{prettyBox}
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 \lstinputlisting{SQL/syntax/Pl_Sql/select.sql}
 
@@ -158,7 +169,7 @@ In PL/SQL we have to always store the output of a select if not we will have a c
 \end{prettyBox}
 
 \vspace{0.5cm}
-\subsection{Control Structures}
+\section{Control Structures}
 
 \begin{prettyBox}{Definition}{myblue}
 In PL/SQL, control structures are constructs that help control the flow of execution in a block of code.
@@ -168,39 +179,39 @@ and responsive to varying conditions. The main types of control structures in PL
 
 \vspace{0.25cm}
 
-\subsubsection{Conditional Control}
+\subsection{Conditional Control}
 \newpage
-\subsubsection*{\underline{If}} 
-\subsubsection*{\underline{Syntax}}
+\subsubsection{\underline{If}} 
+\subsubsection{\underline{Syntax}}
 
 \lstinputlisting{SQL/syntax/Pl_Sql/if.sql}
 
 
 \vspace{0.25cm}
 
-\subsubsection*{\underline{Switch Case}}
+\subsubsection{\underline{Switch Case}}
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 \lstinputlisting{SQL/syntax/Pl_Sql/case.sql}
 
 \vspace{0.25cm}
 
-\subsubsection{Looping Control}
+\subsection{Looping Control}
 
-\subsubsection*{\underline{Simple Loop}}
+\subsubsection{\underline{Simple Loop}}
 
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 
 \lstinputlisting{SQL/syntax/Pl_Sql/simpleLoop.sql}
 
 
 
-\subsubsection*{\underline{While Loop}}
+\subsubsection{\underline{While Loop}}
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 
 \lstinputlisting{SQL/syntax/Pl_Sql/whileLoop.sql}
@@ -210,16 +221,16 @@ and responsive to varying conditions. The main types of control structures in PL
 
 
 
-\subsubsection*{\underline{For Loop}}
+\subsubsection{\underline{For Loop}}
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 
 \lstinputlisting{SQL/syntax/Pl_Sql/forLoop.sql}
 
 \vspace{0.5cm}
 
-\subsection{Raise Application Error}
+\section{Raise Application Error}
 \begin{prettyBox}{Raise Errors}{myblue}
 RAISE\_APPLICATION\_ERROR is a procedure used to raise an error that halts code execution, with a custom error
 message. Each error\_code (between -20000 and -20999) is associated with an error message retrieved 
@@ -238,7 +249,7 @@ by the system for predefined exceptions, supporting error control in both system
 \end{prettyBox}
 
 \newpage
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 
 \lstinputlisting{SQL/syntax/Pl_Sql/raise.sql}
@@ -246,7 +257,7 @@ by the system for predefined exceptions, supporting error control in both system
 
 \vspace{0.5cm}
 
-\subsection{Exceptions}
+\section{Exceptions}
 \begin{prettyBox}{Exception}{myblue}
 Exceptions help manage errors . Under
 the hood, exceptions are built on RAISE\_APPLICATION\_ERROR ,  only difference is that it's more readable. There are two main types of exceptions:
@@ -261,7 +272,7 @@ the hood, exceptions are built on RAISE\_APPLICATION\_ERROR ,  only difference i
 \end{prettyBox}
 
 \newpage
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 
 \lstinputlisting{SQL/syntax/Pl_Sql/exc.sql}
@@ -289,7 +300,7 @@ direct and minimalistic approach.
 
 \newpage
 
-
+\section{Cursor}
 \begin{prettyBox}{Cursor}{myblue}
 Cursors are used when a \textcolor{blue}{SELECT} query returns a table (more than one row).  
 To use a cursor, we first declare a variable of the \textcolor{blue}{CURSOR} data type and associate it with a \textcolor{blue}{SELECT} query.\\[0.15cm]
@@ -310,11 +321,12 @@ Inside the WHILE loop:
 When \textcolor{blue}{FOUND} returns false, indicating no more rows, the loop exits. Finally, close the cursor using the \textcolor{blue}{CLOSE} keyword to free up memory.  
 \end{prettyBox}
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
-\vspace{0.25cm}
 \lstinputlisting{SQL/syntax/Pl_Sql/cursor.sql}
-\subsection{Trigger}
+
+
+\section{Trigger}
 
 \begin{prettyBox}{Trigger}{myblue}
 Triggers are standalone PL/SQL code blocks that execute automatically in response to a specified event.  
@@ -332,13 +344,13 @@ Triggers can be associated with various events, such as \textcolor{blue}{INSERT}
 They are useful for automating tasks, enforcing rules, or logging changes.  
 \end{prettyBox}
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 \lstinputlisting{SQL/syntax/Pl_Sql/trigger.sql}
 
 
 
-\subsubsection{Row Level Trigger}
+\subsection{Row Level Trigger}
 
 \begin{prettyBox}{Row Level}{myblue}
 We use the \textcolor{blue}{FOR EACH ROW} keyword, which instructs the trigger
@@ -353,14 +365,14 @@ This also provides us with access to:
 We use row-level triggers when we need to access :\textcolor{blue}{NEW} and :\textcolor{blue}{OLD}, or when the event is row-specific, such as \textcolor{blue}{DELETE} or \textcolor{blue}{UPDATE}.
 \end{prettyBox}\newpage
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 \lstinputlisting{SQL/syntax/Pl_Sql/rowLevel.sql}
 
 
 
 
-\subsubsection{Table Level Trigger}
+\subsection{Table Level Trigger}
 
 \begin{prettyBox}{Table Level}{myblue}
 A trigger is considered table-level if we omit the \textcolor{blue}{FOR EACH ROW} keyword. Unlike row-level triggers, table-level triggers do not have access to \textcolor{blue}{:NEW} and \textcolor{blue}{:OLD}.
@@ -374,14 +386,14 @@ We use table-level triggers when:
 \end{itemize}
 \end{prettyBox}
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 \lstinputlisting{SQL/syntax/Pl_Sql/tableLevel.sql}
 
 
 
 
-\subsubsection{Trigger Events}
+\subsection{Trigger Events}
 
 \begin{prettyBox}{Events}{myblue}
 Triggers are defined for different types of events, which can be categorized as follows:
@@ -406,7 +418,7 @@ Triggers are defined for different types of events, which can be categorized as 
 You can use the \textcolor{blue}{OR} keyword in a trigger definition to specify multiple events for the same table. This allows the trigger to fire on different types of events.
 \end{prettyBox}
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 \lstinputlisting{SQL/syntax/Pl_Sql/event.sql}
 
@@ -436,31 +448,31 @@ after/before of columnName on tableName
 \end{prettyBox}
 
 \newpage
-\subsection{Function}
+\section{Function}
 
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
-\subsubsection*{\underline{Function Definition}}
+\subsection*{\underline{Function Definition}}
 
-\subsubsection*{\underline{Local Function}}
+\subsection*{\underline{Local Function}}
 
 
 \lstinputlisting{SQL/syntax/Pl_Sql/funcLocal.sql}
 
 \newpage
 
-\subsubsection*{\underline{Stand Alone Function}}
+\subsection*{\underline{Stand Alone Function}}
 
 \lstinputlisting{SQL/syntax/Pl_Sql/funcAlone.sql}
 
-\subsubsection*{\underline{Function Call}}
+\subsection*{\underline{Function Call}}
 
-\subsubsection*{\underline{Inside Begin End Block}}
+\subsection*{\underline{Inside Begin End Block}}
 
 \lstinputlisting{SQL/syntax/Pl_Sql/funcCall.sql}
 
-\subsubsection*{\underline{Call Directly With Exec}}
+\subsection*{\underline{Call Directly With Exec}}
 
 \lstinputlisting{SQL/syntax/Pl_Sql/exec.sql}
 
@@ -486,30 +498,30 @@ after/before of columnName on tableName
 
 
 \vspace{0.5cm}
-\subsection{Procedure}
+\section{Procedure}
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
-\subsubsection*{\underline{Procedure Definition}}
+\subsection*{\underline{Procedure Definition}}
 
-\subsubsection*{\underline{Local Procedure}}
+\subsection*{\underline{Local Procedure}}
 
 
 \lstinputlisting{SQL/syntax/Pl_Sql/proLocal.sql}
 
 
-\subsubsection*{\underline{Stand Alone Procedure}}
+\subsection*{\underline{Stand Alone Procedure}}
 
 \lstinputlisting{SQL/syntax/Pl_Sql/proAlone.sql}
 
 \newpage
-\subsubsection*{\underline{Procedure Call}}
+\subsection*{\underline{Procedure Call}}
 
-\subsubsection*{\underline{Inside Begin End Block}}
+\subsection*{\underline{Inside Begin End Block}}
 
 \lstinputlisting{SQL/syntax/Pl_Sql/proCall.sql}
 
-\subsubsection*{\underline{Call Directly With Exec}}
+\subsection*{\underline{Call Directly With Exec}}
 
 \lstinputlisting{SQL/syntax/Pl_Sql/proExec.sql}
 

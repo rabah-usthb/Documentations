@@ -9,25 +9,23 @@ declare
     .....
     var_n table.coln%TYPE;
 
-begin
-    -- Open the cursor
-    open cr;
 
-    -- load first line
-    fetch cr INTO var_1,var_2,...,var_n
+begin
+
+    open cr; -- Open the cursor
+
+    fetch cr INTO var_1,var_2,...,var_n -- load first line
     
-    -- Loop through the result set
-    while(cr%FOUND) loop
+    while(cr%FOUND) loop -- Loop through the result set
 
         --traitements
         
-        --loads next line 
-        fetch cr into var1,var2,...,varn
+        fetch cr into var1,var2,...,varn --loads next line 
         
     end loop;
 
-    -- Close the cursor
-    close cr;
+    close cr; -- Close the cursor
+
 end;
 /
  
