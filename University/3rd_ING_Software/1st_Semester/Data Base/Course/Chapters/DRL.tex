@@ -1,5 +1,17 @@
-\section{DRL Commands}
-\subsection{Select}
+\newpage 
+\null 
+\vspace{0.15cm}
+
+\begin{center} 
+\Huge{\textbf{\underline{Chapter 4: DRL Commands}}}
+\end{center}
+
+\vspace{0.25cm}
+
+\setcounter{section}{0}
+
+
+\section{Select}
 
 
 \begin{prettyBox}{Select}{myblue}
@@ -8,22 +20,26 @@ specific columns and tables to display, we can give aliases to tables and column
 , a Cartesian product occurs, meaning each row from one table is paired with each row from the other.
 \end{prettyBox}
 
-\subsubsection*{\underline{Syntax}}
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
 
 \lstinputlisting{SQL/syntax/DRL/select.sql}
 
-\subsection{Where}
+\vspace{0.35cm}
+\section{Where}
 
 \begin{prettyBox}{Where Clause}{myblue}
 The \textcolor{blue}{WHERE} clause is used to filter rows in a table when displaying data with the
 \textcolor{blue}{SELECT} command. Only rows that meet the specified condition(s) are shown in the result.
 \end{prettyBox}
 
-\subsubsection*{\underline{Syntax}}
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
 
 \lstinputlisting{SQL/syntax/DRL/where.sql}
 
-\subsection{Aggregation Functions}
+\vspace{0.35cm}
+\section{Aggregation Functions}
  \begin{prettyBox}{Aggregation Functions}{myblue}
    Aggregation functions perform calculations on a set of values and return a single result. They are commonly used in conjunction with the \textcolor{blue}{GROUP BY} clause to summarize data.
    \begin{itemize}
@@ -49,8 +65,8 @@ The \textcolor{blue}{WHERE} clause is used to filter rows in a table when displa
 \end{itemize}
 \end{prettyBox}
 
-\vspace{0.5cm}
-\subsection{Group By} 
+\vspace{0.35cm}
+\section{Group By} 
 \begin{prettyBox}{Group By}{myblue}
 To group rows that have the same value in a specified column, we use the \textcolor{blue}{GROUP BY} command.
 We can group by multiple columns; the order is important because it will first group by the first column. If there
@@ -58,13 +74,13 @@ are rows that have the same value in the first column but differ in the second c
 separate groups in the output. This allows us to apply aggregate functions to summarize data for each group.
 \end{prettyBox}
 
-\vspace{0.25cm}
-\subsubsection*{\underline{Syntax}}
-
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
 \lstinputlisting{SQL/syntax/DRL/groupby.sql}
 
 
-\subsection{Having}
+\vspace{0.35cm}
+\section{Having}
 \begin{prettyBox}{Having Clause}{myblue}
 
     Similar to \textcolor{blue}{WHERE}, which filters rows based on conditions, 
@@ -74,15 +90,13 @@ applied after the \textcolor{blue}{GROUP BY} clause. This allows you to filter a
 \end{prettyBox}
 
 
-\vspace{0.25cm}
-\subsubsection*{\underline{Syntax}}
-
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
 \lstinputlisting{SQL/syntax/DRL/having.sql}
 
 
-\vspace{0.5cm}
-\subsection{Order By}
-
+\vspace{0.35cm}
+\section{Order By}
 \begin{prettyBox}{Order By}{myblue}
 We can sort the results of a query in either ascending or descending order using \textcolor{blue}{ORDER BY}. 
 This can be applied to one or multiple columns. The order of the columns specified is important; the database
@@ -90,19 +104,18 @@ first sorts by the first column, and if there are rows with identical values in 
 rows by the next column, and so on. This allows for a prioritized sorting strategy.
 \end{prettyBox}
 
-\vspace{0.25cm}
-\subsubsection*{\underline{Syntax}}
-
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
 \lstinputlisting{SQL/syntax/DRL/orderby.sql}
 
-\vspace{0.5cm}
-\subsection{Joins}
+\vspace{0.35cm}
+\section{Joins}
 \begin{prettyBox}{Joins}{myblue}
 joins allow you to combine rows from two or more tables based on related columns (referenced key)
 \end{prettyBox}
 
 \vspace{0.25cm}
-\subsubsection{Inner Joins}
+\subsection{Inner Joins}
 \begin{prettyBox}{Inner Joins}{myblue}
 An Inner Join returns only the common rows between tables
 \begin{center}
@@ -121,7 +134,7 @@ An Inner Join returns only the common rows between tables
 \end{prettyBox}
 
 \vspace{0.25cm}
-\subsubsection{Left Join}
+\subsection{Left Join}
 
 \begin{prettyBox}{Left Join}{myblue}
 A Left Join returns all rows from the left table and the matched rows from the right table. If there’s no match,
@@ -139,7 +152,7 @@ NULL values are returned for columns from the right table.
 \end{prettyBox}
 
 \vspace{0.25cm}
-\subsubsection{Right Join}
+\subsection{Right Join}
 \begin{prettyBox}{Right Join}{myblue}
 A Right Join returns all rows from the right table and the matched rows from the left table. If there’s no match,
 NULL values are returned for columns from the left table.
@@ -156,7 +169,7 @@ NULL values are returned for columns from the left table.
 \end{prettyBox}
 
 \vspace{0.25cm}
-\subsubsection{Full Join}
+\subsection{Full Join}
 
 \begin{prettyBox}{Full Join}{myblue}
 A Full Join returns all rows when there is a match in either left or right table. If there is no match,
@@ -174,8 +187,7 @@ NULL values are returned for unmatched columns.
 \end{prettyBox}
 
 \vspace{0.25cm}
-\subsubsection*{ \textbf{Syntax}}
-
+\subsection*{ \textbf{Syntax}}
 \lstinputlisting{SQL/syntax/DRL/joins.sql}
 
 \vspace{0.25cm}
@@ -183,14 +195,14 @@ NULL values are returned for unmatched columns.
 We can have different types of joins in one select query
 \end{prettyBox}
 
-\vspace{0.5cm}
-\subsection{Operators}
+\vspace{0.35cm}
+\section{Operators}
 \begin{prettyBox}{Operators}{myblue}
 Operators are symbols that specify operations to be performed on operands. They can be categorized as follows:
 \end{prettyBox}
 
 \vspace{0.25cm}
-\subsubsection{Logical Operators}
+\subsection{Logical Operators}
 \begin{prettyBox}{Logical}{myblue}
 Used to combine conditions.
           \begin{itemize} 
@@ -201,7 +213,7 @@ Used to combine conditions.
 \end{prettyBox}
 
 \vspace{0.25cm}
-\subsubsection{Comparison Operators}
+\subsection{Comparison Operators}
 \begin{prettyBox}{Comparison}{myblue}
 Used to compare values.
     \begin{itemize}
@@ -217,7 +229,7 @@ Used to compare values.
 \end{prettyBox}
 
 \vspace{0.25cm}
-\subsubsection{Arithmetic Operators}
+\subsection{Arithmetic Operators}
 \begin{prettyBox}{Arithmetic}{myblue}
 Used for mathematical calculations.
     \begin{itemize} 
@@ -228,9 +240,47 @@ Used for mathematical calculations.
            \end{itemize}
 \end{prettyBox}
 
-\subsection{Query Execution Order}
+\vspace{0.25cm}
 
-\vspace{0.5cm}
+\subsection{EXISTS \& NOT EXISTS Operators}
+\begin{prettyBox}{Logical Operators}{myblue}
+    \textcolor{blue}{EXISTS} and \textcolor{blue}{NOT EXISTS} are special logical operators that are typically used in nested \textcolor{blue}{SELECT} queries:
+    \begin{itemize}
+    \item \textbf{EXISTS (subquery)}: 
+    The subquery is executed for each row in the outer query. If the subquery returns at least one row (evaluates to true), the corresponding row from the outer query is included in the result.
+
+    \item \textbf{NOT EXISTS (subquery)}: 
+    The subquery is executed for each row in the outer query. If the subquery does not return any rows (evaluates to false), the corresponding row from the outer query is included in the result.
+\end{itemize}
+\end{prettyBox}
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
+\lstinputlisting{SQL/syntax/DRL/exists.sql}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Note}{red}
+    \textcolor{blue}{SELECT} 1 , means that if a row is found it return 1 (true)
+\end{prettyBox}
+
+\vspace{0.35cm}
+\section{Fetch First N Rows}
+\begin{prettyBox}{Fetch First}{myblue}
+If we only want to retrieve the N first rows of the table we can use the \textcolor{blue}{FETCH}
+at the end of the \textcolor{blue}{SELECT} query.
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
+\lstinputlisting{SQL/syntax/DRL/fetch.sql}
+
+\newpage
+\null
+\vspace{3cm}
+
+\section{Query Execution Order}
+
+\vspace{1.5cm}
 \begin{center}
 \begin{tikzpicture}
     \draw[<-] (1,0) -- (20,0);

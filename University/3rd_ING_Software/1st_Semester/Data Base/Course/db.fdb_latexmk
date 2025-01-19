@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1737249766.02005 "db.tex" "db.pdf" "db" 1737249772.21812 0
+["pdflatex"] 1737254717.68022 "db.tex" "db.pdf" "db" 1737254722.1459 0
   "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -154,9 +154,9 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1731402230 8212896 b2d3a67526ed46e54375dd7fb267ffaf ""
   "Chapters/Admin.tex" 1737202500.30423 8118 8671a4b3c8737d98a4d8e65cf0fccecd ""
   "Chapters/Classification.tex" 1737234716.67297 2670 53d384f57b022cd9338702ed10ddb7aa ""
-  "Chapters/DDL.tex" 1737249764.93346 10030 7cd9d2e28b602038af8d59f48a0f6fd3 ""
-  "Chapters/DML.tex" 1732080611.44501 4897 3d11e9871ada7900de97d744641407f1 ""
-  "Chapters/DRL.tex" 1733177889.03255 8482 0afe24918a31416200ee383ab163d738 ""
+  "Chapters/DDL.tex" 1737254073.22091 10741 777f81687b36ce21ff092ec1d300eed2 ""
+  "Chapters/DML.tex" 1737254581.71789 5013 ff96b6ba0c03f63792e9e34702792701 ""
+  "Chapters/DRL.tex" 1737254715.71589 10025 14af7e947733e529841f8e75ff22a89b ""
   "Chapters/DataType.tex" 1737239172.62582 8500 2631333231ea6141f39f11139810c06b ""
   "Chapters/PlSql.tex" 1733178497.73931 16600 38b23c1bad03b4ebba5c95a8b7c9dce6 ""
   "Chapters/tab.tex" 1737216572.49777 6992 ccf0f0041efa6363d3e2756e0ca561db ""
@@ -213,6 +213,7 @@
   "SQL/syntax/DDL/colModification.sql" 1731743590.20754 188 1bd5bfb03b074cbe9b6154ba17ba10b4 ""
   "SQL/syntax/DDL/constraints.sql" 1731743862.30254 315 656d857123b2a9b337ebc886d7dde7aa ""
   "SQL/syntax/DDL/create.sql" 1731738767.45851 250 6349342b18ed37b15577e82956322c71 ""
+  "SQL/syntax/DDL/desc.sql" 1737254073.23491 17 a032d0393fd8f7d3bb2b5e94e9500bb4 ""
   "SQL/syntax/DDL/drop.sql" 1731742702.44353 22 7b7f3aed3cdffc78467e32771eb8d72d ""
   "SQL/syntax/DDL/inline.sql" 1737159560.54292 262 5d17f2acf0f11a83abd8cf330958f337 ""
   "SQL/syntax/DDL/outline.sql" 1737245534.3656 559 2ef4ace71c551c67a141a19c49ebf538 ""
@@ -222,6 +223,8 @@
   "SQL/syntax/DML/insert.sql" 1731747263.94256 70 7f27f13ab882376b6dceb47b2bd2e26f ""
   "SQL/syntax/DML/insertAll.sql" 1731747263.94856 262 d59f5386fcd67ec4839dfdafbda67f2e ""
   "SQL/syntax/DML/update.sql" 1731747697.78556 96 820184d4e5481438812988ad61e5515f ""
+  "SQL/syntax/DRL/exists.sql" 1737253369.95194 227 9678f1d627c45cd873b55f617c92b3fc ""
+  "SQL/syntax/DRL/fetch.sql" 1737253688.06092 75 08b854c404ef6d5e9b9c2e1036b820fb ""
   "SQL/syntax/DRL/groupby.sql" 1732086199.89005 104 7a65a127d5b35925e6ff1affddc0651d ""
   "SQL/syntax/DRL/having.sql" 1732086199.89505 125 71bbb825de4cfdcf91f15d9d18cc9e43 ""
   "SQL/syntax/DRL/joins.sql" 1732087622.43406 915 dd6ef45a7bb8e5cbb351854bee0fc018 ""
@@ -267,7 +270,7 @@
   "SQL/syntax/Views/comView.sql" 1732920831.8866 232 8a241d1b5338bcc196ca6d7a8eb81f11 ""
   "SQL/syntax/Views/exterView.sql" 1732920797.0046 65 8dc786d051a1505b4bb98d279156c773 ""
   "SQL/syntax/Views/matView.sql" 1732920831.8926 183 55b96c02a93d6c063945be1bd206172f ""
-  "db.aux" 1737249772.04046 20815 6c6120c389b4b1bee84cc00bba473f93 "pdflatex"
+  "db.aux" 1737254721.99689 21152 1ed976ee1286fb5c16a5b1b43a5507d8 "pdflatex"
   "db.tex" 1737195001.95349 2398 7e0d98d1101f28980f44c4e75f455904 ""
   (generated)
   "db.aux"

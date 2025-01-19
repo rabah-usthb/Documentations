@@ -281,6 +281,9 @@ INPUT SQL/syntax/DDL/constraints.sql
 INPUT ./SQL/syntax/DDL/truncate.sql
 INPUT ./SQL/syntax/DDL/truncate.sql
 INPUT SQL/syntax/DDL/truncate.sql
+INPUT ./SQL/syntax/DDL/desc.sql
+INPUT ./SQL/syntax/DDL/desc.sql
+INPUT SQL/syntax/DDL/desc.sql
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
@@ -353,6 +356,12 @@ INPUT SQL/syntax/DRL/orderby.sql
 INPUT ./SQL/syntax/DRL/joins.sql
 INPUT ./SQL/syntax/DRL/joins.sql
 INPUT SQL/syntax/DRL/joins.sql
+INPUT ./SQL/syntax/DRL/exists.sql
+INPUT ./SQL/syntax/DRL/exists.sql
+INPUT SQL/syntax/DRL/exists.sql
+INPUT ./SQL/syntax/DRL/fetch.sql
+INPUT ./SQL/syntax/DRL/fetch.sql
+INPUT SQL/syntax/DRL/fetch.sql
 INPUT ./Chapters/DML.tex
 INPUT ./Chapters/DML.tex
 INPUT Chapters/DML.tex

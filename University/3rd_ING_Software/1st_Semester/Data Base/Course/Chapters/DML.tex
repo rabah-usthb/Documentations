@@ -1,28 +1,39 @@
-\vspace{0.5cm}
-\section{DML Commands}
+\newpage 
+\null 
+\vspace{0.15cm}
 
-\subsection{Insert}
+\begin{center} 
+\Huge{\textbf{\underline{Chapter 5: DML Commands}}}
+\end{center}
+
+\vspace{0.25cm}
+
+\setcounter{section}{0}
+
+\vspace{0.35cm}
+
+\section{Insert}
 
 \begin{prettyBox}{Insert}{myblue}
 To insert rows into a table, we use the \textcolor{blue}{INSERT} command. We can insert one row at a time or multiple rows at once from the same or different tables using the \textcolor{blue}{ALL} keyword.
 \end{prettyBox}
 
-\subsubsection*{\underline{\textbf{Syntax}}}
+\subsection*{\underline{\textbf{Syntax}}}
 
-\subsubsection*{\textbf{\underline{Insert Once}}}
+\subsection*{\textbf{\underline{Insert Once}}}
 
 \lstinputlisting{SQL/syntax/DML/insert.sql}
 
-\subsubsection*{\textbf{\underline{Insert In Multiple Tables}}}
+\subsection*{\textbf{\underline{Insert In Multiple Tables}}}
 
 \lstinputlisting{SQL/syntax/DML/insertAll.sql}
 
 
-\subsubsection*{\underline{\textbf{Example}}}
+\subsection*{\underline{\textbf{Example}}}
 
-\subsubsection*{\underline{\textbf{Tables Definition}}}
+\subsection*{\underline{\textbf{Tables Definition}}}
 
-\subsubsection*{\underline{\textbf{Student Table}}}
+\subsection*{\underline{\textbf{Student Table}}}
 \begin{center}
 
  \renewcommand{\arraystretch}{1.5}
@@ -45,7 +56,7 @@ To insert rows into a table, we use the \textcolor{blue}{INSERT} command. We can
     \end{tabular}
 \end{center}
 
-\subsubsection*{\underline{\textbf{Section Table}}}
+\subsection*{\underline{\textbf{Section Table}}}
 
 \begin{center}
 
@@ -61,13 +72,13 @@ To insert rows into a table, we use the \textcolor{blue}{INSERT} command. We can
     \end{tabular}
 \end{center}
 
-\subsubsection*{\textbf{\underline{Insert Once}}}
+\subsection*{\textbf{\underline{Insert Once}}}
 
 \lstinputlisting{SQL/examples/DML/insertOnce.sql}
 
-\subsubsection*{\underline{\textbf{Tables After Insert}}}
+\subsection*{\underline{\textbf{Tables After Insert}}}
 
-\subsubsection*{\underline{\textbf{Section Table}}}
+\subsection*{\underline{\textbf{Section Table}}}
 
 \begin{center}
 
@@ -84,7 +95,7 @@ To insert rows into a table, we use the \textcolor{blue}{INSERT} command. We can
 \end{center}
 
 
-\subsubsection*{\underline{\textbf{Student Table}}}
+\subsection*{\underline{\textbf{Student Table}}}
 \begin{center}
 
  \renewcommand{\arraystretch}{1.5}
@@ -102,16 +113,16 @@ To insert rows into a table, we use the \textcolor{blue}{INSERT} command. We can
 \end{center}
 
 
+\newpage
 
 
-
-\subsubsection*{\textbf{\underline{Insert In Multiple Tables}}}
+\subsection*{\textbf{\underline{Insert In Multiple Tables}}}
 
 \lstinputlisting{SQL/examples/DML/insertAll.sql}
 
-\subsubsection*{\underline{\textbf{Tables After Insert}}}
+\subsection*{\underline{\textbf{Tables After Insert}}}
 
-\subsubsection*{\underline{\textbf{Section Table}}}
+\subsection*{\underline{\textbf{Section Table}}}
 
 \begin{center}
 
@@ -131,7 +142,7 @@ To insert rows into a table, we use the \textcolor{blue}{INSERT} command. We can
     \end{tabular}
 \end{center}
 
-\subsubsection*{\underline{\textbf{Student Table}}}
+\subsection*{\underline{\textbf{Student Table}}}
 \begin{center}
 
  \renewcommand{\arraystretch}{1.5}
@@ -155,26 +166,27 @@ To insert rows into a table, we use the \textcolor{blue}{INSERT} command. We can
 \end{center}
 
 
-
+\vspace{0.25cm}
 
 \begin{prettyBox}{Note}{red}
 We don't have to precise columns names when inserting , it's optional it just makes the code more readable
 \end{prettyBox}
 
-\subsection{Update}
+\vspace{0.25cm}
+\section{Update}
 \begin{prettyBox}{Update}{myblue}
 To change the values of some rows in a table, we use the \textcolor{blue}{UPDATE} command, accompanied by the \textcolor{blue}{WHERE} clause to update only specific rows.
 \end{prettyBox}
 
-\subsubsection*{\underline{\textbf{Syntax}}}
+\subsection*{\underline{\textbf{Syntax}}}
 
 \lstinputlisting{SQL/syntax/DML/update.sql}
-\subsection{Delete} 
+\section{Delete} 
 
 \begin{prettyBox}{Delete}{myblue}
-To delete rows from a table, we use the \textcolor{blue}{DELETE} command, accompanied by the \textcolor{blue}{WHERE} clause to delete specific rows. Although it is possible to delete all rows using \textcolor{blue}{DELETE}, it is better to use \textcolor{blue}{TRUNCATE} for that purpose due to performance considerations.
+To delete rows from` a table, we use the \textcolor{blue}{DELETE} command, accompanied by the \textcolor{blue}{WHERE} clause to delete specific rows. Although it is possible to delete all rows using \textcolor{blue}{DELETE}, it is better to use \textcolor{blue}{TRUNCATE} for that purpose due to performance considerations.
 \end{prettyBox}
 
-\subsubsection*{\underline{\textbf{Syntax}}}
+\subsection*{\underline{\textbf{Syntax}}}
 
 \lstinputlisting{SQL/syntax/DML/delete.sql}

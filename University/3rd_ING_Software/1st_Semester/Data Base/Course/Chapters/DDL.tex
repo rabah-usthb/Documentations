@@ -179,6 +179,28 @@ However, with the outline method, each constraint needs to be specified individu
 
 \lstinputlisting{SQL/syntax/DDL/truncate.sql}
 
+\vspace{0.35cm}
+\section{Describe Table}
+\begin{prettyBox}{Describe}{myblue}
+If we want an overview over the definition of the table we can use the 
+\textcolor{blue}{DESC} command that will retrieve name of columns , their data type
+and if they are null 
+\end{prettyBox}
+
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
+
+\lstinputlisting{SQL/syntax/DDL/desc.sql}
+
+\vspace{0.25cm}
+
+
+\begin{prettyBox}{Note}{red}
+The Not Null column in the output of \textcolor{blue}{DESC} is not always precise. 
+If a NOT NULL constraint is applied to a column using the \textcolor{blue}{CONSTRAINT} keyword, 
+the column will not display Not Null in the output, even though the constraint prevents NULL values.
+\end{prettyBox}
+
 \newpage
 
 \subsection*{\underline{Example :}}
