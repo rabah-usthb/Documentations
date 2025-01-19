@@ -1,10 +1,18 @@
-\section{Data Types}
+\begin{center} 
+    \Huge{\textbf{\underline{Chapter 1: Data Types \& Functions}}}
+    \end{center}
+
+\vspace{0.25cm}
 
 
-\begin{prettyBox}{Data Type}{myblue}
+
+\section{Data Type}
+
+\begin{prettyBox}{Definition}{myblue}
 Data types enforce integrity constraints on columns in a database. There are many data types
 available, but we will focus on the most commonly used ones.
 \end{prettyBox}
+
 
 \subsection{Number}
 
@@ -55,7 +63,6 @@ s can be \(>\) p , i just didn't want to include that case as it can be confusin
 \vspace{0.5cm}
 
 \subsection{Date}
-
 \begin{prettyBox}{Date}{myblue}
 Date is a data type that stores both the date and the time it accept a wide range of format
 and has many function  
@@ -90,8 +97,38 @@ and has many function
 \end{center}
 
 
+
 \vspace{0.5cm}
-\subsubsection{Function}
+\subsection{Char}
+
+\begin{prettyBox}{Char}{myblue}
+Char(len) stores string of len size , if the inputed string is smaller than the definition
+oracle will pad it with space char , len \(\in\)[1,2000]
+\end{prettyBox}
+
+\vspace{0.25cm}
+\subsection{VARCHAR2}
+
+\begin{prettyBox}{Varchar2}{myblue}
+Varchar2(len) stores string of len size , if the inputed string is smaller than the definition
+oracle will store it without any padding , in older version len \(\in\)[1,4000] but in more recent
+version len \(\in\)[1,32767] 
+\end{prettyBox}
+
+
+\vspace{1cm}
+\begin{prettyBox}{Note}{red}
+  \textbf{\underline{Difference between CHAR and VARCHAR2}:} CHAR will take up the full specified size, even if not all space is used, and will pad the value with spaces until it reaches the full size. 
+In contrast, VARCHAR2 only stores the exact amount of space needed for the data, without padding with spaces.
+
+\vspace{0.25cm}
+\underline{\textbf{Strings are 1-based}(first index is 1)}
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+
+\section{Function}
 
 \vspace{0.25cm}
 \begin{center}
@@ -120,35 +157,16 @@ and has many function
 \end{tabular}
 \end{center}
 
+\vspace{0.25cm}
 \begin{prettyBox}{Note}{red}
 When inserting a date in a table using TO\_DATE it doesn't matter which format we use , we can use any format we
 want and the same thing is valid when needing to print a date usin TO\_CHAR , because oracle stores the data object not
 the format in insert
 \end{prettyBox}
 
-\vspace{0.5cm}
-\subsection{Char}
-
-\begin{prettyBox}{Char}{myblue}
-Char(len) stores string of len size , if the inputed string is smaller than the definition
-oracle will pad it with space char , len \(\in\)[1,2000]
-\end{prettyBox}
-
-\vspace{0.25cm}
-\subsection{VARCHAR2}
-
-\begin{prettyBox}{Varchar2}{myblue}
-Varchar2(len) stores string of len size , if the inputed string is smaller than the definition
-oracle will store it without any padding , in older version len \(\in\)[1,4000] but in more recent
-version len \(\in\)[1,32767] 
-\end{prettyBox}
 
 
-
-\vspace{0.5cm}
-\subsubsection{Function}
-
-\vspace{0.25cm}
+\vspace{0.45cm}
 \begin{center}
  
  \renewcommand{\arraystretch}{1.5}
@@ -221,12 +239,4 @@ version len \(\in\)[1,32767]
 
 \end{center}
 
-\vspace{1cm}
-\begin{prettyBox}{Note}{red}
-  \textbf{\underline{Difference between CHAR and VARCHAR2}:} CHAR will take up the full specified size, even if not all space is used, and will pad the value with spaces until it reaches the full size. 
-In contrast, VARCHAR2 only stores the exact amount of space needed for the data, without padding with spaces.
-
-\vspace{0.25cm}
-\underline{\textbf{Strings are 1-based}(first index is 1)}
-\end{prettyBox}
 

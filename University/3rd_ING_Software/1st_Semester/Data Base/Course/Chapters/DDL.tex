@@ -1,6 +1,17 @@
-\newpage
-\section{DDL Commands}
-\subsection{Create Table}
+\newpage 
+\null 
+\vspace{0.15cm}
+
+\begin{center} 
+\Huge{\textbf{\underline{Chapter 3: DDL Commands}}}
+\end{center}
+
+\vspace{0.25cm}
+
+\setcounter{section}{0}
+
+
+\section{Create Table}
 \begin{prettyBox}{Table Creation}{myblue}
     To create a table in oracle sql we use the \textcolor{blue}{CREATE} command , we just have to give the table a name and define each column known as attribut
 by giving each of them a name , a dataType and an optional constraint that can be added in same line of
@@ -8,18 +19,13 @@ attribut definition(in-line method) or on its own line(out-of-line method) , we 
 \end{prettyBox}
 
 \vspace{0.5cm}
-\subsubsection*{\underline{Syntax :}}
+\subsection*{\underline{Syntax :}}
 
 \lstinputlisting{SQL/syntax/DDL/create.sql}
 
 
 \vspace{0.5cm}
-\subsubsection*{Example :} let's create student table 
-
-\lstinputlisting{SQL/examples/DDL/createStudent.sql}
-
-\vspace{0.5cm}
-\subsection{Table Constraints}
+\section{Table Constraints}
 
 \begin{prettyBox}{Constraints}{myblue}
 Constraints are conditions set on the columns (attributes) of a table to ensure data integrity and consistency. Constraints can be defined:
@@ -31,7 +37,7 @@ Constraints are conditions set on the columns (attributes) of a table to ensure 
 There are two types of constraints: static and dynamic.
 \end{prettyBox}
 
-\subsubsection{\underline{Static Constraints}}
+\subsection{\underline{Static Constraints}}
 
 \vspace{0.25cm}
 \begin{prettyBox}{Static}{myblue}
@@ -50,7 +56,7 @@ that contain the matching foreign key are also deleted.
 \end{prettyBox}
 
 \vspace{0.5cm}
-\subsubsection{\underline{Dynamic Constraints}} 
+\subsection{\underline{Dynamic Constraints}} 
 
 \vspace{0.25cm}
 \begin{prettyBox}{Dynamic}{myblue}
@@ -61,52 +67,22 @@ a defined event is triggered
 \end{prettyBox}
 
 \vspace{0.5cm}
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 \vspace{0.25cm}
 
-\subsubsection*{\underline{In-Line Method}}
+\subsection*{\underline{In-Line Method}}
 
 \vspace{0.25cm}
 \lstinputlisting{SQL/syntax/DDL/inline.sql}
 \newpage
 
-\subsubsection*{\underline{Out-Of-Line Method}}
+\subsection*{\underline{Out-Of-Line Method}}
 
 \vspace{0.25cm}
 \lstinputlisting{SQL/syntax/DDL/outline.sql}
 
 \vspace{0.5cm}
-\subsubsection*{\underline{Example :}}
-
-\vspace{0.25cm}
-let's create a new table section and recreate the student table with constraints\\\\
-\textbf{\underline{Creating Section Table}}\\\\
-\textbf{\underline{In-Line Method}}
-
-\vspace{0.25cm}
-\lstinputlisting{SQL/examples/DDL/sectionInline.sql}
-
-\vspace{0.5cm}
-\textbf{\underline{Out-Of-Line Method}}
-
-\vspace{0.25cm}
-\lstinputlisting{SQL/examples/DDL/sectionOutline.sql}
-
-
-\vspace{1cm}
-\newpage
-\textbf{\underline{Create Student Table}}\\\\
-\textbf{\underline{In-Line Method}}
-
-\vspace{0.25cm}
-\lstinputlisting{SQL/examples/DDL/studentInline.sql}
-
-\vspace{0.5cm}
-\textbf{\underline{Out-Of-Line Mehtod}}
-
-\vspace{0.25cm}
-\lstinputlisting{SQL/examples/DDL/studentOutline.sql}
 
 \vspace{1cm}
 \begin{prettyBox}{Naming Convention Of Constraints}{myblue}
@@ -120,6 +96,7 @@ let's create a new table section and recreate the student table with constraints
     \end{itemize}   
 \end{prettyBox}
 
+\vspace{0.35cm}
 \begin{prettyBox}{Note}{red}
 
     \textbf{\underline{Constraint Name Must Be Unique}}
@@ -136,36 +113,30 @@ However, with the outline method, each constraint needs to be specified individu
 
 \end{prettyBox}
 
-
-\subsection{Drop Table}
+\vspace{0.35cm}
+\section{Drop Table}
 \begin{prettyBox}{Drop}{myblue}
     We can remove a table using the \textcolor{blue}{DROP} command
 \end{prettyBox}
 
-\subsubsection*{\underline{Syntax}}
+\newpage
+\subsection*{\underline{Syntax}}
 
 \lstinputlisting{SQL/syntax/DDL/drop.sql}
 
-\subsubsection*{\underline{Example}}
-lets delete the section table we created 
-
-\lstinputlisting{SQL/examples/DDL/sectionDrop.sql}
-
-\subsection{Rename Table}
+\vspace{0.35cm}
+\section{Rename Table}
 
 \begin{prettyBox}{Rename}{myblue}
     We can rename tables by using the \textcolor{blue}{RENAME} command 
 \end{prettyBox}
 
-\subsubsection*{\underline{Syntax}}
+\subsection*{\underline{Syntax}}
 
 \lstinputlisting{SQL/syntax/DDL/rename.sql}
 
-\subsubsection*{\underline{Example}}
-
-\lstinputlisting{SQL/examples/DDL/sectionRename.sql}
-
-\subsection{Alter Table}
+\vspace{0.35cm}
+\section{Alter Table}
 \begin{prettyBox}{Alter}{myblue}
     The \textcolor{blue}{ALTER} command is a versatile command that allows us to change various aspects of a table:
 \begin{itemize}
@@ -186,29 +157,143 @@ lets delete the section table we created
 \end{itemize}
 \end{prettyBox}
 
-\subsubsection*{\underline{Syntax}}
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
 
-\subsubsection*{Columns Modification}
+\subsection*{Columns Modification}
 
 \lstinputlisting{SQL/syntax/DDL/colModification.sql}
 
-\subsubsection*{Constraints}
+\subsection*{Constraints}
 
 \lstinputlisting{SQL/syntax/DDL/constraints.sql}
 
-\subsubsection*{\underline{Example}}
-\subsection{Truncate Table}
+\vspace{0.35cm}
+\section{Truncate Table}
 \begin{prettyBox}{Truncate}{myblue}
     To remove all rows from a table efficiently we use the \textcolor{blue}{TRUNCATE} command
 \end{prettyBox}
 
-\subsubsection*{\underline{Syntax}}
+\vspace{0.15cm}
+\subsection*{\underline{Syntax}}
 
 \lstinputlisting{SQL/syntax/DDL/truncate.sql}
 
+\newpage
 
-\subsubsection*{\underline{Example}}
-lets delete all records from student table
+\subsection*{\underline{Example :}}
+let the tables definition be :\\[0.2cm]
+\textbf{Rank} (\underline{\textbf{numRank}},nameRank)\\[0.1cm]
+\textbf{Exam} (\underline{\textbf{numExam}},nameExam,dateExam,dateResult)\\[0.1cm]
+\textbf{Participant} (\underline{\textbf{numParticipant}},firstNameParticipant,lastNameParticipant,numRank*)\\[0.1cm]
+\textbf{Result} (\underline{\textbf{numParticipant*,numExam*}},grade)
 
-\lstinputlisting{SQL/examples/DDL/studentTruncate.sql}
+\vspace{0.35cm}
+
+\begin{prettyBox}{Note}{red}
+\begin{itemize}
+    \item underline means primary key.
+    \item asterix(*) means foreign key.
+    \item domain value of nameRank is \{'TS','ING SI','Main ING'\}.
+    \item domain value of nameExam is \{'BDD','SI','GL'\}.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.35cm}
+\begin{enumerate}
+    \item Create the tables.
+    \item Delete \textbf{dateExam} column in the \textbf{Exam} table. verify its deletion.
+    \item Add \textbf{not null} constraint to the following columns :
+        \begin{itemize}
+            \item \textbf{nameRank} in \textbf{Rank} table.
+            \item \textbf{firstNameParticipant} and \textbf{lastNameParticipant} in \textbf{Participant} table.
+            \item \textbf{nameExam} in \textbf{Exam} table.
+        \end{itemize}
+    \item Change size of \textbf{nameRank} (add,reduce)
+    \item Add back the \textbf{dateExam} column,verify it.
+    \item Rename  \textbf{firstNameParticipant} and \textbf{lastNameParticipant} to \textbf{firstNameP} , \textbf{lastNameP}.
+    \item Change the domain value of \textbf{nameRank} to \{'TS','ING SI','ING SYS','Main ING'\}.
+    \item Change the domain value of  \textbf{nameExam} to \{'BDD','SI','GL','SYS','General Culture'\}.
+    \item Add a constraint so that the \textbf{dateExam} is \(<\) to \textbf{dateResult}.
+    \item Change the name of the table \textbf{Exam} to \textbf{Finals}.
+    \item Disactivate the date constraint.
+    \item Activate the date constraint back again.
+    \item Try To Delete the \textbf{Finals} table what do you notice?
+\end{enumerate}
+
+\vspace{0.35cm}
+\subsection*{\underline{1 Table Creation}}
+\subsection*{1.1 Exam Table}
+\lstinputlisting{SQL/examples/DDL/ex1.1.sql}
+
+\subsection*{1.2 Rank Table}
+\lstinputlisting{SQL/examples/DDL/ex1.2.sql}
+
+\newpage
+\subsection*{1.3 Participant Table}
+\lstinputlisting{SQL/examples/DDL/ex1.3.sql}
+
+\subsection*{1.4 Result Table}
+\lstinputlisting{SQL/examples/DDL/ex1.4.sql}
+
+\vspace{0.35cm}
+\subsection*{\underline{2 Dropping dateExam Column}}
+\lstinputlisting{SQL/examples/DDL/ex2.sql}
+
+\vspace{0.35cm}
+\subsection*{\underline{3 Not Null Constraint}}
+\lstinputlisting{SQL/examples/DDL/ex3.sql}
+
+\vspace{0.35cm}
+\subsection*{\underline{4 Changing Size}}
+\lstinputlisting{SQL/examples/DDL/ex4.sql}
+
+\vspace{0.35cm}
+\subsection*{\underline{5 Add dateExam Column}}
+\lstinputlisting{SQL/examples/DDL/ex5.sql}
+
+\vspace{0.35cm}
+\subsection*{\underline{6 Changing Column Name}}
+\lstinputlisting{SQL/examples/DDL/ex6.sql}
+
+\vspace{0.35cm}
+\subsection*{\underline{7-8 Change Domain Value}}
+\subsection*{\underline{7}}
+\lstinputlisting{SQL/examples/DDL/ex7.sql}
+\vspace{0.15cm}
+
+\subsection*{\underline{8}}
+\lstinputlisting{SQL/examples/DDL/ex8.sql}
+
+\vspace{0.35cm}
+
+\subsection*{\underline{9 Date Constraint}}
+\lstinputlisting{SQL/examples/DDL/ex9.sql}
+\vspace{0.35cm}
+
+\subsection*{\underline{10 Disactivate Date Constraint}}
+\lstinputlisting{SQL/examples/DDL/ex10.sql}
+\vspace{0.35cm}
+
+\subsection*{\underline{11 Activate Date Constraint}}
+\lstinputlisting{SQL/examples/DDL/ex11.sql}
+\vspace{0.35cm}
+
+\subsection*{\underline{12 Rename Table}}
+\lstinputlisting{SQL/examples/DDL/ex12.sql}
+\vspace{0.35cm}
+
+\subsection*{\underline{13 Dropping Table}}
+\lstinputlisting{SQL/examples/DDL/ex13.sql}
+\vspace{0.15cm}
+
+\begin{prettyBox}{Note}{red}
+It will result into an error because finals is been referenced by other tables.
+\begin{center}
+    ORA-02449: unique/primary keys in table referenced by foreign keys
+\end{center}   
+\end{prettyBox}
+
+
+
 
