@@ -1,0 +1,76 @@
+\begin{center}
+    \Huge{\textbf{\underline{Chapter 1: Introduction}}}
+\end{center}
+
+\vspace{0.35cm}
+
+
+\section{Numerical Algorithm (Numerical Method)}
+\begin{prettyBox}{Numerical Algorithm}{mygreen}
+A Numerical Algorithm provides an approximate solution and is used to solve problems involving large amounts of data. The algorithm is based on a well-defined iterative sequence, starting with an initial solution that progressively converges toward the desired result with each iteration.
+
+\[
+\begin{cases}
+    \hspace{0.1cm}(U_n) & \hspace{-0.1cm}n \geq 0 \\[0.15cm]
+    \hspace{0.1cm}S_0 & \hspace{-0.3cm} \text{Initial Solution (Starting Point)}
+\end{cases}
+\]
+\end{prettyBox}
+\vspace{0.35cm}
+
+\section{Convergence Speed (Order of Convergence)}
+\begin{prettyBox}{Convergence Speed}{mygreen}
+The number of iterations required to find the solution we are looking for:
+\begin{itemize}
+    \item Linear Order: 1 (slow)
+    \item Quadratic Order: 2 (faster)
+    \item \(>>\) 2 (very fast)
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\section{Interpolation}
+\begin{prettyBox}{Interpolation}{mygreen}
+Estimates the value between two known points of a function allowing for a smoother representation of the function's behavior.
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\section{Approximation}
+\begin{prettyBox}{Approximation}{mygreen}
+Approximates the formula of a function from a set of values, with the objective of finding a simpler function that represents the general trend of the data, even if it doesn't pass through every point exactly.
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\section{Error}
+\begin{prettyBox}{Error}{mygreen}
+An error represents the difference between the actual solution and the computed result. It indicates how far we are from the true solution. There are two cases:
+\begin{itemize}
+    \item \textbf{Evaluation}: We know the exact solution, so we can directly calculate the error:
+        \[   \boxed{E_r = |\overline{x} - x_{\text{app}}|} \]
+    \item \textbf{Estimation}: We don't know the exact solution, so we only have an estimate of the error, based on the output of the algorithm:
+        \[      \boxed{E_r = |\overline{x} - x_{\text{app}}| \leq \text{Algo}} \]
+\end{itemize}
+
+Where:
+\begin{itemize}
+    \item \(E_r\) : The error value.
+    \item \(\overline{x}\) : The exact solution.
+    \item \(x_{\text{app}}\) : The approximate solution.
+    \item Algo : The error value found by the algorithm.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\section{Optimization}
+\begin{prettyBox}{Optimization}{mygreen}
+Optimization in numerical algorithms refers to two things:
+\begin{itemize}
+    \item \textbf{Error}: We aim to minimize the error in order to achieve the most accurate approximate solution.
+    \item \textbf{Convergence Speed}: The higher the order of convergence, the less time the algorithm will take to converge to the solution we are looking for.
+\end{itemize}
+\end{prettyBox}
+
