@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1738206936.92752 "CM.tex" "CM.pdf" "CM" 1738206938.21026 0
+["pdflatex"] 1738473860.19418 "CM.tex" "CM.pdf" "CM" 1738473861.68614 0
   "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -143,13 +143,20 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1732594860.33734 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1731402230 8212896 b2d3a67526ed46e54375dd7fb267ffaf ""
-  "CM.aux" 1738206938.0982 815 916d095a94f8ae90b8c1befffd059f4d "pdflatex"
+  "CM.aux" 1738473861.56228 1235 382a047381aac6225beee45dd48773e1 "pdflatex"
   "CM.tex" 1738204870.23504 2276 170fcefc215537b28020540f8b31046c ""
+  "Chapters/Diagram/Intro/compile.drawio.pdf" 1738458196.30241 35001 724f889345a5eb7cfaa631f1114aaeae ""
+  "Chapters/Diagram/Intro/inter.drawio.pdf" 1738461239.1733 36220 c8f1570f7538e98525450fd7d6668a8e ""
+  "Chapters/Examples/Intro/dict.drawio.pdf" 1738469741.46396 24292 40ce1eac93fd1051082058270e62ce3d ""
   "Chapters/Examples/Intro/ex1.drawio.pdf" 1738124310.66732 23475 385e4b9abacc89bfa8933af718cb7f19 ""
   "Chapters/Examples/Intro/ex2.drawio.pdf" 1738124326.57427 22020 a4b39b424b3f72506723b165c0f1f2d1 ""
   "Chapters/Examples/Intro/ex3.drawio.pdf" 1738127169.04702 29944 926ad1ebd748161b724ce2b7330e14eb ""
+  "Chapters/Examples/Intro/ex4.1.drawio.pdf" 1738469760.96896 16112 536c732fbee32d760318abceb4b4e4e8 ""
+  "Chapters/Examples/Intro/ex4.2.drawio.pdf" 1738469747.56396 25022 4f6166c8acc61b2931bbfbba1c2e5763 ""
+  "Chapters/Examples/Intro/ex4.3.drawio.pdf" 1738469781.79096 27455 ed7021ed2ef5f7b04a086270d0baf93e ""
+  "Chapters/Examples/Intro/ex4.4.drawio.pdf" 1738470174.60799 28499 5051727b2eeae8a1c752a29709b43e43 ""
   "Chapters/Examples/Intro/sum.drawio.pdf" 1738127190.20159 25930 e103e347d078204e5342e49efafd1e04 ""
-  "Chapters/Introduction.tex" 1738206935.7892 3868 026d2f9d440fef2ffda0f8e325990610 ""
+  "Chapters/Introduction.tex" 1738473859.05228 7696 cb78a4daa62d3358e8ed3cb5f74bf58a ""
   (generated)
   "CM.aux"
   "CM.log"

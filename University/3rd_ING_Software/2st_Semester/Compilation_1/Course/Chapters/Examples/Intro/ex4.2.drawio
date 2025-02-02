@@ -1,0 +1,64 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9">
+  <diagram name="Page-1" id="Dtm4TxNRhYCn_O1fq_cj">
+    <mxGraphModel dx="678" dy="438" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="570" pageHeight="940" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="z5bAnQFuU-d44VcSpd-Z-1" value="" style="ellipse;shape=doubleEllipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="280" y="120" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z5bAnQFuU-d44VcSpd-Z-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="110" y="120" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z5bAnQFuU-d44VcSpd-Z-3" value="" style="endArrow=classic;html=1;rounded=0;bendable=0;shape=flexArrow;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="z5bAnQFuU-d44VcSpd-Z-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" y="150" as="sourcePoint" />
+            <mxPoint x="90" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z5bAnQFuU-d44VcSpd-Z-4" value="" style="endArrow=open;html=1;rounded=0;bendable=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=0;" edge="1" parent="1" source="z5bAnQFuU-d44VcSpd-Z-2" target="z5bAnQFuU-d44VcSpd-Z-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="200" as="sourcePoint" />
+            <mxPoint x="260" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z5bAnQFuU-d44VcSpd-Z-5" value="" style="endArrow=open;html=1;rounded=0;endFill=0;exitX=0.928;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.926;entryY=0.243;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="z5bAnQFuU-d44VcSpd-Z-1" target="z5bAnQFuU-d44VcSpd-Z-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="165" as="sourcePoint" />
+            <mxPoint x="340" y="135" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="165" />
+              <mxPoint x="370" y="165" />
+              <mxPoint x="370" y="145" />
+              <mxPoint x="370" y="135" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z5bAnQFuU-d44VcSpd-Z-6" value="0/../9" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="130" width="30" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="z5bAnQFuU-d44VcSpd-Z-7" value="0/../9" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="375" y="140" width="30" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="z5bAnQFuU-d44VcSpd-Z-8" value="100" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="50" width="30" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="z5bAnQFuU-d44VcSpd-Z-9" value="" style="endArrow=classic;html=1;rounded=0;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;bendable=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="224.84000000000006" y="70" as="sourcePoint" />
+            <mxPoint x="224.66000000000005" y="102.5" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="224.66000000000005" y="82.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z5bAnQFuU-d44VcSpd-Z-10" value="" style="sketch=0;html=1;aspect=fixed;strokeColor=none;shadow=0;align=center;fillColor=#2D9C5E;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;shape=mxgraph.gcp2.check" vertex="1" parent="1">
+          <mxGeometry x="303.75" y="90" width="12.5" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="z5bAnQFuU-d44VcSpd-Z-12" value="Not Stuck in a state ,&lt;div&gt;and finished in a final state&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="325" y="80" width="130" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
