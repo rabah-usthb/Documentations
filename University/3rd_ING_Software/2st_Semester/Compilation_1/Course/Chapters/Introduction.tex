@@ -135,16 +135,15 @@ is considered correct if it reaches an end state with no blockage in the process
 
 \vspace{0.85cm}
 
-
 \begin{prettyBox}{Note}{red}
-Never loop on the start state, as this will always cause undesired behavior, potentially leading to unexpected results or halting the automaton from transitioning to the next valid state.
+Never loop on the start state, as this can lead to undesired behavior and unexpected results. 
+Additionally, such a loop could cause the automaton to recognize the empty word \(\epsilon\), which does not exist in practice.
 \end{prettyBox}
 
 
 \subsection{Syntactic Analysis (Parsing)}
 \begin{prettyBox}{Syntactic Analysis}{myblue}
-Syntactic analysis checks if the order of tokens is correct and adheres to the required format (using automata or regular expressions).  
-There are two methods:  
+Syntactic analysis checks if the order of the tokens are correct and adheres to the required format. There are two methods:  
 \begin{itemize}
     \item Descending methods  
     \item Ascending methods  
@@ -179,7 +178,7 @@ This phase ensures the code is logically correct and adheres to the language's r
 
 \begin{itemize}
     \item \textbf{Generation of Intermediate Code}: 
-    Produces a simplified, platform-independent representation of the program. This step is crucial for optimizing the code and converting it into machine code later , it has many types :
+    Produces a simplified, platform-independent representation of the program from the sentences (syntatic entities). This step is crucial for optimizing the code and converting it into machine code later , it has many types :
     \begin{itemize}
         \item \textbf{Quadruple Form}
         \item \textbf{Postfix and Prefix Forms ... etc}
@@ -194,7 +193,7 @@ This phase ensures the code is logically correct and adheres to the language's r
 \subsection{Object Code Generation}
 
 \begin{prettyBox}{Object Code Generation}{myblue}
-The final step of compilation, where the object code is generated to execute the program.
+The final step of compilation, where the object code is generated from the intermediate code to execute the program.
 This is the only step in the compilation process that we will not cover in this course.
 \end{prettyBox}
 

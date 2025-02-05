@@ -1,0 +1,145 @@
+
+\newpage
+\null
+
+\begin{center}
+    \Huge{\textbf{\underline{Chapter 2: Lexical Analysis}}}
+\end{center}
+
+\setcounter{section}{0}
+
+\vspace{0.35cm}
+
+
+\section{Lexical Analysis}
+
+\begin{prettyBox}{Lexical Analysis}{myblue}
+The first step of compilation takes the source code as input,  
+representing a sequence of characters separated or not by  
+spaces and new lines. It consists of:  
+
+\begin{itemize}
+    \item Fetching all lexical entities (tokens) and verifying  
+        whether they are part of the language. The tokens are then  
+        classified as constants, identifiers, keywords, or separators.  
+    \item Removing all extra spaces and comments.  
+    \item Producing a chaine of code (sequence of tokens) that will be used in syntactic analysis.  
+    \item Initializing the \textbf{symbol table} (dictionary) by inserting  
+        the retrieved tokens and their corresponding codes after verification (tokens must be unique (no repetition)). The symbol table will be updated  
+        as we progress through the next compilation steps.  
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.75cm}
+\section{Notes}
+
+\begin{prettyBox}{Optimization}{red}
+
+\begin{itemize}
+    \item In real-life implementations, the symbol table is often divided into sub-tables  
+        based on token types improving search speed  
+        and optimizes memory usage.  
+    \item We can also prefill the table of keywords and separators since they are known
+in advance. This simplifies the automaton, as it no longer needs states to recognize keywords and separators , it can directly compare tokens to the prefilled tables.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+
+
+\begin{prettyBox}{Reserved Words \& Keywords}{red}
+\begin{itemize}
+\item \textbf{Keywords :} are special tokens in a programming language that have predefined semantic meanings, such as data types, control flow structures, or loop constructs (e.g., `if`, `while`, `int`, `return`). These words are integral to the syntax of the language.
+\item \textbf{Reserved words :} are tokens that cannot be used as identifiers (like variable or function names) because they are reserved for the language's future use or for language-specific functionality.
+\item In most compilers, \textbf{all keywords are reserved words}. However, some non-standard or unconventional compilers may allow certain reserved words to be used as identifiers. For example, in these compilers, you might be able to write code like `int if = 5;`, which is not allowed in standard compilers.
+\end{itemize}
+\end{prettyBox}
+
+\newpage
+\null
+
+
+\begin{prettyBox}{Two Schools of Thought}{red}
+Imagine encountering \(><\):  
+\begin{itemize}
+    \item \textbf{Method 1}: Considers \(><\) as a single token and checks it against the prefilled separator table. Since no match is found, it is classified as a lexical error.  
+    \item \textbf{Method 2}: Recognizes \(>\) and \(<\) as separate, valid tokens but considers their order incorrect, making it a syntactic error. This approach is more practical , and used
+        in most compilers.  
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.5cm}
+\section{Implementation of Lexical Analysis}  
+\begin{prettyBox}{Implementation}{myblue}  
+Lexical analysis utilizes a finite deterministic automaton to break the source code into  
+lexical entities (tokens) and verify their validity within the language.  
+To implement the automaton, we need to:  
+\begin{itemize}  
+    \item Choose a suitable data structure to represent the automaton in memory.  
+    \item Develop an algorithm for tokenizing the source code and validating tokens.  
+\end{itemize}  
+\end{prettyBox}  
+
+\vspace{0.5cm}
+
+\subsection{Representation of Automaton}
+
+\begin{prettyBox}{Representation}{myblue}
+\begin{itemize}
+    \item The automaton will be represented by a transition matrix, where each row corresponds to a state, and each column represents a letter.
+    \item An array will be used to store the final states.
+    \item A constant will define the initial state.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.75cm}
+
+\begin{prettyBox}{Reminder}{red}
+    \begin{itemize}
+        \item \textbf{Deterministic:} At most one transition is possible from state \( e_0 \) to \( e_1 \) for a given letter \( l_0 \).  
+        \item \textbf{Finite:} The automaton has a limited number of states and transitions.  
+        \item \textbf{Token Acceptance:} A token is considered valid if the automaton processes it without encountering a dead end (no blockage) and reaches a final state.  
+    \end{itemize}
+\end{prettyBox}
+
+\newpage
+\null
+
+\textbf{\underline{Example}}\\[0.5cm]
+L = \{ u \(\in \{0,1\}^{*}\) / \(|\text{W}|_{0}\) \(\equiv\) 0[2]\}
+
+\vspace{0.15cm}
+
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Chapters/Examples/Lexi/ex1.drawio.pdf}
+\end{center}
+
+\vspace{0.4cm}
+\textbf{\underline{Execution Of The Automata For The Word 1011}}\\[0.25cm]
+
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Chapters/Examples/Lexi/ex1.1.drawio.pdf}
+\end{center}
+
+\newpage
+\null
+
+\begin{prettyBox}{Conclusion}{myblue}
+Even though there is no blockage when the automaton reads \(1011\),  
+it does not reach a final state in the end. Since \( e_1 \notin \) FinalStateArray, we conclude:  
+\[ \boxed{1011 \notin \text{L}} \]
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{Note}{red}
+The symbol \# is used to mark the end of each token.
+\end{prettyBox}
+
+\vspace{0.5cm}
+\subsection{Algorithm}
+\begin{prettyBox}{Algorithm}{myblue}
+    prettyBox
+\end{prettyBox}
+
