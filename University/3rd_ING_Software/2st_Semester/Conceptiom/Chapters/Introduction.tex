@@ -1,0 +1,180 @@
+\begin{center}
+    \Huge{\textbf{\underline{Chapter 1: Introduction}}}
+\end{center}
+
+\setcounter{section}{0}
+
+\vspace{0.35cm}
+
+
+\section{Software Design}
+
+
+\begin{prettyBox}{Design}{myblue}
+In software engineering, design refers to the phase that comes before
+the actual coding. It involves steps like creating algorithms, breaking
+down a complex system into manageable parts (modules), and brainstorming
+the general ideas and logic for each part, including how they will communicate
+with each other. A well-crafted design is crucial, as it not only makes the
+implementation and testing phases smoother but also ensures that maintenance 
+is more manageable. Proper maintenance is key to making the software last 
+for a long time, so it's important to focus on sustainable design practices.
+\end{prettyBox}
+
+\vspace{0.35cm}
+\section{Maintenance}
+\begin{prettyBox}{Maintenance}{myblue}
+Maintenance is the final phase in the lifecycle of any software. It involves
+fixing bugs, adding, removing, or modifying features. A good design plays a
+crucial role in making maintenance more manageable and efficient.
+\end{prettyBox}
+
+
+\vspace{0.35cm}
+\begin{prettyBox}{Note}{red}
+A good designer knows how to make the right choices and weigh the 
+pros and cons. In real-life applications, designers face very complex 
+systems, and it's not always possible to have all the advantages.
+\end{prettyBox}
+
+\vspace{0.35cm}
+\section{Modularity (Decomposition)}
+\begin{prettyBox}{Modularity}{myblue}
+Modularity divides a complex system into smaller parts called modules:
+\begin{enumerate}
+    \item \textbf{Architectural Design}: Defines the modules and how they will communicate with each other.
+    \item \textbf{Unit Design}: Defines each module's elements independently of the others.
+\end{enumerate}
+\end{prettyBox}
+
+\newpage
+\null
+
+\section{Evaluation Criteria}
+\begin{prettyBox}{Criteria for a Good Decomposition}{myblue}
+Many decompositions (modularities) might be proposed for the same system, and the criteria for a good decomposition are:
+\begin{itemize}
+    \item High Cohesion
+    \item Low Coupling
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.35cm}
+\subsection{Cohesion}
+
+\subsubsection{Definition}
+\begin{prettyBox}{Definition}{myblue}
+Cohesion refers to the degree of structuring and affinity between the elements
+of a module. It essentially describes how tightly related the goals and tasks
+of these elements are. There are several types of cohesion, which we will list
+from weakest to strongest. A strong, high cohesion is desirable.
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+
+\subsubsection{Why High Cohesion}
+\begin{prettyBox}{High Cohesion}{myblue}
+The stronger the cohesion, the more tightly related the elements of the module
+are, making the module adhere to the Single Responsibility Principle. This
+results in easier maintenance because when updating a specific feature,
+we can easily pinpoint which module is related to it. Since each module has
+a single responsibility, changes are more localized and manageable.
+\end{prettyBox}
+
+\vspace{0.35cm}
+\subsubsection{Types Of Cohesion}
+
+\subsubsection*{Random Cohesion (Coincidental Cohesion)}
+\begin{prettyBox}{Random}{myblue}
+The elements of a module are grouped together randomly with no meaningful
+relationship. This is the weakest form of cohesion and should always be avoided.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsubsection*{Logical Cohesion}
+\begin{prettyBox}{Logical}{myblue}
+Groups elements of a module that perform logically similar tasks.
+\end{prettyBox}
+
+\newpage
+\null
+\subsubsection*{Temporal Cohesion}
+\begin{prettyBox}{Temporal}{myblue}
+Groups elements of a module that execute within the same time phase.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsubsection*{Procedural Cohesion}
+\begin{prettyBox}{Procedural}{myblue}
+Groups elements of a module that execute in a well-defined order (collaboration of procedures).
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsubsection*{Communicational Cohesion}
+\begin{prettyBox}{Communicational}{myblue}
+Groups elements of a module that operate on the same set of data.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsubsection*{Sequential Cohesion}
+\begin{prettyBox}{Sequential}{myblue}
+Groups elements of a module so that the output of one element serves as
+the input for another.
+\end{prettyBox}
+\vspace{0.25cm}
+
+\subsubsection*{Functional Cohesion}
+\begin{prettyBox}{Functional}{myblue}
+All elements contribute to a single, well-defined task or are indispensable to its execution.
+\end{prettyBox}
+
+\vspace{1cm}
+
+\begin{prettyBox}{Note}{red}
+\begin{itemize}
+    \item Random cohesion must be avoided. If it appears in a test or exam, it results in an automatic 0. We aim for functional cohesion, as the systems studied in exercises are simple.  
+    \item In real-life applications, achieving pure functional cohesion is not always possible, and hybrid cohesion may be necessary.  
+\end{itemize}
+\end{prettyBox}
+
+\newpage
+\null
+\subsection{Coupling}
+\subsubsection{Definition}
+\begin{prettyBox}{Definition}{myblue}
+Coupling refers to the degree of dependency between modules. We aim for low,
+weak coupling to promote modularity and maintainability.
+\end{prettyBox}
+\vspace{0.35cm}
+
+\begin{prettyBox}{Note}{red}
+No coupling is impossible, as any system requires communication between modules.
+\end{prettyBox}
+
+\vspace{0.35cm}
+\subsubsection{Why Low Coupling}
+\begin{prettyBox}{Low Coupling}{myblue}
+We want low coupling so that modules are loosely coupled to:
+\begin{itemize}
+    \item \textbf{Failure Prevention:} If several modules depend on a central module, and it fails, the whole system crashes.
+    \item \textbf{Updating Modules:} Having low coupling means that when updating a module, it will impact fewer modules, making the process easier.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\subsection{Relation Between Cohesion \& Coupling}
+\begin{prettyBox}{Relation}{myblue}
+\begin{itemize}
+    \item \textbf{High cohesion leads to low coupling:} A highly cohesive module depends less on other modules and more on its internal elements, resulting in low coupling.
+    \item \textbf{Low coupling leads to high cohesion:} Low coupling means that modules are not highly dependent on each other, so the elements within each module need to be sufficient to perform a task, leading to high cohesion.
+\end{itemize}
+
+\[\boxed{\text{High Cohesion} \iff \text{Low Coupling}}\]
+\end{prettyBox}
+
