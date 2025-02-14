@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  1 FEB 2025 07:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  14 FEB 2025 10:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -561,25 +561,210 @@ File: Chapters/Diagram/Introduction/pdca.drawio.pdf Graphic file (type pdf)
 <use Chapters/Diagram/Introduction/pdca.drawio.pdf>
 Package pdftex.def Info: Chapters/Diagram/Introduction/pdca.drawio.pdf  used on input line 73.
 (pdftex.def)             Requested size: 256.07481pt x 241.31442pt.
-) [2 <./Chapters/Diagram/Introduction/pdca.drawio.pdf>] (./IS.aux)
+[2 <./Chapters/Diagram/Introduction/pdca.drawio.pdf>] [3] [4] [5]) (./Chapters/crypto.tex [6] [7] [8] [9]
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/Crypto/tab.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/Crypto/tab.drawio.pdf, id=66, 391.4625pt x 109.3686pt>
+File: Chapters/Diagram/Crypto/tab.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/Crypto/tab.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/Crypto/tab.drawio.pdf  used on input line 177.
+(pdftex.def)             Requested size: 409.72125pt x 114.4766pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--187
+
+ []
+
+[10 <./Chapters/Diagram/Crypto/tab.drawio.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 191--197
+
+ []
+
+
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/Crypto/rc.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/Crypto/rc.drawio.pdf, id=79, 421.575pt x 109.3686pt>
+File: Chapters/Diagram/Crypto/rc.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/Crypto/rc.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/Crypto/rc.drawio.pdf  used on input line 241.
+(pdftex.def)             Requested size: 409.72125pt x 106.29599pt.
+[11 <./Chapters/Diagram/Crypto/rc.drawio.pdf>]
+./Chapters/crypto.tex:285: Misplaced alignment tab character &.
+l.285     \(a \cdot x + b &
+                           \equiv y [26]\)\\[0.13cm]
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./Chapters/crypto.tex:286: Misplaced alignment tab character &.
+l.286     \(a \cdot x &
+                       \equiv y - b [26]\)\\[0.13cm]
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./Chapters/crypto.tex:287: Misplaced alignment tab character &.
+l.287     \(a^{-1} \cdot (a \cdot x) &
+                                      \equiv a^{-1} \cdot (y - b) [26]\)\\[0...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./Chapters/crypto.tex:288: Misplaced alignment tab character &.
+l.288     \(x &
+               \equiv a^{-1} \cdot (y - b) [26]\)\\[0.13cm]
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+./Chapters/crypto.tex:289: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.289 ...d{\(a^{-1} \cdot (y - b) \equiv x [26]\)}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./Chapters/crypto.tex:289: Extra }, or forgotten $.
+<recently read> }
+                 
+l.289 ...d{\(a^{-1} \cdot (y - b) \equiv x [26]\)}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./Chapters/crypto.tex:289: Missing $ inserted.
+<inserted text> 
+                $
+l.289 ...d{\(a^{-1} \cdot (y - b) \equiv x [26]\)}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/crypto.tex:289: Missing } inserted.
+<inserted text> 
+                }
+l.289 ...d{\(a^{-1} \cdot (y - b) \equiv x [26]\)}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Chapters/crypto.tex:295: Misplaced alignment tab character &.
+l.295     \(a \cdot a^{-1} &
+                            \equiv 1 [26]\)
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 369--371
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--377
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--397
+
+ []
+
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 498--499
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 626--627
+
+ []
+
+[17]
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/Crypto/playfair.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/Crypto/playfair.drawio.pdf, id=114, 219.70079pt x 147.67169pt>
+File: Chapters/Diagram/Crypto/playfair.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/Crypto/playfair.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/Crypto/playfair.drawio.pdf  used on input line 699.
+(pdftex.def)             Requested size: 307.2929pt x 206.55643pt.
+[18 <./Chapters/Diagram/Crypto/playfair.drawio.pdf>]
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/Crypto/pf1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/Crypto/pf1.drawio.pdf, id=128, 436.5108pt x 202.8378pt>
+File: Chapters/Diagram/Crypto/pf1.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/Crypto/pf1.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/Crypto/pf1.drawio.pdf  used on input line 748.
+(pdftex.def)             Requested size: 436.50972pt x 202.8373pt.
+
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/Crypto/pf2.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/Crypto/pf2.drawio.pdf, id=129, 436.5108pt x 202.8378pt>
+File: Chapters/Diagram/Crypto/pf2.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/Crypto/pf2.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/Crypto/pf2.drawio.pdf  used on input line 777.
+(pdftex.def)             Requested size: 436.50972pt x 202.8373pt.
+[19 <./Chapters/Diagram/Crypto/pf1.drawio.pdf> <./Chapters/Diagram/Crypto/pf2.drawio.pdf>]
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/Crypto/v1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/Crypto/v1.drawio.pdf, id=152, 262.0992pt x 109.3686pt>
+File: Chapters/Diagram/Crypto/v1.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/Crypto/v1.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/Crypto/v1.drawio.pdf  used on input line 820.
+(pdftex.def)             Requested size: 262.09854pt x 109.36832pt.
+
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/Crypto/v2.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/Crypto/v2.drawio.pdf, id=153, 277.035pt x 117.3183pt>
+File: Chapters/Diagram/Crypto/v2.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/Crypto/v2.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/Crypto/v2.drawio.pdf  used on input line 830.
+(pdftex.def)             Requested size: 277.03432pt x 117.31801pt.
+[20 <./Chapters/Diagram/Crypto/v1.drawio.pdf> <./Chapters/Diagram/Crypto/v2.drawio.pdf>]) [21] (./IS.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 19701 strings out of 474222
- 409422 string characters out of 5748732
- 1935975 words of memory out of 5000000
- 41650 multiletter control sequences out of 15000+600000
- 565961 words of font info for 67 fonts, out of 8000000 for 9000
+ 19823 strings out of 474222
+ 413098 string characters out of 5748732
+ 1955975 words of memory out of 5000000
+ 41769 multiletter control sequences out of 15000+600000
+ 567813 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,7n,107p,403b,879s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on IS.pdf (2 pages, 140745 bytes).
+ 102i,11n,107p,403b,879s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on IS.pdf (21 pages, 452188 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 227 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
