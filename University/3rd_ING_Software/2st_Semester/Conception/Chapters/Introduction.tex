@@ -147,13 +147,15 @@ All elements contribute to a single, well-defined task or are indispensable to i
 \subsection{Coupling}
 \subsubsection{Definition}
 \begin{prettyBox}{Definition}{myblue}
-Coupling refers to the degree of dependency between modules. We aim for low,
-weak coupling to promote modularity and maintainability.
+Coupling refers to the degree of dependency (Interconnection) between modules. We 
+aim for low, weak coupling to promote modularity and maintainability,it has many types we
+will list them from strongest to weakest.
 \end{prettyBox}
 \vspace{0.35cm}
 
 \begin{prettyBox}{Note}{red}
-No coupling is impossible, as any system requires communication between modules.
+No coupling is impossible, as any system requires minimum communication 
+between modules.
 \end{prettyBox}
 
 \vspace{0.35cm}
@@ -167,6 +169,50 @@ We want low coupling so that modules are loosely coupled to:
 \end{prettyBox}
 
 \vspace{0.5cm}
+\subsection{Types Of Coupling}
+\subsubsection{Content Coupling}  
+\begin{prettyBox}{Content}{myblue}  
+One module directly accesses or modifies the internal content of another module. 
+This is the strongest type of coupling and should be avoided.
+\end{prettyBox}  
+
+\vspace{0.25cm}
+
+\subsubsection{Common Coupling}
+\begin{prettyBox}{Common}{myblue}
+Modules that share global data.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsubsection{External Coupling}  
+\begin{prettyBox}{External}{myblue}  
+Modules that communicate with each other through external entities.  
+\end{prettyBox}  
+
+\vspace{0.25cm}
+
+\subsubsection{Control Coupling}
+\begin{prettyBox}{Control}{myblue}
+One module controls the behavior of another by passing control parameters.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsubsection{Stamp Coupling}
+\begin{prettyBox}{Stamp}{myblue}
+Modules that share complete complexe data structures (non-primitive : collection,
+array , struct , object) , but not all the elements are used by each module..
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsubsection{Data Coupling}
+\begin{prettyBox}{Data}{myblue}
+Modules share only essential simple data (primitive data) through parameters or arguments.
+\end{prettyBox}
+
+\vspace{0.5cm}
 
 \subsection{Relation Between Cohesion \& Coupling}
 \begin{prettyBox}{Relation}{myblue}
@@ -177,4 +223,52 @@ We want low coupling so that modules are loosely coupled to:
 
 \[\boxed{\text{High Cohesion} \iff \text{Low Coupling}}\]
 \end{prettyBox}
+
+\newpage
+\section{Scalability}  
+\begin{prettyBox}{Definition}{myblue}  
+As the number of users, data size, and server requests grow,  
+our software must continue running smoothly and adapt to exponential growth  
+without slowing down or crashing. To achieve this, we need to ensure that our software is scalable.  
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\subsection{Principles of Scalability}  
+\begin{prettyBox}{Principles}{myblue}  
+\begin{itemize}  
+\item \textbf{Scalable Database}: Ensures efficient data storage and 
+retrieval as demand increases.  
+\item \textbf{Distributed Architecture}: Spreads the workload across multiple 
+servers to prevent bottlenecks. 
+\item \textbf{Asynchronous Processes}: Improves efficiency by allowing tasks
+to run in the background without blocking other operations, enabling the
+system to handle more requests simultaneously.
+\item \textbf{Microservices}: Breaks applications into smaller, independent 
+services deployed in different servers for better scalability.  
+\item \textbf{Load Balancing}: Distributes traffic evenly to prevent server 
+overload.  
+\item \textbf{Auto-scaling}: Adjusts resources dynamically based on demand.  
+\item \textbf{Caching}: Stores frequently accessed data to reduce load and 
+improve speed.  
+\end{itemize}  
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\subsection{Types of Scalability}  
+
+\subsubsection{Horizontal (Flat) Scalability}  
+\begin{prettyBox}{Horizontal}{myblue}  
+Scaling by adding more servers to distribute the load.  
+For example, deploying additional servers in different regions to improve performance.  
+\end{prettyBox}  
+
+\vspace{0.25cm}  
+
+\subsubsection{Vertical Scalability}  
+\begin{prettyBox}{Vertical}{myblue}  
+Scaling by upgrading the same server with better hardware.  
+For example, increasing RAM to enhance caching performance.  
+\end{prettyBox}  
 
