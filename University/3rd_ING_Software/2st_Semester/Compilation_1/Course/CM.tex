@@ -8,12 +8,16 @@
 \usepackage{booktabs} % For better horizontal lines
 \usepackage{makecell}
 \setlength{\parindent}{0pt}
-
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 \usepackage{amssymb}
 \tcbuselibrary{skins, breakable, theorems}
 
 \definecolor{myblue}{HTML}{10C2C4}
-
+\definecolor{keyword}{HTML}{3C9ED1}
+\definecolor{func}{HTML}{8D06E0}
+\definecolor{op}{HTML}{E00606}
+\definecolor{comment}{HTML}{6F7E7B}
 \newtcolorbox{prettyBox}[2]{
   enhanced,
   colback=white!90!#2,   % Background color based on the second parameter (color)
@@ -26,44 +30,36 @@
   drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
 }
 
-\usepackage{listings}
-% Define the style for C code
-\lstdefinestyle{cstyle}{
-    language=C,
-    basicstyle=\ttfamily\small,
-    keywordstyle=\color{blue}\bfseries,
-    stringstyle=\color{red},
-    commentstyle=\color{green!50!black}\itshape,
-    numbers=left,
-    numberstyle=\tiny\color{gray},
-    stepnumber=1,
-    breaklines=true,
-    frame=tb,
-    tabsize=4,
-    showstringspaces=false,
-    captionpos=b
-}
 
+\newcommand{\affect}{\textcolor{op}{\(\gets\)}\hspace{0.1cm}}
+\newcommand{\debut}{\State \textcolor{keyword}{\textbf{Begin}}
+\vspace{0.5em}}
+\newcommand{\fin}{
+    \vspace{0.5em}
+\State \textcolor{keyword}{\textbf{End}}}
+\newcommand{\et}{\hspace{0.15cm}\textcolor{op}{AND}\hspace{0.15cm}}
+\newcommand{\n}{\hspace{0.15cm}\textcolor{op}{NOT}\hspace{0.15cm}}
+\newcommand{\com}[2]{\hspace{#1 cm} \textcolor{comment}{\texttt{ -- }{#2}}}
+\newcommand{\lire}[1]{\State \textcolor{func}{Lire}(#1);}
+\newcommand{\jmp}{\State \textcolor{func}{Saut\_Blanc}();}
+\newcommand{\nin}{\textcolor{op}{\(\notin\)}\hspace{0.1cm}}
+\newcommand{\pase}{\hspace{0.05cm}\textcolor{op}{!=}}
+\newcommand{\e}{\textcolor{op}{=}}
+\newcommand{\str}[1]{\hspace{0.1cm}\textcolor{green!50!black}{'#1'}\hspace{0.1cm}}
+\newcommand{\pr}[1]{\State \textcolor{func}{print}(\str{#1});}
+\newcommand{\vide}{\(\hspace{0.1cm}\emptyset\hspace{0.1cm}\)}
+\algrenewcommand\algorithmicif{\textcolor{keyword}{\textbf{if}}}
+\algrenewcommand\algorithmicelse{\textcolor{keyword}{\textbf{else}}}
+%\algrenewcommand\algorithmicprocedure{\textcolor{redPlot}{\textbf{procedure}}}
 
-\lstdefinestyle{pythonstyle2}{
-    language=python,                    % Language set to Python
-    basicstyle=\ttfamily\footnotesize,   % Change basic font size
-    keywordstyle=\color{blue}\bfseries, % Different keyword style
-    stringstyle=\color{red},         % Different string color
-    commentstyle=\color{green!60!black}\itshape, % Adjust comment color
-    numbers=left,                       % Line numbers on the left
-    numberstyle=\tiny\color{gray},      % Smaller number font and color
-    stepnumber=1,                       % Number each line
-    frame=single,                       % Single frame around code
-    tabsize=4,                          % Adjust tab size
-    showstringspaces=false,             % Do not show spaces in strings
-    captionpos=b,% Position of caption
-    breaklines=true,
-    inputencoding=utf8
-}
+%\algrenewcommand\algorithmicfunction{\textcolor{redPlot}{\textbf{function}}}
+\algrenewcommand\algorithmicend{\textcolor{keyword}{\textbf{end}}}
+\algrenewcommand\algorithmicthen{\textcolor{keyword}{\textbf{then}}}
 
+\algrenewcommand\algorithmicdo{\textcolor{keyword}{\textbf{do}}}
+\algrenewcommand\algorithmicwhile{\textcolor{keyword}{\textbf{while}}}
 
-
+%\algrenewcommand\algorithmicfor{\textcolor{redPlot}{\textbf{for}}}
 
 \begin{document}
 \input{Chapters/Introduction.tex} 

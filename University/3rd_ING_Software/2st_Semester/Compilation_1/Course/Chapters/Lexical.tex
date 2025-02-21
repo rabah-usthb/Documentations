@@ -138,8 +138,113 @@ The symbol \# is used to mark the end of each token.
 \end{prettyBox}
 
 \vspace{0.5cm}
-\subsection{Algorithm}
+
+\subsection{Algorithm of Reconnaissance}
 \begin{prettyBox}{Algorithm}{myblue}
-    prettyBox
+The algorithm utilizes a finite deterministic automaton represented as a 
+transition matrix. A token is recognized by the automaton if and only if 
+it reaches '\#' in the token's terms and a final state in the automaton.\\[0.15cm]
+We will first present the reconnaissance algorithm for a single token, followed by its application to an entire source code.
 \end{prettyBox}
+
+\vspace{1cm}
+
+\subsubsection{Variables \& Predefined Functions}
+\begin{prettyBox}{Notation}{myblue}
+\begin{itemize}
+    \item \textbf{Entity}: Lexical entity (token).
+    \item \textbf{t\(_c\)}: Current term of the token.
+    \item \textbf{t\(_s\)}: Next term of the token.
+    \item \textbf{F}: Array of final states.
+    \item \textbf{E\(_c\)}: Current state of the automaton.
+    \item \textbf{M}: Transition matrix.
+    \item \textbf{Lire(Entity)}: Reads a lexical entity from the source code, stores it in the \textbf{Entity} 
+    variable, and appends '\#' at the end.
+    \item \textbf{Saut\_Blanc()}: Skips whitespace, including tabulations and newline characters and comments.
+\end{itemize}
+\end{prettyBox}
+
+\newpage
+
+\begin{algorithm}
+\caption{Algorithm Reconnaissance Of Single Token}
+\begin{algorithmic}[1]
+\debut
+\lire{Entity}   \com{1.95}{Reads token}
+\State t\(_{c}\) \affect Entity[0]; \com{1.6}{Initializ with 1st character} 
+\State E\(_{c}\) \affect Initial State; \com{1}{Intialize with initial state}
+\vspace{0.5em}
+\While{( E\(_{c}\)\pase \vide\et t\(_c\) \pase \str{\#} )} \com{0.5}{Loop as long as there is no blockage and not all character of the token have been analyzed}
+\vspace{0.25em}
+\State E\(_c\) \affect M[E\(_c\),t\(_c\)]; \com{1}{Gets next state}
+\State t\(_c\) \affect t\(_s\);            \com{2.1}{Gets next character of the token}
+\vspace{0.25em}
+\EndWhile
+
+\vspace{0.5em}
+
+\If{( E\(_c\)\pase \vide )} \com{1}{Check if there is a blockage}
+
+\vspace{0.25em}
+\pr{Error the lexical entity isn't regonised by the automaton because blockage happened}
+
+\vspace{0.25em}
+\ElsIf {( E\(_c\) \nin F )} \com{1}{Check if automaton reaches a final state}
+
+\vspace{0.25em}
+\pr{Error the lexical entity isn't regonised by the automaton because it didn't reach a final state}
+
+\vspace{0.25em}
+\Else  \com{1}{Token is regonized}
+
+\vspace{0.25em}
+\State Codify the lexical entity and put it in the symbole table.
+
+\vspace{0.25em}
+\EndIf
+\fin
+\end{algorithmic}
+\end{algorithm}
+
+\vspace{1cm}
+\begin{algorithm}
+\caption{Algorithm Reconnaissance Of All Tokens}
+\begin{algorithmic}[1]
+\debut
+\jmp \com{1}{Ignores spaces , newlines and comments before reading the token}
+
+\vspace{0.5em}
+\While{( \n EOF )} \com{1}{Loop as long as we didn't reach EOF(End Of File)}
+\vspace{0.25em}
+\lire{Entity}      \com{1}{Reads token}
+
+\vspace{0.15em}
+\State Rest Of The Algorithm Of Reconnaissance Of Single Token
+\vspace{0.15em}
+\jmp
+\vspace{0.25em}
+\EndWhile
+\fin
+\end{algorithmic}
+\end{algorithm}
+
+\newpage
+
+\textbf{\underline{Example}} \\[0.15cm]
+Language of binary code with no successive 0s:
+\begin{itemize}
+    \item Create the transition matrix
+    \item Analyze `101\#`
+\end{itemize}
+
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Chapters/Examples/exalgo.drawio.pdf}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{center}
+    \includegraphics[height=0.5\textheight]{Chapters/Examples/exec.drawio.pdf}
+\end{center}
+
 
