@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1740118136.16188 "CM.tex" "CM.pdf" "CM" 1740118137.99599 0
+["pdflatex"] 1740124091.6982 "CM.tex" "CM.pdf" "CM" 1740124093.68189 0
   "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -155,7 +155,7 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1732594860.33734 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1731402230 8212896 b2d3a67526ed46e54375dd7fb267ffaf ""
-  "CM.aux" 1740118137.87765 2220 7a23288e46bbfce8c9921e71f3448e2c "pdflatex"
+  "CM.aux" 1740124093.43905 2220 7a23288e46bbfce8c9921e71f3448e2c "pdflatex"
   "CM.tex" 1740117057.13046 2775 2bc2603f65fd6734ee33c246c8854a50 ""
   "Chapters/Diagram/Intro/compile.drawio.pdf" 1738458196.30241 35001 724f889345a5eb7cfaa631f1114aaeae ""
   "Chapters/Diagram/Intro/inter.drawio.pdf" 1738461239.1733 36220 c8f1570f7538e98525450fd7d6668a8e ""
@@ -172,8 +172,8 @@
   "Chapters/Examples/Lexi/ex1.drawio.pdf" 1738744256.72931 25081 68e95f589ab9078ffac9559421a59820 ""
   "Chapters/Examples/exalgo.drawio.pdf" 1740116041.97506 21543 2d60bf1518e354f5f5bea3884cce3bd9 ""
   "Chapters/Examples/exec.drawio.pdf" 1740116044.80548 34782 fd84d91ac8d07d593524ade407d421bc ""
-  "Chapters/Introduction.tex" 1738732123.07375 7759 d064606665eaa774f4b972efe4ba26e0 ""
-  "Chapters/Lexical.tex" 1740118135.1833 8778 1584e336d539a71f35894838071e3dc7 ""
+  "Chapters/Introduction.tex" 1740124090.74605 7728 dfc1931a04b968b9075fd3fa7fd19975 ""
+  "Chapters/Lexical.tex" 1740118167.75959 8778 1584e336d539a71f35894838071e3dc7 ""
   (generated)
   "CM.aux"
   "CM.log"

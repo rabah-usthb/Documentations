@@ -135,11 +135,12 @@ is considered correct if it reaches an end state with no blockage in the process
 
 \vspace{0.85cm}
 
-\begin{prettyBox}{Note}{red}
-Never loop on the start state, as this can lead to undesired behavior and unexpected results. 
-Additionally, such a loop could cause the automaton to recognize the empty word \(\epsilon\), which does not exist in practice.
-\end{prettyBox}
 
+\begin{prettyBox}{Note}{red}
+Never loop on the start state, as this can lead to undesired behavior.  
+Doing so makes having independent branches impossible since  
+the compiler has only one automaton to match all tokens.
+\end{prettyBox}
 
 \subsection{Syntactic Analysis (Parsing)}
 \begin{prettyBox}{Syntactic Analysis}{myblue}
