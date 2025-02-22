@@ -1,0 +1,18 @@
+MainProgram L3_Software;
+Declaration
+{ -- Partie 
+  Declaration
+-- }
+L,S,K : Entier;
+F,W : Reel;
+
+Body
+Begin
+{
+ ## Partie Instruction
+  sum := a+b;
+   Prod := D *F - 3 + 4 / 2;
+  readln(a,b);
+  writeln('Hello World!');
+}
+end

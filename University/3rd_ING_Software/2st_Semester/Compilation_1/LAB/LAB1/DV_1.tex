@@ -1,0 +1,116 @@
+\documentclass[fleqn]{article}
+\usepackage{tikz,tcolorbox}
+\usepackage{array} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage[a4paper, paperwidth=25cm, paperheight=25.5cm, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+
+\usepackage{tkz-tab}
+
+\usepackage{enumitem}
+
+\pgfplotsset{compat=1.18}
+\usepackage{makecell}
+\usetikzlibrary{patterns}
+\definecolor{mygreen}{HTML}{14C877}
+\definecolor{orangePlot}{HTML}{EA6E12}
+\definecolor{purplePlot}{HTML}{4C12EA}
+\definecolor{blueArea}{HTML}{10D9EE}
+\definecolor{redPlot}{HTML}{ED014A}
+\definecolor{myblue}{HTML}{338AC7}
+\definecolor{p}{HTML}{D813E7}
+\definecolor{y}{HTML}{F5F806}
+\usepackage{amssymb}
+\setlength{\parindent}{0pt}
+\setcellgapes{3pt}  % Adjust padding as needed
+\makegapedcells
+\tcbuselibrary{skins, breakable, theorems}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{xcolor}
+\setlength{\mathindent}{8cm}
+\renewcommand{\thealgorithm}{}
+\usepackage{mathtools}
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+\usepackage{listings}
+
+\definecolor{keywordcolor}{RGB}{0, 128, 255}   % Blue for keywords
+\definecolor{directivecolor}{RGB}{255, 0, 255} % Magenta for Flex directives
+\definecolor{stringcolor}{RGB}{0, 180, 0}      % Green for strings
+\definecolor{commentcolor}{RGB}{128, 128, 128} % Gray for comments
+\definecolor{operatorcolor}{RGB}{255, 102, 0} 
+
+
+
+
+\lstdefinelanguage{Flex}{
+    morekeywords={\%\%, int,char,while,if,else,return, \%\{, \%\}, \%option, \%x, \%s, \%pointer, \%ar, \%top, \%yymore, \%input, \%output, \%yywrap, \%yynewline},
+    morestring=[b]{"},
+    sensitive=true,
+    alsoletter={\%, \}, \{},
+}
+% Define cstyle
+\lstdefinestyle{cstyle}{
+    language=Flex,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{green!50!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=5pt,
+    backgroundcolor=\color{white},
+    frame=single,
+    frameround=tttt,
+    rulecolor=\color{black},
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=4,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    captionpos=b,
+    escapeinside={(*}{*)}
+}
+
+\lstdefinestyle{simple}{
+    basicstyle=\ttfamily,       % Use a monospaced font
+    numbers=left,               % Enable line numbers on the left
+    numberstyle=\tiny\color{gray}, % Make line numbers smaller and gray
+    stepnumber=1,               % Number every line
+    firstnumber=1,              % Start numbering from line 1
+    frame=single,               % Start numbering from line 1
+}
+\begin{document}
+\renewcommand{\arrayrulewidth}{0.75mm} % Set line thickness
+\setlength{\tabcolsep}{12pt} % Set horizontal padding
+\renewcommand{\arraystretch}{1.5} % Set vertical padding (1.0 is default)
+
+\begin{center}
+    \Huge{\textbf{\underline{Devoir Maison Numero 1}}}
+\end{center}
+
+\vspace{1cm}
+
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{Parts/bi.drawio.pdf}
+\end{center}
+
+\input{Parts/Tokens.tex}
+\input{Parts/flex.tex}
+\input{Parts/output.tex}
+
+\end{document}

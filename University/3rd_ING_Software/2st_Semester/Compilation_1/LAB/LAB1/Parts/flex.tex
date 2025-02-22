@@ -1,0 +1,122 @@
+\newpage
+\section{Implementation En Flex}
+
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{Parts/flex.drawio.pdf}
+\end{center}
+
+\newpage
+\subsection{Définition Des Variables/Fonctions Des Expressions Régulières}
+
+\subsubsection{Variables Et Fonctions}
+\begin{prettyBox}{Variables}{mygreen}
+\begin{itemize}
+    \item \textbf{Variable Entière : }\texttt{nb\_line} qu'on va incrémenter 
+pour chaque saut de ligne \texttt{\textbackslash n} initialisé a 1.
+    \item \textbf{Bibliothèque : }\texttt{<stdio.h>} pour afficher des messages avec 
+\texttt{printf}.
+    \item \textbf{Fonction : }\texttt{nb\_line\_comment} calcule le nombre de saut de ligne 
+        contenue dans un commentaire.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.5cm}
+\textbf{\underline{Code}}
+
+\vspace{0.25cm}
+\lstinputlisting[style=cstyle,firstline=1,lastline=17,basicstyle=\footnotesize\ttfamily]{Parts/solution.l}
+
+\vspace{0.5cm}
+
+\subsubsection{Expressions Régulières}
+\begin{prettyBox}{Expressions Régulières}{mygreen}
+    \begin{itemize}
+        \item \textbf{Word : } Correspond aux lettres de l'alphabet, en minuscules ou en majuscules, ainsi qu'au caractère underscore (\_).
+        \item \textbf{Digit : } Correspond aux chiffres de 0 à 9.
+        \item \textbf{IDF : } Correspond à un identifiant qui commence par une lettre alphabétique, suivie d'une séquence de \textbf{Word} et de \textbf{Digit}.
+        \item \textbf{NumberCst : } Correspond à une constante entière, soit une suite de \textbf{Digit}.
+        \item \textbf{StringCst : } Correspond à une constante chaîne de caractères, qui commence et finit par un guillemet simple ('), et qui peut contenir n'importe quel caractère 
+            à l'exception du saut de ligne et du guillemet simple.
+        \item \textbf{Cst : } Correspond soit à \textbf{StringCst}, soit à \textbf{NumberCst}.
+        \item \textbf{InlineComment : } Correspond à un commentaire écrit sur une seule ligne, qui commence par '\#\#' suivi de n'importe quel caractère, à l'exception du saut de ligne.
+        \item \textbf{MultiLineComment : } Correspond à un commentaire sur plusieurs lignes, qui commence par '\{ \texttt{--}' et se termine\\ par '\texttt{--} \}', entre les deux, il peut y avoir n'importe quel caractère et des sauts de ligne.
+        \item \textbf{Comment : } Correspond soit à \textbf{MultiLineComment}, soit à \textbf{InlineComment}.
+        \item \textbf{ArithmeticOperation : } Correspond soit à '-', '+', '*', '/'.
+        \item \textbf{Separators : } Correspond soit aux parenthèses '(', ')', aux accolades '\{' et '\}', au point-virgule ';', à la virgule ',', au signe d'affectation ':=' , aux deux-points ':', ou à \textbf{ArithmeticOperation}.
+        \item \textbf{KeyWords : } Correspond soit à 'Entier' , 'Reel' , 'Begin' , 'end' , 'Body' , 'MainProgram' , 'Declaration' .
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{1cm}
+\textbf{\underline{Code}}
+
+\vspace{0.25cm}
+\lstinputlisting[style=cstyle,firstline=19,lastline=30,basicstyle=\footnotesize\ttfamily]{Parts/solution.l}
+
+
+\newpage
+
+
+\subsection{Les Règles}
+\begin{prettyBox}{Les Règles}{mygreen}
+    \begin{itemize}
+        \item \textbf{\{KeyWords\} } : Afficher le mot clé avec le numéro de ligne.
+        \item \textbf{\{IDF\} } : Vérifier que la taille de l'identifiant n'excède pas 12 avec la fonction \texttt{yyleng} , si oui, l'afficher, sinon afficher un message d'erreur avec le numéro de ligne.
+        \item \textbf{\{Cst\} } : Afficher la constante avec le numéro de ligne.
+        \item \textbf{\{Separators\} } : Afficher le séparateur avec le numéro de ligne.
+        \item \textbf{\{Comment\} } : Afficher le commentaire avec le numéro de ligne, et mettre à jour \texttt{nb\_line} avec le nombre de sauts de ligne de l'entité grâce à la fonction \texttt{nb\_line\_comment}.
+        \item \textbf{[ \textbackslash t] } : Ignorer les tabulations et les espaces.
+        \item \textbf{\textbackslash n } : Incrémenter la variable \texttt{nb\_line} après chaque saut de ligne.
+        \item \textbf{.} : Si l'entité lexicale ne correspond à aucune des expressions régulières définies, cela signifie que l'entité est erronée et ne fait pas partie du langage. Afficher un message d'erreur avec le numéro de ligne.
+    \end{itemize}
+\end{prettyBox}
+\vspace{1cm}
+
+\textbf{\underline{Code}}
+
+\vspace{0.25cm}
+\lstinputlisting[style=cstyle,firstline=32,lastline=54,basicstyle=\footnotesize\ttfamily]{Parts/solution.l}
+
+\newpage
+
+\begin{prettyBox}{Remarque}{red}
+\begin{itemize}
+    \item \textbf{Pourquoi \texttt{nb\_line\_comment} ?} : Parce que la règle qui incrémente 
+        \texttt{nb\_line} ne suffit pas. Elle ne détecte que les \texttt{\textbackslash n} 
+        à la fin de chaque ligne d'entité, mais pas ceux compris dans les commentaires multi-lignes. 
+ 
+\item \textbf{\{KeyWords\} doit être placé avant \{IDF\} dans les règles} :  
+        Les mots-clés correspondent aussi à des \{IDF\}. Ce sont en réalité des cas particuliers  
+        de \{IDF\}, c'est-à-dire un sous-ensemble. Pour éviter que les mots-clés soient reconnus  
+        à la fois comme \{IDF\} et comme mots-clés, il faut s'assurer que \{KeyWords\} soit placé  
+        avant \{IDF\}.  
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.5cm}
+\subsection{Fonctions Prédéfinies}
+\begin{prettyBox}{Fonctions Prédéfinies}{mygreen}
+Pour la section des fonctions prédéfinies, on la laisse telle quelle sans changer la définition des fonctions.
+\end{prettyBox}
+
+\vspace{1cm}
+\textbf{\underline{Code}}
+
+\vspace{0.25cm}
+\lstinputlisting[style=cstyle,firstline=55,lastline=61,basicstyle=\footnotesize\ttfamily]{Parts/solution.l}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
