@@ -161,6 +161,7 @@ We will first present the reconnaissance algorithm for a single token, followed 
     \item \textbf{Lire(Entity)}: Reads a lexical entity from the source code, stores it in the \textbf{Entity} 
     variable, and appends '\#' at the end.
     \item \textbf{Saut\_Blanc()}: Skips whitespace, including tabulations and newline characters and comments.
+    \item \textbf{Eval(Entity)} : Convert entity into integer valu : Convert entity into integer value
 \end{itemize}
 \end{prettyBox}
 
@@ -228,6 +229,12 @@ We will first present the reconnaissance algorithm for a single token, followed 
 \end{algorithmic}
 \end{algorithm}
 
+\vspace{1cm}
+
+\begin{prettyBox}{Note}{red}
+This is only an abstract algorithm, we can modify it to enforce additional constraints on the token,  
+such as maximum value, maximum number of characters, etc.  
+\end{prettyBox}
 \newpage
 
 \textbf{\underline{Example}} \\[0.15cm]

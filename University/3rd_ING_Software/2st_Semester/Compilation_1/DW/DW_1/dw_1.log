@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  22 FEB 2025 00:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  22 FEB 2025 00:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**CM.tex
-(./CM.tex
+**dw_1.tex
+(./dw_1.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -493,23 +493,23 @@ Library (tcolorbox): 'tcbtheorems.code.tex' version '6.2.0'
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count325
 \l__pdf_internal_box=\box83
-) (./CM.aux)
-\openout1 = `CM.aux'.
+) (./dw_1.aux)
+\openout1 = `dw_1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -565,172 +565,95 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count332
- (./Chapters/Introduction.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+ (./Exercices/EX1/ex1.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-pdfTeX warning: pdflatex (file ./Chapters/Diagram/Intro/compile.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/Intro/compile.drawio.pdf, id=4, 349.305pt x 52.2753pt>
-File: Chapters/Diagram/Intro/compile.drawio.pdf Graphic file (type pdf)
-<use Chapters/Diagram/Intro/compile.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/Intro/compile.drawio.pdf  used on input line 20.
-(pdftex.def)             Requested size: 500.77042pt x 74.94772pt.
+pdfTeX warning: pdflatex (file ./Exercices/EX1/ex1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Exercices/EX1/ex1.drawio.pdf, id=4, 355.3275pt x 179.7114pt>
+File: Exercices/EX1/ex1.drawio.pdf Graphic file (type pdf)
+<use Exercices/EX1/ex1.drawio.pdf>
+Package pdftex.def Info: Exercices/EX1/ex1.drawio.pdf  used on input line 27.
+(pdftex.def)             Requested size: 500.77042pt x 253.28064pt.
+) (./Exercices/EX2/ex2.tex [1
 
-
-pdfTeX warning: pdflatex (file ./Chapters/Diagram/Intro/inter.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Diagram/Intro/inter.drawio.pdf, id=5, 217.77359pt x 181.6386pt>
-File: Chapters/Diagram/Intro/inter.drawio.pdf Graphic file (type pdf)
-<use Chapters/Diagram/Intro/inter.drawio.pdf>
-Package pdftex.def Info: Chapters/Diagram/Intro/inter.drawio.pdf  used on input line 34.
-(pdftex.def)             Requested size: 312.98032pt x 261.07433pt.
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Chapters/Diagram/Intro/compile.drawio.pdf> <./Chapters/Diagram/Intro/inter.drawio.pdf>]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 77.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./Exercices/EX1/ex1.drawio.pdf>]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 10.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
- [2{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-
-pdfTeX warning: pdflatex (file ./Chapters/Examples/Intro/ex1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Examples/Intro/ex1.drawio.pdf, id=48, 356.29109pt x 100.45529pt>
-File: Chapters/Examples/Intro/ex1.drawio.pdf Graphic file (type pdf)
-<use Chapters/Examples/Intro/ex1.drawio.pdf>
-Package pdftex.def Info: Chapters/Examples/Intro/ex1.drawio.pdf  used on input line 85.
-(pdftex.def)             Requested size: 356.2902pt x 100.45503pt.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
 
 
-pdfTeX warning: pdflatex (file ./Chapters/Examples/Intro/ex2.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Examples/Intro/ex2.drawio.pdf, id=49, 356.29109pt x 100.45529pt>
-File: Chapters/Examples/Intro/ex2.drawio.pdf Graphic file (type pdf)
-<use Chapters/Examples/Intro/ex2.drawio.pdf>
-Package pdftex.def Info: Chapters/Examples/Intro/ex2.drawio.pdf  used on input line 90.
-(pdftex.def)             Requested size: 356.2902pt x 100.45503pt.
-[3 <./Chapters/Examples/Intro/ex1.drawio.pdf> <./Chapters/Examples/Intro/ex2.drawio.pdf>]
+pdfTeX warning: pdflatex (file ./Exercices/EX2/ex2.1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Exercices/EX2/ex2.1.drawio.pdf, id=31, 283.0575pt x 58.29779pt>
+File: Exercices/EX2/ex2.1.drawio.pdf Graphic file (type pdf)
+<use Exercices/EX2/ex2.1.drawio.pdf>
+Package pdftex.def Info: Exercices/EX2/ex2.1.drawio.pdf  used on input line 33.
+(pdftex.def)             Requested size: 312.98032pt x 64.46577pt.
+[2 <./Exercices/EX2/ex2.1.drawio.pdf>]
 
-pdfTeX warning: pdflatex (file ./Chapters/Examples/Intro/ex4.1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Examples/Intro/ex4.1.drawio.pdf, id=71, 257.04028pt x 45.2892pt>
-File: Chapters/Examples/Intro/ex4.1.drawio.pdf Graphic file (type pdf)
-<use Chapters/Examples/Intro/ex4.1.drawio.pdf>
-Package pdftex.def Info: Chapters/Examples/Intro/ex4.1.drawio.pdf  used on input line 121.
-(pdftex.def)             Requested size: 257.03966pt x 45.28908pt.
-
-
-pdfTeX warning: pdflatex (file ./Chapters/Examples/Intro/ex4.2.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Examples/Intro/ex4.2.drawio.pdf, id=72, 294.13892pt x 96.36pt>
-File: Chapters/Examples/Intro/ex4.2.drawio.pdf Graphic file (type pdf)
-<use Chapters/Examples/Intro/ex4.2.drawio.pdf>
-Package pdftex.def Info: Chapters/Examples/Intro/ex4.2.drawio.pdf  used on input line 126.
-(pdftex.def)             Requested size: 294.13818pt x 96.35974pt.
+pdfTeX warning: pdflatex (file ./Exercices/EX2/ex2.3.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Exercices/EX2/ex2.3.drawio.pdf, id=47, 341.35529pt x 145.50359pt>
+File: Exercices/EX2/ex2.3.drawio.pdf Graphic file (type pdf)
+<use Exercices/EX2/ex2.3.drawio.pdf>
+Package pdftex.def Info: Exercices/EX2/ex2.3.drawio.pdf  used on input line 78.
+(pdftex.def)             Requested size: 312.98032pt x 133.41199pt.
 
 
-pdfTeX warning: pdflatex (file ./Chapters/Examples/Intro/ex4.3.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Examples/Intro/ex4.3.drawio.pdf, id=73, 294.13892pt x 96.36pt>
-File: Chapters/Examples/Intro/ex4.3.drawio.pdf Graphic file (type pdf)
-<use Chapters/Examples/Intro/ex4.3.drawio.pdf>
-Package pdftex.def Info: Chapters/Examples/Intro/ex4.3.drawio.pdf  used on input line 130.
-(pdftex.def)             Requested size: 294.13818pt x 96.35974pt.
+pdfTeX warning: pdflatex (file ./Exercices/EX2/ex2.3.ex.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Exercices/EX2/ex2.3.ex.drawio.pdf, id=48, 189.8292pt x 217.77359pt>
+File: Exercices/EX2/ex2.3.ex.drawio.pdf Graphic file (type pdf)
+<use Exercices/EX2/ex2.3.ex.drawio.pdf>
+Package pdftex.def Info: Exercices/EX2/ex2.3.ex.drawio.pdf  used on input line 85.
+(pdftex.def)             Requested size: 279.04845pt x 320.0935pt.
+) (./Exercices/EX3/ex3.tex [3 <./Exercices/EX2/ex2.3.drawio.pdf> <./Exercices/EX2/ex2.3.ex.drawio.pdf>]
 
+pdfTeX warning: pdflatex (file ./Exercices/EX3/tree3.1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Exercices/EX3/tree3.1.drawio.pdf, id=76, 344.2461pt x 166.7028pt>
+File: Exercices/EX3/tree3.1.drawio.pdf Graphic file (type pdf)
+<use Exercices/EX3/tree3.1.drawio.pdf>
+Package pdftex.def Info: Exercices/EX3/tree3.1.drawio.pdf  used on input line 36.
+(pdftex.def)             Requested size: 661.06053pt x 320.0935pt.
 
-pdfTeX warning: pdflatex (file ./Chapters/Examples/Intro/ex4.4.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Examples/Intro/ex4.4.drawio.pdf, id=74, 312.20638pt x 96.36pt>
-File: Chapters/Examples/Intro/ex4.4.drawio.pdf Graphic file (type pdf)
-<use Chapters/Examples/Intro/ex4.4.drawio.pdf>
-Package pdftex.def Info: Chapters/Examples/Intro/ex4.4.drawio.pdf  used on input line 133.
-(pdftex.def)             Requested size: 312.2056pt x 96.35974pt.
-[4 <./Chapters/Examples/Intro/ex4.1.drawio.pdf> <./Chapters/Examples/Intro/ex4.2.drawio.pdf> <./Chapters/Examples/Intro/ex4.3.drawio.pdf> <./Chapters/Examples/Intro/ex4.4.drawio.pdf>]
-
-pdfTeX warning: pdflatex (file ./Chapters/Examples/Intro/ex3.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Examples/Intro/ex3.drawio.pdf, id=114, 659.5842pt x 89.3739pt>
-File: Chapters/Examples/Intro/ex3.drawio.pdf Graphic file (type pdf)
-<use Chapters/Examples/Intro/ex3.drawio.pdf>
-Package pdftex.def Info: Chapters/Examples/Intro/ex3.drawio.pdf  used on input line 159.
-(pdftex.def)             Requested size: 563.37668pt x 89.63141pt.
-[5 <./Chapters/Examples/Intro/ex3.drawio.pdf>]
-
-pdfTeX warning: pdflatex (file ./Chapters/Examples/Intro/dict.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Examples/Intro/dict.drawio.pdf, id=128, 217.77359pt x 89.3739pt>
-File: Chapters/Examples/Intro/dict.drawio.pdf Graphic file (type pdf)
-<use Chapters/Examples/Intro/dict.drawio.pdf>
-Package pdftex.def Info: Chapters/Examples/Intro/dict.drawio.pdf  used on input line 213.
-(pdftex.def)             Requested size: 375.5802pt x 154.15239pt.
-
-
-pdfTeX warning: pdflatex (file ./Chapters/Examples/Intro/sum.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Examples/Intro/sum.drawio.pdf, id=129, 566.115pt x 45.2892pt>
-File: Chapters/Examples/Intro/sum.drawio.pdf Graphic file (type pdf)
-<use Chapters/Examples/Intro/sum.drawio.pdf>
-Package pdftex.def Info: Chapters/Examples/Intro/sum.drawio.pdf  used on input line 232.
-(pdftex.def)             Requested size: 640.19489pt x 51.21613pt.
-
-Overfull \hbox (14.23424pt too wide) in paragraph at lines 232--233
+Overfull \hbox (35.09988pt too wide) in paragraph at lines 36--37
  [] 
  []
 
-) (./Chapters/Lexical.tex [6 <./Chapters/Examples/Intro/dict.drawio.pdf> <./Chapters/Examples/Intro/sum.drawio.pdf>] [7] [8]
+) (./Exercices/EX4/ex4.tex [4 <./Exercices/EX3/tree3.1.drawio.pdf>] (./Exercices/EX4/code.txt)
 
-pdfTeX warning: pdflatex (file ./Chapters/Examples/Lexi/ex1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Examples/Lexi/ex1.drawio.pdf, id=159, 362.3136pt x 131.53139pt>
-File: Chapters/Examples/Lexi/ex1.drawio.pdf Graphic file (type pdf)
-<use Chapters/Examples/Lexi/ex1.drawio.pdf>
-Package pdftex.def Info: Chapters/Examples/Lexi/ex1.drawio.pdf  used on input line 115.
-(pdftex.def)             Requested size: 500.77042pt x 181.79446pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
-
- []
-
-
-
-pdfTeX warning: pdflatex (file ./Chapters/Examples/Lexi/ex1.1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Examples/Lexi/ex1.1.drawio.pdf, id=160, 246.9225pt x 167.6664pt>
-File: Chapters/Examples/Lexi/ex1.1.drawio.pdf Graphic file (type pdf)
-<use Chapters/Examples/Lexi/ex1.1.drawio.pdf>
-Package pdftex.def Info: Chapters/Examples/Lexi/ex1.1.drawio.pdf  used on input line 122.
-(pdftex.def)             Requested size: 500.77042pt x 340.0547pt.
-[9 <./Chapters/Examples/Lexi/ex1.drawio.pdf> <./Chapters/Examples/Lexi/ex1.1.drawio.pdf>] [10] [11]
-
-pdfTeX warning: pdflatex (file ./Chapters/Examples/exalgo.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Examples/exalgo.drawio.pdf, id=194, 290.0436pt x 112.50029pt>
-File: Chapters/Examples/exalgo.drawio.pdf Graphic file (type pdf)
-<use Chapters/Examples/exalgo.drawio.pdf>
-Package pdftex.def Info: Chapters/Examples/exalgo.drawio.pdf  used on input line 248.
-(pdftex.def)             Requested size: 500.77042pt x 194.24342pt.
-
-
-pdfTeX warning: pdflatex (file ./Chapters/Examples/exec.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Chapters/Examples/exec.drawio.pdf, id=195, 204.765pt x 161.64389pt>
-File: Chapters/Examples/exec.drawio.pdf Graphic file (type pdf)
-<use Chapters/Examples/exec.drawio.pdf>
-Package pdftex.def Info: Chapters/Examples/exec.drawio.pdf  used on input line 254.
-(pdftex.def)             Requested size: 405.52965pt x 320.0935pt.
-) [12 <./Chapters/Examples/exalgo.drawio.pdf> <./Chapters/Examples/exec.drawio.pdf>] (./CM.aux)
+pdfTeX warning: pdflatex (file ./Exercices/EX4/ex4.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Exercices/EX4/ex4.drawio.pdf, id=93, 403.5075pt x 139.4811pt>
+File: Exercices/EX4/ex4.drawio.pdf Graphic file (type pdf)
+<use Exercices/EX4/ex4.drawio.pdf>
+Package pdftex.def Info: Exercices/EX4/ex4.drawio.pdf  used on input line 42.
+(pdftex.def)             Requested size: 555.65265pt x 192.05806pt.
+[5 <./Exercices/EX4/ex4.drawio.pdf>] [6]) [7] (./dw_1.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 20487 strings out of 474222
- 424656 string characters out of 5748732
- 1938975 words of memory out of 5000000
- 42413 multiletter control sequences out of 15000+600000
- 567033 words of font info for 71 fonts, out of 8000000 for 9000
+ 20685 strings out of 474222
+ 423316 string characters out of 5748732
+ 1946975 words of memory out of 5000000
+ 42599 multiletter control sequences out of 15000+600000
+ 566298 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,11n,107p,403b,879s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on CM.pdf (12 pages, 538205 bytes).
+ 102i,10n,107p,405b,1164s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on dw_1.pdf (7 pages, 333556 bytes).
 PDF statistics:
- 275 PDF objects out of 1000 (max. 8388607)
- 184 compressed objects within 2 object streams
+ 178 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 88 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

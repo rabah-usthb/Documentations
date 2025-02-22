@@ -1,0 +1,3 @@
+INT adr1, adr2 ;
+REAL x_1,y ;
+adr1=vale ; y=valer ;
