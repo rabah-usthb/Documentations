@@ -47,7 +47,8 @@ The practice of designing secure communication methods to protect information fr
 \vspace{0.25cm}
 \subsection{Cryptanalysis}
 \begin{prettyBox}{Cryptanalysis}{myblue}
-The study of breaking cryptographic systems to decode encrypted messages without knowing the secret key.
+The study of breaking cryptographic systems to decode encrypted messages without knowing the secret key by finding
+the key or part of it , the plain-text or part of it.
 \end{prettyBox}
 
 \vspace{0.25cm}
@@ -831,16 +832,91 @@ Where:
 \end{center}
 
 \newpage
-\subsection{Classical Cryptanalysis}
-\begin{prettyBox}{Cryptanalysis}{myblue}
-\begin{itemize}
-    \item \textbf{Brute Force:} A method of trying all possible keys until
-the correct one is found. It is particularly effective against monoalphabetic
-ciphers, especially those with a limited number of keys, such as the Affine
-cipher (where \(a\) must be coprime with 26).  
-    \item \textbf{Frequency Analysis:} The study of how frequently letters or
-groups of letters appear in a language. This technique was pioneered by
-Al-Kindi and is highly effective against monoalphabetic ciphers, 
-as they preserve the frequency distribution of the plaintext.
-\end{itemize}
+
+\begin{prettyBox}{Note}{red}
+\textbf{\underline{Euler's Totient Function:}}\\[0.15cm]
+Euler's Totient Function, denoted \(\phi(n)\), counts the number of integers up to \(n\) that are coprime to \(n\). For a positive integer \(n\) with the prime factorization:
+\[
+n = \prod_{i=1}^{m} p_i^{\alpha_i}
+\]
+where \(p_i\) are the distinct prime factors of \(n\) and \(\alpha_i\) are their respective exponents, the totient function is given by:
+\[
+\phi(n) = n \times \prod_{i=1}^{m} \left(1 - \frac{1}{p_i}\right)
+\]
+\vspace{0.25cm}
+
+\textbf{\underline{Extended Euclidean Algorithm:}}\\[0.15cm]
+The Extended Euclidean Algorithm is used to find the multiplicative inverse of \(a\) modulo \(b\) ,
+we first perform the normal Euclidean Algorithm till remainer = 1 then with substitution of the remainers from the bottom we express 1 
+as a linear combination of \(a\) and \(b\):
+   \[
+   1 = a \cdot x + b \cdot y
+   \]
+The coefficient \(x\) is the multiplicative inverse of \(a\) modulo \(b\)\\[0.1cm]
+If \(x < 0\) use modulo to get the final result. 
 \end{prettyBox}
+
+\vspace{0.75cm}
+
+
+\textbf{\underline{Example}}\\[0.15cm]
+
+Find the number of integers coprime to 12:  
+\[
+12 = 2^2 \times 3^1
+\]
+\[
+\phi(12) = 12 \times \left(1 - \frac{1}{2}\right) \times \left(1 - \frac{1}{3}\right) = \boxed{4}
+\]
+
+\vspace{0.25cm}
+
+Find the multiplicative inverse of \(5\) modulo \(12\):  
+
+Using the extended Euclidean algorithm:  
+\begin{center}
+    \(12 = 5 \times 2 + 2\)\\[0.1cm]
+    \(5 = 2 \times 2 + \boxed{1}\)\\[0.1cm]
+\end{center}
+
+Back-substituting to express \(1\) as a linear combination of \(5\) and \(12\):  
+\[
+1 = 5 - 2 \times 2
+\]
+Since \(2 = 12 - 5 \times 2\), we substitute:  
+\[
+1 = 5 - (2 \times (12 - 5 \times 2))
+\]
+\[
+1 = 5 - (2 \times 12 - 5 \times 4)
+\]
+\[
+1 = 5 + (-2) \times 12 + 5 \times 4
+\]
+\[
+1 = 5 \times \boxed{5} + 12 \times (-2)
+\]
+
+Thus, the modular inverse of \(5\) modulo \(12\) is \(\boxed{5}\).
+
+\newpage
+
+\subsection{Classical Cryptanalysis}  
+
+\begin{prettyBox}{Cryptanalysis}{myblue}  
+\begin{itemize}  
+    \item \textbf{Brute Force:} A method that systematically tries all possible keys until  
+          the correct one is found. It is particularly effective against monoalphabetic  
+          ciphers with a small keyspace, such as the Affine cipher (where \( a \) must be  
+          coprime with 26).  
+    \item \textbf{Frequency Analysis:} A technique that examines the frequency of letters  
+          or groups of letters in a given language. Pioneered by Al-Kindi, it is highly  
+          effective against monoalphabetic and polygraphic ciphers, as these ciphers tend  
+          to preserve the plaintext’s frequency distribution.  
+    \item \textbf{Kasiski Test:} A method for breaking the Vigenère cipher, a polyalphabetic  
+          cipher. It identifies repeated substrings in the ciphertext, assuming that structured  
+          languages cause the key to repeat at regular intervals. By analyzing the distances  
+          between these repetitions, one can determine the key length using common factors.  
+\end{itemize}  
+\end{prettyBox}  
+

@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage[a4paper, paperwidth=25cm, paperheight=25.5cm, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amssymb}
+\tcbuselibrary{skins, breakable, theorems}
+
+\definecolor{myblue}{HTML}{10C2C4}
+\definecolor{keyword}{HTML}{3C9ED1}
+\definecolor{func}{HTML}{8D06E0}
+\definecolor{op}{HTML}{E00606}
+\definecolor{comment}{HTML}{6F7E7B}
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+\lstdefinestyle{simple}{
+    basicstyle=\ttfamily,       % Use a monospaced font
+    numbers=left,               % Enable line numbers on the left
+    numberstyle=\tiny\color{gray}, % Make line numbers smaller and gray
+    stepnumber=1,               % Number every line
+    firstnumber=1,              % Start numbering from line 1
+    frame=single,               % Start numbering from line 1
+}
+
+\begin{document}
+\input{Exercices/EX1/ex1.tex} 
+\end{document}
