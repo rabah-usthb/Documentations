@@ -126,7 +126,7 @@ f'(x) = -e^{-x} - \frac{1}{x} = -(e^{-x} + \frac{1}{x})
 
 \vspace{0.5cm}
 
-Since \hspace{0.2cm}\( e^{-x} > 0 \) \hspace{0.2cm} and \hspace{0.2cm}\( \frac{1}{x} > 0 \) \hspace{0.2cm}for all \hspace{0.2cm}\( x \in D_f\) = \(]0, +\infty[ \)\hspace{0.2cm} \Rightarrow  \hspace{0.2cm}\( e^{-x} + \frac{1}{x} > 0 \).  
+Since \hspace{0.2cm}\( e^{-x} > 0 \) \hspace{0.2cm} and \hspace{0.2cm}\( \frac{1}{x} > 0 \) \hspace{0.2cm} \(\forall\) \hspace{0.2cm}\( x \in D_f\) = \(]0, +\infty[ \)\hspace{0.2cm} $\Rightarrow$  \hspace{0.2cm}\( e^{-x} + \frac{1}{x} > 0 \).  
 
 \vspace{0.2cm}
 
@@ -325,31 +325,653 @@ Since \(f\) is continuous and strictly monotonic in \(I = [4,5]\), and \(f(4) \c
 \textbf{\underline{Bisection}}\\[0.15cm]
 \textbf{\underline{Iterration 1}}
 \begin{center}
-    \(x_0 = \dfrac{b_0-a_0}{2} = \dfrac{1}{2}\)\\[0.4cm]
-    \(f(x_0) = -79.875\)\\[0.4cm]
-    \(f(x_0) . f(b_0) < 0 \Rightarrow [a_1,b_1] = [x_0,b_0]\)
+    \(x_0 = \dfrac{a_0+b_0}{2} = \dfrac{4+5}{2} = \dfrac{9}{2} = 4.5\)\\[0.4cm]
+    \(f(x_0) = f(4.5) = 11.125\)\\[0.4cm]
+    \(f(x_0) . f(a_0) < 0 \Rightarrow [a_1,b_1] = [a_0,x_0] =[4,4.5] \)
 \end{center}
 
-\vspace{1cm}
+\vspace{0.8cm}
 
 \textbf{\underline{Iterration 2}}
 \begin{center}
-    \(x_1 = \dfrac{b_0-x_0}{2} = \dfrac{9}{4}\)\\[0.4cm]
-    \(f(x_1) \approx -68.6\)\\[0.4cm]
-    \(f(x_1) . f(b_0) < 0 \Rightarrow [a_2,b_2] = [x_1,b_0]\)
+    \(x_1 = \dfrac{a_1+b_1}{2} = \dfrac{4+4.5}{2}= \dfrac{17}{4} = 4.25\)\\[0.4cm]
+    \(f(x_1) = f(4.25)  \approx -3.2\)\\[0.4cm]
+    \(f(x_1) . f(b_1) < 0 \Rightarrow [a_2,b_2] = [x_1,b_1] = [4.25,4.5]\)
 \end{center}
 
-\vspace{1cm}
+\vspace{0.8cm}
 
 \textbf{\underline{Iterration 3}}
 \begin{center}
-    \(x_2 = \dfrac{b_0-x_1}{2} = \dfrac{11}{8}\)\\[0.4cm]
+    \(x_2 = \dfrac{a_2+b_2}{2} = \dfrac{4.5+4.25}{2} =\dfrac{35}{8} = 4.375\)\\[0.4cm]
+    \(f(x_2) = f(4.375)  \approx 3.74\)\\[0.4cm]
+    \(f(x_2) . f(a_2) < 0 \Rightarrow [a_3,b_3] = [a_2,x_2] = [4.25,4.375]\)
+\end{center}
+
+\vspace{0.8cm}
+
+\textbf{\underline{Iterration 4}}
+\begin{center}
+    \(x_3 = \dfrac{a_3+b_3}{2} = \dfrac{4.25+4.375}{2} =\dfrac{69}{16} = 4.3125\)\\[0.4cm]
 \end{center}
 
 \vspace{1cm}
 
-\textbf{\underline{Solution Interval}}
+
+\textbf{\underline{Error Estimation}}
 \begin{center}
-   \( \boxed{x_3 - \epsilon \leq \alpha \leq \epsilon + x_3}\)\\[0.3cm]
+    \(E_3 = \dfrac{b-a}{2^{3+1}} = \dfrac{5-1}{2^4} = \dfrac{1}{16} = \boxed{0.0625 < \epsilon = 10^{-1}}\) 
 \end{center}
 
+\vspace{0.3cm}
+\textbf{\underline{Solution Interval}}
+\begin{center}
+   \(x_3 - \epsilon \leq \alpha \leq x_3 + \epsilon\)\\[0.1cm]
+   \(\boxed{4.3125 - 10^{-1} \leq \alpha \leq 4.3125 + 10^{-1}}\)\\[0.1cm]
+\end{center}
+
+\vspace{0.2cm}
+\textbf{\underline{Conclusion}}
+\begin{center}
+    \(\boxed{\alpha = \sqrt[3]{80} \approx x_3 = 4.3125}\)
+\end{center}
+
+\subsection{Fixed Point \(\varphi\)}
+\begin{prettyBox}{Fixed Point}{mygreen}
+Let \( f \) be a continuous function on \([a, b]\) and \(\exists!\alpha \in [a, b]\) such that:
+\[
+f(\alpha) = 0 \iff \varphi(\alpha) = \alpha.
+\]
+
+\vspace{0.15cm}
+
+This method consists of transforming the equation \( f(x) = 0 \) into:
+
+\begin{center}
+    \(\boxed{\varphi(x) = x}\)
+\end{center}
+
+\vspace{0.15cm}
+Our goal is to find a suitable function \(\varphi\) related to \( f \) , we will
+learn about the conditions on \(\varphi\) in the next section.\\[0.1cm]
+Graphically, this corresponds to the intersection of \(\varphi\) with the first bisector \( y = x \).
+\end{prettyBox}
+
+\vspace{0.5cm}
+\begin{prettyBox}{Note}{red}
+\begin{itemize}
+    \item A function \( f \) may have more than one possible choice for 
+\(\varphi\).
+    \item Each root of \( f \) corresponds to a different function \(\varphi\).
+\end{itemize}
+\end{prettyBox}
+
+\vspace{1cm}
+\textbf{\underline{Example}}
+\begin{center}
+\(f(x) = e^{x} - 2x - 1 = 0\)
+\end{center}
+
+\vspace{0.25cm}
+
+\begin{center}
+    \(e^{x} - 1 = 2x\)\\[0.1cm]
+    \(e^{x} = 2x + 1\)\\[0.1cm]
+    \(\boxed{x = \ln(2x+1) = \varphi_{1}}\)
+\end{center}
+
+\vspace{0.25cm}
+
+\begin{center}
+    \(-2x - 1 = -e^{x}\)\\[0.1cm]
+    \(-2x = -e^{x} + 1\)\\[0.1cm]
+    \(\boxed{x = \dfrac{e^{x} - 1}{2} = \varphi_{2}}\)
+\end{center}
+
+\vspace{0.75cm}
+\subsection{Conditions for Choosing the Right \(\varphi\)}
+\begin{prettyBox}{Conditions}{mygreen}
+As seen in the previous example, a function \( f \) can have more than one
+possible \(\varphi\). The necessary conditions for choosing a suitable 
+\(\varphi\) are:  
+\begin{itemize}
+    \item \textbf{Stability}
+    \item \textbf{Contraction}
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.6cm}
+\subsubsection{Stability}
+\begin{prettyBox}{Stability}{mygreen}
+Let \(\varphi\) be defined on \([a, b]\) , \(\varphi\) is stable if and only if :
+\begin{center}
+    \(\varphi([a, b]) \subseteq [a, b]\)
+\end{center}
+
+\vspace{0.1cm}
+To check whether this is true, we need the table of variations of \(\varphi\). 
+By differentiating it (\(\varphi'\)), we can determine the critical points and
+analyze the behavior of \(\varphi\). 
+Then, we need to verify if the maximum and minimum values of \(\varphi\) on 
+\([a, b]\) lie within \([a, b]\).
+\end{prettyBox}
+
+\vspace{0.5cm}
+\subsubsection{Contraction}
+\begin{prettyBox}{Contraction}{mygreen}
+Let \(\varphi\) be defined on \([a, b]\) , \(\varphi\) is contracted if 
+\(\exists k \in ]0,1[\) such that
+
+\begin{center}
+ \(|\varphi(x) - \varphi(y)| \leq k\cdot|x-y| \hspace{0.2cm} \forall x,y 
+\in[a,b]\)
+\end{center}
+
+\vspace{0.1cm}
+To check constraction of \(\varphi\) we use the following result :\\[0.1cm]
+If \(\varphi\) is defined in \([a,b]\) and \(\varphi \in C^{1} \) :
+\begin{align*}
+    \sup_{x \in [a, b]} |\varphi'(x)| < 1 &\Longrightarrow \text{Contractive}\\[0.1cm]
+    \sup_{x \in [a, b]} |\varphi'(x)| \geq 1 &\Longrightarrow \text{Not Contractive}
+\end{align*}
+\vspace{0.1cm}
+
+We need to study variation of \(\varphi'\) to retrieve
+the min and max in \([a,b]\) to get the sup value.
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+
+\subsection{Sequence}
+\begin{prettyBox}{Sequence}{mygreen}
+    Let \(\varphi\) be continuous, stable, and contractive on \([a,b]\), we have:\\[0.15cm]
+    \(\exists! \alpha \in [a,b]\) solution of \(\varphi(x) = x\).\\[0.1cm]
+\(\forall x_0 \in [a,b]\), the sequence \(x_n\) is defined \(\forall n \geq 0\) by:
+
+\begin{center}
+  \(x_{n+1} = \varphi(x_n)\), which converges to \(\alpha\).
+\end{center}
+\end{prettyBox}
+
+\subsection{Error Estimation}
+\begin{prettyBox}{Error Estimation}{mygreen}
+\begin{center}
+    \(\boxed{|x_n - \alpha| \leq \dfrac{k^{n}}{1-k} \cdot |x_1-x_0| \hspace{0.2cm} \forall n\geq 0}\)
+\end{center}
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\subsection{Proof}
+\subsubsection{Existence \& Uniqueness Of Solution \(\alpha\)}
+\begin{prettyBox}{Existence \& Uniqueness}{mygreen}
+\textbf{\underline{Existence:}}\\[0.2cm]
+Let the function \(h\) be continuous on \([a,b]\) : \(h(x) = \varphi(x) - x\).
+We have:
+
+\vspace{-0.6cm}
+\begin{center}
+\[
+\left\{
+\begin{array}{ll}
+   h(a) = \varphi(a) - a \geq 0 \\[0.1cm]
+   h(b) = \varphi(b) - b \leq 0
+\end{array}
+\right.
+\]
+\end{center}
+
+From the Intermediate Value Theorem (IVT), \(h\) has at least one root \(\alpha \in [a,b]\) such that  
+\(h(\alpha) = 0 \Longrightarrow \varphi(\alpha) = \alpha\).
+
+\vspace{0.4cm}
+
+\textbf{\underline{Uniqueness:}}\\[0.2cm]
+Suppose there exists another root \(\beta \in [a,b]\). Using the contraction property for
+\(\alpha\) and \(\beta\), we get:
+\vspace{0.1cm}
+\begin{center}
+    \(|\varphi(\beta) - \varphi(\alpha)| \leq k\cdot|\beta-\alpha|\)\\[0.2cm]
+    \(|\beta - \alpha| \leq k\cdot|\beta-\alpha|\)
+\end{center}
+Contradiction, since \(k \in ]0,1[\), then:
+\begin{center}
+      \(|\beta - \alpha| > k\cdot|\beta-\alpha|\)\\[0.1cm]
+\end{center}
+Therefore, the solution is unique.
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+
+\subsubsection{Convergence to \(\alpha\)}
+\begin{prettyBox}{Convergence}{mygreen}
+Since \(\varphi\) is stable and continuous on \([a,b]\), we have:
+\[
+\forall n \geq 0, \quad x_n \in [a,b]
+\]
+Assume that \(x_n\) converges to some limit \( l \in [a,b] \).
+
+\begin{center}
+    \(\lim\limits_{n \to \infty} x_{n+1} = \lim\limits_{n \to \infty} \varphi(x_n)\)\\[0.15cm]
+    \(l = \varphi(\lim\limits_{n \to \infty} x_n)\)\\[0.15cm]
+    \(\boxed{l = \varphi(l)}\) 
+\end{center}
+
+Thus, \( l = \alpha \).\\[0.15cm]
+Now, we will prove that \(x_n\) indeed converges to the fixed point \(\alpha\).  
+Since \(\varphi\) is contractive, we obtain:
+
+\begin{center}
+    \(|x_n - \alpha| = |\varphi(x_{n-1}) - \varphi(\alpha)| \leq k\cdot|x_{n-1}-\alpha|\)\\[0.15cm] 
+    \(|x_{n-1} - \alpha| = |\varphi(x_{n-2}) - \varphi(\alpha)| \leq k\cdot|x_{n-2}-\alpha|\)\\[0.15cm]
+    \(k\cdot|x_{n-1} - \alpha|  \leq k\cdot k\cdot|x_{n-2}-\alpha|\)\\[0.15cm]
+    \(k\cdot|x_{n-1} - \alpha|  \leq k^2\cdot|x_{n-2}-\alpha|\)\\[0.15cm]
+    \(|x_n - \alpha| \leq k\cdot|x_{n-1} - \alpha|  \leq k^2\cdot|x_{n-2}-\alpha| \leq \dots \leq k^n \cdot |x_0 - \alpha|\)\\[0.15cm]
+    \(\boxed{0 \leq |x_n - \alpha| \leq k^n \cdot |x_0 - \alpha|}\)
+\end{center}
+\vspace{0.15cm}
+Taking the limit as \( n \to \infty \), we note that \( k^n \to 0 \) since \( k < 1 \), therefore:
+
+\begin{center}
+    \(\lim\limits_{n \to \infty} |x_n - \alpha| = 0\)\\[0.1cm]
+    \(\boxed{\lim\limits_{n \to \infty} x_n = \alpha}\)
+\end{center}
+
+Thus, \( x_n \) converges to \( \alpha \).
+\end{prettyBox}
+
+\vspace{0.45cm}
+\subsubsection{Error}
+\begin{prettyBox}{Error}{mygreen}
+Since \(\varphi\) is contractive, we obtain:
+
+\begin{center}
+    \(|x_{n+1} - x_n| = |\varphi(x_n) - \varphi(x_{n-1})| \leq k\cdot|x_{n}- x_{n-1}|\)\\[0.15cm] 
+    \(|x_{n+1} - x_n| \leq k\cdot|x_{n} - x_{n-1}|  \leq k^2\cdot|x_{n-1}- x_{n-2}| \leq \dots \leq k^n \cdot |x_1 - x_0|\)\\[0.15cm]
+    \(\boxed{|x_{n+1} - x_{n}| \leq k^n \cdot |x_1 - x_0|} \hspace{1cm} \text{(1)}\)
+\end{center}
+
+Let \(m \gg n\):
+\begin{center}
+    \(|x_{m} - x_{n}| =  |x_m - x_{m-1} + x_{m-1} - \dots - x_{n+1} + x_{n+1} - x_n|\)
+\end{center}
+
+Using the triangle inequality \(|a+b| \leq |a| + |b|\), we get:
+
+\begin{center}
+    \(\boxed{|x_{m} - x_{n}| \leq  |x_m - x_{m-1}| + |x_{m-1} - x_{m-2}| + \dots + |x_{n+1} - x_n|} \hspace{1cm} \text{(2)}\)
+\end{center}
+
+Replacing (1) in (2):
+
+\begin{center}
+    \(|x_{m} - x_{n}| \leq k^{m-1} \cdot|x_1 - x_0| + k^{m-2}\cdot |x_{1} - x_{0}| + \dots + k^{n}\cdot| x_{1} - x_0|\)\\[0.15cm]
+    \hspace{-1.5cm} \(\leq [k^{m-1} + k^{m-2} + \dots + k^{n}] \cdot| x_{1} - x_0|\)\\[0.15cm]
+    \hspace{-2.9cm}\(\leq k^{n} \cdot \left[\sum\limits_{j=0}^{m-n-1} k^j \right] \cdot| x_{1} - x_0|\)
+\end{center}
+
+Using the geometric series formula for \(N\) terms with \(r \neq 1\):
+\begin{center}
+    \(S = a + a\cdot r + a\cdot r^2 + \dots + a\cdot r^{N-1}\)\\[0.2cm]
+    \(S = a\cdot \dfrac{1-r^{N}}{1-r}\)
+\end{center}
+
+Setting \(N = m-n\):
+
+\begin{center}
+    \(|x_m - x_n| \leq k^{n} \cdot \dfrac{1-k^{m-n}}{1-k} \cdot| x_{1} - x_0|\)
+\end{center}
+
+As \(m \to \infty\), \(x_m\) converges to \(\alpha\) and \(k^{m-n}\) converges to 0:
+
+\begin{center}
+    \(\boxed{|x_n - \alpha| \leq \dfrac{k^n}{1-k} \cdot| x_{1} - x_0|}\)
+\end{center}
+\end{prettyBox}
+
+\newpage
+
+\begin{prettyBox}{Note}{red}
+When a function \(\varphi\) does not satisfy the required conditions, there are two possible cases:  
+\begin{itemize}
+    \item \textbf{Incorrect interval \([a, b]\):} The function \(\varphi\) may have issues at one or both endpoints. In such cases, choosing a slightly smaller interval \([a', b']\) can resolve the problem.  
+    \item \textbf{Incorrect function \(\varphi\):} The issue may lie not in the interval but in the function itself when \(\displaystyle\inf_{x \in [a, b]} |\varphi'(x)| \geq 1\).  
+\end{itemize}
+
+
+Sometimes, there may be multiple functions \(\varphi\) that satisfy all the conditions on \([a, b]\). In such cases, we choose the one with the smallest contraction factor, as it ensures faster convergence:  
+
+\[
+\min \left( \sup_{x \in [a, b]} |\varphi_n'(x)| \right)
+\]
+\end{prettyBox}
+
+\vspace{0.75cm}
+
+\textbf{\underline{Example:}}
+\[
+f(x) = x + 1 - \frac{x\cdot e^{x}}{3} \hspace{0.4cm}, \quad D_f = \mathbb{R}
+\]
+
+\vspace{0.5cm}
+\textbf{\underline{Differentiation}}\\[0.2cm]
+\( f \) is continuous and differentiable on \( D_f \).
+
+\begin{center}
+    \begin{align*}
+        &f'(x) = 1 - \dfrac{1}{3}(e^{x}+x\cdot e^{x})\\[0.1cm] 
+        &\boxed{f'(x) = 1 - \dfrac{e^{x}}{3}(1+x)}
+    \end{align*}
+\end{center}
+
+\vspace{1cm}
+
+Since \( f' \) is ambiguous, we can't study its sign; therefore, we need to analyze \( f'' \).  
+\( f' \) is continuous and differentiable on \( D_f \).
+
+\begin{center}
+    \begin{align*}
+        &f''(x) =  - \dfrac{1}{3}(e^{x}+e^{x}+x\cdot e^{x})\\[0.1cm] 
+        &\boxed{f''(x) =  \dfrac{-e^{x}}{3}(2+x)}\\[0.1cm]
+        &\boxed{f''(-2) = 0}
+    \end{align*}
+\end{center}
+
+\newpage
+\textbf{\underline{Variation Table}}
+
+\begin{center}
+ \begin{tikzpicture}
+     \tkzTabInit{$x$/1, $f''(x)$/1 , $f'(x)$/2, $f'(x)$/1, $f(x)$/2}
+     {$-\infty$, $-2$, $\beta$, $+\infty$}
+    \tkzTabLine{,+,z,,-,}
+    \tkzTabVar{-/$1$ ,+/1.045, R/, -/$-\infty$}
+    \tkzTabLine{,,+,,z,-}
+    \tkzTabVar{-/$-\infty$, R/, +/$f(\beta)$, -/$-\infty$}
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.5cm}
+
+We evaluate \( f(x) \) at specific points starting from -2:
+
+\vspace{0.25cm}
+\begin{center}
+ \( f(-2) = -0.90 < 0, \quad f(-1) = 0.1226 > 0, \quad f(1) = 1.09 > 0, \quad f(2) = -1.92 < 0\)
+\end{center}
+
+\vspace{0.35cm}
+
+By the \textbf{Intermediate Value Theorem (IVT)}, since \( f(x) \) is monotonic continious and changes sign in the intervals \( [-2, -1] \) and \( [1,2] \), there exist two real roots:
+
+\begin{center}
+    \(\boxed{\alpha_1 \in [-2, -1], \quad \alpha_2 \in [1, 2]}\)
+\end{center}
+
+\vspace{1cm}
+\textbf{\underline{Finding \(\varphi\) Functions}}
+
+\begin{center}
+    \(x+1 - \dfrac{x\cdot e^{x}}{3} = 0\)\\[0.15cm]
+    \(\boxed{x =  \dfrac{x\cdot e^{x}}{3} -1  = \varphi_1}\)\\[0.75cm]
+    \(x (1 - \dfrac{e^{x}}{3}) + 1 = 0\)\\[0.2cm]
+    \(x (1 - \dfrac{e^{x}}{3})  = - 1\)\\[0.2cm]
+    \(\boxed{x = \dfrac{1}{\frac{e^{x}}{3}-1} = \dfrac{1}{\frac{e^{x} - 3}{3}} = \dfrac{3}{e^{x}-3} = \varphi_2}\)\\[0.15cm]
+\end{center}
+
+\newpage
+\begin{center}
+\(\dfrac{x\cdot e^{x}}{3} = x+1\)\\[0.2cm]
+\(\boxed{x = \dfrac{3(x+1)}{e^{x}} = \varphi_3}\)\\[0.5cm]
+\(e^{x} = \dfrac{3(x+1)}{x}\)\\[0.2cm]
+\(\boxed{x = \ln{\left(\dfrac{3(x+1)}{x}\right)} = \varphi_4}\)\\[0.2cm]
+\end{center}
+
+\vspace{1cm}
+\textbf{\underline{Checking \(\varphi_1\)}}\\[0.15cm]
+\textbf{\underline{\(D_{\varphi_1}\)}}
+\begin{center}
+    \( \boxed{D_{\varphi_1} = \mathbb{R}}\)
+\end{center}
+\textbf{\underline{\(\varphi_1'\)}}
+\begin{center}
+    \begin{align*}
+        &\varphi_1'(x) = \dfrac{1}{3} (x\cdot e^{x} + e^{x})\\[0.15cm]
+        &\boxed{\varphi_1'(x) = \dfrac{e^{x}}{3} (x + 1)}\\[0.15cm]
+        &\boxed{\varphi_1'(-1) = 0}
+    \end{align*}
+\end{center}
+
+\vspace{0.5cm}
+\textbf{\underline{\(\varphi_1''\)}}
+\begin{center}
+    \begin{align*}
+        &\varphi_1''(x) = \dfrac{1}{3} (e^{x}+e^{x}+x\cdot e^{x})\\[0.15cm]
+        &\boxed{\varphi_1''(x) = \dfrac{e^{x}}{3} (x + 2)}\\[0.15cm]
+        &\boxed{\varphi_1''(-2) = 0}
+    \end{align*}
+\end{center}
+
+\newpage
+\textbf{\underline{Variation Table}}
+
+\begin{center}
+ \begin{tikzpicture}
+     \tkzTabInit {$x$/1, $\varphi_1''(x)$/1 , $\varphi_1'(x)$/2, $\varphi_1'(x)$/1, $\varphi_1(x)$/2}
+     {$-2$, $-1$, $1$,$2$}
+    \tkzTabLine{z,,,+,,}
+    \tkzTabVar{-/$-0.045$ ,+/$0$, +/$1.81$, +/$7.98$}
+    \tkzTabLine{,-,z,,+,}
+    \tkzTabVar{+/$-1.09$, -/$-1.12$,+/-0.09, +/$5.9$}
+\end{tikzpicture}
+\end{center}
+\vspace{0.25cm}
+
+\(\displaystyle\inf_{x \in [1, 2]} |\varphi_1'(x)| = 1.81 > 1 \Longrightarrow \varphi_1\) is disqualified 
+for the intervalle [1,2]
+
+\vspace{0.5cm}
+\(\varphi_1([-2,-1]) \subseteq [-2,-1] \Longrightarrow \varphi_1\) is stable on \([-2,-1]\)\\[0.1cm]
+\( \varphi_1 \in C^{1} \text{ and } \displaystyle\sup_{x \in [-2, -1]} |\varphi_1'(x)| = 0.045 < 1 \Longrightarrow \varphi_1\) is contractive on \([-2,-1]\)
+
+\begin{center}
+    \(\boxed{\varphi_1 \text{ Corresponds to the root } \alpha_1 \in [-2,-1]}\)
+\end{center}
+
+\vspace{1cm}
+\textbf{\underline{Checking \(\varphi_2\)}}\\[0.15cm]
+\textbf{\underline{\(D_{\varphi_2}\)}}
+\begin{center}
+    \( \boxed{D_{\varphi_2} = \mathbb{R} - \{\ln{(3)}\}}\)
+\end{center}
+
+\textbf{\underline{\(\varphi_2'\)}}
+\begin{center}
+    \(\boxed{\varphi_2'(x) = \dfrac{-3e^{x}}{(e^{x}-3)^{2}}}\)\\[0.45cm]
+    \(\boxed{\forall x \in D_\varphi_2 \hspace{0.4cm} \varphi_2' < 0}\)
+    \end{center}
+
+\newpage
+\textbf{\underline{\(\varphi_2''\)}}
+\begin{center}
+    \begin{align*}
+        &\varphi_2''(x) = -3 \cdot \dfrac{e^{x}(e^x - 3)^2 - e^{x}(2e^x(e^x-3)^{2-1})}{(e^{x}-3)^4}\\[0.15cm]
+        &\varphi_2''(x) = -3 \cdot \dfrac{e^{x}(e^x - 3) ((e^x - 3) - 2e^{x})}{(e^{x}-3)^4}\\[0.15cm]
+        &\varphi_2''(x) = -3 \cdot \dfrac{e^{x} (- 3 -e^{x})}{(e^{x}-3)^3}\\[0.15cm]
+        &\boxed{\varphi_2''(x) = 3 \cdot \dfrac{e^{x} (3 + e^{x})}{(e^{x}-3)^3}}\\[0.15cm]
+    \end{align*}
+\end{center}
+
+\begin{center}
+    \(\boxed{\forall x > \ln(3) \hspace{0.3cm} \varphi_2'' > 0}\)\\[0.15cm]
+    \(\boxed{\forall x < \ln(3) \hspace{0.3cm} \varphi_2'' < 0}\)
+\end{center}
+
+\vspace{1cm}
+\textbf{\underline{Variation Table}}
+
+\begin{center}
+ \begin{tikzpicture}
+     \tkzTabInit {$x$/1, $\varphi_2''(x)$/1 , $\varphi_2'(x)$/2, $\varphi_2'(x)$/1, $\varphi_2(x)$/2}
+     {$-2$, $-1$, $1$,$\ln(3)$,$2$}
+    \tkzTabLine{,,-,,,,d,+,}
+    \tkzTabVar{+/$-0.04$ ,-/$-0.15$,-/$-102.75$, -D-/ $-\infty$ / $-\infty$ , +/$-1.15$ }
+    \tkzTabLine{,,-,,,,d,-,}
+    \tkzTabVar{+/$-1.04$ ,-/$-1.35$,-/$-10.6$, -D+/ $-\infty$ / $+\infty$ , -/$0.68$ }
+\end{tikzpicture}
+\end{center}
+\vspace{0.25cm}
+
+\vspace{0.25cm}
+
+\(\displaystyle\inf_{x \in [1,\ln{(3)}[} |\varphi_2'(x)| = 102.75 > 1 \Longrightarrow \varphi_2\) is disqualified 
+for the intervalle \([1,\ln{(3)}[\)\\[0.15cm]
+\(\displaystyle\inf_{x \in ]\ln{(3)},2]} |\varphi_2'(x)| = 1.15 > 1 \Longrightarrow \varphi_2\) is disqualified 
+for the intervalle \(]\ln{(3)},2]\)
+
+\vspace{0.5cm}
+\(\varphi_2([-2,-1]) \subseteq [-2,-1] \Longrightarrow \varphi_2\) is stable on \([-2,-1]\)\\[0.1cm]
+\( \varphi_2 \in C^{1} \text{ and } \displaystyle\sup_{x \in [-2, -1]} |\varphi_2'(x)| = 0.15 < 1 \Longrightarrow \varphi_2\) is contractive on \([-2,-1]\)
+
+\begin{center}
+    \(\boxed{\varphi_2 \text{ Corresponds to the root } \alpha_1 \in [-2,-1]}\)
+\end{center}
+
+\newpage
+Both \(\varphi_1\) and \(\varphi_2\) satisfy the conidtion on [-2,-1] , we will choose the 
+\(\varphi\) with the smallest contraction factor
+\begin{center}
+    \(\min \left( \displaystyle\sup_{x \in [-2, -1]} |\varphi_1'(x)| ,  \displaystyle\sup_{x \in [-2, -1]} |\varphi_2'(x)|\right) = 
+\min \left( 0.045  , 0.15 \right) = 0.045 =
+    \displaystyle\sup_{x \in [-2, -1]} |\varphi_1'(x)| \)
+\end{center}
+
+\vspace{1cm}
+\textbf{\underline{Checking \(\varphi_3\)}}\\[0.15cm]
+\textbf{\underline{\(D_{\varphi_3}\)}}
+\begin{center}
+    \( \boxed{D_{\varphi_3} = \mathbb{R}}\)
+\end{center}
+
+\textbf{\underline{\(\varphi_3'\)}}
+\begin{align*}
+    &\varphi_3'(x) = 3\cdot \dfrac{e^{x} - (x+1)\cdot e^{x}}{e^{2x}}\\[0.35cm]
+    &\varphi_3'(x) = 3\cdot \dfrac{1 - (x+1)}{e^{x}}\\[0.35cm]
+    &\boxed{\varphi_3'(x) = \dfrac{-3x}{e^{x}}}\\[0.25cm]
+    &\boxed{\varphi_3'(0) = 0 }\\[0.15cm]
+    &\boxed{\forall x > 0 \hspace{0.3cm} \varphi_3' < 0}\\[0.15cm]
+    &\boxed{\forall x < 0 \hspace{0.3cm} \varphi_3' > 0}
+\end{align*}
+
+\vspace{0.5cm}
+\textbf{\underline{\(\varphi_3''\)}}
+\begin{center}
+    \begin{align*}
+   &\varphi_3''(x) = -3 \cdot \dfrac{e^{x} - xe^{x}}{e^{2x}}\\[0.35cm]
+   &\varphi_3''(x) = -3 \cdot \dfrac{1 - x}{e^{x}}\\[0.35cm]
+   &\boxed{\varphi_3''(x) =  \dfrac{3(x-1)}{e^{x}}}\\[0.25cm]
+   &\boxed{\varphi_3''(1) =  0}\\[0.15cm]
+   &\boxed{\forall x > 1 \hspace{0.3cm} \varphi_3'' > 0}\\[0.15cm]
+   &\boxed{\forall x < 1 \hspace{0.3cm} \varphi_3'' < 0}
+    \end{align*}
+\end{center}
+
+\newpage
+\textbf{\underline{Variation Table}}
+
+\begin{center}
+ \begin{tikzpicture}
+     \tkzTabInit {$x$/1, $\varphi_3''(x)$/1 , $\varphi_3'(x)$/2, $\varphi_3'(x)$/1, $\varphi_3(x)$/2}
+     {$-2$, $-1$,$0$,$1$,$1.75$,$2$}
+    \tkzTabLine{,,-,,,,z,,+,}
+    \tkzTabVar{+/$44.33$ ,-/$8.15$,-/$0$,-/$-1.1$,+/$-0.91$ ,+/$-0.81$ }
+    \tkzTabLine{,,+,,z,,,-,}
+    \tkzTabVar{-/$22.16$ ,+/$0$,+/$3$,-/$2.2$,-/$1.43$, -/$1.21$ }
+\end{tikzpicture}
+\end{center}
+\vspace{0.25cm}
+
+\vspace{0.25cm}
+
+\(\displaystyle\inf_{x \in [-2,-1]} |\varphi_3'(x)| = 8.15 > 1 \Longrightarrow \varphi_3\) is disqualified 
+for the intervalle [-2,-1]\\[0.15cm]
+\(\displaystyle\inf_{x \in [1,2]} |\varphi_3'(x)| = 0.81 < 1 \Longrightarrow \varphi_3\) is qualified 
+for the intervalle [1,2]
+
+\vspace{0.5cm}
+\(\varphi_3([1,2]) \nsubseteq [1,2] \Longrightarrow \varphi_3\) is not stable on \([1,2]\)\\[0.1cm]
+\( \varphi_3 \in C^{1} \text{ and } \displaystyle\sup_{x \in [1, 2]} |\varphi_3'(x)| = 1.1 > 1 \Longrightarrow \varphi_3\) is not contractive on \([1,2]\)
+
+\vspace{0.5cm}
+The issue is on the extremity 1 , we'll take a new intervalle [1.75,2] :\\[0.15cm]
+\(\varphi_3([1.75,2]) \subseteq [1.75,2] \Longrightarrow \varphi_3\) is stable on \([1.75,2]\)\\[0.1cm]
+\( \varphi_3 \in C^{1} \text{ and } \displaystyle\sup_{x \in [1, 2]} |\varphi_3'(x)| = 0.91 < 1 \Longrightarrow \varphi_3\) is contractive on \([1.75,2]\)
+
+
+\begin{center}
+    \(\boxed{\varphi_3 \text{ Corresponds to the root } \alpha_2 \in [1.75,2]}\)
+\end{center}
+
+\vspace{1cm}
+
+\textbf{\underline{Checking \(\varphi_4\)}}\\[0.15cm]
+\textbf{\underline{\(D_{\varphi_4}\)}}
+\begin{center}
+    \( \boxed{D_{\varphi_4} = ]0,+\infty[}\)
+\end{center}
+
+\textbf{\underline{\(\varphi_4'\)}}
+\begin{align*}
+    &\varphi_4'(x) = \dfrac{3\cdot \left(\frac{x+1}{x}\right)'}{3 \cdot \frac{x+1}{x}}\\[0.35cm]
+    &\varphi_4'(x) = \dfrac{\frac{x - (x+1)}{x^2} }{\frac{x+1}{x}}\\[0.35cm]
+    &\varphi_4'(x) = \dfrac{\frac{-1}{x}}{x+1}\\[0.35cm]
+    &\boxed{\varphi_4'(x) = \dfrac{-1}{x(x+1)}}\\[0.35cm]
+    &\boxed{\forall x \in D_{\varphi_4} \hspace{0.3cm} \varphi_4' < 0}
+\end{align*}
+
+\vspace{0.5cm}
+\textbf{\underline{\(\varphi_4''\)}}
+\begin{center}
+    \begin{align*}
+   &\boxed{\varphi_4''(x) =  \dfrac{2x+1}{x^{2}+x}}\\[0.25cm]
+   &\boxed{\forall x \in D_{\varphi_4} \hspace{0.3cm} \varphi_4'' > 0}
+    \end{align*}
+\end{center}
+
+\newpage
+\textbf{\underline{Variation Table}}
+
+\begin{center}
+ \begin{tikzpicture}
+     \tkzTabInit {$x$/1, $\varphi_4''(x)$/1 , $\varphi_4'(x)$/2, $\varphi_4'(x)$/1, $\varphi_4(x)$/2}
+{$0$,$1.45$,$1.75$,$2$}
+    \tkzTabLine{d,,+,}
+    \tkzTabVar{D-/$-\infty$ ,+/$-0.28$,+/$-0.2$,+/$-0.16$}
+    \tkzTabLine{d,,-,}
+    \tkzTabVar{D+/$+\infty$ ,-/$1.62$,-/$1.55$,-/$1.5$}
+\end{tikzpicture}
+\end{center}
+\vspace{0.25cm}
+
+\vspace{0.25cm}
+
+\(\displaystyle\inf_{x \in [1.75,2]} |\varphi_4'(x)| = 0.16 < 1 \Longrightarrow \varphi_4\) is qualified 
+for the intervalle [1.75,2]
+
+\vspace{0.5cm}
+\(\varphi_4([1.75,2]) \nsubseteq [1.75,2] \Longrightarrow \varphi_4\) is not stable on \([1.75,2]\)\\[0.1cm]
+\( \varphi_4 \in C^{1} \text{ and } \displaystyle\sup_{x \in [1.75, 2]} |\varphi_4'(x)| = 0.2 < 1 \Longrightarrow \varphi_4\) is contractive on \([1,2]\)
+
+\vspace{0.5cm}
+The issue is on the extremity 1.75 , we'll take a new intervalle [1.45,2] :\\[0.15cm]
+\(\varphi_4([1.45,2]) \subseteq [1.45,2] \Longrightarrow \varphi_4\) is stable on \([1.45,2]\)\\[0.1cm]
+\( \varphi_4 \in C^{1} \text{ and } \displaystyle\sup_{x \in [1.45, 2]} |\varphi_4'(x)| = 0.28 < 1 \Longrightarrow \varphi_4\) is contractive on \([1.45,2]\)
+
+
+\begin{center}
+    \(\boxed{\varphi_4 \text{ Corresponds to the root } \alpha_2 \in [1.45,2]}\)
+\end{center}
+
+We choose \(\varphi_4\) over \(\varphi_3\) because its contraction factor is smaller
