@@ -1,0 +1,75 @@
+\documentclass[fleqn]{article}
+\usepackage{tikz,tcolorbox}
+\usepackage{array} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage[a4paper, paperwidth=25cm, paperheight=25.5cm, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+
+\lstdefinestyle{pythonstyle}{
+    language=python,                    % Language set to Python
+    basicstyle=\ttfamily\footnotesize,   % Change basic font size
+    keywordstyle=\color{blue}\bfseries, % Different keyword style
+    stringstyle=\color{red},         % Different string color
+    commentstyle=\color{green!60!black}\itshape, % Adjust comment color
+    numbers=left,                       % Line numbers on the left
+    numberstyle=\tiny\color{gray},      % Smaller number font and color
+    stepnumber=1,                       % Number each line
+    frame=single,                       % Single frame around code
+    tabsize=4,                          % Adjust tab size
+    showstringspaces=false,             % Do not show spaces in strings
+    captionpos=b,% Position of caption
+    breaklines=true,
+    inputencoding=utf8
+}
+
+
+\pgfplotsset{compat=1.18}
+\usepackage{makecell}
+\usetikzlibrary{patterns}
+\definecolor{greenPlot}{HTML}{14C877}
+\definecolor{orangePlot}{HTML}{EA6E12}
+\definecolor{purplePlot}{HTML}{4C12EA}
+\definecolor{blueArea}{HTML}{10D9EE}
+\definecolor{redPlot}{HTML}{ED014A}
+\definecolor{myblue}{HTML}{338AC7}
+\definecolor{p}{HTML}{D813E7}
+\definecolor{y}{HTML}{F5F806}
+\usepackage{amssymb}
+\setlength{\parindent}{0pt}
+\setcellgapes{3pt}  % Adjust padding as needed
+\makegapedcells
+\tcbuselibrary{skins, breakable, theorems}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{xcolor}
+\setlength{\mathindent}{8cm}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   
+  colframe=#2!60!black,  
+  coltitle=white,        
+  fonttitle=\bfseries\Large,
+  title=#1,              
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, 
+}
+
+\begin{document}
+\renewcommand{\arrayrulewidth}{0.75mm} % Set line thickness
+\setlength{\tabcolsep}{5.5pt} % Set horizontal padding
+\renewcommand{\arraystretch}{1.5} % Set vertical padding (1.0 is default)
+\input{Chapters/basics.tex}
+\input{Chapters/np.tex}
+\input{Chapters/plt.tex}
+\end{document}
