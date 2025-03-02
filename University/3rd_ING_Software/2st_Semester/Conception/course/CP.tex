@@ -44,6 +44,36 @@
     captionpos=b
 }
 
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\lstdefinestyle{javaStyle}{
+    language=Java,
+    basicstyle=\ttfamily\footnotesize,   % Font style and size
+    numbers=left,                       % Line numbers on the left
+    numberstyle=\tiny\color{gray},       % Style for line numbers
+    stepnumber=1,                        % Line number step
+    numbersep=5pt,                       % Distance of numbers from the code
+    backgroundcolor=\color{white},       % Background color of the listing
+    showspaces=false,                    % Don't show spaces
+    showstringspaces=false,              % Don't show spaces in strings
+    showtabs=false,                      % Don't show tab characters
+    frame=single,                        % Add a frame around the code
+    rulecolor=\color{black},             % Color of the frame
+    tabsize=2,                           % Tab size
+    captionpos=b,                        % Position of the caption (bottom)
+    breaklines=true,                     % Automatically break long lines
+    breakatwhitespace=true,              % Break at white space
+    escapeinside={\%*}{*)},              % Allows comments in LaTeX inside the listing
+    keywordstyle=\color{blue},           % Keyword color
+    commentstyle=\color{green},          % Comment color
+    stringstyle=\color{red},             % String color
+}
+
+
 
 \lstdefinestyle{pythonstyle2}{
     language=python,                    % Language set to Python

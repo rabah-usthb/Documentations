@@ -27,39 +27,34 @@
 }
 
 \usepackage{listings}
-% Define the style for C code
-\lstdefinestyle{cstyle}{
-    language=C,
-    basicstyle=\ttfamily\small,
-    keywordstyle=\color{blue}\bfseries,
-    stringstyle=\color{red},
-    commentstyle=\color{green!50!black}\itshape,
-    numbers=left,
-    numberstyle=\tiny\color{gray},
-    stepnumber=1,
-    breaklines=true,
-    frame=tb,
-    tabsize=4,
-    showstringspaces=false,
-    captionpos=b
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
 }
 
-
-\lstdefinestyle{pythonstyle2}{
-    language=python,                    % Language set to Python
-    basicstyle=\ttfamily\footnotesize,   % Change basic font size
-    keywordstyle=\color{blue}\bfseries, % Different keyword style
-    stringstyle=\color{red},         % Different string color
-    commentstyle=\color{green!60!black}\itshape, % Adjust comment color
+\lstdefinestyle{javaStyle}{
+    language=Java,
+    basicstyle=\ttfamily\footnotesize,   % Font style and size
     numbers=left,                       % Line numbers on the left
-    numberstyle=\tiny\color{gray},      % Smaller number font and color
-    stepnumber=1,                       % Number each line
-    frame=single,                       % Single frame around code
-    tabsize=4,                          % Adjust tab size
-    showstringspaces=false,             % Do not show spaces in strings
-    captionpos=b,% Position of caption
-    breaklines=true,
-    inputencoding=utf8
+    numberstyle=\tiny\color{gray},       % Style for line numbers
+    stepnumber=1,                        % Line number step
+    numbersep=5pt,                       % Distance of numbers from the code
+    backgroundcolor=\color{white},       % Background color of the listing
+    showspaces=false,                    % Don't show spaces
+    showstringspaces=false,              % Don't show spaces in strings
+    showtabs=false,                      % Don't show tab characters
+    frame=single,                        % Add a frame around the code
+    rulecolor=\color{black},             % Color of the frame
+    tabsize=2,                           % Tab size
+    captionpos=b,                        % Position of the caption (bottom)
+    breaklines=true,                     % Automatically break long lines
+    breakatwhitespace=true,              % Break at white space
+    escapeinside={\%*}{*)},              % Allows comments in LaTeX inside the listing
+    keywordstyle=\color{blue},           % Keyword color
+    commentstyle=\color{green},          % Comment color
+    stringstyle=\color{red},             % String color
 }
 
 
@@ -67,4 +62,5 @@
 
 \begin{document}
 \input{Exercices/EX1/ex1.tex} 
+\input{Exercices/EX2/ex2.tex} 
 \end{document}
