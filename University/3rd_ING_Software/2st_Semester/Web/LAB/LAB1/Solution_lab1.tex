@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage[a4paper, paperwidth=25cm, paperheight=25.5cm, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}
+
+  \vspace{0.75cm}
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\lstdefinestyle{htmlstyle}{
+    language=HTML,                    % Set language to HTML
+    basicstyle=\ttfamily\footnotesize, % Basic font style
+    keywordstyle=\color{blue}\bfseries, % Keywords (tags) in blue and bold
+    stringstyle=\color{red},           % String attributes (values) in red
+    commentstyle=\color{green!60!black}\itshape, % Comments in green italic
+    numbers=left,                      % Line numbers on the left
+    numberstyle=\tiny\color{gray},      % Smaller number font and gray color
+    stepnumber=1,                       % Number each line
+    frame=single,                       % Single frame around code
+    tabsize=4,                          % Adjust tab size
+    showstringspaces=false,             % Do not show spaces in strings
+    captionpos=b,                        % Position of caption
+    breaklines=true,                     % Enable line breaking
+    inputencoding=utf8                    % UTF-8 encoding
+}
+\begin{document}
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}1}
+
+\input{Code/EX1/ex1.tex}
+\input{Code/EX2/ex2.tex}
+\input{Code/EX3/ex3.tex}
+\input{Code/EX4/ex4.tex}
+\input{Code/EX5/ex5.tex}
+\input{Code/EX6/ex6.tex}
+\input{Code/EX7/ex7.tex}
+\input{Code/EX8/ex8.tex}
+\input{Code/EX9/ex9.tex}
+\input{Code/EX10/ex10.tex}
+\end{document}
