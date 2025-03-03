@@ -1,0 +1,1 @@
+select distinct idsportifconseiller from sportifs where idsportifconseiller is not null; 

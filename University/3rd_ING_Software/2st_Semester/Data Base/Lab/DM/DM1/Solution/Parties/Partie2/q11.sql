@@ -1,0 +1,1 @@
+delete from gymnases where surface > 400;

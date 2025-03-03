@@ -1,0 +1,1 @@
+select ville ,avg(surface) moyenneSuperficie from gymnases group by ville;

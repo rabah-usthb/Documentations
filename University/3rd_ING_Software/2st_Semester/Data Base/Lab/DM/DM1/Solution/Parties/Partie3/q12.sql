@@ -1,0 +1,1 @@
+select idsportif , nom , prenom from sportifs where age between 20 and 30;
