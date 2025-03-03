@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1740816918.15349 "PY.tex" "PY.pdf" "PY" 1740816921.0953 0
+["pdflatex"] 1740997674.12918 "PY.tex" "PY.pdf" "PY" 1740997676.93078 0
   "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -229,6 +229,8 @@
   "Chapters/Code/Basics/Struct/synst.py" 1740785922.28919 321 6d4ab287418b87ae2ad9a9cafe056d43 ""
   "Chapters/Code/Basics/Types/NonPrim.py" 1740722693.85324 267 3a4574683e8f8080759eedc0d7a52f17 ""
   "Chapters/Code/Basics/Types/prim.py" 1740721948.21919 134 3371e4250f5bf32c73b68dd48f2b80ae ""
+  "Chapters/Code/DIC/dic.py" 1740997657.96237 537 5d337dbd641c1fec186955979b816590 ""
+  "Chapters/Code/DIC/ex1.py" 1740997610.73737 514 c5522e6792152bd3c49ddd34057e917d ""
   "Chapters/Code/NP/Array/ar.py" 1740789601.39348 94 ee54cdb7cf901251f1ff607ed1668c73 ""
   "Chapters/Code/NP/Array/arr.py" 1740794016.53182 196 23bb515ac9fb5ac68b30eb7175b5e856 ""
   "Chapters/Code/NP/Array/lin.py" 1740793811.4528 232 f98de660f2f963dc027d7d3e9290c8e1 ""
@@ -254,14 +256,16 @@
   "Chapters/ScreenShot/Basics/Struct/stOutput.png" 1740785668.96217 6548 14640db951fa542fd416518928335b9c ""
   "Chapters/ScreenShot/Basics/Types/NonPrimOutput.png" 1740722833.20925 18579 f130386c7183e486af350d5f3d9f53a7 ""
   "Chapters/ScreenShot/Basics/Types/primOutput.png" 1740722862.27126 17933 049af29a54aa91fb14d84f6ee81af604 ""
+  "Chapters/ScreenShot/DIC/dic.png" 1740996458.27228 13241 c98ce00942edc47cb28e9d308949e87e ""
   "Chapters/ScreenShot/NP/Array/arOutput.png" 1740794044.42782 15312 3e0f7480ac6cc1316b5a4f27fbf0f333 ""
   "Chapters/ScreenShot/NP/Array/linOutput.png" 1740793965.95481 45885 2f08f270883fe7a4004562b3b00fe016 ""
   "Chapters/ScreenShot/NP/Array/sliceOutput.png" 1740795963.71297 21433 e4024a26945df8416e673966b07cf0f1 ""
   "Chapters/basics.tex" 1740798857.42519 10947 2d6a07bfd41427a8379fccb92ac5691c ""
+  "Chapters/dichotomy.tex" 1740997528.61536 1241 dd7a1a284d620357d694d7a30b379a05 ""
   "Chapters/np.tex" 1740796882.94004 5029 6a1b676b3cc87dd983d00f573417ebe7 ""
   "Chapters/plt.tex" 1740816917.14745 6022 d83b7da47be9142b54c459b6322b53a1 ""
-  "PY.aux" 1740816920.92145 6160 73faca20fb4dcc05d162d413858fcbc9 "pdflatex"
-  "PY.tex" 1740798990.1102 2391 654999774f50f9b5bdebf06520d310cd ""
+  "PY.aux" 1740997676.77137 6362 c96983f0e515772027d4f25d34e58068 "pdflatex"
+  "PY.tex" 1740995494.0902 2422 66e91c9f7ec28da2b6a4c1ed40f9ad09 ""
   (generated)
   "PY.aux"
   "PY.log"
