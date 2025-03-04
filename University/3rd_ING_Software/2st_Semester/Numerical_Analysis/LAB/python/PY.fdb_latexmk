@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1741073006.37286 "PY.tex" "PY.pdf" "PY" 1741073009.95309 0
+["pdflatex"] 1741076510.03478 "PY.tex" "PY.pdf" "PY" 1741076513.18085 0
   "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -231,8 +231,8 @@
   "Chapters/Code/Basics/Types/prim.py" 1740721948.21919 134 3371e4250f5bf32c73b68dd48f2b80ae ""
   "Chapters/Code/DIC/dic.py" 1741070610.67159 531 008b8f69303b68f06550334b711a545a ""
   "Chapters/Code/DIC/ex1.py" 1741030397.25841 541 439ef5f5902326ec11097600cfc72b41 ""
-  "Chapters/Code/FIX/ex1.py" 1741071937.8037 473 dbea6da9d0a9f4702741865cc2ec7884 ""
-  "Chapters/Code/FIX/fix.py" 1741071708.94768 436 3870cfd0ea82b4c64f4defa4ffcea20a ""
+  "Chapters/Code/FIX/ex1.py" 1741076489.15453 473 ca807299674d2172f348852409756583 ""
+  "Chapters/Code/FIX/fix.py" 1741076499.98853 436 5fd1e90143dedebddd04befd295ba713 ""
   "Chapters/Code/NP/Array/ar.py" 1740789601.39348 94 ee54cdb7cf901251f1ff607ed1668c73 ""
   "Chapters/Code/NP/Array/arr.py" 1740794016.53182 196 23bb515ac9fb5ac68b30eb7175b5e856 ""
   "Chapters/Code/NP/Array/lin.py" 1740793811.4528 232 f98de660f2f963dc027d7d3e9290c8e1 ""
@@ -270,7 +270,7 @@
   "Chapters/fix.tex" 1741073004.51878 1559 d01ba846b7094861bb2600cf8e7ef28d ""
   "Chapters/np.tex" 1740796882.94004 5029 6a1b676b3cc87dd983d00f573417ebe7 ""
   "Chapters/plt.tex" 1741070363.08657 8883 f989aed78aea1b5679047b86bc1d719f ""
-  "PY.aux" 1741073009.75178 6768 a2c9f077a8821529c234990c8a662dcc "pdflatex"
+  "PY.aux" 1741076513.01953 6768 a2c9f077a8821529c234990c8a662dcc "pdflatex"
   "PY.tex" 1741072149.78671 2447 e5ade19f8af5b5540c3a741ba8f72aae ""
   (generated)
   "PY.aux"

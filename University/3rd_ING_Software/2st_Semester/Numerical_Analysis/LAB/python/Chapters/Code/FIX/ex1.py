@@ -13,7 +13,7 @@ def Fixed_Point(eps,k,x_0,phi_function,max_iter=100):
     
     n = 0
 
-    while (error:= ErrorEstimation(x_0,x_1,k,n) > eps and n<= max_iter):
+    while (error:= ErrorEstimation(x_0,x_1,k,n)) > eps and n<= max_iter:
         x_n = phi_function(x_n)
         n = n+1
 
