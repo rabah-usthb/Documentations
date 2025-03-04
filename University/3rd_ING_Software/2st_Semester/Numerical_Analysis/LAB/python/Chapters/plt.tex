@@ -139,4 +139,70 @@ Each call to \texttt{subplot()} activates a different subplot within the figure.
     \includegraphics[height=0.35\textheight]{Chapters/Code/PLT/fig2.pdf}
 \end{center}
 
+\newpage
+
+\begin{prettyBox}{Note}{red}
+We can remove the \(x , y\) axes of an axis from showing by using the \texttt{plt.axis('off')} function.
+\end{prettyBox}
+
+\vspace{1cm}
+
+\section{Drawing Tables}
+\begin{prettyBox}{Table}{myblue}
+To draw a table on an axis, we use the \texttt{table()} function, which returns a \texttt{Table} object.\\[0.1cm]
+\texttt{the\_table = table(cellText, colLabels=None, rowLabels=None, cellLoc='right', fontsize=auto, colWidths=None, loc='bottom')}
+\begin{itemize}
+    \item \textbf{cellText}: A 2D list of strings that holds the content of each cell.
+    \item \textbf{colLabels} (optional, default: \texttt{None}): A list of strings for the column headers.
+    \item \textbf{rowLabels} (optional, default: \texttt{None}): A list of strings for the row headers.
+    \item \textbf{cellLoc} (optional, default: \texttt{'right'}): Alignment of cell content. Possible values: \texttt{'right'}, \texttt{'left'}, \texttt{'center'}.
+    \item \textbf{fontsize} (optional, default: \texttt{auto}): The font size of the table text.
+    \item \textbf{colWidths} (optional): A list of floats representing the width of each column.
+    \item \textbf{loc} (optional, default: \texttt{'bottom'}): The position of the table relative to the axes.
+\end{itemize}
+
+\vspace{0.15cm}
+
+Some Function of \texttt{Table} object
+
+\begin{itemize}
+    \item \texttt{the\_table.auto\_set\_column\_width(col=None)} :  
+        Adjusts the width of selected columns to fit their content.  
+        \begin{itemize}
+            \item \textbf{col} (optional, default: \texttt{None}): A list of integers representing the column indices to adjust.
+        \end{itemize}
+
+    \item \texttt{the\_table.scale(xscale, yscale)} :  
+        Scales the table by adjusting cell padding.  
+        \begin{itemize}
+            \item \textbf{xscale} : Horizontal scaling factor.
+            \item \textbf{yscale} : Vertical scaling factor.
+        \end{itemize}
+
+    \item \texttt{the\_table.auto\_set\_font\_size(scale=True)} :  
+        Shrink font size until text fit in cell note that scaling padding with scale or calling the auto set columns width might override the behaviour
+        of this function since text will always fit, and this behaviour is on by default.  
+\begin{itemize}
+    \item \textbf{scale} (optional , default = True) : boolean either True or False.
+\end{itemize}
+
+    \item \texttt{the\_table.set\_fontsize(size)} :  
+        Manually sets the font size of the table text.
+    \begin{itemize}
+        \item \textbf{size} : float value. 
+    \end{itemize}
+   \end{itemize}
+\end{prettyBox}
+
+\newpage
+\textbf{\underline{Example}}\\[0.1cm]
+\lstinputlisting[style=pythonstyle]{Chapters/Code/PLT/tab.py}
+
+\vspace{0.5cm}
+\textbf{\underline{fig1}}\\[0.1cm]
+\begin{center}
+    \includegraphics[height=0.35\textheight]{Chapters/Code/PLT/tab.pdf}
+\end{center}
+
+
 

@@ -16,7 +16,9 @@ def dichotomy(eps,a,b,function,max_iter=100):
         if function(x) * function(a) < 0:
             b = x
         elif function(x) * function(b) < 0:
-            a = x        
+            a = x
+        else:
+            return x
         
         n = n+1
 
