@@ -1,0 +1,152 @@
+\documentclass{article}
+\usepackage[a4paper, paperwidth=25cm, paperheight=25.5cm, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+
+\lstset{
+    language=SQL,                    % Set language to SQL
+    basicstyle=\ttfamily\small,      % Font size and family for code
+    keywordstyle=\color{blue}\bfseries, % Color for SQL keywords
+    commentstyle=\color{gray},       % Color for comments
+    stringstyle=\color{red},         % Color for strings
+    numbers=left,                    % Show line numbers on the left
+    numberstyle=\tiny\color{gray},   % Line number font and color
+    stepnumber=1,                    % Line number step
+    breaklines=true,                 % Wrap long lines
+    frame=single,                    % Add a frame around code
+    tabsize=2,                       % Set tab size
+    showstringspaces=false           % Hide spaces in strings
+}
+
+
+\newcommand{\ques}[1]{
+  \section*{Question #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\begin{document}
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}1}
+\begin{enumerate}
+\item Se connecter en tant que \texttt{SYSTEM}, créer un utilisateur \texttt{ING} et lui donner tous les droits,  
+ puis se connecter en tant que \texttt{ING}.
+\item Montrer l'utilisateur courrant avec 2 methodes.
+\item Creation des tables :
+    \begin{itemize}
+        \item Usine(\underline{NU} , NomU , Ville)
+        \item Produit(\underline{NP} , NomP , Couleur , Poids)
+        \item Fournisseur(\underline{NF} , NomF , Statut , Ville , Email)
+        \item Livraison (\underline{NP\(^*\) , NU\(^*\) , NF\(^*\)} , Quantite)
+    \end{itemize}
+ Le poids et la quantite sont strictement positive et l'email est unique et doit contenir un @
+
+\item Afficher le nom des tables creees en utilisant les catalogues.
+\item Afficher les contraintes de toutes les table en utilisant les catalogues.
+\item Ajoutter l'attribut adresse a la tablr fournisseur, puis ajoutter la contrainte not null ,
+    verifier avec description et les catalogue , supprimer l'attribut et verifier avec description.
+\item Remplir les tables
+\item Afficher tout les attribut de tout les usines.
+\item Donnez les nom , num de tout les usines de sochaux.
+\item Donnez les num des fournisseurs qui livre le produit num 3 a l'usine num 1.
+\item Donnez les num ,nom des produits sans couleurs.
+\item Donnez les nom distinct des usines par ordre croissant.
+\item Donnez les num des usines dont le nom commence par C.
+\item Donnez les num des produits dont le nom contient s ou S.
+\item Donnez les noms des fournisseurs qui livrent le produit num 3 a l'usine num1. 
+\item Donnez les noms , couleurs des prouduits livres par fournisseur num 2.
+\item Donnez les num des fournisseurs qui livrent a l'usine 1 des produits de couleur rouge.
+\item Donnez les noms des fournisseurs qui livrent a des usines de paris ou sochaux des produits de couleur rouge.
+\item Donnez les nums des produits livres a une usine par un fournisseur de meme ville.
+\item Donnez les nums des usines livres par au moins un fournisseur qui n'est pas de la meme ville.
+\item Donnez les numéros des fournisseurs qui approvisionnent les usines 1 et 2 au moins.
+\item Donnez les nums des usines qui utilisent des produits du fournisseur num 3 (pas forcement livre a l'usine).
+\item Donnez les nums des usines qui s'approvisent du fournisseur num 3 seulement. 
+\item Donnez les nums des usines qui recoit jamais des produits rouge de fournisseur parisien.
+\item Donnez le nombre total de fournisseur.
+\item Donnez le nombre de produits avec couleur.
+\item Donnez la moyenne des poids des produits.
+\item Donnez la somme des poids des produits vert.
+\item Donnez la somme des poids des produits vert.
+\item Donnez le plus petit poid des produits avec couleur.
+\item Donnez les poids moyen de produits par couleur. 
+\item Donnez les couleurs des produit dont le poids moyen \(\geq 10\). 
+\item Donnez le nombre de produits livres par chaque fournisseur de paris.
+\item Donnez numero des produits les plus leges.
+\item Donnez le nombre de produits livres par chaque fournisseur(nom).
+\item Donnez les num des usines qui utilise tout les produits du fournisseur num 3.
+\item Donnez les num des produits qui sont livres a toute les usines parisiens.
+\item Donnez pour chaque usine (num) nombre de produits livres (si jamais livre 0).
+\item Donnez les nom des fournisseur avec le plus grand nombre de produit fournis.
+\item Supprimer les produits de couleur noir et numero compris entre 1 et 3.
+\item Changer la ville du fournisseur numero 3 a Lyon.
+\item Connecter en tant que system et creer tablespace permanente livraison\_TBS et temporaire livraison\_TempTBS taille initial 100MO avec extension.
+\item Affecter les nouvelles tablespace a l'utilisateur ING et verifie le changement en utilisant le catalogue dba\_users.
+\item Connecter en tant que ING et cree les tables suivant :
+\begin{itemize}
+    \item TableErreurs(Adresse, Utilisateur , nomTable , nomContrainte)
+    \item Fournisseur1(\underline{NF} , NomF , Statut , Ville , Email) 
+\end{itemize}
+Adresse est de type ROWID , l'email est unique et doit contenir un @
+\item Desactiver la tablspace livraison\_TBS puis : 
+    \begin{itemize}
+        \item Afficher la table founisseur.
+        \item Creation de la table test(a int , b char).
+        \item Afficher la table fournisseur1.
+    \end{itemize}
+\item Activer la tablspace livraison\_TBS puis : 
+    \begin{itemize}
+        \item Afficher les nom , type et status des contraintes de la table fournisseur1.
+        \item Inserer les elements suivant dans la table fournisseur1 :
+            \begin{itemize}
+ \item ( 1 ,'SaintGobain','Producteur','Paris','saint\_goubain@gmail.com') 
+\item ( 2 ,'Au bon siege','Soustraitant','Limoges','au\_bon\_siegegmail.com') 
+            \end{itemize}
+        \item Desactiver la contrainte check de la table fournisseur1.
+        \item Afficher les nom , type et status des contraintes de la table fournisseur1.
+        \item Inserer dans la table fournisseur1 ( 2 ,'Au bon siege','Soustraitant','Limoges','au\_bon\_siegegmail.com').
+  \end{itemize}
+\newpage
+\item Afficher les rowid , nf , email de fourniseur1 puis :
+    \begin{itemize} 
+    \item Afficher la table tableErreurs.
+    \item Mettre les rowid qui ne respectent pas la contrainte check dans la table tableErreurs.
+    \item Afficher la table tableErreurs.
+    \item Supprimmer les elements de fournisseur1 qui ne respectent pas la contrainte check en utilisant la table tableErreurs.
+    \item Activer contrainte check.
+    \item Afficher fournisseur1.
+    \end{itemize}
+\end{enumerate}
+\end{document}

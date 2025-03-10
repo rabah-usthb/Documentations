@@ -1,0 +1,110 @@
+\documentclass{article}
+\usepackage[a4paper, paperwidth=25cm, paperheight=25.5cm, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+
+\lstset{
+    language=SQL,                    % Set language to SQL
+    basicstyle=\ttfamily\small,      % Font size and family for code
+    keywordstyle=\color{blue}\bfseries, % Color for SQL keywords
+    commentstyle=\color{gray},       % Color for comments
+    stringstyle=\color{red},         % Color for strings
+    numbers=left,                    % Show line numbers on the left
+    numberstyle=\tiny\color{gray},   % Line number font and color
+    stepnumber=1,                    % Line number step
+    breaklines=true,                 % Wrap long lines
+    frame=single,                    % Add a frame around code
+    tabsize=2,                       % Set tab size
+    showstringspaces=false           % Hide spaces in strings
+}
+
+
+\newcommand{\ques}[1]{
+  \section*{Question #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\begin{document}
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}1}
+\input{Questions/q1/ques1.tex}
+\input{Questions/q2/ques2.tex}
+\input{Questions/q3/ques3.tex}
+\input{Questions/q4/ques4.tex}
+\input{Questions/q5/ques5.tex}
+\input{Questions/q6/ques6.tex}
+\input{Questions/q7/ques7.tex}
+\input{Questions/q8/ques8.tex}
+\input{Questions/q9/ques9.tex}
+\input{Questions/q10/ques10.tex}
+\input{Questions/q11/ques11.tex}
+\input{Questions/q12/ques12.tex}
+\input{Questions/q13/ques13.tex}
+\input{Questions/q14/ques14.tex}
+\input{Questions/q15/ques15.tex}
+\input{Questions/q16/ques16.tex}
+\input{Questions/q17/ques17.tex}
+\input{Questions/q18/ques18.tex}
+\input{Questions/q19/ques19.tex}
+\input{Questions/q20/ques20.tex}
+\input{Questions/q21/ques21.tex}
+\input{Questions/q22/ques22.tex}
+\input{Questions/q23/ques23.tex}
+\input{Questions/q24/ques24.tex}
+\input{Questions/q25/ques25.tex}
+\input{Questions/q26/ques26.tex}
+\input{Questions/q27/ques27.tex}
+\input{Questions/q28/ques28.tex}
+\input{Questions/q29/ques29.tex}
+\input{Questions/q30/ques30.tex}
+\input{Questions/q31/ques31.tex}
+\input{Questions/q32/ques32.tex}
+\input{Questions/q33/ques33.tex}
+\input{Questions/q34/ques34.tex}
+\input{Questions/q35/ques35.tex}
+\input{Questions/q36/ques36.tex}
+\input{Questions/q37/ques37.tex}
+\input{Questions/q38/ques38.tex}
+\input{Questions/q39/ques39.tex}
+\input{Questions/q40/ques40.tex}
+\input{Questions/q41/ques41.tex}
+\input{Questions/q42/ques42.tex}
+\input{Questions/q43/ques43.tex}
+\input{Questions/q44/ques44.tex}
+\input{Questions/q45/ques45.tex}
+\input{Questions/q46/ques46.tex}
+\input{Questions/q47/ques47.tex}
+\end{document}
