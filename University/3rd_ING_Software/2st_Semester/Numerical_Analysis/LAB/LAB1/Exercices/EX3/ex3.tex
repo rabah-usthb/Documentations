@@ -1,0 +1,151 @@
+\newpage
+\exer{3}
+
+\setcounter{section}{0}
+
+\vspace{0.25cm}
+
+
+\section{Import}
+\begin{prettyBox}{Import}{myblue}
+\begin{itemize}
+    \item \texttt{numpy} : Les fonctions mathématiques prédéfinies, et \texttt{linspace} pour créer  
+        les vecteur des coordonnées x de chaque fonctions.  
+    \item \texttt{matplotlib} : Dessine les graphes.  
+    \item \texttt{collections} : Crée une nouvelle structure avec \texttt{namedtuple}.  
+\end{itemize}
+\end{prettyBox}
+\vspace{0.5cm}
+\lstinputlisting[style=pythonstyle, firstline = 1,lastline=3,basicstyle= \ttfamily\scriptsize]{Exercices/EX3/ex3.py}
+
+\vspace{1cm}
+
+\section{Définition De La Fonction \(f\)}
+\lstinputlisting[style=pythonstyle, firstline = 7,lastline=9,basicstyle= \ttfamily\scriptsize]{Exercices/EX3/ex3.py}
+
+\vspace{1cm}
+\section{\(\epsilon\)}
+\lstinputlisting[style=pythonstyle, firstline = 71,lastline=71,basicstyle= \ttfamily\scriptsize]{Exercices/EX3/ex3.py}
+
+\vspace{1cm}
+\section{Génération Des Vecteurs}
+\lstinputlisting[style=pythonstyle, firstline = 77,lastline=78,basicstyle= \ttfamily\scriptsize]{Exercices/EX3/ex3.py}
+
+\newpage
+\section{Nouvelle Structure root}
+\begin{prettyBox}{root}{myblue}
+On a créé une nouvelle structure en utilisant \texttt{namedtuple} root. Elle représente 
+les racines pour \( f(x) = 0 \) et possède trois attributs :
+\begin{itemize}
+    \item \textbf{position} : coordonnée x de la racine
+    \item \textbf{a} : extrémité gauche de l'intervalle auquel la racine appartient
+    \item \textbf{b} : extrémité droite de l'intervalle auquel la racine appartient 
+    \item \textbf{phi} : le label de la function point fixe \(\varphi\).
+    \item \textbf{x\_0} : la valeur de depart \(x_0 \in [a,b]\).
+    \item \textbf{eps} : la valeur de la tolerance\(\epsilon\).
+    \item \textbf{error} : Estimation de l'erreur de la method dichotomie.
+    \item \textbf{iteration}: Nombre d'iteration de la method dichotomie.
+\end{itemize}
+\end{prettyBox}
+\vspace{0.5cm}
+\lstinputlisting[style=pythonstyle, firstline = 5,lastline=5,basicstyle= \ttfamily\scriptsize]{Exercices/EX3/ex3.py}
+
+\vspace{1cm}
+\section{Trouver \(\varphi\) Pour \(f\) Sur [-1,1]}
+On a \(f(x) = e^{x} + \dfrac{x^2}{2} + x - 1\) et \([a,b] = [-1,1]\)
+
+\vspace{1cm}
+\begin{center}
+    \(e^{x} + \dfrac{x^2}{2} + x - 1 = 0\)\\[0.1cm]
+    \(\boxed{x  =  1 - e^{x} - \dfrac{x^2}{2} = \varphi}\)\\[0.1cm]
+\end{center}
+
+\vspace{1cm}
+\textbf{\underline{\(\varphi'\)}}
+\begin{center}
+    \begin{align*}
+        &\varphi'(x) = - e^{x} - x \\[0.15cm]
+        &\boxed{\varphi'(x) = - (e^{x} + x)}\\[0.15cm]
+    \end{align*}
+\end{center}
+
+\newpage
+\textbf{\underline{\(\varphi''\)}}
+\begin{center}
+    \begin{align*}
+        &\varphi''(x) = - e^{x} - 1 \\[0.15cm]
+        &\boxed{\varphi''(x) = - (e^{x} + 1)}\\[0.15cm]
+        &\boxed{\forall x \hspace{0.4cm} \varphi'' \leq 0}\\[0.1cm]
+    \end{align*}
+\end{center}
+
+\vspace{1cm}
+\textbf{\underline{Variation Table}}
+
+\begin{center}
+ \begin{tikzpicture}
+     \tkzTabInit {$x$/1, $\varphi''(x)$/1 , $\varphi'(x)$/2}
+     {$-1$,$\alpha$,$-0.25$, $1$}
+    \tkzTabLine{,,,-,}
+    \tkzTabVar{+/$0.63$ ,R/,R/, -/$-3.71$ }
+\path (N22) -- (N23) node[pos=0.5,fill=white,above] {$0$};
+\path (N42) -- (N23) node[pos=0.5,fill=white,below] {$-0.52$};
+\end{tikzpicture}
+\end{center}
+\vspace{0.25cm}
+
+\vspace{0.25cm}
+
+\(\displaystyle\inf_{x \in [-1,1]} |\varphi'(x)| < 1 \Longrightarrow \varphi\) ne diverge pas dans \([-1,1]\)
+
+\vspace{0.5cm}
+\(\varphi \in C^{1} \text{  et } \displaystyle\sup_{x \in [-1, 1]} |\varphi'(x)| = 3.71 \geq 1 \Longrightarrow \varphi\) n'est pas contractante en \([-1,1]\)
+
+\vspace{0.5cm}
+Le problem est dans l'extremite 1 , donc on va prendre un nouvelle intervalle [-1,-0.25] :\\[0.15cm]
+\( \varphi \in C^{1} \text{ et } \displaystyle\sup_{x \in [-1, -0.25]} |\varphi(x)| = 0.63 < 1 \Longrightarrow \varphi\) est contractante en \([-1,-0.25]\)
+
+\vspace{1.25cm}
+\textbf{Conclusion :}
+\vspace{-0.25cm}
+\begin{center}
+    \(\boxed{\varphi = 1 - e^{x} - \dfrac{x^2}{2} \hspace{0.25cm},\hspace{0.25cm} k = 0.63}\)
+\end{center}
+
+\newpage
+\section{Implementation De La Method Point-Fixe}
+\subsection{Estimation De L'erreur}
+\lstinputlisting[style=pythonstyle, firstline = 14,lastline=15,basicstyle= \ttfamily\scriptsize]{Exercices/EX3/ex3.py}
+
+\vspace{0.5cm}
+\subsection{Definition De La Fonction \(\varphi\)}
+\lstinputlisting[style=pythonstyle, firstline = 10,lastline=11,basicstyle= \ttfamily\scriptsize]{Exercices/EX3/ex3.py}
+
+\vspace{0.5cm}
+\subsection{Initialisation Des Variables}
+\lstinputlisting[style=pythonstyle, firstline = 72,lastline=75,basicstyle= \ttfamily\scriptsize]{Exercices/EX3/ex3.py}
+
+\vspace{0.5cm}
+\subsection{Algorithm De Point-Fixe}
+\lstinputlisting[style=pythonstyle, firstline = 18,lastline=41,basicstyle= \ttfamily\scriptsize]{Exercices/EX3/ex3.py}
+
+\newpage
+\section{Dessiner}
+\subsection{Scatter}
+\lstinputlisting[style=pythonstyle, firstline = 44,lastline=50,basicstyle= \ttfamily\scriptsize]{Exercices/EX3/ex3.py}
+\vspace{0.5cm}
+
+\subsection{Graphe \& Table }
+\lstinputlisting[style=pythonstyle, firstline = 54,lastline=68,basicstyle= \ttfamily\scriptsize]{Exercices/EX3/ex3.py}
+
+\vspace{1cm}
+
+\section{Rest Du Code}
+\lstinputlisting[style=pythonstyle, firstline = 80,basicstyle= \ttfamily\scriptsize]{Exercices/EX3/ex3.py}
+
+\vspace{1.5cm}
+\section{Figure}
+
+\begin{center}
+    \includegraphics[height=0.35\textheight]{Exercices/EX3/Fig.pdf}
+\end{center}

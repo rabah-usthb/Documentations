@@ -9,15 +9,21 @@ def phi_function(x):
 
 def Fixed_Point(eps,k,x_0,phi_function,max_iter=100):
     
-    x_1 = x_n = phi_function(x_0)
+    x_1 = x = x_n = phi_function(x_0)
     
     n = 0
 
     while (error:= ErrorEstimation(x_0,x_1,k,n)) > eps and n<= max_iter:
-        x_n = phi_function(x_n)
+        x = phi_function(x_n)
+        if x_n == x:
+            return x_n
+        x_n = x
         n = n+1
-
-    return x_n
+    
+    if n>max_iter:
+        return "Ne Converge Pas"
+    else:
+        return x_n
 
 eps = 10**(-2)
 x_0 = -0.5 
