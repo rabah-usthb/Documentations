@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}
+
+\usepackage{amssymb}
+\tcbuselibrary{skins, breakable, theorems}
+
+\definecolor{myblue}{HTML}{10C2C4}
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+\usepackage{listings}
+% Define the style for C code
+\lstdefinestyle{cstyle}{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    stringstyle=\color{red},
+    commentstyle=\color{green!50!black}\itshape,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    breaklines=true,
+    frame=tb,
+    tabsize=4,
+    showstringspaces=false,
+    captionpos=b
+}
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\lstdefinestyle{javaStyle}{
+    language=Java,
+    basicstyle=\ttfamily\footnotesize,   % Font style and size
+    numbers=left,                       % Line numbers on the left
+    numberstyle=\tiny\color{gray},       % Style for line numbers
+    stepnumber=1,                        % Line number step
+    numbersep=5pt,                       % Distance of numbers from the code
+    backgroundcolor=\color{white},       % Background color of the listing
+    showspaces=false,                    % Don't show spaces
+    showstringspaces=false,              % Don't show spaces in strings
+    showtabs=false,                      % Don't show tab characters
+    frame=single,                        % Add a frame around the code
+    rulecolor=\color{black},             % Color of the frame
+    tabsize=2,                           % Tab size
+    captionpos=b,                        % Position of the caption (bottom)
+    breaklines=true,                     % Automatically break long lines
+    breakatwhitespace=true,              % Break at white space
+    escapeinside={\%*}{*)},              % Allows comments in LaTeX inside the listing
+    keywordstyle=\color{blue},           % Keyword color
+    commentstyle=\color{green},          % Comment color
+    stringstyle=\color{red},             % String color
+}
+
+
+
+\lstdefinestyle{pythonstyle2}{
+    language=python,                    % Language set to Python
+    basicstyle=\ttfamily\footnotesize,   % Change basic font size
+    keywordstyle=\color{blue}\bfseries, % Different keyword style
+    stringstyle=\color{red},         % Different string color
+    commentstyle=\color{green!60!black}\itshape, % Adjust comment color
+    numbers=left,                       % Line numbers on the left
+    numberstyle=\tiny\color{gray},      % Smaller number font and color
+    stepnumber=1,                       % Number each line
+    frame=single,                       % Single frame around code
+    tabsize=4,                          % Adjust tab size
+    showstringspaces=false,             % Do not show spaces in strings
+    captionpos=b,% Position of caption
+    breaklines=true,
+    inputencoding=utf8
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+
+
+
+\begin{document}
+
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}1}
+
+\input{Question/q1.tex}
+\input{Question/q2.tex}
+
+\vspace{1cm}
+\input{Question/q3.tex}
+\input{Question/q4.tex}
+\newpage
+
+\input{Question/q5.tex}
+\input{Question/q6.tex}
+\newpage
+\input{Question/q7.tex}
+\end{document}

