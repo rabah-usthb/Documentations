@@ -16,7 +16,7 @@ public class concretSubject extends Subject {
 	@Override
 	public void notifyObservers() {
 		for(Observer obs : getObserverList()) {
-			obs.update(this.state);
+			obs.update();
 		}
 	}
 	
@@ -31,3 +31,4 @@ public class concretSubject extends Subject {
     }
 
 }
+

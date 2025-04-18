@@ -124,7 +124,7 @@ a single object and makes it globally accessible.
 \end{prettyBox}
 
 \begin{center}
-\includegraphics[width=0.55\textwidth,height=0.3\textheight]{Chapters/DesignPattern/Singleton/single.drawio.pdf}
+\includegraphics[width=0.55\textwidth]{Chapters/DesignPattern/Singleton/single.drawio.pdf}
 \end{center}
 
 \begin{prettyBox}{Explication}{myblue}
@@ -133,7 +133,7 @@ we call the public static method getInstance that checks if instance is null if 
 and in either case it returns the instance 
 \end{prettyBox}
 
-\vspace{0.25cm}
+\newpage
 \subsubsection*{\underline{Java Code:}}
 
 \lstinputlisting[style=javastyle]{Chapters/DesignPattern/Singleton/S1/Singleton.java}
@@ -271,7 +271,7 @@ Allows manipulating different objects in a uniform way
 
 
 \begin{center}
-\includegraphics[height=0.3\textheight]{Chapters/DesignPattern/Composite/comp1.drawio.pdf}
+\includegraphics[height=0.22\textheight]{Chapters/DesignPattern/Composite/comp1.drawio.pdf}
 \end{center}
 
 \vspace{1cm}
@@ -295,7 +295,7 @@ Element can be an abstract class or an interface both implementations are valid.
 
 \vspace{0.25cm}
 \begin{center}
-\includegraphics[width=0.55\textwidth,height=0.4\textheight]{Chapters/DesignPattern/Composite/tree.drawio.pdf}
+\includegraphics[height=0.3\textheight]{Chapters/DesignPattern/Composite/tree.drawio.pdf}
 \end{center}
 
 
@@ -335,4 +335,219 @@ Leaf
 \end{lstlisting}
 
 
+\newpage
+
+\subsection{Observer Behavioral Design Pattern}
+\begin{prettyBox}{Observer}{myblue}
+The Observer pattern consists of two parties: the \textbf{Subject} and the \textbf{Observers}:
+\begin{itemize}
+    \item \textbf{Subject}: Represents data that is prone to change state at runtime. It notifies the \textbf{Observers} of any changes.
+    \item \textbf{Observers}: Are external class interested in the \textbf{Subject} and trigger actions based on its state.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{1cm}
+
+
+\begin{center}
+\includegraphics[height=0.35\textheight]{Chapters/DesignPattern/Observer/obs1.drawio.pdf}
+\end{center}
+
+\vspace{1cm}
+
+\begin{prettyBox}{Explication}{myblue}
+The \textbf{Observer} is an abstract class that defines an unimplemented method, \texttt{update()},
+which is executed each time the state changes.
+
+\vspace{0.25cm}
+The \textbf{Subject} is also an abstract class,
+which maintains a collection of observers and declares unimplemented methods:
+\begin{itemize}
+    \item  \texttt{add(observer)} : Add new observer to the list.
+    \item \texttt{delete(observer)} : Remove an existing from the list.
+    \item \texttt{notify()}: Loops through all the observer of the list and calls their \texttt{update()} method .
+\end{itemize}
+
+\vspace{0.25cm}
+A \textbf{ConcreteObserver} inherits from \textbf{Observer} , holds reference of \textbf{concreteSubject} implements the 
+\texttt{update()} method, along with a new method \texttt{checkState()} that calls the \texttt{getState()}
+invoked within \texttt{update()}.
+
+\vspace{0.25cm}
+A \textbf{ConcreteSubject} inherits from \textbf{Subject}, overrides all unimplemented
+methods, and includes a state attribute with its getter and setter. Whenever the setter is 
+called, the \texttt{notify()} method is invoked within its body to ensure that all 
+observers are updated.
+\end{prettyBox}
+
+
+\newpage
+
+\begin{prettyBox}{Note}{red}
+Subject and observer can be interfaces too.
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\subsubsection*{\underline{Java Code:}}
+
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Observer/O1/Observer.java}
+
+\vspace{1cm}
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Observer/O1/Subject.java}
+
+\vspace{1cm}
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Observer/O1/concretObserver.java}
+
+\newpage
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Observer/O1/concretSubject.java}
+
+\vspace{1cm}
+
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Observer/O1/Main.java}
+
+\subsubsection*{\underline{Output:}}
+\begin{lstlisting}[style=cmd]
+Setting state to State 1
+Observer Alice New State : State 1
+Observer Bob New State : State 1
+Setting state to State 2
+Observer Bob New State : State 2
+Setting state to State
+Observer Bob New State : State
+\end{lstlisting}
+
+\newpage
+
+\textbf{\underline{Example :}}\\[0.15cm]
+An application presents the data points (a, b, c) in three formats: table, a histogram, and a pie chart as shown below:
+
+\begin{center}
+\includegraphics[width=0.85\textwidth]{Chapters/DesignPattern/Observer/ex1.drawio.pdf}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{center}
+\includegraphics[width=0.85\textwidth]{Chapters/DesignPattern/Observer/obs.drawio.pdf}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{Explication}{myblue}
+    \begin{itemize}
+        \item The data elements \(a\), \(b\) and \(c\) are subject to change and thus constitute the \textbf{subject}. 
+        \item The views \texttt{table}, \texttt{pie chart} and \texttt{histogram} are external classes that are interested to the subject’s state 
+    and must update whenever it changes, making them \textbf{observers}.
+    \end{itemize}
+\end{prettyBox}
+
+
+\newpage
+
+\subsection{Strategy Behavioral Design Pattern}
+\begin{prettyBox}{Strategy}{myblue}
+The Strategy pattern consists of two parties: the \textbf{Context} and the \textbf{Strategies}:
+\begin{itemize}
+\item \textbf{Context}: Represents the class that users will interact with to choose the needed behavior at runtime
+\item \textbf{Strategies}: Are all the interchangeable behavior classes a user might choose
+\end{itemize}
+To say Strategy is implemented correctly, the user must be able to select any behavior possible. The Strategy pattern allows us to separate the object from its behaviors and to make them interchangeable and selectable at runtime.
+\end{prettyBox}
+
+\vspace{1cm}
+
+
+\begin{center}
+\includegraphics[height=0.15\textheight]{Chapters/DesignPattern/Strategy/str1.drawio.pdf}
+\end{center}
+
+\vspace{1cm}
+
+\begin{prettyBox}{Explication}{myblue}
+The \textbf{Strategy} is an abstract class that defines an unimplemented method, \texttt{execute()}, which is executed when the user chooses a behaviour at runtime.
+\vspace{0.25cm}
+The \textbf{Behaviour\(_i\)} are concrete classes that extend the \textbf{Strategy} class and implements the \texttt{execute()} method. 
+They represent the different interchangeable behaviours a user might choose.
+\vspace{0.25cm}
+A \textbf{Context} is a class that the user will interact with to choose the needed behaviour. It holds a reference to a \textbf{Strategy} object
+and has a method \texttt{Launch()} that will call the strategy's \texttt{execute()} method according to the user's choice. 
+The context can switch between different strategies at runtime by changing which concrete behaviour implementation it references.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Note}{red}
+Strategy can be an interface.
+\end{prettyBox}
+
+\vspace{0.5cm}
+\subsubsection*{\underline{Java Code:}}
+
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Strategy/Code/Strategy.java}
+
+\newpage
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Strategy/Code/Behaviour_1.java}
+
+\vspace{1cm}
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Strategy/Code/Behaviour_2.java}
+
+\vspace{1cm}
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Strategy/Code/Behaviour_3.java}
+
+\vspace{1cm}
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Strategy/Code/Context.java}
+
+\newpage
+
+\lstinputlisting[style=javastyle]{Chapters/DesignPattern/Strategy/Code/Main.java}
+
+\subsubsection*{\underline{Output:}}
+\begin{lstlisting}[style=cmd]
+Press 1 For Strategy 1
+Press 2 For Strategy 2
+Press 3 For Strategy n
+Press 0 to Quit
+1
+Behaviour_1 execute()
+Press 1 For Strategy 1
+Press 2 For Strategy 2
+Press 3 For Strategy n
+Press 0 to Quit
+2
+Behaviour_2 execute()
+Press 1 For Strategy 1
+Press 2 For Strategy 2
+Press 3 For Strategy n
+Press 0 to Quit
+3
+Behaviour_n execute()
+Press 1 For Strategy 1
+Press 2 For Strategy 2
+Press 3 For Strategy n
+Press 0 to Quit
+0
+
+\end{lstlisting}
+
+\newpage
+
+\textbf{\underline{Example :}}\\[0.15cm]
+An application that computes the vertical speed of an element and taking account of gravity and friction.
+
+\vspace{0.5cm}
+
+\begin{center}
+\includegraphics[width=0.85\textwidth]{Chapters/DesignPattern/Strategy/str2.drawio.pdf}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{Explication}{myblue}
+    \begin{itemize}
+        \item When computing vertical speed there are 4 cases : with gravity only , with firction only , both and none , all of these
+            represents different strategies of our application , therefor each case will be a class extending \textbf{Strategy} class.
+        \item The \textbf{speedContext} is the class user will interact with to choose the needed strategy at run time .
+    \end{itemize}
+\end{prettyBox}
 
