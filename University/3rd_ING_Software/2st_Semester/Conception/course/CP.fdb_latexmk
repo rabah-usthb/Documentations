@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1745012629.66078 "CP.tex" "CP.pdf" "CP" 1745012633.00121 0
+["pdflatex"] 1745028355.99465 "CP.tex" "CP.pdf" "CP" 1745028359.14056 0
   "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -150,8 +150,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1732594860.33734 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1731402230 8212896 b2d3a67526ed46e54375dd7fb267ffaf ""
-  "CP.aux" 1745012632.88529 7159 8aa114f131f929608d9022ae5bd6cf0c "pdflatex"
-  "CP.tex" 1745003182.46306 3686 e3241b63678fd03bbbda4fb14b6816d3 ""
+  "CP.aux" 1745028359.0285 8100 b26ef3817a9fe32c6e7554e4c7e016a7 "pdflatex"
+  "CP.tex" 1745023546.26013 3716 16a5837ac0f30ba4d4e69ac68f238acc ""
   "Chapters/DesignPattern/Composite/C1/Composite.java" 1740910619.28008 931 dafb450c9be1fc39c630b34dacfdcaa1 ""
   "Chapters/DesignPattern/Composite/C1/Element.java" 1740910619.27908 105 5430b0daf0e7ca18503a849c64e166db ""
   "Chapters/DesignPattern/Composite/C1/Leaf.java" 1740910619.28008 129 1c9334b723a367219735083405464f9f ""
@@ -183,6 +183,11 @@
   "Chapters/DesignPattern/Strategy/str1.drawio.pdf" 1745009083.51801 43922 05d68893bbd4d7fd7f134fd5d7046e0d ""
   "Chapters/DesignPattern/Strategy/str2.drawio.pdf" 1745009085.35701 45360 0e9d25a54f4aafd943fd21468e940bcd ""
   "Chapters/Introduction.tex" 1740194617.70926 12097 49bbf687f881ae56832a529704f2fe9f ""
+  "Chapters/MVC_PAC.tex" 1745028354.5435 5747 48df7512efffb877bfac4c3aaa2c7a5b ""
+  "Chapters/MVC_PAC/mvc1.drawio.pdf" 1745023464.77712 39627 91f01e828b2a0955305792fd147afda0 ""
+  "Chapters/MVC_PAC/mvc2.drawio.pdf" 1745023456.17212 98569 656110532ec9d655782bb509d22999d0 ""
+  "Chapters/MVC_PAC/pac1.drawio.pdf" 1745023438.96412 42489 b77654ee514449e420fb6ea1c217fc67 ""
+  "Chapters/MVC_PAC/pac2.drawio.pdf" 1745023443.99212 105897 eb7a446602cf91186d806800017c4b5c ""
   "Chapters/pattern.tex" 1745012625.46128 18085 74a48bf50a5c506a4439ede8e6011310 ""
   (generated)
   "CP.aux"
