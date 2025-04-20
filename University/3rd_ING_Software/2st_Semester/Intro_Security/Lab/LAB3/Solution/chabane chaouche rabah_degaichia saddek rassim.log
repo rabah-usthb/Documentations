@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  15 APR 2025 03:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  20 APR 2025 01:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**lab2.tex
-(./lab2.tex
+**"chabane chaouche rabah_degaichia saddek rassim.tex"
+(./chabane chaouche rabah_degaichia saddek rassim.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -422,8 +422,6 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen287
 \c@nlinenum=\count315
 \TeXr@lab=\toks42
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
  (/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
@@ -522,14 +520,23 @@ with kernel methods
 \c@bookmark@seq@number=\count326
  (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip58
-) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
 (/usr/share/texlive/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
 Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
@@ -555,27 +562,27 @@ Library (tcolorbox): 'tcbtheorems.code.tex' version '6.2.0'
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count327
 \l__pdf_internal_box=\box81
-) (./lab2.aux)
-\openout1 = `lab2.aux'.
+) (./chabane chaouche rabah_degaichia saddek rassim.aux)
+\openout1 = `"chabane chaouche rabah_degaichia saddek rassim.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -631,34 +638,75 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count334
-Package hyperref Info: Link coloring ON on input line 62.
- (./lab2.out) (./lab2.out)
+Package hyperref Info: Link coloring ON on input line 105.
+ (./chabane chaouche rabah_degaichia saddek rassim.out) (./chabane chaouche rabah_degaichia saddek rassim.out)
 \@outlinefile=\write4
-\openout4 = `lab2.out'.
+\openout4 = `"chabane chaouche rabah_degaichia saddek rassim.out"'.
 
+LaTeX Font Info:    Trying to load font information for U+msa on input line 107.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 107.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (./Question/q1.tex
+<Question/SC/ping1.PNG, id=19, 860.71562pt x 364.36125pt>
+File: Question/SC/ping1.PNG Graphic file (type png)
+<use Question/SC/ping1.PNG>
+Package pdftex.def Info: Question/SC/ping1.PNG  used on input line 4.
+(pdftex.def)             Requested size: 409.72125pt x 173.44588pt.
+<Question/SC/ping2.PNG, id=21, 766.36313pt x 379.91937pt>
+File: Question/SC/ping2.PNG Graphic file (type png)
+<use Question/SC/ping2.PNG>
+Package pdftex.def Info: Question/SC/ping2.PNG  used on input line 10.
+(pdftex.def)             Requested size: 409.72125pt x 203.1186pt.
+) (./Question/q2.tex
+<Question/SC/ip_1.PNG, id=22, 558.085pt x 290.58563pt>
+File: Question/SC/ip_1.PNG Graphic file (type png)
+<use Question/SC/ip_1.PNG>
+Package pdftex.def Info: Question/SC/ip_1.PNG  used on input line 4.
+(pdftex.def)             Requested size: 409.72125pt x 213.34065pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./lab2.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./Question/SC/ping1.PNG> <./Question/SC/ping2.PNG>]
+<Question/SC/kaliPing.PNG, id=36, 388.95313pt x 55.70813pt>
+File: Question/SC/kaliPing.PNG Graphic file (type png)
+<use Question/SC/kaliPing.PNG>
+Package pdftex.def Info: Question/SC/kaliPing.PNG  used on input line 10.
+(pdftex.def)             Requested size: 409.72125pt x 58.6848pt.
+) (./Question/q3.tex [2 <./Question/SC/ip_1.PNG> <./Question/SC/kaliPing.PNG>]
+<Question/SC/ip_2.PNG, id=43, 490.33188pt x 312.66812pt>
+File: Question/SC/ip_2.PNG Graphic file (type png)
+<use Question/SC/ip_2.PNG>
+Package pdftex.def Info: Question/SC/ip_2.PNG  used on input line 5.
+(pdftex.def)             Requested size: 409.72125pt x 261.27495pt.
+<Question/SC/Capture.PNG, id=44, 326.72063pt x 44.165pt>
+File: Question/SC/Capture.PNG Graphic file (type png)
+<use Question/SC/Capture.PNG>
+Package pdftex.def Info: Question/SC/Capture.PNG  used on input line 11.
+(pdftex.def)             Requested size: 409.72125pt x 55.38466pt.
+) [3 <./Question/SC/ip_2.PNG> <./Question/SC/Capture.PNG>] (./chabane chaouche rabah_degaichia saddek rassim.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `lab2.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `"chabane chaouche rabah_degaichia saddek rassim".out' has not changed.
+(rerunfilecheck)             Checksum: BD5793867D9F698BB8C3A20518DD9833;801.
  ) 
 Here is how much of TeX's memory you used:
- 25392 strings out of 474222
- 498474 string characters out of 5748732
- 1939975 words of memory out of 5000000
- 47264 multiletter control sequences out of 15000+600000
- 562697 words of font info for 52 fonts, out of 8000000 for 9000
+ 26059 strings out of 474222
+ 508712 string characters out of 5748732
+ 1930975 words of memory out of 5000000
+ 47908 multiletter control sequences out of 15000+600000
+ 563932 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,7n,107p,405b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on lab2.pdf (1 page, 66645 bytes).
+ 102i,7n,107p,449b,885s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on "chabane chaouche rabah_degaichia saddek rassim.pdf" (3 pages, 389843 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
- 8 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 83 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
+ 67 words of extra memory for PDF output out of 10000 (max. 10000000)
 

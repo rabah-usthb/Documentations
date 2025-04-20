@@ -24,6 +24,7 @@
     showstringspaces=false           % Hide spaces in strings
 }
 
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
 
 \newcommand{\ques}[1]{
   \section*{Question #1}
@@ -66,7 +67,9 @@
 \begin{enumerate}
     \item Lancer les deux machines virtuelles kali linux et windows , et assure la connectiviter avec la commande \texttt{ping} .
 \item Desactiver windows defender et le par-feu de la machine virtuelle windows , pourquoi les desactiver ? 
-\item Installer office 2013 sur la machine virtuelle windows
+\item Installer office 2013 sur la machine virtuelle via le lien : \href{https://www.malavida.com/en/soft/microsoft-office-2013/download}{https://www.malavida.com/en/soft/microsoft-office-2013/download} , et on aura 
+besoin de 7-zip pour unzip le fichier : \href{https://www.7-zip.org/}{https://www.7-zip.org/} , apres telechargement on mount le fichier.
+ 
 \item On va utilier metasploit dans kali linux taper les commandes suivant :
 \begin{itemize}
     \item \texttt{msfconsole} pour lancer l'interface de commande principale de Metasploit.
@@ -80,7 +83,7 @@
     \begin{itemize}
         \item \texttt{service apache2 start} pour démarre le serveur Apache
         \item \texttt{cp <chemin/msf.doc> /var/www/html} : que fait cette commande ? 
-        \item \texttt{ls /var/www/html} : vous devriez voir le fichier \texttt{evil.pdf} listé dans ce répertoire.
+        \item \texttt{ls /var/www/html} : vous devriez voir le fichier \texttt{msf.doc} listé dans ce répertoire.
     \end{itemize}
     \begin{itemize}
         \item Depuis la machine Windows, ouvrez un navigateur et saisissez l'URL suivante : \texttt{IP\_KALI/msf.doc} afin de télécharger et installer le fichier \texttt{msf.doc} , ouvrir ce dernier et cliquer sur "activer la modification".

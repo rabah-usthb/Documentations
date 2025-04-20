@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage[a4paper,left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+
+\lstset{
+    language=SQL,                    % Set language to SQL
+    basicstyle=\ttfamily\small,      % Font size and family for code
+    keywordstyle=\color{blue}\bfseries, % Color for SQL keywords
+    commentstyle=\color{gray},       % Color for comments
+    stringstyle=\color{red},         % Color for strings
+    numbers=left,                    % Show line numbers on the left
+    numberstyle=\tiny\color{gray},   % Line number font and color
+    stepnumber=1,                    % Line number step
+    breaklines=true,                 % Wrap long lines
+    frame=single,                    % Add a frame around code
+    tabsize=2,                       % Set tab size
+    showstringspaces=false           % Hide spaces in strings
+}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+
+\newcommand{\ques}[1]{
+  \section*{Question #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\begin{document}
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}3}
+
+\vspace{0.5cm}
+\begin{enumerate}
+    \item Lancer les deux machines virtuelles kali linux et ubuntu, et assurer la connectivité avec la commande \texttt{ping}.
+    \item On va utiliser \texttt{iptables} dans ubuntu pour mettre des restrictions antérieures et extérieures du firewall pour définir des 
+        conditions sur les paquets reçus et envoyés.
+\begin{itemize}
+    \item \texttt{sudo iptables -I INPUT -p icmp --icmp-type echo-request -j DROP} bloque les pings entrants vers Ubuntu
+    \item \texttt{sudo iptables -L} affiche toutes les règles iptables actuellement configurées , que remarquez-vous?
+    \item Essayez de ping ubuntu depuis kali. Que remarquez-vous? 
+    \item \texttt{sudo iptables -I OUTPUT -p icmp --icmp-type echo-request -j DROP} bloque les pings sortants d'Ubuntu
+    \item \texttt{sudo iptables -L} que remarquez-vous? 
+    \item Essayez de ping kali depuis ubuntu. Que remarquez-vous? 
+\end{itemize}
+\end{enumerate}
+\end{document}

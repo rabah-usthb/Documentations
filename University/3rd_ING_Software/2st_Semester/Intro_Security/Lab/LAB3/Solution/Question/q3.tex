@@ -1,0 +1,22 @@
+\newpage
+\section{Restriction Des Paquets Sortants Depuis Ubuntu}
+
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Question/SC/ip_2.PNG}
+\end{center}
+
+\vspace{0.25cm}
+
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Question/SC/Capture.PNG}
+\end{center}
+
+\vspace{0.35cm}
+
+\begin{prettyBox}{Remarque}{myblue}
+\begin{itemize}
+    \item On constate que \texttt{iptables} d’Ubuntu n’accepte plus les ping sortants (chain \textbf{OUTPUT} policy \textbf{DROP}).
+    \item Ubuntu ne peut plus envoyer de requêtes ping vers la machine Kali Linux.
+\end{itemize}
+\end{prettyBox}
+
