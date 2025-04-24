@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1741914825.18107 "Chabane Chaouche_Rabah.tex" "Chabane Chaouche_Rabah.pdf" "Chabane Chaouche_Rabah" 1741914828.14577 0
+["pdflatex"] 1742245809.41991 "Chabane Chaouche_Rabah.tex" "Chabane Chaouche_Rabah.pdf" "Chabane Chaouche_Rabah" 1742245812.77551 0
   "/etc/texmf/web2c/texmf.cnf" 1731366961.44406 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -180,7 +180,7 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1732594860.33734 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1731402230 8212896 b2d3a67526ed46e54375dd7fb267ffaf ""
-  "Chabane Chaouche_Rabah.aux" 1741914827.86361 7041 ccab055b424a3c47635022f0ff6760d6 "pdflatex"
+  "Chabane Chaouche_Rabah.aux" 1742245812.54239 7040 43bcf6638d24a80ff414a7f0bd7e71d7 "pdflatex"
   "Chabane Chaouche_Rabah.tex" 1741845251.7955 2321 17a7ace2400aa8576c1690cded61fb68 ""
   "Exercices/EX1/ex1.py" 1740821259.60778 2427 9b5cb3729c85f95f6cad9a30488c6bfa ""
   "Exercices/EX1/ex1.tex" 1740824703.06705 4158 63969094e104ebe9b0163562a2760265 ""
@@ -189,9 +189,9 @@
   "Exercices/EX2/ex2.tex" 1741914737.21961 3155 6b7d2005f3bc66cfe502a30ee2b071bd ""
   "Exercices/EX2/fig1.pdf" 1741914363.64258 20720 8a5d6e6b41745d48ff1cc669ea7f8c2d ""
   "Exercices/EX2/fig2.pdf" 1741914384.89258 17422 c8fcb70c7993790ff6e385df4ad3dd11 ""
-  "Exercices/EX3/Fig.pdf" 1741909217.78818 24946 b0d63768220b363d87ec908e50f81675 ""
-  "Exercices/EX3/ex3.py" 1741909120.76417 2493 95bb1bda4bc2aeeab729b4b18c7ab684 ""
-  "Exercices/EX3/ex3.tex" 1741914818.33961 5413 02971209829ed04548cff42a36f86f53 ""
+  "Exercices/EX3/ex3.py" 1742245677.02665 2914 b4202b69167b7fcc220e850908128318 ""
+  "Exercices/EX3/ex3.tex" 1742245809.12368 5038 34f2ed62d5d7aa8342b8d17244b4c2ed ""
+  "Exercices/EX3/fig.pdf" 1742245729.31579 25151 b3d7b24ceed0c440f6924cb26b1f5e02 ""
   (generated)
   "Chabane Chaouche_Rabah.aux"
   "Chabane Chaouche_Rabah.log"

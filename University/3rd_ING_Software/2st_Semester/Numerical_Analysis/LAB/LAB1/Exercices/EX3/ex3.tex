@@ -51,31 +51,30 @@ les racines pour \( f(x) = 0 \) et possède trois attributs :
 \lstinputlisting[style=pythonstyle, firstline = 5,lastline=5,basicstyle= \ttfamily\scriptsize]{Exercices/EX3/ex3.py}
 
 \vspace{1cm}
-\section{Trouver \(\varphi\) Pour \(f\) Sur [-1,1]}
-On a \(f(x) = e^{x} + \dfrac{x^2}{2} + x - 1\) et \([a,b] = [-1,1]\)
+\section{Trouver \(\varphi\) Pour \(f\) Sur [1,2]}
+On a \(f(x) = x - 1 - e^{-x} \) et \([a,b] = [1,2]\)
 
-\vspace{1cm}
+\vspace{0.75cm}
 \begin{center}
-    \(e^{x} + \dfrac{x^2}{2} + x - 1 = 0\)\\[0.1cm]
-    \(\boxed{x  =  1 - e^{x} - \dfrac{x^2}{2} = \varphi}\)\\[0.1cm]
+    \(x - 1 - e^{-x} = 0\)\\[0.1cm]
+    \(\boxed{x  =   e^{-x} + 1  = \varphi}\)\\[0.1cm]
 \end{center}
 
-\vspace{1cm}
+\vspace{0.5cm}
 \textbf{\underline{\(\varphi'\)}}
 \begin{center}
     \begin{align*}
-        &\varphi'(x) = - e^{x} - x \\[0.15cm]
-        &\boxed{\varphi'(x) = - (e^{x} + x)}\\[0.15cm]
+        &\boxed{\varphi'(x) = - e^{-x} }\\[0.15cm]
+        &\boxed{\forall x \hspace{0.4cm} \varphi' < 0}
     \end{align*}
 \end{center}
 
-\newpage
+\vspace{0.5cm}
 \textbf{\underline{\(\varphi''\)}}
 \begin{center}
     \begin{align*}
-        &\varphi''(x) = - e^{x} - 1 \\[0.15cm]
-        &\boxed{\varphi''(x) = - (e^{x} + 1)}\\[0.15cm]
-        &\boxed{\forall x \hspace{0.4cm} \varphi'' \leq 0}\\[0.1cm]
+        &\boxed{\varphi''(x) =  e^{-x} }\\[0.15cm]
+        &\boxed{\forall x \hspace{0.4cm} \varphi'' > 0}
     \end{align*}
 \end{center}
 
@@ -84,32 +83,26 @@ On a \(f(x) = e^{x} + \dfrac{x^2}{2} + x - 1\) et \([a,b] = [-1,1]\)
 
 \begin{center}
  \begin{tikzpicture}
-     \tkzTabInit {$x$/1, $\varphi''(x)$/1 , $\varphi'(x)$/2}
-     {$-1$,$\alpha$,$-0.25$, $1$}
-    \tkzTabLine{,,,-,}
-    \tkzTabVar{+/$0.63$ ,R/,R/, -/$-3.71$ }
-\path (N22) -- (N23) node[pos=0.5,fill=white,above] {$0$};
-\path (N42) -- (N23) node[pos=0.5,fill=white,below] {$-0.52$};
+     \tkzTabInit {$x$/1, $\varphi''(x)$/1 , $\varphi'(x)$/2,$\varphi'(x)$/1,$\varphi(x)$/2}
+     {$1$, $2$}
+    \tkzTabLine{,+,}
+    \tkzTabVar{-/$-0.36$ , +/$-0.13$ }
+    \tkzTabLine{,-,}
+    \tkzTabVar{+/$1.36$ , -/$1.13$ }
 \end{tikzpicture}
 \end{center}
-\vspace{0.25cm}
+\vspace{0.75cm}
 
-\vspace{0.25cm}
 
-\(\displaystyle\inf_{x \in [-1,1]} |\varphi'(x)| < 1 \Longrightarrow \varphi\) ne diverge pas dans \([-1,1]\)
+\(\varphi([1,2]) \subseteq [1,2] \Longrightarrow \varphi\) est stable en \([1,2]\)\\[0.2cm]
+\(\varphi \in C^{1} \text{  et } \displaystyle\sup_{x \in [1, 2]} |\varphi'(x)| = 0.36 < 1 \Longrightarrow \varphi\) est contractante en \([1,2]\)
 
-\vspace{0.5cm}
-\(\varphi \in C^{1} \text{  et } \displaystyle\sup_{x \in [-1, 1]} |\varphi'(x)| = 3.71 \geq 1 \Longrightarrow \varphi\) n'est pas contractante en \([-1,1]\)
-
-\vspace{0.5cm}
-Le problem est dans l'extremite 1 , donc on va prendre un nouvelle intervalle [-1,-0.25] :\\[0.15cm]
-\( \varphi \in C^{1} \text{ et } \displaystyle\sup_{x \in [-1, -0.25]} |\varphi(x)| = 0.63 < 1 \Longrightarrow \varphi\) est contractante en \([-1,-0.25]\)
 
 \vspace{1.25cm}
 \textbf{Conclusion :}
 \vspace{-0.25cm}
 \begin{center}
-    \(\boxed{\varphi = 1 - e^{x} - \dfrac{x^2}{2} \hspace{0.25cm},\hspace{0.25cm} k = 0.63}\)
+    \(\boxed{\varphi = e^{-x} + 1 \hspace{0.25cm},\hspace{0.25cm} k = 0.36}\)
 \end{center}
 
 \newpage
@@ -147,5 +140,10 @@ Le problem est dans l'extremite 1 , donc on va prendre un nouvelle intervalle [-
 \section{Figure}
 
 \begin{center}
-    \includegraphics[height=0.35\textheight]{Exercices/EX3/Fig.pdf}
+    \includegraphics[height=0.35\textheight]{Exercices/EX3/fig.pdf}
 \end{center}
+
+\vspace{1cm}
+\begin{prettyBox}{Remarque}{myblue}
+On remarque que \(E(x)\) est decroissante et converge vers 0
+\end{prettyBox}

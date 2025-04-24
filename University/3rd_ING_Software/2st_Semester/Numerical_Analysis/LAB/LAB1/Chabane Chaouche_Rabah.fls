@@ -410,11 +410,11 @@ INPUT Exercices/EX3/ex3.py
 INPUT ./Exercices/EX3/ex3.py
 INPUT ./Exercices/EX3/ex3.py
 INPUT Exercices/EX3/ex3.py
-INPUT ./Exercices/EX3/Fig.pdf
-INPUT ./Exercices/EX3/Fig.pdf
-INPUT ./Exercices/EX3/Fig.pdf
-INPUT ./Exercices/EX3/Fig.pdf
-INPUT ./Exercices/EX3/Fig.pdf
+INPUT ./Exercices/EX3/fig.pdf
+INPUT ./Exercices/EX3/fig.pdf
+INPUT ./Exercices/EX3/fig.pdf
+INPUT ./Exercices/EX3/fig.pdf
+INPUT ./Exercices/EX3/fig.pdf
 INPUT Chabane Chaouche_Rabah.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb

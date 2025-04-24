@@ -503,6 +503,39 @@ the min and max in \([a,b]\) to get the sup value.
 
 \vspace{0.5cm}
 
+\subsection{Tolerance}
+\begin{prettyBox}{Tolerance}{mygreen}
+\begin{center}
+    \(\boxed{|x_n - \alpha| \leq \dfrac{k^{n}}{1-k} \cdot |x_1-x_0| \leq \epsilon \hspace{0.2cm} \forall n\geq 0}\)
+\end{center}
+\end{prettyBox}
+
+
+
+\vspace{0.5cm}
+
+\subsubsection{Number Of Iterations}
+\begin{prettyBox}{Number Of Iterations}{mygreen}
+    
+    \begin{center}
+    \[
+    \begin{gathered}
+        \epsilon \geq \dfrac{k^{n}}{1-k} \cdot |x_1-x_0| \\[0.3cm]
+         k^{n} \cdot |x_1 - x_0| \leq \epsilon \cdot (1-k)   \\[0.3cm]
+         k^{n}  \leq \dfrac{\epsilon \cdot (1-k)}{|x_1 - x_0|}   \\[0.3cm]
+         \ln(k^{n}) \leq \ln\left(\dfrac{\epsilon \cdot (1-k)}{|x_1 - x_0|}\right)   \\[0.3cm]
+         n\cdot\ln(k) \leq \ln\left(\dfrac{\epsilon \cdot (1-k)}{|x_1 - x_0|}\right)   \\[0.3cm]
+         n \geq \dfrac{\ln\left(\dfrac{\epsilon \cdot (1-k)}{|x_1 - x_0|}\right)}{\ln(k)}   \\[0.3cm]
+         \boxed{n =  \left\lceil \dfrac{\ln\left(\dfrac{\epsilon \cdot (1-k)}{|x_1 - x_0|}\right)}{\ln(k)}\right\rceil}   \\[0.3cm]
+    \end{gathered}
+    \]
+    \end{center}
+\end{prettyBox}
+\vspace{0.25cm}
+
+
+
+\vspace{0.5cm}
 \subsection{Proof}
 \subsubsection{Existence \& Uniqueness Of Solution \(\alpha\)}
 \begin{prettyBox}{Existence \& Uniqueness}{mygreen}
@@ -652,8 +685,7 @@ Sometimes, there may be multiple functions \(\varphi\) that satisfy all the cond
 
 \textbf{\underline{Example:}}
 \[
-f(x) = x + 1 - \frac{x\cdot e^{x}}{3} \hspace{0.4cm}, \quad D_f = \mathbb{R}
-\]
+f(x) = x + 1 - \frac{x\cdot e^{x}}{3} \hspace{0.4cm}, \quad D_f = \mathbb{R} \hspace{0.4cm}, \quad \epsilon = 10^{-4}\]
 
 \vspace{0.5cm}
 \textbf{\underline{Differentiation}}\\[0.2cm]
@@ -790,7 +822,7 @@ for the intervalle [1,2]
 \textbf{\underline{\(\varphi_2'\)}}
 \begin{center}
     \(\boxed{\varphi_2'(x) = \dfrac{-3e^{x}}{(e^{x}-3)^{2}}}\)\\[0.45cm]
-    \(\boxed{\forall x \in D_\varphi_2 \hspace{0.4cm} \varphi_2' < 0}\)
+    \(\boxed{\forall x \in D_{\varphi_2} \hspace{0.4cm} \varphi_2' < 0}\)
     \end{center}
 
 \newpage
@@ -975,3 +1007,100 @@ The issue is on the extremity 1.75 , we'll take a new intervalle [1.45,2] :\\[0.
 \end{center}
 
 We choose \(\varphi_4\) over \(\varphi_3\) because its contraction factor is smaller
+
+\vspace{1cm}
+
+\textbf{\underline{\(\alpha_1\) :}}\\[0.15cm]
+We have \(\varphi_1 = \dfrac{x\cdot e^{x}}{3} - 1\) , \(\alpha_1 \in [-2,-1]\) and \(k = 0.0045\)\\[0.1cm]
+We take \(x_0 = 0\) therfore \(x_1 = \varphi_1(x_0) = \varphi_1(0) = -1\)\\[0.35cm]
+\underline{Number Of Iteration :}\\[0.25cm]
+\(n =  \left\lceil \dfrac{\ln\left(\dfrac{\epsilon \cdot (1-k)}{|x_1 - x_0|}\right)}{\ln(k)}\right\rceil\)  =  \(\left\lceil \dfrac{\ln\left(\dfrac{10^{-4} \cdot (1-0.045)}{|-1|}\right)}{\ln(0.045)}\right\rceil\) = \(\lceil 2.9 \rceil\) = 3  
+\newpage
+
+\begin{align*}
+    x_2 &= \varphi_1(x_1) = \varphi_1(-1) = -1.122\\
+    x_3 &= \varphi_1(x_2) = \varphi_1(-1.122) = -1.119
+\end{align*}
+
+\vspace{1cm}
+
+\textbf{\underline{\(\alpha_2\) :}}\\[0.15cm]
+We have \(\varphi_4 = \dfrac{\ln(3(x+1)}{x}\) , \(\alpha_2 \in [1.45,2]\) and \(k = 0.28\)\\[0.1cm]
+We take \(x_0 = 1.5\) therfore \(x_1 = \varphi_4(x_0) = \varphi_4(1.5) = 1.6\)\\[0.35cm]
+\underline{Number Of Iteration :}\\[0.25cm]
+\(n =  \left\lceil \dfrac{\ln\left(\dfrac{\epsilon \cdot (1-k)}{|x_1 - x_0|}\right)}{\ln(k)}\right\rceil\)  =  \(\left\lceil \dfrac{\ln\left(\dfrac{10^{-4} \cdot (1-0.28)}{|0.1|}\right)}{\ln(0.28)}\right\rceil\) = \(\lceil 5.68 \rceil\) = 6  
+
+\vspace{0.5cm}
+
+\begin{align*}
+    x_2 &= \varphi_4(x_1) = \varphi_4(1.6) = 1.584\\
+    x_3 &= \varphi_4(x_2) = \varphi_4(1.584) = 1.5879\\
+    x_4 &= \varphi_4(x_3) = \varphi_4(1.5879) = 1.5870\\
+    x_5 &= \varphi_4(x_4) = \varphi_4(1.587) = 1.58726\\
+    x_6 &= \varphi_4(x_5) = \varphi_4(1.58726) = 1.5872
+\end{align*}
+
+\newpage
+
+\subsection{Newton’s Method}
+\begin{prettyBox}{Newton’s Method}{mygreen}
+Let \(f\) be a continuous function on \([a,b]\) with a unique root \(\alpha\in[a,b]\) satisfying \(f(\alpha)=0\) and \(f'(\alpha)\neq0\).\\[0.15cm]
+Then the Newton iteration is defined for all \(n \ge 0\) by
+\begin{cases}
+x_0 \in [a,b]\\
+x_{n+1} = x_n - \dfrac{f(x_n)}{f'(x_n)}
+\end{cases}
+\vspace{0.15cm}
+
+This method is based on the first‑order Taylor expansion of \(f\).
+
+\vspace{0.15cm}
+Graphically it corresponds to the intersection of the tangent line to \(f\) at \((x_n, f(x_n))\) with the line \(y = x\).
+\end{prettyBox}
+\vspace{1cm}
+
+\subsection{Conditions}
+\begin{prettyBox}{Conditions}{mygreen}
+let \(f\) be a function \(\in C^2\) on \([a,b]\) that verifies all of the above conditions :
+\begin{enumerate}
+    \item \(f(a) \cdot f(b) < 0\)
+    \item \(f'(x) \neq 0\) \(\forall x \in [a,b]\)
+    \item \(f''\) keeps a constant sign in \([a,b]\)
+    \item \(\dfrac{|f(c)|}{|f'(c)|} \leq b-a\) where \(c\) = \begin{cases}
+  a&\text{if }|f'(a)|<|f'(b)|\\
+  b&\text{if }|f'(b)|<|f'(a)|
+\end{cases}
+\end{enumerate}
+\end{prettyBox}
+
+
+\vspace{0.5cm}
+\subsection{Error Estimation}
+\begin{prettyBox}{Error Estimation}{mygreen}
+\begin{center}
+    \(\boxed{|x_{n+1} - \alpha| \leq \dfrac{M}{2m} \cdot |x_{n+1} - x_n|^2 \hspace{0.4cm} \text{where} \hspace{0.15cm} M = \sup_{x\in [a,b]} |f''(x)| \hspace{0.15cm} \text{and} \hspace{0.15cm} m = \inf_{x\in [a,b]} |f'(x)| \hspace{0.2cm} \forall n\geq 0 }\)
+\end{center}
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\subsection{Tolerance}
+\begin{prettyBox}{Tolerance}{mygreen}
+\begin{center}
+    \(\boxed{|x_{n+1} - \alpha| \leq \dfrac{M}{2m} \cdot |x_{n+1} - x_n|^2  \leq \epsilon \hspace{0.4cm} \text{where} \hspace{0.15cm} M = \sup_{x\in [a,b]} |f''(x)| \hspace{0.15cm} \text{and} \hspace{0.15cm} m = \inf_{x\in [a,b]} |f'(x)| \hspace{0.2cm} \forall n\geq 0 }\)
+\end{center}
+\end{prettyBox}
+
+
+
+\vspace{0.5cm}
+
+\subsubsection{Number of Iterations}
+\begin{prettyBox}{Number of Iterations}{mygreen}
+We can’t directly calculate the number of iterations because the error‑estimation formula does not explicitly involve \(n\), 
+ so we have to compute the error at each iteration until it is greater than \(\epsilon\).
+\end{prettyBox}
+
+\vspace{0.75cm}
+
+\textbf{\underline{Example:}}
