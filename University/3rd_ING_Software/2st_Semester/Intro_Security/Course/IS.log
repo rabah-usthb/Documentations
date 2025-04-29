@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  26 FEB 2025 04:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  29 APR 2025 16:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -424,6 +424,30 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen287
 \c@nlinenum=\count315
 \TeXr@lab=\toks42
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen288
+\captionmargin=\dimen289
+\caption@leftmargin=\dimen290
+\caption@rightmargin=\dimen291
+\caption@width=\dimen292
+\caption@indent=\dimen293
+\caption@parindent=\dimen294
+\caption@hangindent=\dimen295
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count316
+\c@continuedfloat=\count317
+Package caption Info: listings package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count318
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count319
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -461,25 +485,25 @@ Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
 Library (tcolorbox): 'tcbtheorems.code.tex' version '6.2.0'
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count316
+\l__color_backend_stack_int=\count320
 \l__pdf_internal_box=\box81
 ) (./IS.aux)
 \openout1 = `IS.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -517,16 +541,16 @@ LaTeX Font Info:    ... okay on input line 69.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count317
-\scratchdimen=\dimen288
+\scratchcounter=\count321
+\scratchdimen=\dimen296
 \scratchbox=\box82
-\nofMPsegments=\count318
-\nofMParguments=\count319
+\nofMPsegments=\count322
+\nofMParguments=\count323
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count320
-\MPscratchDim=\dimen289
-\MPnumerator=\count321
-\makeMPintoPDFobject=\count322
+\MPscratchCnt=\count324
+\MPscratchDim=\dimen297
+\MPnumerator=\count325
+\makeMPintoPDFobject=\count326
 \everyMPtoPDFconversion=\toks44
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -534,7 +558,9 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@lstlisting=\count323
+\c@lstlisting=\count327
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
  (./Chapters/Introduction.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -751,25 +777,83 @@ Underfull \hbox (badness 10000) in paragraph at lines 862--863
 
  []
 
-[21]) [22] (./IS.aux)
+[21] [22]
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/Crypto/l.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/Crypto/l.drawio.pdf, id=183, 298.23419pt x 204.765pt>
+File: Chapters/Diagram/Crypto/l.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/Crypto/l.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/Crypto/l.drawio.pdf  used on input line 981.
+(pdftex.def)             Requested size: 384.11221pt x 263.73862pt.
+[23 <./Chapters/Diagram/Crypto/l.drawio.pdf>]
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/Crypto/seg_1.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/Crypto/seg_1.drawio.pdf, id=201, 210.7875pt x 551.1792pt>
+File: Chapters/Diagram/Crypto/seg_1.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/Crypto/seg_1.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/Crypto/seg_1.drawio.pdf  used on input line 1014.
+(pdftex.def)             Requested size: 130.74158pt x 341.85754pt.
+
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/Crypto/seg_2.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/Crypto/seg_2.drawio.pdf, id=202, 210.7875pt x 551.1792pt>
+File: Chapters/Diagram/Crypto/seg_2.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/Crypto/seg_2.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/Crypto/seg_2.drawio.pdf  used on input line 1020.
+(pdftex.def)             Requested size: 130.74158pt x 341.85754pt.
+
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/Crypto/seg_3.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/Crypto/seg_3.drawio.pdf, id=203, 210.7875pt x 551.1792pt>
+File: Chapters/Diagram/Crypto/seg_3.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/Crypto/seg_3.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/Crypto/seg_3.drawio.pdf  used on input line 1026.
+(pdftex.def)             Requested size: 130.74158pt x 341.85754pt.
+[24 <./Chapters/Diagram/Crypto/seg_1.drawio.pdf> <./Chapters/Diagram/Crypto/seg_2.drawio.pdf> <./Chapters/Diagram/Crypto/seg_3.drawio.pdf>]
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/Crypto/mo.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/Crypto/mo.drawio.pdf, id=236, 695.7192pt x 204.765pt>
+File: Chapters/Diagram/Crypto/mo.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/Crypto/mo.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/Crypto/mo.drawio.pdf  used on input line 1074.
+(pdftex.def)             Requested size: 516.25726pt x 151.9354pt.
+
+Overfull \hbox (4.10764pt too wide) in paragraph at lines 1074--1075
+ [] 
+ []
+
+[25 <./Chapters/Diagram/Crypto/mo.drawio.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1104--1115
+
+ []
+
+[26]
+
+pdfTeX warning: pdflatex (file ./Chapters/Diagram/Crypto/index.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Chapters/Diagram/Crypto/index.drawio.pdf, id=253, 168.63pt x 262.0992pt>
+File: Chapters/Diagram/Crypto/index.drawio.pdf Graphic file (type pdf)
+<use Chapters/Diagram/Crypto/index.drawio.pdf>
+Package pdftex.def Info: Chapters/Diagram/Crypto/index.drawio.pdf  used on input line 1144.
+(pdftex.def)             Requested size: 195.508pt x 303.87079pt.
+[27 <./Chapters/Diagram/Crypto/index.drawio.pdf>]) (./Chapters/modern.tex [28]) [29] (./IS.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 19824 strings out of 474222
- 413114 string characters out of 5748732
+ 21356 strings out of 474222
+ 443739 string characters out of 5748732
  1955975 words of memory out of 5000000
- 41770 multiletter control sequences out of 15000+600000
- 567813 words of font info for 74 fonts, out of 8000000 for 9000
+ 43282 multiletter control sequences out of 15000+600000
+ 571223 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,11n,107p,403b,879s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on IS.pdf (22 pages, 465387 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on IS.pdf (29 pages, 676948 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 156 compressed objects within 2 object streams
+ 333 PDF objects out of 1000 (max. 8388607)
+ 222 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

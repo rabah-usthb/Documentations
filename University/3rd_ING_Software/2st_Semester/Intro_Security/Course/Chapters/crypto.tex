@@ -920,3 +920,255 @@ Thus, the modular inverse of \(5\) modulo \(12\) is \(\boxed{5}\).
 \end{itemize}  
 \end{prettyBox}  
 
+\vspace{0.5cm}
+
+
+\subsection{Kasiski Test}
+\begin{prettyBox}{Kasiski Test}{myblue}
+    The Kasiski Test occurs in two steps:
+    \begin{enumerate}
+        \item Find \(L\) the length of the Vigenère key.
+        \item Apply frequency analysis to all \(L\) segments (periodic extraction) to find the key.
+    \end{enumerate}
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\subsubsection{Finding Length Of Key}
+\begin{prettyBox}{Length Of Key}{myblue}
+\begin{enumerate}
+    \item Find repeating substrings (of at least 2-3 characters) in the ciphertext.
+    \item For each repeating substring, identify a pair of positions: pos\(_1\) and pos\(_2\)
+    \item Compute Distance = pos\(_2\) - pos\(_1\)
+    \item Factorize each distance into its prime factors.
+    \item The most key length \(L\) is the most common factor of the different distances.
+\end{enumerate}
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+
+\subsubsection{Finding the Key}
+
+\begin{prettyBox}{Key}{myblue}
+\begin{enumerate}
+    \item Divide the ciphertext into \(L\) segments:  
+    \[
+      \mathrm{seg}_1 = L\cdot (k+1),\ \dots,\ \mathrm{seg}_{n-1} = L\cdot (k+(L-1)),\ \mathrm{seg}_n = L\cdot k
+    \]
+    \item For each segment compute the letter frequencies and find the most frequent letter, knowing the plaintext language, deduce the shift. Each \(\mathrm{seg}_i\) then gives the \(i\)\textsuperscript{th} character of the key.
+\end{enumerate}
+\end{prettyBox}
+
+\newpage
+\textbf{\underline{Example :}}\\[0.25cm]
+ciphered text (In French) :\\[0.15cm]
+CLCJSGEEXJGGOETFEUUUPEIRMOOBTGGRCOAKTLCHRCODGGOTDEFVCJJFHSEFFVKHEPFR\\
+GFSVRUGMAOFMGMEVURGTETBCJJFHSEGEEFJFHFRGOTGTMCOIGSEUMEEIIHGRGEEXJGGO\\
+ETFEZJGGDOONERSEURUGMAVPTCMIVFDGTSATTGNEUEEEIIHGRGNEPUQWFLGTDGVXEPRT\\
+FSRPNFBNVTCQONCJSUFNVVNGDLGGSGDRGUEEPMOVNG
+
+\vspace{0.25cm}
+\textbf{\underline{Length Of Key :}}\\[0.25cm]
+CL\textcolor{green}{CJS}\textcolor{red}{GEEXJGGOETFE}UUUPEIRMOOBTGGRCOAKTLCHRCODGGOTDEFV\textcolor{blue}{CJJFHSE}FFVKHEPFR\\
+GFSV\textcolor{orange}{RUGMA}OFMGMEVURGTETB\textcolor{blue}{CJJFHSE}GEEFJFHFRGOTGTMCOIGSEUM\textcolor{pink}{EEIIHGR}\textcolor{red}{GEEXJGGO}\\
+\textcolor{red}{ETFE}ZJGGDOONERSEU\textcolor{orange}{RUGMA}VPTCMIVFD\textcolor{purple}{GT}SATTGNEUE\textcolor{pink}{EEIIHGR}GNEPUQWFL\textcolor{purple}{GT}DGVXEPRT\\
+FSRPNFBNVTCQON\textcolor{green}{CJS}UFNVVNGDLGGSGDRGUEEPMOVNG
+
+\vspace{0.25cm}
+
+\begin{center}
+    \includegraphics[width=0.75\textwidth]{Chapters/Diagram/Crypto/l.drawio.pdf}
+\end{center}
+
+
+\vspace{0.25cm}
+\begin{prettyBox}{Conclusion}{red}
+\begin{center}
+    The Length of the key is \boxed{L = 3}
+\end{center}
+\end{prettyBox}
+
+
+\newpage
+\textbf{\underline{Finding The Key}} We will have 3 segments of 82 characters\\[0.25cm]
+\textbf{\underline{seg\(_1\)}}\\[0.15cm]
+CJEJOFUEMBGOTHOGDVJSFHFFRMFMUTBJSEJFOTOSMIGEJOFJDNSRMPMFTTNEIGNUFTVPF\\
+PBTOJFVDGDUPV
+
+\vspace{0.25cm}
+\textbf{\underline{seg\(_2\)}}\\[0.15cm]
+LSEGEEUIOTRALRDOECFEVERSUAMERECFEEFRTMIEEIREGEEGOEEUATIDSTEEIREQLDXRSN\\
+NCNSNNLSREMN
+
+\vspace{0.25cm}
+\textbf{\underline{seg\(_3\)}}\\[0.15cm]
+CGXGTUPROGCKCCGTFJHFKPGVGOGVGTJHGFHGGCGUEHGXGTZGORUGVCVGAGUEHGPWG\\GETRF
+VQCUVGGGGEOG
+
+
+\begin{figure}[htb]
+  \centering
+  \begin{subfigure}[t]{0.32\textwidth}
+    \centering
+    \includegraphics[height=0.45\textheight]{Chapters/Diagram/Crypto/seg_1.drawio.pdf}
+    \caption*{\textbf{seg\(_1\)}}
+  \end{subfigure}%
+  \hfill
+  \begin{subfigure}[t]{0.32\textwidth}
+    \centering
+    \includegraphics[height=0.45\textheight]{Chapters/Diagram/Crypto/seg_2.drawio.pdf}
+    \caption*{\textbf{seg\(_2\)}}
+  \end{subfigure}%
+  \hfill
+  \begin{subfigure}[t]{0.32\textwidth}
+    \centering
+    \includegraphics[height=0.45\textheight]{Chapters/Diagram/Crypto/seg_3.drawio.pdf}
+    \caption*{\textbf{seg\(_3\)}}
+  \end{subfigure}
+\end{figure}
+
+
+\vspace{0.7cm}
+
+\begin{prettyBox}{Conclusion}{red}
+
+    \begin{itemize}
+        \item \(k_1\) = F - E = 1 = B
+        \item \(K_2\) = E - E = 0 = A
+        \item \(k_3\) = G - E = 2 = C
+    \end{itemize}
+
+\begin{center}
+    \boxed{\text{The key is BAC}}
+\end{center}
+\end{prettyBox}
+
+\newpage
+\textbf{\underline{Decryption}}\\[0.25cm]
+BLAISEDEVIGENEREESTUNDIPLOMATEFRANAISLAGRANDEFORCEDUCHIFFREDEVIGENEREES\\
+TQUELAMEMELETTRESERACHIFFREEDEDIFFERENTESMANIERESLECHIFFREDEVIGENEREEXI\\
+GECOMMEPRESQUELATOTALITEDESSYSTEMESDECHIFFREMENTQUELESDEUXCORRESPONDA\\
+NTSCONNAISSENTUNECLEFSECRETECOMMUNE
+
+\vspace{1.25cm}
+
+\subsection{Probable-Plaintext Method}
+
+\begin{prettyBox}{Probable-Plaintext}{myblue}
+The probable-plaintext method is simpler than the Kasiski test. It works as follows:
+\begin{enumerate}
+  \item Guess a likely word or phrase that might appear in the plaintext.
+  \item Align the crib under each possible position in the ciphertext.
+  \item For each alignment, derive the key letters by subtracting the crib letters from the corresponding ciphertext letters.
+  \item Apply the derived key to decrypt surrounding text until the result becomes readable.
+\end{enumerate}
+\end{prettyBox}
+
+\vspace{0.75cm}
+\textbf{\underline{Example:}}\\[0.25cm]
+ciphered text :\\[0.15cm]
+CLCJSGEEXJGGOETFEUUUPEIRMOOBTGGRCOAKTL\\[0.15cm]
+Probable-Plaintext: VIGENERE
+\begin{center} 
+    \includegraphics[height=0.2\textheight]{Chapters/Diagram/Crypto/mo.drawio.pdf}
+\end{center}
+
+\newpage
+
+\subsection{One-Time Pad (OTP)}
+
+\begin{prettyBox}{OTP}{myblue}
+The One-Time Pad is the only cryptographic algorithm proven to be unbreakable.  
+It works like the Vigenère cipher, except the key must be as long as the plaintext.\\[0.5cm]
+Conditions:
+\begin{itemize}
+    \item The key length equals the plaintext length.
+    \item The key is generated randomly.
+    \item The key is used only once and then discarded.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{Note}{red}
+\begin{itemize}
+    \item In modern implementations, instead of shifting letters (as in Vigenère), each bit of plaintext is XOR-ed with the corresponding key bit.
+    \item Secure key distribution is challenging: the only completely safe method is physical transport in a diplomatic pouch since sharing through network is never 100\% safe.
+    \item Generating truly random keys is hard because computers are deterministic. You must rely on physical randomness sources (e.g. electronic noise or radioactive decay).
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.75cm}
+
+\textbf{\underline{Example:}}\\[0.15cm]
+Plain Text :\\[0.15cm]
+BLAISEDEVIGENEREESTUNDIPLOMATEFRANCAISLAGRANDEFORCEDUCHIFFREDEVIGENEREEST\\
+QUELAMEMELETTRESERACHIFFREEDEDIFFERENTESMANIERESLECHIFFREDEVIGENEREEXIGEC\\
+OMMEPRESQUELATOTALITEDESSYSTEMESDECHIFFREMENTQUELESDEUXCORRESPONDANTSCO\\
+NNAISSENTUNECLEFSECRETECOMMUNE\\[0.35cm]
+Vignere Key: \\[0.15cm]
+AHFAZBVOIRBVCSKSPOZIEFPAJNBYGSUHXIZFPEOOURTZREJAPOVJNBUIZEFPEFJEFEVEUZFOEH\\
+FEIHFPEFZEBVJNVPAOEIRJZERVEZNBIOREHGREIZITRGNVKPELOEKOVFHUOZPZALXKNZIHIEUP\\
+OGTHJVFPOHFVUEYZOPODFOVFHGRGJODNVODZPKFIYPZHFYPZGOLJPDIDGZPFKPGKHLFEOV\\JEPANGKUQMFUJGRUGZPMGOOHAEAZQ
+\\[0.35cm]
+
+Ciphered Text:\\[0.15cm]
+BSFIRFYSDZHZPWBWTGSCRIXPUBNYZWZYXVBFXWZOAITMUIOOGQZMHDBQEJWTHJEMLIIILD\\
+JGXXZITHRTQJKIUOARNTROGPZOEVVZHDQJNTVVLTKIALIGZKEZCAINVMPTMJKYJHVDNPOOR\\
+WQNMGIBAKIYNNVJSSFOIXYKWISGJGNDZZVSNGGRXVLEUBJUCCSXZCADYRPDMFWUXDHUYC\\JKUEXGCIWEXSFKXNKZJWUKWMKBGQZSQ
+VMQUMU
+
+\newpage
+\subsection{Index of Coincidence}
+\begin{prettyBox}{Index of Coincidence}{myblue}
+The Index of Coincidence (IC) is a cryptanalysis technique that helps determine whether ciphertext was encrypted using a monoalphabetic or polyalphabetic
+substitution cipher by analyzing the frequency distribution of letters in the text. It is calculated using the formula:
+\[ IC = \sum_{q=A} ^{Z} \frac{n_q(n_q-1)}{n(n-1)}\]
+Where:
+\begin{itemize}
+\item \(n\) : Length of the ciphertext
+\item \(q\) : Represents letters of the alphabet from A to Z
+\item \(n_q\) : Total number of occurrences of letter \(q\) in the ciphertext
+\end{itemize}
+Each language has its characteristic index value based on its natural letter frequency distribution. When computing the Index of Coincidence for a message:
+\begin{itemize}
+\item If the calculated IC is close to the language's expected index (approximately 0.067 for English), it likely indicates a monoalphabetic substitution cipher.
+\item If the calculated IC is significantly lower and closer to 0.038-0.040 (for English), it suggests a polyalphabetic cipher.
+\end{itemize}
+This technique works because monoalphabetic ciphers preserve the underlying frequency distribution of the plaintext language, while polyalphabetic ciphers tend to flatten the distribution, making all letters appear with more uniform frequency.
+\end{prettyBox}
+
+\vspace{0.5cm}
+\begin{center} 
+    \includegraphics[height=0.4\textheight]{Chapters/Diagram/Crypto/index.drawio.pdf}
+\end{center}
+
+\newpage
+
+\subsection{Kerckhoff's Principle (1883)}
+\begin{prettyBox}{Kerckhoff's Principle}{myblue}
+Kerckhoff's Principle states that:
+
+\begin{itemize}
+    \item A cryptosystem's security should depend \textbf{only on the secrecy of the key}.
+    \item The encryption algorithm itself should be assumed to be public knowledge.
+\end{itemize}
+
+This can be summarized as:
+
+\begin{center}
+\colorbox{green!50!white}{\parbox{0.8\textwidth}{
+    \centering \textbf{\textcolor{blue}{The security of encryption should depend only on what can be easily changed (the key), not on what cannot (the algorithm).}}
+}}
+\end{center}
+
+Think of it like a door lock:
+\begin{itemize}
+    \item The lock mechanism (algorithm) is the same for many doors and widely known
+    \item Your unique key (encryption key) is what keeps your door secure
+    \item If your key is stolen, you can change just the key, not the entire lock
+\end{itemize}
+
+This principle is why modern encryption methods are publicly documented and analyzed by experts, making them more secure through scrutiny rather than secrecy.
+\end{prettyBox}
