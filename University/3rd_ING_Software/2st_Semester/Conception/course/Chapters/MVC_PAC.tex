@@ -123,8 +123,8 @@ a \texttt{handleEvent()} method that calls the Controller’s \texttt{traitEvent
 a strategy to update the Model based on the user event. Inside \texttt{traitEvent()} \texttt{modifyModel()} is called and invokes
 the Model’s \texttt{updateModel()} method.\\[0.15cm]
 We use the Observer design pattern between the Model and controller because the Model holds data that external classes
-(controller) are interested in and that can change at runtime. When \texttt{updateModel()} is called, it runs \texttt{notifycontroller()} 
-which loops through all observers(controllers) of \texttt{obsList} and calls each observer’s \texttt{notifyView()} which calls 
+(controller) are interested in and that can change at runtime. When \texttt{updateModel()} is called, it runs \texttt{notifyController()} 
+which loops through all observers(controllers) of \texttt{obsList} and calls each observer’s \texttt{updateController()} which calls 
 the \texttt{checkState()} method , and the \texttt{updateView()} of the view object held in controller class.
 \end{prettyBox}
 
