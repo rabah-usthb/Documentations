@@ -108,7 +108,7 @@ On a comme données sur l’attribut \textit{âge} :\\[0.1cm]
 \begin{prettyBox}{Données à plusieurs attributs}{red}
     \begin{itemize}
         \item On a tendance à comparer les attributs d’une même base de données afin de découvrir des relations entre eux (des connaissances).
-        \item Pour visualiser une base de données comportant plusieurs attributs (dimensions), on peut utiliser des graphiques comme les matrices de dispersion (\textit{scatter plots}) (entre deux attributs) ou des cartes thermiques (\textit{heatmaps}) (plusieurs attributs) pour représenter les relations entre les variables.
+        \item Pour visualiser une base de données comportant plusieurs attributs (dimensions), on peut utiliser des graphiques comme les \textit{scatter plots} (entre deux attributs) ou \\des cartes thermiques \textit{heatmaps} (plusieurs attributs) pour représenter les relations entre les variables.
     \end{itemize}
 \end{prettyBox}
 
@@ -266,35 +266,83 @@ Les formules :
 \vspace{0.35cm}
 
 \item les cinq nombre de donne sont definie par : min \(Q_1\) \(Q_2\) \(Q_3\) max\\
-    le min ettant 13 \textit{ans} et le max 70 \textit{ans}.
-
+    \[ \text{min} = 13\hspace{0.1cm}ans \hspace{0.15cm} , \hspace{0.15cm}Q_1 = 20\hspace{0.1cm}ans \hspace{0.15cm}, \hspace{0.15cm}Q_2 = 25\hspace{0.1cm}ans \hspace{0.15cm},\hspace{0.15cm} Q_3 =  35\hspace{0.1cm}ans\]
 \vspace{0.5cm}
 
-\begin{prettyBox}{Résumé}{myblue}
-On remarque que les âges vont de 13~\textit{ans} à 70~\textit{ans}, donc les données peuvent provenir d'un collège, par exemple.
-\end{prettyBox}
-
-
-
-
-\vspace{0.5cm}
 
 \item boxPlot 
 
 \begin{prettyBox}{BoxPlot}{red}
- \begin{figure}[H] 
+
+\begin{figure}[H] 
   \centering 
   \includegraphics[width=0.5\textwidth]{boxPlot.png} 
 \end{figure}
 
-Elle nous permet de repérer les valeurs aberrantes. Nous verrons le boxplot en détail prochainement.
+\begin{itemize}
+    \item Elle nous permet de repérer les valeurs aberrantes.
+    \item La médiane n'est pas forcément située au milieu de la boxplot.
+    \item Les formules :
+        \[\boxed{\text{lim}_{inf} = Q_1 - (1.5 \times EIQ)} \]
+        \[\boxed{\text{lim}_{sup} = Q_3 + (1.5 \times EIQ)}\]
+        \vspace{0.1cm}
+        \[\boxed{EIQ (\text{Écart interquartile}) = Q_3 - Q_1}\]
+    \item Si \(\text{lim}_{inf}\) ou \(\text{lim}_{sup}\) ont des valeurs incohérentes ou trop différentes du 
+        min ou max, alors on prendra comme limites min et max respectivement.
+\end{itemize}
    
+\end{prettyBox}
+
+\newpage
+
+On a :
+
+\[
+    \begin{cases}
+        X_{min} &= 13 \hspace{0.1cm} ans \\[0.1cm] 
+        Q_1 &= 20\hspace{0.1cm}  ans  \\[0.1cm]
+        Q_2 &= 25\hspace{0.1cm}  ans  \\[0.1cm]
+        Q_3 &= 35\hspace{0.1cm} ans  \\[0.1cm]
+        X_{max} &= 70\hspace{0.1cm}  ans  
+    \end{cases}
+    \]
+
+On calcule les limites :
+\begin{align*}
+    EIQ &= Q_3 - Q_1 = 35 - 20 = \boxed{15\hspace{0.1cm}ans}\\[0.1cm]
+    \text{lim}_{inf} &= Q_1 - (1.5 \times EIQ) = 20 - (1.5 \times 15) = \boxed{-2.5\hspace{0.1cm}ans}\\[0.1cm]
+    \text{lim}_{sup} &= Q_3 + (1.5 \times EIQ) = 35 + (1.5 \times 15) = \boxed{57.5\hspace{0.1cm}ans}\\[0.1cm]
+\end{align*}
+
+
+\vspace{0.15cm}
+
+\begin{prettyBox}{Limites}{red}
+    \begin{itemize}
+        \item On a \(\text{lim}_{inf} = -2.5\) ans, ce qui est une valeur incohérente dans le contexte âge \(\Rightarrow\) on prend comme limite le min = 13 ans.
+        \item On a \(\text{lim}_{sup} = 57\) ans, valeur normale et pas loin du max \(\Rightarrow\) on la prend comme limite.
+    \end{itemize}
 \end{prettyBox}
 
 \vspace{0.5cm}
 
-\item L'interpretation de la BoxPlot on verra ca prochainment
 
+On prend comme unité :\\[0.1cm]
+8 carreaux \( \rightarrow \) 5 ans
+
+\vspace{0.25cm}
+
+ \begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.95\textwidth]{box1.png} 
+\end{figure}
+
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Conclusion}{myblue}
+    70 est un outlier
+\end{prettyBox}
 
 \end{enumerate}
 
@@ -437,7 +485,7 @@ Puisque \(N\) est pair = 18 :
     \hline
     \(y_i\) & 31.2 & 31.4 &  32.9 & 33.4 & 34.1 & 34.6 & 35.7 & 41.2 & 42.5\\ 
     \hline
-    \((y_i - \overline{x})^2\) & 5.856 & 6.864 & 16.974 & 21.344 & 28.302 & 33.872 & 47.886 & 154.256 & 188.238 \\
+    \((y_i - \overline{y})^2\) & 5.856 & 6.864 & 16.974 & 21.344 & 28.302 & 33.872 & 47.886 & 154.256 & 188.238 \\
     \hline
 \end{tabular}
 \end{center}
@@ -454,9 +502,196 @@ Puisque \(N\) représente un échantillon :
 
 
 
+\item boxPlots :\\[0.15cm]
+    Âge\\[0.1cm]
+On a :
+
+\[
+    \begin{cases}
+        X_{min} &= 23 \hspace{0.1cm} ans \\[0.1cm] 
+        Q_1 &= X\left[\frac{N}{4}\right]  = X\left[\frac{18}{4}\right]=X[4.5]=X[5]= 39\hspace{0.1cm}  ans  \\[0.1cm]
+        Q_2 &= 51\hspace{0.1cm}  ans  \\[0.1cm]
+        Q_3 &= X\left[\frac{3\cdot N}{4}\right]  = X\left[\frac{3\cdot 18}{4}\right]=X[13.5]=X[14]= 57\hspace{0.1cm}  ans  \\[0.1cm]
+        X_{max} &= 61\hspace{0.1cm}  ans  
+    \end{cases}
+    \]
+
+On calcule les limits :
+\begin{align*}
+    EIQ &= Q_3 - Q_1 = 57 - 39 = \boxed{18\hspace{0.1cm}ans}\\[0.1cm]
+    \text{lim}_{inf} &= 39 - (1.5 \times EIQ) = 20 - (1.5 \times 18) = \boxed{12\hspace{0.1cm}ans}\\[0.1cm]
+    \text{lim}_{sup} &= 57 + (1.5 \times EIQ) = 35 + (1.5 \times 18) = \boxed{84\hspace{0.1cm}ans}\\[0.1cm]
+\end{align*}
 
 
+\vspace{0.15cm}
 
+\begin{prettyBox}{Limits}{red}
+
+\begin{itemize}
+    \item On a \(\text{lim}_{inf} = 12\) ans, valeur normale et pas loin du min \(\Rightarrow\) on la prend comme limite.
+    \item On a \(\text{lim}_{sup} = 84\) ans, valeur normale et pas loin du max \(\Rightarrow\) on la prend comme limite.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+
+On prend comme unité :\\[0.1cm]
+8 carreaux \( \rightarrow \) 5 ans
+
+\vspace{0.25cm}
+
+ \begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.95\textwidth]{box2.png} 
+\end{figure}
+
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Conclusion}{myblue}
+    aucun outlier
+\end{prettyBox}
+
+\vspace{1cm}
+
+Graisse\\[0.1cm]
+On a :
+
+\[
+    \begin{cases}
+        Y_{min} &= 7.8 \hspace{0.1cm} \% \\[0.1cm] 
+        Q_1 &= Y\left[\frac{N}{4}\right]  = Y\left[\frac{18}{4}\right]=Y[4.5]=Y[5]= 26.5\hspace{0.1cm}  \%  \\[0.1cm]
+        Q_2 &= 30.7\hspace{0.1cm}  \% \\[0.1cm]
+        Q_3 &= Y\left[\frac{3\cdot N}{4}\right]  = Y\left[\frac{3\cdot 18}{4}\right]=Y[13.5]=X[14]= 34.1 \hspace{0.1cm}  \%  \\[0.1cm]
+        Y_{max} &= 42.5\hspace{0.1cm}  \%  
+    \end{cases}
+    \]
+
+On calcule les limits :
+\begin{align*}
+    EIQ &= Q_3 - Q_1 = 34.1 - 26.5 = \boxed{7.6\hspace{0.1cm}\%}\\[0.1cm]
+    \text{lim}_{inf} &= 26.5 - (1.5 \times EIQ) = 26.5 - (1.5 \times 7.6) = \boxed{15.1\hspace{0.1cm}\%}\\[0.1cm]
+    \text{lim}_{sup} &= 34.1 + (1.5 \times EIQ) = 34.1 + (1.5 \times 7.6) = \boxed{\hspace{0.1cm}45.5\%}\\[0.1cm]
+\end{align*}
+
+
+\vspace{0.15cm}
+
+\begin{prettyBox}{Limits}{red}
+
+\begin{itemize}
+    \item On a \(\text{lim}_{inf} = 15.1 \) \%, valeur normale et pas loin du min \(\Rightarrow\) on la prend comme limite.
+    \item On a \(\text{lim}_{sup} = 45.5\) \%, valeur normale et pas loin du max \(\Rightarrow\) on la prend comme limite.
+\end{itemize}
+\end{prettyBox}
+
+\newpage
+
+On prend comme unité :\\[0.1cm]
+8 carreaux \( \rightarrow \) 5 \%
+
+
+\vspace{0.25cm}
+
+ \begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.95\textwidth]{box3.png} 
+\end{figure}
+
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Conclusion}{myblue}
+    9.5 et 7.8 sont des outliers
+\end{prettyBox}
+
+\vspace{1cm}
+
+\item scatter plot
+
+\begin{prettyBox}{Corrélation}{myblue}
+    La corrélation dans un scatter plot, c'est la relation entre l'attribut de l'axe \(X\) et l'axe \(Y\) :
+    \begin{itemize}
+        \item Corrélation positive : quand \(X\) augmente, \(Y\) augmente ; quand \(X\) diminue, \(Y\) diminue aussi.
+        \item Corrélation négative : quand \(X\) augmente, \(Y\) diminue ; quand \(X\) diminue, \(Y\) augmente.
+        \item Pas de corrélation : aucune relation.
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+
+\item Normalization Z-score:
+    \begin{prettyBox}{Z-score}{red}
+        \[
+            Z = \frac{x_i - \overline{x}}{\sigma}
+        \]
+Les valeurs sont entre \([0, 1]\). On normalise parce que les algorithmes (modèles) sont plus performants dans cet intervalle.
+    \end{prettyBox}
+
+
+\vspace{0.25cm}
+
+Âge\\[0.15cm]
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c|c|c|c|} 
+    \hline
+    \(x_i\) & 23 & 27 & 39 & 41 &47 &49 & 50\\
+    \hline
+    \(Z\) & -1.77 & -1.47 & -0.56 & -0.41 & 0.04 & 0.19 & 0.26  \\
+    \hline
+    \(x_i\) & 52 & 54 & 56 & 57 & 58 & 60 & 61\\
+    \hline
+    \(Z\) & 0.42 & 0.57 & 0.73 & 0.79 & 0.87 & 1.02 & 1.10  \\
+    \hline
+\end{tabular}
+\end{center}
+
+\newpage
+\vspace{0.25cm}
+
+Graisse\\[0.15cm]
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|} 
+    \hline
+    \(y_i\) & 7.8 & 9.5 & 17.8 & 25.9 & 26.5  & 27.2 & 27.4 & 28.8 & 30.2\\  
+    \hline
+    \(Z\) & -2.26 & -2.08 & -1.18 & -0.31 & -0.24 & -0.17  & -0.14 & 0.002 & 0.15  \\
+    \hline
+    \(y_i\) & 31.2 & 31.4 &  32.9 & 33.4 & 34.1 & 34.6 & 35.7 & 41.2 & 42.5\\ 
+    \hline
+    \(Z\) & 0.26 & 0.28 & 0.44 & 0.49 & 0.57 & 0.62 & 0.74 & 1.34 & 1.48 \\
+    \hline
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+
+\item coefficient de corrélation:
+
+\[
+    r = 
+    \begin{cases}
+       \dfrac{\sum (x_i - \overline{x}) \cdot (y_i - \overline{y})}{(N-1) \cdot (\sigma_x \cdot \sigma_y)} & \text{si } N \text{ représente un échantillon} \\[0.75cm]
+         \dfrac{\sum (x_i - \overline{x}) \cdot (y_i - \overline{y})}{N \cdot (\sigma_x \cdot \sigma_y)} & \text{si } N \text{ représente la population complète}
+    \end{cases}
+\]
+
+
+\vspace{0.25cm}
+
+Interprétation de \( r \in [-1, 1] \) :
+\[
+    \begin{cases}
+        r = -1      &  \text{corrélation négative linéaire parfaite}      \\
+        -1 < r < 0  &  \text{corrélation négative}    \\
+        r = 0       &  \text{aucune corrélation}   \\
+        0 < r < 1   &  \text{corrélation positive} \\
+        r = 1       &  \text{corrélation positive linéaire parfaite}
+    \end{cases}
+\]
 \end{enumerate}
 
 \end{document}

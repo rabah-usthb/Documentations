@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  12 OCT 2025 17:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  20 OCT 2025 15:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -669,30 +669,62 @@ File: Q.png Graphic file (type png)
 Package pdftex.def Info: Q.png  used on input line 216.
 (pdftex.def)             Requested size: 256.07481pt x 135.14986pt.
 [2 <./Q.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
+
+ []
+
 <boxPlot.png, id=26, 782.925pt x 731.73375pt>
 File: boxPlot.png Graphic file (type png)
 <use boxPlot.png>
-Package pdftex.def Info: boxPlot.png  used on input line 287.
+Package pdftex.def Info: boxPlot.png  used on input line 279.
 (pdftex.def)             Requested size: 226.50319pt x 211.68375pt.
- [3 <./boxPlot.png>] [4] [5] (./Solution.aux)
+[3 <./boxPlot.png>]
+<box1.png, id=31, 3884.5125pt x 761.84625pt>
+File: box1.png Graphic file (type png)
+<use box1.png>
+Package pdftex.def Info: box1.png  used on input line 337.
+(pdftex.def)             Requested size: 486.54057pt x 95.41653pt.
+ [4 <./box1.png>] [5] [6]
+<box2.png, id=43, 4134.44624pt x 776.9025pt>
+File: box2.png Graphic file (type png)
+<use box2.png>
+Package pdftex.def Info: box2.png  used on input line 547.
+(pdftex.def)             Requested size: 486.54057pt x 91.42238pt.
+ [7 <./box2.png>]
+<box3.png, id=49, 2439.1125pt x 879.285pt>
+File: box3.png Graphic file (type png)
+<use box3.png>
+Package pdftex.def Info: box3.png  used on input line 600.
+(pdftex.def)             Requested size: 486.54057pt x 175.3843pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
+
+ []
+
+[8 <./box3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 655--656
+
+ []
+
+[9] (./Solution.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 26370 strings out of 474222
- 586256 string characters out of 5748732
- 1949975 words of memory out of 5000000
- 48257 multiletter control sequences out of 15000+600000
+ 26400 strings out of 474222
+ 586704 string characters out of 5748732
+ 1950975 words of memory out of 5000000
+ 48287 multiletter control sequences out of 15000+600000
  565453 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,13n,117p,409b,991s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Solution.pdf (5 pages, 161148 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Solution.pdf (9 pages, 421186 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
