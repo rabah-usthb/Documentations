@@ -1,0 +1,168 @@
+
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\lstdefinestyle{pythonstyle}{
+    language=python,                    % Language set to Python
+    basicstyle=\ttfamily\footnotesize,   % Change basic font size
+    keywordstyle=\color{blue}\bfseries, % Different keyword style
+    stringstyle=\color{red},         % Different string color
+    commentstyle=\color{green!60!black}\itshape, % Adjust comment color
+    numbers=left,                       % Line numbers on the left
+    numberstyle=\tiny\color{gray},      % Smaller number font and color
+    stepnumber=1,                       % Number each line
+    frame=single,                       % Single frame around code
+    tabsize=4,                          % Adjust tab size
+    showstringspaces=false,             % Do not show spaces in strings
+    captionpos=b,% Position of caption
+    breaklines=true,
+    inputencoding=utf8
+}
+
+
+
+
+\begin{document}
+\tit{TD N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}1}
+
+
+\begin{prettyBox}{C'est Quoi Un Projet}{red}
+Ensemble d'efforts et d'activités fournis dans le but de créer
+un produit, un service ou un résultat unique dans un temps limité avec un budget et des ressources contrôlées.
+\end{prettyBox}
+
+
+\vspace{0.25cm}
+
+\exer{1}
+
+\vspace{0.25cm}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.75\textwidth]{ex1.png} 
+\end{figure}
+
+
+\vspace{0.25cm}
+
+
+\begin{enumerate}
+    \item Type d'organisation : \textbf{interne} car le chef de projet \underline{appartient à un service existant} (développement).
+    \item Rôle du chef :
+    \begin{itemize}
+        \item Gestion de la partie technique.
+        \item Coordonne avec les autres services via des correspondants (pas d'autorité hiérarchique sur eux).
+    \end{itemize}
+    \item Avantages et limites d'une organisation interne :
+        \begin{itemize}
+            \item Avantages :
+                \begin{itemize}
+                    \item Spécialisation, car tout le monde reste à son poste au sein de son service.
+                    \item Rapidité et facilité à mettre en œuvre.
+                    \item Faible coût (pas besoin d'engager des ressources humaines supplémentaires).
+                \end{itemize}
+            \item Limites :
+                \begin{itemize}
+                    \item Lenteur des décisions interservices.
+                    \item Dépendance vis-à-vis des autres services, puisque le chef de projet dépend des autres services.
+                \end{itemize}
+        \end{itemize}
+    \item Solutions pour améliorer la communication entre services :
+        \begin{itemize}
+            \item Réunions régulières interservices.
+            \item Plateforme de gestion collaborative pour suivre l'avancement du projet.
+        \end{itemize}
+\end{enumerate}
+
+\newpage
+
+
+\exer{2}
+
+
+\vspace{0.25cm}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.75\textwidth]{ex2.png} 
+\end{figure}
+
+
+
+\vspace{0.25cm}
+
+\begin{enumerate}
+    \item Type d'organisation : \textbf{fonctionnelle}, car il \underline{dépend directement de la direction générale}.
+    \item Avantages :
+        \begin{itemize}
+            \item Meilleure autorité du chef de projet (communication directe).
+            \item Décisions rapides.
+            \item Vision d'ensemble.
+        \end{itemize}
+    \item Limites :
+        \begin{itemize}
+            \item Surcharge et pression sur le chef de projet.
+            \item Conflit hiérarchique, puisqu'un chef de service peut être en désaccord avec le chef de projet donnant des ordres à son équipe.
+        \end{itemize}
+\end{enumerate}
+
+\end{document}

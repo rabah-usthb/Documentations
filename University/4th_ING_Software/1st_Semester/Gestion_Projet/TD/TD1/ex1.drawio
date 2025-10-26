@@ -1,0 +1,43 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Page-1" id="QJjGktJHHRFNCNp_PTod">
+    <mxGraphModel dx="983" dy="486" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="Direction General" treeRoot="1" id="vxwgFh968pF3eb2YlMpH-7">
+          <mxCell style="whiteSpace=wrap;html=1;align=center;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+            <mxGeometry x="380" y="250" width="130" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="vxwgFh968pF3eb2YlMpH-8" value="Chef Du Service RH" style="whiteSpace=wrap;html=1;align=center;verticalAlign=middle;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="560" y="370" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vxwgFh968pF3eb2YlMpH-9" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startArrow=none;endArrow=none;rounded=0;curved=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" target="vxwgFh968pF3eb2YlMpH-8" parent="1" source="vxwgFh968pF3eb2YlMpH-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="330" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vxwgFh968pF3eb2YlMpH-15" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;" edge="1" parent="1" source="vxwgFh968pF3eb2YlMpH-14" target="vxwgFh968pF3eb2YlMpH-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Chef Du Service&amp;nbsp;&lt;div&gt;Reseau&lt;/div&gt;" treeRoot="1" id="vxwgFh968pF3eb2YlMpH-14">
+          <mxCell style="whiteSpace=wrap;html=1;align=center;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+            <mxGeometry x="377.5" y="370" width="135" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="vxwgFh968pF3eb2YlMpH-28" value="Chef Du Projet&lt;div&gt;(Service Development)&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=center;verticalAlign=middle;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="190" y="370" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vxwgFh968pF3eb2YlMpH-29" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startArrow=none;endArrow=none;rounded=0;curved=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" target="vxwgFh968pF3eb2YlMpH-28" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="340" as="sourcePoint" />
+            <mxPoint x="270" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="450" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
