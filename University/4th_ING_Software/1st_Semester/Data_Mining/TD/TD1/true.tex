@@ -1,4 +1,3 @@
-
 \documentclass{article}
 \usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
 
@@ -266,7 +265,7 @@ Les formules :
 \vspace{0.35cm}
 
 \item les cinq nombre de donne sont definie par : min \(Q_1\) \(Q_2\) \(Q_3\) max\\
-    \[ \text{min} = 13\hspace{0.1cm}ans \hspace{0.15cm} , \hspace{0.15cm}Q_1 = 20\hspace{0.1cm}ans \hspace{0.15cm}, \hspace{0.15cm}Q_2 = 25\hspace{0.1cm}ans \hspace{0.15cm},\hspace{0.15cm} Q_3 =  35\hspace{0.1cm}ans \hspace{0.15cm},\hspace{0.15cm} \text{max} =  70\hspace{0.1cm}ans\]
+    \[ \text{min} = 13\hspace{0.1cm}ans \hspace{0.15cm} , \hspace{0.15cm}Q_1 = 20\hspace{0.1cm}ans \hspace{0.15cm}, \hspace{0.15cm}Q_2 = 25\hspace{0.1cm}ans \hspace{0.15cm},\hspace{0.15cm} Q_3 =  35\hspace{0.1cm}ans\]
 \vspace{0.5cm}
 
 
@@ -344,10 +343,6 @@ On prend comme unité :\\[0.1cm]
     70 est un outlier
 \end{prettyBox}
 
-\vspace{1cm}
-
-\item Le Q-plot permet de visualiser la distribution d'une seule variable, 
-    tandis que le QQ-plot permet de comparer la distribution de deux variables différentes.
 \end{enumerate}
 
 \newpage
@@ -613,13 +608,11 @@ On prend comme unité :\\[0.1cm]
 
 \vspace{1cm}
 
-
 \item Scatter Plot 
 \begin{figure}[H] 
   \centering 
   \includegraphics[width=0.95\textwidth]{scatter.png} 
 \end{figure}
-
 
 
 \begin{prettyBox}{Corrélation}{myblue}
@@ -631,15 +624,11 @@ On prend comme unité :\\[0.1cm]
     \end{itemize}
 \end{prettyBox}
 
-
 \vspace{0.25cm}
 
 \begin{center}
 Dans notre scatter plot on remarque plus la perssone est age plus a la de griasse donc c'est une corelation positive.
 \end{center}
-
-
-
 
 \item Normalization Z-score:
     \begin{prettyBox}{Z-score}{red}
@@ -684,7 +673,8 @@ Graisse\\[0.15cm]
 \end{tabular}
 \end{center}
 
-\newpage
+\vspace{0.5cm}
+
 \item coefficient de corrélation:
 
 \[
@@ -708,7 +698,6 @@ Interprétation de \( r \in [-1, 1] \) :
         r = 1       &  \text{corrélation positive linéaire parfaite}
     \end{cases}
 \]
-
 \begin{align*}
     r  & =\dfrac{\sum (x_i - \overline{x}) \cdot (y_i - \overline{y})}{(N-1) \cdot (\sigma_x \cdot \sigma_y)} \\[0.25cm]
      & =\dfrac{\sum (x_i - \overline{x}) \cdot (y_i - \overline{y})}{(18-1) \cdot (13.218 \cdot 9.254)} \\[0.25cm]
@@ -731,321 +720,6 @@ On a \( r = 0.828 > 0 \Rightarrow \) corrélation positive, ce qui confirme l’
 
 
 
-
 \end{enumerate}
-
-\newpage
-
-
-\exer{3}
-\vspace{0.25cm}
-
-On a comme data set les notes suivantes d'un groupe de 10 étudiants pours les cours respectifs d'un module X et
-un module Y :
-
-\begin{figure}[H] 
-  \centering 
-  \includegraphics[width=0.55\textwidth]{table.png} 
-\end{figure}
-
-\vspace{0.25cm}
-
-\begin{enumerate}
-    \item Oui car l'intervalle des valeurs de TP, Test est de [0-10] alors que celui de la note final et EMD est de 
-        [0-20] donc on doit normalise de tell sorte que tout attributs \(\in\) [0-20].
-
-    \[
-        \begin{cases}
-            \text{TP\_NORMALISE}_i = \text{TP}_i \times 2 \\[0.25cm]
-            \text{TEST\_NORMALISE}_i = TEST_i \times 2\\[0.25cm]
-            \text{FINAL\_NORMALIZE}_i = \dfrac{\text{TP\_NORMALISE}_i+\text{TEST\_NORMALIZE}+\text{EMD}_1}{3}
-        \end{cases}     
-    \]
-
-
-\begin{figure}[H] 
-  \centering 
-  \includegraphics[width=0.55\textwidth]{norm.png} 
-\end{figure}
-
-\newpage
-    
-    \item Final représente la \textbf{moyenne} par rapport aux notes de TP, Test et EMD.
-    \item on met \(x\) final 1 et \(y\) final 2 et on ordone les valeurs : 
-        \begin{enumerate}
-            \item Moyenne :
-
-            \begin{figure}[H] 
-                \centering 
-                \includegraphics[width=0.75\textwidth]{order.png} 
-            \end{figure}
-
-
-
-                \begin{align*}
-                    \overline{x} &= \dfrac{13+11.66+9.16+8.61+12.33+10+8.5+10.83+9.78+11.33}{10}\\[0.15cm]
-                                 &= \dfrac{105.2}{10}\\[0.15cm]
-                                 &= \boxed{10.52}\\[1cm]
-                    \overline{y} &= \dfrac{14.5+12.66+12.74+11.66+13.08+14.16+11.41+11.91+11.08+14.24}{10}\\[0.15cm]
-                                 &= \dfrac{127.44}{10}\\[0.15cm]
-                                 &= \boxed{12.74}
-                \end{align*}
-
-            \item Mediane :
-
-                \begin{align*}
-                    \text{Med}(X) &= \dfrac{X\left[ \dfrac{N}{2}\right] + X\left[\dfrac{N}{2} + 1 \right]}{2}\\[0.15cm]
-                                  &=\dfrac{X\left[ \dfrac{10}{2}\right] + X\left[\dfrac{10}{2} + 1 \right]}{2}\\[0.15cm]
-                                  &=\dfrac{X\left[ 5 \right] + X\left[ 6 \right]}{2}\\[0.15cm]
-                                  &=\dfrac{10+10.83}{2}\\[0.15cm]
-                                  &= \boxed{10.415}\\[1cm]
-                   \text{Med}(Y)  &= \dfrac{Y\left[ \dfrac{N}{2}\right] + Y\left[\dfrac{N}{2} + 1 \right]}{2}\\[0.15cm]
-                                  &=\dfrac{Y\left[ \dfrac{10}{2}\right] + Y\left[\dfrac{10}{2} + 1 \right]}{2}\\[0.15cm]
-                                  &=\dfrac{Y\left[ 5 \right] + Y\left[ 6 \right]}{2}\\[0.15cm]
-                                  &=\dfrac{12.66+12.74}{2}\\[0.15cm]
-                                  &= \boxed{12.7}
-                \end{align*}
-
-          \newpage
-      \item Mode :
-          \[\text{Mode}(X) = \boxed{13} \hspace{2cm} \text{Mode}(Y) = \boxed{14.5} \]
-
- 
-          \vspace{0.15cm}
-
-
-          \begin{prettyBox}{Conclusion}{myblue}
-              \[\overline{x} < \overline{y}\]
-              \[\text{Med}(X) < \text{Med}(Y)\]
-              \[\text{Mode}(X) < \text{Mode}(Y)\]
-          \end{prettyBox}
-
-
-          \vspace{0.15cm}
-
-
-      \item \(Q_1\) et \(Q_3\) :
-                
-          \begin{align*}
-              Q_1(X) &= X\left[ \dfrac {N}{4}\right]\\[0.15cm]
-                     &= X\left [ \dfrac{10}{4}\right]\\[0.15cm]
-                     &= X\left[ 2.5\right]\\
-                     &= X\left[3\right]\\ 
-                     &= \boxed{9.16}\\[0.45cm]
-              Q_3(X) &= X\left[\dfrac{3\cdot N}{4}\right]\\[0.15cm]
-                     &= X\left[\dfrac{3\cdot 10}{4}\right]\\[0.15cm]
-                     &= X\left[7.5\right]\\
-                     &= X\left[8\right]\\
-                     &= \boxed{11.66}\\[1cm]
-              Q_1(Y) &= Y\left[ \dfrac {N}{4}\right]\\[0.15cm]
-                     &= Y\left[3\right]\\ 
-                     &= \boxed{11.66}\\[0.45cm]
-              Q_3(Y) &= Y\left[\dfrac{3\cdot N}{4}\right]\\[0.15cm]
-                     &= Y\left[8\right]\\
-                     &= \boxed{14.16}\\[1cm]
-          \end{align*}
-
-        \item Le résumé des cinq nombres :
-            \[X \Rightarrow \text{min} = 8.5 \hspace{0.25cm} Q_1 = 9.16 \hspace{0.25cm} Q_2 = 10.415 \hspace{0.25cm} Q_3 = 11.66 \hspace{0.25cm} \text{max} = 13   \]
-            \[Y \Rightarrow \text{min} = 11.08 \hspace{0.25cm} Q_1 = 11.66 \hspace{0.25cm} Q_2 = 12.7 \hspace{0.25cm} Q_3 = 14.16 \hspace{0.25cm} \text{max} = 14.5   \]
-        \end{enumerate}
-
-        \newpage
-
-    \item boxplot :
-
-        On a pour final 1:
-
-\[
-    \begin{cases}
-        X_{min} &= 8.5\\[0.1cm] 
-        Q_1 &= 9.16\\[0.1cm]
-        Q_2 &= 10.415\\[0.1cm]
-        Q_3 &= 11.66\\[0.1cm]
-        X_{max} &= 13
-    \end{cases}
-    \]
-
-On calcule les limites :
-\begin{align*}
-    EIQ &= Q_3 - Q_1 = 11.66 - 9.16= \boxed{2.5}\\[0.1cm]
-    \text{lim}_{inf} &= Q_1 - (1.5 \times EIQ) = 9.16 - (1.5 \times 2.5) = \boxed{5.41}\\[0.1cm]
-    \text{lim}_{sup} &= Q_3 + (1.5 \times EIQ) = 11.66 + (1.5 \times 2.5) = \boxed{15.41}\\[0.1cm]
-\end{align*}
-
-
-\vspace{0.15cm}
-
-\begin{prettyBox}{Limites}{red}
-    \begin{itemize}
-        \item On a \(\text{lim}_{inf} = 5.41\) , valeur normale et pas loin du min \(\Rightarrow\) on la prend comme limite.
-        \item On a \(\text{lim}_{sup} = 15.41\) , valeur normale et pas loin du max \(\Rightarrow\) on la prend comme limite.
-    \end{itemize}
-\end{prettyBox}
-
-\vspace{0.5cm}
-
-
-On prend comme unité :\\[0.1cm]
-8 carreaux \( \rightarrow \) 1
-
-\vspace{0.25cm}
-
- \begin{figure}[H] 
-  \centering 
-  \includegraphics[width=0.95\textwidth]{boxfinal1.png} 
-\end{figure}
-
-
-\vspace{0.25cm}
-
-\begin{prettyBox}{Conclusion}{myblue}
-    aucun outlier
-\end{prettyBox}
-
-\newpage 
-
-        On a pour final 2:
-
-\[
-    \begin{cases}
-        Y_{min} &= 11.08\\[0.1cm] 
-        Q_1 &= 11.66\\[0.1cm]
-        Q_2 &= 12.7\\[0.1cm]
-        Q_3 &= 14.16\\[0.1cm]
-        Y_{max} &= 14.5
-    \end{cases}
-    \]
-
-On calcule les limites :
-\begin{align*}
-    EIQ &= Q_3 - Q_1 = 14.16 - 11.66= \boxed{2.5}\\[0.1cm]
-    \text{lim}_{inf} &= Q_1 - (1.5 \times EIQ) = 11.66 - (1.5 \times 2.5) = \boxed{7.91}\\[0.1cm]
-    \text{lim}_{sup} &= Q_3 + (1.5 \times EIQ) = 14.16 + (1.5 \times 2.5) = \boxed{17.91}\\[0.1cm]
-\end{align*}
-
-
-\vspace{0.15cm}
-
-\begin{prettyBox}{Limites}{red}
-    \begin{itemize}
-        \item On a \(\text{lim}_{inf} = 7.91\) , valeur normale et pas loin du min \(\Rightarrow\) on la prend comme limite.
-        \item On a \(\text{lim}_{sup} = 17.91\) , valeur normale et pas loin du max \(\Rightarrow\) on la prend comme limite.
-    \end{itemize}
-\end{prettyBox}
-
-\vspace{0.5cm}
-
-
-On prend comme unité :\\[0.1cm]
-8 carreaux \( \rightarrow \) 1
-
-\vspace{0.25cm}
-
- \begin{figure}[H] 
-  \centering 
-  \includegraphics[width=0.95\textwidth]{boxfinal2.png} 
-\end{figure}
-
-
-\vspace{0.25cm}
-
-\begin{prettyBox}{Conclusion}{myblue}
-    aucun outlier
-\end{prettyBox}
-
-\newpage
-
-\item QQ-Plot :
-
- \begin{figure}[H] 
-  \centering 
-  \includegraphics[width=0.95\textwidth]{scatter3.png} 
-\end{figure}
-
-
-\vspace{0.5cm}
-
-\begin{prettyBox}{Conclusion}{myblue}
-Toutes les moyennes de final 1 sont inférieures à celles de final 2.
-\end{prettyBox}
-
-
-\newpage
-\item Coefficient Corrélation :
-
-  
-
-
-\begin{center}
-\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c|} 
-    \hline
-    \(x_i\) & 8.5 & 8.61 & 9.16 & 9.78 & 10  & 10.83 & 11.33 & 11.66 & 12.33 & 13\\  
-    \hline
-    \((x_i - \overline{x})^2\) & 4.08 & 3.64 & 1.84 & 0.54 & 0.27 & 0.09 & 0.65 & 1.29 & 3.27 & 6.15  \\
-    \hline
-\end{tabular}
-
-
-\vspace{0.5cm}
-
-
-\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c|} 
-    \hline
-    \(y_i\) & 11.08 & 11.41 & 11.66 & 11.91 & 12.66  & 12.74 & 13.08 & 14.16 & 14.24 & 14.5\\  
-    \hline
-    \((y_i - \overline{y})^2\) & 2.75 & 1.76 & 1.16 & 0.68 & 0.006 & 0 & 0.11 & 2.01 & 2.25 & 3.09  \\
-    \hline
-\end{tabular}
-\end{center}
-
-
-Ecart-type :
-
-\begin{align*}
-    \sigma_x & =\sqrt{\dfrac{\sum (x_i - \overline{x})^2}{N-1}}\\
-             & =\sqrt{\dfrac{4.08 + 3.64 + 1.84 + 0.54 + 0.27 + 0.09 +0.65+ 1.29+ 3.27 +6.15}{10-1}}\\
-             & =\sqrt{\dfrac{21.82}{9}}\\
-             &= \sqrt{2.424}\\
-             &=\boxed{1.556}\\[1cm]
-    \sigma_y & =\sqrt{\dfrac{\sum (y_i - \overline{y})^2}{N-1}}\\
-             & =\sqrt{\dfrac{2.75 + 1.76 + 1.16 + 0.68 + 0.006 + 0 +0.11+ 2.01+ 2.25 +3.09}{10-1}}\\
-             & =\sqrt{\dfrac{13.81}{9}}\\
-             &= \sqrt{1.535}\\
-             &=\boxed{1.238}\\[0.5cm]
-\end{align*}
-
-\begin{align*}
-    r  & =\dfrac{\sum (x_i - \overline{x}) \cdot (y_i - \overline{y})}{(N-1) \cdot (\sigma_x \cdot \sigma_y)} \\[0.25cm]
-     & =\dfrac{\sum (x_i - \overline{x}) \cdot (y_i - \overline{y})}{(10-1) \cdot (1.556 \cdot 1.238)} \\[0.25cm]
-                    &= \frac{
-                        \substack {\sqrt{4.08} \cdot  \sqrt{2.75}  +
-                              \sqrt{3.64} \cdot \sqrt{1.76} +
-                             \sqrt{1.84} \cdot \sqrt{1.16} + 
-                             \sqrt{0.54} \cdot \sqrt{0.68} +   
-                            \sqrt{0.27} \cdot \sqrt{0.006}+
-                            \sqrt{0.09} \cdot 0+
-                            \sqrt{0.65} \cdot \sqrt{0.11} +
-                            \sqrt{1.29} \cdot \sqrt{2.01}+
-                            \sqrt{3.27} \cdot \sqrt{2.25} + 
-                            \sqrt{6.15} \cdot \sqrt{3.09}
-                        }
-                    }{17.336}\\[0.25cm]
-                    &= \frac{16.937}{17.336}\\[0.25cm]
-                     &= \boxed { 0.977}
-    \end{align*}
-
-    \vspace{0.5cm}
-
-    \begin{prettyBox}{Conclusion}{myblue}
-On a \( r = 0.977 > 0 \Rightarrow \) corrélation positive
-    \end{prettyBox}
-
-
-
-
-
-\end{enumerate}
-
 
 \end{document}
