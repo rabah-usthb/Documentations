@@ -1,0 +1,170 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\lstdefinestyle{pythonstyle}{
+    language=python,                    % Language set to Python
+    basicstyle=\ttfamily\footnotesize,   % Change basic font size
+    keywordstyle=\color{blue}\bfseries, % Different keyword style
+    stringstyle=\color{red},         % Different string color
+    commentstyle=\color{green!60!black}\itshape, % Adjust comment color
+    numbers=left,                       % Line numbers on the left
+    numberstyle=\tiny\color{gray},      % Smaller number font and color
+    stepnumber=1,                       % Number each line
+    frame=single,                       % Single frame around code
+    tabsize=4,                          % Adjust tab size
+    showstringspaces=false,             % Do not show spaces in strings
+    captionpos=b,% Position of caption
+    breaklines=true,
+    inputencoding=utf8
+}
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+
+\tit{TD N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}2}
+
+
+\exer{1}
+
+\vspace{0.45cm}
+
+{\Large \textbf{Etude de cas d'un projet industriel}}
+
+\vspace{0.25cm}
+
+L'étude du cas présenté ici a pour objet d'établir le planning initial du projet. Le projet
+étudié consiste à réaliser pour un client un prototype d'équipement industriel. Cet
+équipement comprend des éléments mécaniques et électroniques. La réalisation du
+prototype s'accompagne de la mise en place de I'outillage nécessaire. Le projet se termine
+par une première pré-série, qui démontre la capacité à produire le prototype développé.\\[0.15cm]
+Le projet fait appel à différents services de l'entreprise :
+
+\begin{itemize} [noitemsep]
+    \item marketing
+    \item méthodes
+    \item planning
+    \item achats
+    \item logistique
+    \item qualité
+    \item bureau d'études
+\end{itemize}
+
+L'identification des tâches est supposée acquise. Reste à déterminer d'abord l'articulation
+des tâches entre elles \\(c'est-à-dire le réseau).\\[0.15cm]
+Voici la présentation du projet tâche par tâche:\\[0.25cm]
+{\large \textbf{Tâche "prototypage"}}\\[0.15cm]
+Marketing : une personne du marketing pendant \textbf{six mois} pour le prototypage (Margot).
+Bureau d'études: avec un ingénieur (Bernard).\\[0.25cm]
+{\large \textbf{Tâche "planification de projet"}}\\[0.15cm]
+Service planning: Dès le début du prototypage, nous démarrerons.\\
+Nous travaillerons également \textbf{six mois} pour fournir le planning d'exécution final (Paul).\\
+Bureau d'études : Un ingénieur fera partie de l'équipe (Bianca).\\[0.25cm]
+{\large \textbf{Tâche "étude des prix et fournisseurs"}}\\[0.15cm]
+Méthodes : dès la validation du prototype, nous ferons I'étude des prix et des fournisseurs.\\
+Cela devrait prendre \textbf{un mois} (Michel).\\
+Achats : deux personnes de chez nous participeront aussi (Albert et Aurélie).\\[0.25cm]
+{\large \textbf{Tâche "conception"}}\\[0.15cm]
+Bureau d'études : pour un produit de ce genre, la conception devrait prendre \textbf{douze mois}
+(Bernard).\\
+Le client devra approuver le dossier de conception.\\
+La conception pourra démarrer dès que le prototype aura été validé.\\[0.25cm]
+{\large \textbf{Tâche "électronique embarquée"}}\\[0.15cm]
+Bureau d'études: dés que le planning détaillé sera arrêté, nous pourrons nous lancer dans
+le sous-système électronique embarquée.\\
+Le développement du sous-système électronique embarquée devrait nous prendre \textbf{six
+mois} (Bernard).\\[0.25cm]
+{\large \textbf{Tâche "installation de l'outillage"}}\\[0.15cm]
+Achats : l'installation de l'outillage prendra \textbf{cinq mois} (Albert).\\
+Elle pourra démarrer dès que le client aura approuvé la conception.\\
+Méthodes : nous participerons aussi (Michei).\\
+Mais il faudra ie sous-système électronique embarquée.\\[0.25cm]
+{\large \textbf{Tâche "étude de fiabilité"}}\\[0.15cm]
+Qualité : il faudra compter \textbf{trois mois} (Quantin).\\
+Mais nous ne démarrerons que lorsque I'installation de l'outillage aura été lancée.\\
+Il faudra les résuitats de 1'étude de fiabilité pour lancer le développement du logiciel.\\
+
+\newpage
+
+{\large \textbf{Tâche "développement du logiciel"}}\\[0.15cm]
+Bureau d'études: le logiciel n'est même pas défini ... Alors, disons \textbf{six mois} !(Bianca).\\[0.25cm]
+{\large \textbf{Tâche "mise en place de la pré-série"}}\\[0.15cm]
+Logistique : nous serons chargés de la mise en place de la pré-série.
+Avec l'étude des prix et des fournisseurs et le dossier de conception, il nous faudra \textbf{deux semaines} (Laure).\\[0.25cm]
+{\large \textbf{Tâche "pré-série"}}\\[0.15cm]
+Qualité :Il nous faudra le logiciel pour terminer la pré-série.\\
+La pré-série c'est \textbf{une semaine} : nous serons deux (Quantin et Claude).\\
+Méthodes: nous, nous serons trois pour suivre la pré-série (après linstallation de
+l'outillage).(Michel, Maurice et Maud).
+
+\begin{enumerate}
+\item Proposez un WBS pour ce projet jusqu'au niveau des tâches opérationnelles.
+\item Proposez une matrice RACI.
+\end{enumerate}
+
+\end{document}
