@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} un cour a plusieurs etudiants donc on met une table ref d\PYGZsq{}etudiants}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} un etudiant est inscrit a plusieur cour on met une table ref de cour}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} creation du type tableau de reference(pointeur) de tetudiant}
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{or}\PYG{+w}{ }\PYG{k}{replace}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{t\PYGZus{}set\PYGZus{}ref\PYGZus{}etudiant\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{k}{of}\PYG{+w}{ }\PYG{k}{ref}\PYG{+w}{ }\PYG{n}{tetudiant\PYGZus{}tp1}\PYG{p}{;}
+\PYG{o}{/}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} creation du type tableau de reference(pointeur) de tcour}
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{or}\PYG{+w}{ }\PYG{k}{replace}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{t\PYGZus{}set\PYGZus{}ref\PYGZus{}cours\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{k}{of}\PYG{+w}{ }\PYG{k}{ref}\PYG{+w}{ }\PYG{n}{tcours\PYGZus{}tp1}\PYG{p}{;}
+\PYG{o}{/}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ajouter tableau ref tetudiant a tcours}
+\PYG{k}{alter}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{tcours\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{add}\PYG{+w}{ }\PYG{n}{attribute}\PYG{+w}{ }\PYG{n}{est\PYGZus{}inscrit}\PYG{+w}{ }\PYG{n}{t\PYGZus{}set\PYGZus{}ref\PYGZus{}etudiant\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{cascade}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ajouter tableau ref tcours a tetudiant}
+\PYG{k}{alter}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{tetudiant\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{add}\PYG{+w}{ }\PYG{n}{attribute}\PYG{+w}{ }\PYG{n}{inscrit\PYGZus{}a}\PYG{+w}{ }\PYG{n}{t\PYGZus{}set\PYGZus{}ref\PYGZus{}cours\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{cascade}\PYG{+w}{ }\PYG{p}{;}
+\end{Verbatim}

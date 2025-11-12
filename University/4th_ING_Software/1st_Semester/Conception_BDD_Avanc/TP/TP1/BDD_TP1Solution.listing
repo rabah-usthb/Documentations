@@ -1,0 +1,12 @@
+-- error le type a une depandence circulaire
+desc tevaluation_tp1
+
+-- dictionnaire pour voir les nom des attributs
+select attr_name, attr_type_name from user_type_attrs
+where type_name = 'TEVALUATION_TP1'
+order by attr_no;
+
+create table evaluation_tp1 of tevaluation_tp1 (
+foreign key (cour) references cours_tp1, -- cour va reference a une ligne de la table cours
+foreign key (etudiant) references personne_tp1
+);

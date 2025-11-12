@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} creation de la table personne de type tpersonne}
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{n}{personne\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{of}\PYG{+w}{ }\PYG{n}{tpersonne\PYGZus{}tp1}\PYG{p}{;}
+\end{Verbatim}

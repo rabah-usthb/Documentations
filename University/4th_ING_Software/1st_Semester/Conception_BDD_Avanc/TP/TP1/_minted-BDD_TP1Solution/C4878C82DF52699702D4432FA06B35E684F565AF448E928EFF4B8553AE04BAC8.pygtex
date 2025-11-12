@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} afficher les numeros comme object}
+\PYG{k}{select}\PYG{+w}{ }\PYG{n}{telephone}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{personne\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{where}\PYG{+w}{ }\PYG{n}{nom}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{tnom\PYGZus{}tp1}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}LAMARI\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Meriem\PYGZsq{}}\PYG{p}{);}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} On imbrique un select pour trouver l\PYGZsq{}objet ttelephone de adam et la mettre dans telphone de mariem}
+\PYG{k}{update}\PYG{+w}{ }\PYG{n}{personne\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{set}\PYG{+w}{ }\PYG{n}{telephone}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{select}\PYG{+w}{ }\PYG{n}{telephone}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{personne\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{where}\PYG{+w}{ }\PYG{n}{nom}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{tnom\PYGZus{}tp1}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}MERABETI\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Adam\PYGZsq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{)}
+\PYG{k}{where}\PYG{+w}{ }\PYG{n}{nom}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{tnom\PYGZus{}tp1}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}LAMARI\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Meriem\PYGZsq{}}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} pour cibler Meriem LAMARI}
+\end{Verbatim}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} creation du type tnom}
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{or}\PYG{+w}{ }\PYG{k}{replace}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{tnom\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k}{object}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{n}{nomDeFamille}\PYG{+w}{ }\PYG{n}{varchar2}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{prenom}\PYG{+w}{ }\PYG{n}{varchar2}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)}
+\PYG{p}{);}
+\PYG{o}{/}
+\end{Verbatim}

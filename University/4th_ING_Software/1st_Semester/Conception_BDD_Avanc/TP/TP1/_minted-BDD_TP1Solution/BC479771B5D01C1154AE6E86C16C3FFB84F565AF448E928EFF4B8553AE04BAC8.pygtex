@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Insertion D\PYGZsq{}un Etudiant}
+\PYG{k}{insert}\PYG{+w}{ }\PYG{k}{into}\PYG{+w}{ }\PYG{n}{personne\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{values}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{n}{tetudiant\PYGZus{}tp1}\PYG{p}{(}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Utilization Du Constructeur TEtudiant}
+\PYG{+w}{    }\PYG{l+m+mi}{123123123}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{tnom\PYGZus{}tp1}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}MERABETI\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Adam\PYGZsq{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{TO\PYGZus{}DATE}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}01/05/1985\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}DD/MM/YYYY\PYGZsq{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{tadresse\PYGZus{}tp1}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Didouche Mourad\PYGZsq{}}\PYG{p}{,}\PYG{k}{null}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Alger\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Algérie\PYGZsq{}}\PYG{p}{,}\PYG{k}{null}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{ttelephone\PYGZus{}tp1}\PYG{p}{(),}
+\PYG{+w}{    }\PYG{l+m+mi}{999}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}informatique\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{t\PYGZus{}set\PYGZus{}diplome\PYGZus{}tp1}\PYG{p}{()}
+\PYG{+w}{	}\PYG{p}{)}
+\PYG{+w}{ }\PYG{p}{);}
+\end{Verbatim}

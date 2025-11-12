@@ -1,0 +1,655 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+
+\newcounter{commentCount}
+\newcounter{filePrg}
+\newcounter{inputPrg}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{minted}
+
+\usepackage{ifthen}
+\usepackage{fontawesome}
+
+\usepackage{tabularx}
+\newcolumntype{\CeX}{>{\centering\let\newline\\\arraybackslash}X}%
+\newcommand{\TwoSymbolsAndText}[3]{%
+  \begin{tabularx}{\textwidth}{c\CeX c}%
+    #1 & #2 & #3
+  \end{tabularx}%
+}
+
+\newtcblisting[use counter=inputPrg, number format=\arabic]{codeInput}[4]{
+  listing engine=minted,
+  minted language=#1,
+  minted options={autogobble,breaklines,  firstnumber={#4}},
+  listing only,
+  size=title,
+  arc=1.5mm,
+  breakable,
+  enhanced jigsaw,
+  colframe=myblue,
+  coltitle=White,
+  boxrule=0.5mm,
+  colback=white,
+  coltext=Black,
+  title=\TwoSymbolsAndText{\faCode}{%
+  \textbf{Sql Program \thetcbcounter}\ifthenelse{\equal{#2}{}}{}{\textbf{: }#2}%
+  }{\faCode},
+  label=inputPrg:#3
+}
+
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\usepackage{minted}
+
+\begin{document}
+
+
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}1}
+
+
+\exer{1}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+    \item Création de tous les types nécessaires pour la création du type TPersonne : 
+
+
+\begin{codeInput}{sql}{Type Nom}{code01}{41}
+-- creation du type tnom
+create or replace type tnom_tp1 as object (
+    nomDeFamille varchar2(50),
+    prenom varchar2(50)
+);
+/
+\end{codeInput}
+
+\vspace{0.1cm}
+
+\begin{codeInput}{sql}{Type Adresse}{code01}{1}
+-- creation du type tadresse
+create or replace type tadresse_tp1 as object (
+    rue varchar2(50),
+    numero integer,
+    ville varchar2(50),
+    pays varchar2(50),
+    codePostal integer
+);
+/
+\end{codeInput}
+
+\vspace{0.1cm}
+
+\begin{codeInput}{sql}{Type Telephone}{code01}{1}
+-- creation du type ttelephone on a utilise varray puisqu'on connait le max = 6
+create or replace type ttelephone_tp1 as varray(6) of integer;
+/
+\end{codeInput}
+
+\vspace{0.1cm}
+
+\begin{codeInput}{sql}{Type Personne}{code01}{1}
+-- creation du type tpersonne en utilisant les type compose qu'on a definie
+create or replace type tpersonne_tp1 as object (
+    NSS integer,
+    nom tnom,
+    date_naiss date, 
+    adresse tadresse_tp1,
+    telephone ttelephone_tp1
+)not final; -- on mit not final pour permettre a d'autre objets d'herite de tpersonne
+/
+\end{codeInput}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{personneEX1.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item Définition la méthode permettant de connaitre l’âge d’une personne:
+
+\begin{codeInput}{sql}{Method Age}{code01}{1}
+-- ajoutter la signature de la methode a tpersonne
+alter type tpersonne_tp1 add member function age_tp1 return number;
+
+-- implementation des methodes
+create or replace type body tpersonne_tp1
+as
+
+-- implementaton de la methode age avec pl/sql
+member function age_tp1 return number is
+age_val number;
+
+begin
+select round((sysdate-self.date_naiss)/365) into age_val from dual;
+return age_val;
+end ;
+
+end;
+/
+\end{codeInput}
+
+
+\vspace{0.15cm}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.65\textwidth]{methodAge.png} 
+\end{figure}
+
+\newpage
+\item Création la table Personne: 
+
+\begin{codeInput}{sql}{Creation De La Table Personne}{code01}{1}
+-- creation de la table personne de type tpersonne
+create table personne_tp1 of tpersonne_tp1;
+\end{codeInput}
+
+\vspace{0.15cm}
+
+\item Insertion sur la table personne:
+
+\vspace{0.15cm}
+
+\begin{codeInput}{sql}{Insertion Sur La Table Personne}{code01}{1}
+-- faut utilise les constructeurs pour des attributs composes 
+insert into personne_tp1 values ( 
+    123456789,
+    tnom_tp1('ADIMI','Mohamed'),
+    TO_DATE('01/01/1980', 'DD/MM/YYYY'),
+    tadresse_tp1('la Gare',22,'Alger','Algérie',16000),
+    ttelephone_tp1(023112345,0554321921)
+ );
+\end{codeInput}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.65\textwidth]{insert1EX1.png} 
+\end{figure}
+
+\vspace{0.5cm}
+
+\item Définir les deux types TEtudiant et TEnseignant :
+
+
+\begin{codeInput}{sql}{Creation Du Type Enfant TEtudiant}{code01}{1}
+-- Creation Du Type Tdiplome
+create or replace type tdiplome_tp1 as object (
+    nom varchar2(50),
+    annee integer
+);
+/
+
+-- Creation Du Type T_Set_diplome table de type TDiplome
+-- On a choisit une nested table parcequ'on a pas de limite ,max = n
+create or replace type t_set_diplome_tp1 as table of tdiplome_tp1;
+/
+
+-- Creation Du Type TEtudiant Qui Herite Du Type Tperosnne
+create or replace type tetudiant_tp1 under tpersonne_tp1(
+    numEtudiant integer,
+    Departement varchar2(50),
+    diplome t_set_diplome_tp1
+);
+/
+\end{codeInput}
+
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.65\textwidth]{tetudiant.png} 
+\end{figure}
+
+
+\begin{codeInput}{sql}{Creation Du Type Enfant TEnseignant}{code01}{1}
+-- Creation Du Type TCompte 
+create or replace type tcompte_tp1 as object (
+  numero integer,
+  banque varchar2(50)
+);
+/
+
+-- Creation Du Type TEnseignant
+create or replace type tenseignant_tp1 under tpersonne_tp1(
+ numEnseignant integer,
+ compte tcompte_tp1
+);
+/
+\end{codeInput}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.65\textwidth]{tteacher.png} 
+\end{figure}
+
+
+\newpage
+
+\item Insertions :
+\begin{codeInput}{sql}{Insertion D'un TEtudiant}{code01}{1}
+-- Insertion D'un Etudiant    
+insert into personne_tp1 values ( 
+    tetudiant_tp1( -- Utilization Du Constructeur TEtudiant    
+    123123123,
+    tnom_tp1('MERABETI','Adam'),
+    TO_DATE('01/05/1985', 'DD/MM/YYYY'),
+    tadresse_tp1('Didouche Mourad',null,'Alger','Algérie',null),
+    ttelephone_tp1(),
+    999,
+    'informatique',
+    t_set_diplome_tp1()
+	)
+ );
+\end{codeInput}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.65\textwidth]{insertEtudiantEX1.png} 
+\end{figure}
+
+\begin{codeInput}{sql}{Insertion D'un TEnseignant}{code01}{1}
+ -- Insertion D'un Enseignant    
+insert into personne_tp1 values ( 
+    tenseignant_tp1( -- Utilization Du Constructeur TEnseignant    
+    666999666,
+    tnom_tp1('LAMARI','Meriem'),
+    TO_DATE('04/06/1975', 'DD/MM/YYYY'),
+    tadresse_tp1('Boulevard Colonel Amirouche',99,'Alger','Algérie',null),
+    ttelephone_tp1(),
+    777,
+    tcompte_tp1(310123456789,'BDL')
+	)
+ );
+
+insert into personne_tp1 values ( 
+    tenseignant_tp1(
+    556978566,
+    tnom_tp1('SALEMI','Ahmed'),
+    TO_DATE('04/06/1965', 'DD/MM/YYYY'),
+    tadresse_tp1('Ismail Yafsah',99,'Alger','Algérie',null),
+    ttelephone_tp1(),
+    787,
+    tcompte_tp1(330123489756,'BEA')
+	)
+ );
+\end{codeInput}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.65\textwidth]{insertTeacherEX1.png} 
+\end{figure}
+
+\item Ajouter les numéros de téléphone 022342222 et 066543333 à l'étudiant Adam MERABETI :
+
+
+\begin{codeInput}{sql}{Mise-A-Jour Etudiant}{code01}{1}
+
+-- afficher les numeros comme object
+select telephone from personne_tp1 where nom = tnom_tp1('MERABETI','Adam');
+
+
+update personne_tp1 set telephone = ttelephone_tp1(022342222,066543333) -- affecter les numeros
+where nom = tnom_tp1('MERABETI','Adam'); -- pour cibler adam MERABETI
+
+-- afficher les numero comme table avec la function TABLE et column_value pour acceder au valeur
+select column_value tel from personne_tp1,table(telephone) where nom = tnom_tp1('MERABETI','Adam');
+\end{codeInput}
+
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.65\textwidth]{update1EX1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.65\textwidth]{tabletel.png} 
+\end{figure}
+
+\newpage
+
+\item Ajouter les mêmes numéros de téléphone de l'étudiant Adam MERABETI à Meriem LAMARI:
+
+
+\begin{codeInput}{sql}{Mise-A-Jour Enseignant}{code01}{1}
+-- afficher les numeros comme object
+select telephone from personne_tp1 where nom = tnom_tp1('LAMARI','Meriem');
+
+-- On imbrique un select pour trouver l'objet ttelephone de adam et la mettre dans telphone de mariem
+update personne_tp1 set telephone = (select telephone from personne_tp1 where nom = tnom_tp1('MERABETI','Adam') )
+where nom = tnom_tp1('LAMARI','Meriem'); -- pour cibler Meriem LAMARI 
+\end{codeInput}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.65\textwidth]{update2EX1.png} 
+\end{figure}
+
+
+\item Lister les étudiants (nom et numéro): 
+
+\begin{codeInput}{sql}{Mise-A-Jour Enseignant}{code01}{1}
+select p.nom.nomdefamille, treat(value(p) as tetudiant_tp1).numetudiant num 
+-- down cast (du general a la class special) pour acceder 
+-- des attributs d'objet specifique si ligne pas une instance la cellule rest vide
+from personne_tp1 p 
+where value(p) is of (tetudiant_tp1); -- cibler que les instances de tetudiant;
+\end{codeInput}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.65\textwidth]{printEX1.png} 
+\end{figure}
+
+\newpage
+\item Trouver les couples de noms de personnes partageant au moins un numéro de téléphone:
+
+
+\begin{codeInput}{sql}{Mise-A-Jour Enseignant}{code01}{1}
+select distinct  -- distinct pour eviter les doublons 
+p1.nom.nomDeFamille,p1.nom.prenom , -- nom , prenom de p1
+p2.nom.nomDeFamille ,p2.nom.prenom  -- nom , prenom de p2
+from personne_tp1 p1,personne_tp1 p2, -- table p1 , p2
+table(p2.telephone) tel2, table(p1.telephone) tel1 -- table telephone de tel1 , tel2 
+where p1.nss !=p2.nss  -- eviter la meme instance
+and tel1.column_value = tel2.column_value; -- verifier que tel1 = tel2
+\end{codeInput}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.65\textwidth]{same.png} 
+\end{figure}
+
+\item Creation des types tcours et tevaluation :
+
+
+\begin{codeInput}{sql}{Type Tcours \& TEvaluation}{code01}{1}
+-- creation du type tcours
+create or replace type tcours_tp1 as object ( 
+    NumCours integer,
+    Libelle varchar2(50),
+    Credit integer
+ );
+/
+
+-- creation du type tevaluation
+create or replace type tevaluation_tp1 as object (
+    dateEval date,
+    note number
+);
+/
+\end{codeInput}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{type2EX1.png} 
+\end{figure}
+
+\item Relation entre cours et enseignants :
+\begin{codeInput}{sql}{Relation Entre Cours Avec Enseignants}{code01}{1}
+-- un cour a plusieurs ensignants donc on met une table ref d'enseignants 
+-- un enseignant est responsbale d'un seul cour donc on met une ref de cour
+
+-- creation du type tableau de reference(pointeur) de tenseignant
+create or replace type t_set_ref_enseignant_tp1 as table of ref tenseignant_tp1; 
+/
+
+-- ajouter tableau ref tenseignant a tcours
+alter type tcours_tp1 add attribute assure_par t_set_ref_enseignant_tp1 cascade;
+
+-- ajouter une ref tcours a tenseignant 
+alter type tenseignant_tp1 add attribute assure ref tcours_tp1 cascade ;
+\end{codeInput}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{cour-teach .png} 
+\end{figure}
+
+
+
+
+\item Relation entre cours et etudiant :
+\begin{codeInput}{sql}{Relation Entre Cours Avec Etudiants}{code01}{1}
+-- un cour a plusieurs etudiants donc on met une table ref d'etudiants 
+-- un etudiant est inscrit a plusieur cour on met une table ref de cour
+
+-- creation du type tableau de reference(pointeur) de tetudiant
+create or replace type t_set_ref_etudiant_tp1 as table of ref tetudiant_tp1; 
+/
+
+-- creation du type tableau de reference(pointeur) de tcour
+create or replace type t_set_ref_cours_tp1 as table of ref tcours_tp1; 
+/
+
+-- ajouter tableau ref tetudiant a tcours
+alter type tcours_tp1 add attribute est_inscrit t_set_ref_etudiant_tp1 cascade;
+
+-- ajouter tableau ref tcours a tetudiant 
+alter type tetudiant_tp1 add attribute inscrit_a t_set_ref_cours_tp1 cascade ;
+\end{codeInput}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{cour-student.png} 
+\end{figure}
+
+
+
+\begin{codeInput}{sql}{Relation Entre Cours,Etudiant Avec Evaluation}{code01}{1}
+-- une evaluation represente une note d'un cour d'un etudiant donc on met ref
+-- d'un cour et d'un etudiant
+-- un cour a plusieurs evaluation d'etudiants donc on met une table ref d'evaluation
+-- un etudiant a plusieurs evaluation de different cours donc on met
+-- une table ref d'evaluation
+
+-- creation du type tableau de reference(pointeur) de tcour
+create or replace type t_set_ref_evaluation_tp1 as table ref of evaluation_tp1;
+/ 
+
+-- ajouter ref tcour a tevaluation
+alter type tevaluation_tp1 add attribute cour ref tcours_tp1 cascade;
+
+-- ajouter ref tetudiant a tevaluation
+alter type tevaluation_tp1 add attribute etudiant ref tetudiant_tp1 cascade;
+
+-- ajouter tableau ref tevaluation a tetudiant 
+alter type tetudiant_tp1 add attribute evaluations t_set_ref_evaluation_tp1 cascade;
+
+-- ajouter tableau ref tevaluation a tcours 
+alter type tcours_tp1 add attribute evaluations t_set_ref_evaluation_tp1 cascade;
+\end{codeInput}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{evaluation.png} 
+\end{figure}
+
+
+
+
+\item Relation reflexif de cour :
+
+\begin{codeInput}{sql}{Relation Reflexif De Cours}{code01}{1}
+-- chaque cour a des pre_requis et des acquis les deux representent des
+-- tableau de cour
+
+-- le type t_set_ref_cours_tp1 a ete cree precedemment
+
+-- ajouter tableau ref tcours a tcours (pre_requis)
+alter type tcours_tp1 add attribute pre_requis t_set_ref_cours_tp1;
+
+-- ajouter tableau ref tcours a tcours (acquis)
+alter type tcours_tp1 add attribute a_pre_requis t_set_ref_cours_tp1;
+\end{codeInput}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{cour-cour.png} 
+\end{figure}
+
+\newpage 
+\begin{prettyBox}{Remaque}{red}
+    On peut creer un type de table de reference mais pas un type qui fait reference a un autre example :
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{note.png} 
+\end{figure}
+\end{prettyBox}
+
+
+\item Creation De La Table cours : 
+
+\begin{codeInput}{sql}{Creation De La Table Cours}{code01}{1}
+-- error on ne peut pas creer la table directmenent car le type contient
+-- des table imprique on a besoin pour chaque table imbrique de creer la table
+-- physiquement et pointer vers elle
+create table cours_tp1 of tcours_tp1;
+/
+
+-- error on peut pas utiliser desc si le type a une depandence circulaire
+desc tcours_tp1;
+
+-- on utilise alors le dictionnaire 
+select attr_name, attr_type_name from user_type_attrs 
+where type_name = 'TCOURS_TP1' -- cibler le type
+order by attr_no; -- ordonner par numero de creation de l'attribut
+
+create table cours_tp1 of tcours_tp1 (primary key (numcours))
+nested table assure_par store as cours_assure_par, 
+-- store as creer la table cours_assure_par et assure_par va pointer vers cette table
+nested table est_inscrit store as cours_est_inscrit,
+nested table evaluations store as cours_evaluations,
+nested table pre_requis store as cours_pre_requis,
+nested table a_pre_requis store as cours_a_pre_requis;
+\end{codeInput}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.57\textwidth]{specifyNested.png} 
+\end{figure}
+
+\vspace{-0.7cm}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.55\textwidth]{descCant.png} 
+\end{figure}
+
+\vspace{-0.5cm}
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.56\textwidth]{cours.png} 
+\end{figure}
+
+
+\newpage
+
+
+\end{enumerate}
+
+\begin{codeInput}{sql}{Creation De La Table Evaluation}{code01}{1}
+-- error le type a une depandence circulaire
+desc tevaluation_tp1
+
+-- dictionnaire pour voir les nom des attributs
+select attr_name, attr_type_name from user_type_attrs
+where type_name = 'TEVALUATION_TP1'
+order by attr_no;
+
+create table evaluation_tp1 of tevaluation_tp1 (
+foreign key (cour) references cours_tp1, -- cour va reference a une ligne de la table cours
+foreign key (etudiant) references personne_tp1
+); 
+\end{codeInput}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.58\textwidth]{desCant2.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{evaluationt.png} 
+\end{figure}
+
+
+
+\end{document}

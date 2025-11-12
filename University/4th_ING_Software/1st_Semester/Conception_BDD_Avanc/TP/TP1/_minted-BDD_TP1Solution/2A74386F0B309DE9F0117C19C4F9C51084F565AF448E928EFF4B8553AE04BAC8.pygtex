@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} afficher les numeros comme object}
+\PYG{k}{select}\PYG{+w}{ }\PYG{n}{telephone}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{personne\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{where}\PYG{+w}{ }\PYG{n}{nom}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{tnom\PYGZus{}tp1}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}MERABETI\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Adam\PYGZsq{}}\PYG{p}{);}
+
+
+\PYG{k}{update}\PYG{+w}{ }\PYG{n}{personne\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{set}\PYG{+w}{ }\PYG{n}{telephone}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{ttelephone\PYGZus{}tp1}\PYG{p}{(}\PYG{l+m+mi}{022342222}\PYG{p}{,}\PYG{l+m+mi}{066543333}\PYG{p}{)}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} affecter les numeros}
+\PYG{k}{where}\PYG{+w}{ }\PYG{n}{nom}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{tnom\PYGZus{}tp1}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}MERABETI\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Adam\PYGZsq{}}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} pour cibler adam MERABETI}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} afficher les numero comme table avec la function TABLE et column\PYGZus{}value pour acceder au valeur}
+\PYG{k}{select}\PYG{+w}{ }\PYG{n}{column\PYGZus{}value}\PYG{+w}{ }\PYG{n}{tel}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{personne\PYGZus{}tp1}\PYG{p}{,}\PYG{k}{table}\PYG{p}{(}\PYG{n}{telephone}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{where}\PYG{+w}{ }\PYG{n}{nom}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{tnom\PYGZus{}tp1}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}MERABETI\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Adam\PYGZsq{}}\PYG{p}{);}
+\end{Verbatim}

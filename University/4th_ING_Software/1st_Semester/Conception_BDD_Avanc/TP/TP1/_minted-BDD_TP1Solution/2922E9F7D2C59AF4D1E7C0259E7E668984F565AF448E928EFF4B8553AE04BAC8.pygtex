@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Insertion D\PYGZsq{}un Enseignant}
+\PYG{k}{insert}\PYG{+w}{ }\PYG{k}{into}\PYG{+w}{ }\PYG{n}{personne\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{values}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{n}{tenseignant\PYGZus{}tp1}\PYG{p}{(}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Utilization Du Constructeur TEnseignant}
+\PYG{+w}{    }\PYG{l+m+mi}{666999666}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{tnom\PYGZus{}tp1}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}LAMARI\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Meriem\PYGZsq{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{TO\PYGZus{}DATE}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}04/06/1975\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}DD/MM/YYYY\PYGZsq{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{tadresse\PYGZus{}tp1}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Boulevard Colonel Amirouche\PYGZsq{}}\PYG{p}{,}\PYG{l+m+mi}{99}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Alger\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Algérie\PYGZsq{}}\PYG{p}{,}\PYG{k}{null}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{ttelephone\PYGZus{}tp1}\PYG{p}{(),}
+\PYG{+w}{    }\PYG{l+m+mi}{777}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{tcompte\PYGZus{}tp1}\PYG{p}{(}\PYG{l+m+mi}{310123456789}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}BDL\PYGZsq{}}\PYG{p}{)}
+\PYG{+w}{	}\PYG{p}{)}
+\PYG{+w}{ }\PYG{p}{);}
+
+\PYG{k}{insert}\PYG{+w}{ }\PYG{k}{into}\PYG{+w}{ }\PYG{n}{personne\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{values}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{n}{tenseignant\PYGZus{}tp1}\PYG{p}{(}
+\PYG{+w}{    }\PYG{l+m+mi}{556978566}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{tnom\PYGZus{}tp1}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}SALEMI\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Ahmed\PYGZsq{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{TO\PYGZus{}DATE}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}04/06/1965\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}DD/MM/YYYY\PYGZsq{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{tadresse\PYGZus{}tp1}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Ismail Yafsah\PYGZsq{}}\PYG{p}{,}\PYG{l+m+mi}{99}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Alger\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Algérie\PYGZsq{}}\PYG{p}{,}\PYG{k}{null}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{ttelephone\PYGZus{}tp1}\PYG{p}{(),}
+\PYG{+w}{    }\PYG{l+m+mi}{787}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{tcompte\PYGZus{}tp1}\PYG{p}{(}\PYG{l+m+mi}{330123489756}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}BEA\PYGZsq{}}\PYG{p}{)}
+\PYG{+w}{	}\PYG{p}{)}
+\PYG{+w}{ }\PYG{p}{);}
+\end{Verbatim}

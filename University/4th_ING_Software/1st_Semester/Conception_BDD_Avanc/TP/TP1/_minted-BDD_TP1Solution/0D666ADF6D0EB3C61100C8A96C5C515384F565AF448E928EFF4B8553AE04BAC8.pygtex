@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{select}\PYG{+w}{ }\PYG{k}{distinct}\PYG{+w}{  }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} distinct pour eviter les doublons}
+\PYG{n}{p1}\PYG{p}{.}\PYG{n}{nom}\PYG{p}{.}\PYG{n}{nomDeFamille}\PYG{p}{,}\PYG{n}{p1}\PYG{p}{.}\PYG{n}{nom}\PYG{p}{.}\PYG{n}{prenom}\PYG{+w}{ }\PYG{p}{,}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} nom , prenom de p1}
+\PYG{n}{p2}\PYG{p}{.}\PYG{n}{nom}\PYG{p}{.}\PYG{n}{nomDeFamille}\PYG{+w}{ }\PYG{p}{,}\PYG{n}{p2}\PYG{p}{.}\PYG{n}{nom}\PYG{p}{.}\PYG{n}{prenom}\PYG{+w}{  }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} nom , prenom de p2}
+\PYG{k}{from}\PYG{+w}{ }\PYG{n}{personne\PYGZus{}tp1}\PYG{+w}{ }\PYG{n}{p1}\PYG{p}{,}\PYG{n}{personne\PYGZus{}tp1}\PYG{+w}{ }\PYG{n}{p2}\PYG{p}{,}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} table p1 , p2}
+\PYG{k}{table}\PYG{p}{(}\PYG{n}{p2}\PYG{p}{.}\PYG{n}{telephone}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{tel2}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{table}\PYG{p}{(}\PYG{n}{p1}\PYG{p}{.}\PYG{n}{telephone}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{tel1}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} table telephone de tel1 , tel2}
+\PYG{k}{where}\PYG{+w}{ }\PYG{n}{p1}\PYG{p}{.}\PYG{n}{nss}\PYG{+w}{ }\PYG{o}{!=}\PYG{n}{p2}\PYG{p}{.}\PYG{n}{nss}\PYG{+w}{  }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} eviter la meme instance}
+\PYG{k}{and}\PYG{+w}{ }\PYG{n}{tel1}\PYG{p}{.}\PYG{n}{column\PYGZus{}value}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{tel2}\PYG{p}{.}\PYG{n}{column\PYGZus{}value}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} verifier que tel1 = tel2}
+\end{Verbatim}

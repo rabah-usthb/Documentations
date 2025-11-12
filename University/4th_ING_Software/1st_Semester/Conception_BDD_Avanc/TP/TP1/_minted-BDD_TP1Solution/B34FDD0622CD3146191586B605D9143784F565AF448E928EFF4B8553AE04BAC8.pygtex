@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} faut utilise les constructeurs pour des attributs composes}
+\PYG{k}{insert}\PYG{+w}{ }\PYG{k}{into}\PYG{+w}{ }\PYG{n}{personne\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{values}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{l+m+mi}{123456789}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{tnom\PYGZus{}tp1}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ADIMI\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Mohamed\PYGZsq{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{TO\PYGZus{}DATE}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}01/01/1980\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}DD/MM/YYYY\PYGZsq{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{tadresse\PYGZus{}tp1}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}la Gare\PYGZsq{}}\PYG{p}{,}\PYG{l+m+mi}{22}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Alger\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Algérie\PYGZsq{}}\PYG{p}{,}\PYG{l+m+mi}{16000}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{ttelephone\PYGZus{}tp1}\PYG{p}{(}\PYG{l+m+mi}{023112345}\PYG{p}{,}\PYG{l+m+mi}{0554321921}\PYG{p}{)}
+\PYG{+w}{ }\PYG{p}{);}
+\end{Verbatim}

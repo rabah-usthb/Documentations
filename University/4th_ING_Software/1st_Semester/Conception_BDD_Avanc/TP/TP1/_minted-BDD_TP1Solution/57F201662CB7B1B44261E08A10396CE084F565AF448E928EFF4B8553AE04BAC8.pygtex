@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} error on ne peut pas creer la table directmenent car le type contient}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} des table imprique on a besoin pour chaque table imbrique de creer la table}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} physiquement et pointer vers elle}
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{n}{cours\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{of}\PYG{+w}{ }\PYG{n}{tcours\PYGZus{}tp1}\PYG{p}{;}
+\PYG{o}{/}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} error on peut pas utiliser desc si le type a une depandence circulaire}
+\PYG{k}{desc}\PYG{+w}{ }\PYG{n}{tcours\PYGZus{}tp1}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} on utilise alors le dictionnaire}
+\PYG{k}{select}\PYG{+w}{ }\PYG{n}{attr\PYGZus{}name}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{attr\PYGZus{}type\PYGZus{}name}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{user\PYGZus{}type\PYGZus{}attrs}
+\PYG{k}{where}\PYG{+w}{ }\PYG{n}{type\PYGZus{}name}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}TCOURS\PYGZus{}TP1\PYGZsq{}}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} cibler le type}
+\PYG{k}{order}\PYG{+w}{ }\PYG{k}{by}\PYG{+w}{ }\PYG{n}{attr\PYGZus{}no}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ordonner par numero de creation de l\PYGZsq{}attribut}
+
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{n}{cours\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{of}\PYG{+w}{ }\PYG{n}{tcours\PYGZus{}tp1}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{primary}\PYG{+w}{ }\PYG{k}{key}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{numcours}\PYG{p}{))}
+\PYG{n}{nested}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{n}{assure\PYGZus{}par}\PYG{+w}{ }\PYG{n}{store}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n}{cours\PYGZus{}assure\PYGZus{}par}\PYG{p}{,}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} store as creer la table cours\PYGZus{}assure\PYGZus{}par et assure\PYGZus{}par va pointer vers cette table}
+\PYG{n}{nested}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{n}{est\PYGZus{}inscrit}\PYG{+w}{ }\PYG{n}{store}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n}{cours\PYGZus{}est\PYGZus{}inscrit}\PYG{p}{,}
+\PYG{n}{nested}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{n}{evaluations}\PYG{+w}{ }\PYG{n}{store}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n}{cours\PYGZus{}evaluations}\PYG{p}{,}
+\PYG{n}{nested}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{n}{pre\PYGZus{}requis}\PYG{+w}{ }\PYG{n}{store}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n}{cours\PYGZus{}pre\PYGZus{}requis}\PYG{p}{,}
+\PYG{n}{nested}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{n}{a\PYGZus{}pre\PYGZus{}requis}\PYG{+w}{ }\PYG{n}{store}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n}{cours\PYGZus{}a\PYGZus{}pre\PYGZus{}requis}\PYG{p}{;}
+\end{Verbatim}

@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} chaque cour a des pre\PYGZus{}requis et des acquis les deux representent des}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} tableau de cour}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} le type t\PYGZus{}set\PYGZus{}ref\PYGZus{}cours\PYGZus{}tp1 a ete cree precedemment}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ajouter tableau ref tcours a tcours (pre\PYGZus{}requis)}
+\PYG{k}{alter}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{tcours\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{add}\PYG{+w}{ }\PYG{n}{attribute}\PYG{+w}{ }\PYG{n}{pre\PYGZus{}requis}\PYG{+w}{ }\PYG{n}{t\PYGZus{}set\PYGZus{}ref\PYGZus{}cours\PYGZus{}tp1}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ajouter tableau ref tcours a tcours (acquis)}
+\PYG{k}{alter}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{tcours\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{add}\PYG{+w}{ }\PYG{n}{attribute}\PYG{+w}{ }\PYG{n}{a\PYGZus{}pre\PYGZus{}requis}\PYG{+w}{ }\PYG{n}{t\PYGZus{}set\PYGZus{}ref\PYGZus{}cours\PYGZus{}tp1}\PYG{p}{;}
+\end{Verbatim}

@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} creation du type tpersonne en utilisant les type compose qu\PYGZsq{}on a definie}
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{or}\PYG{+w}{ }\PYG{k}{replace}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{tpersonne\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k}{object}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{n}{NSS}\PYG{+w}{ }\PYG{n+nb}{integer}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{nom}\PYG{+w}{ }\PYG{n}{tnom}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{date\PYGZus{}naiss}\PYG{+w}{ }\PYG{n+nb}{date}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{adresse}\PYG{+w}{ }\PYG{n}{tadresse\PYGZus{}tp1}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{telephone}\PYG{+w}{ }\PYG{n}{ttelephone\PYGZus{}tp1}
+\PYG{p}{)}\PYG{k}{not}\PYG{+w}{ }\PYG{k}{final}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} on mit not final pour permettre a d\PYGZsq{}autre objets d\PYGZsq{}herite de tpersonne}
+\PYG{o}{/}
+\end{Verbatim}

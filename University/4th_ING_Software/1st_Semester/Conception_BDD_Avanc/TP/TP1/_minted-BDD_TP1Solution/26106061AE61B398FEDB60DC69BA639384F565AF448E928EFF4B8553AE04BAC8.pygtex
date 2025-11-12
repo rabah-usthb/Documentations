@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{select}\PYG{+w}{ }\PYG{n}{p}\PYG{p}{.}\PYG{n}{nom}\PYG{p}{.}\PYG{n}{nomdefamille}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{treat}\PYG{p}{(}\PYG{n}{value}\PYG{p}{(}\PYG{n}{p}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n}{tetudiant\PYGZus{}tp1}\PYG{p}{).}\PYG{n}{numetudiant}\PYG{+w}{ }\PYG{n}{num}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} down cast (du general a la class special) pour acceder}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} des attributs d\PYGZsq{}objet specifique si ligne pas une instance la cellule rest vide}
+\PYG{k}{from}\PYG{+w}{ }\PYG{n}{personne\PYGZus{}tp1}\PYG{+w}{ }\PYG{n}{p}
+\PYG{k}{where}\PYG{+w}{ }\PYG{n}{value}\PYG{p}{(}\PYG{n}{p}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{is}\PYG{+w}{ }\PYG{k}{of}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{tetudiant\PYGZus{}tp1}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} cibler que les instances de tetudiant;}
+\end{Verbatim}

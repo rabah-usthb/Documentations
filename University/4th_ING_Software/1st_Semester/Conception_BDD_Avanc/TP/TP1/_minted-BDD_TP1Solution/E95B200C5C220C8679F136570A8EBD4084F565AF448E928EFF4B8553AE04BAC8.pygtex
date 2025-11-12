@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} creation du type tcours}
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{or}\PYG{+w}{ }\PYG{k}{replace}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{tcours\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k}{object}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{n}{NumCours}\PYG{+w}{ }\PYG{n+nb}{integer}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{Libelle}\PYG{+w}{ }\PYG{n}{varchar2}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{Credit}\PYG{+w}{ }\PYG{n+nb}{integer}
+\PYG{+w}{ }\PYG{p}{);}
+\PYG{o}{/}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} creation du type tevaluation}
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{or}\PYG{+w}{ }\PYG{k}{replace}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{tevaluation\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k}{object}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{n}{dateEval}\PYG{+w}{ }\PYG{n+nb}{date}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{note}\PYG{+w}{ }\PYG{n+nb}{number}
+\PYG{p}{);}
+\PYG{o}{/}
+\end{Verbatim}

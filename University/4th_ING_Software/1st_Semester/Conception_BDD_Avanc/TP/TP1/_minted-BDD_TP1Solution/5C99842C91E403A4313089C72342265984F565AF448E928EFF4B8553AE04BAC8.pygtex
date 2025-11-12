@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ajoutter la signature de la methode a tpersonne}
+\PYG{k}{alter}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{tpersonne\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{add}\PYG{+w}{ }\PYG{n}{member}\PYG{+w}{ }\PYG{k}{function}\PYG{+w}{ }\PYG{n}{age\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nb}{number}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} implementation des methodes}
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{or}\PYG{+w}{ }\PYG{k}{replace}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{body}\PYG{+w}{ }\PYG{n}{tpersonne\PYGZus{}tp1}
+\PYG{k}{as}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} implementaton de la methode age avec pl/sql}
+\PYG{n}{member}\PYG{+w}{ }\PYG{k}{function}\PYG{+w}{ }\PYG{n}{age\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nb}{number}\PYG{+w}{ }\PYG{k}{is}
+\PYG{n}{age\PYGZus{}val}\PYG{+w}{ }\PYG{n+nb}{number}\PYG{p}{;}
+
+\PYG{k}{begin}
+\PYG{k}{select}\PYG{+w}{ }\PYG{n}{round}\PYG{p}{((}\PYG{n}{sysdate}\PYG{o}{\PYGZhy{}}\PYG{k}{self}\PYG{p}{.}\PYG{n}{date\PYGZus{}naiss}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{365}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{into}\PYG{+w}{ }\PYG{n}{age\PYGZus{}val}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{dual}\PYG{p}{;}
+\PYG{k}{return}\PYG{+w}{ }\PYG{n}{age\PYGZus{}val}\PYG{p}{;}
+\PYG{k}{end}\PYG{+w}{ }\PYG{p}{;}
+
+\PYG{k}{end}\PYG{p}{;}
+\PYG{o}{/}
+\end{Verbatim}

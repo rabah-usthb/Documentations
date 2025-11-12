@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} une evaluation represente une note d\PYGZsq{}un cour d\PYGZsq{}un etudiant donc on met ref}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} d\PYGZsq{}un cour et d\PYGZsq{}un etudiant}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} un cour a plusieurs evaluation d\PYGZsq{}etudiants donc on met une table ref d\PYGZsq{}evaluation}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} un etudiant a plusieurs evaluation de different cours donc on met}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} une table ref d\PYGZsq{}evaluation}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} creation du type tableau de reference(pointeur) de tcour}
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{or}\PYG{+w}{ }\PYG{k}{replace}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{t\PYGZus{}set\PYGZus{}ref\PYGZus{}evaluation\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{k}{ref}\PYG{+w}{ }\PYG{k}{of}\PYG{+w}{ }\PYG{n}{evaluation\PYGZus{}tp1}\PYG{p}{;}
+\PYG{o}{/}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ajouter ref tcour a tevaluation}
+\PYG{k}{alter}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{tevaluation\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{add}\PYG{+w}{ }\PYG{n}{attribute}\PYG{+w}{ }\PYG{n}{cour}\PYG{+w}{ }\PYG{k}{ref}\PYG{+w}{ }\PYG{n}{tcours\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{cascade}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ajouter ref tetudiant a tevaluation}
+\PYG{k}{alter}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{tevaluation\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{add}\PYG{+w}{ }\PYG{n}{attribute}\PYG{+w}{ }\PYG{n}{etudiant}\PYG{+w}{ }\PYG{k}{ref}\PYG{+w}{ }\PYG{n}{tetudiant\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{cascade}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ajouter tableau ref tevaluation a tetudiant}
+\PYG{k}{alter}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{tetudiant\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{add}\PYG{+w}{ }\PYG{n}{attribute}\PYG{+w}{ }\PYG{n}{evaluations}\PYG{+w}{ }\PYG{n}{t\PYGZus{}set\PYGZus{}ref\PYGZus{}evaluation\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{cascade}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ajouter tableau ref tevaluation a tcours}
+\PYG{k}{alter}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{tcours\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{add}\PYG{+w}{ }\PYG{n}{attribute}\PYG{+w}{ }\PYG{n}{evaluations}\PYG{+w}{ }\PYG{n}{t\PYGZus{}set\PYGZus{}ref\PYGZus{}evaluation\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{cascade}\PYG{p}{;}
+\end{Verbatim}

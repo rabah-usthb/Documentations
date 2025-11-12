@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} error le type a une depandence circulaire}
+\PYG{k}{desc}\PYG{+w}{ }\PYG{n}{tevaluation\PYGZus{}tp1}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} dictionnaire pour voir les nom des attributs}
+\PYG{k}{select}\PYG{+w}{ }\PYG{n}{attr\PYGZus{}name}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{attr\PYGZus{}type\PYGZus{}name}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{user\PYGZus{}type\PYGZus{}attrs}
+\PYG{k}{where}\PYG{+w}{ }\PYG{n}{type\PYGZus{}name}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}TEVALUATION\PYGZus{}TP1\PYGZsq{}}
+\PYG{k}{order}\PYG{+w}{ }\PYG{k}{by}\PYG{+w}{ }\PYG{n}{attr\PYGZus{}no}\PYG{p}{;}
+
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{n}{evaluation\PYGZus{}tp1}\PYG{+w}{ }\PYG{k}{of}\PYG{+w}{ }\PYG{n}{tevaluation\PYGZus{}tp1}\PYG{+w}{ }\PYG{p}{(}
+\PYG{k}{foreign}\PYG{+w}{ }\PYG{k}{key}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{cour}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{references}\PYG{+w}{ }\PYG{n}{cours\PYGZus{}tp1}\PYG{p}{,}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} cour va reference a une ligne de la table cours}
+\PYG{k}{foreign}\PYG{+w}{ }\PYG{k}{key}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{etudiant}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{references}\PYG{+w}{ }\PYG{n}{personne\PYGZus{}tp1}
+\PYG{p}{);}
+\end{Verbatim}
