@@ -1,0 +1,791 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+
+\newcounter{commentCount}
+\newcounter{filePrg}
+\newcounter{inputPrg}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{minted}
+
+\usepackage{ifthen}
+\usepackage{fontawesome}
+
+\usepackage{tabularx}
+\newcolumntype{\CeX}{>{\centering\let\newline\\\arraybackslash}X}%
+\newcommand{\TwoSymbolsAndText}[3]{%
+  \begin{tabularx}{\textwidth}{c\CeX c}%
+    #1 & #2 & #3
+  \end{tabularx}%
+}
+
+\newtcblisting[use counter=inputPrg, number format=\arabic]{codeInput}[4]{
+  listing engine=minted,
+  minted language=#1,
+  minted options={autogobble,breaklines,  firstnumber={#4}},
+  listing only,
+  size=title,
+  arc=1.5mm,
+  breakable,
+  enhanced jigsaw,
+  colframe=myblue,
+  coltitle=White,
+  boxrule=0.5mm,
+  colback=white,
+  coltext=Black,
+  title=\TwoSymbolsAndText{\faCode}{%
+  \textbf{Sql Program \thetcbcounter}\ifthenelse{\equal{#2}{}}{}{\textbf{: }#2}%
+  }{\faCode},
+  label=inputPrg:#3
+}
+
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\usepackage{minted}
+
+\begin{document}
+
+
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}1}
+
+\begin{enumerate}
+
+\item selectioner des PC (appareille terminaux) et en mettre 2 comme suit :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{terminalDevices.png} 
+\end{figure}
+
+\item mettre un \textbf{routeur 2911} et une \textbf{switch 2950-24} depuis appreille reseau : 
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{networkDevices.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{routers.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{switches.png} 
+\end{figure}
+
+\item pour connecter des appareille de differente couches (pc a switch, switch a routeur...etc)\\
+on utilise un \textbf{cable droit} :
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{cables.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{droit.png} 
+\end{figure}
+
+\item apres avoir place et branche tous on obtient :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.75\textwidth]{state1.png} 
+\end{figure}
+
+\newpage
+
+\item pour mettre des label on utilise l'outil text on va mettre un label
+    sur notre reseau local '192.168.10.0/24':
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{textTool.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{textTool2.png} 
+\end{figure}
+
+\item Comment configurer notre routeur?
+
+\begin{prettyBox}{Configuration}{myblue}
+    \begin{itemize}
+        \item Le routeur n'a ni calvier ni ecran donc pour pouvoir 
+      le configurer on le connecte a un pc grace a un cable bleau ciel appele 
+  \textbf{cable console}.
+        \item On met le cable dans le port \textbf{console} du routeur et dans le port
+            \textbf{serie RS 232} du pc.
+        \item Si le pc n'a pas de port serie on utilise un \textbf{adapteur} qu'on met dans le port 
+            \textbf{USB}.
+        \item On utilisera une application pour dialoguer avec le routeur depuis le PC.
+    \end{itemize}
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{console.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.3\textwidth]{portConsole.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.3\textwidth]{portrs232.png} 
+\end{figure}
+
+\newpage
+\item Comment acceder a l'application?
+
+\begin{prettyBox}{Application}{myblue}
+    \begin{itemize}
+        \item click droit sur le pc connecte au routeur avec le cable console.
+        \item selectioner la tab desktop.
+        \item choisir l'application \textbf{Terminal}.
+    \end{itemize}
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{clickPc.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{deskTerminal.png} 
+\end{figure}
+
+\item lancer l'application terminal avec un click droit :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{clickTerminal.png} 
+\end{figure}
+
+\newpage
+\item Appuier sur OK :
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{no.png} 
+\end{figure}
+
+\begin{prettyBox}{Remarque}{red}
+    on repond avec no pour la question \textbf{'would you like to enter the initial configuration dialog ?'} pour
+    garder les configurations initiaux et avoir un demarage par defaut sans configuration personalise. 
+\end{prettyBox}
+
+\item Comment utiliser l'application terminal pour configurer le routeur?
+
+\begin{prettyBox}{Terminal}{myblue}
+    \begin{itemize}
+        \item Actuellement on est au \textbf{niveau 1 (mode utilisateur)} c'est pour ca on a 
+            un sign superieur :\\ 
+            {\centering \verb|Router>|}
+        \item Pour Configurer le routeur on doit passer par le \textbf{niveau 2 mode administrateur} on aura un
+            sign dièse : \verb|Router#|
+        \item Pour passer au niveau 2 on utilise : \verb|enable| ou \verb|en|.
+        \item Pour Configurer les parametres d'un routeur on doit au moins etre au \textbf{niveau 3} on aura :
+            \verb|Router(config)#|
+        \item Pour passer au niveau 3 on utilise : \verb|conf terminal| ou \verb|conf t|.
+    \end{itemize} 
+\end{prettyBox}
+
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{admin.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{configt.png} 
+\end{figure}
+
+\item C'est quoi la premiere chose a configure ?
+
+\begin{prettyBox}{Hostname}{myblue}
+    \begin{itemize}
+        \item Hostname permet d'identifier le router en lui donnant un nom.
+        \item Facilite le managment des routeurs pour les admins.
+        \item On doit etre au niveau 3 pour le configurer.
+        \item La commande : \verb|hostname <nom>|
+    \end{itemize}
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{hostname.png} 
+\end{figure}
+
+\newpage
+
+\item Qu'avez vous remarquer de bizzar qu'on est passe au mode administrateur?
+
+\begin{prettyBox}{Mot De Passe}{myblue}
+    \begin{itemize}
+    \item Le routeur a donne acces directement sans demander de mot de passe.
+    \item Pour Configurer un mot de passe on doit etre au niveau 3.
+    \item La commande : \verb|enable password <mot de passe>|
+    \end{itemize}
+\end{prettyBox}
+
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{password.png} 
+\end{figure}
+
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{enterpass.png} 
+\end{figure}
+
+\begin{prettyBox}{EXIT}{red}
+    \begin{itemize}
+        \item \verb|exit| permet de descendre d'un niveau.
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\item Pourquoi quand on a tapper le mot de passe rien ne s'affiche meme pas des etoiles asterix (*)?
+
+\begin{prettyBox}{Taille}{myblue}
+    Pour des raisons de securite afin de ne pas revele le nombre de character (taille) du mot de passe.
+\end{prettyBox}
+
+\vspace{0.5cm}
+\item Comment changer les addresses IP d'une Interface ou configurer le routage dynamic \textbf{(RIP)} :
+
+\begin{prettyBox}{Niveau 4}{myblue}
+    On doit passer au niveau 4 on a plusieur palier (different type de niveau 4 chaqu'un configure quelque chose).
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\item Configurer l'interface du routeur connecte avec la switch:
+
+\begin{prettyBox}{Interface}{myblue}
+    \begin{itemize}
+        \item Hover sur le cable entre routeur et switch pour voir les interfaces.
+        \item Pour passer au niveau 4 on utilise : \verb|interface <nom_interface>| ou \verb|int <nom_interface>|
+        \item Pour Configurer l'addresse on utilise : \verb|ip add <ip> <mask>| ou \verb|ip address <ip> <mask>|
+        \item Pour allumer l'interface : \verb|no shutdown| ou \verb|no sh|
+    \end{itemize}
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{nomInterface.png} 
+\end{figure}
+
+\vspace{0.25cm}
+
+
+\begin{prettyBox}{Remarque}{red}
+    \begin{itemize}
+        \item meme si on pratique (pas simulation) on a besoin de cable console et d'un pc pour configurer
+    un routeur dans packet tracer pour similifier les choses et eviter de r'ajouter un cable pour chaque routeur
+    on utilise le CLI du routeur (on y accede avec click droit sur routeur).
+       \item Donc on supprime le cable console avec le del tool. 
+    \end{itemize}
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{delTool.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{clickRouter.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{cli.png} 
+\end{figure}
+
+\newpage
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{interfaceRouter1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{confRoutSwitch.png} 
+\end{figure}
+
+\item Comment verifier l'adressage du routeur?
+
+\begin{prettyBox}{Hover/Config}{myblue}
+    \begin{itemize}
+        \item Hover sur le routeur pour afficher la configuration.
+        \item Click droit sur le routeur et selectioner la tab config ensuite selectioner
+            l'interface.
+        \item On peut aussi configurer le routeur depuis la tab config en ustilisant l'interface graphique
+            cette derniere executra les commandes equivalentes qui sont visible dans une fenetre en bas.
+    \end{itemize}
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{verify1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{verify2.png} 
+\end{figure}
+
+\newpage
+
+\item Comment configurer les addresses des PC?
+
+\begin{prettyBox}{IP Configuration/Config}{myblue}
+    \begin{itemize}
+        \item Click droit sur PC selectionner la tab desktop et choisir l'application 
+        \textbf{IP Configuration}.
+        \item Click droit sur PC selectionner la tab config et choisir l'interface.
+    \end{itemize}
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{deskIPCONF.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{configPCMeth1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{configPCMeth2.png} 
+\end{figure}
+
+\newpage
+
+\item Configurer l'addresse des PC avec la methode \textbf{IP Configuration} :
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{configPC1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{configPC2.png} 
+\end{figure}
+
+\vspace{1cm}
+
+\item Verifier avec le hover sur PC:
+
+\begin{figure}[h] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{verifypc1.png} 
+\end{figure}
+
+
+\begin{figure}[h] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{verifypc2.png} 
+\end{figure}
+
+\newpage
+
+\item Comment verifier la configuration des PC avec \textbf{C}omman\textbf{d} \textbf{p}rompt (CMD)?
+
+\begin{prettyBox}{CMD}{myblue}
+    \begin{itemize}
+        \item Click droit sur le PC choisir la tab desktop selectionner l'application \textbf{Command Prompt}.
+        \item utilise la commande : \verb|ipconfig| pour affichier l'addresse \textbf{ipv6 ,ipv4 et la passrelle}.
+        \item utilise la commande : \verb|ipconfig /all| pour aussi afficher la \textbf{mac addresse} (adresse physique).
+    \end{itemize}
+\end{prettyBox}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{testConfPC1.png} 
+\end{figure}
+
+\newpage
+\item Teste la connection entre le PC1 et les autre appareilles et lui meme. Le routeur avec les autre appareilles et lui meme.
+
+\begin{prettyBox}{ping}{myblue}
+    \begin{itemize}
+        \item Pour faire un ping depuis un PC on utilise l'application CMD.
+        \item Pour faire un ping depuis le routeur on utilise le soit le CLI du routeur ou
+            terminal depuis un PC connecter avec cable console on doit etre au niveau 1 ou 2(utilisateur ou admin).
+        \item la commande : \verb|ping <ip address>|
+    \end{itemize}
+\end{prettyBox}
+
+\begin{figure}[h] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{testPingPC1.png} 
+\end{figure}
+
+
+\begin{figure}[h] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{testPingRouter.png} 
+\end{figure}
+
+\newpage
+\item Copier les PC et la switch et coller puis brancher entre la switch et le routeur avec un cable droit:
+
+\begin{figure}[h] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{copy1.png} 
+\end{figure}
+
+
+\begin{figure}[h] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state2.png} 
+\end{figure}
+
+\item On a deux reseaus que faire ?
+
+\begin{prettyBox}{Addressage}{myblue}
+    \begin{itemize}
+        \item On a besoin d'une addresse pour ce deuxieme reseau : \textbf{192.168.20.0/24}.
+        \item Configurer les addresses IP des PC et l'interface routeur relier avec la deuxieme switch. 
+    \end{itemize}
+\end{prettyBox}
+
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{confPC3.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{confPC4.png} 
+\end{figure}
+
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{IntrefaceCheck.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{confRoutInt2.png} 
+\end{figure}
+
+\vspace{0.5cm}
+
+\item Faire un ping graphique entre le PC du deuxieme reseau et ses voisin (routeur , autre PC) puis avec le PC
+    de l'autre reseau :
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{pingTool.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{goodPing.png} 
+\end{figure}
+
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{failedPing.png} 
+\end{figure}
+
+\newpage
+\item Pourqoui le ping entre des pc de different reseau echou?
+
+\begin{prettyBox}{Gateway}{myblue}
+    \begin{itemize}
+        \item Les reseau ne se connaissent pas entre eux donc on doit mettre une \textbf{passrelle(gateway)} pour chaque PC.
+        \item On met \textbf{192.168.10.1} comme gateway pour les PCs du reseau \textbf{192.168.10.0/24}
+        \item On met \textbf{192.168.20.1} comme gateway pour les PCs du reseau \textbf{192.168.20.0/24}
+    \end{itemize}
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{gatePC1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{gatePC2.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{gatePC3.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{gatePC4.png} 
+\end{figure}
+
+\newpage
+\item Faire un ping graphique entre PC de reseaus different :
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{goodPing2e.png} 
+\end{figure}
+
+\vspace{0.25cm}
+
+\item Copier PCs , routeur , switch et coller :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state3.png} 
+\end{figure}
+
+\item Configurer les addresse des PCs avec leur gatway et les addresses routeur du troisieme reseau \textbf{192.168.30.0/24}:
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{confiPC5.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{confiPC6.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{confRout2.png} 
+\end{figure}
+
+\item relie les routeur avec un cable \textbf{croise} (appreille de la meme couche):
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{crossCable.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state4.png} 
+\end{figure}
+
+\item Configuration des addresses du reseau entre routeur \textbf{192.168.0.0/24} :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{confRouteRoute1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{confRoutRout2.png} 
+\end{figure}
+
+\newpage
+
+\item Faire un ping entre PCs du troisieme reseau et avec son routeur et les PCs d'autre reseau.
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{p1.png} 
+\end{figure}
+
+\item Pourquoi echec de ping entre les PCs du troisieme reseau avec les autre? et avec le premier routeur? 
+
+\begin{prettyBox}{Les Routes}{myblue}
+    \begin{itemize}
+        \item Le premier routeur ne connait pas le reseau \textbf{192.168.30.0/24}.
+        \item Le deuxieme routeur no connait pas les reseau \textbf{192.168.10.0/24} et \textbf{192.168.20.0/24}.
+        \item pour consulte les routes connus d'un routeur on doit afficher la \textbf{table de routage}.
+        \item la commande pour afficher la table routage :
+            \begin{itemize}
+                \item \verb|show ip route| (pour niveau 2)
+                \item \verb|do show ip route| (pour niveau 3)
+            \end{itemize}
+        \item pour ajouter on route static on doit etre au niveau 3 et on utilise : \verb|ip route <ip_reseau_iconnu> <mask_reseau_iconnu> <ip_voisin_pour_acceder>|
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\item configurer une route static pour le premier routeur :
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{tableRoute1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{staticRoute1.png} 
+\end{figure}
+
+\newpage
+\item faire une simulation ping entre PC du troisieme reseau avec un pc d'un autre reseau:
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{routeerror.png} 
+\end{figure}
+
+\item Pourquoi echec? 
+
+\begin{prettyBox}{Deuxieme Routeur}{myblue}
+    \begin{itemize}
+        \item Meme si le premier routeur connait le reseau \textbf{192.168.30.0/24} grace au routage static.
+        \item Le deuxieme routeur ne connait pas les autre reseau donc on doit lui ajoutter deux route static.
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\item Configurer les routes statics pour le deuxieme routeur :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{table2.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{confroute22.png} 
+\end{figure}
+
+\item Refaire le ping :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{goodpingend.png} 
+\end{figure}
+
+
+
+
+
+\end{enumerate}
+
+
+
+\end{document}
