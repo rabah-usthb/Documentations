@@ -1,0 +1,358 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+
+\newcounter{commentCount}
+\newcounter{filePrg}
+\newcounter{inputPrg}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{minted}
+
+\usepackage{ifthen}
+\usepackage{fontawesome}
+
+\usepackage{tabularx}
+\newcolumntype{\CeX}{>{\centering\let\newline\\\arraybackslash}X}%
+\newcommand{\TwoSymbolsAndText}[3]{%
+  \begin{tabularx}{\textwidth}{c\CeX c}%
+    #1 & #2 & #3
+  \end{tabularx}%
+}
+
+\newtcblisting[use counter=inputPrg, number format=\arabic]{codeInput}[4]{
+  listing engine=minted,
+  minted language=#1,
+  minted options={autogobble,breaklines,  firstnumber={#4}},
+  listing only,
+  size=title,
+  arc=1.5mm,
+  breakable,
+  enhanced jigsaw,
+  colframe=myblue,
+  coltitle=White,
+  boxrule=0.5mm,
+  colback=white,
+  coltext=Black,
+  title=\TwoSymbolsAndText{\faCode}{%
+  \textbf{Sql Program \thetcbcounter}\ifthenelse{\equal{#2}{}}{}{\textbf{: }#2}%
+  }{\faCode},
+  label=inputPrg:#3
+}
+
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\usepackage{minted}
+
+\begin{document}
+
+
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}2}
+
+\begin{enumerate}
+
+\item Realiser la topologie suivante avec routage static :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state1.png} 
+\end{figure}
+
+\begin{prettyBox}{Route Static}{myblue}
+    On a deux route static pour chaque routeur :
+    \begin{itemize}
+        \item Router 0 :
+            \begin{itemize}
+                \item \verb|ip route 192.168.30.0 255.255.255.0 192.168.0.2|
+                \item \verb|ip route 192.168.40.0 255.255.255.0 192.168.0.2|
+            \end{itemize}
+         
+        \item Router 1 :
+            \begin{itemize}
+                \item \verb|ip route 192.168.10.0 255.255.255.0 192.168.0.1|
+                \item \verb|ip route 192.168.20.0 255.255.255.0 192.168.0.1|
+            \end{itemize}
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\item Activer et configurer \textbf{RIP} sur le routeur 0 :
+
+\begin{prettyBox}{RIP}{myblue}
+    \begin{itemize}
+        \item Activer le protocole RIP on doit etre au niveau 3 et utilise : \verb|router rip|
+        \item \verb|router rip| nous fait passse au niveau 4 aussi \verb|Router(config-router)#|.
+        \item Ajouter un reseau voisin au routage dynamic on doit etre au niveau 4 et utilise: \verb|network <reseau_connu>|
+        \item Enlever un reseau voisin au routage dynamic on doit etre au niveau 4 et utilise: \verb|no network <reseau_connu>|
+    \end{itemize}
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{configRoute0.png} 
+\end{figure}
+
+
+\newpage
+
+\item Qu'est ce qui manque a notre configuration \textbf{RIP}?
+
+\begin{prettyBox}{Routeur 1}{myblue}
+ On n'a ni activer ni configurer le protocole \textbf{RIP} sur l'autre routeur.
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\item Activer et configurer \textbf{RIP} sur le routeur 1 :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{configRoute1.png} 
+\end{figure}
+
+\vspace{0.5cm}
+
+\item Pourquoi on ne voit aucune route R (\textbf{RIP}) dans la table de routage
+de deux routeurs malgres qu'on a activer et configurer \textbf{RIP}?
+
+\begin{prettyBox}{Distance Administrative}{myblue}
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{ex.png} 
+\end{figure}
+le routeur a prefere utilise le routage static car il a une distance administrative plus petite \\(static) $1<120$ (\textbf{RIP})
+\end{prettyBox}
+
+\newpage
+
+\item Enlever tout les routages static :
+
+\begin{prettyBox}{Enlever Routage Static}{myblue}
+    \verb|no ip route <ip_reseau_iconnu> <mask_reseau_iconnu> <ip_voisin_pour_acceder> |
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{removeStaticRoute0.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{removeStaticRoute1.png} 
+\end{figure}
+
+
+\begin{prettyBox}{Remarque}{red}
+    On remarque que la table de routage c'est met a jour automatiquement apres avoir 
+    enelever le routage static on a un routage \textbf{RIP} dynamic avec une distance
+    administrative de 120 et le hop cost de 1 (passe par un routeur pour atteindre la distination).
+\end{prettyBox}
+
+\newpage
+
+\item Changer la topologie pour qu'elle devient comme suit :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{state2.png} 
+\end{figure}
+
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{state3.png} 
+\end{figure}
+
+\item Configurer tout les routeurs comme il se doit :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{route2.1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{route2.2.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{route2.3.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{route2.4.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{route0.1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{route0.2.png} 
+\end{figure}
+
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{route1.1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{route1.2.png} 
+\end{figure}
+
+\item Afficher les tables de routage apres mise-a-jour :
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{table0.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{table1.png} 
+\end{figure}
+
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{table2.png} 
+\end{figure}
+
+\item faite un ping simulation du PC2 au PC1:
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{goodping.png} 
+\end{figure}
+
+\begin{prettyBox}{Remarque}{red}
+    On remarque que le roteur 1 prend le chemin avec le plus hop cost il est alle au routeur 2 directment
+    sans avoir a passer au routeur 0 puis routeur 2.
+\end{prettyBox}
+
+
+\vspace{0.5cm}
+\item Desactiver l'interface G 0/1 du routeur 1 :
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{disactivate.png} 
+\end{figure}
+
+\newpage
+\item Afficher la table de routage du routeur 1 apres avoir desactiver l'interface :
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{update.png} 
+\end{figure}
+
+\begin{prettyBox}{Remarque}{red}
+    Pour acceder au reseau 192.168.20.0/24 il passe par le routeur 0 parceque l'interface relie avec
+    le routeur 2 a ete desactiver :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{comp.png} 
+\end{figure}
+
+
+
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\item refaire un ping simulation du PC2 au PC1:
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{lastping.png} 
+\end{figure}
+
+
+
+\end{enumerate}
+
+
+\end{document}
+
