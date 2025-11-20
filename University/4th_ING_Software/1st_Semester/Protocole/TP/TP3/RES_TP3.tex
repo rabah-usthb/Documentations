@@ -1,0 +1,515 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+
+\newcounter{commentCount}
+\newcounter{filePrg}
+\newcounter{inputPrg}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{minted}
+
+\usepackage{ifthen}
+\usepackage{fontawesome}
+
+\usepackage{tabularx}
+\newcolumntype{\CeX}{>{\centering\let\newline\\\arraybackslash}X}%
+\newcommand{\TwoSymbolsAndText}[3]{%
+  \begin{tabularx}{\textwidth}{c\CeX c}%
+    #1 & #2 & #3
+  \end{tabularx}%
+}
+
+\newtcblisting[use counter=inputPrg, number format=\arabic]{codeInput}[4]{
+  listing engine=minted,
+  minted language=#1,
+  minted options={autogobble,breaklines,  firstnumber={#4}},
+  listing only,
+  size=title,
+  arc=1.5mm,
+  breakable,
+  enhanced jigsaw,
+  colframe=myblue,
+  coltitle=White,
+  boxrule=0.5mm,
+  colback=white,
+  coltext=Black,
+  title=\TwoSymbolsAndText{\faCode}{%
+  \textbf{Sql Program \thetcbcounter}\ifthenelse{\equal{#2}{}}{}{\textbf{: }#2}%
+  }{\faCode},
+  label=inputPrg:#3
+}
+
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\usepackage{minted}
+
+\begin{document}
+
+
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}3}
+
+\begin{enumerate}
+
+\item Realiser la topologie suivante et configurer uniquement les adresses et gateway:
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state1.png} 
+\end{figure}
+
+configuration Des PCs : 
+
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.55\textwidth]{confPC0.png} 
+\end{figure}
+
+\vspace{-0.1cm}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.55\textwidth]{confPC1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.55\textwidth]{confPC2.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.55\textwidth]{confPC3.png} 
+\end{figure}
+
+\newpage
+Configuration des routeurs :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{route01.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{route02.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{route11.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{route12.png} 
+\end{figure}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Remarque}{red}
+    On a mis comme mask \verb|255.255.255.252| dans le reseau \verb|200.100.12.0/30|
+    car la partie machine prend 30 bits : 
+    \[\underbrace{11111111}_{8\text{bits} = 255} \hspace{0.15cm}. \hspace{0.15cm} \underbrace{11111111}_{8\text{bits} = 255} \hspace{0.15cm} . \hspace{0.15cm} \underbrace{11111111}_{8\text{bits} = 255} \hspace{0.15cm} . \hspace{0.15cm} \underbrace{11111100}_{6\text{bits} = 252} \]
+\end{prettyBox}
+
+\newpage
+
+\item Comment Configure \textbf{OSPF}? 
+
+    \vspace{0.15cm}
+
+    \begin{prettyBox}{OSPF}{myblue}
+        On a deux methodes :
+        \begin{itemize}
+            \item \textbf{Configuration Mode Routeur : }
+                \begin{itemize}
+                    \item On doit etre au niveau 3 pour activer le protocole \textbf{OSPF} avec la commande : \verb|router ospf <id_processus>|
+                    \item Apres avoir executer la commande on passe au niveau 4.
+                    \item Pour ajouter une route dynamic on utilise la commande : \\\verb|network <reseau_connu> <mask_inverse> area <id_region>|
+                    \item Le masque inverse c'est prendre chaque partie du mask normal et lui soustraire 255 :
+                        \vspace{-0.2cm}
+                        \[ 255.255.255.0 \Rightarrow (255-255).(255-255).(255-255).(255-0) \Rightarrow 0.0.0.255\]
+                \end{itemize}
+            \item \textbf{Configuration Mode Inteface : }
+
+                \begin{itemize}
+                    \item On doit etre au niveau 3 pour acceder a une interface avec la commande : \\\verb|interface <nom_interface>|
+                    \item Apres avoir executer la commande on passe au niveau 4.
+                    \item Pour activer le protocole \textbf{OSPF} pour l'interface on utilise :\\\verb|ip ospf <id_processus> area <id_region>|
+                \end{itemize}
+            \end{itemize}
+    
+        \end{prettyBox}
+
+        \vspace{1.25cm}
+
+        \begin{prettyBox}{Remaque}{red}
+            \begin{itemize}
+                \item On peut faire une configuration \textbf{multi-regional} ou chaque region a une collection de routeurs pour \textbf{faciliter le managment}
+                \item Dans notre cas simple on va utilise une configuration \textbf{mono-regional} on va juste utilise \\region id = 0 pour dire qu'on a \textbf{une seule
+                    region globale}.
+                \item L'id processus permet d'executer plusieur instances de l'\textbf{OSPF} sur le meme routeur.
+            \end{itemize}
+        \end{prettyBox}
+
+    \newpage
+\item Configurer l'\textbf{OSPF} sur le routeur 0 avec la premiere methode et afficher la table de routage :  
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{confroute0.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{table0.png} 
+\end{figure}
+
+\item Configurer l'\textbf{OSPF} sur le routeur 1 avec la deuxieme methode et afficher la table de routage :  
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{confroute1.png} 
+\end{figure}
+
+\newpage
+\item C'est quoi la distance administrative et le cout de l'\textbf{OSPF}? 
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Distance Administrative \& Cout}{myblue}
+    \begin{itemize}
+        \item Distance Administrative = 110.
+        \item Le cout est calculer avec la bandwidth (capacité de transfert de données) des cables avec la formule suivant :
+
+            \[
+            \sum_{i=1}^{m} \text{round}\left(\frac{\text{Reference Bandwidth}}{\text{interface}_{i} \text{  Bandwidth}}\right)
+            \]
+            \[
+            \text{round}(n) = 
+            \begin{cases}
+                \text{if  } n<1 &: 1\\
+                \text{if  } n \in \mathbb{N} &: n\\
+                \text{if  } n \in \mathbb{R} &: \text{Integer Part} + 1
+            \end{cases}
+            \]
+        \item $m$ est le nombre d'interfaces emetteur pour atteindre la switch du reseau recepteur.
+        \item Par defaut la reference bandwidth est de 100Mbps donc $100\times 10^{6}$ bps = $10^{8}$bps.
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{1.25cm}
+
+\item changer le cout des interface g 0/0 des deux routeurs , afficher la table de routage expliquer le nouveau cout :
+
+    \begin{prettyBox}{Changer Le Cout}{myblue}
+        Pour changer le cout on doit etre au niveau 4 (conf interface) et on utilise la commande : \verb|ip ospf cost <nouveau_cout>| 
+    \end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{changeCost.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{changeCost2.png} 
+\end{figure}
+
+\newpage
+
+\begin{prettyBox}{Nouveau Cout}{myblue}
+    \begin{itemize}
+        \item cout de la route vers \verb|192.168.10.0| est : 
+            \begin{align*}
+                \text{cout}_{192.168.10.0} &= \text{cout}(\text{g}0/1_{\text{router 1}}) + \text{cout}(\text{g}0/0_{\text{router 0}})\\[0.1cm]
+                                           &= \text{round}\left( \frac{10^{8}\text{bps}}{1\text{Gbps}} \right) + 5 \\[0.1cm] 
+                                           &= \text{round}\left( \frac{10^{8}\text{bps}}{10^{9}\text{bps}} \right) + 5\\[0.1cm]
+                                           &= \text{round}(0.1) + 5\\
+                                           &= 1 + 5\\
+                                           &=\boxed{6}
+            \end{align*}
+        \item cout de la route vers \verb|192.168.20.0| est : 
+            \begin{align*}
+                \text{cout}_{192.168.20.0} &= \text{cout}(\text{g}0/1_{\text{router 0}}) + \text{cout}(\text{g}0/0_{\text{router 1}})\\[0.1cm]
+                                           &= \text{round}\left( \frac{10^{8}\text{bps}}{1\text{Gbps}} \right) + 8 \\[0.1cm] 
+                                           &= \text{round}\left( \frac{10^{8}\text{bps}}{10^{9}\text{bps}} \right) + 8\\[0.1cm]
+                                           &= \text{round}(0.1) + 8\\
+                                           &= 1 + 8\\
+                                           &=\boxed{9}
+            \end{align*}
+
+    \end{itemize}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{cal.png} 
+\end{figure}
+\end{prettyBox}
+
+\newpage 
+
+\item Faite la topologie suivante et configurer les adresses et les gateway :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state2.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{2pc0.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{2pc1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{2pc2.png} 
+\end{figure}
+
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{2r0.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{2r1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{2r2.png} 
+\end{figure}
+
+\newpage
+
+\item configurer L'\textbf{OSPF} sur chaque routeur avec la deuxieme methode :
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{2cr0.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{2cr1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{2cr2.png} 
+\end{figure}
+
+\newpage
+
+\item Afficher la table de routage de tout les routeurs : 
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{2t0.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{2t1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{2t2.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item Faite un ping en simulation depuis le PC0 au PC1:
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{ping1.png} 
+\end{figure}
+
+\begin{prettyBox}{Remarque}{red}
+    On remarque que le routeur prefere passe directement par le routeur 2 (cout \textbf{OSPF} = 2) au lieu de passe par le routeur 1 
+puis le routeur 2 (cout \textbf{OSPF} = 3).
+\end{prettyBox}
+
+\newpage
+
+\item Desactiver l'interface \verb|g0/2| du routeur 2 pour simuler une panne puis affiche la table de routage du routeur 1: 
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{sh2.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{rupdate.png} 
+\end{figure}
+
+\begin{prettyBox}{Remarque}{red}
+    Puisque l'interface reliant le routeur 2 au 0 n'est plus functionelle , \textbf{OSPF} a dynamiquement mis a jour la route vers 
+    \verb|192.168.30.0| du routeur 0 pour qu'il passe par le routeur 1 et le cout deviendra 3.
+\end{prettyBox}
+
+\vspace{1.25cm}
+
+\item Refaire le ping en simulation :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{ping2.png} 
+\end{figure}
+
+\newpage
+
+\item Ajouter un routeur  et configurer son adresse :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state3.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{r3.png} 
+\end{figure}
+
+\vspace{0.5cm}
+\item Le routeur 3 qu'on a ajouter est un routeur provider donc il ya des possibilite et combinaison infini d'adresse ip venant depuis
+    ce routeur comment alors on va configurer cette route ?
+
+\begin{prettyBox}{0.0.0.0}{myblue}
+    On va utilise un routage static et on dit que l'adresse et mask du reseau inconnu est \verb|0.0.0.0| signifiant n'import quelle reseau qui ne figurent pas 
+    dans la table de routage du routeur, elle est appelle la \textbf{route par defaut} . 
+\end{prettyBox}
+
+\vspace{0.5cm}
+\item Configure la route static dans le routeur 1 :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{def.png} 
+\end{figure}
+
+\newpage
+
+\item Est-ce qu'on va configurer la \textbf{route par defaut} sur tout les autre routeurs?Ou peut on propager cette route automatiquement au routeurs?
+
+\vspace{0.15cm}
+    \begin{prettyBox}{Propagation}{myblue}
+        \begin{itemize}
+            \item \textbf{OSPF} nous permet de propager une \textbf{route par defaut} definit sur un routeur au autre routeurs voisin.
+            \item On doit etre au niveau 4 \textbf{OSPF} avec la commande :\\ \verb|router ospf <id_processus>|
+            \item On utilise cetter commande pour propager la \textbf{route par defaut} : \\\verb|default-information originiate|
+        \end{itemize}
+    \end{prettyBox}
+
+\vspace{0.15cm}
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{pr.png} 
+\end{figure}
+
+\vspace{0.5cm}
+
+\item Afficher la table de routage des deux autre routeur pour s'assure que la \textbf{route par defaut} c'est propage :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{3t0.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{3t2.png} 
+\end{figure}
+
+
+
+\end{enumerate}
+\end{document}
+
