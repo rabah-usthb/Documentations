@@ -1,0 +1,460 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\newcounter{commentCount}
+\newcounter{filePrg}
+\newcounter{inputPrg}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{minted}
+
+\usepackage{ifthen}
+\usepackage{fontawesome}
+
+\usepackage{tabularx}
+\newcolumntype{\CeX}{>{\centering\let\newline\\\arraybackslash}X}%
+\newcommand{\TwoSymbolsAndText}[3]{%
+  \begin{tabularx}{\textwidth}{c\CeX c}%
+    #1 & #2 & #3
+  \end{tabularx}%
+}
+
+\newtcblisting[use counter=inputPrg, number format=\arabic]{codeInput}[4]{
+  listing engine=minted,
+  minted language=#1,
+  minted options={autogobble,breaklines,  firstnumber={#4}},
+  listing only,
+  size=title,
+  arc=1.5mm,
+  breakable,
+  enhanced jigsaw,
+  colframe=myblue,
+  coltitle=White,
+  boxrule=0.5mm,
+  colback=white,
+  coltext=Black,
+  title=\TwoSymbolsAndText{\faCode}{%
+  \textbf{Sql Program \thetcbcounter}\ifthenelse{\equal{#2}{}}{}{\textbf{: }#2}%
+  }{\faCode},
+  label=inputPrg:#3
+}
+
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\usepackage{minted}
+
+\begin{document}
+
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}4}
+
+\begin{enumerate}
+
+\item Realiser la topologie suivante et configurer uniquement les adresses et gateway des PCs:
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{state1.png} 
+\end{figure}
+
+configuration Des PCs : 
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.55\textwidth]{pc0.png} 
+\end{figure}
+
+\vspace{-0.25cm}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.55\textwidth]{pc1.png} 
+\end{figure}
+
+\vspace{-0.25cm}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.55\textwidth]{pc2.png} 
+\end{figure}
+
+\vspace{-0.25cm}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.55\textwidth]{pc3.png} 
+\end{figure}
+
+
+\item Comment configurer le vlan sur les switch?
+
+    \begin{prettyBox}{Vlan}{myblue}
+        \begin{itemize}
+            \item Pour creer un vlan on doit etre au niveau 3 et utilise la commande : \verb|vlan <id_vlan>|
+            \item Apres l'execution de la commande on passe au niveau 4 \verb|(config-vlan)|
+            \item On peut attribue un nom au vlan au niveau 4 avec la commande : \verb|name <nom_vlan>|
+            \item Pour attribue des vlan au ports on fait :
+                \begin{itemize}
+                    \item on doit passer au niveau 4 configuration d'interface on peut soit selectioner\\ une seul interface avec
+                        \verb|int <nom_int>| example \verb|int f0/1| \\
+                        ou plusieur interface avec \verb|int range <range_int_1> , ... , <range_int_n>| \\example \verb|int range f0/5 ,f0/10-15|
+                    \item On doit configurer le type des ports avec \verb|switchport mode <mode>|
+                    \item On a deux type de mode :
+                        \begin{itemize}
+                            \item \textbf{access} : le mode par defaut utilise si le port est relie\\ a un appareille terminal ( pc , laptop , imprimente ...etc)
+                            \item \textbf{trunk} : le port est relie a un appareille reseau ( switch , hub , routeur...etc)
+                        \end{itemize}
+                    \item Affecter un vlan au port : \verb|switchport <mode> vlan <id_vlan>|
+                \end{itemize}
+            \item On peut afficher les nom , id , port associe au vlan avec la commande : \verb|show vlan|
+            \item On peut supprimer un vlan avec la commande : \verb|no vlan <id_vlan>|
+            \item On peut supprimer tout les vlan avec la commande : \verb|delete vlan.dot|
+        \end{itemize}
+    \end{prettyBox}
+
+    \vspace{1cm}
+
+\item Creer les vlan 10 student , vlan 20 teacher sur les deux switchs:
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{vlan0.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{vlan1.png} 
+\end{figure}
+
+\newpage
+\item Attribue les vlans au ports des deux switchs:
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{port0.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{port1.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item Qu'est ce qui manque a la configuration :
+
+\begin{prettyBox}{Trunk}{myblue}
+    On doit mettre les ports entre switch au mode \textbf{trunk}
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{tr0.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{tr1.png} 
+\end{figure}
+
+\newpage
+
+\item Faire un ping entre PC du meme vlan et apres de vlan different :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{ping.png} 
+\end{figure}
+
+\vspace{0.35cm}
+
+\item Pourquoi le ping entre vlan different a echoue ? 
+
+\begin{prettyBox}{Reseau Iconnu}{myblue}
+    Parceque se sont des reseau different ils ne se connaissent pas entre eux donc on a besoin d'un routage.
+\end{prettyBox}
+
+\vspace{1cm}
+
+\item Ajouter un routeur :
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state2.png} 
+\end{figure}
+
+\newpage
+
+\item Comment configurer le routeur?
+
+    \begin{prettyBox}{Configuration}{myblue}
+        \begin{itemize}
+            \item Selection partition de l'interface : \verb|int <nom_interface>.<id_vlan>|
+            \item Activer le protocole \textbf{821.1Q} qui permet de changer le vlan de la trame du vlan emetteur au vlan recepteur avec 
+                la commande \verb|encapsulation dot1Q <id_vlan>|
+            \item Attribution d'une adresse IP au routeur a cette partition de l'interface : \verb|ip add <ip> <mask>|
+            \item Ne pas oublier de mettre en mode \textbf{trunk} l'interface du switch reliant au router.
+        \end{itemize}
+    \end{prettyBox}
+
+    \vspace{1cm}
+
+\item Configurer le router et tester le ping :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{tr3.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{confroute0.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{pingGood.png} 
+\end{figure}
+
+\newpage
+
+\item Expliquer comment la trame change si on ping du PC0 au PC1:
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{0pdu.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{1pdu.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{2pdu.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\begin{prettyBox}{Expliquation}{myblue}
+    \begin{itemize}
+        \item Premierment une requete \textbf{ARP} depuis le pc0 au routeur (default gateway)
+            le routeur repondra avec son adresse mac.
+        \item Apres ca le pc va envoye encore la trame a la switch mais cette fois la switch va mettre les information vlan , l'id du vlan
+            est stocke sur les 12 dernier bit \textbf{TCI} :
+            \[0\underbrace{00A}_{\text{12 bits du vlan id}} \Longrightarrow (00A)_{10} = 10 \Longrightarrow \text{vlan de l'emetteur pc0}  \]
+        \item Apres ca le routeur va mettre a jour la partie \textbf{TCI} avec le protocole \textbf{862.1 Q} :
+            \[0\underbrace{014}_{\text{12 bits du vlan id}} \Longrightarrow (014)_{10} = 20 \Longrightarrow \text{vlan du recepteur pc1}  \]
+    \end{itemize}
+
+\end{prettyBox}
+
+\newpage
+
+\item Faite la topologie suivante et les adresses et gateway du nouveau pc et laptop :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state3.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{pc4.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{lap0.png} 
+\end{figure}
+
+\newpage
+
+\item C'est quoi le \textbf{VTP} et comment le configurer ?
+
+\begin{prettyBox}{VTP}{myblue}
+    \begin{itemize}
+        \item \textbf{VTP} c'est un protocole qui permet la propagation des definition des vlan depuis une switch server
+            au autre switch .
+        \item Il ne propagent pas l'attribution des vlan au ports just la definition des vlan.
+        \item On doit difinir une switch server qui va creer les vlan et les propager au autre.
+        \item Pour definir le mode vtp d'une switch on utilise : \verb|vtp mode <mode>|
+        \item on a 3 modes :
+            \begin{itemize}
+                \item server : mode par defaut , definit les vlan, le mot de passe , le domain et propage les vlans.
+                \item client : copie les vlan du server a la \textbf{RAM} n'a pas le droit de faire un changement.
+                \item transparent: ne fait que transmettre les vlan au autre switch sans utilise la configuration du server et n'a pas le droit de faire un changement .
+            \end{itemize}
+        \item Pour mettre un nom au domain du server on doit executer la commande suivant au switch server: \verb|vtp domain <nom_domain>|
+        \item Une switch peut apparetenir a un seul domain a la fois celui de son server.
+        \item Pour des raisons de securite on ajoute un mot de passe au domain dans le switch server avec la commande: \verb|vtp password <mot_de_passe>|
+        \item Tout les switch du domain a besoin du mot de passe pour pouvoir communiquer.
+        \item Pour voir le mot de passe dans la switch server : \verb|show vtp password|
+        \item Pour voir l'etat du \textbf{VTP} : \verb|show vtp status|
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{1cm}
+
+\item Configurer switch 0 comme serveur:
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{s0.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{s01.png} 
+\end{figure}
+
+\newpage
+\item Configurer le \textbf{VTP} sur les autre switchs:
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{s1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{s2.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{s3.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{s4.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{s5.png} 
+\end{figure}
+
+\vspace{0.5cm}
+
+\item Verifier la propagation des vlans sur l'un des switch qu'on ajouter comme la switch 3 :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{verify.png} 
+\end{figure}
+
+\newpage
+
+\item Configurer les ports switchs et fait un ping :
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{es1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{es2.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{es3.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{es4.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{es5.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{lastPing.png} 
+\end{figure}
+
+\end{enumerate}
+
+\end{document}
+
