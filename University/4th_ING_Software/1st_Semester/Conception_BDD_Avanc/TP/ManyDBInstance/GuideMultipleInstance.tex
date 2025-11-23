@@ -1,0 +1,227 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+
+\newcounter{commentCount}
+\newcounter{filePrg}
+\newcounter{inputPrg}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{minted}
+
+\usepackage{ifthen}
+\usepackage{fontawesome}
+
+\usepackage{tabularx}
+\newcolumntype{\CeX}{>{\centering\let\newline\\\arraybackslash}X}%
+\newcommand{\TwoSymbolsAndText}[3]{%
+  \begin{tabularx}{\textwidth}{c\CeX c}%
+    #1 & #2 & #3
+  \end{tabularx}%
+}
+
+\newtcblisting[use counter=inputPrg, number format=\arabic]{codeInput}[4]{
+  listing engine=minted,
+  minted language=#1,
+  minted options={autogobble,breaklines,  firstnumber={#4}},
+  listing only,
+  size=title,
+  arc=1.5mm,
+  breakable,
+  enhanced jigsaw,
+  colframe=myblue,
+  coltitle=White,
+  boxrule=0.5mm,
+  colback=white,
+  coltext=Black,
+  title=\TwoSymbolsAndText{\faCode}{%
+  \textbf{Sql Program \thetcbcounter}\ifthenelse{\equal{#2}{}}{}{\textbf{: }#2}%
+  }{\faCode},
+  label=inputPrg:#3
+}
+
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\usepackage{minted}
+
+\begin{document}
+
+\tit{Executer Plusieur Instance D'ORACLE}
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{Creation D'une Nouvelle Instance}{myblue}
+    On va executer la commande \verb|dbca| pour lancer l'application java \textbf{Database Configuration Assistant}
+     qui va nous permettre de creer une nouvelle instance d'oracle :
+     \begin{enumerate}
+         \item Choisir \textbf{Create a database} et cliquer sur \textbf{next}.
+         \item Choisir \textbf{Typical configuration}.
+         \item Donner un identifiant unique a l'instance \textbf{Global database name}.
+         \item Donne un mot de passe administratif \textbf{Administrative password}.
+         \item Donne un nom a la \textbf{Pluggable Database} (represente une base de donne de l'instance).
+         \item Cliquer sur \textbf{next} puis \textbf{finish}.
+         \item Attendre le telechargement puis cliquer sur \textbf{close}.
+     \end{enumerate}
+\end{prettyBox}
+
+\vspace{0.25cm}
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{dbca.png} 
+\end{figure}
+
+\vspace{0.15cm}
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{name.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{finish.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{end.png} 
+\end{figure}
+
+\newpage
+
+\begin{prettyBox}{Executer Plusieur Instance}{myblue}
+    \begin{enumerate}
+        \item Apres avoir creer les instance on va ouvrir plusieur instance du terminal et on va utilise la commande 
+    \verb|set ORACLE_SID = <nom_instance>| qui va temporairement changer la variable d'environment \\\textbf{ORACLE\_SID} pour
+    selectionner l'instance dans notre session terminal.
+        \item On lance oracle avec \verb|sqlplus / as sysdba|.
+        \item Pour verifier l'instance on va consulte la view \textbf{v\$instance} : \verb|select instance_name from v$instance|
+    \end{enumerate}
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{instance1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{instance2.png} 
+\end{figure}
+
+
+\vspace{0.15cm}
+
+\begin{prettyBox}{Creation Du Lien}{myblue}
+    \begin{enumerate}
+        \item Pour La Creation de lien on va se utiliser la requete suivant :
+
+            \vspace{-0.25cm}
+
+    \begin{verbatim}   
+    CREATE DATABASE LINK NOM_LIEN
+    CONNECT TO NOM_UTILISATEUR IDENTIFIED BY MOTDEPASSE_INSTANCE
+    USING 'NOM_INSTANCE';
+    \end{verbatim}
+
+\vspace{-0.75cm}
+
+        \item Acceder a une table avec le lien : \verb|nom_owner.nom_table@nom_lien|
+    \end{enumerate}
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+Donc dans notre cas on va creer deux lien :
+\begin{itemize}
+    \item Lien Vers ORCL (executer depuis ORCL2):
+
+\vspace{-0.25cm}
+    \begin{verbatim}   
+    CREATE DATABASE LINK link_to_orcl
+    CONNECT TO system IDENTIFIED BY Nanno1234
+    USING 'ORCL';
+    \end{verbatim}
+
+\vspace{-0.75cm}
+    \item Lien Vers ORCL2  (executer depuis ORCL) :
+
+\vspace{-0.25cm}
+    \begin{verbatim}   
+    CREATE DATABASE LINK link_to_orcl2
+    CONNECT TO system IDENTIFIED BY Nanno1234
+    USING 'ORCL2';
+    \end{verbatim}
+\end{itemize}
+
+Test Pour Confirmer le lien :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{test.png} 
+\end{figure}
+\end{document}
