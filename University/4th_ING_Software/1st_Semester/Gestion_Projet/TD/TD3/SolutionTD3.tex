@@ -1,0 +1,126 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\lstdefinestyle{pythonstyle}{
+    language=python,                    % Language set to Python
+    basicstyle=\ttfamily\footnotesize,   % Change basic font size
+    keywordstyle=\color{blue}\bfseries, % Different keyword style
+    stringstyle=\color{red},         % Different string color
+    commentstyle=\color{green!60!black}\itshape, % Adjust comment color
+    numbers=left,                       % Line numbers on the left
+    numberstyle=\tiny\color{gray},      % Smaller number font and color
+    stepnumber=1,                       % Number each line
+    frame=single,                       % Single frame around code
+    tabsize=4,                          % Adjust tab size
+    showstringspaces=false,             % Do not show spaces in strings
+    captionpos=b,% Position of caption
+    breaklines=true,
+    inputencoding=utf8
+}
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+
+\tit{TD N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}3}
+
+\vspace{0.15cm}
+
+\exer{1}
+
+\vspace{0.15cm}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=\textwidth]{wbs.png} 
+\end{figure}
+
+
+\vspace{1cm}
+
+\exer{2}
+
+\vspace{0.15cm}
+
+\begin{prettyBox}{Définition Des Services}{myblue}
+    \begin{itemize}
+        \item \textbf{Chef De Projet}: Responsable de la gestion d'un projet de sa conception à sa finalisation. Ses missions incluent la planification, l'organisation et la coordination des équipes pour atteindre les objectifs en respectant les délais, le budget et les exigences du client. Il assure la liaison entre les différentes parties prenantes.
+        \item \textbf{Service De Communication}: Met en oeuvre des stratégies pour valoriser l'image et les actions d'une organisation. Ses missions incluent la création et la diffusion de contenus (annonces, affiches, vidéos, etc.) sur divers supports (presse, web, réseaux sociaux), l'organisation d'événements et la gestion des relations avec la presse et le public.
+        \item \textbf{Service Logistique}: Gère et coordonne les flux de marchandises et d'informations, de \\l'approvisionnement à la livraison finale. Ses missions incluent la gestion des stocks, l'entreposage, le transport, la manutention et l'organisation de la distribution des produits.
+        \item \textbf{Service Administratif}: Assure le bon fonctionnement quotidien de l'organisation en gérant les tâches administratives essentielles. Ses missions incluent la gestion des documents, le traitement du courrier, l'archivage, la coordination des rendez-vous et le support aux autres services pour garantir l'efficacité opérationnelle.
+    \end{itemize}
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.9\textwidth]{raci.png} 
+\end{figure}
+
+
+\end{document}
