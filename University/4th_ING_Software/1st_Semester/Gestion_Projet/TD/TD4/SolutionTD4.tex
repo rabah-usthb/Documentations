@@ -1,0 +1,233 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\lstdefinestyle{pythonstyle}{
+    language=python,                    % Language set to Python
+    basicstyle=\ttfamily\footnotesize,   % Change basic font size
+    keywordstyle=\color{blue}\bfseries, % Different keyword style
+    stringstyle=\color{red},         % Different string color
+    commentstyle=\color{green!60!black}\itshape, % Adjust comment color
+    numbers=left,                       % Line numbers on the left
+    numberstyle=\tiny\color{gray},      % Smaller number font and color
+    stepnumber=1,                       % Number each line
+    frame=single,                       % Single frame around code
+    tabsize=4,                          % Adjust tab size
+    showstringspaces=false,             % Do not show spaces in strings
+    captionpos=b,% Position of caption
+    breaklines=true,
+    inputencoding=utf8
+}
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+
+\tit{TD N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}4}
+
+
+\begin{prettyBox}{Diagram De PERT}{myblue}
+La méthode de PERT (Program Evaluation and Review Technique) permet de gérer l'ordonnancement des taches 
+au sein d’un projet. Cette méthode modélise les tâches et liens entre celles‐ci d’un projet sous forme de réseau
+qui permet d’identifier le chemin critique d’un projet et concentrer les
+efforts sur les tâches le composant. 
+\end{prettyBox}
+
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Liaisons}{myblue}
+    
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.9\textwidth]{rel.png} 
+\end{figure}
+
+\end{prettyBox}
+
+\vspace{0.25cm}
+\begin{prettyBox}{Construction Diagram De PERT}{myblue}
+    \begin{enumerate}
+        \item Construire le reseau d'activite just les liens entre taches.
+        \item PERT au plus tot , on commence depuis la premier tache de gauche a droite on utilise que les predecesseurs et on prend toujours le max.
+        \item PERT au plus tard , on commence depuis la derniere tache de droite a gauche on utilise que les successeurs et on prend toujours le min.
+    \end{enumerate}
+\end{prettyBox}
+
+\vspace{0.25cm}
+\begin{prettyBox}{Marge Libre \& Marge Totale}{myblue}
+    \begin{itemize}
+        \item \textbf{Marge Libre : } le retard maximum que peut prendre une tache sans retarder la date debut plus tot
+            de ces successeurs. elle est calculer avec la formule suivante :
+         \[\boxed{\text{Marge Libre}(T) = \text{min}(a,b,c-e,d-e) - \text{Date Debut Au Plus Tot De La Tache }T}\]
+            \begin{itemize}
+                \item $a$ : min( date debut au plus tot des successeurs DD)
+                \item $b$ : min( date fin au plus tot des successeurs DF)
+                \item $c$ : min( date debut au plus tot des successeurs FD)
+                \item $d$ : min( date fin au plus tot des successeurs FF)
+                \item $e$ : Duree de la tache $T$
+            \end{itemize}
+
+        \item \textbf{Marge Total : } le retard maximum que peut prendre une tache sans retarder la date fin du projet, elle est calculer
+            avec la formule suivante :
+        \[\boxed{\text{Marge Total}(T)  =  \text{date debut plus tard de }T - \text{date debut plus tot de }T}\]
+        \[ \boxed{\text{Marge Total}(T) = \text{date fin plus tard de }T - \text{date fin plus tot de }T }\]
+
+        si Marge Total = 0 $\Rightarrow$ Marge Libre = 0
+    \end{itemize}
+\end{prettyBox}
+
+
+\begin{prettyBox}{Liaisons}{myblue}
+    
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.35\textwidth]{tache.png} 
+\end{figure}
+
+\end{prettyBox}
+
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Tache Critique}{myblue}
+   Une tache est dire critique si sa margin total = 0
+\end{prettyBox}
+
+\vspace{0.25cm}
+\begin{prettyBox}{Chemin Critique}{myblue}
+    Chemin le plus long qui ne contient que des taches critiques , la duree de ce chemin represente la duree du projet.
+\end{prettyBox}
+
+\vspace{1cm}
+
+{\LARGE Reseau D'activite}
+
+\vspace{1cm}
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{pert.png} 
+\end{figure}
+
+\newpage
+
+
+{\LARGE PERT Plus Tot}
+
+\vspace{0.25cm}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{pert1.png} 
+\end{figure}
+
+\vspace{0.5cm}
+{\LARGE PERT Plus Tard}
+
+\vspace{0.25cm}
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{pert2.png} 
+\end{figure}
+
+\newpage
+{\LARGE Marges \par}
+\begin{itemize}
+    \item \textbf{A} : MT = 0-0 = 10-10 = 0 $\Rightarrow$ ML = 0.
+    \item \textbf{B} : MT = 0-0 = 15-15 = 0 $\Rightarrow$ ML = 0.
+    \item \textbf{E} : MT = 15-15 = 25-25 = 0 $\Rightarrow$ ML = 0.
+    \item \textbf{G} : MT = 25-25 = 50-50 = 0 $\Rightarrow$ ML = 0.
+    \item \textbf{H} : MT = 25-25 = 45-45 = 0 $\Rightarrow$ ML = 0.
+    \item \textbf{J} : MT = 45-45 = 65-65 = 0 $\Rightarrow$ ML = 0.
+    \item \textbf{I} : MT = 55-55 = 65-65 = 0 $\Rightarrow$ ML = 0.
+    \item \textbf{C}: MT= 20-10 = 40-30 = 10  , ML = min(c-e) - Date Debut Plus Tot de C = min(30-10)-20 = 0.
+    \item \textbf{D}: MT= 20-10 = 25-15 = 10  , ML = min(c-e) - Date Debut Plus Tot de D = min(25-5,30-5)-10 = 10.
+    \item \textbf{D}: MT= 40-30 = 55-45 = 10  , ML = min(c-e) - Date Debut Plus Tot de F = min(55-15)-30 = 10.
+\end{itemize}
+
+\vspace{0.15cm}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{pert3.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+Taches Critique : A,B,E,G,H,J,I\\
+Chemin Critique : A B E G H J I\\
+Duree du projet : 65jours
+
+\newpage
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{gant.png} 
+\end{figure}
+
+
+\end{document}
