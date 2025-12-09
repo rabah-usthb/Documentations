@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} suppression de la table sortie}
+\PYG{k}{drop}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{n}{sortie}\PYG{p}{;}
+\end{Verbatim}

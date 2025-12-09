@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} creation du lien}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{DATABASE}\PYG{+w}{ }\PYG{n}{LINK}\PYG{+w}{ }\PYG{n}{link\PYGZus{}orcl2}
+\PYG{k}{CONNECT}\PYG{+w}{ }\PYG{k}{TO}\PYG{+w}{ }\PYG{k}{c}\PYG{o}{\PYGZsh{}\PYGZsh{}}\PYG{n}{userORCL2}\PYG{+w}{ }\PYG{n}{IDENTIFIED}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{n}{Nanno1234}
+\PYG{k}{USING}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}ORCL2\PYGZsq{}}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} description de la view des liens de l\PYGZsq{}utilisateur courrant}
+\PYG{k}{desc}\PYG{+w}{ }\PYG{n}{db\PYGZus{}user\PYGZus{}links}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} afficher le nom du lien et son SID}
+\PYG{k}{select}\PYG{+w}{ }\PYG{k}{host}\PYG{p}{,}\PYG{n}{db\PYGZus{}link}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{db\PYGZus{}user\PYGZus{}links}\PYG{p}{;}
+\end{Verbatim}

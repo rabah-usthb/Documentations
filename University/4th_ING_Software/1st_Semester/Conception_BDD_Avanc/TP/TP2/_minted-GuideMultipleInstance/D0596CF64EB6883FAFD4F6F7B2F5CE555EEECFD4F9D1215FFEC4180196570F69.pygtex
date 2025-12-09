@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{or}\PYG{+w}{ }\PYG{k}{replace}\PYG{+w}{ }\PYG{k}{public}\PYG{+w}{ }\PYG{n}{synonym}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{k}{alias}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{n}{nom\PYGZus{}table}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\end{Verbatim}

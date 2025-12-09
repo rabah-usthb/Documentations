@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} creation de la copie}
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{n}{sortie}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{k}{select}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{sortie}\PYG{o}{@}\PYG{n}{link\PYGZus{}orcl}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ajouter la contrainte de la cle etrangere}
+\PYG{k}{alter}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{n}{sortie}\PYG{+w}{ }\PYG{k}{add}\PYG{+w}{ }\PYG{k}{CONSTRAINT}\PYG{+w}{ }\PYG{n}{pk\PYGZus{}sortie}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{idRando}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{idParticipant}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{dateSortie}\PYG{p}{);}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} affichage}
+\PYG{k}{select}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{sortie}\PYG{p}{;}
+
+\end{Verbatim}

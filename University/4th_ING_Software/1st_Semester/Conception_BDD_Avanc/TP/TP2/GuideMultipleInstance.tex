@@ -1,0 +1,907 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+
+\newcounter{commentCount}
+\newcounter{filePrg}
+\newcounter{inputPrg}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{minted}
+
+\usepackage{ifthen}
+\usepackage{fontawesome}
+
+\usepackage{tabularx}
+\newcolumntype{\CeX}{>{\centering\let\newline\\\arraybackslash}X}%
+\newcommand{\TwoSymbolsAndText}[3]{%
+  \begin{tabularx}{\textwidth}{c\CeX c}%
+    #1 & #2 & #3
+  \end{tabularx}%
+}
+
+\newtcblisting[use counter=inputPrg, number format=\arabic]{codeInput}[4]{
+  listing engine=minted,
+  minted language=#1,
+  minted options={autogobble,breaklines,  firstnumber={#4}},
+  listing only,
+  size=title,
+  arc=1.5mm,
+  breakable,
+  enhanced jigsaw,
+  colframe=myblue,
+  coltitle=White,
+  boxrule=0.5mm,
+  colback=white,
+  coltext=Black,
+  title=\TwoSymbolsAndText{\faCode}{%
+  \textbf{Sql Program \thetcbcounter}\ifthenelse{\equal{#2}{}}{}{\textbf{: }#2}%
+  }{\faCode},
+  label=inputPrg:#3
+}
+
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\usepackage{minted}
+
+\begin{document}
+
+\tit{Executer Plusieur Instance D'ORACLE TP2}
+
+\vspace{0.5cm}
+
+\begin{prettyBox}{Creation D'une Nouvelle Instance}{myblue}
+    On va executer la commande \verb|dbca| pour lancer l'application java \textbf{Database Configuration Assistant}
+     qui va nous permettre de creer une nouvelle instance d'oracle :
+     \begin{enumerate}
+         \item Choisir \textbf{Create a database} et cliquer sur \textbf{next}.
+         \item Choisir \textbf{Typical configuration}.
+         \item Donner un identifiant unique a l'instance \textbf{Global database name}.
+         \item Donne un mot de passe administratif \textbf{Administrative password}.
+         \item Donne un nom a la \textbf{Pluggable Database} (represente une base de donne de l'instance).
+         \item Cliquer sur \textbf{next} puis \textbf{finish}.
+         \item Attendre le telechargement puis cliquer sur \textbf{close}.
+     \end{enumerate}
+\end{prettyBox}
+
+\vspace{0.25cm}
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{dbca.png} 
+\end{figure}
+
+\vspace{0.15cm}
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{name.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{finish.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{end.png} 
+\end{figure}
+
+\newpage
+
+\begin{prettyBox}{Executer Plusieur Instance}{myblue}
+    \begin{enumerate}
+        \item Apres avoir creer les instance on va ouvrir plusieur instance du terminal et on va utilise la commande 
+    \verb|set ORACLE_SID = <nom_instance>| qui va temporairement changer la variable d'environment \\\textbf{ORACLE\_SID} pour
+    selectionner l'instance dans notre session terminal.
+        \item On lance oracle avec \verb|sqlplus / as sysdba|.
+        \item Pour verifier l'instance on va consulte la view \textbf{v\$instance} : 
+            \mintinline{sql}{select instance_name from v$instance;}
+    \end{enumerate}
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{instance1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{instance2.png} 
+\end{figure}
+
+
+\vspace{1.25cm}
+
+\begin{prettyBox}{Lien}{myblue}
+    \begin{enumerate}
+        \item Pour La Creation de lien on va se utiliser la requete suivant :
+
+
+    \begin{minted}{sql}   
+    CREATE DATABASE LINK NOM_LIEN
+    CONNECT TO NOM_UTILISATEUR IDENTIFIED BY MOTDEPASSE_INSTANCE
+    USING 'NOM_INSTANCE';
+    \end{minted}
+
+
+        \item Acceder a une table avec le lien : \verb|nom_table@nom_lien|
+        \item Pour consulte les liens de l'utilisatuer courrant on utilise la view \verb|user_db_links|
+        \item Au lieu de changer la variable d'environment \verb|ORACLE_SID| on peut indiquer a quelle instance
+            on veut se connecter dans la command sqlplus comme suit : \verb|sqlplus userName/password@SID|
+    \end{enumerate}
+\end{prettyBox}
+
+\vspace{0.5cm}
+\newpage
+Avant de creer les liens on va creer un user dans chaque instances et leur donne tous les privileges :
+
+\begin{codeInput}{sql}{Creation De L'utilisateur userORCL dans ORCL}{code01}{41}
+-- creation de l'utilisateur
+create user C##userORCL identified by Nanno1234;
+
+-- affectation des privileges
+grant all privileges to C##userORCL;
+\end{codeInput}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{createUserORCL.png} 
+\end{figure}
+
+
+\vspace{0.25cm}
+
+\begin{codeInput}{sql}{Creation De L'utilisateur userORCL2 dans ORCL2}{code01}{41}
+-- creation de l'utilisateur
+create user C##userORCL2 identified by Nanno1234;
+
+-- affectation des privileges
+grant all privileges to C##userORCL2;
+\end{codeInput}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{createUserORCL2.png} 
+\end{figure}
+
+\newpage
+
+Creation des liens :
+
+\begin{codeInput}{sql}{Creation Du Lien Vers ORCL2 Dans ORCL}{code01}{41}
+-- creation du lien 
+CREATE DATABASE LINK link_orcl2
+CONNECT TO c##userORCL2 IDENTIFIED BY Nanno1234
+USING 'ORCL2';
+
+-- description de la view des liens de l'utilisateur courrant
+desc db_user_links;
+
+-- afficher le nom du lien et son SID
+select host,db_link from db_user_links;
+\end{codeInput}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{createLink2.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{checkLink2.png} 
+\end{figure}
+
+
+\vspace{0.25cm}
+
+\begin{codeInput}{sql}{Creation Du Lien Vers ORCL Dans ORCL2}{code01}{41}
+-- creation du lien 
+CREATE DATABASE LINK link_orcl
+CONNECT TO c##userORCL IDENTIFIED BY Nanno1234
+USING 'ORCL';
+
+-- afficher le nom du lien et son SID
+select host,db_link from db_user_links;
+\end{codeInput}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{createLink1.png} 
+\end{figure}
+
+
+Test Pour Confirmer le lien :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{test.png} 
+\end{figure}
+
+\section*{Creation Et Insertion Des Table Dans ORCL Avec userORCL}
+\begin{codeInput}{sql}{Table Participant}{code01}{41}
+-- creation de la table
+-- participant(idParticipant, nomParticipant, ville, age)
+
+CREATE TABLE participant (
+    idParticipant NUMBER,
+    nomParticipant VARCHAR2(50),
+    ville VARCHAR2(50),
+    age NUMBER,
+    CONSTRAINT pk_participant PRIMARY KEY (idParticipant)
+);
+
+-- Insertion Automatique Avec PL/SQL
+
+DECLARE
+   v_idparticip NUMBER;
+   v_nomparticip VARCHAR2(50);
+   v_ville VARCHAR2(50);
+   v_age NUMBER;
+BEGIN
+   FOR i IN 1..10 LOOP -- Remplir 10 enregistrement
+      v_idparticip := i;
+      v_nomparticip := 'Participant' || i;
+      v_ville := CASE ROUND(DBMS_RANDOM.VALUE(1, 4))
+                 WHEN 1 THEN 'ALGER'
+                 WHEN 2 THEN 'ORAN'
+                 WHEN 3 THEN 'TIZI OUZOU'
+                 ELSE 'ANNABA'
+               END;
+      v_age := ROUND(DBMS_RANDOM.VALUE(18, 60));
+
+      INSERT INTO participant (idParticipant, nomParticipant, ville, age)
+      VALUES (v_idparticip, v_nomparticip, v_ville, v_age);
+   END LOOP;
+   COMMIT;
+END;
+/
+\end{codeInput}
+
+\newpage
+
+
+\begin{codeInput}{sql}{Table Randonnee}{code01}{41}
+-- creation de la table
+--randonnee(idRando, nomRando, region, distance, denivele)
+
+CREATE TABLE randonnee (
+    idRando NUMBER,
+    nomRando VARCHAR2(50),
+    region VARCHAR2(50),
+    distance NUMBER,
+    denivele NUMBER,
+    CONSTRAINT pk_randonnee PRIMARY KEY (idRando)
+);
+
+
+-- Insertion Automatique Avec PL/SQL
+
+DECLARE
+    v_idRando NUMBER;
+    v_nomRando VARCHAR2(50);
+    v_region VARCHAR2(50);
+    v_distance NUMBER;
+    v_denivele NUMBER;
+
+BEGIN
+    FOR i IN 1..10 LOOP -- Remplir 10 enregistrements, ajustez selon vos besoins
+        v_idRando := i;
+        v_nomRando := 'Randonnee' || i;
+        v_region := CASE ROUND(DBMS_RANDOM.VALUE(1, 4))
+                   WHEN 1 THEN 'ALGER'
+                 WHEN 2 THEN 'ORAN'
+                 WHEN 3 THEN 'TIZI OUZOU'
+                 ELSE 'ANNABA'
+                 END;
+        v_distance := ROUND(DBMS_RANDOM.VALUE(5, 20), 2);
+        v_denivele := ROUND(DBMS_RANDOM.VALUE(500, 1000));
+       
+        INSERT INTO randonnee (idRando, nomRando, region, distance, denivele)
+        VALUES (v_idRando, v_nomRando, v_region, v_distance, v_denivele);
+    END LOOP;
+    COMMIT;
+END;
+/
+
+\end{codeInput}
+
+\newpage
+
+
+\begin{codeInput}{sql}{Table Sortie}{code01}{41}
+-- creation de la table
+-- sortie(idRando, idParticipant, dateSortie, dureeSortie)
+
+CREATE TABLE sortie (
+    idRando NUMBER,
+    idParticipant NUMBER,
+    dateSortie DATE,
+    dureeSortie NUMBER,
+    CONSTRAINT pk_sortie PRIMARY KEY (idRando, idParticipant, dateSortie),
+    CONSTRAINT fk_sortie_rando FOREIGN KEY (idRando) REFERENCES randonnee(idRando),
+    CONSTRAINT fk_sortie_participant FOREIGN KEY (idParticipant) REFERENCES participant(idParticipant)
+);
+
+
+-- Insertion Automatique Avec PL/SQL
+
+DECLARE
+    v_idRando NUMBER;
+    v_idParticipant NUMBER;
+    v_dateSortie DATE;
+    v_dureeSortie NUMBER;
+
+BEGIN
+    FOR i IN 1..10 LOOP -- Remplir 10 enregistrements, -- Sélection aléatoire d'idRando et idParticipant existants
+        SELECT idRando INTO v_idRando FROM (
+    SELECT idRando
+    FROM randonnee
+    ORDER BY DBMS_RANDOM.VALUE
+)
+WHERE ROWNUM = 1;
+
+ SELECT idParticipant INTO v_idParticipant FROM (
+    SELECT idParticipant
+    FROM participant
+    ORDER BY DBMS_RANDOM.VALUE
+)
+WHERE ROWNUM = 1;
+
+        -- Génération de valeurs aléatoires pour les autres colonnes
+        v_dateSortie := TO_DATE('2023-01-01', 'YYYY-MM-DD') + ROUND(DBMS_RANDOM.VALUE(1, 365));
+        v_dureeSortie := ROUND(DBMS_RANDOM.VALUE(1, 8));
+
+        -- Insertion dans la table sortie
+        INSERT INTO sortie (idRando, idParticipant, dateSortie, dureeSortie)
+        VALUES (v_idRando, v_idParticipant, v_dateSortie, v_dureeSortie);
+    END LOOP;
+    COMMIT;
+END;
+/
+\end{codeInput}
+
+\newpage
+
+\begin{codeInput}{sql}{Table Projet}{code01}{41}
+-- creation de la table
+-- Projet(numj, nomj, ville)
+
+CREATE TABLE Projet (
+    numj NUMBER,
+    nomj VARCHAR2(50),
+    ville VARCHAR2(50),
+    CONSTRAINT pk_projet PRIMARY KEY (numj)
+);
+
+-- Insertion Automatique Avec PL/SQL
+
+DECLARE
+    v_numj NUMBER;
+    v_nomj VARCHAR2(50);
+    v_ville VARCHAR2(50);
+
+BEGIN
+    FOR i IN 1..10 LOOP -- Remplir 10 enregistrements, ajustez selon vos besoins
+        v_numj := i;
+        v_nomj := 'Projet' || i;
+        v_ville := CASE ROUND(DBMS_RANDOM.VALUE(1, 3))
+                   WHEN 1 THEN 'ALGER'
+                   WHEN 2 THEN 'ORAN'
+                   ELSE 'TIZI OUZOU'
+                 END;
+
+        INSERT INTO Projet (numj, nomj, ville)
+        VALUES (v_numj, v_nomj, v_ville);
+    END LOOP;
+    COMMIT;
+END;
+/
+\end{codeInput}
+
+\newpage
+\begin{codeInput}{sql}{Table Produit}{code01}{41}
+-- creation de la table
+-- Produit(nump, nomp, couleur, poids, ville)
+
+CREATE TABLE Produit (
+    nump NUMBER,
+    nomp VARCHAR2(50),
+    couleur VARCHAR2(50),
+    poids NUMBER,
+    ville VARCHAR2(50),
+    CONSTRAINT pk_produit PRIMARY KEY (nump)
+);
+
+-- Insertion Automatique Avec PL/SQL
+
+DECLARE
+    v_nump NUMBER;
+    v_nomp VARCHAR2(50);
+    v_couleur VARCHAR2(50);
+    v_poids NUMBER;
+    v_ville VARCHAR2(50);
+
+BEGIN
+    FOR i IN 1..10 LOOP -- Remplir 10 enregistrements, ajustez selon vos besoins
+        v_nump := i;
+        v_nomp := 'Produit' || i;
+        v_couleur := CASE ROUND(DBMS_RANDOM.VALUE(1, 3))
+                      WHEN 1 THEN 'Rouge'
+                      WHEN 2 THEN 'Vert'
+                      ELSE 'Bleu'
+                   END;
+        v_poids := ROUND(DBMS_RANDOM.VALUE(1, 10), 2);
+        v_ville := CASE ROUND(DBMS_RANDOM.VALUE(1, 3))
+                     WHEN 1 THEN 'ALGER'
+                     WHEN 2 THEN 'ORAN'
+                     ELSE 'TIZI OUZOU'
+                  END;
+
+        INSERT INTO Produit (nump, nomp, couleur, poids, ville)
+        VALUES (v_nump, v_nomp, v_couleur, v_poids, v_ville);
+    END LOOP;
+    COMMIT;
+END;
+/
+\end{codeInput}
+
+\newpage
+
+\begin{codeInput}{sql}{Table Fournisseur}{code01}{41}
+-- Creation De La Table
+-- Fournisseur(numf, nomf, statut, ville)
+
+CREATE TABLE Fournisseur (
+    numf NUMBER,
+    nomf VARCHAR2(50),
+    statut VARCHAR2(50),
+    ville VARCHAR2(50),
+    CONSTRAINT pk_fournisseur PRIMARY KEY (numf)
+);
+
+
+-- Insertion Automatique Avec PL/SQL
+
+DECLARE
+    v_numf NUMBER;
+    v_nomf VARCHAR2(50);
+    v_statut VARCHAR2(50);
+    v_ville VARCHAR2(50);
+
+BEGIN
+    FOR i IN 1..10 LOOP -- Remplir 10 enregistrements, ajustez selon vos besoins
+        v_numf := i;
+        v_nomf := 'Fournisseur' || i;
+        v_statut := CASE ROUND(DBMS_RANDOM.VALUE(1, 3))
+                      WHEN 1 THEN 'Actif'
+                      WHEN 2 THEN 'Inactif'
+                      ELSE 'Suspendu'
+                   END;
+        v_ville := CASE ROUND(DBMS_RANDOM.VALUE(1, 3))
+                     WHEN 1 THEN 'ALGER'
+                     WHEN 2 THEN 'ORAN'
+                     ELSE 'TIZI OUZOU'
+                  END;
+
+        INSERT INTO Fournisseur (numf, nomf, statut, ville)
+        VALUES (v_numf, v_nomf, v_statut, v_ville);
+    END LOOP;
+    COMMIT;
+END;
+/
+\end{codeInput}
+
+\newpage
+
+\begin{codeInput}{sql}{Table Commande}{code01}{41}
+-- creation de la table
+-- Commande(numf, nump, numj, qte), où qte est la quantité du produit
+
+CREATE TABLE Commande (
+    numf NUMBER,
+    nump NUMBER,
+    numj NUMBER,
+    qte NUMBER,
+    CONSTRAINT pk_commande PRIMARY KEY (numf, nump, numj),
+    CONSTRAINT fk_commande_fournisseur FOREIGN KEY (numf) REFERENCES Fournisseur(numf),
+    CONSTRAINT fk_commande_produit FOREIGN KEY (nump) REFERENCES Produit(nump),
+    CONSTRAINT fk_commande_projet FOREIGN KEY (numj) REFERENCES Projet(numj)
+);
+
+
+-- Insertion Automatique Avec PL/SQL
+
+DECLARE
+    v_numf NUMBER;
+    v_nump NUMBER;
+    v_numj NUMBER;
+    v_qte NUMBER;
+
+BEGIN
+    FOR i IN 1..10 LOOP -- Remplir 10 enregistrements, ajustez selon vos besoins
+        -- Sélection aléatoire d'un fournisseur, produit et projet existants
+        SELECT numf INTO v_numf
+        FROM (
+            SELECT numf
+            FROM Fournisseur
+            ORDER BY DBMS_RANDOM.RANDOM
+        )
+        WHERE ROWNUM = 1;
+
+        SELECT nump INTO v_nump
+        FROM (
+            SELECT nump
+            FROM Produit
+            ORDER BY DBMS_RANDOM.RANDOM
+        )
+        WHERE ROWNUM = 1;
+
+        SELECT numj INTO v_numj
+        FROM (
+            SELECT numj
+            FROM Projet
+            ORDER BY DBMS_RANDOM.RANDOM
+        )
+        WHERE ROWNUM = 1;
+
+        -- Génération d'une quantité aléatoire
+        v_qte := ROUND(DBMS_RANDOM.VALUE(1, 100));
+
+        -- Insertion dans la table Commande
+        INSERT INTO Commande (numf, nump, numj, qte)
+        VALUES (v_numf, v_nump, v_numj, v_qte);
+    END LOOP;
+    COMMIT;
+END;
+/
+\end{codeInput}
+
+\newpage
+
+\section*{Copier La Table Sortie De L'ORCL Dans ORCL2 \\(Et La Supprimer Dans ORCL)}
+\begin{prettyBox}{Contrainte D'integrite}{myblue}
+    Les contraintes d'integrites sont isole entre instances donc si on fait une copie de la table sortie de ORCL vers ORCL2
+    elle va copier que le contenu de la table sans les contraintes (cle entrangere , primaire,...etc). \\donc on doit :
+    \begin{itemize}
+        \item Redefinir la contrainte de la cle primaire dans ORCL2.
+        \item Faire un trigger avant l'insertion pour verifie la contrainte cle etrangere avec les table randonne , participant qui sont
+            dans ORCL.
+    \end{itemize}
+\end{prettyBox}
+
+
+\vspace{1.5cm}
+
+\begin{codeInput}{sql}{Copie Table Sortie Dans ORCL2}{code01}{41}
+-- creation de la copie
+create table sortie as select * from sortie@link_orcl;
+
+-- ajouter la contrainte de la cle etrangere
+alter table sortie add CONSTRAINT pk_sortie PRIMARY KEY (idRando, idParticipant, dateSortie);
+
+-- affichage
+select * from sortie;
+ 
+\end{codeInput}
+
+\vspace{0.15cm}
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.75\textwidth]{sortieORCL2.png} 
+\end{figure}
+
+\newpage
+
+\begin{codeInput}{sql}{Drop La Table Sortie Dans ORCL}{code01}{41}
+-- suppression de la table sortie
+drop table sortie;
+\end{codeInput}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.75\textwidth]{dropSortie.png} 
+\end{figure}
+
+\vspace{0.35cm}
+
+{\footnotesize
+\begin{codeInput}{sql}{Creation Du Trigger Dans ORCL2}{code01}{41}
+create or replace trigger check_site1_constraint
+   before insert on sortie -- avant insertion
+   for each row -- besoin de :new
+    
+    declare
+    existrandonne int;  
+    existparticipant int;
+  
+    begin
+ 
+    select count(*) into existrandonne from randonnee@link_orcl where idRando = :new.idRando;
+    select count(*) into existparticipant from participant@link_orcl where idParticipant = :new.idParticipant;
+ 
+    if (existrandonne = 0 OR existparticipant = 0) then -- si l'un des id n'existe pas
+                                                        -- on fait un raise application error
+        raise_application_error(-20001,'violation de la contrainte de la cle etranger');
+    end if;
+ 
+   end;
+  /
+
+\end{codeInput}
+}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.7\textwidth]{triggerSortie.png} 
+\end{figure}
+
+\newpage
+
+\begin{codeInput}{sql}{Test Trigger}{code01}{41}
+-- afficher id randonnee 
+select idrando from randonnee@link_orcl;
+
+-- afficher id participant
+select idparticipant from participant@link_orcl;
+
+-- 8 et 1 exist insertion normal
+insert into sortie values (8,1,TO_DATE('01/06/2018', 'DD/MM/YYYY'),10);
+
+-- 8 exist mais participant 11 n'exist pas donc raise application error
+insert into sortie values (8,11,TO_DATE('01/06/2018', 'DD/MM/YYYY'),10);
+
+\end{codeInput}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.85\textwidth]{selectTest.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.95\textwidth]{testInsert.png} 
+\end{figure}
+
+\newpage
+
+\section*{Creation Des Fragments Et Synonymes}
+\begin{prettyBox}{Synonymes}{myblue}
+    \begin{itemize}
+        \item un synonyme est un alias qu'on attribue a une table avec la commande suivante :\\\mintinline{sql}{create or replace public synonym <alias> for <nom_table>;}
+        \item Si il exist un alias et un nom d'une table avec les meme noms oracle va prioritiser le nom de la table. 
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{0.15cm}
+
+\begin{prettyBox}{Fragmentation}{myblue}
+    \begin{itemize}
+        \item ORCL :
+            \begin{itemize}
+                \item Fournisseur1 = $\sigma_{\text{ville in ('ORAN','ANNABA')}}$ (Fournisseur)
+                    \vspace{0.1cm}
+                \item Produit1 = $\prod_{\text{(nomp, couleur, poids)}}$ (Produit)
+                    \vspace{0.1cm}
+                \item Commande1 = Commande $\ltimes$ Fournisseur1
+            \end{itemize}
+        \item ORCL2 :
+            \begin{itemize}
+                \item Fournisseur2 = $\sigma_{\text{ville not in ('ORAN','ANNABA')}}$ (Fournisseur)
+                    \vspace{0.1cm}
+                \item Produit2 = $\prod_{\text{(ville)}}$ (Produit)
+                    \vspace{0.1cm}
+                \item Commande2 = Commande $\ltimes$ Fournisseur2
+            \end{itemize}
+    \end{itemize}
+\end{prettyBox}
+
+\newpage
+
+\begin{codeInput}{sql}{Fragment ORCL}{code01}{41}
+-- fragmentation horizontal sur l'attribut ville
+CREATE TABLE Fournisseur1 AS
+SELECT * FROM Fournisseur WHERE ville IN ('ORAN', 'ANNABA');
+
+-- fragmentation vertical 
+CREATE TABLE Produit1 AS
+SELECT nump, nomp, couleur, poids FROM Produit;
+
+-- fragmentation horizontal derive de fournisseur1
+CREATE TABLE Commande1 AS
+SELECT * FROM Commande
+WHERE numf IN (SELECT numf FROM Fournisseur1);
+
+
+CREATE OR REPLACE PUBLIC SYNONYM Fournisseur FOR Fournisseur1;
+
+-- affiche la table fournisseur pas le fragment 
+-- car le nom d'une table plus prioritere que un alias
+select * from fournisseur;
+
+CREATE OR REPLACE PUBLIC SYNONYM Produit FOR Produit1;
+CREATE OR REPLACE PUBLIC SYNONYM Commande FOR Commande1;
+ALTER TABLE Fournisseur RENAME TO Fournisseur_orig;
+ALTER TABLE Produit RENAME TO Produit_orig;
+ALTER TABLE Commande RENAME TO Commande_orig;
+
+-- affiche le fragment car on a changer le nom de la table original
+select * from fournisseur;
+\end{codeInput}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.95\textwidth]{frag1.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{1syn1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{2sys1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{3sys1.png} 
+\end{figure}
+
+\vspace{0.35cm}
+
+\begin{codeInput}{sql}{Fragment ORCL2}{code01}{41}
+-- fragmentation horizontal sur l'attribut ville
+CREATE TABLE Fournisseur2 AS
+SELECT * FROM Fournisseur_orig@link_orcl WHERE ville NOT IN ('ORAN', 'ANNABA');
+
+-- fragmentation vertical 
+CREATE TABLE Produit2 AS
+SELECT nump, ville FROM Produit_orig@link_orcl;
+
+-- fragmentation horizontal derive de fournisseur1
+CREATE TABLE Commande2 AS
+SELECT * FROM Commande_orig@link_orcl
+WHERE numf IN (SELECT numf FROM Fournisseur2);
+
+CREATE OR REPLACE PUBLIC SYNONYM Fournisseur FOR Fournisseur2;
+CREATE OR REPLACE PUBLIC SYNONYM Produit FOR Produit2;
+CREATE OR REPLACE PUBLIC SYNONYM Commande FOR Commande2;
+\end{codeInput}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.95\textwidth]{frag2.png} 
+\end{figure}
+
+\newpage
+\section*{View Et Trigger Pour Insertion}
+
+\begin{codeInput}{sql}{Vue Et Trigger}{code01}{41}
+-- creation de la vue union des fragments horizontal
+CREATE OR REPLACE VIEW vw_Fournisseur AS
+SELECT * FROM Fournisseur1
+UNION ALL
+SELECT * FROM Fournisseur2@link_orcl2;
+
+-- trigger pour inserer dans la vue(impossible acause de l'union)
+CREATE OR REPLACE TRIGGER trg_insert_fournisseur
+INSTEAD OF INSERT ON vw_Fournisseur
+FOR EACH ROW
+    BEGIN
+        IF :NEW.ville IN ('ORAN', 'ANNABA') THEN 
+        -- si oran ou annaba insert dans fragment 1
+           INSERT INTO Fournisseur1 VALUES (:NEW.numf, :NEW.nomf, :NEW.statut, :NEW.ville);
+        ELSE                                    
+        -- sinon insert dans fragment 2
+           INSERT INTO Fournisseur2@link_orcl2 VALUES (:NEW.numf, :NEW.nomf, :NEW.statut, :NEW.ville);
+      END IF;
+   END;
+   /
+\end{codeInput}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.95\textwidth]{triggerView.png} 
+\end{figure}
+
+\newpage
+\begin{codeInput}{sql}{Vue Et Trigger}{code01}{41}
+-- affichage avant insertion
+select nomf from fournisseur;
+select nomf from fournisseur2@link_orcl2;
+
+-- insertion dans la vue
+insert into vw_fournisseur values (99,'Fournisseur X','Actif','ALGER');
+insert into vw_fournisseur values (100,'Fournisseur Y','Actif','ORAN');
+
+-- affichage apres insertion
+select nomf from fournisseur;
+select nomf from fournisseur2@link_orcl2;
+\end{codeInput}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.95\textwidth]{selectBefore.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.95\textwidth]{good.png} 
+\end{figure}
+
+\end{document}

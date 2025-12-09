@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} creation de la vue union des fragments horizontal}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{OR}\PYG{+w}{ }\PYG{k}{REPLACE}\PYG{+w}{ }\PYG{k}{VIEW}\PYG{+w}{ }\PYG{n}{vw\PYGZus{}Fournisseur}\PYG{+w}{ }\PYG{k}{AS}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{Fournisseur1}
+\PYG{k}{UNION}\PYG{+w}{ }\PYG{k}{ALL}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{Fournisseur2}\PYG{o}{@}\PYG{n}{link\PYGZus{}orcl2}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} trigger pour inserer dans la vue(impossible acause de l\PYGZsq{}union)}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{OR}\PYG{+w}{ }\PYG{k}{REPLACE}\PYG{+w}{ }\PYG{k}{TRIGGER}\PYG{+w}{ }\PYG{n}{trg\PYGZus{}insert\PYGZus{}fournisseur}
+\PYG{k}{INSTEAD}\PYG{+w}{ }\PYG{k}{OF}\PYG{+w}{ }\PYG{k}{INSERT}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{vw\PYGZus{}Fournisseur}
+\PYG{k}{FOR}\PYG{+w}{ }\PYG{k}{EACH}\PYG{+w}{ }\PYG{k}{ROW}
+\PYG{+w}{    }\PYG{k}{BEGIN}
+\PYG{+w}{        }\PYG{k}{IF}\PYG{+w}{ }\PYG{p}{:}\PYG{k}{NEW}\PYG{p}{.}\PYG{n}{ville}\PYG{+w}{ }\PYG{k}{IN}\PYG{+w}{ }\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ORAN\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}ANNABA\PYGZsq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{THEN}
+\PYG{+w}{        }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} si oran ou annaba insert dans fragment 1}
+\PYG{+w}{           }\PYG{k}{INSERT}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{Fournisseur1}\PYG{+w}{ }\PYG{k}{VALUES}\PYG{+w}{ }\PYG{p}{(:}\PYG{k}{NEW}\PYG{p}{.}\PYG{n}{numf}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{:}\PYG{k}{NEW}\PYG{p}{.}\PYG{n}{nomf}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{:}\PYG{k}{NEW}\PYG{p}{.}\PYG{n}{statut}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{:}\PYG{k}{NEW}\PYG{p}{.}\PYG{n}{ville}\PYG{p}{);}
+\PYG{+w}{        }\PYG{k}{ELSE}
+\PYG{+w}{        }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} sinon insert dans fragment 2}
+\PYG{+w}{           }\PYG{k}{INSERT}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{Fournisseur2}\PYG{o}{@}\PYG{n}{link\PYGZus{}orcl2}\PYG{+w}{ }\PYG{k}{VALUES}\PYG{+w}{ }\PYG{p}{(:}\PYG{k}{NEW}\PYG{p}{.}\PYG{n}{numf}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{:}\PYG{k}{NEW}\PYG{p}{.}\PYG{n}{nomf}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{:}\PYG{k}{NEW}\PYG{p}{.}\PYG{n}{statut}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{:}\PYG{k}{NEW}\PYG{p}{.}\PYG{n}{ville}\PYG{p}{);}
+\PYG{+w}{      }\PYG{k}{END}\PYG{+w}{ }\PYG{k}{IF}\PYG{p}{;}
+\PYG{+w}{   }\PYG{k}{END}\PYG{p}{;}
+\PYG{+w}{   }\PYG{o}{/}
+\end{Verbatim}

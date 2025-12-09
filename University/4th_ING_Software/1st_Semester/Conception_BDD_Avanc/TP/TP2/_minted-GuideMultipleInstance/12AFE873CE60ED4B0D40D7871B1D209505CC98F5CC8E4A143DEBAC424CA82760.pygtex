@@ -1,0 +1,51 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} creation de la table}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} sortie(idRando, idParticipant, dateSortie, dureeSortie)}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{sortie}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{n}{idRando}\PYG{+w}{ }\PYG{n+nb}{NUMBER}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{idParticipant}\PYG{+w}{ }\PYG{n+nb}{NUMBER}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{dateSortie}\PYG{+w}{ }\PYG{n+nb}{DATE}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{dureeSortie}\PYG{+w}{ }\PYG{n+nb}{NUMBER}\PYG{p}{,}
+\PYG{+w}{    }\PYG{k}{CONSTRAINT}\PYG{+w}{ }\PYG{n}{pk\PYGZus{}sortie}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{idRando}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{idParticipant}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{dateSortie}\PYG{p}{),}
+\PYG{+w}{    }\PYG{k}{CONSTRAINT}\PYG{+w}{ }\PYG{n}{fk\PYGZus{}sortie\PYGZus{}rando}\PYG{+w}{ }\PYG{k}{FOREIGN}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{idRando}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{randonnee}\PYG{p}{(}\PYG{n}{idRando}\PYG{p}{),}
+\PYG{+w}{    }\PYG{k}{CONSTRAINT}\PYG{+w}{ }\PYG{n}{fk\PYGZus{}sortie\PYGZus{}participant}\PYG{+w}{ }\PYG{k}{FOREIGN}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{idParticipant}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{participant}\PYG{p}{(}\PYG{n}{idParticipant}\PYG{p}{)}
+\PYG{p}{);}
+
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Insertion Automatique Avec PL/SQL}
+
+\PYG{k}{DECLARE}
+\PYG{+w}{    }\PYG{n}{v\PYGZus{}idRando}\PYG{+w}{ }\PYG{n+nb}{NUMBER}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{v\PYGZus{}idParticipant}\PYG{+w}{ }\PYG{n+nb}{NUMBER}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{v\PYGZus{}dateSortie}\PYG{+w}{ }\PYG{n+nb}{DATE}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{v\PYGZus{}dureeSortie}\PYG{+w}{ }\PYG{n+nb}{NUMBER}\PYG{p}{;}
+
+\PYG{k}{BEGIN}
+\PYG{+w}{    }\PYG{k}{FOR}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{k}{IN}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{..}\PYG{l+m+mi}{10}\PYG{+w}{ }\PYG{n}{LOOP}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Remplir 10 enregistrements, \PYGZhy{}\PYGZhy{} Sélection aléatoire d\PYGZsq{}idRando et idParticipant existants}
+\PYG{+w}{        }\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{idRando}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{v\PYGZus{}idRando}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{idRando}
+\PYG{+w}{    }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{randonnee}
+\PYG{+w}{    }\PYG{k}{ORDER}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{n}{DBMS\PYGZus{}RANDOM}\PYG{p}{.}\PYG{n}{VALUE}
+\PYG{p}{)}
+\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{ROWNUM}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
+
+\PYG{+w}{ }\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{idParticipant}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{v\PYGZus{}idParticipant}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{idParticipant}
+\PYG{+w}{    }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{participant}
+\PYG{+w}{    }\PYG{k}{ORDER}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{n}{DBMS\PYGZus{}RANDOM}\PYG{p}{.}\PYG{n}{VALUE}
+\PYG{p}{)}
+\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{ROWNUM}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Génération de valeurs aléatoires pour les autres colonnes}
+\PYG{+w}{        }\PYG{n}{v\PYGZus{}dateSortie}\PYG{+w}{ }\PYG{p}{:}\PYG{o}{=}\PYG{+w}{ }\PYG{n}{TO\PYGZus{}DATE}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}2023\PYGZhy{}01\PYGZhy{}01\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}YYYY\PYGZhy{}MM\PYGZhy{}DD\PYGZsq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{ROUND}\PYG{p}{(}\PYG{n}{DBMS\PYGZus{}RANDOM}\PYG{p}{.}\PYG{n}{VALUE}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{365}\PYG{p}{));}
+\PYG{+w}{        }\PYG{n}{v\PYGZus{}dureeSortie}\PYG{+w}{ }\PYG{p}{:}\PYG{o}{=}\PYG{+w}{ }\PYG{n}{ROUND}\PYG{p}{(}\PYG{n}{DBMS\PYGZus{}RANDOM}\PYG{p}{.}\PYG{n}{VALUE}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{));}
+
+\PYG{+w}{        }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Insertion dans la table sortie}
+\PYG{+w}{        }\PYG{k}{INSERT}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{sortie}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{idRando}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{idParticipant}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{dateSortie}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{dureeSortie}\PYG{p}{)}
+\PYG{+w}{        }\PYG{k}{VALUES}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{v\PYGZus{}idRando}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{v\PYGZus{}idParticipant}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{v\PYGZus{}dateSortie}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{v\PYGZus{}dureeSortie}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k}{END}\PYG{+w}{ }\PYG{n}{LOOP}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{COMMIT}\PYG{p}{;}
+\PYG{k}{END}\PYG{p}{;}
+\PYG{o}{/}
+\end{Verbatim}

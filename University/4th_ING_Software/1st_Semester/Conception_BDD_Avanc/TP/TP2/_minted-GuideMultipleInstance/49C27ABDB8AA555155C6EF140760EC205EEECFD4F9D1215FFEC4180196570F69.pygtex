@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{DATABASE}\PYG{+w}{ }\PYG{n}{LINK}\PYG{+w}{ }\PYG{n}{NOM\PYGZus{}LIEN}
+\PYG{+w}{    }\PYG{k}{CONNECT}\PYG{+w}{ }\PYG{k}{TO}\PYG{+w}{ }\PYG{n}{NOM\PYGZus{}UTILISATEUR}\PYG{+w}{ }\PYG{n}{IDENTIFIED}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{n}{MOTDEPASSE\PYGZus{}INSTANCE}
+\PYG{+w}{    }\PYG{k}{USING}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}NOM\PYGZus{}INSTANCE\PYGZsq{}}\PYG{p}{;}
+\end{Verbatim}

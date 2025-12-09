@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} afficher id randonnee}
+\PYG{k}{select}\PYG{+w}{ }\PYG{n}{idrando}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{randonnee}\PYG{o}{@}\PYG{n}{link\PYGZus{}orcl}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} afficher id participant}
+\PYG{k}{select}\PYG{+w}{ }\PYG{n}{idparticipant}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{participant}\PYG{o}{@}\PYG{n}{link\PYGZus{}orcl}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 8 et 1 exist insertion normal}
+\PYG{k}{insert}\PYG{+w}{ }\PYG{k}{into}\PYG{+w}{ }\PYG{n}{sortie}\PYG{+w}{ }\PYG{k}{values}\PYG{+w}{ }\PYG{p}{(}\PYG{l+m+mi}{8}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{TO\PYGZus{}DATE}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}01/06/2018\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}DD/MM/YYYY\PYGZsq{}}\PYG{p}{),}\PYG{l+m+mi}{10}\PYG{p}{);}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 8 exist mais participant 11 n\PYGZsq{}exist pas donc raise application error}
+\PYG{k}{insert}\PYG{+w}{ }\PYG{k}{into}\PYG{+w}{ }\PYG{n}{sortie}\PYG{+w}{ }\PYG{k}{values}\PYG{+w}{ }\PYG{p}{(}\PYG{l+m+mi}{8}\PYG{p}{,}\PYG{l+m+mi}{11}\PYG{p}{,}\PYG{n}{TO\PYGZus{}DATE}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}01/06/2018\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}DD/MM/YYYY\PYGZsq{}}\PYG{p}{),}\PYG{l+m+mi}{10}\PYG{p}{);}
+
+\end{Verbatim}

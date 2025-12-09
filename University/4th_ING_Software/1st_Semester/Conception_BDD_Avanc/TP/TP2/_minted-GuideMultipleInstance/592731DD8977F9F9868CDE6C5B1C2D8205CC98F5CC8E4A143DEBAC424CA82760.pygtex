@@ -1,0 +1,43 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Creation De La Table}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Fournisseur(numf, nomf, statut, ville)}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Fournisseur}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{n}{numf}\PYG{+w}{ }\PYG{n+nb}{NUMBER}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{nomf}\PYG{+w}{ }\PYG{n}{VARCHAR2}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{statut}\PYG{+w}{ }\PYG{n}{VARCHAR2}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{ville}\PYG{+w}{ }\PYG{n}{VARCHAR2}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{),}
+\PYG{+w}{    }\PYG{k}{CONSTRAINT}\PYG{+w}{ }\PYG{n}{pk\PYGZus{}fournisseur}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{numf}\PYG{p}{)}
+\PYG{p}{);}
+
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Insertion Automatique Avec PL/SQL}
+
+\PYG{k}{DECLARE}
+\PYG{+w}{    }\PYG{n}{v\PYGZus{}numf}\PYG{+w}{ }\PYG{n+nb}{NUMBER}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{v\PYGZus{}nomf}\PYG{+w}{ }\PYG{n}{VARCHAR2}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{v\PYGZus{}statut}\PYG{+w}{ }\PYG{n}{VARCHAR2}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{v\PYGZus{}ville}\PYG{+w}{ }\PYG{n}{VARCHAR2}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{);}
+
+\PYG{k}{BEGIN}
+\PYG{+w}{    }\PYG{k}{FOR}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{k}{IN}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{..}\PYG{l+m+mi}{10}\PYG{+w}{ }\PYG{n}{LOOP}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Remplir 10 enregistrements, ajustez selon vos besoins}
+\PYG{+w}{        }\PYG{n}{v\PYGZus{}numf}\PYG{+w}{ }\PYG{p}{:}\PYG{o}{=}\PYG{+w}{ }\PYG{n}{i}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{v\PYGZus{}nomf}\PYG{+w}{ }\PYG{p}{:}\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}Fournisseur\PYGZsq{}}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{n}{i}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{v\PYGZus{}statut}\PYG{+w}{ }\PYG{p}{:}\PYG{o}{=}\PYG{+w}{ }\PYG{k}{CASE}\PYG{+w}{ }\PYG{n}{ROUND}\PYG{p}{(}\PYG{n}{DBMS\PYGZus{}RANDOM}\PYG{p}{.}\PYG{n}{VALUE}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{))}
+\PYG{+w}{                      }\PYG{k}{WHEN}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{k}{THEN}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}Actif\PYGZsq{}}
+\PYG{+w}{                      }\PYG{k}{WHEN}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{k}{THEN}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}Inactif\PYGZsq{}}
+\PYG{+w}{                      }\PYG{k}{ELSE}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}Suspendu\PYGZsq{}}
+\PYG{+w}{                   }\PYG{k}{END}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{v\PYGZus{}ville}\PYG{+w}{ }\PYG{p}{:}\PYG{o}{=}\PYG{+w}{ }\PYG{k}{CASE}\PYG{+w}{ }\PYG{n}{ROUND}\PYG{p}{(}\PYG{n}{DBMS\PYGZus{}RANDOM}\PYG{p}{.}\PYG{n}{VALUE}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{))}
+\PYG{+w}{                     }\PYG{k}{WHEN}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{k}{THEN}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}ALGER\PYGZsq{}}
+\PYG{+w}{                     }\PYG{k}{WHEN}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{k}{THEN}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}ORAN\PYGZsq{}}
+\PYG{+w}{                     }\PYG{k}{ELSE}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}TIZI OUZOU\PYGZsq{}}
+\PYG{+w}{                  }\PYG{k}{END}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{k}{INSERT}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{Fournisseur}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{numf}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{nomf}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{statut}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ville}\PYG{p}{)}
+\PYG{+w}{        }\PYG{k}{VALUES}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{v\PYGZus{}numf}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{v\PYGZus{}nomf}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{v\PYGZus{}statut}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{v\PYGZus{}ville}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k}{END}\PYG{+w}{ }\PYG{n}{LOOP}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{COMMIT}\PYG{p}{;}
+\PYG{k}{END}\PYG{p}{;}
+\PYG{o}{/}
+\end{Verbatim}

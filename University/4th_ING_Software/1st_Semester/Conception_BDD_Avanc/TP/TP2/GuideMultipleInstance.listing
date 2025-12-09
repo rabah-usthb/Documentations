@@ -1,0 +1,11 @@
+-- affichage avant insertion
+select nomf from fournisseur;
+select nomf from fournisseur2@link_orcl2;
+
+-- insertion dans la vue
+insert into vw_fournisseur values (99,'Fournisseur X','Actif','ALGER');
+insert into vw_fournisseur values (100,'Fournisseur Y','Actif','ORAN');
+
+-- affichage apres insertion
+select nomf from fournisseur;
+select nomf from fournisseur2@link_orcl2;

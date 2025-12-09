@@ -1,0 +1,30 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} fragmentation horizontal sur l\PYGZsq{}attribut ville}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Fournisseur1}\PYG{+w}{ }\PYG{k}{AS}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{Fournisseur}\PYG{+w}{ }\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{ville}\PYG{+w}{ }\PYG{k}{IN}\PYG{+w}{ }\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ORAN\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}ANNABA\PYGZsq{}}\PYG{p}{);}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} fragmentation vertical}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Produit1}\PYG{+w}{ }\PYG{k}{AS}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{nump}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{nomp}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{couleur}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{poids}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{Produit}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} fragmentation horizontal derive de fournisseur1}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Commande1}\PYG{+w}{ }\PYG{k}{AS}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{Commande}
+\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{numf}\PYG{+w}{ }\PYG{k}{IN}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{numf}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{Fournisseur1}\PYG{p}{);}
+
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{OR}\PYG{+w}{ }\PYG{k}{REPLACE}\PYG{+w}{ }\PYG{k}{PUBLIC}\PYG{+w}{ }\PYG{n}{SYNONYM}\PYG{+w}{ }\PYG{n}{Fournisseur}\PYG{+w}{ }\PYG{k}{FOR}\PYG{+w}{ }\PYG{n}{Fournisseur1}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} affiche la table fournisseur pas le fragment}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} car le nom d\PYGZsq{}une table plus prioritere que un alias}
+\PYG{k}{select}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{fournisseur}\PYG{p}{;}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{OR}\PYG{+w}{ }\PYG{k}{REPLACE}\PYG{+w}{ }\PYG{k}{PUBLIC}\PYG{+w}{ }\PYG{n}{SYNONYM}\PYG{+w}{ }\PYG{n}{Produit}\PYG{+w}{ }\PYG{k}{FOR}\PYG{+w}{ }\PYG{n}{Produit1}\PYG{p}{;}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{OR}\PYG{+w}{ }\PYG{k}{REPLACE}\PYG{+w}{ }\PYG{k}{PUBLIC}\PYG{+w}{ }\PYG{n}{SYNONYM}\PYG{+w}{ }\PYG{n}{Commande}\PYG{+w}{ }\PYG{k}{FOR}\PYG{+w}{ }\PYG{n}{Commande1}\PYG{p}{;}
+\PYG{k}{ALTER}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Fournisseur}\PYG{+w}{ }\PYG{k}{RENAME}\PYG{+w}{ }\PYG{k}{TO}\PYG{+w}{ }\PYG{n}{Fournisseur\PYGZus{}orig}\PYG{p}{;}
+\PYG{k}{ALTER}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Produit}\PYG{+w}{ }\PYG{k}{RENAME}\PYG{+w}{ }\PYG{k}{TO}\PYG{+w}{ }\PYG{n}{Produit\PYGZus{}orig}\PYG{p}{;}
+\PYG{k}{ALTER}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Commande}\PYG{+w}{ }\PYG{k}{RENAME}\PYG{+w}{ }\PYG{k}{TO}\PYG{+w}{ }\PYG{n}{Commande\PYGZus{}orig}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} affiche le fragment car on a changer le nom de la table original}
+\PYG{k}{select}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{fournisseur}\PYG{p}{;}
+\end{Verbatim}

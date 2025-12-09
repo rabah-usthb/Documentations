@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{or}\PYG{+w}{ }\PYG{k}{replace}\PYG{+w}{ }\PYG{k}{trigger}\PYG{+w}{ }\PYG{n}{check\PYGZus{}site1\PYGZus{}constraint}
+\PYG{+w}{   }\PYG{k}{before}\PYG{+w}{ }\PYG{k}{insert}\PYG{+w}{ }\PYG{k}{on}\PYG{+w}{ }\PYG{n}{sortie}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} avant insertion}
+\PYG{+w}{   }\PYG{k}{for}\PYG{+w}{ }\PYG{k}{each}\PYG{+w}{ }\PYG{k}{row}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} besoin de :new}
+
+\PYG{+w}{    }\PYG{k}{declare}
+\PYG{+w}{    }\PYG{n}{existrandonne}\PYG{+w}{ }\PYG{n+nb}{int}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{existparticipant}\PYG{+w}{ }\PYG{n+nb}{int}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k}{begin}
+
+\PYG{+w}{    }\PYG{k}{select}\PYG{+w}{ }\PYG{k}{count}\PYG{p}{(}\PYG{o}{*}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{into}\PYG{+w}{ }\PYG{n}{existrandonne}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{randonnee}\PYG{o}{@}\PYG{n}{link\PYGZus{}orcl}\PYG{+w}{ }\PYG{k}{where}\PYG{+w}{ }\PYG{n}{idRando}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{:}\PYG{k}{new}\PYG{p}{.}\PYG{n}{idRando}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{select}\PYG{+w}{ }\PYG{k}{count}\PYG{p}{(}\PYG{o}{*}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{into}\PYG{+w}{ }\PYG{n}{existparticipant}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{participant}\PYG{o}{@}\PYG{n}{link\PYGZus{}orcl}\PYG{+w}{ }\PYG{k}{where}\PYG{+w}{ }\PYG{n}{idParticipant}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{:}\PYG{k}{new}\PYG{p}{.}\PYG{n}{idParticipant}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{existrandonne}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{k}{OR}\PYG{+w}{ }\PYG{n}{existparticipant}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{then}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} si l\PYGZsq{}un des id n\PYGZsq{}existe pas}
+\PYG{+w}{                                                        }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} on fait un raise application error}
+\PYG{+w}{        }\PYG{n}{raise\PYGZus{}application\PYGZus{}error}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{20001}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}violation de la contrainte de la cle etranger\PYGZsq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k}{end}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{;}
+
+\PYG{+w}{   }\PYG{k}{end}\PYG{p}{;}
+\PYG{+w}{  }\PYG{o}{/}
+
+\end{Verbatim}

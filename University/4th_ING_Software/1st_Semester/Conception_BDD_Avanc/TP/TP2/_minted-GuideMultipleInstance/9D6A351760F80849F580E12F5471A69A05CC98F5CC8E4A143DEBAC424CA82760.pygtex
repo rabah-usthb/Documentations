@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} affichage avant insertion}
+\PYG{k}{select}\PYG{+w}{ }\PYG{n}{nomf}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{fournisseur}\PYG{p}{;}
+\PYG{k}{select}\PYG{+w}{ }\PYG{n}{nomf}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{fournisseur2}\PYG{o}{@}\PYG{n}{link\PYGZus{}orcl2}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} insertion dans la vue}
+\PYG{k}{insert}\PYG{+w}{ }\PYG{k}{into}\PYG{+w}{ }\PYG{n}{vw\PYGZus{}fournisseur}\PYG{+w}{ }\PYG{k}{values}\PYG{+w}{ }\PYG{p}{(}\PYG{l+m+mi}{99}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Fournisseur X\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Actif\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}ALGER\PYGZsq{}}\PYG{p}{);}
+\PYG{k}{insert}\PYG{+w}{ }\PYG{k}{into}\PYG{+w}{ }\PYG{n}{vw\PYGZus{}fournisseur}\PYG{+w}{ }\PYG{k}{values}\PYG{+w}{ }\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Fournisseur Y\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Actif\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}ORAN\PYGZsq{}}\PYG{p}{);}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} affichage apres insertion}
+\PYG{k}{select}\PYG{+w}{ }\PYG{n}{nomf}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{fournisseur}\PYG{p}{;}
+\PYG{k}{select}\PYG{+w}{ }\PYG{n}{nomf}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{fournisseur2}\PYG{o}{@}\PYG{n}{link\PYGZus{}orcl2}\PYG{p}{;}
+\end{Verbatim}

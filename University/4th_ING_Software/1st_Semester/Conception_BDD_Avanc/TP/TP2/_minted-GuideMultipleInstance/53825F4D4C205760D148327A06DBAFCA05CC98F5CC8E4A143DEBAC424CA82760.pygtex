@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} fragmentation horizontal sur l\PYGZsq{}attribut ville}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Fournisseur2}\PYG{+w}{ }\PYG{k}{AS}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{Fournisseur\PYGZus{}orig}\PYG{o}{@}\PYG{n}{link\PYGZus{}orcl}\PYG{+w}{ }\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{ville}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{IN}\PYG{+w}{ }\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ORAN\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}ANNABA\PYGZsq{}}\PYG{p}{);}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} fragmentation vertical}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Produit2}\PYG{+w}{ }\PYG{k}{AS}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{nump}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ville}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{Produit\PYGZus{}orig}\PYG{o}{@}\PYG{n}{link\PYGZus{}orcl}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} fragmentation horizontal derive de fournisseur1}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Commande2}\PYG{+w}{ }\PYG{k}{AS}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{Commande\PYGZus{}orig}\PYG{o}{@}\PYG{n}{link\PYGZus{}orcl}
+\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{numf}\PYG{+w}{ }\PYG{k}{IN}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{numf}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{Fournisseur2}\PYG{p}{);}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{OR}\PYG{+w}{ }\PYG{k}{REPLACE}\PYG{+w}{ }\PYG{k}{PUBLIC}\PYG{+w}{ }\PYG{n}{SYNONYM}\PYG{+w}{ }\PYG{n}{Fournisseur}\PYG{+w}{ }\PYG{k}{FOR}\PYG{+w}{ }\PYG{n}{Fournisseur2}\PYG{p}{;}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{OR}\PYG{+w}{ }\PYG{k}{REPLACE}\PYG{+w}{ }\PYG{k}{PUBLIC}\PYG{+w}{ }\PYG{n}{SYNONYM}\PYG{+w}{ }\PYG{n}{Produit}\PYG{+w}{ }\PYG{k}{FOR}\PYG{+w}{ }\PYG{n}{Produit2}\PYG{p}{;}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{OR}\PYG{+w}{ }\PYG{k}{REPLACE}\PYG{+w}{ }\PYG{k}{PUBLIC}\PYG{+w}{ }\PYG{n}{SYNONYM}\PYG{+w}{ }\PYG{n}{Commande}\PYG{+w}{ }\PYG{k}{FOR}\PYG{+w}{ }\PYG{n}{Commande2}\PYG{p}{;}
+\end{Verbatim}

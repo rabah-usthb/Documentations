@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} creation de l\PYGZsq{}utilisateur}
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{user}\PYG{+w}{ }\PYG{k}{C}\PYG{o}{\PYGZsh{}\PYGZsh{}}\PYG{n}{userORCL}\PYG{+w}{ }\PYG{n}{identified}\PYG{+w}{ }\PYG{k}{by}\PYG{+w}{ }\PYG{n}{Nanno1234}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} affectation des privileges}
+\PYG{k}{grant}\PYG{+w}{ }\PYG{k}{all}\PYG{+w}{ }\PYG{k}{privileges}\PYG{+w}{ }\PYG{k}{to}\PYG{+w}{ }\PYG{k}{C}\PYG{o}{\PYGZsh{}\PYGZsh{}}\PYG{n}{userORCL}\PYG{p}{;}
+\end{Verbatim}
