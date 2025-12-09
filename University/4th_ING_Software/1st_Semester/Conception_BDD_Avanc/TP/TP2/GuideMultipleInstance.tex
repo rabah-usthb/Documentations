@@ -737,6 +737,7 @@ insert into sortie values (8,11,TO_DATE('01/06/2018', 'DD/MM/YYYY'),10);
     \begin{itemize}
         \item un synonyme est un alias qu'on attribue a une table avec la commande suivante :\\\mintinline{sql}{create or replace public synonym <alias> for <nom_table>;}
         \item Si il exist un alias et un nom d'une table avec les meme noms oracle va prioritiser le nom de la table. 
+        \item On ne peut pas acceder a un synonym d'une autre instance. 
     \end{itemize}
 \end{prettyBox}
 
