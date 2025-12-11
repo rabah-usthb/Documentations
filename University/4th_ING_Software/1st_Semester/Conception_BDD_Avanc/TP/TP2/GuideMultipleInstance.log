@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  9 DEC 2025 18:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  11 DEC 2025 12:03
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -780,6 +780,9 @@ LaTeX Warning: Label `inputPrg:code01' multiply defined.
 
 LaTeX Warning: Label `inputPrg:code01' multiply defined.
 
+
+LaTeX Warning: Label `inputPrg:code01' multiply defined.
+
 )
 \openout1 = `GuideMultipleInstance.aux'.
 
@@ -1060,18 +1063,32 @@ Package pdftex.def Info: triggerView.png  used on input line 879.
  [19 <./triggerView.png (PNG copy)>]
 \openout6 = `GuideMultipleInstance.listing'.
 
+ (./_minted-GuideMultipleInstance/31697710E75B18C2538AB79E6CECABBC05CC98F5CC8E4A143DEBAC424CA82760.pygtex)
+<select1.png, id=113, 963.6pt x 498.36188pt>
+File: select1.png Graphic file (type png)
+<use select1.png>
+Package pdftex.def Info: select1.png  used on input line 919.
+(pdftex.def)             Requested size: 332.89412pt x 172.16316pt.
+<select2.png, id=114, 963.6pt x 366.36874pt>
+File: select2.png Graphic file (type png)
+<use select2.png>
+Package pdftex.def Info: select2.png  used on input line 925.
+(pdftex.def)             Requested size: 332.89412pt x 126.56505pt.
+ [20 <./select1.png (PNG copy)> <./select2.png (PNG copy)>]
+\openout6 = `GuideMultipleInstance.listing'.
+
  (./_minted-GuideMultipleInstance/9D6A351760F80849F580E12F5471A69A05CC98F5CC8E4A143DEBAC424CA82760.pygtex)
-<selectBefore.png, id=113, 963.6pt x 387.94937pt>
+<selectBefore.png, id=118, 963.6pt x 387.94937pt>
 File: selectBefore.png Graphic file (type png)
 <use selectBefore.png>
-Package pdftex.def Info: selectBefore.png  used on input line 900.
+Package pdftex.def Info: selectBefore.png  used on input line 949.
 (pdftex.def)             Requested size: 486.54057pt x 195.88033pt.
-<good.png, id=114, 963.6pt x 511.9125pt>
+<good.png, id=119, 963.6pt x 511.9125pt>
 File: good.png Graphic file (type png)
 <use good.png>
-Package pdftex.def Info: good.png  used on input line 905.
+Package pdftex.def Info: good.png  used on input line 954.
 (pdftex.def)             Requested size: 486.54057pt x 258.47081pt.
- [20 <./selectBefore.png (PNG copy)> <./good.png (PNG copy)>] (./GuideMultipleInstance.aux)
+ [21 <./selectBefore.png (PNG copy)> <./good.png (PNG copy)>] (./GuideMultipleInstance.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1084,18 +1101,18 @@ runsystem(rm GuideMultipleInstance.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 32485 strings out of 474222
- 726854 string characters out of 5748732
+ 32508 strings out of 474222
+ 727809 string characters out of 5748732
  1943975 words of memory out of 5000000
- 54189 multiletter control sequences out of 15000+600000
+ 54209 multiletter control sequences out of 15000+600000
  566237 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,10n,117p,544b,1083s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on GuideMultipleInstance.pdf (20 pages, 1974118 bytes).
+Output written on GuideMultipleInstance.pdf (21 pages, 2060375 bytes).
 PDF statistics:
- 192 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
+ 197 PDF objects out of 1000 (max. 8388607)
+ 105 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 148 words of extra memory for PDF output out of 10000 (max. 10000000)
 

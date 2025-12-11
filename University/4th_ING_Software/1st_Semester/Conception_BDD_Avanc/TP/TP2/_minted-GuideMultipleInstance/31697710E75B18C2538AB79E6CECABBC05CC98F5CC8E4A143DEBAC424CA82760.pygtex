@@ -1,0 +1,30 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ORCL :}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Affiche les num de fournisseurs pour les commandes Du Site ORCL}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} De produit num 1 et de projet num 9}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{k}{DISTINCT}\PYG{+w}{ }\PYG{n}{numf}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{Commande}
+\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{nump}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{k}{AND}\PYG{+w}{ }\PYG{n}{numj}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{9}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Affiche les numero,nom,ville des fournisseurs D\PYGZsq{}oran de la vue}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{numf}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{nomf}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ville}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{vw\PYGZus{}Fournisseur}\PYG{+w}{ }\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{ville}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}ORAN\PYGZsq{}}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Affiche les noms des fournisseurs du Site ORCL}
+\PYG{k}{select}\PYG{+w}{ }\PYG{n}{nomf}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{fournisseur}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} ORCL2 :}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Affiche les produit du Site ORCL qui a le poid minimum}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{Produit1}\PYG{o}{@}\PYG{n}{link\PYGZus{}orcl}
+\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{poids}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{SELECT}\PYG{+w}{ }\PYG{k}{MIN}\PYG{p}{(}\PYG{n}{poids}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{Produit1}\PYG{o}{@}\PYG{n}{link\PYGZus{}orcl}\PYG{p}{);}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Affiche les num de fournisseurs des commande Du Site ORCL2}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Dont le num projet est 10}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{k}{DISTINCT}\PYG{+w}{ }\PYG{n}{numf}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{Commande}
+\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{numj}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Affiche le Numero de produit des commandes Du site ORCL2}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Avec la plus grand quantite}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{nump}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{Commande}
+\PYG{k}{GROUP}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{n}{nump}
+\PYG{k}{ORDER}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{k}{SUM}\PYG{p}{(}\PYG{n}{qte}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{DESC}
+\PYG{k}{FETCH}\PYG{+w}{ }\PYG{k}{FIRST}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{k}{ROW}\PYG{+w}{ }\PYG{k}{ONLY}\PYG{p}{;}
+\end{Verbatim}

@@ -880,6 +880,55 @@ FOR EACH ROW
 \end{figure}
 
 \newpage
+
+\section*{Requête Select}
+
+\begin{codeInput}{sql}{Select Dans ORCL Et ORCL2}{code01}{41}
+-- ORCL :
+-- Affiche les num de fournisseurs pour les commandes Du Site ORCL
+-- De produit num 1 et de projet num 9
+SELECT DISTINCT numf FROM Commande
+WHERE nump = 1 AND numj = 9;
+
+-- Affiche les numero,nom,ville des fournisseurs D'oran de la vue
+SELECT numf, nomf, ville FROM vw_Fournisseur WHERE ville = 'ORAN';
+
+-- Affiche les noms des fournisseurs du Site ORCL 
+select nomf from fournisseur;
+
+-- ORCL2 :
+-- Affiche les produit du Site ORCL qui a le poid minimum
+SELECT * FROM Produit1@link_orcl
+WHERE poids = (SELECT MIN(poids) FROM Produit1@link_orcl);
+
+-- Affiche les num de fournisseurs des commande Du Site ORCL2
+-- Dont le num projet est 10
+SELECT DISTINCT numf FROM Commande
+WHERE numj = 10;
+
+-- Affiche le Numero de produit des commandes Du site ORCL2
+-- Avec la plus grand quantite
+SELECT nump FROM Commande
+GROUP BY nump
+ORDER BY SUM(qte) DESC
+FETCH FIRST 1 ROW ONLY;
+\end{codeInput}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.65\textwidth]{select1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.65\textwidth]{select2.png} 
+\end{figure}
+
+
+
+\newpage
+\section*{Test Trigger Insertion}
 \begin{codeInput}{sql}{Vue Et Trigger}{code01}{41}
 -- affichage avant insertion
 select nomf from fournisseur;
