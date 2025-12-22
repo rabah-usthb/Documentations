@@ -1,0 +1,456 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\newcounter{commentCount}
+\newcounter{filePrg}
+\newcounter{inputPrg}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{minted}
+
+\usepackage{ifthen}
+\usepackage{fontawesome}
+
+\usepackage{tabularx}
+\newcolumntype{\CeX}{>{\centering\let\newline\\\arraybackslash}X}%
+\newcommand{\TwoSymbolsAndText}[3]{%
+  \begin{tabularx}{\textwidth}{c\CeX c}%
+    #1 & #2 & #3
+  \end{tabularx}%
+}
+
+\newtcblisting[use counter=inputPrg, number format=\arabic]{codeInput}[4]{
+  listing engine=minted,
+  minted language=#1,
+  minted options={autogobble,breaklines,  firstnumber={#4}},
+  listing only,
+  size=title,
+  arc=1.5mm,
+  breakable,
+  enhanced jigsaw,
+  colframe=myblue,
+  coltitle=White,
+  boxrule=0.5mm,
+  colback=white,
+  coltext=Black,
+  title=\TwoSymbolsAndText{\faCode}{%
+  \textbf{Sql Program \thetcbcounter}\ifthenelse{\equal{#2}{}}{}{\textbf{: }#2}%
+  }{\faCode},
+  label=inputPrg:#3
+}
+
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\usepackage{minted}
+
+\begin{document}
+
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}5}
+
+\begin{enumerate}
+
+\item C'est Quoi un cable \textbf{Serie} et un cable \textbf{Fibre}:
+
+\begin{prettyBox}{Cable}{myblue}
+    \begin{itemize}
+        \item \textbf{Serie} : un cable qui simule les connections \textbf{WAN} entre routeurs.    
+        \item \textbf{Fibre} : un cable qui utilise des fils de verre pour transmettre des données sous forme de lumiere.
+    \end{itemize}
+\end{prettyBox}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{serial.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{fibre.png} 
+\end{figure}
+
+
+
+
+\vspace{0.25cm}
+
+
+\item Comment ajouter les ports Serie et fibre dans un routeur?:
+
+\begin{prettyBox}{Ajouter Ports}{myblue}
+    \begin{itemize}
+        \item Click sur le routeur
+        \item Eteint le routeur 
+        \item Ajouter le module \verb|HWIC-2T| pour ajouter le port \textbf{Serie}
+        \item Ajouter le module \verb|HWIC-1G-SFP|
+        \item Ajouter le module \verb|GLC-LH-SMD| sur \verb|HWIC-1G-SFP| pour ajouter le port \textbf{Fibre}
+        \item Allumer le routeur.
+    \end{itemize}
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{router.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{turnOff.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{addSerial.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{fibre1.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{fibre2.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{turnOn.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{PortRouter.png} 
+\end{figure}
+
+\vspace{0.25cm}
+
+\item Comment ajouter Des ellipse et ajuster sa taille ?
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{draw.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{resize.png} 
+\end{figure}
+
+
+\vspace{0.45cm}
+
+\item Faite la topologie suivants:
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{state.png} 
+\end{figure}
+
+\newpage
+
+\item Faite l'adressage:
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{addRouter0.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{addRouter1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{addRouter2.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{addRouter3.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{addRouter4.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{addRouter5.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{addInternet.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{addPC0.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{addLap0.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{addServ0.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{addServ1.png} 
+\end{figure}
+
+\vspace{0.45cm}
+
+\item Configurez l'\textbf{OSPF} (en mode interface) au niveau des sites A et B:
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{router1OSPF.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{router2OSPF.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{router3OSPF.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{router4OSPF.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{router5OSPF.png} 
+\end{figure}
+
+\newpage
+
+\item Faire un ping entre machines du meme Site (Entre Machine Site A puis Entre Machine Site B) :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{pingSiteA.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{pingSiteB.png} 
+\end{figure}
+
+\vspace{0.45cm}
+
+\item Configurez la route par défaut sur le routeur Router0 vers internet:
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{defaultRouter0.png} 
+\end{figure}
+
+\newpage
+
+
+\item C'est Quoi un systeme autonome?:
+
+\begin{prettyBox}{Système Autonome}{myblue}
+    Un système autonome est un système réseau qui dispose de \textbf{edge routers} qui configurent \textbf{BGP} pour permettre
+    la communication avec des systèmes autonomes externes.
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\item C'est Quoi le protocole \textbf{BGP}?
+\begin{prettyBox}{BGP}{myblue}
+    \text{BGP} est un protocole de routage dynamique qui permet la communication entre les systemes autonomes , ce dernier est configurer sur
+    les edges routers qui vont partager leur reseaux  \textbf{LAN} \\a ces voisins (edges routers d'autre systemes autonomes).
+\end{prettyBox}
+
+\item Comment Configurer \textbf{BGP}?
+
+\begin{prettyBox}{Configurer BGP}{myblue}
+    \begin{itemize}
+        \item On doit etre au niveau 3 pour activer le \textbf{BGP} avec l'ID du system autonome du routeur avec la commande : \verb|router bgp <Current_SA_ID>|
+        \item Apres la commande precedente on passe au niveau 4 (\verb|config-router|)
+        \item Pour creer une session avec un voisin on utilise la commande suivant :\\\verb|neighbor <@Neighbor> remote as <Neighbor_SA_ID>|
+        \item Pour propager les reseaux \textbf{LAN} au voisin on utilise la commande suivant : \\\verb|network <@LAN> mask <mask> |
+    \end{itemize}
+\end{prettyBox}
+
+\item Configurez le \textbf{BGP} sur les edge routers (router0 , router2, router4)
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{BGProuter0.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{BGProuter2.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{BGProuter4.png} 
+\end{figure}
+
+
+\item Configurez la route par défaut sur le routeur Router2, Router4 et la propagation \textbf{OSPF}:
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{defaultRouter2.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{defaultRouter4.png} 
+\end{figure}
+
+\item Affichez les tables de routage des différents routeurs :
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{tabRouter0.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{tabRouter1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{tabRouter2.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{tabRouter3.png} 
+\end{figure}
+
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{tabRouter4.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{tabRouter5.png} 
+\end{figure}
+
+
+\begin{prettyBox}{Remarque}{red}
+    On remarque que dans la table de routage des routeurs internes (pas les edge routers) qu'ils sont une route \verb|O*E| qui veut dire
+    une route \textbf{OSPF} extenre a son systeme autonome c'est la route qui mene vers son edge router pour quitter le systeme autonome.
+\end{prettyBox}
+
+\vspace{0.5cm}
+
+\item Vérifiez la communication entre les différents équipements :
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{goodPing.png} 
+\end{figure}
+
+
+
+\end{enumerate}
+
+
+\end{document}

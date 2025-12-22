@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  22 DEC 2025 17:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  22 DEC 2025 23:13
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**RES_TP3.tex
-(./RES_TP3.tex
+**RES_TP5.tex
+(./RES_TP5.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -160,10 +160,10 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
-runsystem(uname -s > "RES_TP3.w18")...executed.
+runsystem(uname -s > "RES_TP5.w18")...executed.
 
- (./RES_TP3.w18)
-runsystem(rm -- "RES_TP3.w18")...executed.
+ (./RES_TP5.w18)
+runsystem(rm -- "RES_TP5.w18")...executed.
 
 ) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
 \xs_counta=\count295
@@ -193,7 +193,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@listing=\toks22
 \c@listing=\count300
 )
-runsystem(mkdir -p _minted-RES_TP3)...executed.
+runsystem(mkdir -p _minted-RES_TP5)...executed.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
@@ -716,32 +716,32 @@ Package caption Info: Standard document class detected.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 )
-runsystem(command -v pygmentize && touch RES_TP3.aex)...executed.
+runsystem(command -v pygmentize && touch RES_TP5.aex)...executed.
 
-runsystem(rm RES_TP3.aex)...executed.
+runsystem(rm RES_TP5.aex)...executed.
 
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 108.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 106.
  (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count391
 \l__pdf_internal_box=\box99
-) (./RES_TP3.aux)
-\openout1 = `RES_TP3.aux'.
+) (./RES_TP5.aux)
+\openout1 = `RES_TP5.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -802,248 +802,262 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
  (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 108.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 106.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 111.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 108.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 111.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 108.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<state1.png, id=4, 577.15625pt x 221.82875pt>
-File: state1.png Graphic file (type png)
-<use state1.png>
-Package pdftex.def Info: state1.png  used on input line 119.
-(pdftex.def)             Requested size: 307.2929pt x 118.11023pt.
-<confPC0.png, id=6, 963.09813pt x 412.54124pt>
-File: confPC0.png Graphic file (type png)
-<use confPC0.png>
-Package pdftex.def Info: confPC0.png  used on input line 128.
-(pdftex.def)             Requested size: 281.68385pt x 120.65366pt.
-<confPC1.png, id=7, 957.07562pt x 430.10687pt>
-File: confPC1.png Graphic file (type png)
-<use confPC1.png>
-Package pdftex.def Info: confPC1.png  used on input line 136.
-(pdftex.def)             Requested size: 281.68385pt x 126.58508pt.
-<confPC2.png, id=8, 963.6pt x 433.11812pt>
-File: confPC2.png Graphic file (type png)
-<use confPC2.png>
-Package pdftex.def Info: confPC2.png  used on input line 142.
-(pdftex.def)             Requested size: 281.68385pt x 126.60558pt.
-<confPC3.png, id=9, 963.6pt x 434.62375pt>
-File: confPC3.png Graphic file (type png)
-<use confPC3.png>
-Package pdftex.def Info: confPC3.png  used on input line 148.
-(pdftex.def)             Requested size: 281.68385pt x 127.04568pt.
+<serial.png, id=4, 316.68312pt x 59.72313pt>
+File: serial.png Graphic file (type png)
+<use serial.png>
+Package pdftex.def Info: serial.png  used on input line 123.
+(pdftex.def)             Requested size: 256.07481pt x 48.29616pt.
+<fibre.png, id=5, 317.68687pt x 60.225pt>
+File: fibre.png Graphic file (type png)
+<use fibre.png>
+Package pdftex.def Info: fibre.png  used on input line 128.
+(pdftex.def)             Requested size: 256.07481pt x 48.54947pt.
+<router.png, id=6, 961.5925pt x 511.41063pt>
+File: router.png Graphic file (type png)
+<use router.png>
+Package pdftex.def Info: router.png  used on input line 153.
+(pdftex.def)             Requested size: 256.07481pt x 136.18646pt.
+<turnOff.png, id=8, 467.7475pt x 202.25563pt>
+File: turnOff.png Graphic file (type png)
+<use turnOff.png>
+Package pdftex.def Info: turnOff.png  used on input line 158.
+(pdftex.def)             Requested size: 256.07481pt x 110.7317pt.
+<addSerial.png, id=9, 959.585pt x 488.32437pt>
+File: addSerial.png Graphic file (type png)
+<use addSerial.png>
+Package pdftex.def Info: addSerial.png  used on input line 163.
+(pdftex.def)             Requested size: 256.07481pt x 130.31438pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./state1.PNG> <./confPC0.PNG> <./confPC1.PNG> <./confPC2.PNG> <./confPC3.PNG>]
-<route01.png, id=23, 963.6pt x 223.33438pt>
-File: route01.png Graphic file (type png)
-<use route01.png>
-Package pdftex.def Info: route01.png  used on input line 156.
-(pdftex.def)             Requested size: 307.2929pt x 71.21968pt.
-<route02.png, id=24, 963.6pt x 212.795pt>
-File: route02.png Graphic file (type png)
-<use route02.png>
-Package pdftex.def Info: route02.png  used on input line 161.
-(pdftex.def)             Requested size: 307.2929pt x 67.85875pt.
-<route11.png, id=25, 962.59625pt x 215.30438pt>
-File: route11.png Graphic file (type png)
-<use route11.png>
-Package pdftex.def Info: route11.png  used on input line 167.
-(pdftex.def)             Requested size: 307.2929pt x 68.73125pt.
-<route12.png, id=26, 963.6pt x 232.87pt>
-File: route12.png Graphic file (type png)
-<use route12.png>
-Package pdftex.def Info: route12.png  used on input line 172.
-(pdftex.def)             Requested size: 307.2929pt x 74.26051pt.
- [2 <./route01.PNG> <./route02.PNG> <./route11.PNG> <./route12.PNG>]
-Underfull \hbox (badness 2150) in paragraph at lines 194--195
-[]\OT1/cmr/m/n/10 On doit etre au niveau 3 pour ac-tiver le pro-to-cole \OT1/cmr/bx/n/10 OSPF \OT1/cmr/m/n/10 avec la com-mande :
- []
-
-[3{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<confroute0.png, id=44, 954.56625pt x 492.33937pt>
-File: confroute0.png Graphic file (type png)
-<use confroute0.png>
-Package pdftex.def Info: confroute0.png  used on input line 228.
-(pdftex.def)             Requested size: 307.2929pt x 158.49086pt.
-<table0.png, id=45, 948.04187pt x 486.81876pt>
-File: table0.png Graphic file (type png)
-<use table0.png>
-Package pdftex.def Info: table0.png  used on input line 233.
-(pdftex.def)             Requested size: 307.2929pt x 157.7908pt.
-<confroute1.png, id=46, 959.08313pt x 508.90125pt>
-File: confroute1.png Graphic file (type png)
-<use confroute1.png>
-Package pdftex.def Info: confroute1.png  used on input line 240.
-(pdftex.def)             Requested size: 307.2929pt x 163.05362pt.
- [4 <./confroute0.PNG> <./table0.PNG> <./confroute1.PNG>]
-Underfull \hbox (badness 1038) in paragraph at lines 274--275
-[]\OT1/cmr/m/n/10 Pour changer le cout on doit etre au niveau 4 (conf in-ter-face) et on utilise la com-mande :
- []
-
-<changeCost.png, id=53, 962.59625pt x 488.82625pt>
-File: changeCost.png Graphic file (type png)
-<use changeCost.png>
-Package pdftex.def Info: changeCost.png  used on input line 280.
-(pdftex.def)             Requested size: 307.2929pt x 156.04718pt.
-<changeCost2.png, id=54, 957.07562pt x 264.99pt>
-File: changeCost2.png Graphic file (type png)
-<use changeCost2.png>
-Package pdftex.def Info: changeCost2.png  used on input line 285.
-(pdftex.def)             Requested size: 307.2929pt x 85.08156pt.
-[5 <./changeCost.PNG> <./changeCost2.PNG>]
-<cal.png, id=62, 3462.9375pt x 1333.98375pt>
-File: cal.png Graphic file (type png)
-<use cal.png>
-Package pdftex.def Info: cal.png  used on input line 316.
-(pdftex.def)             Requested size: 271.80658pt x 104.68538pt.
- [6 <./cal.png>]
-<state2.png, id=67, 958.58125pt x 510.40688pt>
-File: state2.png Graphic file (type png)
-<use state2.png>
-Package pdftex.def Info: state2.png  used on input line 326.
-(pdftex.def)             Requested size: 307.2929pt x 163.62169pt.
-<2pc0.png, id=68, 956.07187pt x 388.95313pt>
-File: 2pc0.png Graphic file (type png)
-<use 2pc0.png>
-Package pdftex.def Info: 2pc0.png  used on input line 332.
-(pdftex.def)             Requested size: 307.2929pt x 125.01355pt.
-<2pc1.png, id=69, 963.6pt x 402.50375pt>
-File: 2pc1.png Graphic file (type png)
-<use 2pc1.png>
-Package pdftex.def Info: 2pc1.png  used on input line 338.
-(pdftex.def)             Requested size: 307.2929pt x 128.35548pt.
-<2pc2.png, id=70, 963.6pt x 399.99437pt>
-File: 2pc2.png Graphic file (type png)
-<use 2pc2.png>
-Package pdftex.def Info: 2pc2.png  used on input line 344.
-(pdftex.def)             Requested size: 307.2929pt x 127.55525pt.
-<2r0.png, id=71, 823.075pt x 338.26375pt>
-File: 2r0.png Graphic file (type png)
-<use 2r0.png>
-Package pdftex.def Info: 2r0.png  used on input line 351.
-(pdftex.def)             Requested size: 307.2929pt x 126.29114pt.
- [7 <./state2.PNG> <./2pc0.PNG> <./2pc1.PNG> <./2pc2.PNG>]
-<2r1.png, id=80, 789.44937pt x 308.65312pt>
-File: 2r1.png Graphic file (type png)
-<use 2r1.png>
-Package pdftex.def Info: 2r1.png  used on input line 356.
-(pdftex.def)             Requested size: 307.2929pt x 120.14345pt.
-<2r2.png, id=81, 735.74875pt x 323.2075pt>
-File: 2r2.png Graphic file (type png)
-<use 2r2.png>
-Package pdftex.def Info: 2r2.png  used on input line 362.
-(pdftex.def)             Requested size: 307.2929pt x 134.99167pt.
- [8 <./2r0.PNG> <./2r1.PNG> <./2r2.PNG>]
-<2cr0.png, id=88, 963.6pt x 157.58875pt>
-File: 2cr0.png Graphic file (type png)
-<use 2cr0.png>
-Package pdftex.def Info: 2cr0.png  used on input line 370.
-(pdftex.def)             Requested size: 307.2929pt x 50.25388pt.
-<2cr1.png, id=89, 962.59625pt x 457.20813pt>
-File: 2cr1.png Graphic file (type png)
-<use 2cr1.png>
-Package pdftex.def Info: 2cr1.png  used on input line 375.
-(pdftex.def)             Requested size: 307.2929pt x 145.95378pt.
-<2cr2.png, id=90, 963.6pt x 447.6725pt>
-File: 2cr2.png Graphic file (type png)
-<use 2cr2.png>
-Package pdftex.def Info: 2cr2.png  used on input line 381.
-(pdftex.def)             Requested size: 307.2929pt x 142.75946pt.
- [9 <./2cr0.PNG> <./2cr1.PNG> <./2cr2.PNG>]
-<2t0.png, id=97, 963.6pt x 306.14375pt>
-File: 2t0.png Graphic file (type png)
-<use 2t0.png>
-Package pdftex.def Info: 2t0.png  used on input line 389.
-(pdftex.def)             Requested size: 307.2929pt x 97.62698pt.
-<2t1.png, id=98, 963.6pt x 310.15875pt>
-File: 2t1.png Graphic file (type png)
-<use 2t1.png>
-Package pdftex.def Info: 2t1.png  used on input line 394.
-(pdftex.def)             Requested size: 307.2929pt x 98.90733pt.
-<2t2.png, id=99, 958.58125pt x 308.15125pt>
-File: 2t2.png Graphic file (type png)
-<use 2t2.png>
-Package pdftex.def Info: 2t2.png  used on input line 400.
-(pdftex.def)             Requested size: 307.2929pt x 98.78438pt.
-<ping1.png, id=100, 963.6pt x 436.12938pt>
-File: ping1.png Graphic file (type png)
-<use ping1.png>
-Package pdftex.def Info: ping1.png  used on input line 409.
-(pdftex.def)             Requested size: 307.2929pt x 139.07845pt.
- [10 <./2t0.PNG> <./2t1.PNG> <./2t2.PNG> <./ping1.PNG>]
-<sh2.png, id=108, 959.585pt x 486.81876pt>
-File: sh2.png Graphic file (type png)
-<use sh2.png>
-Package pdftex.def Info: sh2.png  used on input line 424.
-(pdftex.def)             Requested size: 307.2929pt x 155.8966pt.
-<rupdate.png, id=109, 955.06813pt x 458.71375pt>
-File: rupdate.png Graphic file (type png)
-<use rupdate.png>
-Package pdftex.def Info: rupdate.png  used on input line 429.
-(pdftex.def)             Requested size: 307.2929pt x 147.58932pt.
-<ping2.png, id=110, 963.6pt x 512.91624pt>
-File: ping2.png Graphic file (type png)
-<use ping2.png>
-Package pdftex.def Info: ping2.png  used on input line 443.
-(pdftex.def)             Requested size: 307.2929pt x 163.56522pt.
- [11 <./sh2.PNG> <./rupdate.PNG> <./ping2.PNG>]
-<state3.png, id=117, 630.355pt x 297.61188pt>
-File: state3.png Graphic file (type png)
-<use state3.png>
-Package pdftex.def Info: state3.png  used on input line 452.
-(pdftex.def)             Requested size: 307.2929pt x 145.08179pt.
-<r3.png, id=118, 955.06813pt x 489.32813pt>
-File: r3.png Graphic file (type png)
-<use r3.png>
-Package pdftex.def Info: r3.png  used on input line 458.
-(pdftex.def)             Requested size: 307.2929pt x 157.43938pt.
-<def.png, id=119, 963.6pt x 330.73563pt>
-File: def.png Graphic file (type png)
-<use def.png>
-Package pdftex.def Info: def.png  used on input line 475.
-(pdftex.def)             Requested size: 307.2929pt x 105.46915pt.
- [12 <./state3.PNG> <./r3.PNG> <./def.PNG>]
-<pr.png, id=126, 963.6pt x 104.39pt>
-File: pr.png Graphic file (type png)
-<use pr.png>
-Package pdftex.def Info: pr.png  used on input line 494.
-(pdftex.def)             Requested size: 307.2929pt x 33.28918pt.
-<3t0.png, id=127, 963.6pt x 320.69812pt>
-File: 3t0.png Graphic file (type png)
-<use 3t0.png>
-Package pdftex.def Info: 3t0.png  used on input line 503.
-(pdftex.def)             Requested size: 307.2929pt x 102.26826pt.
-<3t2.png, id=128, 963.6pt x 334.75063pt>
-File: 3t2.png Graphic file (type png)
-<use 3t2.png>
-Package pdftex.def Info: 3t2.png  used on input line 508.
-(pdftex.def)             Requested size: 307.2929pt x 106.74951pt.
- [13 <./pr.PNG> <./3t0.PNG> <./3t2.PNG>] (./RES_TP3.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./serial.png (PNG copy)> <./fibre.png (PNG copy)> <./router.PNG> <./turnOff.PNG>]
+<fibre1.png, id=23, 963.6pt x 489.32813pt>
+File: fibre1.png Graphic file (type png)
+<use fibre1.png>
+Package pdftex.def Info: fibre1.png  used on input line 168.
+(pdftex.def)             Requested size: 256.07481pt x 130.03719pt.
+<fibre2.png, id=24, 963.6pt x 493.845pt>
+File: fibre2.png Graphic file (type png)
+<use fibre2.png>
+Package pdftex.def Info: fibre2.png  used on input line 173.
+(pdftex.def)             Requested size: 256.07481pt x 131.23753pt.
+<turnOn.png, id=25, 477.28313pt x 203.76125pt>
+File: turnOn.png Graphic file (type png)
+<use turnOn.png>
+Package pdftex.def Info: turnOn.png  used on input line 178.
+(pdftex.def)             Requested size: 256.07481pt x 109.32054pt.
+<PortRouter.png, id=26, 174.15062pt x 163.61125pt>
+File: PortRouter.png Graphic file (type png)
+<use PortRouter.png>
+Package pdftex.def Info: PortRouter.png  used on input line 183.
+(pdftex.def)             Requested size: 256.07481pt x 240.61049pt.
+ [2 <./addSerial.png (PNG copy)> <./fibre1.png (PNG copy)> <./fibre2.png (PNG copy)> <./turnOn.png (PNG copy)>]
+<draw.png, id=30, 287.57437pt x 50.68938pt>
+File: draw.png Graphic file (type png)
+<use draw.png>
+Package pdftex.def Info: draw.png  used on input line 192.
+(pdftex.def)             Requested size: 256.07481pt x 45.13814pt.
+<resize.png, id=31, 331.2375pt x 59.22125pt>
+File: resize.png Graphic file (type png)
+<use resize.png>
+Package pdftex.def Info: resize.png  used on input line 197.
+(pdftex.def)             Requested size: 256.07481pt x 45.78482pt.
+<state.png, id=32, 963.6pt x 353.32pt>
+File: state.png Graphic file (type png)
+<use state.png>
+Package pdftex.def Info: state.png  used on input line 207.
+(pdftex.def)             Requested size: 409.72125pt x 150.2264pt.
+ [3 <./PortRouter.png (PNG copy)> <./draw.png (PNG copy)> <./resize.png (PNG copy)> <./state.png (PNG copy)>]
+<addRouter0.png, id=36, 611.78563pt x 185.69376pt>
+File: addRouter0.png Graphic file (type png)
+<use addRouter0.png>
+Package pdftex.def Info: addRouter0.png  used on input line 216.
+(pdftex.def)             Requested size: 409.72125pt x 124.36032pt.
+<addRouter1.png, id=37, 583.17876pt x 146.04562pt>
+File: addRouter1.png Graphic file (type png)
+<use addRouter1.png>
+Package pdftex.def Info: addRouter1.png  used on input line 222.
+(pdftex.def)             Requested size: 409.72125pt x 102.61006pt.
+<addRouter2.png, id=38, 607.77063pt x 163.10938pt>
+File: addRouter2.png Graphic file (type png)
+<use addRouter2.png>
+Package pdftex.def Info: addRouter2.png  used on input line 228.
+(pdftex.def)             Requested size: 409.72125pt x 109.95967pt.
+<addRouter3.png, id=39, 611.28375pt x 137.01187pt>
+File: addRouter3.png Graphic file (type png)
+<use addRouter3.png>
+Package pdftex.def Info: addRouter3.png  used on input line 234.
+(pdftex.def)             Requested size: 409.72125pt x 91.83301pt.
+<addRouter4.png, id=40, 621.82312pt x 180.17313pt>
+File: addRouter4.png Graphic file (type png)
+<use addRouter4.png>
+Package pdftex.def Info: addRouter4.png  used on input line 240.
+(pdftex.def)             Requested size: 409.72125pt x 118.71667pt.
+<addRouter5.png, id=41, 593.21625pt x 141.52875pt>
+File: addRouter5.png Graphic file (type png)
+<use addRouter5.png>
+Package pdftex.def Info: addRouter5.png  used on input line 246.
+(pdftex.def)             Requested size: 409.72125pt x 97.75427pt.
+ [4 <./addRouter0.png (PNG copy)> <./addRouter1.png (PNG copy)> <./addRouter2.png (PNG copy)> <./addRouter3.png (PNG copy)> <./addRouter4.png (PNG copy)>]
+<addInternet.png, id=45, 618.31pt x 155.58125pt>
+File: addInternet.png Graphic file (type png)
+<use addInternet.png>
+Package pdftex.def Info: addInternet.png  used on input line 252.
+(pdftex.def)             Requested size: 409.72125pt x 103.09938pt.
+<addPC0.png, id=46, 526.46687pt x 148.555pt>
+File: addPC0.png Graphic file (type png)
+<use addPC0.png>
+Package pdftex.def Info: addPC0.png  used on input line 257.
+(pdftex.def)             Requested size: 409.72125pt x 115.61855pt.
+<addLap0.png, id=47, 541.02126pt x 150.5625pt>
+File: addLap0.png Graphic file (type png)
+<use addLap0.png>
+Package pdftex.def Info: addLap0.png  used on input line 263.
+(pdftex.def)             Requested size: 409.72125pt x 114.02663pt.
+<addServ0.png, id=48, 563.10374pt x 142.03062pt>
+File: addServ0.png Graphic file (type png)
+<use addServ0.png>
+Package pdftex.def Info: addServ0.png  used on input line 268.
+(pdftex.def)             Requested size: 409.72125pt x 103.34338pt.
+<addServ1.png, id=49, 556.0775pt x 165.61874pt>
+File: addServ1.png Graphic file (type png)
+<use addServ1.png>
+Package pdftex.def Info: addServ1.png  used on input line 274.
+(pdftex.def)             Requested size: 409.72125pt x 122.0303pt.
+ [5 <./addRouter5.png (PNG copy)> <./addInternet.png (PNG copy)> <./addPC0.png (PNG copy)> <./addLap0.png (PNG copy)> <./addServ0.png (PNG copy)>]
+<router1OSPF.png, id=53, 960.58875pt x 96.86188pt>
+File: router1OSPF.png Graphic file (type png)
+<use router1OSPF.png>
+Package pdftex.def Info: router1OSPF.png  used on input line 283.
+(pdftex.def)             Requested size: 409.72125pt x 41.31427pt.
+<router2OSPF.png, id=54, 963.6pt x 198.7425pt>
+File: router2OSPF.png Graphic file (type png)
+<use router2OSPF.png>
+Package pdftex.def Info: router2OSPF.png  used on input line 289.
+(pdftex.def)             Requested size: 409.72125pt x 84.50233pt.
+<router3OSPF.png, id=55, 961.5925pt x 96.86188pt>
+File: router3OSPF.png Graphic file (type png)
+<use router3OSPF.png>
+Package pdftex.def Info: router3OSPF.png  used on input line 295.
+(pdftex.def)             Requested size: 409.72125pt x 41.27141pt.
+<router4OSPF.png, id=56, 963.6pt x 113.42375pt>
+File: router4OSPF.png Graphic file (type png)
+<use router4OSPF.png>
+Package pdftex.def Info: router4OSPF.png  used on input line 301.
+(pdftex.def)             Requested size: 409.72125pt x 48.22607pt.
+<router5OSPF.png, id=57, 963.6pt x 152.57pt>
+File: router5OSPF.png Graphic file (type png)
+<use router5OSPF.png>
+Package pdftex.def Info: router5OSPF.png  used on input line 307.
+(pdftex.def)             Requested size: 409.72125pt x 64.87048pt.
+ [6 <./addServ1.png (PNG copy)> <./router1OSPF.png (PNG copy)> <./router2OSPF.png (PNG copy)> <./router3OSPF.png (PNG copy)> <./router4OSPF.png (PNG copy)> <./router5OSPF.png (PNG copy)>]
+<pingSiteA.png, id=61, 950.04938pt x 512.91624pt>
+File: pingSiteA.png Graphic file (type png)
+<use pingSiteA.png>
+Package pdftex.def Info: pingSiteA.png  used on input line 316.
+(pdftex.def)             Requested size: 409.72125pt x 221.19928pt.
+<pingSiteB.png, id=62, 960.58875pt x 508.39937pt>
+File: pingSiteB.png Graphic file (type png)
+<use pingSiteB.png>
+Package pdftex.def Info: pingSiteB.png  used on input line 321.
+(pdftex.def)             Requested size: 409.72125pt x 216.8465pt.
+<defaultRouter0.png, id=63, 962.09438pt x 281.55188pt>
+File: defaultRouter0.png Graphic file (type png)
+<use defaultRouter0.png>
+Package pdftex.def Info: defaultRouter0.png  used on input line 331.
+(pdftex.def)             Requested size: 409.72125pt x 119.90498pt.
+ [7 <./pingSiteA.png (PNG copy)> <./pingSiteB.png (PNG copy)> <./defaultRouter0.png (PNG copy)>]
+<BGProuter0.png, id=68, 963.6pt x 542.025pt>
+File: BGProuter0.png Graphic file (type png)
+<use BGProuter0.png>
+Package pdftex.def Info: BGProuter0.png  used on input line 367.
+(pdftex.def)             Requested size: 409.72125pt x 230.46095pt.
+<BGProuter2.png, id=69, 962.09438pt x 182.18062pt>
+File: BGProuter2.png Graphic file (type png)
+<use BGProuter2.png>
+Package pdftex.def Info: BGProuter2.png  used on input line 373.
+(pdftex.def)             Requested size: 409.72125pt x 77.58557pt.
+<BGProuter4.png, id=70, 963.6pt x 166.6225pt>
+File: BGProuter4.png Graphic file (type png)
+<use BGProuter4.png>
+Package pdftex.def Info: BGProuter4.png  used on input line 379.
+(pdftex.def)             Requested size: 409.72125pt x 70.8454pt.
+ [8 <./BGProuter0.png (PNG copy)> <./BGProuter2.png (PNG copy)>]
+<defaultRouter2.png, id=74, 962.59625pt x 116.435pt>
+File: defaultRouter2.png Graphic file (type png)
+<use defaultRouter2.png>
+Package pdftex.def Info: defaultRouter2.png  used on input line 388.
+(pdftex.def)             Requested size: 409.72125pt x 49.55794pt.
+<defaultRouter4.png, id=75, 963.6pt x 117.94063pt>
+File: defaultRouter4.png Graphic file (type png)
+<use defaultRouter4.png>
+Package pdftex.def Info: defaultRouter4.png  used on input line 393.
+(pdftex.def)             Requested size: 409.72125pt x 50.14659pt.
+<tabRouter0.png, id=76, 963.6pt x 290.08376pt>
+File: tabRouter0.png Graphic file (type png)
+<use tabRouter0.png>
+Package pdftex.def Info: tabRouter0.png  used on input line 401.
+(pdftex.def)             Requested size: 409.72125pt x 123.33928pt.
+<tabRouter1.png, id=77, 963.6pt x 272.01625pt>
+File: tabRouter1.png Graphic file (type png)
+<use tabRouter1.png>
+Package pdftex.def Info: tabRouter1.png  used on input line 407.
+(pdftex.def)             Requested size: 409.72125pt x 115.65726pt.
+<tabRouter2.png, id=78, 963.6pt x 340.77313pt>
+File: tabRouter2.png Graphic file (type png)
+<use tabRouter2.png>
+Package pdftex.def Info: tabRouter2.png  used on input line 413.
+(pdftex.def)             Requested size: 409.72125pt x 144.89165pt.
+<tabRouter3.png, id=79, 963.6pt x 268.00125pt>
+File: tabRouter3.png Graphic file (type png)
+<use tabRouter3.png>
+Package pdftex.def Info: tabRouter3.png  used on input line 419.
+(pdftex.def)             Requested size: 409.72125pt x 113.95013pt.
+ [9 <./BGProuter4.png (PNG copy)> <./defaultRouter2.png (PNG copy)> <./defaultRouter4.png (PNG copy)> <./tabRouter0.png (PNG copy)> <./tabRouter1.png (PNG copy)> <./tabRouter2.png (PNG copy)>]
+<tabRouter4.png, id=83, 963.6pt x 300.12125pt>
+File: tabRouter4.png Graphic file (type png)
+<use tabRouter4.png>
+Package pdftex.def Info: tabRouter4.png  used on input line 426.
+(pdftex.def)             Requested size: 409.72125pt x 127.60709pt.
+<tabRouter5.png, id=84, 963.6pt x 271.51437pt>
+File: tabRouter5.png Graphic file (type png)
+<use tabRouter5.png>
+Package pdftex.def Info: tabRouter5.png  used on input line 432.
+(pdftex.def)             Requested size: 409.72125pt x 115.44385pt.
+<goodPing.png, id=85, 963.6pt x 511.41063pt>
+File: goodPing.png Graphic file (type png)
+<use goodPing.png>
+Package pdftex.def Info: goodPing.png  used on input line 448.
+(pdftex.def)             Requested size: 409.72125pt x 217.44418pt.
+ [10 <./tabRouter3.png (PNG copy)> <./tabRouter4.png (PNG copy)> <./tabRouter5.png (PNG copy)> <./goodPing.png (PNG copy)>] (./RES_TP5.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 32238 strings out of 474222
- 709498 string characters out of 5748732
- 1934975 words of memory out of 5000000
- 54026 multiletter control sequences out of 15000+600000
- 564577 words of font info for 61 fonts, out of 8000000 for 9000
+ 32254 strings out of 474222
+ 710828 string characters out of 5748732
+ 1935975 words of memory out of 5000000
+ 54044 multiletter control sequences out of 15000+600000
+ 563932 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,15n,117p,444b,995s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on RES_TP3.pdf (13 pages, 1991469 bytes).
+ 101i,7n,117p,444b,993s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on RES_TP5.pdf (10 pages, 2524693 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
+ 117 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 203 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 228 words of extra memory for PDF output out of 10000 (max. 10000000)
 
