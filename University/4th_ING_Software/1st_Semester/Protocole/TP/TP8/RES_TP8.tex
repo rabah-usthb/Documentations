@@ -1,0 +1,257 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\newcounter{commentCount}
+\newcounter{filePrg}
+\newcounter{inputPrg}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{minted}
+
+\usepackage{ifthen}
+\usepackage{fontawesome}
+
+\usepackage{tabularx}
+\newcolumntype{\CeX}{>{\centering\let\newline\\\arraybackslash}X}%
+\newcommand{\TwoSymbolsAndText}[3]{%
+  \begin{tabularx}{\textwidth}{c\CeX c}%
+    #1 & #2 & #3
+  \end{tabularx}%
+}
+
+\newtcblisting[use counter=inputPrg, number format=\arabic]{codeInput}[4]{
+  listing engine=minted,
+  minted language=#1,
+  minted options={autogobble,breaklines,  firstnumber={#4}},
+  listing only,
+  size=title,
+  arc=1.5mm,
+  breakable,
+  enhanced jigsaw,
+  colframe=myblue,
+  coltitle=White,
+  boxrule=0.5mm,
+  colback=white,
+  coltext=Black,
+  title=\TwoSymbolsAndText{\faCode}{%
+  \textbf{Sql Program \thetcbcounter}\ifthenelse{\equal{#2}{}}{}{\textbf{: }#2}%
+  }{\faCode},
+  label=inputPrg:#3
+}
+
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\usepackage{minted}
+
+\begin{document}
+
+
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}8}
+
+\vspace{-0.25cm}
+\begin{enumerate}
+
+\item C'est quoi un service ?
+\begin{prettyBox}{Service}{myblue}
+    un service est une \textbf{fonctionnalité fournie} par un appareil ou un système en réseau, tandis qu'un\\ protocole est \textbf{un ensemble de règles qui
+    définissent comment la communication} entre \\les appareils ou les systèmes doit s'effectuer. Un protocole peut être utilisé par plusieurs
+    services pour permettre la communication entre eux.\\[0.15cm]
+    Par example un serveur web utilise le protocole \textbf{HTTP}
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\item C'est quoi le service \textbf{DHCP} ?
+\begin{prettyBox}{DHCP}{myblue}
+    C'est un service qui utilise le protocole \textbf{UDP} pour attribution automatique des adresses , gateway et serveur DNS des appareille clients via
+    un serveur \textbf{DHCP} (qui peut etre un routeur , switch , serveur , pc)
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{dhcp.png} 
+\end{figure}
+
+
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\item Faite la topologie suivante :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state1.png} 
+\end{figure}
+
+\vspace{0.25cm}
+\item Configurer l'adresse au routeur \verb|g0/0| :
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router0ADD.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state2.png} 
+\end{figure}
+
+
+\item Configurer un serveur \textbf{DHCP} dans le routeur :
+
+\begin{prettyBox}{Config DHCP}{myblue}
+    On peut configurer l'attribution d'adresse dynamique de plusieur reseaux dans le meme serveur
+    chaque reseau est appele \textbf{pool}. pour configure on doit :
+    \begin{itemize}
+        \item Etre au niveau 3 et creer une nouvelle \textbf{pool} avec la commande : \verb|ip dhcp pool <nom_service>|
+        \item On passe au niveau 4 configuration de dhcp
+        \item On definit le reseau avec la commande : \verb|network <adresse_reseau>|
+        \item On definit la gateway avec : \verb|default-router <adresse_gateway>|
+        \item On definit le serveur DNS : \verb|dns-server <adresse_dns>|
+        \item On peut exclure des adresses mais on doit etre au niveau 3 et utilise la commande : \verb|ip dhcp excluded-address <adresse_1> <adresse_2>| pour exclure une page
+            ou on peut aussi exclure une seul adresse \verb|ip dhcp excluded-adress <adresse>|
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{0.15cm}
+
+\begin{prettyBox}{Exclusion}{red}
+    On exclue des adresses pour les appareilles aves des adresses static comme les serveur web, \\imprimente...etc et pour adresse de gateway.
+\end{prettyBox}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router0DIH.png} 
+\end{figure}
+
+\vspace{0.25cm}
+\item Activer \textbf{DHCP} dans les PCs :
+\begin{prettyBox}{Activer DHCP}{myblue}
+    On va dans \textbf{Configuration IP} et selectionner \textbf{DHCP} au lieu de \textbf{static}.
+\end{prettyBox}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{pc0.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{pc1.png} 
+\end{figure}
+\item Faite la topologie suivante :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state3.png} 
+\end{figure}
+
+
+\item Configurer l'adresse au routeur \verb|g0/1| :
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router0ADD2.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state4.png} 
+\end{figure}
+
+\newpage
+\item Avant de configurer \textbf{DHCP} verifie l'adresse des PCs du reseau \verb|192.168.2.0| :
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{apipa.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{apipa2.png} 
+\end{figure}
+
+\begin{prettyBox}{Remarque}{red}
+    On remarque que le \textbf{DHCP} a echoue car on a pas encore configurer la pool pour le reseau \verb|192.168.2.0| et qu'un autre service
+    \textbf{APIPA} fournit par le system d'exploitation windows a donne une adresse. 
+\end{prettyBox}
+
+\item Configurer un autre pool dans le meme routeur :
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router0DIH2.png} 
+\end{figure}
+
+
+
+\item Re-activer \textbf{DHCP} dans les PCs :
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{pc3.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{pc4.png} 
+\end{figure}
+
+
+\end{enumerate}
+\end{document}
