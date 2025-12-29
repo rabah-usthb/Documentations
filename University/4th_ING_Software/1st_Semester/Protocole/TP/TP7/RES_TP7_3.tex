@@ -1,0 +1,506 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\newcounter{commentCount}
+\newcounter{filePrg}
+\newcounter{inputPrg}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{minted}
+
+\usepackage{ifthen}
+\usepackage{fontawesome}
+
+\usepackage{tabularx}
+\newcolumntype{\CeX}{>{\centering\let\newline\\\arraybackslash}X}%
+\newcommand{\TwoSymbolsAndText}[3]{%
+  \begin{tabularx}{\textwidth}{c\CeX c}%
+    #1 & #2 & #3
+  \end{tabularx}%
+}
+
+\newtcblisting[use counter=inputPrg, number format=\arabic]{codeInput}[4]{
+  listing engine=minted,
+  minted language=#1,
+  minted options={autogobble,breaklines,  firstnumber={#4}},
+  listing only,
+  size=title,
+  arc=1.5mm,
+  breakable,
+  enhanced jigsaw,
+  colframe=myblue,
+  coltitle=White,
+  boxrule=0.5mm,
+  colback=white,
+  coltext=Black,
+  title=\TwoSymbolsAndText{\faCode}{%
+  \textbf{Sql Program \thetcbcounter}\ifthenelse{\equal{#2}{}}{}{\textbf{: }#2}%
+  }{\faCode},
+  label=inputPrg:#3
+}
+
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\usepackage{minted}
+
+\begin{document}
+
+
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}7 Partie N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}3 }
+
+\vspace{-0.25cm}
+\begin{enumerate}
+
+\item C'est quoi le protocole \textbf{HSRP} ? 
+
+\begin{prettyBox}{HSRP}{myblue}
+    C'est un protocole de la famille \textbf{First Hop Redundancy Protocol (FHRP)} 
+    conçu pour garantir la tolérance aux pannes au niveau de la première passerelle (default gateway).\\
+    Il regroupe plusieurs routeurs sous une seule adresse \textbf{IPv4} virtuelle et leur attribue une adresse 
+    \textbf{MAC} virtuelle. 
+    Cependant, un seul routeur est actif dans le groupe en cas de panne ou de changement de priorité 
+    un autre routeur devient automatiquement actif.
+\end{prettyBox}
+
+\vspace{0.15cm}
+
+\item Comment est-ce que le protocole \textbf{HSRP} choisit le routeur actif? 
+
+\begin{prettyBox}{Actif}{myblue}
+    \begin{itemize}
+        \item Par defaut tout les priorite des routeurs est 100 cette derniere \(\in [0,255]\)
+        \item Dans la premiere election du routeur actif si plusieur routeurs on activer \textbf{HSRP} :
+            \begin{itemize}
+                \item Il prend celui avec la plus grande priorite 
+                \item Si ils ont la meme priorite il prendra celle avec la plus grand adresse \textbf{IPv4}
+            \end{itemize}
+        \item Chaque 3 second le routeur actif envoie un message hello au routeurs veille si
+            apres 10 seconds (3$\times$3+1) et il ne repond pas le protocole remplacera le routeur actif.
+        \item Le protocole \textbf{HSRP} remplace en cas si on change la priorite des routeurs.
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\item Faite la topologie suivante :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state1.png} 
+\end{figure}
+
+
+
+\item Combien de \textbf{LAN} dans la topologie?
+
+\begin{prettyBox}{LAN}{myblue}
+    nombre de reseau \textbf{LAN} est 4 :
+    \begin{itemize}
+        \item \verb|192.168.1.0/24|
+        \item \verb|192.168.13.0/30|
+        \item \verb|192.168.23.0/30|
+        \item \verb|192.168.2.0/24|
+    \end{itemize}
+\end{prettyBox}
+
+\newpage
+
+\item Faite l'adressage des machines terminaux et routeurs :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{pc0Conf.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{serverConf.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router0Conf.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router1Conf.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router2Conf.png} 
+\end{figure}
+
+\newpage
+
+\item Configurer \textbf{RIP} dans les routeurs :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router0RIP.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router1RIP.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router2RIP.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item Comment configurer \textbf{HSRP} ?
+
+\begin{prettyBox}{Config}{myblue}
+    On doit etre au niveau 4 configuration d'interface et utliser les commandes suivantes :
+    \begin{itemize}
+        \item Activer version 2 du protocle \textbf{HSRP} : \verb|standby version 2|
+        \item Creer un group avec un ip virtuelle : \verb|standby <id_group> ip <adresse_virtuelle>|
+    \end{itemize}
+\end{prettyBox}
+
+
+\vspace{0.15cm}
+
+\item Configurer \textbf{HRSP} dans les routeurs 0 et 1 :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router0HRSP.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router1HSRP.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state2.png} 
+\end{figure}
+
+
+\vspace{0.15cm}
+
+
+\item Configurer la gateway du pc0 avec l'adresse virtuelle \textbf{HSRP} :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{gatewayPC0.png} 
+\end{figure}
+
+\newpage
+
+\item Afficher la table de routage des routeurs :
+
+\vspace{0.15cm}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router0RIPTable.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router1RIPTable.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router2RIPTable.png} 
+\end{figure}
+
+\item Tester la connectivite avec des pings :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{ping.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item c'est quoi la commande \verb|tracert| ?
+
+\begin{prettyBox}{Tracert}{myblue}
+    \verb|tracert| est une commande similaire à \verb|ping|, mais en plus de tester la connectivité,
+    elle affiche la route par laquelle la machine emprunte pour atteindre la destination en donnant les adresses \verb|IPv4| 
+    de toutes les machines intermédiaires.
+\end{prettyBox}
+
+\newpage
+
+\item Faite un \verb|tracert| entre pc0 et le serveur :
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{tracePC0_1.png} 
+\end{figure}
+
+\begin{prettyBox}{Remarque}{red}
+    On remarque que le ping passe par le routeur 0 \verb|192.168.1.1| donc
+    c'est lui le routeur actif du groupe \verb|1|.
+\end{prettyBox}
+
+\vspace{0.15cm}
+
+\item Pourquoi est le routeur 0 actif ? malgre qu'ils sont la meme priorite (100)
+et son adresse est plus petite que celle du routeur 1 ?
+
+
+\begin{prettyBox}{Raison}{myblue}
+    Routeur 0 est actif parceque c'est le premier qu'on activer puis routeur 1 si on avait
+    activer les routeurs 0 et 1 en meme temps routeur 1 aurait ete actif.
+\end{prettyBox}
+
+\vspace{0.15cm}
+
+\item Simuler une panne dans le routeur 0 en desactivant l'interface \verb|g0/1| : 
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router0FAIL.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{sh.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router1ActiveFAIL.png} 
+\end{figure}
+
+\newpage
+
+
+\item Refaite un \verb|tracert| entre pc0 et le serveur :
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{tracePC0_2.png} 
+\end{figure}
+
+\begin{prettyBox}{Remarque}{red}
+    On remarque que le ping passe par le routeur 1 \verb|192.168.1.2| donc
+    c'est lui le routeur actif du groupe \verb|1|, car le routeur 0 est en panne
+    et le routeur 1 ne recevait plus de message hello.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\item comment verifie l'etat du \textbf{HSRP} dans un routeur? 
+
+\begin{prettyBox}{Etat}{myblue}
+
+    \begin{itemize}
+        \item niveau 2 admin : \verb|show standby brief|
+        \item niveau 3 et 4 : \verb|do show standby brief|
+    \end{itemize}
+    La commande nous donne l'interface , id du group , priority , preempt ,l'etat du routeur, le routeur actif, les routeurs
+    veille (standby) et l'adresse \textbf{IPv4} virtuelle.
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{brief1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{brief2.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item Reactiver l'interface \verb|g0/1| du routeur 0 et affiche l'etat \textbf{HSRP} des routeur 0 et 1 :
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{brief3.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{brief4.png} 
+\end{figure}
+
+
+\begin{prettyBox}{Remarque}{red}
+    On remarque que lorsque l'interface du routeur 0 était en panne, le routeur 0 ne connaissait pas le routeur actif
+    et le routeur 1 ne connaissait pas le routeur en veille (\verb|unknown|).
+    Après avoir réactivé l'interface, les routeurs 0 et 1 ont de nouveau pu communiquer et se reconnaître entre eux.
+\end{prettyBox}
+
+\newpage
+
+\item Comment modifier la priorite d'un routeur ?
+
+\begin{prettyBox}{Priorite}{myblue}
+    on doit etre au niveau 4 configuration d'interface et utilise la commande suivante :\\
+    \verb|standby <id_groupe> priority <priority>| priority $\in [0,255]$ par defaut = 10.
+\end{prettyBox}
+
+\vspace{0.15cm}
+
+\item Changer la priorite du routeur 0 a 120 et afficher l'etat du \textbf{HSRP}
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{priority1.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item Pourquoi routeur 0 est toujours en veille malgre qu'il a une priorite plus grande? 
+
+\begin{prettyBox}{Preempt}{myblue}
+    Parceque \verb|preempt| est desactiver par defaut, quand on l'actif dans un routeur si il est en veille
+    et sa priorite est plus grande que le routeur actif \textbf{HSRP} le remplacera.\\[0.15cm]
+    Pour l'activer on doit etre au niveau 4 configuration d'interface et utilise la commande suivante :
+    \verb|standby <id_groupe> preempt|
+\end{prettyBox}
+
+\vspace{0.15cm}
+
+\item Activer la preemption dans le routeur 0 et afficher l'etat \textbf{HSRP} des routeurs  :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{brief5.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{brief6.png} 
+\end{figure}
+
+\begin{prettyBox}{Remarque}{red}
+    On remarque apres avoir activer la preemeption le routeur 0 est devenu actif et le routeur 1 est devenu
+    en veille
+\end{prettyBox}
+
+\newpage
+\item Faite un ping en simulation du PC0 au serveur et avancer le message jusqu'au switch 0 et afficher la tramme
+    outbound de la switch :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{switch.png} 
+\end{figure}
+
+\item Consulter la table \textbf{MAC} du switch 0 :
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{mac.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item Que represent l'adresse \textbf{MAC} \verb|0000.0C9F.F001| ?
+
+\begin{prettyBox}{MAC Virtuelle}{myblue}
+    Elle represente l'adresse \textbf{MAC} virtuelle genere par le protocole \textbf{HSRP}
+\end{prettyBox}
+
+
+\vspace{0.15cm}
+\item Verifie l'adresse \textbf{MAC} du \textbf{HSRP} :
+
+    \begin{prettyBox}{Verification}{myblue}
+        On afficher en detaille l'etat du \textbf{HSRP} avec la commande : 
+        \verb|show standby|
+\end{prettyBox}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{show.png} 
+\end{figure}
+
+
+
+\end{enumerate}
+
+\end{document}
+
