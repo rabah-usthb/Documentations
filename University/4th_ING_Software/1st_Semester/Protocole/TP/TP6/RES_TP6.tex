@@ -1,0 +1,492 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\newcounter{commentCount}
+\newcounter{filePrg}
+\newcounter{inputPrg}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{minted}
+
+\usepackage{ifthen}
+\usepackage{fontawesome}
+
+\usepackage{tabularx}
+\newcolumntype{\CeX}{>{\centering\let\newline\\\arraybackslash}X}%
+\newcommand{\TwoSymbolsAndText}[3]{%
+  \begin{tabularx}{\textwidth}{c\CeX c}%
+    #1 & #2 & #3
+  \end{tabularx}%
+}
+
+\newtcblisting[use counter=inputPrg, number format=\arabic]{codeInput}[4]{
+  listing engine=minted,
+  minted language=#1,
+  minted options={autogobble,breaklines,  firstnumber={#4}},
+  listing only,
+  size=title,
+  arc=1.5mm,
+  breakable,
+  enhanced jigsaw,
+  colframe=myblue,
+  coltitle=White,
+  boxrule=0.5mm,
+  colback=white,
+  coltext=Black,
+  title=\TwoSymbolsAndText{\faCode}{%
+  \textbf{Sql Program \thetcbcounter}\ifthenelse{\equal{#2}{}}{}{\textbf{: }#2}%
+  }{\faCode},
+  label=inputPrg:#3
+}
+
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\usepackage{minted}
+
+\begin{document}
+
+
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}6}
+
+\vspace{-0.25cm}
+\begin{enumerate}
+
+\item C'est quoi le protocole \textbf{IPV6} ? 
+
+
+\begin{prettyBox}{IPv6}{myblue}
+    \textbf{IPv6} est un protocole conçu pour remplacer \textbf{IPv4}, avec une taille d'adresse 4 fois plus grande.
+    
+    \textbf{IPv6} utilise des adresses de 128 bits, tandis que \textbf{IPv4} utilise des adresses de 32 bits.
+    
+    Les 64 premiers bits sont appelés le \textbf{préfixe} (réseau),
+    et les 64 autres identifient l'\textbf{interface} (machine).\\
+    \[\underbrace{2001:0\text{db}8:\text{cafe}:0001}_{\text{\textbf{Partie Prefixe}}}:\underbrace{0000:0000:0000:0001}_{\large{\text{\textbf{Partie Interface}}}} \underbrace{/64}_{\text{\textbf{Taille Prefixe}}}\]
+\end{prettyBox}
+
+
+\item Comment simplifie une adresse \textbf{IPV6} ? 
+
+
+\begin{prettyBox}{Simplification IPv6}{myblue}
+    On a deux simplifications :
+    \begin{itemize}
+\setlength{\itemsep}{0pt}
+        \item \texttt{000x} devient \texttt{x}, \texttt{00xx} devient \texttt{xx}, \texttt{0xxx} devient \texttt{xxx}
+        \item Une séquence de segments \texttt{0000} devient \texttt{::} (on ne peut le faire qu'une seule fois, sinon l'adresse devient ambiguë)
+    \end{itemize}
+    Exemple : \texttt{000ff:0000:0000:0000:0001:0000:0000:0001}
+    \begin{itemize}
+\setlength{\itemsep}{0pt}
+        \item \texttt{ff:0:0:0:1:0:0:1} est correct
+        \item \texttt{ff::1:0:0:1} est correct
+        \item \texttt{ff::1::1} est faux
+    \end{itemize}
+\end{prettyBox}
+
+
+\item Enummerez et expliquez les type d'adresses \textbf{IPV6}
+
+\begin{prettyBox}{Type IPV6}{myblue}
+    \begin{itemize}
+        \item \textbf{L}ink \textbf{L}ocal \textbf{A}dresse (\textbf{LLA}) :  L'adresse de lien local est une adresse attribuée dès que l'interface réseau
+            de la machine est activée. Elle commence toujours par le préfixe \verb|fe80::/10|. Elle peut être générée automatiquement à partir de l'adresse \textbf{MAC} 
+            ou de manière aléatoire ; elle peut également être configurée manuellement. Ces adresses doivent être uniques au sein
+            d'un même domaine de diffusion (même switch). Elles servent à identifier la machine et ses voisins directs, mais elles ne sont pas 
+            routables : elles ne peuvent pas franchir un routeur, que ce soit vers un autre réseau local ou vers Internet.
+        \item \textbf{U}nique \textbf{L}ocal \textbf{A}dresse (\textbf{ULA}) :  L'adresse locale unique est l'équivalent de l'adresse \textbf{IPv4} privée.\\ 
+            Elle n'est pas visible de l'extérieur et est indépendante du fournisseur d'accès Internet. Elle commence par le préfixe \verb|fc00::/7| jusqu'a \verb|fdff::/7|.
+            Ces adresses sont routables uniquement au sein d'un même systeme autonome, mais elles ne sont pas routables sur l'Internet public.
+        \item \textbf{G}lobal \textbf{U}nicast \textbf{A}dresse (\textbf{GUA}) : L'adresse globale monodiffusion est une adresse unique à l'échelle
+        mondiale, équivalente à l'adresse \textbf{IPv4} publique. Elle est routable aussi bien au sein d'un système autonome que sur l'Internet public.
+        Elle commence par les bits de poids fort \verb|001|, ce qui signifie que le premier chiffre hexadécimal est soit un 2 (\verb|0010|) ou un 3 (\verb|0011|).
+        \\donc le prefix est \verb|2xxx::/3| ou \verb|3xxx::/3|.
+        \item \textbf{Multicast Adresse} :  L'adresse de multidiffusion (multicast) désigne un groupe d'interfaces réseau appartenant généralement à
+            des machines différents. Elle est utilisée lorsqu'un expéditeur souhaite envoyer un message à un groupe spécifique uniquement. En \textbf{IPv6},
+            le broadcast est supprimé et remplacé par le multicast pour plus d'efficacité. Elles commencent par le préfixe \verb|ffxx::/16| les deux premier 
+            ff sont fixe les deux dernier chiffre hexa represent le porte :
+            \begin{itemize}
+\setlength{\itemsep}{0pt}
+                \item \verb|ff01| : local host.
+                \item \verb|ff02| : lien local (meme switch).
+                \item \verb|ff05| : systeme autonome.
+                \item \verb|ff0e| : global internet.
+            \end{itemize}
+\end{itemize}
+\end{prettyBox}
+
+\newpage
+
+\item Donnez le pourcentage d'adresse \textbf{GUA} 
+
+\begin{prettyBox}{GUA \%}{myblue}
+    On sait que n'importe quelle adresse \textbf{IPV6} a 128 bits , et que les adresses \textbf{GUA} commence par 001 bit dans il ya
+    125 bits variable (128 bits total - 3 bits fix de \textbf{GUA})
+
+    \begin{align*}
+        100&\% \xrightarrow{\hspace{3cm}} 2^{128} \text{bits} \\
+        X&\% \xrightarrow{\hspace{3cm}} 2^{125} \text{bits}
+    \end{align*}
+
+    \[
+        X\% = \dfrac{2^{125} \text{bits} \times 100\%}{2^{128} \text{bits}} = \boxed{12.5\%}
+           \]
+\end{prettyBox}
+
+\vspace{0.15cm}
+
+\item Faite la topologie reseau suivante : 
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state1.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item Ajoutter les adresses \textbf{IPV6} au routeur :
+
+\begin{prettyBox}{Adresse Routeur IPV6}{myblue}
+    Pour ajoutter une adresse \textbf{IPV6} a un routeur on doit
+    etre au niveau 4 configuration d'interface et utilise la commande est la suivante :
+    \verb|ipv6 add <adresse>|
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{routeipv6.png} 
+\end{figure}
+
+
+
+\vspace{0.15cm}
+
+\item Afficher la table de routage \textbf{IPV6}
+
+    \begin{prettyBox}{Table De Routage}{myblue}
+        si on est au niveau 2 admin : \verb|show ipv6 route|\\
+        si niveau 3 ou 4 : \verb|do show ipv6 route|
+    \end{prettyBox}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{showroute.png} 
+\end{figure}
+
+\newpage
+
+\item Configuration des adresses et gateway \textbf{IPV6} des pc:  
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{pc0.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{pc1.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{pc2.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{pc3.png} 
+\end{figure}
+
+\newpage
+
+\item Faite un ping entre les pc du meme \textbf{LAN} puis entre different \textbf{LAN} :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{badPing.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item Que remarquez-vous ?
+
+\begin{prettyBox}{Remarque}{red}
+    On remarque que le ping entre pc du meme \textbf{LAN} fonctionne mais un ping
+    entre different \textbf{LAN} echoue le packet n'a pas pu etre route. 
+\end{prettyBox}
+
+\vspace{0.15cm}
+
+\item Pourquoi le ping entre pc de different \textbf{LAN} a echoue ?
+
+\begin{prettyBox}{Raison}{myblue}
+    Parceque on a pas activer le routage mono-diffusion des packets \textbf{IPV6} dans
+    le router : on doit etre un niveau 3 et utilise la commande suivant \verb|ipv6 unicast-routing|
+\end{prettyBox}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{unicast.png} 
+\end{figure}
+
+
+\vspace{0.15cm}
+
+\item Refaire un ping entre pc de different \textbf{LAN} :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{goodPing.png} 
+\end{figure}
+
+\begin{prettyBox}{Remarque}{red}
+    Apres avoir activer le routage mono-diffusion le ping entre pc de different \textbf{LAN} fonctionne.
+\end{prettyBox}
+
+\newpage
+
+\item Faite le topologie suivante :
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state2.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item Faite l'adressage \textbf{IPV6} des routeurs :
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router0Add.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router1Add.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item Ajouter les routes static \textbf{IPV6} :
+
+\begin{prettyBox}{Static IPV6}{myblue}
+    on doit etre au niveau 3 et utiliser la commande suivante :\\ \verb|ipv6 route <adresse_reseau\taille prefixe> <adresse_routeur_voisin> |
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router0S0.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router1S.png} 
+\end{figure}
+
+
+\newpage
+\item Pourquoi ya pas de route static dans le routeur 0?
+
+\begin{prettyBox}{Raison}{myblue}
+    Parceque le routeur 0 a toujours l'adresse \verb|2001:B::1/64| dans l'interface \verb|g 0/1| car
+    on \textbf{IPV6} une interface peut avoir plusieur adresses donc on doit la supprimer avec la commande :
+    \verb|no ipv6 add <adresse>|
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router0twoadd.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item Enlever l'adresse \verb|2001:B::/64| du routeur 0 et reafficher la table de routage :
+
+\begin{figure}[H] 
+\centering 
+\includegraphics[width=0.6\textwidth]{router0S1.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item Activer le routage mono-diffusion dans le routeur 1 :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{unicast2.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item Faite un ping entre pc de different \textbf{LAN} :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{goodPing2.png} 
+\end{figure}
+
+\newpage
+
+\item Enlevez les routes static et reafficher la table de routage:
+
+\begin{prettyBox}{No Static IPV6}{myblue}
+    on doit etre au niveau 3 et utiliser la commande suivante :\\ \verb|no ipv6 route <adresse_reseau\taille prefixe> <adresse_routeur_voisin> |
+\end{prettyBox}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{noRoute0S.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{noRoute1S.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item Activer \textbf{RIPIng} dans les routeurs :
+
+
+\begin{prettyBox}{RIPng}{myblue}
+    \textbf{RIPng} est un protocole de routage dynamique pour \textbf{IPv6}, similaire à \textbf{RIPv2} de \textbf{IPV4}. 
+    Dans cette version, il n'est plus nécessaire d'utiliser une commande globale \texttt{network} pour indiquer quels réseaux partager. 
+
+    En activant le protocole directement sur l'interface, le routeur identifie automatiquement le préfixe à annoncer et utilise les adresses \textbf{LLA} (Link-Local Address) de ses voisins pour l'échange des routes.\\[0.1cm] 
+    Pour l'activer, on doit passer en mode configuration d'interface pour chaque interface concernée : 
+    \verb|ipv6 rip <nom_processus> enable|
+\end{prettyBox}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router0R.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router1R.png} 
+\end{figure}
+
+\newpage
+\item Faite un ping entre pc de different \textbf{LAN} :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{goodPing3.png} 
+\end{figure}
+
+\vspace{0.15cm}
+
+\item Activer l'\textbf{OSPFv3} dans les routeur
+
+
+
+\begin{prettyBox}{OSPFv3}{myblue}
+    \textbf{OSPFv3} est un protocole de routage dynamique pour \textbf{IPv6}, similaire à \textbf{OSPFv2} pour \textbf{IPv4}. 
+    Dans cette version, il n'est plus nécessaire d'utiliser une commande globale \texttt{network} pour indiquer quels réseaux partager. 
+
+    En activant le protocole directement sur l'interface, le routeur identifie automatiquement le préfixe à annoncer et utilise les adresses \textbf{LLA} (Link-Local Address) de ses voisins pour l'échange des routes.\\[0.15cm]
+
+    \textbf{Étape 1 : Configuration du processus (Mode Global)} \\
+    On active le processus pour définir l'identifiant 32 bits obligatoire : \\
+    \verb|ipv6 router ospf <id_processus>| \\
+    \verb|router-id x.x.x.x| où x $\in [0,255]$ (sauf \texttt{0.0.0.0}).\\[0.1cm]
+
+    \textbf{Étape 2 : Configuration des interfaces (Mode Interface)} \\
+    On entre dans chaque interface pour l'activer : \\
+    \verb|ipv6 ospf <id_processus> area <id_zone>|
+\end{prettyBox}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router0O.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{router1O.png} 
+\end{figure}
+
+\newpage
+
+\item Faite un ping entre pc de different \textbf{LAN} :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{goodPing4.png} 
+\end{figure}
+
+\end{enumerate}
+
+\end{document}
