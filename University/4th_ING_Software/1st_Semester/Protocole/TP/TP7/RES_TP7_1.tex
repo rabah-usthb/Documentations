@@ -1,0 +1,341 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\newcounter{commentCount}
+\newcounter{filePrg}
+\newcounter{inputPrg}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{minted}
+
+\usepackage{ifthen}
+\usepackage{fontawesome}
+
+\usepackage{tabularx}
+\newcolumntype{\CeX}{>{\centering\let\newline\\\arraybackslash}X}%
+\newcommand{\TwoSymbolsAndText}[3]{%
+  \begin{tabularx}{\textwidth}{c\CeX c}%
+    #1 & #2 & #3
+  \end{tabularx}%
+}
+
+\newtcblisting[use counter=inputPrg, number format=\arabic]{codeInput}[4]{
+  listing engine=minted,
+  minted language=#1,
+  minted options={autogobble,breaklines,  firstnumber={#4}},
+  listing only,
+  size=title,
+  arc=1.5mm,
+  breakable,
+  enhanced jigsaw,
+  colframe=myblue,
+  coltitle=White,
+  boxrule=0.5mm,
+  colback=white,
+  coltext=Black,
+  title=\TwoSymbolsAndText{\faCode}{%
+  \textbf{Sql Program \thetcbcounter}\ifthenelse{\equal{#2}{}}{}{\textbf{: }#2}%
+  }{\faCode},
+  label=inputPrg:#3
+}
+
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\usepackage{minted}
+
+\begin{document}
+
+
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}7 Partie N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}1 }
+
+\vspace{-0.25cm}
+\begin{enumerate}
+    \item c'est quoi un chemin redondant ?
+
+        \begin{prettyBox}{Chemin Redondnat}{myblue}
+            Un chemin redodant est un chemin en plus qui mene vers la meme destination :
+            \begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.4\textwidth]{path1.png} 
+\end{figure}
+\vspace{-0.35cm}
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.4\textwidth]{path2.png} 
+\end{figure}
+
+
+        \end{prettyBox}
+
+\vspace{0.15cm}
+
+\item Quelle sont les avantages des chemins redondants?
+
+\begin{prettyBox}{Avantages}{myblue}
+    \begin{itemize}
+        \item \textbf{Fiabilite} : Maintient la connectivité en cas de panne.
+        \item \textbf{Rapidite} : plusieurs chemins offerent une faible latence.
+        \item \textbf{Équilibrage De Charge} :  Permet de distribuer le trafic sur plusieurs chemins simultanément.
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{0.15cm}
+
+\item C'est quoi le probleme des chemins redondants ?
+
+\begin{prettyBox}{Probleme}{myblue}
+    Le problème est que lorsqu'un switch reçoit un message, il le diffuse en broadcast sur tous les appareils connectés.
+    Le switch qui reçoit ce broadcast fait de même, ce qui provoque une \textbf{inondation de trames} ou un 
+    \textbf{broadcast storm}.
+\end{prettyBox}
+
+\vspace{0.15cm}
+\item C'est quoi le protocole \textbf{STP} ?
+\begin{prettyBox}{STP}{myblue}
+    Protocole \textbf{STP} fix the issue of \textbf{brpadcast storm} by blocking port that leads to \textbf{loops} :
+    \begin{itemize}
+\itemsep0em 
+        \item \textbf{STP} doit definir le switch \textbf{root bridge}.
+        \item Les switchs communiquent entre eux et envoient des message \textbf{BPDU} qui contiennet \textbf{Bridge ID}.
+        \item \textbf{STP} prend la switch avec la plus petit \textbf{Bridge ID}.
+        \item \textbf{Bridge ID} = Priorite + \textbf{Vlan\_ID} et \textbf{MAC}.
+        \item Par defaut la priorite = 32768 $\in$  0 to 61440 (multiples de 4096).
+        \item Si switches ont la meme priorite + \textbf{Vlan\_ID} alors \textbf{STP} prendra switch aves la plus petit \textbf{MAC}.
+        \item Les ports du \textbf{root bridge} sont dit \textbf{designated ports}.
+        \item \textbf{Designated Ports} sont des ports qui s'eloigne du \textbf{Bridge Root}.
+        \item \textbf{STP} doit definir \textbf{Root Ports} qui sont des ports avec le chemins le plus rapids vers \textbf{Bridge Root}.
+        \item Par plus rapide on veut dire avec le cout le plus petit.
+        \item \textbf{STP} prend un switch \textbf{non Bridge Root} avec la plus petite \textbf{Bridge ID} et met les port restent commes \textbf{Designated Ports}.
+        \item Les ports qui reste sont dit \textbf{Blocked Ports}.
+        \item \textbf{STP} se met a jour en cas de panne.
+    \end{itemize}
+\end{prettyBox}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{tab.png} 
+\end{figure}
+
+\item Refaite la topologie suivante :
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{state1_1.png} 
+\end{figure}
+
+\begin{prettyBox}{Remarque}{red}
+    \begin{itemize}
+        \item On doit choisir un model switch qui support \textbf{STP} comme \verb|2960-24 TT|
+        \item Les interfaces oranges sont les interfaces bloques par \textbf{STP}.
+    \end{itemize}
+\end{prettyBox}
+
+    \newpage
+\item Donnez les adresses \textbf{MAC} de tout les switchs :
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{switch0_1.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.55\textwidth]{switch1_1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{switch2_1.png} 
+\end{figure}
+
+\begin{prettyBox}{MAC}{myblue}
+    \begin{itemize}
+        \item \textbf{Switch 0} : \verb |0002.4A45.C0E9|
+        \item \textbf{switch 1} : \verb |0001.C926.4D0E|
+        \item \textbf{switch 2} : \verb |00E0.F984.8E44|
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{0.15cm}
+
+\item Quelle est la switch \textbf{Root Bridge} ?
+
+\begin{prettyBox}{Root Bridge}{myblue}
+    c'est la switch 1 car tout les switchs on la meme priorite par defaut et 
+    switch 1 a la plus petite \textbf{MAC} adresse.
+\end{prettyBox}
+
+\vspace{0.15cm}
+
+\item Comment voir l'etat du \textbf{STP} dans un switch ?
+\begin{prettyBox}{Etat}{myblue}
+    On doit etre au niveau 2 admin er utilise la commande \verb|show spanning-tree|  et si niveau
+    3 au plus on utilise \verb|do show spanning-tree|\\cette derniere
+    donne l'adresse \textbf{MAC} du \textbf{Root Bridge} et du switch courrant ainsi que le type de port
+    de chaque interface \textbf{Blocked , Designated, Root }
+\end{prettyBox}
+
+\newpage
+
+\item Afficher l'etat \textbf{STP} de tout les switchs
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{show0_1.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{show1_1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{show3_1.png} 
+\end{figure}
+
+
+\item Expliquer le resultat 
+
+\begin{prettyBox}{Expliquation}{myblue}
+    \begin{itemize}
+        \item \textbf{switch 0} :
+            \begin{itemize}
+                \item Tout les ports relie au machine du \textbf{LAN} (\verb|f0/1-3|) sont \textbf{Designated}.
+                \item \verb|f0/5| est plus rapid le cout est 19 et celui du \verb|f0/4| est $19\times 2$ donc
+                    \verb|f0/5| est port \textbf{Root}.
+                \item le switch 0 a une plus petite \textbf{Bridge ID} donc le port restant (\verb|f0/4|) est \textbf{Designated}.
+            \end{itemize}
+        \item \textbf{switch 1} : puisqu'il est le \textbf{Root Bridge} tout ces port sont \textbf{Designated}.
+        \item \textbf{switch 2} :
+            \begin{itemize}
+                \item \verb|f0/2| est plus rapid le cout est 19 et celui du \verb|f0/1| est $19\times 2$ donc
+                    \verb|f0/2| est port \textbf{Root}.
+                \item Le port restant \verb|f0/1| est \textbf{Blocked}
+            \end{itemize}
+    \end{itemize}
+\end{prettyBox}
+
+\newpage
+\item Faire une panne
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{sh_1.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.4\textwidth]{state2_1.png} 
+\end{figure}
+
+
+
+\item Re-afficher l'etat \textbf{STP} de tout les switchs
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{show4_1.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{show5_1.png} 
+\end{figure}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{show6_1.png} 
+\end{figure}
+
+
+\item Expliquer le resultat 
+\begin{prettyBox}{Expliquation}{myblue}
+    \begin{itemize}
+        \item \textbf{switch 0} :
+            \begin{itemize}
+                \item Tout les ports relie au machine du \textbf{LAN} (\verb|f0/1-3|) sont \textbf{Designated}.
+                \item \verb|f0/4| est plus rapid le cout est 19 donc c'est un port \textbf{Root}.
+            \end{itemize}
+        \item \textbf{switch 1} : puisqu'il est le \textbf{Root Bridge} tout ces port sont \textbf{Designated}.
+        \item \textbf{switch 2} :
+            \begin{itemize}
+                \item \verb|f0/2| est plus rapid le cout est 19 et celui du \verb|f0/1| est $19\times 2$ donc
+                    \verb|f0/2| est port \textbf{Root}.
+                \item Le port restant \verb|f0/1| est \textbf{Designated}
+            \end{itemize}
+    \end{itemize}
+\end{prettyBox}
+
+
+
+
+\end{enumerate}
+\end{document}

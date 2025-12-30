@@ -1,0 +1,40 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Page-1" id="rzvWRAvxzvK52kRJ1ihI">
+    <mxGraphModel dx="679" dy="336" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="V9c4-P5gGEtDe8gUgPqk-1" value="" style="group;allowArrows=0;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="460" y="415" width="930" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="V9c4-P5gGEtDe8gUgPqk-3" value="" style="html=1;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;shadow=0;dashed=0;shape=mxgraph.rack.hpe_aruba.switches.jl074a_hpe_aruba_3810m_48_port_gt_poeplus_1_slot_switch;connectable=0;allowArrows=0;fillColor=#D5E8D4;strokeColor=#FF3333;" vertex="1" parent="V9c4-P5gGEtDe8gUgPqk-1">
+          <mxGeometry x="575.7142857142858" y="163.82022471910113" width="183.46938775510208" height="30.3370786516854" as="geometry" />
+        </mxCell>
+        <mxCell id="V9c4-P5gGEtDe8gUgPqk-4" value="" style="html=1;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;shadow=0;dashed=0;shape=mxgraph.rack.hpe_aruba.switches.jl074a_hpe_aruba_3810m_48_port_gt_poeplus_1_slot_switch;connectable=0;allowArrows=0;fillColor=#D5E8D4;strokeColor=#FF3333;" vertex="1" parent="V9c4-P5gGEtDe8gUgPqk-1">
+          <mxGeometry x="208.7755102040816" y="163.82022471910113" width="183.46938775510208" height="30.3370786516854" as="geometry" />
+        </mxCell>
+        <mxCell id="V9c4-P5gGEtDe8gUgPqk-5" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="V9c4-P5gGEtDe8gUgPqk-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="355" y="175" as="sourcePoint" />
+            <mxPoint x="582" y="175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V9c4-P5gGEtDe8gUgPqk-7" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="V9c4-P5gGEtDe8gUgPqk-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="354.28571428571433" y="184.44943820224722" as="sourcePoint" />
+            <mxPoint x="582.0408163265306" y="184.44943820224722" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V9c4-P5gGEtDe8gUgPqk-14" value="&lt;span style=&quot;font-size: 27px;&quot;&gt;Switch 0&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="V9c4-P5gGEtDe8gUgPqk-1">
+          <mxGeometry x="253.06122448979593" y="215.3932584269663" width="82.24489795918367" height="54.60674157303371" as="geometry" />
+        </mxCell>
+        <mxCell id="V9c4-P5gGEtDe8gUgPqk-15" value="&lt;span style=&quot;font-size: 27px;&quot;&gt;Switch 1&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="V9c4-P5gGEtDe8gUgPqk-1">
+          <mxGeometry x="626.3265306122449" y="215.3932584269663" width="82.24489795918367" height="54.60674157303371" as="geometry" />
+        </mxCell>
+        <mxCell id="V9c4-P5gGEtDe8gUgPqk-18" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;rotation=90;" vertex="1" parent="V9c4-P5gGEtDe8gUgPqk-1">
+          <mxGeometry x="443" y="158.76999999999998" width="75" height="35.39" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,243 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\newcounter{commentCount}
+\newcounter{filePrg}
+\newcounter{inputPrg}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{minted}
+
+\usepackage{ifthen}
+\usepackage{fontawesome}
+
+\usepackage{tabularx}
+\newcolumntype{\CeX}{>{\centering\let\newline\\\arraybackslash}X}%
+\newcommand{\TwoSymbolsAndText}[3]{%
+  \begin{tabularx}{\textwidth}{c\CeX c}%
+    #1 & #2 & #3
+  \end{tabularx}%
+}
+
+\newtcblisting[use counter=inputPrg, number format=\arabic]{codeInput}[4]{
+  listing engine=minted,
+  minted language=#1,
+  minted options={autogobble,breaklines,  firstnumber={#4}},
+  listing only,
+  size=title,
+  arc=1.5mm,
+  breakable,
+  enhanced jigsaw,
+  colframe=myblue,
+  coltitle=White,
+  boxrule=0.5mm,
+  colback=white,
+  coltext=Black,
+  title=\TwoSymbolsAndText{\faCode}{%
+  \textbf{Sql Program \thetcbcounter}\ifthenelse{\equal{#2}{}}{}{\textbf{: }#2}%
+  }{\faCode},
+  label=inputPrg:#3
+}
+
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\usepackage{minted}
+
+\begin{document}
+
+
+\tit{TP N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}7 Partie N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}2 }
+
+\vspace{-0.25cm}
+\begin{enumerate}
+
+    \item Faite la topologie suivante :
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.4\textwidth]{state1_2.png} 
+\end{figure}
+
+\begin{prettyBox}{Remarque}{red}
+    \begin{itemize}
+        \item On doit utilise la model \verb|2960-24 TT| qui supporte \textbf{STP}.
+        \item On utilise les ports \verb|f0/1-2| et \verb|f0/18| , \verb|f0/20|. (je mentionne ceci just
+            pour simplifie le suivi de ce tp vous n'etes pas oblige d'utilise les meme interfaces)
+    \end{itemize}
+\end{prettyBox}
+
+\item Afficher l'etat \textbf{STP} de tout les switchs
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{show1_2.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{show2_2.png} 
+\end{figure}
+
+
+\item Expliquer le resultat 
+
+\begin{prettyBox}{Expliquation}{myblue}
+    \begin{itemize}
+        \item \textbf{switch 0} : puisqu'il est le \textbf{Root Bridge} (plus petite \textbf{MAC}) tout ces port sont \textbf{Designated}.
+        \item \textbf{switch 1} : Puisque tout les ports ont le meme cout 19 \textbf{STP} prendra comme \textbf{Root Port} celui avec l'index interface la plus petite donc  le port \verb|f0/1| est \textbf{Root Port} et les autre deviennent \textbf{Blocked Port}
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\item C'est quoi \textbf{EtherChannel} ?
+
+    \begin{prettyBox}{EtherChannel}{myblue}
+    C'est un protocole d'agrégation de ports de switch qui permet de regrouper plusieurs interfaces 
+    (même si pas contigües) en un \textbf{canal de ports} qui est une interface virtuelle.
+    
+    \[\text{bandwidth}_\text{canal} = \sum_{i=1}^{n} \text{bandwidth}_i\]
+    
+    Un switch \verb|2960-24TT| supporte au max 6 interfaces dans un canal.\\
+    Un switch peut avoir plusieurs canaux.
+\end{prettyBox}
+
+\newpage
+
+\item Comment configurer \textbf{EtherChannel} ?
+
+\begin{prettyBox}{Config}{myblue}
+    On selectionne plusiseur interfaces avec : \verb|int range <intervalle_1> , ... , <intervalle_n>| \\
+    Puis on passe au niveau 4 et on utilise : \verb|channel-group <id_group> mode on|\\
+    On peut selectionner un cannal avec : \verb|int port-channel <id_group>|
+\end{prettyBox}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{ether0_2.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{ether1_2.png} 
+\end{figure}
+
+\begin{prettyBox}{Remarque}{red}
+    On les a mit en \verb|trunk mode| car les switchs sont relie entre-eux.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\item Comment voir l'etat du \textbf{EtherChannel} dans une switch :
+\begin{prettyBox}{Etat}{myblue}
+    \verb|show interfaces port-channel <id_group>| donne des information sur un seul cannal par mis ces information 
+    on a la bandwidth du cannal dans notre exampel ca va etre 200Mbps.\\
+    \verb|show etherchannel summary| donne un apprecu sur tout les cannale leur id et les interdaces concernen
+\end{prettyBox}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{show3_2.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{show4_2.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{show5_2.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{show6_2.png} 
+\end{figure}
+
+\item Re-Afficher l'etat \textbf{STP} de tout les switchs
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{show7_2.png} 
+\end{figure}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.6\textwidth]{show8_2.png} 
+\end{figure}
+
+
+\item Expliquer le resultat 
+
+\begin{prettyBox}{Expliquation}{myblue}
+    \begin{itemize}
+        \item \textbf{switch 0} : puisqu'il est le \textbf{Root Bridge} (plus petite \textbf{MAC}) tout ces port sont \textbf{Designated}.
+        \item \textbf{switch 1} : puisque le cannale a une bandwidth de 200 Mbps donc il est le plus rapid il est \textbf{Root Port} et les autre sont \textbf{Blocked Port}. 
+            
+    \end{itemize}
+\end{prettyBox}
+
+
+
+\end{enumerate}
+\end{document}

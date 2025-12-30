@@ -1,0 +1,337 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\newcounter{commentCount}
+\newcounter{filePrg}
+\newcounter{inputPrg}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{minted}
+
+\usepackage{ifthen}
+\usepackage{fontawesome}
+
+\usepackage{tabularx}
+\newcolumntype{\CeX}{>{\centering\let\newline\\\arraybackslash}X}%
+\newcommand{\TwoSymbolsAndText}[3]{%
+  \begin{tabularx}{\textwidth}{c\CeX c}%
+    #1 & #2 & #3
+  \end{tabularx}%
+}
+
+\newtcblisting[use counter=inputPrg, number format=\arabic]{codeInput}[4]{
+  listing engine=minted,
+  minted language=#1,
+  minted options={autogobble,breaklines,  firstnumber={#4}},
+  listing only,
+  size=title,
+  arc=1.5mm,
+  breakable,
+  enhanced jigsaw,
+  colframe=myblue,
+  coltitle=White,
+  boxrule=0.5mm,
+  colback=white,
+  coltext=Black,
+  title=\TwoSymbolsAndText{\faCode}{%
+  \textbf{Sql Program \thetcbcounter}\ifthenelse{\equal{#2}{}}{}{\textbf{: }#2}%
+  }{\faCode},
+  label=inputPrg:#3
+}
+
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\usepackage{minted}
+
+\begin{document}
+
+
+\tit{TD N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}1}
+
+\vspace{0.15cm}
+
+On a un reseau \verb|172.19.160.0/22| on veut le diviser en sous-reseaux :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.5\textwidth]{r.png} 
+\end{figure}
+
+\vspace{-0.75cm}
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.25\textwidth]{tab.png} 
+\end{figure}
+
+
+Pour chaque sous-reseau \textbf{LAN} donner : taille idf machine ,taille idf sous-reseau, idf sous-reseau en binaire et l'adresse de ce sous-reseau
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.45\textwidth]{tab1.png} 
+\end{figure}
+
+\begin{prettyBox}{Remarque}{red}
+    Il est important d'ordonner les sous-reseau de maniere decroissante par rapport a leur taille (nombre de PCs).
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+Comment Remplire Chaque Colonne ?
+\begin{itemize}
+    \item Taille IDF machine = $m$ \quad tell que :
+        \[ 2^m - 2 \geq \text{Taille s-reseau}  \]
+    \item Taille IDF s-reseau = $r$ \quad tell que :
+        \[r = 32 - m\]
+
+    \item Taille IDF s-reseau = $t$ \quad tell que :
+        \[ t = r - r_{\text{initial}}\]
+    \item adresse\_s-reseau 
+\[
+\begin{cases}
+    \text{adresse}_\text{initial}/r & \text{Si premier \textbf{LAN}} \\
+    \text{adresse}_\text{precedent} + 2^{m_\text{precedent}}/r & \text{Sinon} 
+\end{cases}
+\]
+
+\item IDF s-reseau en binaire : $b$ = adresse\_s-reseau $[r_{\text{initial}}+1,r_{\text{initial}}+t]$ (on compte de gauche a droite)
+
+\end{itemize}
+\newpage
+
+\section*{LAN\_E : }
+
+\begin{itemize}
+    \item On a $2^9 - 2 = 510 \geq 500 \Rightarrow m_0 = 9$
+    \item $r_0 = 32 - m_0 = 32 - 9 = 23$
+    \item $t_0 = r_0 - r_{\text{initial}} = 23 - 22 = 1$
+    \item adresse\_s-reseau  = \verb|172.19.160.0/23|
+    \item On sait que chaque partie de l'adresse occupe 8 bits et on s'interesse au 23eme bits \[[r_{\text{initial}}+1,r_{\text{initial}}+t_0] = [23,23] = 23\]
+    Donc on va voir que la troisieme partie \verb|160|, on doit convertir \verb|160| en binaire :\\
+
+\[
+\begin{alignedat}{3}
+160 &/ 2 &= 80  &\quad \text{rest} &= 0 \\
+ 80 &/ 2 &= 40  &\quad \text{rest} &= 0 \\
+ 40 &/ 2 &= 20  &\quad \text{rest} &= 0 \\
+ 20 &/ 2 &= 10  &\quad \text{rest} &= 0 \\
+ 10 &/ 2 &= 5   &\quad \text{rest} &= 0 \\
+  5 &/ 2 &= 2   &\quad \text{rest} &= 1 \\
+  2 &/ 2 &= 1   &\quad \text{rest} &= 0 \\
+  1 &/ 2 &= 0   &\quad \text{rest} &= 1
+\end{alignedat}
+\]
+Donc \verb|160| en binaire = $1010 00\underbrace{0}_{\text{23eme bits}}0 \Rightarrow b_0 = 0$
+
+\end{itemize}
+
+\vspace{0.25cm}
+
+\section*{LAN\_A : }
+
+\begin{itemize}
+    \item On a $2^8 - 2 = 254 \geq 200 \Rightarrow m_1 = 8$
+    \item $r_1 = 32 - m_1 = 32 - 8 = 24$
+    \item $t_1 = r_1 - r_{\text{initial}} = 24 - 22 = 2$
+    \item adresse\_s-reseau  = \verb|172.19.160.0/23| + $2^{m_0}$ = \verb|172.19.160.0/23| + $2^{9}$ = \verb|172.19.160.0/23| + 512
+
+\[
+\begin{array}{r}
+    172.19.160.0/23 \\[0.1cm]
+    +  \hspace{1.75cm}           512\\ \hline
+  =172.19.162.0/24
+\end{array}
+\]
+le max de chaque segment est de 255 quant il ya un \verb|overflow| on devise par 256 le qoution est ajoute au segment suivant
+et le segment courrant recoit le rest : $521 = 256\times2+0$
+    \item On s'interesse au bits 23-24 \[[r_{\text{initial}}+1,r_{\text{initial}}+t_1] = [23,24] \]
+    Donc on va voir que la troisieme partie \verb|162|, on doit convertir \verb|162| en binaire = $1010 00\underbrace{10}_{\text{23-24eme bits}} \Rightarrow b_1 = 10$
+
+
+\end{itemize}
+
+\newpage
+
+\section*{LAN\_C : }
+
+\begin{itemize}
+    \item On a $2^6 - 2 =62 \geq 60 \Rightarrow m_2 = 6$
+    \item $r_2 = 32 - m_2 = 32 - 6 = 26$
+    \item $t_2 = r_2 - r_{\text{initial}} = 26 - 22 = 4$
+    \item adresse\_s-reseau  = \verb|172.19.162.0/24| + $2^{m_1}$ = \verb|172.19.162.0/24| + $2^{8}$ = \verb|172.19.162.0/24| + 256
+
+\[
+\begin{array}{r}
+    172.19.162.0/24 \\[0.1cm]
+    +  \hspace{1.75cm}           256\\ \hline
+  =172.19.163.0/26
+\end{array}
+\]
+$256 = 256\times1+0$
+    \item On s'interesse au bits 23-26 \[[r_{\text{initial}}+1,r_{\text{initial}}+t_2] = [23,26] \]
+        Donc on va voir que la 3eme et 4eme partie \verb|163.0|, on doit convertir \verb|163.0| en binaire = $1010 00 \hspace{-0.4cm}\underbrace{11 . 00}_{\text{23-26eme bits}} \hspace{-0.4cm} \Rightarrow b_2 = 1100$
+
+
+\end{itemize}
+
+\vspace{0.25cm}
+
+\section*{LAN\_B : }
+
+\begin{itemize}
+    \item On a $2^6 - 2 =62 \geq 50 \Rightarrow m_3 = 6$
+    \item $r_3 = 32 - m_3 = 32 - 6 = 26$
+    \item $t_3 = r_3 - r_{\text{initial}} = 26 - 22 = 4$
+    \item adresse\_s-reseau  = \verb|172.19.163.0/26| + $2^{m_2}$ = \verb|172.19.163.0/26| + $2^{6}$ = \verb|172.19.163.0/26| + 64
+
+\[
+\begin{array}{r}
+    172.19.163.0/26 \\[0.1cm]
+    +  \hspace{1.65cm}           64\\ \hline
+  =172.19.163.64/26
+\end{array}
+\]
+    \item On s'interesse au bits 23-26 \[[r_{\text{initial}}+1,r_{\text{initial}}+t_3] = [23,26] \]
+        Donc on va voir que la 3eme et 4eme partie \verb|163.64|, on doit convertir \verb|163.64| en binaire = $1010 00 \hspace{-0.4cm}\underbrace{11 . 01}_{\text{23-26eme bits}} \hspace{-0.4cm}\\ \Rightarrow b_3 = 1101$
+
+
+\end{itemize}
+
+
+\vspace{0.25cm}
+
+\section*{LAN\_D : }
+
+\begin{itemize}
+    \item On a $2^5 - 2 =30 \geq 25 \Rightarrow m_4 = 5$
+    \item $r_4 = 32 - m_4 = 32 - 5 = 27$
+    \item $t_4 = r_4 - r_{\text{initial}} = 27- 22 = 5$
+    \item adresse\_s-reseau  = \verb|172.19.163.64/26| + $2^{m_3}$ = \verb|172.19.163.64/26| + $2^{6}$ = \verb|172.19.163.64/26| + 64
+
+\[
+\begin{array}{r}
+    172.19.163.64/26 \\[0.1cm]
+    +  \hspace{2.25cm}           64\\ \hline
+  =172.19.163.128/27
+\end{array}
+\]
+    \item On s'interesse au bits 23-27 \[[r_{\text{initial}}+1,r_{\text{initial}}+t_4] = [23,27] \]
+        Donc on va voir que la 3eme et 4eme partie \verb|163.128|, on doit convertir \verb|163.128| en binaire = $1010 00 \hspace{-0.4cm}\underbrace{11 . 100}_{\text{23-27eme bits}} \hspace{-0.4cm}\\ \Rightarrow b_4 = 11100$
+
+
+\end{itemize}
+
+\newpage
+
+\section*{R1 - R2 : }
+
+\begin{itemize}
+    \item On a $2^2 - 2 = 2 \geq 2 \Rightarrow m_5 = 2$
+    \item $r_5 = 32 - m_5 = 32 - 2 = 30$
+    \item $t_5 = r_5 - r_{\text{initial}} = 30- 22 = 8$
+    \item adresse\_s-reseau  = \verb|172.19.163.128/27| + $2^{m_4}$ = \verb|172.19.163.128/27| + $2^{5}$ = \verb|172.19.163.128/27| + 32
+
+\[
+\begin{array}{r}
+    172.19.163.128/27 \\[0.1cm]
+    +  \hspace{2.25cm}           32\\ \hline
+  =172.19.163.160/30
+\end{array}
+\]
+    \item On s'interesse au bits 23-30 \[[r_{\text{initial}}+1,r_{\text{initial}}+t_5] = [23,30] \]
+        Donc on va voir que la 3eme et 4eme partie \verb|163.160|, on doit convertir \verb|163.160| en binaire = $1010 00 \hspace{-0.15cm}\underbrace{11 . 1010 00}_{\text{23-30eme bits}} \hspace{-0.4cm}\\ \Rightarrow b_5 = 11101000$
+
+
+\end{itemize}
+
+\vspace{0.25cm}
+
+\section*{R1 - R3 : }
+
+\begin{itemize}
+    \item On a $2^2 - 2 = 2 \geq 2 \Rightarrow m_6 = 2$
+    \item $r_6 = 32 - m_6 = 32 - 2 = 30$
+    \item $t_6 = r_6 - r_{\text{initial}} = 30- 22 = 8$
+    \item adresse\_s-reseau  = \verb|172.19.163.160/30| + $2^{m_5}$ = \verb|172.19.163.160/30| + $2^{2}$ = \verb|172.19.163.160/30| + 4
+
+\[
+\begin{array}{r}
+    172.19.163.160/30 \\[0.1cm]
+    +  \hspace{2.25cm}           4\\ \hline
+  =172.19.163.164/30
+\end{array}
+\]
+    \item On s'interesse au bits 23-30 \[[r_{\text{initial}}+1,r_{\text{initial}}+t_6] = [23,30] \]
+        Donc on va voir que la 3eme et 4eme partie \verb|163.164|, on doit convertir \verb|163.164| en binaire = $1010 00 \hspace{-0.15cm}\underbrace{11 . 1010 01}_{\text{23-30eme bits}} \hspace{-0.4cm}\\ \Rightarrow b_6 = 11101001$
+
+
+\end{itemize}
+
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.45\textwidth]{tab2.png} 
+\end{figure}
+
+\end{document}
