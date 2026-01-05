@@ -1,0 +1,279 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+\usepackage{booktabs} 
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\lstdefinestyle{pythonstyle}{
+    language=python,                    % Language set to Python
+    basicstyle=\ttfamily\footnotesize,   % Change basic font size
+    keywordstyle=\color{blue}\bfseries, % Different keyword style
+    stringstyle=\color{red},         % Different string color
+    commentstyle=\color{green!60!black}\itshape, % Adjust comment color
+    numbers=left,                       % Line numbers on the left
+    numberstyle=\tiny\color{gray},      % Smaller number font and color
+    stepnumber=1,                       % Number each line
+    frame=single,                       % Single frame around code
+    tabsize=4,                          % Adjust tab size
+    showstringspaces=false,             % Do not show spaces in strings
+    captionpos=b,% Position of caption
+    breaklines=true,
+    inputencoding=utf8
+}
+
+
+
+
+\begin{document}
+\tit{TD N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}2}
+\exer{1}
+
+\vspace{0.25cm}
+
+
+\begin{prettyBox}{K-Means}{myblue}
+    K-means est un algorithme non supervisé de clustering. Il prend comme paramètre le nombre de 
+    clusters $K$ et $K$ centroides, et à la fin il nous donne les centroides finaux avec leurs points 
+    formant les clusters.
+\end{prettyBox}
+
+\vspace{0.15cm}
+
+\begin{prettyBox}{Algo}{myblue}
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt}
+        \item Choisir le nombre de clusters $K$.
+        \item Choisir $K$ centroids.
+        \item Calculer la distance entre chaque point et les centroids.
+        \item Affecter chaque point au centroide le plus proche.
+        \item Calculer les nouveaux centroides de chaque cluster en prenant la moyenne des points.
+        \item Si les nouveaux clusters sont différents des anciens, revenir à l'étape 3 sinon, l'algorithme est terminé.
+    \end{enumerate}
+\end{prettyBox}
+
+\vspace{0.15cm}
+\begin{prettyBox}{Distance Euclidienne}{myblue}
+    \[ \sqrt{\sum_{i = 1}^M x_i^2} \]
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item $M$ : nombre d'attributs
+        \item $x_i$ : ième attribut
+    \end{itemize}
+\end{prettyBox}
+
+\vspace{0.15cm}
+\begin{prettyBox}{SSE(Somme des Carrés des Erreurs)}{myblue}
+
+   SSE est utilisée pour quantifier la cohésion interne (le degré d'appartenance des points à leur cluster). Elle est définie comme la somme des carrés des distances entre le
+   point moyen (centroide) et chaque point du cluster.
+
+    \[\sum_{i=1}^K \sum_{P \in S_i } D(P,C_i)^2\]
+
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item $K$ : nombre de clusters.
+        \item $P$ : instance (Point).
+        \item $S_i$ : ième cluster.
+        \item $C_i$ : ième centroide.
+        \item $D$ : La distance.
+    \end{itemize}
+\end{prettyBox}
+
+\newpage
+
+On a comme data-set :
+
+\begin{table}[h]
+\centering
+
+\renewcommand{\arraystretch}{1.5} 
+\setlength{\tabcolsep}{12pt}      
+
+\begin{tabular}{|l|c|c|} 
+\hline
+\textbf{Client} & \textbf{Dépenses (X) (en milliers d'€)} & \textbf{Fréquence (Y) (sessions/an)} \\ \hline
+A        & 2          & 8        \\ \hline
+B          & 3           & 7             \\ \hline
+C      & 4      & 5           \\ \hline
+D        & 8          & 2        \\ \hline
+E          & 7           & 3             \\ \hline
+F      & 6     & 4          \\ \hline
+
+\end{tabular}
+\end{table}
+
+On veut segmenter les clients en 2 groupe ($K=2$) avec les centroides suivant :\\[0.1cm]
+$C_1 = A = (2,8) \quad C_2 = D = (8,2) $
+
+
+\vspace{0.75cm}
+Calculer la distance Euclidienne de chaque point aux deux centres initiaux ($C_1 , C_2$) :
+
+\begin{table}[h]
+\centering
+
+\renewcommand{\arraystretch}{2.25} 
+\setlength{\tabcolsep}{3pt}      
+
+\begin{tabular}{|c|c|c|c|c|} 
+\hline
+\textbf{Client($P$)} & \textbf{Coordonnées} & $\mathbf{D(P,C_1)}$ & $\mathbf{D(P,C_2)}$ & Cluster Attribue  \\ \hline
+A        & (2,8)          & $\sqrt{(2-2)^2 + (8-8)^2} = 0$  & $\sqrt{(2-8)^2 + (8-2)^2} = \sqrt{72} = 8.49$    & $C_1$  \\ \hline
+B          & (3,7) & $\sqrt{(3-2)^2 + (7-8)^2} = \sqrt{2} = 1.41$  & $\sqrt{(3-8)^2 + (7-2)^2} = \sqrt{50} = 7.07$    & $C_1$  \\ \hline
+C & (4,5) & $\sqrt{(4-2)^2 + (5-8)^2} = \sqrt{13} = 3.61$  & $\sqrt{(4-8)^2 + (5-2)^2} = \sqrt{25} = 5$    & $C_1$  \\ \hline
+D        & (8,2)& $\sqrt{(8-2)^2 + (2-8)^2} = \sqrt{72} = 8.49$  & $\sqrt{(8-8)^2 + (2-2)^2} = 0$    & $C_2$  \\ \hline     
+E          & (7,3)& $\sqrt{(7-2)^2 + (3-8)^2} = \sqrt{50} = 7.07$  & $\sqrt{(7-8)^2 + (3-2)^2} = \sqrt{2} = 1.41$    & $C_2$  \\ \hline           
+F      & (6,4) & $\sqrt{(6-2)^2 + (4-8)^2} = \sqrt{32} = 5.66$  & $\sqrt{(6-8)^2 + (4-2)^2} = \sqrt{8} = 2.83$    & $C_2$  \\ \hline           
+
+\end{tabular}
+\end{table}
+
+\vspace{0.75cm}
+
+Attribution des points au clusters :
+\begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \item \textbf{Cluster 1} ($S_1$) : $A , B , C$
+    \item \textbf{Cluster 2} ($S_2$) : $D , E , F $
+\end{itemize}
+
+\vspace{0.75cm}
+
+Calcule des nouveaux centroides :
+
+\begin{align*}
+&C^{'}_1 = \left(\dfrac{x_A+x_B+x_C}{3} , \dfrac{y_A+y_B+y_C}{3} \right) = \left(\dfrac{2+3+4}{3} , \dfrac{8+7+5}{3} \right)  = (3,6.67)\\[0.15cm]
+&C^{'}_2 = \left(\dfrac{x_D+x_E+x_F}{3} , \dfrac{y_D+y_E+y_F}{3} \right) = \left(\dfrac{8+7+6}{3} , \dfrac{2+3+4}{3} \right)  = (7,3)
+\end{align*}
+
+\vspace{0.45cm}
+
+$C^{'}_1 = (3,6.67)$ est le nouveau centroide du cluster $S_1$ des points $ A , B , C$ \\[0.15cm] 
+$C^{'}_2 = (7,3)$ est le nouveau centroide du cluster $S_2$ des points $ D , E , F$ 
+
+\newpage 
+
+Évaluer la qualité de la première itération en calculant la Somme des Carrés des Erreurs (SSE) : 
+
+\[\sum_{i=1}^{K=2} \sum_{P \in S_i } D(P,C^{'}_i)^2 = \sum_{P \in S_1 } D(P,C^{'}_1)^2 + \sum_{P \in S_2 } D(P,C^{'}_2)^2  \]
+
+
+\begin{table}[h]
+\centering
+
+
+\renewcommand{\arraystretch}{2.25} 
+\setlength{\tabcolsep}{3pt}      
+
+\begin{tabular}{|c|c|c|c|} 
+\hline
+\textbf{Client($P$)} & \textbf{Coordonnées} & Cluster Attribue  & $(\mathbf{D(P,C^{'}_i)})^2$  \\ \hline
+A        & (2,8)      & $C^{'}_1 = (3,6.67)$    &  $(2-3)^2 + (8-6.67)^2  = 2.77$     \\ \hline
+B          & (3,7) & $C^{'}_1 = (3,6.67)$ &   $(3-3)^2 + (7-6.67)^2 = 0.11$     \\ \hline
+C & (4,5)  & $C^{'}_1 = (3,6.67)$  & $ (4-3)^2 + (5-6.67)^2 = 3.79$      \\ \hline
+D        & (8,2) & $C^{'}_2 = (7,3)$ &   $(8-7)^2 + (2-3)^2 = 2$    \\ \hline     
+E          & (7,3) & $C^{'}_2 = (7,3)$  & $(7-7)^2 + (3-3)^2 = 0$ \\ \hline           
+F      & (6,4) & $C^{'}_2 = (7,3)$  & $(6-7)^2 + (4-3)^2 = 2$   \\ \hline           
+
+\end{tabular}
+\end{table}
+
+\begin{align*}
+    \textbf{\text{SSE}} & = \sum_{P \in S_1 } D(P,C^{'}_1)^2 + \sum_{P \in S_2 } D(P,C^{'}_2)^2\\[0.1cm]
+                        & = (2.77 + 0.11 + 3.79) + (2+0+2)\\[0.1cm]
+                        & =  6.67 + 4\\[0.1cm]
+                        & = 10.67
+\end{align*}
+
+
+\begin{table}[h]
+\centering
+
+\renewcommand{\arraystretch}{2.25} 
+\setlength{\tabcolsep}{0.75pt}      
+
+\begin{tabular}{|c|c|c|c|c|} 
+\hline
+\textbf{Client($P$)} & \textbf{Coordonnées} & $\mathbf{D(P,C^{'}_1)}$ & $\mathbf{D(P,C^{'}_2)}$ & Cluster Attribue  \\ \hline
+A        & (2,8)          & $\sqrt{(2-3)^2 + (8-6.67)^2} = \sqrt{2.7689} =1.66 $  & $\sqrt{(2-7)^2 + (8-3)^2} = \sqrt{50} = 7.07$    & $C^{'}_1$  \\ \hline
+B          & (3,7) & $\sqrt{(3-3)^2 + (7-6.67)^2} = \sqrt{0.1089} = 0.33$  & $\sqrt{(3-7)^2 + (7-3)^2} = \sqrt{32} = 5.66$    & $C^{'}_1$  \\ \hline
+C & (4,5) & $\sqrt{(4-3)^2 + (5-6.67)^2} = \sqrt{3.7889} = 1.95$  & $\sqrt{(4-7)^2 + (5-3)^2} = \sqrt{13} = 3.61$    & $C^{'}_1$  \\ \hline
+D        & (8,2)& $\sqrt{(8-3)^2 + (2-6.67)^2} = \sqrt{46.8089} = 8.81$  & $\sqrt{(8-7)^2 + (2-3)^2} = \sqrt{2} =1.41$    & $C^{'}_2$  \\ \hline     
+E          & (7,3)& $\sqrt{(7-3)^2 + (3-6.67)^2} = \sqrt{29.4689} = 5.43$  & $\sqrt{(7-7)^2 + (3-3)^2} = 0$    & $C^{'}_2$  \\ \hline           
+F      & (6,4) & $\sqrt{(6-3)^2 + (4-6.67)^2} = \sqrt{16.1289} = 4.02$  & $\sqrt{(6-7)^2 + (4-3)^2} = \sqrt{2} = 1.41$    & $C^{'}_2$  \\ \hline           
+
+\end{tabular}
+\end{table}
+
+
+\vspace{0.45cm}
+
+On remarque que les points ne changent pas de clusters donc l'algo converge avec les centroides $C^{'}_1 , C^{'}_2$ :
+
+\begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \item \textbf{Cluster 1 (Clients à forte fréquence, dépenses modérées)} : \{$A, B, C$\}
+    \item \textbf{Cluster 2 (Clients à faible fréquence, grosses dépenses)} : \{$D, E, F$\}
+\end{itemize}
+
+%\begin{figure}[H] 
+ % \centering 
+  %\includegraphics[width=0.5\textwidth]{Q.png} 
+%\end{figure}
+
+\end{document}

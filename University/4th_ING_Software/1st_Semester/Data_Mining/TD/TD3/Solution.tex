@@ -1,0 +1,199 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+\usepackage{booktabs} 
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\lstdefinestyle{pythonstyle}{
+    language=python,                    % Language set to Python
+    basicstyle=\ttfamily\footnotesize,   % Change basic font size
+    keywordstyle=\color{blue}\bfseries, % Different keyword style
+    stringstyle=\color{red},         % Different string color
+    commentstyle=\color{green!60!black}\itshape, % Adjust comment color
+    numbers=left,                       % Line numbers on the left
+    numberstyle=\tiny\color{gray},      % Smaller number font and color
+    stepnumber=1,                       % Number each line
+    frame=single,                       % Single frame around code
+    tabsize=4,                          % Adjust tab size
+    showstringspaces=false,             % Do not show spaces in strings
+    captionpos=b,% Position of caption
+    breaklines=true,
+    inputencoding=utf8
+}
+
+
+
+
+\begin{document}
+\tit{TD N\(^{\boldsymbol{\circ}}\)\hspace{0.1cm}3}
+\exer{1}
+
+\vspace{0.25cm}
+
+
+\begin{prettyBox}{Naive Bayes}{myblue}
+    Naive Bayes est un algorithme supervisé de classification basé sur le théorème de 
+    Bayes naïf et les probabilités conditionnelles. Il prend en entrée un point $X$ et donne
+    sa classe $Y$.
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+
+\begin{prettyBox}{Formule}{myblue}
+\[ P(Y|X) = \dfrac{P(X|Y) \cdot P(Y)}{P(X)} \] 
+
+\begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \item $X$ : un point.
+    \item $Y$ : une classe.
+    \item $P(Y|X)$ : Probabilité postérieure.
+    \item $P(X|Y)$ : Probabilité conditionnelle (likelihood).
+    \item $P(Y)$ : Probabilité priorie.
+    \item $P(X)$ : Probabilité d'évidence.
+\end{itemize}
+\end{prettyBox}
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Algo}{myblue}
+\begin{enumerate}
+    \setlength{\itemsep}{0pt}
+    \item Calculer les probabilités priors de toutes les classes $Y$.
+    \item Calculer les probabilités conditionnelles de toutes les classes $Y$ :
+        \[ P(X|Y) = P(x_1 \cap \dots \cap x_M | Y) = \prod_{i=1}^M P(x_i|Y) \]
+        \begin{itemize}
+            \item $M$ : nombre d'attributs
+            \item $x_i$ : i-ème attribut
+        \end{itemize}
+        On suppose que les attributs sont indépendants les uns des autres.
+    \item Calculer le numérateur de $P(Y|X)$ c'est-à-dire $P(X|Y) \cdot P(Y)$ pour toutes les classes $Y$ et prendre la classe avec la plus grande probabilité.
+    \item Le plus grande probabilité déterminera la classe du point $X$.
+    \item On n'a pas besoin de calculer le dénominateur $P(X)$, mais voici sa formule :
+        \begin{align*}    
+            P(X) &= P(X \cap C) \\[0.1cm]
+                  &= P(X \cap (Y_1 \cup \dots \cup Y_j)) \\[0.1cm]
+                  &= P(X\cap Y_1) + \dots + P(X\cap Y_j) \\[0.1cm]
+                  &= P(X|Y_1) \cdot P(Y_1) + \dots + P(X|Y_j) \cdot P(Y_j)
+        \end{align*} 
+        \begin{itemize}
+            \item $C$ : représente toutes les classes possibles.
+            \item $j$ : nombre de classes.
+            \item $Y_i$ : i-ème classe.
+        \end{itemize}
+\end{enumerate}
+\end{prettyBox}
+
+\newpage
+
+\begin{table}[h]
+\centering
+
+\renewcommand{\arraystretch}{2.25} 
+\setlength{\tabcolsep}{12pt}      
+
+\begin{tabular}{|c|c|c|c|} 
+
+\hline
+
+Jour & Temps ($x_1$) & Vent($x_2$) & Jouer au Tennis ($C$) \\ \hline
+1 & Pluie & Oui & Non \\ \hline
+2 & Ensoleillé & Non & Oui \\ \hline
+3 & Pluie & Oui & Oui \\ \hline
+4 & Pluie & Non & Oui \\ \hline
+5 & Ensoleillé & Oui & Non \\ \hline
+6 & Pluie & Non & Oui \\ \hline
+7 & Ensoleillé & Oui & Non \\ \hline
+8 & Pluie & Non & Oui \\ \hline
+9 & Ensoleillé & Non & Non \\ \hline
+10 & Pluie & Oui & Oui \\ \hline
+\end{tabular}
+\end{table}
+
+Utilisez le classifieur Naïve Bayes pour prédire si la personne jouera au tennis étant donné
+les nouvelles conditions suivantes : $X_{\text{test}}$ = (Temps= Ensoleillé, Vent= Non) 
+
+\vspace{0.75cm}
+Calcule des probabilites priorie :
+\[P(\text{Oui}) = \dfrac{6}{10} \quad , \quad P(\text{Non}) = \dfrac{4}{10}\]
+
+
+\vspace{0.75cm}
+Calcule des probabilites conditionelle :
+\begin{align*}
+    &P(X_{\text{test}} = P (\text{Ensoleillé , Non}) \hspace{0.1cm} | \hspace{0.1cm} Y = \text{Oui}) = P(x_1 = \text{Ensoleillé} \hspace{0.1cm} | \hspace{0.1cm} Y =\text{Oui}) \cdot P(x_2 = \text{Non} \hspace{0.1cm} | \hspace{0.1cm} Y =\text{Oui}) = \dfrac{1}{6} \cdot \dfrac{4}{6} = \dfrac{1}{9}\\[0.15cm] 
+    &P(X_{\text{test}} = P (\text{Ensoleillé , Non}) \hspace{0.1cm} | \hspace{0.1cm} Y = \text{Non}) = P(x_1 = \text{Ensoleillé} \hspace{0.1cm} | \hspace{0.1cm} Y =\text{Non}) \cdot P(x_2 = \text{Non} \hspace{0.1cm} | \hspace{0.1cm} Y =\text{Non}) = \dfrac{3}{4} \cdot \dfrac{1}{4} = \dfrac{3}{16} 
+\end{align*}
+
+\vspace{0.75cm}
+Calcule des numerateurs :
+
+\begin{align*}
+    &\text{Numerateur(Oui)} = P (\text{Ensoleillé , Non}) \hspace{0.1cm} | \hspace{0.1cm} Y = \text{Oui})\cdot P(\text{Oui}) = \dfrac{1}{9} \cdot \dfrac{6}{10} = 0.067\\[0.1cm]
+    &\text{Numerateur(Non)} = P (\text{Ensoleillé , Non}) \hspace{0.1cm} | \hspace{0.1cm} Y = \text{Non})\cdot P(\text{Non}) = \dfrac{3}{16} \cdot \dfrac{4}{10} = 0.075
+\end{align*}
+
+\vspace{0.45cm}
+
+Puisque Numerateur(Non) = 0.075 $>$ Numerateur(Oui) = 0.067 le classifieur Naïve Bayes prédit la classe Non.\\[0.1cm]
+\textbf{Conclusion} : Selon les conditions de test ($X_{\text{text}}$ = (Temps= Ensoleillé, Vent= Non)) l'algorithme prédit que la personne ne jouera pas au tennis.\\[0.15cm]
+
+Pour l'information la probabilité postérieure réelle serait :
+\[P(Y = \text{Non} | X_{\text{test}}) = \dfrac{0.075}  {(0.067 +0.075)} = 0,53\] 
+
+\end{document}
