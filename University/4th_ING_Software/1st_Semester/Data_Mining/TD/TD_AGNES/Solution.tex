@@ -1,0 +1,327 @@
+\documentclass{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+\usepackage{booktabs} 
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+
+\lstdefinestyle{pythonstyle}{
+    language=python,                    % Language set to Python
+    basicstyle=\ttfamily\footnotesize,   % Change basic font size
+    keywordstyle=\color{blue}\bfseries, % Different keyword style
+    stringstyle=\color{red},         % Different string color
+    commentstyle=\color{green!60!black}\itshape, % Adjust comment color
+    numbers=left,                       % Line numbers on the left
+    numberstyle=\tiny\color{gray},      % Smaller number font and color
+    stepnumber=1,                       % Number each line
+    frame=single,                       % Single frame around code
+    tabsize=4,                          % Adjust tab size
+    showstringspaces=false,             % Do not show spaces in strings
+    captionpos=b,% Position of caption
+    breaklines=true,
+    inputencoding=utf8
+}
+
+
+
+
+\begin{document}
+\tit{TD AGNES}
+
+\vspace{0.25cm}
+
+
+\begin{prettyBox}{AGNES}{myblue}
+    AGNES est un algorithme de clustering hiérarchique. Il forme des clusters deux à deux jusqu'à atteindre 
+    un cluster qui contient tous les points du dataset (bottom-up), ce qui donne un dendrogramme. il prend un paramètre
+    $K$ (le nombre de clusters) pour définir quels clusters utiliser et le type de liaison.
+\end{prettyBox}
+
+\vspace{0.35cm}
+
+\begin{prettyBox}{Algo}{myblue}
+    \begin{enumerate}
+        \setlength{\itemsep}{0pt}
+        \item Calculer la distance entre chaque paire de points deux à deux et tracer la matrice d'approximité.
+        \item Prendre les deux clusters avec la distance la plus petite.
+        \item Supprimer la ligne et la colonne des clusters fusionnés.
+        \item On met comme nouvelle distance :
+            \begin{itemize}
+               \setlength{\itemsep}{0pt}
+                \item Min si liaison simple.
+                \item Max si liaison complète.
+                \item Moyenne si liaison moyenne.
+            \end{itemize}
+        \item Répéter jusqu'à obtenir un cluster contenant tous les points du dataset.
+    \end{enumerate}
+\end{prettyBox}
+
+\vspace{1cm}
+On a comme data set les points : 18 , 22 , 25 , 27 , 42 , 47\\[0.1cm]
+Calcule les distances entre les points pour aboutir à la matrice d'approximité :
+\begin{table}[h]
+\centering
+
+\renewcommand{\arraystretch}{1.75} 
+\setlength{\tabcolsep}{7pt}      
+
+
+\begin{tabular}{|c|c|c|c|c|c|c|} 
+
+\hline
+ & 18 & 22 & 25 & 27 & 42 & 43 \\ \hline
+18& 0 & $\sqrt{(18-22)^2} = 4$ &  $\sqrt{(18-25)^2} = 7$  & $\sqrt{(18-27)^2} = 9$ & $\sqrt{(18-42)^2} = 24$ & $\sqrt{(18-43)^2} = 25$ \\ \hline
+22 & 4 &0 & $\sqrt{(22-25)^2} = 3$ & $\sqrt{(22-27)^2} = 5$ & $\sqrt{(22-42)^2} = 20$ & $\sqrt{(22-43)^2} = 21$ \\ \hline
+25 & 7 & 3 & 0 & $\sqrt{(25-27)^2} = 2$ & $\sqrt{(25-42)^2} = 17$ & $\sqrt{(25-43)^2} = 18$ \\ \hline
+27 & 9 & 5 & 2 & 0 & $\sqrt{(27-42)^2} = 15$ & $\sqrt{(25-43)^2} = 16$ \\ \hline
+42 &24 & 20 & 17 & 15 &0 & $\sqrt{(42-43)^2} = 1$ \\ \hline
+43 &25 & 21 &  18 & 16 &1 & 0 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\vspace{0.15cm}
+
+On a la matrice d'approximité suivante : appliquer le clustering AGNES avec liaison simple :
+
+\begin{table}[h]
+\centering
+
+\renewcommand{\arraystretch}{1.75} 
+\setlength{\tabcolsep}{12pt}      
+
+\newcolumntype{y}{>{\columncolor{green!60!white}}c}
+
+\begin{tabular}{|c|c|c|c|c|y|y|} \hline
+   & 18 & 22 & 25 & 27 & 42 & 43 \\ \hline
+18 & 0  & 4  & 7  & 9  & 24 & 25 \\ \hline
+22 & 4  & 0  & 3  & 5  & 20 & 21 \\ \hline
+25 & 7  & 3  & 0  & 2  & 17 & 18 \\ \hline
+27 & 9  & 5  & 2  & 0  & 15 & 16 \\ \hline
+\rowcolor{green!60!white} 42 & 24 & 20 & 17 & 15 & 0  & 1  \\ \hline
+\rowcolor{green!60!white} 43 & 25 & 21 & 18 & 16 & 1  & 0  \\ \hline
+\end{tabular}
+\end{table}
+
+
+\vspace{0.15cm}
+La distance minimale est entre les clusters (42,43), donc on va les fusionner et on prendra les distances minimal :
+min(24,25) = 24 , min(20,21) = 20 ,
+min(17,18) = 17 , min (15,16) = 15
+
+
+\newpage
+La matrice d'approximité après avoir fusionné (42, 43) :
+
+\begin{table}[h]
+\centering
+
+\renewcommand{\arraystretch}{1.75} 
+\setlength{\tabcolsep}{12pt}      
+
+
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+   & 18 & 22 & 25 & 27 & (42,43)  \\ \hline
+18 & 0  & 4  & 7  & 9  & 24  \\ \hline
+22 & 4  & 0  & 3  & 5  & 20 \\ \hline
+25 & 7  & 3  & 0  & 2  & 17 \\ \hline
+27 & 9  & 5  & 2  & 0  & 15 \\ \hline
+(42,43) & 24 & 20 & 17 & 15 & 0 \\ \hline
+\end{tabular}
+\end{table}
+
+\vspace{0.25cm}
+
+\begin{table}[h]
+\centering
+
+\renewcommand{\arraystretch}{1.75} 
+\setlength{\tabcolsep}{12pt}      
+
+
+\newcolumntype{y}{>{\columncolor{green!60!white}}c}
+\begin{tabular}{|c|c|c|y|y|c|} \hline
+   & 18 & 22 & 25 & 27 & (42,43)  \\ \hline
+18 & 0  & 4  & 7  & 9  & 24  \\ \hline
+22 & 4  & 0  & 3  & 5  & 20 \\ \hline
+\rowcolor{green!60!white} 25 & 7  & 3  & 0  & 2  & 17 \\ \hline
+\rowcolor{green!60!white} 27 & 9  & 5  & 2  & 0  & 15 \\ \hline
+(42,43) & 24 & 20 & 17 & 15 & 0 \\ \hline
+\end{tabular}
+\end{table}
+
+La distance minimale est entre les clusters (25,27), donc on va les fusionner et on prendra les distances minimal :
+min(7,9) = 7 , min(3,5) = 3 ,
+min(17,15) = 15 
+
+\vspace{0.75cm}
+
+La matrice d'approximité après avoir fusionné (25, 47) :
+
+\begin{table}[h]
+\centering
+
+\renewcommand{\arraystretch}{1.75} 
+\setlength{\tabcolsep}{12pt}      
+
+
+\begin{tabular}{|c|c|c|c|c|} \hline
+   & 18 & 22 & (25,27)  & (42,43)  \\ \hline
+18 & 0  & 4  & 7        & 24  \\ \hline
+22 & 4  & 0  & 3        & 20 \\ \hline
+(25,27) & 7  & 3  & 0        & 15 \\ \hline
+(42,43) & 24 & 20 & 15  & 0 \\ \hline
+\end{tabular}
+\end{table}
+
+\vspace{0.25cm}
+
+\begin{table}[H]
+\centering
+
+\renewcommand{\arraystretch}{1.75} 
+\setlength{\tabcolsep}{12pt}      
+
+
+\newcolumntype{y}{>{\columncolor{green!60!white}}c}
+
+\begin{tabular}{|c|c|y|y|c|} \hline
+   & 18 & 22 & (25,27)  & (42,43)  \\ \hline
+18 & 0  & 4  & 7        & 24  \\ \hline
+\rowcolor{green!60!white} 22 & 4  & 0  & 3        & 20 \\ \hline
+\rowcolor{green!60!white}(25,27) & 7  & 3  & 0        & 15 \\ \hline
+(42,43) & 24 & 20 & 15  & 0 \\ \hline
+\end{tabular}
+\end{table}
+
+\vspace{0.15cm}
+La distance minimale est entre les clusters 22 et (25,27) donc on va les fusionner et on prendra les distances minimal \\
+min(4,7) = 4 , min(20,15) = 15 
+
+
+
+\newpage
+
+
+La matrice d'approximité après avoir fusionné 22 avec (25, 47) :
+
+\begin{table}[H]
+\centering
+
+\renewcommand{\arraystretch}{1.75} 
+\setlength{\tabcolsep}{12pt}      
+
+
+\begin{tabular}{|c|c|c|c|} \hline
+   & 18 &(22,(25,27))  & (42,43)  \\ \hline
+18 & 0    & 4        & 24  \\ \hline
+(22,(25,27)) & 4    & 0        & 15 \\ \hline
+(42,43) & 24  & 15  & 0 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\vspace{0.25cm}
+
+
+\begin{table}[h]
+\centering
+
+\renewcommand{\arraystretch}{1.75} 
+\setlength{\tabcolsep}{12pt}      
+
+
+\newcolumntype{y}{>{\columncolor{green!60!white}}c}
+\begin{tabular}{|c|y|y|c|} \hline
+   & 18 &(22,(25,27))  & (42,43)  \\ \hline
+\rowcolor{green!60!white} 18 & 0    & 4        & 24  \\ \hline
+\rowcolor{green!60!white} (22,(25,27)) & 4    & 0        & 15 \\ \hline
+(42,43) & 24  & 15  & 0 \\ \hline
+\end{tabular}
+\end{table}
+
+La distance minimale est entre les clusters 18 et (22,(25,27)) donc on va les fusionner et on prendra les distances minimal  min(24,15) = 15 
+
+
+\vspace{0.5cm}
+
+La matrice d'approximité après avoir fusionné 18 avec (22,(25, 47)) :
+\begin{table}[H]
+\centering
+
+\renewcommand{\arraystretch}{1.75} 
+\setlength{\tabcolsep}{12pt}      
+
+
+\begin{tabular}{|c|c|c|c|} \hline
+                  &(18,(22,(25,27)))  & (42,43)  \\ \hline
+(18,(22,(25,27))) & 0                 & 15 \\ \hline
+(42,43)           & 15                & 0 \\ \hline
+\end{tabular}
+\end{table}
+
+Il ne reste que 2 clusters. Si on les fusionne, on aura un cluster contenant tous les points du dataset, donc l'algorithme est terminé.\\[0.25cm]
+Le dendograme :
+
+ \begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.65\textwidth]{den.png} 
+\end{figure}
+
+
+
+\end{document}
