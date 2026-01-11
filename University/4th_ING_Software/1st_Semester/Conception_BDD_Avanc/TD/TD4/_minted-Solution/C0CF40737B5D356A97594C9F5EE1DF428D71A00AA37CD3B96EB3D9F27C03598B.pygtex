@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{FRAG\PYGZus{}NAME}\PYG{+w}{ }\PYG{k}{AS}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{ATT\PYGZus{}1}\PYG{+w}{ }\PYG{p}{,}\PYG{+w}{ }\PYG{p}{...}\PYG{+w}{ }\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ATT\PYGZus{}M}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{k}{TABLE\PYGZus{}NAME}\PYG{p}{;}
+\end{Verbatim}

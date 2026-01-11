@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} FHP}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{k}{TABLE\PYGZus{}NAME}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{p}{...}
+\PYG{+w}{ }\PYG{p}{)}
+\PYG{+w}{ }\PYG{n}{PARTITION}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{n}{LIST}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ATTRIBUTE\PYGZus{}NAME}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{n}{PARTITION}\PYG{+w}{ }\PYG{n}{FRAG1\PYGZus{}NAME}\PYG{+w}{ }\PYG{k}{VALUES}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{VALUES\PYGZus{}1}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{PARTITION}\PYG{+w}{ }\PYG{n}{FRAG2\PYGZus{}NAME}\PYG{+w}{ }\PYG{k}{VALUES}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{VALUES\PYGZus{}2}\PYG{p}{),}
+\PYG{+w}{    }\PYG{p}{....}
+\PYG{+w}{    }\PYG{n}{PARTITON}\PYG{+w}{ }\PYG{n}{FRAGN\PYGZus{}NAME}\PYG{+w}{ }\PYG{k}{VALUES}\PYG{p}{(}\PYG{k}{DEFAULT}\PYG{p}{)}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} optional to use default means rest of values}
+\PYG{+w}{ }\PYG{p}{);}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} FHD}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{k}{TABLE\PYGZus{}NAME}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{p}{...,}
+\PYG{k}{CONSTRAINT}\PYG{+w}{ }\PYG{k}{CONSTRAINT\PYGZus{}NAME}\PYG{+w}{ }\PYG{k}{foreign}\PYG{+w}{ }\PYG{k}{key}\PYG{p}{(}\PYG{n}{TABLE\PYGZus{}NAME\PYGZus{}FK}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{REFERENCES}
+\PYG{n}{REFERENCED\PYGZus{}TABLE}\PYG{p}{(}\PYG{n}{REFERENCES\PYGZus{}TABLE\PYGZus{}PK}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{)}\PYG{+w}{ }\PYG{n}{PARTITION}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{n}{REFERENCE}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{CONSTRAINT\PYGZus{}NAME}\PYG{p}{);}
+
+\end{Verbatim}

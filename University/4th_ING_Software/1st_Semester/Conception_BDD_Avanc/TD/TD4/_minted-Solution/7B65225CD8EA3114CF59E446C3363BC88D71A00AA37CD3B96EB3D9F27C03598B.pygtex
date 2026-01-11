@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{NOM}\PYG{p}{,}\PYG{n}{PRENOM}\PYG{p}{,}\PYG{n}{VILLE}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{USER2}\PYG{p}{,}\PYG{n}{USER1}\PYG{+w}{ }\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{AGE}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mi}{18}\PYG{+w}{ }\PYG{k}{AND}\PYG{+w}{ }\PYG{n}{USER1}\PYG{p}{.}\PYG{n}{IDU}\PYG{o}{=}\PYG{n}{USER2}\PYG{p}{.}\PYG{n}{IDU}\PYG{p}{;}
+\end{Verbatim}

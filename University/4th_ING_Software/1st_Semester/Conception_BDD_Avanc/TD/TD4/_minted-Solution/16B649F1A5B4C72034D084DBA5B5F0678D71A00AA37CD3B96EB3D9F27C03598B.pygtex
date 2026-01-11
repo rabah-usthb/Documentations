@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} FHP}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{AGENCE}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{n}{NUMAG}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{VILLEAG}\PYG{+w}{ }\PYG{n}{VARCHAR2}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{NUM}\PYG{o}{\PYGZhy{}}\PYG{n}{GERANT}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{NBR}\PYG{o}{\PYGZhy{}}\PYG{n}{INSTRUCTEURS}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{p}{,}
+\PYG{+w}{    }\PYG{k}{CONSTRAINT}\PYG{+w}{ }\PYG{n}{PK\PYGZus{}AGENCE}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{NUMAG}\PYG{p}{),}
+\PYG{+w}{    }\PYG{k}{CONSTRAINT}\PYG{+w}{ }\PYG{n}{FK\PYGZus{}AGENCE\PYGZus{}PA}\PYG{+w}{ }\PYG{k}{FOREIGN}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{NUM}\PYG{o}{\PYGZhy{}}\PYG{n}{GERANT}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{PA}\PYG{p}{(}\PYG{n}{NUMP}\PYG{p}{)}
+\PYG{+w}{ }\PYG{p}{)}
+\PYG{+w}{ }\PYG{n}{PARTITION}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{n}{LIST}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{VILLEAG}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{n}{PARTITION}\PYG{+w}{ }\PYG{n}{AGENCE\PYGZus{}ALGER}\PYG{+w}{ }\PYG{k}{VALUES}\PYG{+w}{ }\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ALGER\PYGZsq{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{PARTITION}\PYG{+w}{ }\PYG{n}{AGENCE\PYGZus{}CONST}\PYG{+w}{ }\PYG{k}{VALUES}\PYG{+w}{ }\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}CONSTANTINE\PYGZsq{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{PARTITION}\PYG{+w}{ }\PYG{n}{AGENCE\PYGZus{}ORAN}\PYG{+w}{ }\PYG{k}{VALUES}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ORAN\PYGZsq{}}\PYG{p}{)}
+\PYG{+w}{ }\PYG{p}{);}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} FHD}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{CLIENT}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{n}{NUMCLI}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{NOMCLI}\PYG{+w}{ }\PYG{n}{VARCHAR2}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{ADRESSECLI}\PYG{+w}{ }\PYG{n}{VARCHAR2}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{NUMAG}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{AGE}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{p}{,}
+\PYG{+w}{    }\PYG{k}{CONSTRAINT}\PYG{+w}{ }\PYG{n}{PK\PYGZus{}CLIENT}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{NUMCLI}\PYG{p}{),}
+\PYG{+w}{    }\PYG{k}{CONSTRAINT}\PYG{+w}{ }\PYG{n}{FK\PYGZus{}CLIENT\PYGZus{}AGENCE}\PYG{+w}{ }\PYG{k}{FOREIGN}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{NUMAG}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{AGENCE}\PYG{p}{(}\PYG{n}{NUMAG}\PYG{p}{))}
+\PYG{n}{PARTITION}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{n}{REFERENCE}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{FK\PYGZus{}CLIENT\PYGZus{}AGENCE}\PYG{p}{);}
+\end{Verbatim}

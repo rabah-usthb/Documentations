@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} R1}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{NOM}\PYG{p}{,}\PYG{n}{PRENOM}\PYG{p}{,}\PYG{n}{EMAIL}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{UTILISATEUR}\PYG{+w}{ }\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{DATE\PYGZus{}DERNIER\PYGZus{}ACCES}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}01\PYGZhy{}03\PYGZhy{}2011\PYGZsq{}}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} R2}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{VILLE}\PYG{p}{,}\PYG{n}{PAYS}\PYG{p}{,}\PYG{n}{AGE}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{UTILISATEUR}\PYG{+w}{ }\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{DATE\PYGZus{}ENREGISTREMENT}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}01\PYGZhy{}01\PYGZhy{}2011\PYGZsq{}}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} R3}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{NOM}\PYG{p}{,}\PYG{n}{PRENOM}\PYG{p}{,}\PYG{n}{VILLE}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{UTILISATEUR}\PYG{+w}{ }\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{AGE}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mi}{18}\PYG{p}{;}
+\end{Verbatim}

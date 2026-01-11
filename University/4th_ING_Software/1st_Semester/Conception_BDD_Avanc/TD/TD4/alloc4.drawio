@@ -1,0 +1,31 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Page-1" id="CdM32hRa7TEOHtzLbBZW">
+    <mxGraphModel dx="1426" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xx1Ge5uqiqGt2vu2VACx-1" value="Reseau De&amp;nbsp;&lt;div&gt;Communication&lt;/div&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="285" y="260" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="xx1Ge5uqiqGt2vu2VACx-2" value="site Alger" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="240" width="150" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="xx1Ge5uqiqGt2vu2VACx-3" value="&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;table: propriete&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;table: visites&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="xx1Ge5uqiqGt2vu2VACx-2">
+          <mxGeometry x="-30" y="40" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="xx1Ge5uqiqGt2vu2VACx-4" value="site Blida" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="552" y="235" width="150" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="xx1Ge5uqiqGt2vu2VACx-11" value="&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;table: client&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="xx1Ge5uqiqGt2vu2VACx-4">
+          <mxGeometry x="-30" y="40" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="xx1Ge5uqiqGt2vu2VACx-8" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#82b366;shadow=0;dashed=0;shape=mxgraph.ios7.icons.flash;rotation=90;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="226.69" y="253.86" width="30.27" height="112.28" as="geometry" />
+        </mxCell>
+        <mxCell id="xx1Ge5uqiqGt2vu2VACx-9" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#82b366;shadow=0;dashed=0;shape=mxgraph.ios7.icons.flash;rotation=90;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="475.005" y="253.865" width="30.27" height="112.28" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

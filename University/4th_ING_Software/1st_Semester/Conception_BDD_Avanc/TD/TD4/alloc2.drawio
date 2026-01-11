@@ -1,0 +1,49 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Page-1" id="Qd7ImTOqG9X18eiD_onP">
+    <mxGraphModel dx="1188" dy="588" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="fo_Supqh5yKEnW5cL_z5-1" value="Reseau De&amp;nbsp;&lt;div&gt;Communication&lt;/div&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="485" y="275.73" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fo_Supqh5yKEnW5cL_z5-2" value="site Alger" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="165" width="210" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="fo_Supqh5yKEnW5cL_z5-3" value="&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;frag : production_cable&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;frag : vente_cable&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;frag : client_alger&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;frag : vendeur_alger&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="fo_Supqh5yKEnW5cL_z5-2">
+          <mxGeometry x="-10" y="40" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fo_Supqh5yKEnW5cL_z5-4" value="site Setif" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="165" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="fo_Supqh5yKEnW5cL_z5-5" value="&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;frag : production_clavier&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;frag : vente_clavier&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;frag : client_setif&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;frag : vendeur_setif&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="fo_Supqh5yKEnW5cL_z5-4">
+          <mxGeometry y="42.9" width="210" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fo_Supqh5yKEnW5cL_z5-6" value="site Annaba" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="388.01" width="210" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="fo_Supqh5yKEnW5cL_z5-7" value="&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;frag : production_ecran&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;frag : vente_ecran&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;frag : client_annaba-tarf&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;frag : vendeur_annaba&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="fo_Supqh5yKEnW5cL_z5-6">
+          <mxGeometry x="-20" y="40" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fo_Supqh5yKEnW5cL_z5-8" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#82b366;shadow=0;dashed=0;shape=mxgraph.ios7.icons.flash;rotation=120;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="443.51" y="223.75" width="30.27" height="97.28" as="geometry" />
+        </mxCell>
+        <mxCell id="fo_Supqh5yKEnW5cL_z5-11" value="site Tarf" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="388.01" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="fo_Supqh5yKEnW5cL_z5-12" value="&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;frag : production_UC&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;frag : vente_UC&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/font&gt;&amp;nbsp; &amp;nbsp;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="fo_Supqh5yKEnW5cL_z5-11">
+          <mxGeometry x="15" y="40" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fo_Supqh5yKEnW5cL_z5-13" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#82b366;shadow=0;dashed=0;shape=mxgraph.ios7.icons.flash;rotation=-125;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="443.09" y="320.81" width="30.27" height="98.31" as="geometry" />
+        </mxCell>
+        <mxCell id="fo_Supqh5yKEnW5cL_z5-14" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#82b366;shadow=0;dashed=0;shape=mxgraph.ios7.icons.flash;rotation=120;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="649.9959756400751" y="329.9972944862774" width="30.27" height="97.28" as="geometry" />
+        </mxCell>
+        <mxCell id="fo_Supqh5yKEnW5cL_z5-15" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#82b366;shadow=0;dashed=0;shape=mxgraph.ios7.icons.flash;rotation=60;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="650" y="227.39" width="30.27" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

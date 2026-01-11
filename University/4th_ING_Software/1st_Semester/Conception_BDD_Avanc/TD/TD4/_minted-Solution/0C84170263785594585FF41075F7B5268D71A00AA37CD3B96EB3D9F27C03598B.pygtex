@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{k}{SUM}\PYG{p}{(}\PYG{n}{QUANTITE}\PYG{p}{),}\PYG{n}{COMPOSANT}\PYG{p}{,}\PYG{n}{MODEL}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{PRODUCTION}
+\PYG{k}{GROUP}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{n}{COMPOSANT}\PYG{p}{,}\PYG{n}{MODEL}\PYG{p}{;}
+\end{Verbatim}

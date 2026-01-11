@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{QUANTITE}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{PRODUCTION}
+\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{NUMSERIE}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}77y6878\PYGZsq{}}\PYG{p}{;}
+\end{Verbatim}
