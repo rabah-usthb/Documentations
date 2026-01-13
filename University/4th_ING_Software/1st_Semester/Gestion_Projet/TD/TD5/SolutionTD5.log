@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  13 JAN 2026 16:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  13 JAN 2026 16:32
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**SolutionTD1.tex
-(./SolutionTD1.tex
+**SolutionTD5.tex
+(./SolutionTD5.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -564,14 +564,22 @@ Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
 \tcb@totallowerbox=\box91
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
 Library (tcolorbox): 'tcbtheorems.code.tex' version '6.2.0'
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen305
+\pgfarrowlength=\dimen306
+\pgfarrowwidth=\dimen307
+\pgfarrowlinewidth=\dimen308
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 83.
  (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count348
 \l__pdf_internal_box=\box92
-) (./SolutionTD1.aux)
-\openout1 = `SolutionTD1.aux'.
+) (./SolutionTD5.aux)
+\openout1 = `SolutionTD5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
@@ -625,13 +633,13 @@ LaTeX Font Info:    ... okay on input line 83.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count349
-\scratchdimen=\dimen305
+\scratchdimen=\dimen309
 \scratchbox=\box93
 \nofMPsegments=\count350
 \nofMParguments=\count351
 \everyMPshowfont=\toks48
 \MPscratchCnt=\count352
-\MPscratchDim=\dimen306
+\MPscratchDim=\dimen310
 \MPnumerator=\count353
 \makeMPintoPDFobject=\count354
 \everyMPtoPDFconversion=\toks49
@@ -649,46 +657,112 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 85.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 85.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<ex1.png, id=4, 1538.74875pt x 879.285pt>
-File: ex1.png Graphic file (type png)
-<use ex1.png>
-Package pdftex.def Info: ex1.png  used on input line 101.
-(pdftex.def)             Requested size: 384.11221pt x 219.48529pt.
+<r1.png, id=4, 1053.9375pt x 695.59875pt>
+File: r1.png Graphic file (type png)
+<use r1.png>
+Package pdftex.def Info: r1.png  used on input line 98.
+(pdftex.def)             Requested size: 281.68385pt x 185.91428pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./ex1.png>]
-<ex2.png, id=17, 2080.77374pt x 879.285pt>
-File: ex2.png Graphic file (type png)
-<use ex2.png>
-Package pdftex.def Info: ex2.png  used on input line 146.
-(pdftex.def)             Requested size: 384.11221pt x 162.31635pt.
- [2 <./ex2.png>] (./SolutionTD1.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./r1.png>]
+<pert1.png, id=20, 2333.71875pt x 1866.975pt>
+File: pert1.png Graphic file (type png)
+<use pert1.png>
+Package pdftex.def Info: pert1.png  used on input line 164.
+(pdftex.def)             Requested size: 409.72125pt x 327.77957pt.
+ [2 <./pert1.png>]
+<r2.png, id=25, 2258.4375pt x 984.67876pt>
+File: r2.png Graphic file (type png)
+<use r2.png>
+Package pdftex.def Info: r2.png  used on input line 172.
+(pdftex.def)             Requested size: 409.72125pt x 178.63185pt.
+<r3.png, id=26, 2378.8875pt x 984.67876pt>
+File: r3.png Graphic file (type png)
+<use r3.png>
+Package pdftex.def Info: r3.png  used on input line 181.
+(pdftex.def)             Requested size: 409.72125pt x 169.5868pt.
+<r4.png, id=27, 2378.8875pt x 984.67876pt>
+File: r4.png Graphic file (type png)
+<use r4.png>
+Package pdftex.def Info: r4.png  used on input line 196.
+(pdftex.def)             Requested size: 409.72125pt x 169.5868pt.
+ [3 <./r2.png> <./r3.png> <./r4.png>]
+<r5.png, id=36, 2378.8875pt x 984.67876pt>
+File: r5.png Graphic file (type png)
+<use r5.png>
+Package pdftex.def Info: r5.png  used on input line 213.
+(pdftex.def)             Requested size: 409.72125pt x 169.5868pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--221
+
+ []
+
+<r6.png, id=37, 2378.8875pt x 984.67876pt>
+File: r6.png Graphic file (type png)
+<use r6.png>
+Package pdftex.def Info: r6.png  used on input line 224.
+(pdftex.def)             Requested size: 409.72125pt x 169.5868pt.
+[4 <./r5.png> <./r6.png>]
+<tab.png, id=43, 1327.96124pt x 1568.86125pt>
+File: tab.png Graphic file (type png)
+<use tab.png>
+Package pdftex.def Info: tab.png  used on input line 244.
+(pdftex.def)             Requested size: 153.64644pt x 181.50446pt.
+<pert2.png, id=44, 3222.0375pt x 1900.09875pt>
+File: pert2.png Graphic file (type png)
+<use pert2.png>
+Package pdftex.def Info: pert2.png  used on input line 254.
+(pdftex.def)             Requested size: 358.50317pt x 211.41794pt.
+<pert3.png, id=45, 3222.0375pt x 2020.54875pt>
+File: pert3.png Graphic file (type png)
+<use pert3.png>
+Package pdftex.def Info: pert3.png  used on input line 263.
+(pdftex.def)             Requested size: 358.50317pt x 224.82002pt.
+ [5 <./tab.png> <./pert2.png> <./pert3.png>]
+<pert4.png, id=53, 3222.0375pt x 2110.88625pt>
+File: pert4.png Graphic file (type png)
+<use pert4.png>
+Package pdftex.def Info: pert4.png  used on input line 287.
+(pdftex.def)             Requested size: 409.72125pt x 268.40167pt.
+ [6 <./pert4.png>]
+<gant.png, id=58, 1629.08624pt x 3827.29875pt>
+File: gant.png Graphic file (type png)
+<use gant.png>
+Package pdftex.def Info: gant.png  used on input line 300.
+(pdftex.def)             Requested size: 307.2929pt x 721.93835pt.
+ [7 <./gant.png>]
+<r.png, id=64, 1987.425pt x 1014.79124pt>
+File: r.png Graphic file (type png)
+<use r.png>
+Package pdftex.def Info: r.png  used on input line 311.
+(pdftex.def)             Requested size: 409.72125pt x 209.19489pt.
+ [8 <./r.png>] (./SolutionTD5.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 26340 strings out of 474222
- 585693 string characters out of 5748732
- 1932975 words of memory out of 5000000
- 48229 multiletter control sequences out of 15000+600000
- 564409 words of font info for 60 fonts, out of 8000000 for 9000
+ 26779 strings out of 474222
+ 596602 string characters out of 5748732
+ 1938975 words of memory out of 5000000
+ 48660 multiletter control sequences out of 15000+600000
+ 564708 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,7n,117p,412b,881s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on SolutionTD1.pdf (2 pages, 129076 bytes).
+ 102i,13n,117p,412b,885s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on SolutionTD5.pdf (8 pages, 875065 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
+ 117 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
