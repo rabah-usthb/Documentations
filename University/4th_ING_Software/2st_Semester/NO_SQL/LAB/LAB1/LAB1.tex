@@ -319,7 +319,7 @@ db["Gym"].find({"Sessions.Label" : /Volley ball/i } , {"Sessions.Day" : 1 , "Gym
 \begin{codeInput}{javascript}{Gyms Volley Ball Session On Wednesday After 15h}{code01}
 // first method implicit and 
 db["Gym"].find({
-    "Sessions.Label" : "Volley ball"  , 
+    "Sessions.Label" : /Volley ball/i  , 
     "Sessions.Day" : /Mercredi/i , 
     "Sessions.Time" : {$gt : 15 } 
     },
@@ -334,7 +334,7 @@ db["Gym"].find({
 // second method explicit and 
 db["Gym"].find({
     $and : [
-    {"Sessions.Label" : "Volley ball"}  , 
+    {"Sessions.Label" : /Volley ball/i}  , 
     {"Sessions.Day" : /Mercredi/i} , 
     {"Sessions.Time" : {$gt : 15 }} 
     ]

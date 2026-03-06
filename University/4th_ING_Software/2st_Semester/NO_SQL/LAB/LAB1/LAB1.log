@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  6 MAR 2026 12:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.12)  6 MAR 2026 12:41
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1012,10 +1012,10 @@ Package pdftex.def Info: nicelyConnected.png  used on input line 252.
  (./_minted-LAB1/06C61E090D4FF3A7D59882AA1570B62E21B64155EB0A544F0E232FD6176E6C22.pygtex)
 \openout7 = `LAB1.listing'.
 
- (./_minted-LAB1/FF95509BC742E33D41E43C03E94B4C6621B64155EB0A544F0E232FD6176E6C22.pygtex) [3{/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc}]
+ (./_minted-LAB1/A841C1A18AD338F4C94752582FDEAC4E21B64155EB0A544F0E232FD6176E6C22.pygtex) [3{/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc}]
 \openout7 = `LAB1.listing'.
 
- (./_minted-LAB1/BD9411747E47F439B5A56C524C58D64221B64155EB0A544F0E232FD6176E6C22.pygtex)
+ (./_minted-LAB1/E8A03CAA6A1ED407441CA12CCD84890F21B64155EB0A544F0E232FD6176E6C22.pygtex)
 \openout7 = `LAB1.listing'.
 
  (./_minted-LAB1/63B2040C87171E28CD1EC2F2524B9DC221B64155EB0A544F0E232FD6176E6C22.pygtex
@@ -1042,7 +1042,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  89i,11n,117p,808b,1249s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on LAB1.pdf (4 pages, 1162882 bytes).
+Output written on LAB1.pdf (4 pages, 1162868 bytes).
 PDF statistics:
  153 PDF objects out of 1000 (max. 8388607)
  117 compressed objects within 2 object streams
