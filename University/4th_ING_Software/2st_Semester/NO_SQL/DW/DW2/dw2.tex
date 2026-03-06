@@ -241,7 +241,7 @@ db["Employee"].find( {
 
 \begin{codeInput}{javascript}{Without Departements}{code01}
 db["Employee"].find( { 
-    $and : [
+    $or : [
         {"Departements" : {$size : 0}},
         {"Departements" : {$exists: false}}
     ]
