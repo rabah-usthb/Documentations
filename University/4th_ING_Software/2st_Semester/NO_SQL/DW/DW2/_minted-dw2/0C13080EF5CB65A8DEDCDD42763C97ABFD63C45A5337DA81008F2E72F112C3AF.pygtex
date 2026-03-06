@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// first method implicit and}
+\PYG{n+nx}{db}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Employee\PYGZdq{}}\PYG{p}{].}\PYG{n+nx}{find}\PYG{p}{(\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Salaire\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n+nx}{\PYGZdl{}gte}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{2000}\PYG{+w}{ }\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{\PYGZdl{}lte}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{4000}\PYG{p}{\PYGZcb{}\PYGZcb{}}\PYG{+w}{ }\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Nom\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Poste\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Salaire\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}id\PYGZdq{}}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{\PYGZcb{})}
+
+\PYG{c+c1}{// second method explicit and}
+\PYG{n+nx}{db}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Employee\PYGZdq{}}\PYG{p}{].}\PYG{n+nx}{find}\PYG{p}{(}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{\PYGZdl{}and}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Salaire\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n+nx}{\PYGZdl{}gte}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{2000}\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Salaire\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n+nx}{\PYGZdl{}lte}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{4000}\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{]}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{p}{,}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Nom\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Poste\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Salaire\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}id\PYGZdq{}}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{\PYGZcb{}}
+\PYG{p}{)}
+\end{Verbatim}

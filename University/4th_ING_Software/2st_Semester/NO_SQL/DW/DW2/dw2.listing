@@ -1,0 +1,1 @@
+db["Employee"].find( {"Departements.Nom" : /Ing/i }, {"Nom" : 1, "Poste" : 1, "_id": 0} )

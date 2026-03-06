@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// first method using in operator}
+\PYG{n+nx}{db}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Employee\PYGZdq{}}\PYG{p}{].}\PYG{n+nx}{find}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{    }\PYG{l+s+s2}{\PYGZdq{}Poste\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n+nx}{\PYGZdl{}in}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+sr}{/Ingenieur/i}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+sr}{/Manageur/i}\PYG{p}{]\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Nom\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Poste\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}id\PYGZdq{}}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{\PYGZcb{}}
+\PYG{p}{)}
+
+\PYG{c+c1}{// second method using or operator}
+\PYG{n+nx}{db}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Employee\PYGZdq{}}\PYG{p}{].}\PYG{n+nx}{find}\PYG{p}{(}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{\PYGZdl{}or}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Post\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+sr}{/Ingenieur/i}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Post\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+sr}{/Manageur/i}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{]}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{p}{,}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Nom\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Poste\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}id\PYGZdq{}}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{\PYGZcb{}}
+\PYG{p}{)}
+\end{Verbatim}

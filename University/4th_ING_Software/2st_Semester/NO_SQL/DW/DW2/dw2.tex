@@ -1,0 +1,263 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\usepackage{float}
+
+\newcounter{commentCount}
+\newcounter{filePrg}
+\newcounter{inputPrg}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{minted}
+
+\usepackage{ifthen}
+\usepackage{fontawesome}
+
+\usepackage{tabularx}
+\newcolumntype{\CeX}{>{\centering\let\newline\\\arraybackslash}X}%
+\newcommand{\TwoSymbolsAndText}[3]{%
+  \begin{tabularx}{\textwidth}{c\CeX c}%
+    #1 & #2 & #3
+  \end{tabularx}%
+}
+
+\newtcblisting[use counter=inputPrg, number format=\arabic]{codeInput}[3]{
+  listing engine=minted,
+  minted language=#1,
+  minted options={autogobble,breaklines, fontsize=\footnotesize},
+  listing only,
+  size=title,
+  arc=1.5mm,
+  breakable,
+  enhanced jigsaw,
+  colframe=myblue,
+  coltitle=White,
+  boxrule=0.5mm,
+  colback=white,
+  coltext=Black,
+  title=\TwoSymbolsAndText{\faCode}{%
+  \textbf{Mongo Query}\ifthenelse{\equal{#2}{}}{}{\textbf{: }#2}%
+  }{\faCode},
+  label=inputPrg:#3
+}
+
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+\usepackage{subcaption}
+\usepackage{minted}
+
+\begin{document}
+
+\tit{DW 2}
+
+\section{Structure Of Employee Data Set}
+
+\begin{codeInput}{json}{Data Set}{code01}
+{
+    "id" : "123",
+    "Prenom" : "Rabah",
+    "Nom" : "Chabane Chaouche",
+    "Date_Naissance" : "19-07-2004",
+    "Salaire" : 2004,
+    "Poste" : "Java",
+    "Departements" : [{
+        "Nom" : "IT",
+        "Lieu" : "Alger",
+        "Duree_Travaille" : 40
+    }]
+}
+\end{codeInput}
+
+\vspace{0.5cm}
+\section{Queries}
+
+\subsection{Employees That Have Salary Between 2000-4000 }
+
+\begin{codeInput}{javascript}{Salary 2000-4000}{code01}
+// first method implicit and 
+db["Employee"].find({"Salaire" : {$gte : 2000 , $lte : 4000}} , {"Nom" : 1, "Poste" : 1, "Salaire" : 1, "_id": 0})
+
+// second method explicit and
+db["Employee"].find( { 
+    $and : [
+        {"Salaire" : {$gte : 2000} } , 
+        {"Salaire" : {$lte : 4000} } 
+    ]
+    } , 
+    {"Nom" : 1, "Poste" : 1, "Salaire" : 1, "_id": 0}
+)
+\end{codeInput}
+
+\vspace{0.25cm}
+
+\subsection{Engineer Employees That Have Salary Between 2000-4000}
+
+\begin{codeInput}{javascript}{Enginner With Salary 2000-4000}{code01}
+// first method implicit and 
+db["Employee"].find({
+    "Salaire" : {$gte : 2000 , $lte : 4000},
+    "Poste" : /Ingenieur/i
+    } , 
+    {"Nom" : 1, "Salaire" : 1, "_id": 0}
+)
+
+// second method explicit and
+db["Employee"].find( { 
+    $and : [
+        {"Salaire" : {$gte : 2000} } , 
+        {"Salaire" : {$lte : 4000} } ,
+        {"Post" : /Ingenieur/i}
+    ]
+    } , 
+    {"Nom" : 1, "Salaire" : 1, "_id": 0}
+)
+\end{codeInput}
+
+\newpage
+
+
+\subsection{Engineer Or Manager Employees}
+
+\begin{codeInput}{javascript}{Enginner Or Manager}{code01}
+// first method using in operator 
+db["Employee"].find({
+    "Poste" : {$in : [/Ingenieur/i, /Manageur/i]}
+    },
+    {"Nom" : 1, "Poste" : 1, "_id": 0}
+)
+
+// second method using or operator
+db["Employee"].find( { 
+    $or : [
+        {"Post" : /Ingenieur/i},
+        {"Post" : /Manageur/i}
+    ]
+    } , 
+    {"Nom" : 1, "Poste" : 1, "_id": 0}
+)
+\end{codeInput}
+
+\vspace{0.25cm}
+
+
+\subsection{Engineer Or Manager Employees Without Salary}
+
+\begin{codeInput}{javascript}{Enginner Or Manager Without Salary}{code01}
+// first method implicit and
+db["Employee"].find({
+    "Poste" : {$in : [/Ingenieur/i, /Manageur/i]},
+    "Salaire" : {$exists : false}
+    },
+    {"Nom" : 1, "Poste" : 1, "_id": 0}
+)
+
+// second method explicit and
+db["Employee"].find( { 
+    $and : [
+        {"Poste" : {$in : [/Ingenieur/i, /Manageur/i]}},
+        {"Salaire" : {$exists : false}}
+    ]
+    } , 
+    {"Nom" : 1, "Poste" : 1, "_id": 0}
+)
+\end{codeInput}
+
+\vspace{0.25cm}
+
+
+\subsection{Employees Without Departements}
+
+\begin{codeInput}{javascript}{Without Departements}{code01}
+db["Employee"].find( { 
+    $and : [
+        {"Departements" : {$size : 0}},
+        {"Departements" : {$exists: false}}
+    ]
+    } , 
+    {"Nom" : 1, "Poste" : 1, "_id": 0}
+)
+\end{codeInput}
+
+\vspace{0.25cm}
+
+\subsection{Employees With Departements ING}
+
+\begin{codeInput}{javascript}{Departements ING}{code01}
+db["Employee"].find( {"Departements.Nom" : /Ing/i }, {"Nom" : 1, "Poste" : 1, "_id": 0} )
+\end{codeInput}
+
+
+
+\end{document}
