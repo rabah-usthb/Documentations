@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nx}{db}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Sportif\PYGZdq{}}\PYG{p}{].}\PYG{n+nx}{find}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{\PYGZdl{}or}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Sports.Jouer\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n+nx}{\PYGZdl{}exists}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Sports.Jouer\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n+nx}{\PYGZdl{}size}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{]}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}id\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Nom\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{+w}{ }\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Prenom\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{\PYGZcb{}}
+\PYG{p}{)}
+\end{Verbatim}

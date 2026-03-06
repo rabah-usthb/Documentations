@@ -1,0 +1,8 @@
+db["Sportif"].find({
+    $or : [
+        {"Sports.Jouer" : {$exists : false} },
+        {"Sports.Jouer" : {$size : 0} }
+    ]
+    },
+    {"_id" : 0, "Nom" : 1 , "Prenom" : 1}
+)

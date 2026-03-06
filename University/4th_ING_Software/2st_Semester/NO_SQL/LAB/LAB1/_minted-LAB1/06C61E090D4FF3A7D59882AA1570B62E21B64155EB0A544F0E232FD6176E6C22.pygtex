@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nx}{db}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Gym\PYGZdq{}}\PYG{p}{].}\PYG{n+nx}{find}\PYG{p}{(\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Sessions.Label\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+sr}{/Volley ball/i}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Sessions.Day\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{+w}{ }\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}GymnasiumName\PYGZdq{}}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{\PYGZcb{})}
+\end{Verbatim}
