@@ -1,0 +1,30 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZdq{}titre\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Java\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZdq{}code\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2004}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZdq{}credit\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZdq{}description\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Programmation Oriente Object\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZdq{}pre\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{p}{[\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}titre\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Algo 1\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}code\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2022}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}credit\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{6}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}description\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Algo \PYGZam{} Structure Donne\PYGZdq{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}titre\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Algo 2\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}code\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2023}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}credit\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{6}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}description\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Structure Donne Dynamique\PYGZdq{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}],}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZdq{}etudiants\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{p}{[\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}nom\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Rabah\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}prenom\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Chabane Chaouche\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}Adresse\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZdq{}numRue\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{23}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZdq{}nomRue\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}nomrue213\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZdq{}ville\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Alger\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n+nt}{\PYGZdq{}code postale\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{16000}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}]}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

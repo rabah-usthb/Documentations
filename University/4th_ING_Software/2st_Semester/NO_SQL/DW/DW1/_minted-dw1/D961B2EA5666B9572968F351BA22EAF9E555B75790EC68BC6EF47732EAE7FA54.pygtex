@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZdq{}titre\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}NoSQL\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZdq{}auteur\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}id\PYGZus{}auteur\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{987}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}nom\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Bruchez\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}prenom\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Rudi\PYGZdq{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZdq{}ventes\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}id\PYGZus{}vente\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{12}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}date\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}02/06/2017\PYGZdq{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{     }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}id\PYGZus{}vente\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{20}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nt}{\PYGZdq{}date\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}12/09/2017\PYGZdq{}}
+\PYG{+w}{     }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{]}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

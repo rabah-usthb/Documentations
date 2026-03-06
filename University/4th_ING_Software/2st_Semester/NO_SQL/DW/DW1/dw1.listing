@@ -1,0 +1,19 @@
+{
+    "titre" : "Java",
+    "code" : 2004,
+    "credit" : 4,
+    "description" : "Programmation Oriente Object",
+    "pre" : [{
+        "titre" : "Algo 1",
+        "code" : 2022,
+        "credit" : 6,
+        "description" : "Algo & Structure Donne"
+    },
+    {
+        "titre" : "Algo 2",
+        "code" : 2023,
+        "credit" : 6,
+        "description" : "Structure Donne Dynamique"
+
+    }]
+}

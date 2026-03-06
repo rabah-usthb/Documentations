@@ -1,0 +1,578 @@
+\documentclass{article}
+\usepackage{multirow}
+\usepackage{tabularx}
+
+\usepackage{graphicx} % Required for inserting images
+
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\usepackage{float}
+
+\newcounter{commentCount}
+\newcounter{filePrg}
+\newcounter{inputPrg}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{minted}
+
+\usepackage{ifthen}
+\usepackage{fontawesome}
+
+\usepackage{tabularx}
+\newcolumntype{\CeX}{>{\centering\let\newline\\\arraybackslash}X}%
+\newcommand{\TwoSymbolsAndText}[3]{%
+  \begin{tabularx}{\textwidth}{c\CeX c}%
+    #1 & #2 & #3
+  \end{tabularx}%
+}
+
+\newtcblisting[use counter=inputPrg, number format=\arabic]{codeInput}[3]{
+  listing engine=minted,
+  minted language=#1,
+  minted options={autogobble,breaklines, fontsize=\footnotesize},
+  listing only,
+  size=title,
+  arc=1.5mm,
+  breakable,
+  enhanced jigsaw,
+  colframe=myblue,
+  coltitle=White,
+  boxrule=0.5mm,
+  colback=white,
+  coltext=Black,
+  title=\TwoSymbolsAndText{\faCode}{%
+  \textbf{JSON}\ifthenelse{\equal{#2}{}}{}{\textbf{: }#2}%
+  }{\faCode},
+  label=inputPrg:#3
+}
+
+
+\usepackage{boldline}
+\usepackage{tikz,tcolorbox}
+\usepackage{amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{array,multirow} % For customizing tables
+\usepackage{booktabs} % For better horizontal lines
+\usepackage{makecell}
+\setlength{\parindent}{0pt}
+\usepackage{siunitx}
+\usepackage{tkz-tab}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{caption}
+\usepackage{float}
+
+
+\newcommand{\exer}[1]{
+  \section*{Exercice #1}
+  \vspace{-0.5cm}
+  \noindent\rule{\textwidth}{0.5pt}%
+}
+
+\newcommand{\tit}[1]{
+\begin{center}
+    \Large{\textbf{{#1}}}
+\end{center}
+}
+
+\definecolor{commentgray}{HTML}{676160}
+\definecolor{messagegreen}{HTML}{17B867}
+\definecolor{myblue}{HTML}{10C2C4}
+
+\tcbuselibrary{skins, breakable, theorems}
+
+
+\newtcolorbox{prettyBox}[2]{
+  enhanced,
+  colback=white!90!#2,   % Background color based on the second parameter (color)
+  colframe=#2!60!black,  % Frame color based on the second parameter (color)
+  coltitle=white,        % Title color (white)
+  fonttitle=\bfseries\Large,
+  title=#1,              % Title from the first parameter
+  boxrule=1mm,
+  arc=0.5mm,
+  drop shadow=#2!35!gray, % Drop shadow color based on the second parameter (color)
+}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+
+
+\lstdefinestyle{cmd}{
+ basicstyle=\ttfamily,
+ backgroundcolor=\color{lightgray!20},
+ frame=single
+}
+\usepackage{subcaption}
+\usepackage{minted}
+\usepackage{multicol}
+
+
+\begin{document}
+
+\tit{DW 1}
+
+\exer{1}
+
+\begin{enumerate}
+    \item UML :
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{ex1.png} 
+\end{figure}
+
+\vspace{0.25cm}
+
+\item Modelisation oriente cle valeur avec isbn comme cle :
+
+\begin{multicols}{2}
+
+\vspace*{\fill}
+"isbn" : "2154889522"   $\xrightarrow{\hspace{4.5cm}}$
+\vspace*{\fill}
+
+\columnbreak
+
+\begin{codeInput}{json}{Valeur}{code01}
+{
+    "titre" : "Asterix Et Cleopatre",
+    "auteur" : { 
+        "id_auteur" : 154,
+        "nom" : "Gosciny",
+        "prenom" : "Rene"
+    },
+    "ventes" : [{
+        "id_vente" : 10,
+        "date" : "02/06/2017"
+    }]
+}
+\end{codeInput}
+
+\end{multicols}
+
+
+
+\begin{multicols}{2}
+
+\vspace*{\fill}
+"isbn" : "2154889589"   $\xrightarrow{\hspace{4.5cm}}$
+\vspace*{\fill}
+
+\columnbreak
+
+\begin{codeInput}{json}{Valeur}{code01}
+{
+    "titre" : "NoSQL",
+    "auteur" : { 
+        "id_auteur" : 987,
+        "nom" : "Bruchez",
+        "prenom" : "Rudi"
+    },
+    "ventes" : [
+    {
+        "id_vente" : 12,
+        "date" : "02/06/2017"
+    },
+     {
+        "id_vente" : 20,
+        "date" : "12/09/2017"
+     }
+    ]
+}
+\end{codeInput}
+
+\end{multicols}
+
+
+\vspace{0.25cm}
+
+
+\item Modelisation oriente colonne pour acceder aux livres d'un auteur :
+
+
+
+\begin{center}
+\begin{tabular}{ |c|c| } 
+\hline
+\multirow{4}{*}{\textbf{Auteur}} & \texttt{id\_auteur} \\
+                                 & \texttt{nom}        \\
+                                 & \texttt{prenom}     \\
+                                    \cline{2-2}
+                                 & \begin{tabular}{c|c}
+                                     \multirow{3}{*}{\textbf{Livre}} & \texttt{isbn}\\
+                                                                     & \texttt{titre}\\
+                                                                     & \begin{tabular}{c|c}
+                                                                         \hline
+                                                                         \multirow{2}{*}{\textbf{Ventes}} & \texttt{id\_vente}\\
+                                                                                                          & \texttt{date}\\
+                                                                       \end{tabular}\\
+                                 \end{tabular}\\\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+\item Modelisation oriente document :
+
+\begin{codeInput}{json}{Centre Vente}{code01}
+{  
+    "id_vente" : 10,
+    "date" : "02/06/2017",
+    "livre" : {
+        "isbn" : "2154889522",
+        "titre" : "Asterix Et Cleopatre",
+        "auteur" : { 
+            "id_auteur" : 154,
+            "nom" : "Gosciny",
+            "prenom" : "Rene"
+        }
+    }
+
+},
+{
+    "id_vente" : 12,
+    "date" : "02/06/2017",
+    "livre" : {
+        "isbn" : "2154889589",
+        "titre" : "NoSQL",
+        "auteur" : { 
+            "id_auteur" : 987,
+            "nom" : "Bruchez",
+            "prenom" : "Rudi"
+        } 
+    }
+},
+{
+    "id_vente" : 20,
+    "date" : "12/09/2017",
+    "livre" : {
+        "isbn" : "2154889589",
+        "titre" : "NoSQL",
+        "auteur" : { 
+            "id_auteur" : 987,
+            "nom" : "Bruchez",
+            "prenom" : "Rudi"
+        } 
+    }
+}
+\end{codeInput}
+
+
+
+\newpage
+
+
+\begin{codeInput}{json}{Centre Livre}{code01}
+{   
+    "isbn" : "2154889589",
+    "titre" : "NoSQL",
+    "auteur" : { 
+        "id_auteur" : 987,
+        "nom" : "Bruchez",
+        "prenom" : "Rudi"
+    },
+    "ventes" : [{
+        "id_vente" : 12,
+        "date" : "02/06/2017"
+    },
+     {
+        "id_vente" : 20,
+        "date" : "12/09/2017"
+    }]
+},
+{   
+    "isbn" : "2154889522",
+    "titre" : "Asterix Et Cleopatre",
+    "auteur" : { 
+        "id_auteur" : 154,
+        "nom" : "Gosciny",
+        "prenom" : "Rene"
+    },
+    "ventes" : [{
+        "id_vente" : 10,
+        "date" : "02/06/2017"
+    }]
+}
+\end{codeInput}
+
+\vspace{0.5cm}
+
+
+\begin{codeInput}{json}{Centre Auteur}{code01}
+{
+    "id_auteur" : 154,
+    "nom" : "Gosciny",
+    "prenom" : "Rone",
+    "livres" : [{
+        "isbn" : "2154889522",
+        "titre" : "Asterix Et Cleopatre",
+        "ventes" : [
+        {
+            "id_vente" : 10,
+            "date" : "02/06/2017"   
+        }]
+    }]
+},
+{
+    "id_auteur" : 987,
+    "nom" : "Bruchez",
+    "prenom" : "Rudi",
+    "livres" : [{   
+        "isbn" : "2154889589",
+        "titre" : "NoSQL",
+        "ventes" : [{
+            "id_vente" : 12,
+            "date" : "02/06/2017"
+        },
+        {
+            "id_vente" : 20,
+            "date" : "12/09/2017"
+        }]
+    }]
+}
+\end{codeInput}
+
+\vspace{0.5cm}
+
+\item La modelisation influence la complexite de la requete sur les informations qui sont profondement imbrique
+    dans les documents.
+
+
+\vspace{0.5cm}
+
+\item On imbriquant un vecteur de documents d'auteurs.
+
+\newpage
+\end{enumerate}
+
+
+\exer{2}
+\begin{enumerate}
+    \item UML :
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{ex2.png} 
+\end{figure}
+
+\vspace{0.5cm}
+
+\item Modelisation oriente document centre sur les ue :
+
+
+\begin{codeInput}{json}{Centre UE}{code01}
+{
+    "id" : "ue:11",
+    "titre" : "Java",
+    "Etudiants" : [{
+        "_id" : 978,
+        "nom" : "ADIMI Meriem",
+        "note" : 12
+    }]
+},
+{
+    "id" : "ue:27",
+    "titre" : "Base De Donnees",
+    "Etudiants" : [{
+        "_id" : 978,
+        "nom" : "ADIMI Meriem",
+        "note" : 17
+    },
+    {
+        "_id" : 476,
+        "nom" : "BELABDI Ahmed",
+        "note" : 10
+    }]
+},
+{
+    "id" : "ue:37",
+    "titre" : "Reseaux",
+    "Etudiants" : [{
+        "_id" : 978,
+        "nom" : "ADIMI Meriem",
+        "note" : 14
+    }]
+},
+{
+    "id" : "ue:13",
+    "titre" : "Methodologie",
+    "Etudiants" : [{
+        "_id" : 476,
+        "nom" : "BELABDI Ahmed",
+        "note" : 17
+    }]
+},
+{
+    "id" : "ue:76",
+    "titre" : "Conduite Projet",
+    "Etudiants" : [{
+        "_id" : 476,
+        "nom" : "BELABDI Ahmed",
+        "note" : 11
+    }]
+},
+\end{codeInput}
+
+\end{enumerate}
+
+\newpage
+
+\exer{3}
+
+\begin{enumerate}
+    \item UML :
+
+\begin{figure}[H] 
+  \centering 
+  \includegraphics[width=0.8\textwidth]{ex3.png} 
+\end{figure}
+
+\vspace{0.5cm}
+
+\item Modelisation oriente document centre etudiant , cour :
+
+
+\begin{codeInput}{json}{Centre Etudiant}{code01}
+{
+    "nom" : "Rabah",
+    "prenom" : "Chabane Chaouche",
+    "Adresse" : { 
+        "numRue" : 23,
+        "nomRue" : "nomrue213",
+        "ville" : "Alger",
+        "code postale" : 16000
+    },
+    "Cours" : [{
+        "titre" : "Java",
+        "code" : 2004,
+        "credit" : 4,
+        "description" : "Programmation Oriente Object",
+        "pre" : [{ 
+            "titre" : "Algo 1",
+            "code" : 2022,
+            "credit" : 6,
+            "description" : "Algo & Structure Donne"
+        },
+        {
+            "titre" : "Algo 2",
+            "code" : 2023,
+            "credit" : 6,
+            "description" : "Structure Donne Dynamique"
+        }]
+    }]
+}
+\end{codeInput}
+
+\newpage
+
+\begin{codeInput}{json}{Centre Cour}{code01}
+{
+    "titre" : "Java",
+    "code" : 2004,
+    "credit" : 4,
+    "description" : "Programmation Oriente Object",
+    "pre" : [{ 
+        "titre" : "Algo 1",
+        "code" : 2022,
+        "credit" : 6,
+        "description" : "Algo & Structure Donne"
+    },
+    {
+        "titre" : "Algo 2",
+        "code" : 2023,
+        "credit" : 6,
+        "description" : "Structure Donne Dynamique"
+    }],
+    "etudiants" : [{
+        "nom" : "Rabah",
+        "prenom" : "Chabane Chaouche",
+        "Adresse" : { 
+            "numRue" : 23,
+            "nomRue" : "nomrue213",
+            "ville" : "Alger",
+            "code postale" : 16000
+    }
+    }]
+}
+\end{codeInput}
+
+
+\vspace{0.25cm}
+
+\begin{prettyBox}{Modélisation}{myblue}
+    \begin{itemize}
+        \item \textbf{Centre Étudiant} : redondance des informations sur les cours et les prérequis. 
+        Les prérequis sont fortement imbriqués. 
+
+        \item \textbf{Centre Cours} : les prérequis ne sont pas fortement imbriques. Cependant, il y a une redondance des informations 
+        concernant les étudiants inscrits.
+    \end{itemize}
+\end{prettyBox}\vspace{0.5cm}
+
+
+\item Solution :
+\begin{multicols}{2}
+
+\begin{codeInput}{json}{Etudiant}{code01}
+{
+    "nom" : "Rabah",
+    "prenom" : "Chabane Chaouche",
+    "Adresse" : { 
+        "numRue" : 23,
+        "nomRue" : "nomrue213",
+        "ville" : "Alger",
+        "code postale" : 16000
+    },
+    "Cours" : [{
+        "titre" : "Java",
+        "code" : 2004
+    }]
+}
+\end{codeInput}
+
+\columnbreak
+
+\begin{codeInput}{json}{Detail Cour}{code01}
+{
+    "titre" : "Java",
+    "code" : 2004,
+    "credit" : 4,
+    "description" : "Programmation Oriente Object",
+    "pre" : [{ 
+        "titre" : "Algo 1",
+        "code" : 2022,
+        "credit" : 6,
+        "description" : "Algo & Structure Donne"
+    },
+    {
+        "titre" : "Algo 2",
+        "code" : 2023,
+        "credit" : 6,
+        "description" : "Structure Donne Dynamique"
+
+    }]
+}
+\end{codeInput}
+
+\end{multicols}
+
+
+
+\end{enumerate}
+
+
+\end{document}
